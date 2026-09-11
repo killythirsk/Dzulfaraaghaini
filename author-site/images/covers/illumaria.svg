@@ -1,8 +1,0 @@
-<svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder cover">
-  <rect width="400" height="600" fill="#e4d6b4"/>
-  <rect x="14" y="14" width="372" height="572" fill="none" stroke="#33436e" stroke-width="2"/>
-  <rect x="21" y="21" width="358" height="558" fill="none" stroke="#c9b98e" stroke-width="1"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Georgia, 'Iowan Old Style', serif" font-size="32" fill="#241d14">Illumaria</text>
-  <line x1="150" y1="314" x2="250" y2="314" stroke="#33436e" stroke-width="1.5"/>
-  <text x="200" y="348" text-anchor="middle" font-family="Georgia, serif" font-size="16" letter-spacing="0.5" fill="#6b5c46">Illumaria</text>
-</svg>
