@@ -20,28 +20,16 @@ War* (Case 0157) — real cover, synopsis, a full cast of 35 characters, a
 19-image scene gallery, a confirmed page count (96), and a working "View
 on Google Books" link — and *The Iron Stiletto War* (Case 4417) — real
 cover, synopsis, a full cast of 13 characters, a 4-image
-scene gallery, and a working "View on Google Books" link, though its
-page count and genre are still unconfirmed guesses. The Lore glossary has
-two entries, Cultivator and Catalyst Tier, both grounded in details from
-the actual manuscripts and now cross-referencing all four books. Images
+scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). The Lore glossary has
+two entries, Cultivator (listing every Envoy) and Catalyst (listing every
+Catalyst), each built automatically from the books' own data. Images
 enlarge on click, and you can step between them without closing the view;
 a book's Scenes gallery (when it has one) slides sideways, its Characters
-list scrolls normally.
+list scrolls normally. Images are protected against casual saving (right-click
+and dragging are blocked, and full-size files aren't linked directly) — a
+deterrent, not a lock: anything a browser can display can still be captured.
 
 Still open:
-- **Genre** on *The Sword of Valeria*, *The Stolen Prince War* ("Epic
-  Fantasy" for both), and *The Iron Stiletto War* ("Epic Fantasy ·
-  Political Intrigue · War & Military Fiction") is still a guess — confirm
-  or change it (see "Making changes" below). The Ledger's genre is
-  confirmed, direct from the author.
-- **The Iron Stiletto War's page count** (~105) is an estimate from the
-  manuscript's word count, not the real figure — replace it with the
-  actual number (Google Play Books lists it).
-- **Catalyst Tier**'s definition now covers two confirmed classes
-  (Mundane, from the Ledger — with the Iron Stiletto War falling in the
-  same range; Mythic, from the Stolen Prince War) but still doesn't know
-  the full tier system or how the two relate.
-- **Instagram / Threads / email** in `contact.html` are still placeholders.
 - Four of "more than a dozen" novels are live — more can be added the
   same way these were.
 

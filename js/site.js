@@ -118,7 +118,7 @@
       : [link];
     group = Array.prototype.map.call(links, function (el) {
       var img = el.querySelector("img");
-      return { src: el.getAttribute("href"), alt: img ? img.alt : "" };
+      return { src: el.getAttribute("data-full") || el.getAttribute("href"), alt: img ? img.alt : "" };
     });
     groupIndex = Array.prototype.indexOf.call(links, link);
     if (groupIndex < 0) groupIndex = 0;
@@ -150,6 +150,16 @@
     if (e.key === "Escape") closeLightbox();
     if (e.key === "ArrowLeft") showAt(groupIndex - 1);
     if (e.key === "ArrowRight") showAt(groupIndex + 1);
+  });
+
+  /* ---------------- Image protection (a deterrent, not a lock) ----------------
+     Blocks the right-click / long-press menu and dragging on images and
+     image links. Anyone determined can still get an image another way. */
+  document.addEventListener("contextmenu", function (e) {
+    if (e.target.closest && e.target.closest("img, .lightbox-link, .lightbox-overlay")) e.preventDefault();
+  });
+  document.addEventListener("dragstart", function (e) {
+    if (e.target.tagName === "IMG") e.preventDefault();
   });
 
   /* ---------------- Scene slider (horizontal scroll + step buttons) ---------------- */

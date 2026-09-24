@@ -36,6 +36,13 @@ STATUS_URL_FIELDS = {
 
 EDITOR_PAGES = """<span class="editor-note">add page count</span>"""
 
+# (label, link text, url) — used by the Contact page and the footer.
+SOCIALS = [
+    ("Royal Road", "Author profile", "https://www.royalroad.com/profile/1068950"),
+    ("Instagram", "@killythirsk", "https://www.instagram.com/killythirsk"),
+    ("Threads", "@killythirsk", "https://www.threads.com/@killythirsk"),
+]
+
 BOOKS = [
     {
         "slug": "0000", "title": "The Sword of Valeria",
@@ -43,8 +50,22 @@ BOOKS = [
         "cover_file": "0000.jpg",
         "hook": "A reckoner's life, and the sword that outlived his name.",
         "case_tag": "Case 0000",
+        "catalyst": {
+            "name": "Valeria",
+            "meta": "Mythic Class",
+            "page": "characters/valeria.html",
+            "img": "characters/valeria-thumb.jpg",
+            "html": "<p>A sword of unidentifiable metal that weighs fifty kilograms on any scale and carries light as a coat in the hands of the one it has chosen. Its edge can't be felt and can't be dulled. Left with a thirteen-year-old boy on a hilltop by the woman who named it.</p>",
+        },
+        "envoy": {
+            "name": "Ardwen",
+            "meta": "Observer 000",
+            "page": "characters/ardwen.html",
+            "img": "characters/ardwen-thumb.jpg",
+            "html": "<p>Known in the earliest tellings as the Delivering Woman, the Sky-Answerer, the Unhastening. She delivers the sword to the boy as an offering, then watches the rest of his life from a distance and doesn't interfere again unless a prayer is asked of her plainly.</p>",
+        },
         "pages": "102",
-        "genre": """Epic Fantasy <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "genre": """Epic Fantasy &middot; War &amp; Military Fiction""",
         "google_books_url": "https://play.google.com/store/books/details?id=UAgKEgAAQBAJ",
         "royal_road_url": "https://www.royalroad.com/fiction/191364/case-0000-the-sword-of-valeria",
         "synopsis_html": """<p>His mother taught him two things: pray properly, and keep the ledger honest. Neither one prepares a thirteen-year-old boy for the morning raiders burn his valley a third time &mdash; and neither one explains why, when he climbs the one hill still standing and asks Heaven for help, Heaven actually answers.</p>
@@ -172,6 +193,20 @@ BOOKS = [
         "cover_file": "4099.jpg",
         "hook": "Forty-two names, and the sweetness that cost them.",
         "case_tag": "Case 4099",
+        "catalyst": {
+            "name": "The Sweets",
+            "meta": "Mundane Class",
+            "page": "characters/the-sweets.html",
+            "img": "characters/the-sweets-thumb.jpg",
+            "html": "<p>A clear glass jar of about two hundred glossy pink sweets, introduced to a Heian-flavored court as a passing novelty and recast at once as a currency of favor. The court never settles on what to call them.</p>",
+        },
+        "envoy": {
+            "name": "The Observer",
+            "meta": "Envoy / Custodian Observer &middot; Deployment Archetype 04",
+            "page": "characters/observer-4099.html",
+            "img": "characters/observer-4099-thumb.jpg",
+            "html": "<p>Enters the court as an itinerant confectioner and introduces the jar, then monitors the court's collapse through instruments no one there can see. Eleven thousand and one terrariums logged by the time this one closes.</p>",
+        },
         "pages": "99",
         "genre": "Literary Fiction &middot; Historical Fantasy &middot; War &amp; Military Fiction",
         "google_books_url": "https://play.google.com/store/books/details?id=yS0LEgAAQBAJ",
@@ -480,8 +515,22 @@ BOOKS = [
         "cover_file": "0157.jpg",
         "hook": "An indifferent floor, a dead prince, and a war built on the wrong reason.",
         "case_tag": "Case 0157",
+        "catalyst": {
+            "name": "The Golden Catacomb",
+            "meta": "Mythic Class",
+            "page": "characters/the-golden-catacomb.html",
+            "img": "characters/the-golden-catacomb-thumb.jpg",
+            "html": "<p>A single engineered structure a hundred levels deep, with one entrance, a real gold vein at the bottom, and guardians that change with whoever most recently came looking. Every level resets overnight. Found rather than handed over.</p>",
+        },
+        "envoy": {
+            "name": "The Observer",
+            "meta": "The Dungeon Manager &middot; no name or number on file",
+            "page": "characters/observer-0157.html",
+            "img": "characters/observer-0157-thumb.jpg",
+            "html": "<p>Presents as an ordinary, forgettable old man, and keeps a permanent seat at Level 101 of the structure he built and runs &mdash; a desk at the bottom of the hole rather than a disguise out in the world.</p>",
+        },
         "pages": "96",
-        "genre": """Epic Fantasy <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "genre": """Epic Fantasy &middot; Dungeon Fantasy &middot; War &amp; Military Fiction""",
         "google_books_url": "https://play.google.com/store/books/details?id=kGIPEgAAQBAJ",
         "synopsis_html": """<p>Ashkevar is a poor kingdom before it is anything else &mdash; barley, debt, and the patient silence of a god who answers the honest but never the desperate. It's debt, not vision, that sends a shepherd up a hillside above Har-Peleg looking for free firewood, and debt that has him and four others prying open a doorway three generations had already stopped seeing. What's behind it isn't a ruin: a hundred descending levels, a guardian at every fifth, a chest at every tenth, and &mdash; rarer, and stranger &mdash; a vial of something that can pull the dying back from wounds that should have killed them.</p>
           <p>It's the highland kingdom of Vantashen, not Ashkevar, that turns the discovery into a war. A young prince &mdash; Vartaz, King Torvash's youngest, delving in disguise to prove himself away from his father's court &mdash; reaches a guarded hall at the same moment a seasoned local party does, and a mechanism built to clear a room for six fighters &mdash; never built to recognize two kingdoms colliding in one doorway &mdash; does exactly what it was built to do. His father doesn't wait for a fuller account before choosing war, and for three years two kingdoms bleed each other over a death neither side's histories will ever describe accurately, while underneath both armies the hillside resets itself every night and keeps paying gold to whoever's left standing by morning.</p>
@@ -815,9 +864,9 @@ BOOKS = [
                 "caption_html": """<a href="../characters/the-magistrate-of-empty-chairs.html">The Magistrate of Empty Chairs</a> holds court.""",
             },
             {
-                "slug": "the-weaver-falls",
-                "alt": "A towering pale, veiled guardian with long flowing hair and elongated limbs is run through with a sword by a delver",
-                "caption_html": """<a href="../characters/the-weaver-who-outlived-her-thread.html">The Weaver Who Outlived Her Thread</a> falls.""",
+                "slug": "the-weaver-falls",  # file slug kept for continuity; the scene depicts the Nursemaid
+                "alt": "A towering, soft-faced guardian in tattered pale wrappings, with long white hair and elongated limbs, is run through with a sword by a delver",
+                "caption_html": """<a href="../characters/the-nursemaid.html">The Nursemaid</a> falls.""",
             },
             {
                 "slug": "the-reckoner-and-the-hoard",
@@ -837,8 +886,22 @@ BOOKS = [
         "cover_file": "4417.jpg",
         "hook": "A pair of chrome heels, and the war two crowns paid for them.",
         "case_tag": "Case 4417",
-        "pages": """~105 <span class="editor-note">(estimated from manuscript word count &mdash; confirm or edit)</span>""",
-        "genre": """Epic Fantasy &middot; Political Intrigue &middot; War &amp; Military Fiction <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "catalyst": {
+            "name": "The Chrome Heels",
+            "meta": "Mundane Class",
+            "page": "books/4417.html",
+            "img": "scenes/the-chrome-heels-grid.jpg",
+            "html": "<p>A pair of mirror-polished, indestructible chrome stiletto heels, given to a queen as a single unexplained gift. When the study closes, they vanish on schedule.</p>",
+        },
+        "envoy": {
+            "name": "Vane",
+            "meta": "&ldquo;The Wanderer&rdquo;",
+            "page": "characters/vane.html",
+            "img": "characters/vane-thumb.jpg",
+            "html": "<p>Deployed to Solis disguised as a wandering hermit. Delivers the heels, then lingers at the edges of both courts logging everything, and declines at least one real chance to intervene.</p>",
+        },
+        "pages": "109",
+        "genre": """Epic Fantasy &middot; Political Intrigue &middot; War &amp; Military Fiction""",
         "google_books_url": "https://play.google.com/store/books/details?id=wbIBEgAAQBAJ",
         "synopsis_html": """<p>Vane the Wanderer arrives at the court of Solis disguised as a penniless hermit and leaves behind a single gift: a pair of chrome stiletto heels that never scuff, never break, and answer to no explanation anyone can find. Queen Aurelia puts them on. Four inches taller and, for the first time in longer than she can say, sure of herself, she wears them into the Great Concord &mdash; and Duchess Beatrice of Ironhold, humiliated in front of both crowns, refuses to let it go.</p>
           <p>What begins as a wounded vanity hardens, within a season, into doctrine: the Order of the Pale Cloth declares the heels heretical, tariffs curdle into border incidents, and both realms call their banners. House Vell commits to Solis in secret, Baron Rathmore backs Ironhold, and Baron Corvin &mdash; ostensibly neutral, actually for sale &mdash; quietly decides which side he can profit from losing. By the time the siege reaches Solis's walls, the war has almost nothing left to do with shoes.</p>
@@ -963,17 +1026,16 @@ BOOKS = [
 
 LORE = [
     {
-        "slug": "cultivator", "name": "Cultivator",
+        "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
-        "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. Field agents appear to work through numbered &ldquo;deployment archetypes&rdquo; &mdash; disguises suited to whatever world they're entering, from an itinerant confectioner to whatever delivered the sword Valeria. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>""",
-        "appears_html": """<p>In <a href="../books/0000.html">The Sword of Valeria</a>, delivered by <a href="../characters/ardwen.html">Ardwen</a>, Observer 000. In <a href="../books/4099.html">The Ledger of a Single Sweetness</a>, delivered by <a href="../characters/observer-4099.html">an unnamed Envoy</a> posing as a traveling confectioner &mdash; a different, much later field agent, going by his own count. In <a href="../books/0157.html">The Stolen Prince War</a>, the Catalyst is <a href="../characters/the-golden-catacomb.html">the Golden Catacomb</a> itself, delivered less as a gift than as a discovery; its Observer, <a href="../characters/observer-0157.html">presenting as an ordinary old man</a>, keeps a permanent seat at the bottom of his own construction rather than a disguise out in the world. In <a href="../books/4417.html">The Iron Stiletto War</a>, delivered by <a href="../characters/vane.html">Vane</a>, deployed disguised as a wandering hermit.</p>""",
+        "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit. Every Envoy on file is listed below.</p>""",
     },
     {
-        "slug": "catalyst-tier", "name": "Catalyst Tier",
-        "teaser": "A classification system for the cases the Cultivators file.",
-        "definition_html": """<p>Cases &mdash; and the Catalysts at the center of them &mdash; appear to be classified by numbered range. <a href="../books/4099.html">The Ledger of a Single Sweetness</a> confirms one such range directly: Case 4099 is filed under &ldquo;Mundane Class&rdquo; (4000&ndash;4999), which suggests a jar of candy counts as a fairly ordinary intervention by Cultivator standards. Case 4417 (<a href="../books/4417.html">The Iron Stiletto War</a>) falls in the same numbered range, which makes it another data point for the same range. <a href="../books/0157.html">The Stolen Prince War</a> confirms a second class, directly: Case 0157 is filed as &ldquo;Mythic Class,&rdquo; with no numbered range given &mdash; a hundred-level structure with a real gold vein under it apparently rates rather higher than a jar of candy.</p>
-          <p class="editor-note">Two classes confirmed now (Mundane, Mythic), but not the full system: what separates them, what other classes exist between or beyond them, and where a Catalyst like the sword Valeria (Case 0000) fits by comparison, isn't established yet. Add the rest of the tier system here once it's settled.</p>""",
-        "appears_html": """<p><a href="../books/4099.html">The Ledger of a Single Sweetness</a>, where Case 4099's &ldquo;Mundane Class&rdquo; designation is given directly. <a href="../books/4417.html">The Iron Stiletto War</a>, whose Case 4417 falls in the same 4000&ndash;4999 range. <a href="../books/0157.html">The Stolen Prince War</a>, where Case 0157's &ldquo;Mythic Class&rdquo; designation is given directly. Also relevant to <a href="../books/0000.html">The Sword of Valeria</a>, whose Case 0000 has no confirmed classification yet.</p>""",
+        "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
+        "teaser": "The single object at the center of every case.",
+        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Every Catalyst on file is listed below.</p>""",
     },
 ]
 
@@ -1008,6 +1070,7 @@ def head_html(title, description, depth):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>%s</title>
   <meta name="description" content="%s">
+  <meta name="robots" content="noimageindex">
   <link rel="icon" href="%sassets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="%sassets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1035,15 +1098,16 @@ def header_html(active_file, depth):
 def footer_html(depth):
     r = rel(depth)
     contact = (r + "contact.html") if depth else "contact.html"
-    return """  <footer class="site-footer">
+    socials = "".join('\n        <li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (u, label) for label, _t, u in SOCIALS)
+    return ("""  <footer class="site-footer">
     <div class="footer-inner wrap">
       <p>&copy; 2026 %s</p>
       <ul class="footer-links">
-        <li><a href="%s">Contact</a></li>
+        <li><a href="%s">Contact</a></li>@@SOCIALS@@
       </ul>
     </div>
   </footer>
-  <script src="%sjs/site.js" defer></script>""" % (AUTHOR, contact, r)
+  <script src="%sjs/site.js" defer></script>""" % (AUTHOR, contact, r)).replace("@@SOCIALS@@", socials)
 
 
 def page(title, description, depth, active_file, body):
@@ -1083,7 +1147,7 @@ def character_entry_html(c, depth):
     full_src = "%simages/characters/%s.jpg" % (r, c["slug"])
     thumb_src = "%simages/characters/%s-thumb.jpg" % (r, c["slug"])
     return """      <article class="entry">
-        <a class="lightbox-link" data-group="characters" href="%s"><img class="entry-portrait" src="%s" alt="Portrait of %s"></a>
+        <a class="lightbox-link" data-group="characters" href="#" data-full="%s"><img class="entry-portrait" src="%s" alt="Portrait of %s"></a>
         <div class="entry-body">
           <h3 class="entry-title"><a href="%s">%s</a></h3>
           <p class="entry-meta">%s</p>
@@ -1104,7 +1168,7 @@ def scene_gallery_html(book, depth):
         full = "%simages/scenes/%s.jpg" % (r, s["slug"])
         grid = "%simages/scenes/%s-grid.jpg" % (r, s["slug"])
         items.append("""      <li>
-        <a class="lightbox-link" data-group="scenes" href="%s"><img src="%s" alt="%s"></a>
+        <a class="lightbox-link" data-group="scenes" href="#" data-full="%s"><img src="%s" alt="%s"></a>
         <p class="scene-caption">%s</p>
       </li>""" % (full, grid, s["alt"], s["caption_html"]))
     return "\n".join(items)
@@ -1114,8 +1178,8 @@ def book_entry_html(book, depth):
     r = rel(depth)
     book_href = "%sbooks/%s.html" % (r, book["slug"])
     cover_src = "%simages/covers/%s" % (r, book["cover_file"])
-    return """      <article class="entry">
-        <a class="lightbox-link" data-group="covers" href="%s"><img class="entry-cover" src="%s" alt="Cover of %s"></a>
+    return """      <article class="entry entry--book">
+        <a class="lightbox-link" data-group="covers" href="#" data-full="%s"><img class="entry-cover" src="%s" alt="Cover of %s"></a>
         <div class="entry-body">
           <h3 class="entry-title"><a href="%s">%s</a></h3>
           %s
@@ -1125,7 +1189,7 @@ def book_entry_html(book, depth):
       </article>""" % (cover_src, cover_src, book["title"], book_href, book["title"], tags_html(book), book["hook"], book_href)
 
 
-def index_body():
+def _index_body_base():
     book_items = "\n".join(book_entry_html(b, 0) for b in BOOKS)
     lore_items = "\n".join(
         "          <li><a href=\"lore/%s.html\">%s</a></li>" % (l["slug"], l["name"])
@@ -1140,6 +1204,7 @@ def index_body():
           <li><a href="books.html">Read the books</a></li>
           <li><a href="lore.html">Browse the lore</a></li>
         </ul>
+        @@LEDGER@@
       </div>
     </section>
 
@@ -1150,6 +1215,7 @@ def index_body():
       </ul>
     </section>
 
+@@SECTIONS@@
     <section class="section wrap">
       <h2>Lore</h2>
       <p>A glossary of terms and systems from the setting.</p>
@@ -1159,6 +1225,129 @@ def index_body():
       <p><a href="lore.html">See the full glossary</a></p>
     </section>
 """ % (AUTHOR, AUTHOR, book_items, lore_items)
+
+
+ROSTER = {
+    "envoy": ("Envoys", "One per case, in the order the books appear on this site."),
+    "catalyst": ("Catalysts", "One per case, in the order the books appear on this site."),
+}
+
+# One scene per book for the homepage band: (book slug, scene slug).
+HOME_SCENES = [("0000", "valeria-full-power"), ("4099", "tower-burning"),
+               ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels")]
+
+
+def roster_html(kind, depth):
+    r = rel(depth)
+    rows = []
+    for b in BOOKS:
+        it = b.get(kind)
+        if not it:
+            continue
+        href = r + it["page"]
+        rows.append("""      <article class="entry">
+        <a class="entry-thumb" href="%s" aria-hidden="true" tabindex="-1"><img class="entry-portrait" src="%simages/%s" alt="" loading="lazy"></a>
+        <div class="entry-body">
+          <h3 class="entry-title"><a href="%s">%s</a></h3>
+          <p class="entry-meta">%s &middot; <a href="%sbooks/%s.html">%s</a> (%s)</p>
+          %s
+        </div>
+      </article>""" % (href, r, it["img"], href, it["name"], it["meta"], r, b["slug"], b["title"], b["case_tag"], it["html"]))
+    return "<div class=\"catalog-list\">\n" + "\n".join(rows) + "\n      </div>"
+
+
+def home_wall_html():
+    items = []
+    for b in BOOKS:
+        n = 0
+        for c in b["characters"]:
+            if n >= 6:
+                break
+            if not os.path.isfile(os.path.join(OUT, "images", "characters", c["slug"] + "-thumb.jpg")):
+                continue
+            items.append('        <li><a href="characters/%s.html"><img src="images/characters/%s-thumb.jpg" alt="" loading="lazy"><span>%s</span></a></li>' % (c["slug"], c["slug"], c["name"]))
+            n += 1
+    return "\n".join(items)
+
+
+def home_scenes_html():
+    by_slug = dict((b["slug"], b) for b in BOOKS)
+    items = []
+    for book_slug, scene_slug in HOME_SCENES:
+        b = by_slug.get(book_slug)
+        if b:
+            items.append('        <li><a href="books/%s.html"><img src="images/scenes/%s-grid.jpg" alt="" loading="lazy"><span>%s</span></a></li>' % (b["slug"], scene_slug, b["title"]))
+    return "\n".join(items)
+
+
+def index_body():
+    n_chars = sum(len(b["characters"]) for b in BOOKS)
+    n_scenes = sum(len(b["scenes"]) for b in BOOKS)
+    ledger = '<p class="ledger-line">%d cases on file &middot; %d characters &middot; %d scenes</p>' % (len(BOOKS), n_chars, n_scenes)
+    sections = """    <section class="section wrap">
+      <h2>Cast</h2>
+      <p>A few faces from each case &mdash; every character has a page of their own.</p>
+      <ul class="wall">
+%s
+      </ul>
+    </section>
+
+    <section class="section wrap">
+      <h2>Scenes</h2>
+      <ul class="wall wall--scenes">
+%s
+      </ul>
+    </section>
+""" % (home_wall_html(), home_scenes_html())
+    return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections)
+
+
+def contact_body():
+    items = "\n".join(
+        '            <li><strong>%s</strong> &mdash; <a href="%s" target="_blank" rel="noopener">%s</a></li>' % (label, url, text)
+        for label, text, url in SOCIALS)
+    return """    <section class="hero hero--compact">
+      <div class="wrap">
+        <h1>Contact</h1>
+      </div>
+    </section>
+
+    <section class="wrap page-content">
+      <div class="prose">
+        <section class="subsection">
+          <ul class="detail-list">
+%s
+          </ul>
+        </section>
+      </div>
+    </section>
+""" % items
+
+
+def lore_detail_body(l):
+    r = rel(1)
+    lore_href = "%slore.html" % r
+    if l.get("roster"):
+        title, note = ROSTER[l["roster"]]
+        second = "<h2>%s</h2>\n          <p>%s</p>\n          %s" % (title, note, roster_html(l["roster"], 1))
+    else:
+        second = "<h2>Appears In</h2>\n          %s" % l["appears_html"]
+    return """    <div class="wrap page-content">
+      <a class="back-link" href="%s">&larr; All Lore</a>
+      <h1>%s</h1>
+
+      <div class="prose">
+        <section class="subsection">
+          <h2>Definition</h2>
+          %s
+        </section>
+
+        <section class="subsection">
+          %s
+        </section>
+      </div>
+    </div>
+""" % (lore_href, l["name"], l["definition_html"], second)
 
 
 def books_body():
@@ -1220,28 +1409,6 @@ def about_body():
 """ % paras
 
 
-def contact_body():
-    return """    <section class="hero hero--compact">
-      <div class="wrap">
-        <h1>Contact</h1>
-      </div>
-    </section>
-
-    <section class="wrap page-content">
-      <div class="prose">
-        <section class="subsection">
-          <!-- Replace the handles and address below with the real accounts. -->
-          <ul class="detail-list">
-            <li><strong>Instagram</strong> &mdash; <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a></li>
-            <li><strong>Threads</strong> &mdash; <a href="https://www.threads.net/@yourhandle" target="_blank" rel="noopener">@yourhandle</a></li>
-            <li><strong>Email</strong> &mdash; <a href="mailto:author@example.com">author@example.com</a></li>
-          </ul>
-        </section>
-      </div>
-    </section>
-"""
-
-
 def book_detail_body(book):
     b = book
     r = rel(1)
@@ -1280,7 +1447,7 @@ def book_detail_body(book):
     return """    <div class="wrap page-content">
       <a class="back-link" href="%s">&larr; All Books</a>
       <div class="detail-header">
-        <a class="lightbox-link" data-group="covers" href="%s"><img class="detail-cover" src="%s" alt="Cover of %s"></a>
+        <a class="lightbox-link" data-group="covers" href="#" data-full="%s"><img class="detail-cover" src="%s" alt="Cover of %s"></a>
         <div class="detail-meta">
           %s<h1>%s</h1>
           %s
@@ -1320,28 +1487,6 @@ def book_detail_body(book):
        b["synopsis_html"], characters_index_html(b, 1), scenes_section, read_section)
 
 
-def lore_detail_body(l):
-    r = rel(1)
-    lore_href = "%slore.html" % r
-    return """    <div class="wrap page-content">
-      <a class="back-link" href="%s">&larr; All Lore</a>
-      <h1>%s</h1>
-
-      <div class="prose">
-        <section class="subsection">
-          <h2>Definition</h2>
-          %s
-        </section>
-
-        <section class="subsection">
-          <h2>Appears In</h2>
-          %s
-        </section>
-      </div>
-    </div>
-""" % (lore_href, l["name"], l["definition_html"], l["appears_html"])
-
-
 def character_detail_body(c, book):
     r = rel(1)
     book_href = "%sbooks/%s.html" % (r, book["slug"])
@@ -1350,7 +1495,7 @@ def character_detail_body(c, book):
     return """    <div class="wrap page-content">
       <a class="back-link" href="%sbooks.html">&larr; All Books</a>
       <div class="character-entry">
-        <a class="lightbox-link" data-group="characters" href="%s"><img class="character-portrait" src="%s" alt="Character reference sheet for %s"></a>
+        <a class="lightbox-link" data-group="characters" href="#" data-full="%s"><img class="character-portrait" src="%s" alt="Character reference sheet for %s"></a>
         <div>
           <h1>%s</h1>
           <p class="character-epithets">%s</p>
@@ -1402,5 +1547,23 @@ for l in LORE:
           page("%s \u2014 %s" % (l["name"], AUTHOR),
                "%s Definition and where it appears." % l["teaser"],
                1, "lore.html", lore_detail_body(l)))
+
+# ---- old URLs that now redirect ---------------------------------------------------
+REDIRECTS = {"lore/catalyst-tier.html": "catalyst.html"}
+for old_path, target in REDIRECTS.items():
+    write(old_path, """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=%s">
+  <link rel="canonical" href="%s">
+  <title>Moved</title>
+</head>
+<body>
+  <p>This page moved to <a href="%s">%s</a>.</p>
+</body>
+</html>
+""" % (target, target, target, target))
 
 print("done")

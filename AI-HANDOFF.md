@@ -154,19 +154,20 @@ Notably *not* in the nav: Characters, Scenes — both live inside each
 book's own page rather than as their own top-level sections.
 
 ```
-/index.html            Homepage — hero, every book, a lore teaser
+/index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
 /books.html             Full book list (currently four entries)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
 /books/4417.html          The Iron Stiletto War's full page
 /lore.html               Glossary index
-/lore/<slug>.html          One page per term (cultivator, catalyst-tier)
+/lore/<slug>.html          One page per term (cultivator, catalyst; lore/catalyst-tier.html
+                            is only a redirect stub to catalyst.html)
 /characters/<slug>.html    One page per character (86 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War; see §6)
 /about.html               Biography only
-/contact.html              Instagram / Threads / email (still placeholders)
+/contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
 
 ### 4a. Anatomy of a book detail page
@@ -195,6 +196,17 @@ cycle through the Ledger's 28, never Valeria's 10, the Stolen Prince
 War's 35, or the Iron Stiletto War's 13. The one group that
 *does* span across books is `"covers"` on `books.html`/`index.html`,
 where clicking any book's cover lets you page between all of them.
+
+**Image protection (deterrent only).** Every lightbox link is
+`<a class="lightbox-link" href="#" data-full="…">`: the full-size path lives in
+`data-full`, not `href`, so middle-click / "open in new tab" / "save link as"
+no longer land on the file. `site.js` also blocks the context menu and
+dragging on images, CSS turns off `user-drag`, `user-select` and iOS
+`touch-callout` on `img`, the lightbox image has `pointer-events: none`, and
+every page carries `<meta name="robots" content="noimageindex">`. None of this
+is a real lock — a browser must receive an image to show it, so dev tools,
+screenshots and the network tab still work; don't promise the author more.
+New lightbox links must use `href="#" data-full="…"`, never a bare `href`.
 
 **Scene slider.** `.scene-gallery` is a natively horizontally-scrollable
 `<ul>` (`overflow-x: auto`, scroll-snap). The `‹ ›` buttons next to the
@@ -239,8 +251,18 @@ The Stolen Prince War manuscript confirms a second Class directly: Case
 0157 is filed as "**Mythic Class**," without a numbered range given on the
 page. What separates the two Classes, what else exists between or beyond
 them, and where Case 0000 (an actual sentient sword) falls by comparison,
-is *not* established — don't invent it; the Catalyst Tier lore page says
-this plainly rather than guessing further.
+is *not* established on the site — don't invent it. The lore page is now
+**Catalyst** (renamed from Catalyst Tier at the author's request): it describes
+what a Catalyst *is*, not the tier system, and each catalyst row just shows its
+class (Mundane / Mythic) in its meta line.
+
+**Lore rosters.** Every book dict carries a `"catalyst"` and an `"envoy"`
+record (`name`, `meta`, `page`, `img`, `html`). `lore/cultivator.html` lists one
+Envoy row per book and `lore/catalyst.html` one Catalyst row per book,
+automatically. The author's rule: **every Envoy goes on lore/cultivator and
+every Catalyst on lore/catalyst** — a new book's dict must include both records
+when it is merged. Only the four live books are listed; canon-guide cases that
+have no book on the site yet (0156, 4442, 0188, 1268, 4425, 3887) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -260,8 +282,8 @@ don't merge him with any other Observer.
 ### Book 1: *The Sword of Valeria* (Case 0000)
 
 102 pages, published, real Google Books link in the script
-(`BOOKS[0]["google_books_url"]`). Genre suggested as "Epic Fantasy," not
-confirmed by the author. Full synopsis is in the script and on the page —
+(`BOOKS[0]["google_books_url"]`). Genre: Epic Fantasy · War & Military
+Fiction (chosen by Claude at the author's instruction; no "suggested" label). Full synopsis is in the script and on the page —
 not reproduced here for length. Ten characters: **the Boy** (protagonist,
 deliberately unnamed, only epithets — one of which, "the Reckoner," is
 *also* used by a completely different character in this same book, a
@@ -374,8 +396,11 @@ different images.
 96 pages, published, real Google Play Books link in the script
 (`BOOKS[2]["google_books_url"]`) — treated as "published" on the same
 basis as Book 1 (real cover, real synopsis, working purchase link, author-
-confirmed page count), not as a guess. Genre suggested as "Epic Fantasy,"
-not confirmed. Classification is confirmed, unusually: the manuscript's own
+confirmed page count), not as a guess. Genre: Epic Fantasy · Dungeon Fantasy · War &
+Military Fiction (chosen by Claude at the author's instruction). Scene 17 of 19
+(`the-weaver-falls`, file slug kept for continuity) depicts **the Nursemaid**, not
+the Weaver Who Outlived Her Thread — corrected at the author's request.
+Classification is confirmed, unusually: the manuscript's own
 opening line reads "*Classification: Mythic Class. Archive: Cultivator
 Terrarium Studies.*" — see the Cultivator-mechanic note above.
 
@@ -510,12 +535,9 @@ just flags; no further action needed unless the author disagrees.
 Status: **Published**, with a Google Books link supplied by the author
 (`google_books_url` on this book's dict, `BOOKS[3]`) — wired in without
 being opened, since Google blocks automated fetches, so it's worth one
-click to confirm it lands on the right book. Pages: **~105**,
-Claude's estimate from the manuscript's word count (28,554 words),
-flagged with an `editor-note`, not author-confirmed. Genre suggested as
-"Epic Fantasy · Political Intrigue · War & Military
-Fiction," also flagged, also not author-confirmed — same
-unconfirmed-genre pattern Book 1 originally used.
+click to confirm it lands on the right book. Pages: **109** (author-confirmed). Genre: Epic Fantasy · Political
+Intrigue · War & Military Fiction (chosen by Claude at the author's
+instruction; no "suggested" label).
 
 The premise: **Vane** ("the Wanderer"), a Cultivator field agent disguised
 as a hermit, delivers a pair of indestructible chrome stiletto heels to
@@ -559,17 +581,9 @@ it hasn't had any editorial/proofreading pass.
 
 ## 7. What's placeholder / incomplete right now
 
-- Genre is confirmed for the Ledger only. Sword of Valeria and the Stolen
-  Prince War both still carry the original suggested "Epic Fantasy," and
-  the Iron Stiletto War carries a suggested "Epic Fantasy · Political
-  Intrigue · War & Military Fiction" — none author-confirmed (see each
-  one's own `editor-note`); the Ledger's three-category genre line came
-  directly from the author and needs no confirmation.
-- Page counts are confirmed for three books (Sword of Valeria: 102; the
-  Ledger: 99; the Stolen Prince War: 96). The Iron Stiletto War's "~105" is
-  an estimate from the manuscript's word count, flagged with an
-  `editor-note` — replace it with the real number (Google Play Books lists
-  it) and drop the note.
+- Genres and page counts are all settled: 102 / 99 / 96 / 109 pages for Books 1–4,
+  and no book carries an unconfirmed-genre `editor-note` any more (genres were
+  chosen by Claude at the author's instruction).
 - The Iron Stiletto War's Google Books link came from the author and hasn't
   been opened by an AI (Google blocks automated fetches) — one click
   confirms it.
@@ -583,10 +597,8 @@ it hasn't had any editorial/proofreading pass.
   in by where the moment falls in the story, not just appended to the end.
 - The chrome heels (Case 4417's Catalyst) have no character page — see §6,
   Book 4, for why and what to do if a proper portrait arrives.
-- `Catalyst Tier` lore entry now confirms two Classes ("Mundane Class
-  4000–4999" from the Ledger, with Case 4417 falling in the same range, and
-  "Mythic Class" — no numbered range given — from the Stolen Prince War) but
-  still doesn't know the full tier system or how the two relate.
+- The lore entry formerly called Catalyst Tier is now **Catalyst** (see §6, "Lore
+  rosters"). The full tier system is still not documented on the site.
 - The Stolen Prince War's manuscript cast is fully illustrated (35
   characters — see §6). If a genuinely new named figure turns up in the
   manuscript later, add them the same way; don't invent one in the
@@ -594,8 +606,9 @@ it hasn't had any editorial/proofreading pass.
 - Doron's quote and "first blow" claim were corrected once Berel's and
   Tamir's own sheets arrived and confirmed those details belonged to them,
   not him — see §6 for what changed and why.
-- Contact page — Instagram/Threads handles and the email address are all
-  literally `yourhandle` / `author@example.com` placeholders.
+- Contact page is real: Royal Road (author profile 1068950), Instagram
+  @killythirsk, Threads @killythirsk (`SOCIALS` in the script, also used by the
+  footer). There is deliberately **no email** — don't add one.
 - The four earlier placeholder-only books (Ghost, Aldemark, Illumaria,
   Carbon Echo Beacon) that existed at one point are still not on the site.
   "More than a dozen novels" total were mentioned early on — only four
@@ -603,6 +616,19 @@ it hasn't had any editorial/proofreading pass.
 
 ## 8. Decisions already made — please don't relitigate these without cause
 
+- **Book entries stack on phones.** At ≤ 36rem, `.entry--book` (books list and
+  homepage) puts the cover above the title, tags and blurb, like a card, instead
+  of cover-left/text-right. Character rows keep the side-by-side layout.
+- **Images are deterred, not locked** — see §5. Full-size URLs stay in
+  `data-full`. The author asked for images to be non-downloadable; the honest
+  limit was explained to them.
+- **Genres are Claude's call**, shown plainly with no "suggested" marker.
+- **No email address anywhere on the site.**
+- **Rosters** on lore/cultivator and lore/catalyst are generated from each
+  book's `envoy` / `catalyst` record — see §6.
+- **Homepage fullness:** a counts line, a cast wall (first six characters of
+  each book) and a scene band (`HOME_SCENES`) were added because the site read
+  as empty to a visitor; they draw only on existing images.
 - **No login/CMS/upload feature.** Explicitly turned down as not
   achievable with any real security on a static site; GitHub repo access
   already *is* the access control. Agreed workflow: keep sending images
