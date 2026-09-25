@@ -15,7 +15,7 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; four are live on the site so far — see
+various stages of publication; five are live on the site so far — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
 
@@ -237,7 +237,7 @@ paragraph and none of the slider markup/JS targets exist on that page.
 
 ### The Cultivator mechanic (the thread connecting every book)
 
-All four books share a confirmed, explicit meta-narrative device: a loose
+All five books share a confirmed, explicit meta-narrative device: a loose
 organization called **the Cultivators** (originally just "observers")
 selects a subject in some world, delivers a **Catalyst** — an item or
 event with real power — directly into that subject's hands (or, in Case
@@ -570,26 +570,86 @@ character following the object-as-character pattern (epithets ending in
 "the Catalyst of Case 4417," per The Sweets' precedent) and move the
 close-up scene image over to be its portrait.
 
-Four scenes exist, all in a distinct thick, palette-knife painterly style
-that's different from the 13 watercolor character sheets: Vane delivering
-the heels, the heels alone on a dais, Corvin and Isolde by a fireplace,
-and Ophelia delivering Aurelia's refusal to Beatrice. Scene order and
-captions are Claude's inference from the art plus the manuscript's own
-outline and chapter titles, not author-confirmed. The manuscript itself
-(a complete, "Revision 4 (Final)" draft) was read only for these facts —
-it hasn't had any editorial/proofreading pass.
+Eleven scenes exist, all in a distinct thick, palette-knife painterly
+style that's different from the 13 watercolor character sheets: the
+original four were Vane delivering the heels, the heels alone on a dais,
+Corvin and Isolde by a fireplace, and Ophelia delivering Aurelia's refusal
+to Beatrice; the latest merge (§8) added seven more that master had been
+missing — Vane alone by candlelight, Aurelia at the Great Concord, Aurelia
+crossing the hall, Aurelia enthroned, Corvin presenting Isolde with dyed
+silks, Ophelia glancing back down a corridor, and Beatrice's prison visit
+to the deposed Aurelia. Scene order and captions for the original four are
+Claude's inference from the art plus the manuscript's own outline and
+chapter titles, not author-confirmed; the later seven were taken exactly
+as the SLAVE-4417 staging copy had them, interleaved into the existing
+sequence rather than re-derived. The manuscript itself (a complete,
+"Revision 4 (Final)" draft) was read only for these facts — it hasn't had
+any editorial/proofreading pass.
+
+### Book 5: *The Thermal Vessel War* (Case 4420)
+
+Status: **Published**, with a Google Books link supplied in the
+SLAVE-4420 staging copy (`google_books_url` on `BOOKS[4]`) — wired in
+without being opened, same caveat as Book 4's. Pages/genre are still that
+copy's own unconfirmed estimate (`~123` pages, suggested genre, both
+still carrying the `editor-note` span) — unlike Books 1–4, nobody has
+confirmed these for real yet.
+
+The premise: House Skarth has carried one steel flask for four centuries
+without asking where it came from — family legend says it came down from
+the dragon who keeps Mount Skahr, and it never lets its contents go cold.
+When **Duke Maros**, humiliated by a rival's gift of a stag's head, drags
+a royal hunt two hundred miles into the northern tundra to answer it,
+**Baron Kaelen** of House Skarth joins on guest-right alone. Eleven nights
+in, starving and out of other food, Kaelen finally opens the flask to
+feed the King — the broth hits the cold air as a white cloud, and **Sir
+Corvus**, a royal guard still reliving a spore-cave that nearly killed him
+eleven months earlier, kills Kaelen on reflex before the cup arrives. The
+Crown's own account is accurate in every clause and never mentions broth;
+House Skarth reads it as a signed confession. Kaelen's twin, **Yvaine**,
+cuts her hair, takes his mail, climbs the mountain for a blessing, and
+leads the northern clans south with the flask — now cased in silver and
+renamed the Vessel of the Betrayed Host — at the front of the column.
+**Duke Vane** of the Southern March (a different man from Book 4's Vane
+the Wanderer; the bio flags this explicitly, and the site file uses the
+`vane-4420` slug to keep the two pages apart) sells a broken Maros his
+rescue at ruinous cost, hires the thief **Soren** to steal the relic back,
+and dies never understanding what he actually fought over. No southern
+chronicle will name the war honestly; it comes down in the histories as
+the Great Winter Pestilence. Seven characters have pages: **Kaelen**,
+**Yvaine**, **Maros**, **Corvus**, **Vane** (`vane-4420`), **Soren**, and
+the Envoy, **Observer 814**.
+
+Like the chrome heels in Book 4, the flask itself has no dedicated
+character page — the roster thumbnail on the Catalyst lore page points at
+a scene image (`soren-with-the-flask`) instead, the same pattern, for the
+same reason (no standalone portrait of the object came with this batch).
+`BOOKS[4]`'s `catalyst`/`envoy` summary dicts didn't exist yet in the
+SLAVE-4420 copy — that field was added to master's schema after this
+staging copy forked — so both were written fresh during the merge:
+catalyst **The Steel Flask** (Mundane Class, matching Case 4099 and Case
+4417 in that range) and envoy **Observer 814**, &ldquo;the
+Dragon-Speaker,&rdquo; so Book 5 doesn't silently drop out of either
+roster (see below, &ldquo;Rosters&rdquo;). Seventeen scenes exist, in the
+same palette-knife painterly style as Book 4's; order and captions came
+from the SLAVE-4420 copy as authored and were not independently
+re-verified against a manuscript by this session.
 
 ## 7. What's placeholder / incomplete right now
 
-- Genres and page counts are all settled: 102 / 99 / 96 / 109 pages for Books 1–4,
-  and no book carries an unconfirmed-genre `editor-note` any more (genres were
-  chosen by Claude at the author's instruction).
-- The Iron Stiletto War's Google Books link came from the author and hasn't
-  been opened by an AI (Google blocks automated fetches) — one click
-  confirms it.
-- Every book now has a Scenes slider (8 / 19 / 19 / 4 images for Books
-  1–4), so the "not yet added" placeholder no longer shows on any page — it
-  stays in the generator for any future book added without scene art. The
+- Genres and page counts are settled for Books 1–4: 102 / 99 / 96 / 109
+  pages, none carrying an unconfirmed-genre `editor-note` (chosen by
+  Claude at the author's instruction). **Book 5 is the exception** — its
+  `~123` pages and suggested genre are still the SLAVE-4420 staging
+  copy's own unconfirmed estimate, `editor-note` span and all; resolve
+  the same way Books 1–4 were.
+- The Iron Stiletto War's and The Thermal Vessel War's Google Books links
+  both came in on their staging copies and haven't been opened by an AI
+  (Google blocks automated fetches) — one click each confirms them.
+- Every book now has a Scenes slider (8 / 19 / 19 / 11 / 17 images for
+  Books 1–5), so the "not yet added" placeholder no longer shows on any
+  page — it stays in the generator for any future book added without
+  scene art. The
   Stolen Prince War's scenes are ordered chronologically by story event
   (discovery → founding-five deaths → the Widow → the Ember Judge →
   Vartaz's death → the war years → Nairi's Level 101 expedition), not by
@@ -611,7 +671,7 @@ it hasn't had any editorial/proofreading pass.
   footer). There is deliberately **no email** — don't add one.
 - The four earlier placeholder-only books (Ghost, Aldemark, Illumaria,
   Carbon Echo Beacon) that existed at one point are still not on the site.
-  "More than a dozen novels" total were mentioned early on — only four
+  "More than a dozen novels" total were mentioned early on — only five
   are live.
 
 ## 8. Decisions already made — please don't relitigate these without cause
@@ -664,7 +724,28 @@ it hasn't had any editorial/proofreading pass.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest merge (0157 scene gallery into master).** The 0157 copy came
+- **Latest merge (4420 + 4417 scenes into master).** From the SLAVE-4420
+  copy: an entirely new Book 5, *The Thermal Vessel War* (Case 4420) — 7
+  characters (Yvaine, Kaelen, Maros, Corvus, Soren, Observer 814, and
+  Duke Vane, disambiguated to the `vane-4420` slug since it's a different
+  character from Book 4's own Vane) and a 17-scene gallery, published
+  with the staging copy's own cover and Google Books link. That copy
+  forked before master's `catalyst`/`envoy` roster-summary fields
+  existed, so both were written fresh for this book (catalyst: **The
+  Steel Flask**; envoy: **Observer 814**, &ldquo;the
+  Dragon-Speaker&rdquo;) so Book 5 doesn't silently drop out of the
+  lore rosters below. From the SLAVE-4417 copy: the **7 scenes Book 4's
+  own dict was still missing** (`vane-by-candlelight`, `aurelia-at-the-
+  great-concord`, `aurelia-crosses-the-hall`, `aurelia-on-the-throne`,
+  `corvin-brings-the-dye`, `ophelia-in-the-corridor`,
+  `beatrice-visits-aurelia`) — master had somehow been left at 4 despite
+  SLAVE-4417 itself always having had 11; Book 4 is now the full gallery.
+  Cultivator and Catalyst lore prose each picked up one new line for the
+  Case 4420 data point, and `HOME_SCENES` got a fifth entry
+  (`yvaine-in-the-south`). Images were a pure union, no conflicts. Book
+  5's pages/genre are still the staging copy's own estimated/suggested
+  values — unconfirmed, unlike Books 1–4 (see §7).
+- **Earlier merge (0157 scene gallery into master).** The 0157 copy came
   back with one thing master lacked: the Stolen Prince War's 19-scene
   gallery. Its characters, synopsis, cover, page count and lore text were
   identical to master's (or behind it — no Ledger scenes or link, no Royal

@@ -1006,9 +1006,34 @@ BOOKS = [
                 "caption_html": """<a href="../characters/vane.html">Vane</a> delivers the heels.""",
             },
             {
+                "slug": "vane-by-candlelight",
+                "alt": "The hermit Vane, long-haired and bearded, rests his chin on his fist and studies the flame of a single candle in a dark room",
+                "caption_html": """<a href="../characters/vane.html">Vane</a>, alone with a single candle.""",
+            },
+            {
                 "slug": "the-chrome-heels",
                 "alt": "A pair of mirror-polished chrome stiletto heels resting on a stone dais, draped in a red and gold cloth",
                 "caption_html": """The chrome heels themselves.""",
+            },
+            {
+                "slug": "aurelia-at-the-great-concord",
+                "alt": "Queen Aurelia, crowned and wrapped in a fur-trimmed cloak, stands in mirror-bright chrome heels on a polished hall floor as crowned and robed men bow and gaze up at her beneath tall arched windows",
+                "caption_html": """<a href="../characters/aurelia.html">Aurelia</a> at the Great Concord, her heels throwing light across the hall.""",
+            },
+            {
+                "slug": "aurelia-crosses-the-hall",
+                "alt": "Aurelia strides across a mirror-polished floor in chrome heels, her ermine cape trailing, while rows of gray-haired men kneel with bowed heads beneath red banners and a tall arched window",
+                "caption_html": """Heads lower as <a href="../characters/aurelia.html">Aurelia</a> crosses the hall.""",
+            },
+            {
+                "slug": "aurelia-on-the-throne",
+                "alt": "Queen Aurelia lounges on a golden throne in a red gown and ermine mantle, one chrome heel extended to a kneeling, fair-haired man in a hooded robe who bows over it while rows of dark-robed men look on",
+                "caption_html": """<a href="../characters/aurelia.html">Aurelia</a> enthroned, a supplicant bowed over her heel.""",
+            },
+            {
+                "slug": "corvin-brings-the-dye",
+                "alt": "Baron Corvin stands with an open hand beside a chest heaped with purple, blue and red silks while Isolde, seated at a sunlit window, works a length of pale cloth in her hands",
+                "caption_html": """<a href="../characters/corvin.html">Corvin</a> presents <a href="../characters/isolde.html">Isolde</a> with his gift of rare dye.""",
             },
             {
                 "slug": "corvin-and-isolde",
@@ -1020,6 +1045,147 @@ BOOKS = [
                 "alt": "Ophelia presents a sealed scroll to a seated Duchess Beatrice beneath a Solis banner",
                 "caption_html": """<a href="../characters/ophelia.html">Ophelia</a> delivers the Queen's refusal to <a href="../characters/beatrice.html">Beatrice</a>.""",
             },
+            {
+                "slug": "ophelia-in-the-corridor",
+                "alt": "Ophelia, in a white and gold gown and pale cloak, glances back over her shoulder along a candlelit Gothic corridor as a dark-haired man in a black coat watches from the foreground",
+                "caption_html": """<a href="../characters/ophelia.html">Ophelia</a> glances back along a long corridor.""",
+            },
+            {
+                "slug": "beatrice-visits-aurelia",
+                "alt": "Two panels in a stone cell: above, Beatrice in a dark cloak sits outside the bars facing the deposed Aurelia, with the chrome heels on the floor between them; below, Aurelia weeps alone with her face in her hands",
+                "caption_html": """<a href="../characters/beatrice.html">Beatrice</a> in audience with the imprisoned <a href="../characters/aurelia.html">Aurelia</a>.""",
+            },
+        ],
+    },
+    {
+        "slug": "4420", "title": "The Thermal Vessel War",
+        "status": ["published", "google-books"],
+        "cover_file": "4420.jpg",
+        "hook": "A flask of broth, one frightened knight, and the war two ducal houses paid for.",
+        "case_tag": "Case 4420",
+        "catalyst": {
+            "name": "The Steel Flask",
+            "meta": "Mundane Class",
+            "page": "books/4420.html",
+            "img": "scenes/soren-with-the-flask-grid.jpg",
+            "html": "<p>A double-walled steel flask that never lets what's poured into it go cold, passed down through one household for four centuries before anyone thought to ask why. Carried two hundred miles north as a mark of guest-right. Opens, at last, into a cloud of steam mistaken for something else entirely.</p>",
+        },
+        "envoy": {
+            "name": "Observer 814",
+            "meta": "&ldquo;The Dragon-Speaker&rdquo;",
+            "page": "characters/observer-4420.html",
+            "img": "characters/observer-4420-thumb.jpg",
+            "html": "<p>Deployed to the summit of Mount Skahr four centuries before the war, and folded by the clans, within a generation, into the Dragon-Speaker who keeps the mountain &mdash; a name he never corrects. Hands the flask to a frostbitten climber with no ceremony at all, then simply waits.</p>",
+        },
+        "pages": """~123 <span class="editor-note">(estimated from manuscript word count &mdash; confirm or edit)</span>""",
+        "genre": """Epic Fantasy &middot; Political Intrigue &middot; War &amp; Military Fiction <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "google_books_url": "https://play.google.com/store/books/details?id=CAEDEgAAQBAJ",
+        "synopsis_html": """<p>House Skarth has kept one steel flask far longer than anyone in it has thought to ask where it came from. It never lets its broth go cold; the family's oldest women say it came down from the sacred peak as a gift from the dragon who keeps court there; and its steward, Giles, has scrubbed it with lye soap every winter for forty years without once asking how it works. When Duke Maros, humiliated at his own table by a rival's gift of a stag's head, drags a royal hunt two hundred miles into the northern tundra to save face, Baron Kaelen of House Skarth accepts the invitation before the messenger has finished reciting it. Guest-right is the whole of his faith: a guest fed at his table is simply fed.</p>
+          <p>On the eleventh night, with the King gone silent and breaking frozen venison against a rock, Kaelen finally unscrews the stopper. The broth hits air some hundred and twenty degrees colder than it is and unrolls into a white cloud &mdash; and Sir Corvus of the royal bodyguard, still haunted by a spore-choked cave he survived eleven months earlier, sees only the thing that almost killed him. He kills Kaelen before the cup reaches the King. The Crown's sealed account of the death is true in every clause and never mentions broth; House Skarth reads it as a throne signing its name beneath a murder. Kaelen's twin sister Yvaine cuts her hair, puts on his ancestral mail, climbs the mountain for a blessing she doesn't quite believe in, and leads the northern clans south, with the flask &mdash; cased in silver now, and renamed the Vessel of the Betrayed Host &mdash; carried at the front of their war-bands.</p>
+          <p>Duke Vane, who wants the relic less for what it can do than for the Regency it could buy him, sells a beaten Maros his rescue at ruinous terms, hires the thief Soren to lift the vessel from the coalition's war-altar, and discovers too late what he has actually been fighting over. The war that follows is a slaughter no southern chronicle will ever name honestly; the scribes settle on the Great Winter Pestilence. <em>The Thermal Vessel War</em> closes on a Cultivator's archival log &mdash; Case Study 4,420: one flask, four centuries idle, and the most efficient war its Observer has recorded in eleven centuries.</p>""",
+        "characters": [
+            {
+                "slug": "kaelen", "name": "Kaelen",
+                "epithets": "Baron of House Skarth &middot; 25 years old &middot; twin brother to Yvaine",
+                "teaser": "Rides two hundred miles to feed a king, and dies holding both halves of the gift.",
+                "bio_html": """<p>Baron of House Skarth and <a href="../characters/yvaine.html">Yvaine</a>'s twin, and the book's clearest case of faith with no category for suspicion. Guest-right, in House Skarth's law, means a guest fed at your table is simply fed &mdash; no debt, no price &mdash; and he treats a royal hunting party exactly that way: accepting <a href="../characters/maros.html">Duke Maros</a>'s invitation before the messenger has finished reciting it, taking <a href="../characters/vane-4420.html">Duke Vane</a>'s offer to pay for provisions as the nearest thing to a genuine offense anyone has given him since leaving home, and quietly working a spare pair of dry socks free from his own baggage for a conscript whose boots have failed. He carries the household's steel flask two hundred miles north and holds it in reserve for the one night someone's need outruns the fires. When he finally unscrews the stopper for the King, <a href="../characters/corvus.html">Sir Corvus</a> kills him where he stands &mdash; flask in one hand, stopper in the other, before the cup has reached the King. His name outlives every other name attached to the war.</p>""",
+                "quote": "Sos-vahlok bl&oacute;t-krah; mey sos krongrah &mdash; blood guards the hearth; sacrifice warms the frost.",
+            },
+            {
+                "slug": "yvaine", "name": "Yvaine",
+                "epithets": "Lady of House Skarth &middot; 25 years old &middot; twin sister to Kaelen",
+                "teaser": "Cleans her brother's collar herself, cuts her hair with a hunting knife, and marches south.",
+                "bio_html": """<p>Lady of House Skarth and <a href="../characters/kaelen.html">Kaelen</a>'s twin &mdash; the guarded, suspicious half of a pair with one face between them. She argues against the hunt from the day the invitation arrives, and loses. After his death she cleans the dried broth from his fur collar herself, swears the Blood-Oath of the Vacant Hearth alone in the chapel &mdash; cutting her hair with a hunting knife and pulling on his too-large ancestral mail &mdash; and climbs Mount Skahr to ask <a href="../characters/observer-4420.html">its keeper</a> for a blessing she doesn't quite believe in. She sends <a href="../characters/vane-4420.html">Duke Vane</a>'s gold and marriage contract back unanswered, spares the frightened border holdfast of Cindale, and ends the war in the hall of <a href="../characters/maros.html">Duke Maros</a>'s captured keep, where she finds Vane himself. She does not ask his name; she has known it for a year.</p>""",
+                "quote": "Sos-vahlok bl&oacute;t-krah; mey sos krongrah &mdash; blood guards the hearth; sacrifice warms the frost.",
+            },
+            {
+                "slug": "maros", "name": "Duke Maros",
+                "epithets": "Duke of the Northern March &middot; Lord of Karhold Keep &middot; 45 years old",
+                "teaser": "Answers a stag's head with a royal hunt, and pays with his feet, his house, and his life.",
+                "bio_html": """<p>Duke of the Northern March, and the man whose wounded pride sends a royal hunt into the cold. Humiliated at his own table when <a href="../characters/vane-4420.html">Duke Vane</a> presents him with a summer-killed stag's head, he proposes a hunt in the deep northern winter to answer it &mdash; and it costs him every toe on both feet by the fourth week at the Broken Glacier. After the flask kills <a href="../characters/kaelen.html">Kaelen</a> he buys Vane's help on terms no one in his position could afford. His last honest act is a letter to the King warning him of Vane and begging that his wife and four-year-old son be kept out of Vane's reach; Vane's men take it from the courier at the pickets and burn it. Maros is arrested for treason and dies on the road south, in what Vane's own report calls an escape attempt met with necessary force.</p>""",
+                "quote": "The north is not won by pride or oath. It is won by hunger, endured longer than the foe can bear.",
+            },
+            {
+                "slug": "vane-4420", "name": "Duke Vane",
+                "epithets": "Duke of the Southern March &middot; Lord of Vane Keep",
+                "teaser": "Sends a stag's head to a rival and a thief to a mountain, and prices everything in between.",
+                "bio_html": """<p>Duke of the Southern March: patient, gracious, and never once unpriced. It is Vane who wounds <a href="../characters/maros.html">Duke Maros</a> with a summer-killed stag's head presented as a gift at his own table, who joins the royal hunt to watch what follows, and who &mdash; when the flask kills <a href="../characters/kaelen.html">Kaelen</a> &mdash; sees not a tragedy but a relic, and through it a Regency. He sells a desperate Maros his rescue at ruinous terms, hires <a href="../characters/soren.html">Soren</a> to steal the vessel, has Maros arrested when he becomes a liability, and, when he finally pries the silver off himself in the small hours before his last council, finds only a dented steel flask that smells of old soup &mdash; and tells no one. <a href="../characters/yvaine.html">Yvaine</a> finds him in the hall of Maros's captured keep; his head is left on a pike before the drawbridge. (Not the same man as <a href="../characters/vane.html">Vane the Wanderer</a> of <em>The Iron Stiletto War</em>.)</p>""",
+                "quote": "No guest leaves my table unfed. No oath leaves my memory. No insult leaves my blade unblooded. That is the law of my house.",
+            },
+            {
+                "slug": "corvus", "name": "Corvus",
+                "epithets": "Sir Corvus &middot; knight of the King's own bodyguard",
+                "teaser": "A royal bodyguard undone by a cloud of steam that looks, for one half-second, like spores.",
+                "bio_html": """<p>Knight of the King's own bodyguard &mdash; and, since a cave outside a border keep eleven months earlier, a man who can no longer fully separate the present from the year afterward, when he could not lift a spoon to his mouth without spilling the broth. Grey spore-dust, someone's breathing stopping beside him in the dark: by the eleventh night of the hunt he has not slept in four nights, and when <a href="../characters/kaelen.html">Kaelen</a> unscrews the flask and the broth unrolls into a white cloud, his whole body turns toward the sound of metal on metal before his mind is consulted. He kills Kaelen before the cup reaches the King. He serves another six years in the royal bodyguard, competently and without complaint, then lives eleven more alone on a small holding in the King's gift &mdash; a man who did the arithmetic more times than anyone should be asked to, and never once made it come out even.</p>""",
+                "quote": "The spores do not sleep. They wait. Mist, rot, dark &mdash; I have known their breath. I will not breathe it again.",
+            },
+            {
+                "slug": "observer-4420", "name": "Observer 814",
+                "epithets": "Envoy of the Cultivators &middot; &ldquo;the Dragon-Speaker&rdquo; &middot; Case Study 4,420",
+                "teaser": "Hands a family a steel flask, then waits four centuries on a mountain to see what they make of it.",
+                "bio_html": """<p>A field agent of the <a href="../lore/cultivator.html">Cultivators</a>, who came down onto Mount Skahr in a black, wingless vessel some four centuries before the war and was folded by the clans, within a generation, into the Dragon-Speaker, keeper of the mountain &mdash; a name he never corrects. When an ancestor of House Skarth climbs up to beg a token of divine favor, Observer 814 passes a double-walled steel flask across the gap between his instruments and the man's frostbitten hands with roughly the ceremony a lord might spend tossing a coin to a groom, and goes back to watching. Then he waits, at compound interest, for whichever descendant is careless enough to call the loan due. Four centuries on, <a href="../characters/yvaine.html">Yvaine</a> climbs to his ice cavern for a blessing on the war she has already decided to fight, and comes down the mountain certain she carries one he never gave her. He files the case as the most efficient the Envoy has recorded in eleven centuries of comparable seedings &mdash; and remains assigned to it.</p>""",
+                "quote": "I do not come to change. I come to witness. If change is already written, I will wait.",
+            },
+            {
+                "slug": "soren", "name": "Soren",
+                "epithets": "Shadow thief &middot; 38 years old &middot; of Byzantium",
+                "teaser": "Steals the war's holiest relic for a duke, opens it in a hunter's cabin, and finds it smells of soup.",
+                "bio_html": """<p>A thief claimed by no guild, who works for men rich enough that hiring him is safer than wondering who else might. <a href="../characters/vane-4420.html">Duke Vane</a> pays him more than he has ever been offered for an object he hasn't seen. Soren works his way into the coalition's country through the worst blizzard of the winter, lifts the vessel from the war-altar in the deepest hour of the worst night, when the sentries have been pulled back to shelter, opens its lock with a length of wire that has never once dulled or snapped, and is three miles gone before anyone thinks to check. Two days south, in a hunter's cabin, he pries off the silver and finds an empty, dented steel flask smelling of long-dried soup. He delivers it to Vane without a word and leaves Sumne within the month &mdash; the last man alive who ever looked beneath the silver, and a man who never says so.</p>""",
+                "quote": "I don't steal for greed. I steal so that others won't have to bleed.",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-twins-laughing",
+             "alt": "Yvaine, with long white hair, and Kaelen, in furs and leather with pendants at his throat, laughing together with snowy mountains behind them",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a> and <a href="../characters/kaelen.html">Kaelen</a>, before the hunt."""},
+            {"slug": "kaelen-and-the-spilled-broth",
+             "alt": "Kaelen lies in the snow with his eyes closed beside an overturned steel cup, steaming brown broth spreading across the ice",
+             "caption_html": """<a href="../characters/kaelen.html">Kaelen</a>, and the broth that never reached the King."""},
+            {"slug": "the-dragon-speaker-on-the-summit",
+             "alt": "A white-haired figure in a snow-crusted cloak stands before Observer 814, who sits on a tall iron throne on a storm-swept peak with one hand held out",
+             "caption_html": """<a href="../characters/observer-4420.html">Observer 814</a> on the frozen summit of Mount Skahr, receiving a climber from House Skarth."""},
+            {"slug": "yvaine-cuts-her-hair",
+             "alt": "Yvaine in chain mail holds a knife to her long white hair, cutting it off in a stone room beside a frosted window",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a> cuts her hair and puts on her brother's mail."""},
+            {"slug": "yvaine-after-the-oath",
+             "alt": "Yvaine, her white hair now short and blood on her face and gloves, holds a sword upright before her eyes",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a>, sword before her face &mdash; the vow made, the war ahead."""},
+            {"slug": "yvaine-and-the-observer",
+             "alt": "Yvaine, in a fur-collared cloak, faces Observer 814 across a frozen cavern floor beneath walls of hanging ice",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a> and <a href="../characters/observer-4420.html">Observer 814</a> in the ice cavern."""},
+            {"slug": "yvaine-above-the-frozen-plain",
+             "alt": "Yvaine, seen from behind in a fur cloak, looks out from a snowy ridge at two distant keeps across a frozen plain under an orange sky",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a>, looking out over the frozen plain."""},
+            {"slug": "riders-toward-the-keep",
+             "alt": "A column of riders under a black banner with a white beast's head and red streamers follows a snowy road toward a dark mountain keep",
+             "caption_html": """A column of riders under a black banner approaches a mountain keep."""},
+            {"slug": "the-broken-glacier",
+             "alt": "A column of dark-cloaked figures winds between towering walls of blue-white ice in a narrow glacier defile",
+             "caption_html": """The Broken Glacier."""},
+            {"slug": "soren-with-the-flask",
+             "alt": "Soren, in white snow gear with a crossbow across his lap, sits by a hearth in a wooden cabin holding a steel flask",
+             "caption_html": """<a href="../characters/soren.html">Soren</a>, in a hunter's cabin two days south, with the vessel he was paid to steal."""},
+            {"slug": "yvaine-in-the-south",
+             "alt": "Yvaine, in dark plate with a fur collar and blood on her cheek, holds a sword low amid armed men beneath a black banner with a gold eagle, a castle on the skyline behind her",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a> in the southern campaign."""},
+            {"slug": "yvaine-and-vane-cross-blades",
+             "alt": "Yvaine and Duke Vane cross swords over a banquet table in a candlelit hall while two servants cower beneath it",
+             "caption_html": """<a href="../characters/yvaine.html">Yvaine</a> and <a href="../characters/vane-4420.html">Duke Vane</a>, blades crossed in the hall of <a href="../characters/maros.html">Maros</a>'s captured keep."""},
+            {"slug": "the-pike-before-the-drawbridge",
+             "alt": "A black iron pike stands upright in frozen ground before a ruined gothic gatehouse hung with red banners, gold coins scattered across the snowy stones at sunset",
+             "caption_html": """Before the drawbridge of <a href="../characters/maros.html">Duke Maros</a>'s keep: the iron pike, and the gold no one took."""},
+            {"slug": "the-herald-and-the-coin",
+             "alt": "A black-gloved hand in a red cuff embroidered with a gold crown and eagle reaches for a single gold coin lying on snowy flagstones",
+             "caption_html": """The herald finds the one coin left balanced beneath <a href="../characters/vane-4420.html">Duke Vane</a>'s eyes."""},
+            {"slug": "the-black-fletched-arrow",
+             "alt": "A black-fletched arrow lies across a field of snow and dark stone",
+             "caption_html": """The black-fletched arrow the northern clans use to mark their dead along the ice line."""},
+            {"slug": "the-frozen-wall",
+             "alt": "A chain of grey stone watchtowers stretches away across a frozen sea, the nearest with a timber lookout and a lit window",
+             "caption_html": """The watchtowers a later king raised along the northern frontier."""},
+            {"slug": "the-great-winter-pestilence",
+             "alt": "A hand with a quill writes 'The Great Winter Pestilence' across the top of a parchment by candlelight, books and an inkwell behind it",
+             "caption_html": """What the scribes wrote: first a timber-tariff dispute, then &ldquo;the Great Winter Pestilence.&rdquo;"""},
         ],
     },
 ]
@@ -1029,12 +1195,13 @@ LORE = [
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
-          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit. Every Envoy on file is listed below.</p>""",
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit. Every Envoy on file is listed below.</p>
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
-        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
+        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
           <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Every Catalyst on file is listed below.</p>""",
     },
 ]
@@ -1234,7 +1401,8 @@ ROSTER = {
 
 # One scene per book for the homepage band: (book slug, scene slug).
 HOME_SCENES = [("0000", "valeria-full-power"), ("4099", "tower-burning"),
-               ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels")]
+               ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels"),
+               ("4420", "yvaine-in-the-south")]
 
 
 def roster_html(kind, depth):
