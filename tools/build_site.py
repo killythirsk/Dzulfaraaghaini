@@ -35,6 +35,8 @@ STATUS_URL_FIELDS = {
 }
 
 EDITOR_PAGES = """<span class="editor-note">add page count</span>"""
+EDITOR_GENRE = """<span class="editor-note">add genre</span>"""
+EDITOR_SYNOPSIS = """<p class="editor-note">Full synopsis coming soon &mdash; this book is still being drafted.</p>"""
 
 # (label, link text, url) — used by the Contact page and the footer.
 SOCIALS = [
@@ -1188,6 +1190,217 @@ BOOKS = [
              "caption_html": """What the scribes wrote: first a timber-tariff dispute, then &ldquo;the Great Winter Pestilence.&rdquo;"""},
         ],
     },
+    {
+        "slug": "4555", "title": "The Vessel of Unmediated Grace",
+        "status": ["published", "google-books"],
+        "cover_file": "4555.jpg",
+        "hook": "A traffic cone, a reluctant duke, and forty-one years spent trying to give a crown back.",
+        "case_tag": "Case 4555",
+        "catalyst": {
+            "name": "The Vessel of Unmediated Grace",
+            "meta": "Mundane Class",
+            "page": "books/4555.html",
+            "img": "scenes/the-anchorite-plants-the-vessel-grid.jpg",
+            "html": "<p>A hollow rubber traffic cone banded in retroreflective silver, seeded three at a time in a drainage ditch on the reasoning that a single unit left in open terrain is recovered by its intended finder only slightly more often than it's carried off by a flood or a curious child. Mistaken, when a beam of concentrated light finds it, for the literal residue of divine grace.</p>",
+        },
+        "envoy": {
+            "name": "Observer 902",
+            "meta": "Field Observer, Cultivator Envoy Corps",
+            "page": "characters/observer-902.html",
+            "img": "characters/observer-902-thumb.jpg",
+            "html": "<p>Stationed unseen in an alcove of the Grand Basilica's own black stone, filing four centuries of flat, evaluative-language-free reports on a single cone &mdash; and breaking protocol exactly once, to note, unbidden, that the subject wanted to leave.</p>",
+        },
+        "pages": "103",
+        "genre": """Epic Fantasy &middot; Satire &middot; Political Intrigue""",
+        "google_books_url": "https://play.google.com/store/books/details/Dzul_Faraaghaini_Case_4555_The_Vessel_of_Unmediate?id=TOQFEgAAQBAJ",
+        "synopsis_html": """<p>When King Aethelgard the Resplendent dies without an heir, Illumaria's whole theology of visible grace turns the search for his successor into a lit competition: three rival claimants &mdash; Archduke <a href="../characters/ignis.html">Ignis</a>, Duchess <a href="../characters/astraea.html">Astraea</a>, and Duke <a href="../characters/cassian.html">Cassian</a> &mdash; arrive at the Grand Basilica of Sol-Invictus each wearing a device built to make them glow. Duke <a href="../characters/blakk.html">Blakk</a> of Mud-Reach, the poorest and least ambitious name on the guest-roll, comes only to vote for whoever won't raise the timber tax &mdash; and three nights before his household guard crosses a nameless drainage ditch, an <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a>, working for the Cultivator Envoy Corps' <a href="../characters/observer-902.html">Observer 902</a>, plants three identical objects in the mud as standard redundancy. Blakk's horse finds the first.</p>
+          <p>He sets the resulting hollow orange cone on his own head as a joke, forgets to take it off, and is still wearing it in the Basilica's last row when High Pontiff <a href="../characters/sarel.html">Sarel</a>'s ceremonial beam of concentrated light finds it &mdash; and its retroreflective bands throw the beam straight back down the line it arrived on, cracking a three-century-old lens and blinding half the congregation with what looks, to three thousand kneeling monks, like the most convincing grace the Decree of Luminescence has ever produced. Blakk spends the next forty-one years trying to give the throne back. Nobody believes him: not the three houses whose war at the Standing at Illmere Ford turns his identical, unread letters of surrender into a legendary act of strategic mercy, and not Canon Voss, the one man who does the geometry correctly and spends four decades, and one exile, trying and failing to prove it.</p>
+          <p>What follows is less a triumph than an audit: a marriage settled by one underlined line in a private ledger, a Law of Succession that costs Blakk the very thing forty years of reluctant grace had bought him, and a Rite of Reconsecration, delayed until his deathbed, that finally puts the Vessel to the one test it was never built to survive. <em>The Vessel of Unmediated Grace</em> closes on a Cultivator's own archival log &mdash; Case Study 4,555: one 0.2-pound cone, a kingdom that never gets to read its own founding accident correctly, and an Observer already three ditches away before the file is closed.</p>""",
+        "characters": [
+            {
+                "slug": "blakk", "name": "Blakk",
+                "epithets": "Duke of Mud-Reach &middot; later High Sovereign of Illumaria &middot; reigned 41 years",
+                "teaser": "Falls off his horse into a ditch, puts a traffic cone on his head as a joke, and spends four decades trying to give the crown back.",
+                "bio_html": """<p>Duke of Mud-Reach, governing nine hundred square miles of drained marsh, standing timber, and tenant debt so ordinary it barely required collecting. His own name means, in his grandmother's border dialect, simply <em>black</em> &mdash; no chronicler ever settled whether it referred to his hair, his moods, or the bog-silt his family's boots never fully shed. He comes to the Great Judgment wanting nothing but to vote for whoever won't raise the timber tax and be home before spring flooding closes the border road; three days out, his horse loses its footing at a drainage ditch, and he sets the orange cone it throws him toward on his own head as a joke for his six guardsmen.</p>
+          <p>He spends the next forty-one years trying to give the resulting crown back. He refuses the Rite of Reconsecration rather than watch it melt in a Basilica flame, writes identical, unbelieved letters of surrender to <a href="../characters/ignis.html">Ignis</a>, <a href="../characters/astraea.html">Astraea</a>, and <a href="../characters/cassian.html">Cassian</a> before the Standing at Illmere Ford anyway, and marries Astraea two years after the war on terms she sets, not he. He fights his own nobility for a Law of Succession that will spare his cousin <a href="../characters/petrin.html">Petrin</a>'s heirs the same accident, and confesses everything, in his last clear hour, to the three people &mdash; <a href="../characters/harn.html">Harn</a>, Petrin, and <a href="../characters/prisca.html">Prisca</a> &mdash; he trusts to decide what a kingdom does not need to carry.</p>""",
+                "quote": "I only wished to sit in the back.",
+            },
+            {
+                "slug": "astraea", "name": "Astraea",
+                "epithets": "Duchess, House Astraea &middot; later Queen of Illumaria",
+                "teaser": "Musters an army over a letter she doesn't quite believe, and spends the rest of her life auditing what that cost her.",
+                "bio_html": """<p>Duchess of House Astraea, and the second claimant to stand the Great Judgment's trial: a six-foot Chandelier Wheel of a hundred and twenty tallow candles, strapped above her shoulders, that leaves the back of her neck blistered in a pattern she calls, to exactly one person, a second crown worn beneath the first. She musters her border levies less for the grazing land her council cites than because she can no longer bear being pitied, and her cavalry meets <a href="../characters/ignis.html">Ignis</a>'s own raiding column at the Standing at Illmere Ford on her marshal Coel's counsel, not her own conviction &mdash; a mistake her body-servant <a href="../characters/prisca.html">Prisca</a> hears her admit, alone, the same night: <em>he offered, and I refused.</em></p>
+          <p>She spends a month testing <a href="../characters/blakk.html">Blakk</a>'s goodness for a catch it never turns out to have, then two more years proving in public, through unglamorous service on his border commission, that her change of heart isn't a fresh maneuver for the throne. She marries him the following spring, becomes the sharper half of what the court quietly calls the Evening Ledger, and throws herself between him and Canon Voss's blade at Sarn's Crossing, taking a wound that troubles her for the rest of her life. She dies in the reign's thirty-sixth year, having underlined one line in her own private ledger more times than she ever admitted.</p>""",
+                "quote": "He offered. I refused.",
+            },
+            {
+                "slug": "cassian", "name": "Cassian",
+                "epithets": "Duke Cassian, House Cassian &middot; Noble Claimant to the throne of Illumaria",
+                "teaser": "Holds his chin unnaturally high to keep his own crown from breaking his neck, then does the same careful arithmetic on an entire war.",
+                "bio_html": """<p>Duke Cassian comes last and lightest to the Great Judgment: a five-foot Burnished Steel Sunburst of razor blades on a spine no thicker than a finger, engineered with real rigor for reflection and none at all for a grown man's neck, so that he holds his chin unnaturally high through the whole ceremony &mdash; arithmetic, not vanity, since any deeper bow was likely to snap his own spine for him. He reads <a href="../characters/blakk.html">Blakk</a>'s letter of surrender twice and does nothing, trusting no one but concluding, correctly, that a war against a man who has already surrendered is a war fought for nothing; he holds his own forces two days' march from the Standing at Illmere Ford for the whole engagement and arrives on the fifth day to find no one left worth conquering.</p>
+          <p>He proposes terms, retires within the fortnight, and spends the remaining thirty-one years of his life keeping a private ledger he calls the Cost of Not Winning &mdash; tallying, year on year, everything a crown might once have been worth against a column he never lets himself total in full. He turns down a coalition's offer to back his own claim without ever mentioning it to anyone, including Blakk, and dies in his own bed having proven, to his own satisfaction only, that a kingdom which asks nothing of him balances its books better than one he ruled.</p>""",
+                "quote": "A kingdom that costs a man nothing to leave alone is a kingdom he has already, whether he meant to or not, chosen to keep.",
+            },
+            {
+                "slug": "ignis", "name": "Ignis",
+                "epithets": "Archduke Ignis, House Ignis &middot; Eldest Claimant to the throne of Illumaria",
+                "teaser": "Wears seventy pounds of burning iron to prove his grace is forged rather than given, and loses the throne to a cone anyway.",
+                "bio_html": """<p>Archduke Ignis takes the Great Judgment's dais first, as eldest claimant and loudest patron of the doctrine that grace must be forged rather than merely inherited: an Anvil Forge Helm of seventy pounds of black iron housing a coal hearth at its crown, pumped by two apprentice boys until the watching monks swear his whole head appears to burn. His own First Counselor, Farris, picks apart <a href="../characters/blakk.html">Blakk</a>'s letter of surrender clause by clause and convinces the war council it is a trap rather than a confession; Ignis strikes first at what his scouts wrongly call an enemy vanguard, and the Standing at Illmere Ford follows within the day.</p>
+          <p>No two surviving accounts agree on whether he fell in the fighting or rode east and kept riding. His nephew Ossian inherits a house reduced, over two decades, from first rank to an increasingly theoretical eighth &mdash; and is given back, unasked and in full, the very grazing rights his uncle lost, in the single act of mercy Ossian spends fifty-four years failing to forgive.</p>""",
+                "quote": "With fire and iron, I take what is mine.",
+            },
+            {
+                "slug": "aethelgard", "name": "Aethelgard",
+                "epithets": "King of the High Realm of Illumaria &middot; Deceased",
+                "teaser": "Dies without an heir, and leaves an entire kingdom's theology with nothing left to measure but a stopped heart.",
+                "bio_html": """<p>King Aethelgard the Resplendent rules Illumaria as the Decree of Luminescence's own proof of concept: radiant, beloved, and, court chroniclers agreed, so charismatic that his own heart was said to burn too brightly for anything as mundane as a legacy. He dies without an heir in three attempted marriages, a fact the court physicians attribute to a stopped heart and the Last Order attributes, with rather more theological confidence, to a soul too incandescent for any womb to house its successor.</p>
+          <p>His death is the vacancy the entire book fills: it sends High Pontiff <a href="../characters/sarel.html">Sarel</a> looking for the next man or woman who can be proven, publicly, to glow, and puts <a href="../characters/ignis.html">Ignis</a>, <a href="../characters/astraea.html">Astraea</a>, and <a href="../characters/cassian.html">Cassian</a> &mdash; and, far down a guest-roll ranked by wealth, <a href="../characters/blakk.html">Duke Blakk of Mud-Reach</a> &mdash; into the same Basilica on the same morning.</p>""",
+                "quote": "They said his soul burned so brightly, his heart forgot how to leave a legacy behind.",
+            },
+            {
+                "slug": "sarel", "name": "Sarel",
+                "epithets": "High Pontiff of Sol-Invictus",
+                "teaser": "Draws back a curtain to test four rivals for grace, and spends the rest of his life half-blind from what answered.",
+                "bio_html": """<p>High Pontiff of Sol-Invictus, and the one man in Illumaria whose private eleven years of doubting the Decree of Luminescence leave him its sole living arbiter the moment <a href="../characters/aethelgard.html">Aethelgard</a> dies. He presides over the Great Judgment, draws the final baffle from the Sol-Focus Arc himself, and takes the returning beam directly in one eye when <a href="../characters/blakk.html">Blakk</a>'s cone reflects it back along its own line of arrival &mdash; cracking a lens no Pontiff after him is ever permitted to have repaired, and leaving him in tears he cannot stop for the rest of that day.</p>
+          <p>He invents the Triple Vessel doctrine once two further cones are recovered from the same ditch, crowns Blakk a second time as High Sovereign, and spends four decades keeping the vessels' true fragility a secret paid for in gold and silence. He talks <a href="../characters/petrin.html">Petrin</a> out of confessing the fraud immediately after Blakk's death, oversees the crown's final, confirming destruction by open flame, and sets down, in a testament his own successor won't find for twenty years, the one article of faith his doctrine never actually required of him.</p>""",
+                "quote": "Let no shadow claim what shadow did not make.",
+            },
+            {
+                "slug": "harn", "name": "Harn",
+                "epithets": "Captain Harn &middot; Captain of the Guard to Duke Blakk",
+                "teaser": "Checks a stranger's cone by torchlight out of plain habit, and spends the next forty years still watching for the same glint.",
+                "bio_html": """<p>Captain of Duke Blakk's household guard, a broad, unhurried man who operates on the sound principle that anything he can't identify probably isn't worth identifying &mdash; until a torch swung near a discarded cone throws back a flare that leaves him seeing green for the better part of an hour. He is the one man Blakk ever tells the truth of his own coronation to (&ldquo;I only wished to sit in the back&rdquo;), and the one man who understands, without being told twice, exactly what his duke fears about it.</p>
+          <p>He catches Canon Voss's hired assassin by the wrist a half-second before the blade lands, forty years and by his own count a fourth save into a friendship neither man ever calls that aloud, and stands with <a href="../characters/petrin.html">Petrin</a>, <a href="../characters/prisca.html">Prisca</a>, and <a href="../characters/sarel.html">Sarel</a> as one of the four witnesses to the crown's final, confirming melt. He never once tells Blakk that giving away a throne might have cost him less than accidentally winning one. He is not sure, by the end, that it would have.</p>""",
+                "quote": "My life is the Duke's shield. My flame, his final light.",
+            },
+            {
+                "slug": "petrin", "name": "Petrin",
+                "epithets": "Heir Presumptive &middot; later King of Illumaria",
+                "teaser": "Spends eleven years quietly reconciling granary ledgers, and inherits a crown that finally requires nothing more mystical than that.",
+                "bio_html": """<p>Blakk's cousin and heir presumptive, sixteen years old and watching from the walls on the day of the Standing at Illmere Ford, then a grey, heavily audited man of fifty-six by the morning Blakk finally dies. Set for eleven years to personally reconcile every granary shipment against its own certified weight, he uncovers a granary-master's six-year fraud through sheer tedium rather than brilliance, brings it to Blakk directly, and watches his cousin choose mercy calibrated to a debtor's actual circumstances over the arrest three advisors recommend &mdash; the lesson of that whole education he later credits above every province he was ever required to govern.</p>
+          <p>He is one of the last four people Blakk ever tells the truth to, and argues, at first, for confessing it publicly before his cousin is even buried; <a href="../characters/sarel.html">Sarel</a> talks him out of it. His own coronation, held under the Law of Succession Blakk fought his whole nobility to pass, needs no basilica, lens, or flame &mdash; the most boring coronation in Illumaria's recorded history, and, by his own reckoning, the truest proof the law had worked.</p>""",
+                "quote": "Illumaria endures not by the crown, but by the will that bears its weight.",
+            },
+            {
+                "slug": "prisca", "name": "Prisca",
+                "epithets": "Body-servant to Duchess Astraea",
+                "teaser": "Dresses the Duchess's wounds for eleven years, and keeps the one sentence that mattered for the rest of her own life.",
+                "bio_html": """<p>Body-servant to Duchess <a href="../characters/astraea.html">Astraea</a> for eleven years, and the one person who sees her mistress somewhere past the composure four centuries of House Astraea trained into her. She goes into Astraea's tent the night after the Standing at Illmere Ford against her own better judgment, sits with her on the cold ground, and hears the four words Astraea never repeats to anyone else: <em>he offered, I refused.</em></p>
+          <p>She serves as the last keeper of Astraea's private ledger after her death, and is one of the four people <a href="../characters/blakk.html">Blakk</a> confesses everything to in his final hour, alongside <a href="../characters/harn.html">Harn</a> and <a href="../characters/petrin.html">Petrin</a>. She is the one voice in that room who argues, quietly, that burying the king's own last truth is not quite the mercy the other three take it for &mdash; and never claims, afterward, that she was talked out of believing it.</p>""",
+                "quote": "I have seen the Duchess in glory, in grief, and in silence. I dressed her wounds, and I held my tongue.",
+            },
+            {
+                "slug": "fenn", "name": "Fenn",
+                "epithets": "Peddler / Merchant",
+                "teaser": "Sells fake splinters of a false crown for eleven years, then spends decades watching the real thing give itself away for free.",
+                "bio_html": """<p>A peddler of no particular loyalty who survives two previous wars by supplying both sides slightly different lies, and who spends the opening weeks of Illumaria's own succession war selling pilgrims small shards of orange-dyed river quartz, warmed over a candle and passed off as splinters of the sovereign's own crown. He calls it Ember-Glass. He believes in it, the Unconquered Sun, and, by his own account, very little else, which he considers sound business rather than a failure of faith.</p>
+          <p>He reinvents himself into almanacs once genuine relic-hunters start asking pointed questions about his supply chain, and returns to the capital only once more, decades into the Long Peace, to find <a href="../characters/blakk.html">Blakk</a> personally arguing a farmer's grain-tithe exemption at the palace's lower gate. He writes, that same night, in a ledger he shows no one, that he made a fortune selling counterfeit grace for eleven years, and that the king has been selling the genuine article for nearly thirty and has, so far as he can tell, made nothing at all off it.</p>""",
+                "quote": "Ember-Glass for warding fear and inviting warm fortune.",
+            },
+            {
+                "slug": "anchorite-of-the-drowned-road", "name": "Anchorite of the Drowned Road",
+                "epithets": "Drowned Road Sect &middot; Holy Ascetic",
+                "teaser": "Plants three identical cones in a nameless ditch on behalf of the Cultivator Envoy Corps, and never once meets anyone's eye.",
+                "bio_html": """<p>One of the small, tolerated, faintly pitiable Drowned Road sect, who hold that no soul can properly appreciate the Unconquered Sun's grace without first practicing, at length and in mud, its total absence. Three nights before Duke Blakk's household guard crosses a nameless drainage ditch, this Anchorite &mdash; smaller than most, its accent unplaceable, working on behalf of <a href="../characters/observer-902.html">Observer 902</a> of the Cultivator Envoy Corps &mdash; kneels at the ditch's lip and sets three identical objects into the silt rather than one, standard redundancy under a protocol written after several thousand comparable seedings elsewhere.</p>
+          <p>The tenants who notice the Anchorite at all notice only what they always notice about that sect: robes the color of an old bruise, an accent no market morning has ever placed, and an eye that never once meets theirs. Their part in the story ends there. What they left in the mud does not.</p>""",
+                "quote": "The road drowns what it should not reach. I simply mark where it remembers.",
+            },
+            {
+                "slug": "observer-902", "name": "Observer 902",
+                "epithets": "Field Observer, Cultivator Envoy Corps",
+                "teaser": "Files four centuries of flat, evaluative-language-free reports on one cone, and breaks protocol exactly once to say why it mattered.",
+                "bio_html": """<p>The Cultivator field agent running Case Study #4,555, stationed unseen in an alcove cut into the Grand Basilica's own black stone. Its reports use, per protocol, no first-person pronoun and no evaluative language whatsoever &mdash; and its very first entry breaks that protocol once anyway, recording, against its own training's explicit judgment that the detail was not relevant to the case, that the drainage ditch it had just seeded smelled of a particular decayed sweetness.</p>
+          <p>It closes the file four centuries later, by Illumarian reckoning, with a report that credits the whole intervention to a single 0.2-pound retroreflective object meeting a legitimacy doctrine with zero tolerance for ambiguous results &mdash; and appends, in a margin the Corps' own style guide explicitly discourages, four words it would call purely descriptive and would not, under any circumstance the Corps could devise, call what they actually were: <em>he wanted to leave.</em> It is already three ditches, and one kingdom, away before the file is even closed.</p>""",
+                "quote": "To witness without interference. To record without judgement. The Observer does not alter the outcome.",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-anchorite-plants-the-vessel",
+             "alt": "A hooded Anchorite of the Drowned Road kneels at the edge of dark water, setting an orange and white traffic cone into the mud, a distant city skyline behind them",
+             "caption_html": """The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> plants the Vessel in a ditch no map had ever named."""},
+            {"slug": "the-fall-at-the-ditch",
+             "alt": "A rearing horse throws its rider face-first into a muddy ditch beside a bright orange traffic cone",
+             "caption_html": """<a href="../characters/blakk.html">Blakk</a>'s palfrey loses its footing, and pitches its rider toward the Vessel."""},
+            {"slug": "a-joke-for-the-guard",
+             "alt": "A muddy man lifts an orange traffic cone onto his own head like a crown while soldiers and a dark horse look on",
+             "caption_html": """<a href="../characters/blakk.html">Blakk</a> sets the cone on his own head as a joke for his guard."""},
+            {"slug": "the-beam-finds-blakk",
+             "alt": "A man wearing an orange cone stands lit by a blinding shaft of golden light inside a vast dark cathedral, clergy and nobles gathered around him",
+             "caption_html": """The Sol-Focus Arc's beam finds <a href="../characters/blakk.html">Blakk</a>, beneath his column, at the Great Judgment."""},
+        ],
+    },
+    {
+        "slug": "0188", "title": "The Songs Never Mention the Cats",
+        "status": ["coming-soon"],
+        "cover_file": "0188.jpg",
+        "hook": "Arithmetic. Seven. Cats. A debt mistaken for a miracle. Filed.",
+        "case_tag": "Case 0188",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "2140", "title": "The Third Grain",
+        "status": ["coming-soon"],
+        "cover_file": "2140.jpg",
+        "hook": "Grain. Tolerance. Grace. Arithmetic. Bread.",
+        "case_tag": "Case 2140",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "3115", "title": "The Listening Water",
+        "status": ["coming-soon"],
+        "cover_file": "3115.jpg",
+        "hook": "Reckoning. Rationed. Witnessed. Roster. Closed.",
+        "case_tag": "Case 3115",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "3312", "title": "The Debt Is Settled",
+        "status": ["coming-soon"],
+        "cover_file": "3312.jpg",
+        "hook": "Eleven. Collateral. Recalculated. Unfalling. Cold.",
+        "case_tag": "Case 3312",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "3887", "title": "The Sin of Small Proof",
+        "status": ["coming-soon"],
+        "cover_file": "3887.jpg",
+        "hook": "Arithmetic. Proof. Worm. Silence. Accuracy.",
+        "case_tag": "Case 3887",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "4442", "title": "The Ghost-Pick",
+        "status": ["coming-soon"],
+        "cover_file": "4442.jpg",
+        "hook": "Catalyst. Leverage. Silence. Ruin. Myth.",
+        "case_tag": "Case 4442",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
 ]
 
 LORE = [
@@ -1195,14 +1408,14 @@ LORE = [
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
-          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him.</p>""",
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch. Every Envoy on file is listed below.</p>
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
-        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Every Catalyst on file is listed below.</p>""",
+        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. Every Catalyst on file is listed below.</p>""",
     },
 ]
 
@@ -1402,7 +1615,7 @@ ROSTER = {
 # One scene per book for the homepage band: (book slug, scene slug).
 HOME_SCENES = [("0000", "valeria-full-power"), ("4099", "tower-burning"),
                ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels"),
-               ("4420", "yvaine-in-the-south")]
+               ("4420", "yvaine-in-the-south"), ("4555", "the-beam-finds-blakk")]
 
 
 def roster_html(kind, depth):
@@ -1612,6 +1825,15 @@ def book_detail_body(book):
         scenes_section = """<h2>Scenes</h2>
         <p class="editor-note">Add scene illustrations here once they're ready.</p>"""
 
+    if b["characters"]:
+        characters_section = """<h2>Characters</h2>
+        <ul class="catalog-list">
+%s
+        </ul>""" % characters_index_html(b, 1)
+    else:
+        characters_section = """<h2>Characters</h2>
+        <p class="editor-note">Character roster coming soon.</p>"""
+
     return """    <div class="wrap page-content">
       <a class="back-link" href="%s">&larr; All Books</a>
       <div class="detail-header">
@@ -1634,10 +1856,7 @@ def book_detail_body(book):
       </div>
 
       <section class="subsection">
-        <h2>Characters</h2>
-        <ul class="catalog-list">
-%s
-        </ul>
+        %s
       </section>
 
       <section class="subsection">
@@ -1652,7 +1871,7 @@ def book_detail_body(book):
       </div>
     </div>
 """ % (books_href, cover_src, cover_src, b["title"], case_tag_html, b["title"], tags_html(b), b["pages"], b["genre"],
-       b["synopsis_html"], characters_index_html(b, 1), scenes_section, read_section)
+       b["synopsis_html"], characters_section, scenes_section, read_section)
 
 
 def character_detail_body(c, book):
