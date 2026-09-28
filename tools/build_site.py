@@ -5,9 +5,16 @@ Run with `python3 build_site.py` from anywhere; it locates the project
 root relative to this file's own location.
 """
 import os
+from datetime import datetime, timezone, timedelta
 
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AUTHOR = "Dzulfaraaghaini"
+
+# Recomputed every time this script runs, so the footer always reflects the
+# moment this exact version of the site was generated. Since a revision on
+# this static site only takes effect once it's rebuilt, this same value
+# doubles as the site's "last revised" marker.
+BUILD_TIME = datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d, %I:%M%p GMT+7")
 
 NAV = [
     ("index.html", "Home"),
@@ -1060,7 +1067,7 @@ BOOKS = [
         ],
     },
     {
-        "slug": "4420", "title": "The Thermal Vessel War",
+        "slug": "4420", "title": "The Vessel of the Betrayed Host",
         "status": ["published", "google-books"],
         "cover_file": "4420.jpg",
         "hook": "A flask of broth, one frightened knight, and the war two ducal houses paid for.",
@@ -1084,7 +1091,7 @@ BOOKS = [
         "google_books_url": "https://play.google.com/store/books/details?id=CAEDEgAAQBAJ",
         "synopsis_html": """<p>House Skarth has kept one steel flask far longer than anyone in it has thought to ask where it came from. It never lets its broth go cold; the family's oldest women say it came down from the sacred peak as a gift from the dragon who keeps court there; and its steward, Giles, has scrubbed it with lye soap every winter for forty years without once asking how it works. When Duke Maros, humiliated at his own table by a rival's gift of a stag's head, drags a royal hunt two hundred miles into the northern tundra to save face, Baron Kaelen of House Skarth accepts the invitation before the messenger has finished reciting it. Guest-right is the whole of his faith: a guest fed at his table is simply fed.</p>
           <p>On the eleventh night, with the King gone silent and breaking frozen venison against a rock, Kaelen finally unscrews the stopper. The broth hits air some hundred and twenty degrees colder than it is and unrolls into a white cloud &mdash; and Sir Corvus of the royal bodyguard, still haunted by a spore-choked cave he survived eleven months earlier, sees only the thing that almost killed him. He kills Kaelen before the cup reaches the King. The Crown's sealed account of the death is true in every clause and never mentions broth; House Skarth reads it as a throne signing its name beneath a murder. Kaelen's twin sister Yvaine cuts her hair, puts on his ancestral mail, climbs the mountain for a blessing she doesn't quite believe in, and leads the northern clans south, with the flask &mdash; cased in silver now, and renamed the Vessel of the Betrayed Host &mdash; carried at the front of their war-bands.</p>
-          <p>Duke Vane, who wants the relic less for what it can do than for the Regency it could buy him, sells a beaten Maros his rescue at ruinous terms, hires the thief Soren to lift the vessel from the coalition's war-altar, and discovers too late what he has actually been fighting over. The war that follows is a slaughter no southern chronicle will ever name honestly; the scribes settle on the Great Winter Pestilence. <em>The Thermal Vessel War</em> closes on a Cultivator's archival log &mdash; Case Study 4,420: one flask, four centuries idle, and the most efficient war its Observer has recorded in eleven centuries.</p>""",
+          <p>Duke Vane, who wants the relic less for what it can do than for the Regency it could buy him, sells a beaten Maros his rescue at ruinous terms, hires the thief Soren to lift the vessel from the coalition's war-altar, and discovers too late what he has actually been fighting over. The war that follows is a slaughter no southern chronicle will ever name honestly; the scribes settle on the Great Winter Pestilence. <em>The Vessel of the Betrayed Host</em> closes on a Cultivator's archival log &mdash; Case Study 4,420: one flask, four centuries idle, and the most efficient war its Observer has recorded in eleven centuries.</p>""",
         "characters": [
             {
                 "slug": "kaelen", "name": "Kaelen",
@@ -1335,11 +1342,138 @@ BOOKS = [
         "cover_file": "0188.jpg",
         "hook": "Arithmetic. Seven. Cats. A debt mistaken for a miracle. Filed.",
         "case_tag": "Case 0188",
-        "pages": EDITOR_PAGES,
-        "genre": EDITOR_GENRE,
-        "synopsis_html": EDITOR_SYNOPSIS,
-        "characters": [],
-        "scenes": [],
+        "pages": """~40 <span class="editor-note">(estimated from manuscript word count &mdash; confirm or edit)</span>""",
+        "genre": """Literary Fiction &middot; Historical Fantasy &middot; War &amp; Military Fiction <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "synopsis_html": """<p>Empress Chandralekha dies in her twenty-eighth winter, and her husband, Emperor Dharmasena, kneels at her grave for seventeen consecutive nights until something red and green pushes up through the frost. The gardener who finds it calls it a miracle. The Cultivators, who left the bulb there themselves, call it Item 0188, Mythic Class, and wait to see what a grieving empire does with an excuse to believe in undying love.</p>
+          <p>What it does is grow an economy. A trader who gives his name as <a href="../characters/somadatta.html">Somadatta</a> distributes the bulbs from a seed-stall that is really a Cultivator field post, and within a generation the flower once called Chandralekha's Vow &mdash; now <em>Anantavrata</em>, the Endless Vow &mdash; has become a wedding custom no family can afford to skip and no farmer can quite afford to refuse. Barley fields along the Shonavati turn to flowers one holding at a time; a bride gives up the cat that has slept against her ankles since childhood because a vow-flower needs the room a cat's dish would take; a court physician tests the bloom with a frame of temple bees and finds, to his quiet horror, that nothing living will go near it.</p>
+          <p>The reckoning arrives as arithmetic, not omen: fewer fields of grain each year, a war fought over granaries already stripped bare, and rats nesting where the barley used to stand. By the time anyone adds up what the undying flower cost the ordinary, mortal people who grew it, the empress it was named for has been dead for decades &mdash; and the debt has already been filed away as a miracle. The songs, as ever, never mention the cats.</p>""",
+        "catalyst": {
+            "name": "The Eternal-Grief Lily", "meta": "Mythic Class",
+            "page": "characters/the-eternal-grief-lily.html", "img": "characters/the-eternal-grief-lily-thumb.jpg",
+            "html": """<p>A single undying, unpollinated flower, planted in an empress's grave and multiplied into a marriage custom, then a cash crop, then a famine.</p>""",
+        },
+        "envoy": {
+            "name": "Somadatta", "meta": "Envoy Archetype 03",
+            "page": "characters/somadatta.html", "img": "characters/somadatta-thumb.jpg",
+            "html": """<p>Working Case 0188 under cover as a traveling seed-trader, distributing the bulbs that turn a private grief into an empire's economy &mdash; and quietly keeping the cats no one else wanted.</p>""",
+        },
+        "characters": [
+            {
+                "slug": "dharmasena", "name": "Dharmasena",
+                "epithets": "Emperor of Amritavana &middot; Ninth of His Name &middot; Husband of Chandralekha",
+                "teaser": "The emperor who knelt at his wife's grave for seventeen nights, and left an empire an excuse to believe in undying love.",
+                "bio_html": """<p>Ninth of his name, and the only one of the nine remembered for a flower instead of a war. When <a href="chandralekha.html">Chandralekha</a> dies of a winter fever, Dharmasena visits her tomb nightly through the coldest month of the year, and on the fourth night presses a single bulb into the half-frozen ground &mdash; not knowing, and never later admitting he wondered, that the bulb had been left where he would find it.</p>
+                <p>He watches the flower that grows from it become a name (<em>Chandralekha's Vow</em>), then a custom, then an industry he never ordered and cannot quite bring himself to end. When his gardener <a href="haridasa.html">Haridasa</a> asks, years later, whether the Emperor wants it removed, Dharmasena says only: let it stand. He dies before the worst of the arithmetic comes due, and is remembered, correctly, as a man whose private grief became public policy without a single decree ever being signed.</p>""",
+                "quote": "A flower is mercy when it remains a dream. When it blooms in the world, it becomes a chain.",
+            },
+            {
+                "slug": "chandralekha", "name": "Chandralekha",
+                "epithets": "Empress of Amritavana &middot; Deceased &middot; Namesake of the Vow",
+                "teaser": "Dead before the story proper begins, and the reason for everything that follows &mdash; a woman turned, without her consent, into a national myth.",
+                "bio_html": """<p>Empress of Amritavana, dead of a winter fever before Case 0188 truly opens. Everything that happens afterward happens in her name and without her permission: a flower named for her grief, a custom built on her memory, and a fortune made from a vow she never made. Her husband <a href="dharmasena.html">Dharmasena</a> is the only person in the empire who seems to remember that the woman and the myth were never quite the same thing.</p>""",
+                "quote": "Some loves do not end with death. They change form, and bloom in other worlds.",
+            },
+            {
+                "slug": "haridasa", "name": "Haridasa",
+                "epithets": "Palace Gardener &middot; Imperial Household of Amritavana",
+                "teaser": "The gardener who found the bulb's first bloom, named it out of love, and had no idea what he'd started.",
+                "bio_html": """<p>An aging palace gardener who tends <a href="chandralekha.html">Chandralekha</a>'s tomb as part of his ordinary rounds, and is the first person other than <a href="dharmasena.html">Dharmasena</a> to see the flower bloom. It's Haridasa, not the Emperor, who first calls it <em>Chandralekha's Vow</em> &mdash; a gardener's private sentiment that escapes the palace walls and becomes, within a season, the name of a national ritual of grief.</p>
+                <p>He goes on tending it for decades, long after he's stopped being able to say for certain whether he still believes what he first said about it.</p>""",
+                "quote": "The flower is a gift, not a thing to be removed. It is a sign &mdash; of love, of devotion, of her enduring memory.",
+            },
+            {
+                "slug": "somadatta", "name": "Somadatta",
+                "epithets": "Envoy of the Cultivators &middot; Envoy Archetype 03 &middot; the Trader",
+                "teaser": "The field agent who sells grief back to the grieving, one bulb at a time, and keeps seven secret cats because someone has to.",
+                "bio_html": """<p>Envoy Archetype 03, working Case 0188 under cover as a traveling seed-trader. Somadatta is the one who carries the flower out of the palace grounds and into the capital's wedding markets, and the one who watches &mdash; over years, then decades &mdash; as an emperor's private grief becomes a marriage custom, then agricultural policy, then a famine. His own field notes record the conversions, the refusals, and the slow disappearance of household cats with the same even hand.</p>
+                <p>In the small rented room above his seed-stall, Somadatta keeps cats &mdash; five, then seven, by the case's fourth year &mdash; taken in from families who gave them up for the Vow. It is the one part of the file that isn't, strictly, part of the case. See the <a href="../lore/cultivator.html">Cultivator</a> entry for how his cover compares to other Envoys on file.</p>""",
+                "quote": "The flower travels where people believe it will bring them closer to what they have lost.",
+            },
+            {
+                "slug": "the-eternal-grief-lily", "name": "The Eternal-Grief Lily",
+                "epithets": "Cultivator Designation: <em>Lilium Immortalis</em> &middot; Mythic Class &middot; Local Name: Anantavrata",
+                "teaser": "A single, undying, unpollinated flower &mdash; Item 0188 &mdash; that no insect will touch and no family can resist.",
+                "bio_html": """<p>Cultivator designation <em>Lilium Immortalis</em>, Mythic Class; filed locally as <em>Anantavrata</em>, the Endless Vow, after its earlier and more sentimental name, <em>Chandralekha's Vow</em>. Left in the frozen ground of an empress's grave by the Envoy <a href="somadatta.html">Somadatta</a>, it blooms without pollination, without scent, and without ever quite dying &mdash; a flower that court physician <a href="vaidyanatha.html">Vaidyanatha</a> tests with a frame of temple bees and finds nothing living will approach.</p>
+                <p>It asks nothing of anyone. It is planted, gifted, purchased, and eventually grown as a cash crop in place of grain along the Shonavati, entirely on the strength of what people decide it means. See the <a href="../lore/catalyst.html">Catalyst</a> entry for how this compares to the rest of the case files.</p>""",
+                "quote": "No bee has ever landed on it, and no bee ever will. That was never what it was for.",
+            },
+            {
+                "slug": "vaidyanatha", "name": "Vaidyanatha",
+                "epithets": "Court Physician of Kunjaravana",
+                "teaser": "The physician sent to debunk a miracle, who instead files a report careful enough to later be misquoted for a war.",
+                "bio_html": """<p>Sent from the rival kingdom of Kunjaravana to examine the flower on behalf of a king who assumes it's a fraud, Vaidyanatha instead spends three mornings watching temple bees refuse to land on it, and writes a report that is honest about what he doesn't understand. It is the most careful, most hedged document in the entire case file &mdash; and the one later generations strip of its hedges and repurpose as justification for a war he never advocated.</p>""",
+                "quote": "The flower is not merely growing. It is progressing. And what progresses is not meant to be cut.",
+            },
+            {
+                "slug": "kamalini", "name": "Kamalini",
+                "epithets": "Bride of Amritavana &middot; Later, an Elderly Widow",
+                "teaser": "A nineteen-year-old bride who receives a vow-flower as a wedding gift, and gives up the cat who slept at her ankles to make room for it.",
+                "bio_html": """<p>Married at nineteen into a household that keeps an <em>Anantavrata</em> the way other families keep a household shrine. Her mother-in-law decides there isn't room in the house for both the flower and Kamalini's cat, <a href="dhumra.html">Dhumra</a>, and Kamalini &mdash; newly married, unwilling yet to make her first fight one worth losing &mdash; carries him to the kitchen door herself.</p>
+                <p>She keeps the flower for the rest of her life, through widowhood and old age, and is never on record saying whether it was worth the trade.</p>""",
+                "quote": "The Vow was for a life of abundance, they said. But in the end, it took even my cat.",
+            },
+            {
+                "slug": "dhumra", "name": "Dhumra",
+                "epithets": "Grey Cat &middot; Companion to Kamalini",
+                "teaser": "The cat given up for a flower &mdash; the one cost of the Vow small enough for the histories to leave out entirely.",
+                "bio_html": """<p>A grey domestic cat who sleeps against <a href="kamalini.html">Kamalini</a>'s ankles every winter of her unmarried life, and is given away on her mother-in-law's orders to make room for a vow-flower that needs no room at all. Case 0188's records are unusually attentive, for a Cultivator file, to what became of him afterward &mdash; which is more than can be said for most of what the Vow quietly cost.</p>""",
+                "quote": "He slept against her ankles every winter of her unmarried life.",
+            },
+            {
+                "slug": "govinda", "name": "Govinda",
+                "epithets": "Farmer Along the Shonavati &middot; Father of a Daughter Nearing Marriage",
+                "teaser": "A grain farmer who plows his own barley under rather than let anyone else do it, and tells himself it was his decision.",
+                "bio_html": """<p>A farmer along the Shonavati with a daughter approaching marriageable age, and so a dowry to consider. Govinda holds out against Vow-cultivation longer than most of his neighbors, then plows his own barley field under with his own hands rather than let a seed-broker's crew do it for him &mdash; a distinction that seems to matter more to him than to anyone watching.</p>""",
+                "quote": "The earth gives enough, if you do not sell your soul to the flower.",
+            },
+            {
+                "slug": "bhadraka", "name": "Bhadraka",
+                "epithets": "Farmer Along the Shonavati &middot; the Man Who Refused",
+                "teaser": "One of the last grain farmers left on the river, who turns down the bulbs every time they're offered and pays for it in a broken betrothal.",
+                "bio_html": """<p>A farmer along the Shonavati and one of the very few who never converts a single field to Vow-cultivation, even after his daughter's betrothal is withdrawn over it. When the Envoy <a href="somadatta.html">Somadatta</a> offers him bulbs directly, Bhadraka refuses without raising his voice, and goes on refusing for the rest of the case file. What grain the river valley has left by the time of the famine, it has largely because men like him didn't sell it off in advance.</p>""",
+                "quote": "I have no daughter left to dower, and no wife who will not know why I bought it. Keep your bulbs.",
+            },
+            {
+                "slug": "dhanapala", "name": "Dhanapala",
+                "epithets": "Merchant &middot; Grain-Futures Trader of the Capital",
+                "teaser": "The merchant who reads the coming famine in his own ledgers years early, and profits from it instead of warning anyone.",
+                "bio_html": """<p>A grain-futures trader in the capital who reads the numbers &mdash; fewer barley contracts, more Vow-bulb orders &mdash; years before anyone else calls it a pattern, and positions himself to profit from the shortage rather than to prevent it. Dhanapala isn't a villain by his own account, only a man who understood the arithmetic sooner than his customers did.</p>""",
+                "quote": "Grain moves the realm. Numbers tell you when people cannot see.",
+            },
+            {
+                "slug": "ravisena", "name": "Ravisena",
+                "epithets": "Son of Dharmasena &middot; Regent, Later Emperor of Amritavana",
+                "teaser": "The son who inherits both an empire and its flower, and has to decide what an undying vow is worth to the living.",
+                "bio_html": """<p>Son of <a href="dharmasena.html">Dharmasena</a> and <a href="chandralekha.html">Chandralekha</a>, regent and later Emperor of Amritavana in his own right. Ravisena inherits the Vow along with the throne, and with it the accumulated arithmetic of what his father's grief has cost a generation of farmers, brides, and cats. What he does with that inheritance closes out Case 0188's imperial thread.</p>""",
+                "quote": "The empire endures, not because we did not fall, but because we remember what we are.",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-fourth-night", "alt": "Dharmasena kneeling at Chandralekha's grave at night, planting a single bulb",
+             "caption_html": "On the fourth night, Dharmasena presses a single bulb into his wife's grave and tells no one why."},
+            {"slug": "the-seventeenth-visit", "alt": "Dharmasena kneeling in grief before a snow-covered tomb",
+             "caption_html": "By the seventeenth visit, the Emperor's composure finally fails him."},
+            {"slug": "let-it-stand", "alt": "Dharmasena and Haridasa beside the blooming grave-flower in winter",
+             "caption_html": "Asked whether the flower should be removed, Dharmasena says only: let it stand."},
+            {"slug": "somadatta-in-the-capital", "alt": "Somadatta selling flower bulbs at a crowded capital market",
+             "caption_html": "The trader who calls himself Somadatta sells the empire's newest custom one bulb at a time."},
+            {"slug": "the-bees-that-would-not-land", "alt": "Vaidyanatha testing the flower with a frame of temple bees",
+             "caption_html": "Three mornings, one frame of temple bees, and not a single insect willing to land."},
+            {"slug": "kamalini-gives-up-dhumra", "alt": "Kamalini holding her cat Dhumra as her mother-in-law looks on",
+             "caption_html": "A vow-flower needs no room at all, and somehow there still isn't room for the cat."},
+            {"slug": "seven-cats-above-the-seed-stall", "alt": "Somadatta surrounded by seven cats in his room above the seed-stall",
+             "caption_html": "Above the seed-stall that is really a Cultivator field post, an Envoy keeps the one part of the case that isn't, strictly, the case."},
+            {"slug": "govinda-plows-it-under", "alt": "Govinda plowing under his barley field beside a seed-broker",
+             "caption_html": "Govinda converts his own barley field rather than let a broker's crew do it for him."},
+            {"slug": "bhadraka-keeps-his-bulbs", "alt": "Somadatta offering bulbs to Bhadraka, who refuses",
+             "caption_html": "Offered the bulbs directly, Bhadraka refuses without raising his voice."},
+            {"slug": "the-year-everyone-was-rich", "alt": "A crowded wedding market in the empire's most prosperous year",
+             "caption_html": "In the year everyone was rich, three couples buy a bulb inside the same hour."},
+            {"slug": "the-granary-of-rats", "alt": "A ravaged granary overrun with rats, an Anantavrata growing in the ruin",
+             "caption_html": "The Vow's own roots turn out to be adequate eating, for whatever is left in an empty granary."},
+            {"slug": "a-bride-generations-later", "alt": "A bride carrying an Anantavrata down the aisle at her wedding",
+             "caption_html": "Generations on, a bride carries an Anantavrata down the aisle, and no one remembers why."},
+        ],
     },
     {
         "slug": "2140", "title": "The Third Grain",
@@ -1350,7 +1484,127 @@ BOOKS = [
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
         "synopsis_html": EDITOR_SYNOPSIS,
-        "characters": [],
+        "envoy": {
+            "name": "Observer 419", "meta": "Itinerant Clockmaker",
+            "page": "characters/observer-419.html", "img": "characters/observer-419-thumb.jpg",
+            "html": """<p>A field agent of the Cultivators, deployed to the county of Vardane under cover as a traveling clockmaker. He replaces a single worn axle-joint with an unremarkable grey sphere during one night's hospitality, refuses every offer of further help, and is gone on foot three days later &mdash; forgotten the way useful strangers generally are. The wheel is not.</p>""",
+        },
+        "characters": [
+            {
+                "slug": "garibald", "name": "Garibald",
+                "epithets": "Count of Vardane &middot; 31 when the clockmaker comes",
+                "teaser": "Shelters a stranger for a night's lodging, and spends the rest of his life discovering exactly what that hospitality cost and bought him.",
+                "bio_html": """<p>Count of Vardane, a man who made peace with arithmetic before he made peace with anything else, and keeps his own ledgers in a hand precise enough to embarrass his clerks. He shelters a traveling stranger &mdash; one of dozens he's sheltered that year without asking much beyond honesty about their business &mdash; and the man installs a single dull grey sphere in the county mill before vanishing three days later. When <a href="../characters/landulf.html">Baron Landulf</a> files a legal claim on the strength of it, Garibald offers no defense, on the private theory that a truth he can't prove would only make the loss look like a lie besides, and breaks down completely at his family's seat, Ostrevenna &mdash; the first time anyone has ever seen him do so.</p>
+          <p>He sets exactly one condition on House Ratchis reclaiming the mill for him: that it cost <a href="../characters/landulf.html">Landulf</a> nothing beyond what the war his own claim set in motion has already cost him. He returns to Vardane five years later to a wheel still turning, a miller two winters dead, and a set of questions about the clockmaker's real purpose that his own private notes never quite answer.</p>""",
+                "quote": "Keep the ledger current.",
+            },
+            {
+                "slug": "observer-419", "name": "Observer 419",
+                "epithets": "Envoy/Observer, Case 2,140 &middot; publicly an itinerant clockmaker",
+                "teaser": "Installs a single unremarkable sphere in a failing county mill, then disappears before anyone thinks to ask his name twice.",
+                "bio_html": """<p>A field agent of the <a href="../lore/cultivator.html">Cultivators</a>, deployed to Vardane disguised as a traveling clockmaker with nothing more remarkable about him than a satchel of pocket chronometers. <a href="../characters/garibald.html">Count Garibald</a> shelters him for a night's lodging before asking a single question about his business &mdash; a courtesy no prior posting has required of him, and which his own field note admits, against protocol, he was not required to find noteworthy, and did. He replaces one worn axle joint with a single dull grey sphere, refuses every offer of help, and leaves three days later on foot, forgotten the way useful strangers generally are. The wheel is not.</p>""",
+                "quote": "Introduce. Observe. Withdraw before attachment becomes measurable.",
+            },
+            {
+                "slug": "teudis", "name": "Teudis",
+                "epithets": "Miller of Vardane's county mill &middot; inherited the post, and his father's bad knees",
+                "teaser": "Keeps a private tally of the wheel's working days for years, then watches an old debt forgive itself in a single winter.",
+                "bio_html": """<p>The broad, uncomplaining miller of Vardane's county mill, who inherited the position along with his father's bad knees and had kept, for years before the clockmaker ever arrived, a private tally of exactly how many days each winter the wheel turned at all &mdash; a number he never once told <a href="../characters/garibald.html">Count Garibald</a>, suspecting correctly that the Count already knew it better than he did. He holds the precision bearing himself before <a href="../characters/observer-419.html">Observer 419</a> installs it, cold in his palm on a night beside a working forge, and it's his own tavern telling of that visit, embellished the way an unbelievable truth requires, that eventually gives the county its name for what changed the mill: the Third Grain.</p>
+          <p>Conscripted in the war his own good fortune helps start, he comes home eleven months later missing the two smallest fingers of his left hand and goes straight back to the mill anyway. He dies two winters before the Count returns, having made his sister repeat back to him three times the one fact he considered worth reporting.</p>""",
+                "quote": "Tell him the mill never once stopped running. Not for a single day. Hand or no hand.",
+            },
+            {
+                "slug": "garibalds-mother", "name": "Garibald's Mother",
+                "epithets": "Deceased &middot; mother of Count Garibald",
+                "teaser": "A final illness Garibald nurses alone becomes the private grief the whole county learns never to mention above a murmur.",
+                "bio_html": """<p>Dead well before the clockmaker ever reaches Vardane, tended through her final illness by <a href="../characters/garibald.html">Garibald</a> alone &mdash; a grief that costs him, by his own private reckoning, the best courting years of his life, and leaves him no longer much interested in beginning again. The county discusses it, when it discusses it at all, above nothing louder than a murmur.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "landulf", "name": "Landulf",
+                "epithets": "Baron of Verrasco &middot; 19 at his inheritance",
+                "teaser": "Files a legal claim over a neighbor's good fortune, wins exactly what he asked for, and spends the rest of his life learning what it actually cost.",
+                "bio_html": """<p>Baron of Verrasco, who inherited the barony at nineteen when his older brother <a href="../characters/ansfrid.html">Ansfrid</a> fell from a lathered horse during a boar hunt, and governs competently &mdash; a word, he comes to understand, people use about a man precisely when they mean to withhold something larger. He watches Vardane's fortunes climb for three years with a patience he'd call arithmetic rather than envy, and finally files a formal claim under the Writ of Undeclared Grace: not sorcery, not any crime the Threefold Crown has a name for, only an oversight any honest man might make. He wins. Holding the bearing alone afterward in a locked room, he feels not triumph but the particular cold of a man who has just proven his own accusation correct.</p>
+          <p>He tells no one what his own smith found, quietly exempts whole villages from the war's levy where he can justify it as necessity rather than mercy, and writes a confession to <a href="../characters/garibald.html">Garibald</a> he never learns went unanswered by design rather than indifference. He dies without ever suspecting House Ratchis engineered the claimant that took the mill back from him.</p>""",
+                "quote": "I am not accusing the Count of a crime, only of an oversight any honest man might make, and asking that the law correct it as the law was written to do.",
+            },
+            {
+                "slug": "gisela", "name": "Gisela",
+                "epithets": "Baron Landulf's daughter &middot; 17 at her introduction",
+                "teaser": "Reads her father's ledgers closely enough to understand exactly what his ambition has cost her, and chooses her own marriage rather than let him choose a second time.",
+                "bio_html": """<p>Daughter to <a href="../characters/landulf.html">Baron Landulf</a>, clever in the patient, arithmetical way of a girl who has read her father's ledgers long enough to know exactly what a good marriage costs and how far short of it Verrasco's revenues fall. Watching her weigh those numbers, more than watching his neighbor's granaries fill, is what finally moves her father's private suspicion into a legal claim.</p>
+          <p>When the war his ambition starts costs him nearly everything else, she tells him plainly that she watched him gamble a mill for her future and lose them both in the same three years, and chooses her own lesser house herself rather than let him choose worse for her a second time. He lets her.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "ansfrid", "name": "Ansfrid",
+                "epithets": "Heir to Verrasco, implied &middot; Landulf's older brother",
+                "teaser": "Dies on a boar hunt neither brother much wanted to attend, and makes Landulf a Baron at nineteen by falling from a horse.",
+                "bio_html": """<p>The older brother <a href="../characters/landulf.html">Baron Landulf</a> never expected to inherit past, thrown from a lathered horse during a boar hunt neither of them had much wanted to attend. His fall ends one story before it starts another: a boyhood Landulf had spent entirely assuming a barony would never be his to swear an oath over.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "grimoald", "name": "Grimoald",
+                "epithets": "Duke of Trevano &middot; 46 when the rumor reaches him",
+                "teaser": "Sends an engineer to investigate a rumor out of a boyhood shame he's never told a soul, and ends up arming a continent instead.",
+                "bio_html": """<p>Duke of Trevano, who wanted, as a boy, to fix his grandmother's chiming clock in secret with tools stolen from the household smith, and never told anyone &mdash; not his father, not his wife, not one of the engineers he'd go on to employ by the dozen &mdash; that he'd failed. When a badly garbled rumor of a Verrasco mill reaches him at forty-six, he sends his engineer <a href="../characters/gisulf.html">Gisulf</a> to look, report honestly, and touch nothing without permission, and thinks, that first evening, not of siege engines but of a clock he never managed to fix.</p>
+          <p>Two years of failing to reproduce the bearing leave Trevano with something else entirely: lathes, measurement, and metalworkers trained to a precision no duchy has previously demanded. He gives the order to turn it toward siege engines three days after <a href="../characters/gisulf.html">Gisulf</a> names what they've actually built, and spends the rest of his life uncertain whether those three days were deliberation or merely decency's minimum interval before doing what he'd already decided. He keeps his duchies, and a personal workshop of precision tools he never once touches himself.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "gisulf", "name": "Gisulf",
+                "epithets": "Engineer in Duke Grimoald's service &middot; twice told him a design would fail, and was right both times",
+                "teaser": "Spends three sleepless nights confirming a rumor, then spends two years turning the failure to copy it into something considerably worse.",
+                "bio_html": """<p><a href="../characters/grimoald.html">Grimoald</a>'s engineer, trusted for the rare reason that he has twice told the Duke a design would fail and been right both times. Sent to look at Verrasco's mill, report honestly, and touch nothing without permission, he touches nothing &mdash; and doesn't sleep for three nights afterward, which he considers, privately, sufficient permission of its own. His eleven-page report reaches one conclusion: a tolerance nothing in Trevano's armories can presently match.</p>
+          <p>He never reproduces the bearing itself; every imitation opened past a certain depth seizes and goes inert. What his workshop builds instead, failing patiently and expensively for two years, is the capability to measure and match precision from the outside &mdash; lathes, gauges, metalworkers trained to a standard no apprenticeship had previously required. Demonstrating a trebuchet joint machined to that standard, he's the one who finally says the sentence Grimoald spends three days pretending to deliberate over.</p>""",
+                "quote": "A joint that fails less often, under less maintenance, through worse weather, is not a better mill part. It is a better war.",
+            },
+            {
+                "slug": "grimoalds-father", "name": "Grimoald's Father",
+                "epithets": "Lombard collector &middot; died in his 60s",
+                "teaser": "Buys his young son a Frankish chiming clock at absurd expense, and never once has it repaired.",
+                "bio_html": """<p>A collector with a heavyset, acquisitive self-satisfaction, known to <a href="../characters/grimoald.html">Grimoald</a> mainly through a single anecdote: a Frankish chiming clock bought at absurd expense for his son and never once taken to be fixed, which the boy would go on to attempt himself, in secret, and fail at, without ever once telling his father why it mattered.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "grimoalds-wife", "name": "Grimoald's Wife",
+                "epithets": "Wife of Duke Grimoald &middot; early-to-mid 50s",
+                "teaser": "Listens in silence to a court she was raised for, and is never once told the one story that would explain her husband's fascination with precision.",
+                "bio_html": """<p>Duke Grimoald's wife, slender and dignified, composed by the same court training that shaped every feature of her bearing. She listens in silence as <a href="../characters/grimoald.html">Grimoald</a> speaks of the war his workshops have made possible, one of the very few people close enough to him to have noticed the personal workshop he never lets anyone touch &mdash; and, like everyone else in his life, never once told why.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "adelrada", "name": "Adelrada",
+                "epithets": "Elder of House Ratchis &middot; 78 years old",
+                "teaser": "Watches a man who never once broke over his own mother's death come apart over a mill, and spends two years quietly finishing a sum nobody else knows she's counting.",
+                "bio_html": """<p>Elder of House Ratchis, spare and upright at seventy-eight, with the ink-stained fingers of a woman who has kept her own ledgers for decades. She isn't moved by <a href="../characters/landulf.html">Landulf</a>'s legal claim on Vardane's mill so much as by what it does to <a href="../characters/garibald.html">Garibald</a> &mdash; a man she has watched grieve quietly and competently his whole life, breaking, for the first time she's ever seen, at her own table at Ostrevenna. She sends the ruling to her notary <a href="../characters/vitalis.html">Vitalis</a> rather than accept a summary of it, and spends two years afterward keeping a private accounting nobody else is shown: what the mill's loss once cost Garibald, weighed against what its keeping has since cost Landulf.</p>
+          <p>She acts only once the sum finally closes &mdash; on Landulf's own unsent confession, not on any House vote &mdash; instructing <a href="../characters/vitalis.html">Vitalis</a> to find an unconnected claimant, and quietly withdrawing House Ratchis's reach from Duke Grimoald's war until the mill returns to Vardane exactly as quietly as it left. She dies eleven years later in her own bed. Her great-nephew <a href="../characters/ranulf.html">Ranulf</a> finds the ledger afterward, and is the only person who ever learns what she'd actually been counting.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "vitalis", "name": "Vitalis",
+                "epithets": "Notary retained by House Ratchis &middot; 55 years old",
+                "teaser": "Reads a legal ruling three times, then reports a debt rather than a scandal &mdash; and charges his standard fee either way.",
+                "bio_html": """<p>A notary House Ratchis has kept on retainer for years and trusted for exactly one reason: he has never once told <a href="../characters/adelrada.html">Elder Adelrada</a> what he suspected she wanted to hear. Asked to review the ruling that hands <a href="../characters/garibald.html">Garibald</a>'s mill to Verrasco, he reads the Writ of Undeclared Grace three times and reports, without any apparent alarm, that it rests on a four-generation-dormant precedent that could pry loose a great deal more than a mill, given the right claimant and enough patience.</p>
+          <p>Two years later, given an instruction rather than a question, he finds that claimant within the fortnight &mdash; a minor cousin of a minor cousin, chosen specifically for how little the choice would ever need explaining.</p>""",
+                "quote": "For the reading, I charge the standard fee.",
+            },
+            {
+                "slug": "ranulf", "name": "Ranulf",
+                "epithets": "Member of House Ratchis &middot; Elder Adelrada's great-nephew &middot; 26",
+                "teaser": "Argues loudest for allying with a Duke who could remake armories from a single mill part, then spends an afternoon learning what his great-aunt was actually counting.",
+                "bio_html": """<p>Elder <a href="../characters/adelrada.html">Adelrada</a>'s great-nephew, lean and impatient with a House that has spent eight generations being clever instead of powerful. When Duke Grimoald's rise splits House Ratchis's council, he argues loudest for allying with the Duke outright, a position his great-aunt hears out along with the rest without ever once showing which way her own mind is bending.</p>
+          <p>Three days after her funeral, going through her papers alone because no one else has volunteered for it, he finds the private ledger she kept his whole life a secret from &mdash; not the House's usual accounts of reach and marriages and debts, but two long columns of ordinary, specific losses, kept level against each other for eleven years. He is the only person who ever learns what she was actually counting.</p>""",
+                "quote": "Caution has kept us safe for generations. But safety is not the same as a future.",
+            },
+            {
+                "slug": "eldest-witness-of-the-writ", "name": "Eldest Witness of the Writ",
+                "epithets": "Witness of the Writ &middot; senior-most of the clerical judges",
+                "teaser": "Presides over the hearing that hands a Count's mill to his neighbor, and can't stop glancing at a painted ceiling he's complained about for thirty years.",
+                "bio_html": """<p>The senior-most of the clerical judges who hear <a href="../characters/landulf.html">Landulf</a>'s claim against <a href="../characters/garibald.html">Garibald</a>'s mill, presiding beneath a painted ceiling depicting Auron weighing three golden scales that have never quite balanced in the artist's rendering &mdash; a detail he's complained about for thirty years and will go on complaining about for several more. The ruling takes his court less than an hour to reach and considerably longer to read aloud, the witnesses of the Writ being men who love procedure roughly as much as they love Auron himself.</p>""",
+                "quote": None,
+            },
+        ],
         "scenes": [],
     },
     {
@@ -1416,6 +1670,27 @@ LORE = [
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
           <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. Every Catalyst on file is listed below.</p>""",
+    },
+    {
+        "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
+        "teaser": "A monotheism built on waiting, honest prayer, and a sword no one else can lift.",
+        "definition_html": """<p>A monotheism built around a single historical miracle: an honest prayer, answered from the sky. Ardwen &mdash; the Unhastening, the Sky-Answered &mdash; is worshipped as the one eternal goddess, without rival, consort, or divine family, and asks less of her followers than most faiths do: wait, ask honestly, keep your promises, and act responsibly without pretending to know a god's mind for her. Her clergy are careful to distinguish what is known from what is merely mysterious, and the faith's own maxim is built to resist any shortcut: <em>Ardwen answers the honest, but never on command.</em></p>
+          <p>Her institutional church, the Vigil of Ardwen, is led by a First Keeper and organized into regional Houses of Vigil, with confession, baptism, marriage, funerals, and pilgrimage among its sacred rites. The faith reveres its founding miracle &mdash; and the sword that came with it &mdash; as a sacred sign of that day, never as a rival object of worship. Whatever else it is, Valeria is not a god.</p>""",
+        "appears_html": """<p>The founding faith of <a href="../books/0000.html">The Sword of Valeria</a>, where the goddess herself and the relic she left behind both have entries of their own: <a href="../characters/ardwen.html">Ardwen</a> and <a href="../characters/valeria.html">Valeria</a>. Generations later, in <a href="../books/0157.html">The Stolen Prince War</a>, the Vigil's doctrine of unearned, uncommandable grace is tested to its limit by a dungeon that answers the same chest the same way every single time &mdash; a contradiction its own Keeper, <a href="../characters/yudith.html">Yudith</a>, spends eleven years trying to preach around.</p>""",
+    },
+    {
+        "slug": "threefold-crown", "name": "The Threefold Crown", "group": "Religion",
+        "teaser": "Three gods, or one god wearing three faces &mdash; the Crown has never resolved which.",
+        "definition_html": """<p>An old pagan faith built around three supreme gods who may, or may not, be one god wearing three faces &mdash; a contradiction its own believers call the Threefold Mystery and have never been in any hurry to resolve. <strong>Auron</strong> the Father governs heaven, law, kingship, judgment, and oaths; <strong>Elara</strong> the Mother governs earth, birth, fertility, harvest, and hearth; <strong>Solan</strong> the Son governs the sun, fire, youth, passion, and sacrifice. A believer may favor one god over the other two without ever quite denying that all three are, somehow, the same throne. The formula recited at its temples leaves the contradiction standing on purpose: <em>Father above. Mother beneath. Son beside us. Three crowns. One Heaven.</em></p>
+          <p>Ritual-heavy and elaborately hierarchical, with wine treated as sacred and pork freely eaten, the Threefold Crown holds that its own throne is the one true one &mdash; a claim that makes its temple politics every bit as susceptible to ambition as any earthly court, and its priesthood just as capable of turning a private grief, or a private embezzlement, into doctrine.</p>""",
+        "appears_html": """<p>Vantashen's state religion in <a href="../books/0157.html">The Stolen Prince War</a>, where Hierarch <a href="../characters/doreth.html">Doreth</a> turns a private grief into a war he tells himself is a monument, and the guardian at Level 40 is known to delvers as <a href="../characters/the-ember-judge.html">the Trial of Solan</a>. In <a href="../books/4417.html">The Iron Stiletto War</a>, the Order of the Pale Cloth's High Cleric <a href="../characters/ambrose.html">Ambrose</a> declares a pair of shoes heretical on the Crown's own authority. And in <a href="../books/2140.html">The Third Grain</a>, a legal claim over a county mill is argued and won entirely inside the Crown's own law, under a courtroom ceiling painted with <a href="../characters/eldest-witness-of-the-writ.html">a judge</a> who has spent thirty years complaining that Auron's three scales were never painted quite level.</p>""",
+    },
+    {
+        "slug": "decree-of-luminescence", "name": "The Decree of Luminescence", "group": "Religion",
+        "teaser": "A theology of measured light: what is favored is lit, and what is lit has been favored.",
+        "definition_html": """<p>The youngest of the faiths on file, promulgated after a kingdom-threatening catastrophe: years of ash-blotted sky broken, at the exact point of famine, by a single standing column of true daylight over the capital. <strong>Sol-Invictus, the Unconquered Sun,</strong> is worshipped as the one eternal, lending light, and its doctrine is unusually literal for a religion: light is not read as a sign of favor, it <em>is</em> favor, measured out to every soul at birth as a store of borrowed fire and returned, spent or unspent, at death. It is a creditor's theology at bottom, and its own clergy don't pretend otherwise. The doctrine's core article states the idea plainly: <em>Whatever was favored was lit, and whatever was lit had been favored.</em></p>
+          <p>Its church, the Last Order, is led by a High Pontiff and keeps its own doctrine correctable only by further entry, never by erasure. A claimant to real favor stands before a lens that concentrates true daylight onto them, to see whether they visibly glow; a crown is carried through open flame, to see whether the gold endures. What three centuries of both tests have never quite worked out is how to tell light that's generated from light that's merely, cleverly, reflected.</p>""",
+        "appears_html": """<p>Founded three centuries before the events of <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
     },
 ]
 
@@ -1486,8 +1761,9 @@ def footer_html(depth):
         <li><a href="%s">Contact</a></li>@@SOCIALS@@
       </ul>
     </div>
+    <p class="build-info wrap">Site last built %s</p>
   </footer>
-  <script src="%sjs/site.js" defer></script>""" % (AUTHOR, contact, r)).replace("@@SOCIALS@@", socials)
+  <script src="%sjs/site.js" defer></script>""" % (AUTHOR, contact, BUILD_TIME, r)).replace("@@SOCIALS@@", socials)
 
 
 def page(title, description, depth, active_file, body):
@@ -1615,7 +1891,8 @@ ROSTER = {
 # One scene per book for the homepage band: (book slug, scene slug).
 HOME_SCENES = [("0000", "valeria-full-power"), ("4099", "tower-burning"),
                ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels"),
-               ("4420", "yvaine-in-the-south"), ("4555", "the-beam-finds-blakk")]
+               ("4420", "yvaine-in-the-south"), ("4555", "the-beam-finds-blakk"),
+               ("0188", "the-granary-of-rats")]
 
 
 def roster_html(kind, depth):
@@ -1750,11 +2027,27 @@ def books_body():
 
 def lore_index_html(depth):
     r = rel(depth)
-    items = []
-    for l in LORE:
+
+    def li(l):
         href = "%slore/%s.html" % (r, l["slug"])
-        items.append("<li><strong><a href=\"%s\">%s</a></strong> &mdash; %s</li>" % (href, l["name"], l["teaser"]))
-    return "<ul class=\"detail-list\">" + "".join(items) + "</ul>"
+        return "<li><strong><a href=\"%s\">%s</a></strong> &mdash; %s</li>" % (href, l["name"], l["teaser"])
+
+    # Entries with no "group" key stay in the plain list at the top (Cultivator,
+    # Catalyst). Entries carrying a "group" (currently "Religion") are collected
+    # under that group's own heading, in the order the groups first appear.
+    parts = []
+    ungrouped = [l for l in LORE if not l.get("group")]
+    if ungrouped:
+        parts.append("<ul class=\"detail-list\">" + "".join(li(l) for l in ungrouped) + "</ul>")
+    groups = []
+    for l in LORE:
+        g = l.get("group")
+        if g and g not in groups:
+            groups.append(g)
+    for g in groups:
+        members = "".join(li(l) for l in LORE if l.get("group") == g)
+        parts.append("<section class=\"subsection\"><h2>%s</h2><ul class=\"detail-list\">%s</ul></section>" % (g, members))
+    return "\n      ".join(parts)
 
 
 def lore_body():

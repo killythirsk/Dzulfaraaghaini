@@ -10,7 +10,7 @@ the project from scratch each time.
 
 ## Where things stand
 
-Four books are live: *The Sword of Valeria* (Case 0000) — real cover,
+Six books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
 synopsis, a full cast of 10 characters, an 8-image scene gallery, and
 working "View on Google Books" / "Read on Royal Road" links — *The Ledger
 of a Single Sweetness* (Case 4099) — real cover, synopsis, a full cast of
@@ -20,9 +20,17 @@ War* (Case 0157) — real cover, synopsis, a full cast of 35 characters, a
 19-image scene gallery, a confirmed page count (96), and a working "View
 on Google Books" link — and *The Iron Stiletto War* (Case 4417) — real
 cover, synopsis, a full cast of 13 characters, a 4-image
-scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). The Lore glossary has
-two entries, Cultivator (listing every Envoy) and Catalyst (listing every
-Catalyst), each built automatically from the books' own data. Images
+scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Two more are live but not described in
+detail here: *The Vessel of the Betrayed Host* (Case 4420) and *The Vessel
+of Unmediated Grace* (Case 4555). Two further books, 0188 and 2140, are
+marked coming-soon but already carry full character rosters, and four more
+(3115, 3312, 3887, 4442) are still empty coming-soon placeholders. The
+Lore glossary has five entries: Cultivator (listing every Envoy) and
+Catalyst (listing every Catalyst), each built automatically from the
+books' own data, plus three religions — the Faith of Ardwen, the
+Threefold Crown, and the Decree of Luminescence — under their own
+Religion heading. Every page's footer shows when the site was last built
+(GMT+7), stamped automatically each time `tools/build_site.py` runs. Images
 enlarge on click, and you can step between them without closing the view;
 a book's Scenes gallery (when it has one) slides sideways, its Characters
 list scrolls normally. Images are protected against casual saving (right-click

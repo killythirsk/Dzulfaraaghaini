@@ -15,7 +15,9 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; five are live on the site so far — see
+various stages of publication; six are live on the site so far, plus two
+more (0188, 2140) with a complete character roster but no synopsis yet —
+see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
 
@@ -155,17 +157,25 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently four entries)
+/books.html             Full book list (currently twelve entries: six published,
+                            six coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
 /books/4417.html          The Iron Stiletto War's full page
-/lore.html               Glossary index
-/lore/<slug>.html          One page per term (cultivator, catalyst; lore/catalyst-tier.html
-                            is only a redirect stub to catalyst.html)
-/characters/<slug>.html    One page per character (86 total — 10 for
+/lore.html               Glossary index (plain list on top, then a "Religion"
+                            heading over the three faiths — `group` field, §8)
+/lore/<slug>.html          One page per term (cultivator, catalyst, faith-of-ardwen,
+                            threefold-crown, decree-of-luminescence;
+                            lore/catalyst-tier.html is only a redirect stub to
+                            catalyst.html)
+/characters/<slug>.html    One page per character (132 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
-                            Prince War, 13 for the Iron Stiletto War; see §6)
+                            Prince War, 13 for the Iron Stiletto War, 7 for
+                            the Vessel of the Betrayed Host, 12 for the
+                            Vessel of Unmediated Grace, 12 for the Songs
+                            Never Mention the Cats, 15 for the Third Grain;
+                            see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -261,8 +271,12 @@ record (`name`, `meta`, `page`, `img`, `html`). `lore/cultivator.html` lists one
 Envoy row per book and `lore/catalyst.html` one Catalyst row per book,
 automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
-when it is merged. Only the four live books are listed; canon-guide cases that
-have no book on the site yet (0156, 4442, 0188, 1268, 4425, 3887) are not.
+when it is merged. Listed there: every book whose dict actually carries a
+`catalyst` and/or `envoy` record — the six published books, plus 0188 (both
+records) and 2140 (envoy only — see §6) now that their rosters have been
+merged in. Canon-guide cases with no book dict on the site at all (0156,
+1268, 4425) or only an empty coming-soon stub with no cast (3115, 3312,
+3887, 4442) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -586,7 +600,17 @@ sequence rather than re-derived. The manuscript itself (a complete,
 "Revision 4 (Final)" draft) was read only for these facts — it hasn't had
 any editorial/proofreading pass.
 
-### Book 5: *The Thermal Vessel War* (Case 4420)
+### Book 5: *The Vessel of the Betrayed Host* (Case 4420)
+
+**Renamed from *The Thermal Vessel War*, at the author's request.** The old
+title survives nowhere on the site or in this script — every reference
+(title field, the inline `<em>` mention inside the synopsis, nav/roster/
+cast-wall auto-links) now reads *The Vessel of the Betrayed Host*, which
+was already the in-story name the synopsis gives the relic once Yvaine
+cases it in silver ("renamed the Vessel of the Betrayed Host"). The book's
+own title now simply matches the object's own in-fiction name, the same
+way *The Vessel of Unmediated Grace* (Case 4555) is object-named rather
+than war-named. Don't reintroduce the old title from memory.
 
 Status: **Published**, with a Google Books link supplied in the
 SLAVE-4420 staging copy (`google_books_url` on `BOOKS[4]`) — wired in
@@ -635,6 +659,42 @@ same palette-knife painterly style as Book 4's; order and captions came
 from the SLAVE-4420 copy as authored and were not independently
 re-verified against a manuscript by this session.
 
+### Books with a roster but no synopsis yet: 0188 and 2140
+
+Two more `BOOKS` entries now carry a full cast even though `status` is
+still `["coming-soon"]` — don't read "coming-soon" as "no content." 0188
+has a real synopsis with estimated page count and suggested genre; 2140
+still has the bare `EDITOR_*` placeholders for all three. Don't flip
+either to `published` without the author confirming the details first.
+
+**Case 0188, *The Songs Never Mention the Cats*.** Merged in from a
+staging copy (SLAVE-0188) that forked from master and filled in a full
+synopsis, a 12-character cast, a 12-scene gallery, and both a `catalyst`
+(**The Eternal-Grief Lily**, Mythic Class) and `envoy` (**Somadatta**,
+Envoy Archetype 03) record — so, unusually for a coming-soon book, it
+already carries a real synopsis and both roster records. Its `~40` pages
+and suggested genre are the staging copy's own unconfirmed values, with
+the same `editor-note` spans Book 5 has, and the status tag is still
+coming-soon. Cast: Dharmasena, Chandralekha,
+Haridasa, Somadatta, the Eternal-Grief Lily, Vaidyanatha, Kamalini, Dhumra
+(Kamalini's cat), Govinda, Bhadraka, Dhanapala, Ravisena.
+
+**Case 2140, *The Third Grain*.** Merged in from a separate staging copy
+(SLAVE-2140) that added a 15-character cast only — `pages`, `genre`, and
+`synopsis_html` are still the bare `EDITOR_*` placeholders, unlike 0188.
+Cast: Garibald, Observer 419, Teudis, Garibald's Mother, Landulf, Gisela,
+Ansfrid, Grimoald, Gisulf, Grimoald's Father, Grimoald's Wife, Adelrada,
+Vitalis, Ranulf, the Eldest Witness of the Writ. The staging copy had no
+`envoy`/`catalyst` records either (it forked before this schema field
+existed on stub books, the same gap Book 5 had — see §8); an `envoy`
+record for **Observer 419** ("Itinerant Clockmaker") was written fresh
+during the merge, from his own character bio, so 2140 isn't silently
+absent from `lore/cultivator.html`. **No `catalyst` record was added** —
+the precision bearing itself has no character portrait and no scene image
+to point a roster thumbnail at (2140's `scenes` list is still empty), so
+inventing one would mean a broken `<img>` on the Catalyst lore page. Add
+it once real art exists for the bearing itself or a scene depicting it.
+
 ## 7. What's placeholder / incomplete right now
 
 - Genres and page counts are settled for Books 1–4: 102 / 99 / 96 / 109
@@ -643,7 +703,12 @@ re-verified against a manuscript by this session.
   `~123` pages and suggested genre are still the SLAVE-4420 staging
   copy's own unconfirmed estimate, `editor-note` span and all; resolve
   the same way Books 1–4 were.
-- The Iron Stiletto War's and The Thermal Vessel War's Google Books links
+- **0188 and 2140 are roster-only** (§6). Both are still `coming-soon`;
+  0188's pages/genre are unconfirmed estimates, and 2140 has no synopsis,
+  page count, or genre at all, no scene art (so its Scenes slider shows the
+  "not yet added" placeholder), and no `catalyst` record. Wait for the
+  author's confirmation before flipping either to `published`.
+- The Iron Stiletto War's and The Vessel of the Betrayed Host's Google Books links
   both came in on their staging copies and haven't been opened by an AI
   (Google blocks automated fetches) — one click each confirms them.
 - Every book now has a Scenes slider (8 / 19 / 19 / 11 / 17 images for
@@ -671,8 +736,8 @@ re-verified against a manuscript by this session.
   footer). There is deliberately **no email** — don't add one.
 - The four earlier placeholder-only books (Ghost, Aldemark, Illumaria,
   Carbon Echo Beacon) that existed at one point are still not on the site.
-  "More than a dozen novels" total were mentioned early on — only five
-  are live.
+  "More than a dozen novels" total were mentioned early on — only six are
+  live, plus 0188 and 2140 with a roster but no synopsis yet (§6).
 
 ## 8. Decisions already made — please don't relitigate these without cause
 
@@ -724,8 +789,59 @@ re-verified against a manuscript by this session.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest merge (4420 + 4417 scenes into master).** From the SLAVE-4420
-  copy: an entirely new Book 5, *The Thermal Vessel War* (Case 4420) — 7
+- **Latest merge (0188 + 2140 rosters into master), plus revisions.** Two
+  staging copies came back at once, both clean forks of master whose only
+  differences were additions — checked with a full diff of `build_site.py`
+  and a byte-compare of every shared image (no same-named file differed,
+  and the two copies' new files didn't overlap). From the first
+  (SLAVE-0188): the full Case 0188 dict (synopsis, 12 characters, 12
+  scenes, `catalyst`, `envoy`) replaced master's empty stub, its 48 new
+  images came across (24 character, 24 scene), and `HOME_SCENES` got a
+  seventh entry (`the-granary-of-rats`). From the second (SLAVE-2140): the
+  15-character cast replaced master's empty `characters` list for Case
+  2140, plus 30 new character images (it had no scene art) — nothing else:
+  no synopsis, no `catalyst`/`envoy`, no scenes. An `envoy` record for
+  Observer 419 was written fresh (§6); a `catalyst` record deliberately
+  was not, for lack of any art to point at. Both books stay `coming-soon`.
+  The two large dict splices were done by script from the staging files
+  rather than retyped, so the prose is byte-identical to them.
+- **Retitle: *The Thermal Vessel War* → *The Vessel of the Betrayed Host*
+  (Case 4420).** Author's request. One title field plus the single inline
+  `<em>` mention in the synopsis; everything else follows from the title
+  field on rebuild. No occurrence of the old title remains in the
+  generated site or the script (it survives only in this file's history
+  notes, marked as such).
+- **Build timestamp in every footer.** `BUILD_TIME` (top of
+  `build_site.py`) is computed with `datetime.now()` in GMT+7 each time
+  the script runs and printed as "Site last built …" under the footer of
+  every page (`footer_html`, styled by `.build-info`). It is never
+  hand-edited or stored: it is simply when this version was generated,
+  and because a revision on a static site only takes effect once it is
+  rebuilt, it doubles as the "last revised" marker. The format matches the
+  canon guide's own (`YYYY-MM-DD, HH:MMAM/PM GMT+7`). Note that
+  `import build_site` from Python regenerates the whole site as a side
+  effect (the script has no `__main__` guard), which also refreshes it.
+- **Religion added to the lore.** Three new `LORE` entries — *The Faith of
+  Ardwen* (`faith-of-ardwen`), *The Threefold Crown* (`threefold-crown`),
+  *The Decree of Luminescence* (`decree-of-luminescence`) — drawn from the
+  author's canon guide and written in the same glossary voice as
+  Cultivator/Catalyst. They are the first entries to use `appears_html`
+  (hand-written "Appears In" prose) rather than a `roster`, because a
+  faith isn't one-per-book (Case 0157 alone carries two). Each carries
+  `"group": "Religion"`, which `lore_index_html` uses to list them under
+  their own **Religion** heading on `lore.html`; entries with no `group`
+  (Cultivator, Catalyst) stay in the plain list above it. The Ardwen slug
+  is `faith-of-ardwen`, not `ardwen`, so it can't be mistaken for the
+  character page of the same name. The pages stick to what believers
+  themselves would say: none states the Cultivator connection behind a
+  faith's founding, since each book's own page is where that belongs and a
+  glossary entry is where a new visitor lands first. Cross-links go to
+  existing pages only (Ardwen, Valeria, Yudith, Doreth, the Ember Judge,
+  Ambrose, the Third Grain courtroom judge, Aethelgard, Sarel, Fenn, the
+  Drowned Road anchorite).
+- **Earlier merge (4420 + 4417 scenes into master).** From the SLAVE-4420
+  copy: an entirely new Book 5, then titled *The Thermal Vessel War*
+  (Case 4420, since renamed — see Book 5 above) — 7
   characters (Yvaine, Kaelen, Maros, Corvus, Soren, Observer 814, and
   Duke Vane, disambiguated to the `vane-4420` slug since it's a different
   character from Book 4's own Vane) and a 17-scene gallery, published
