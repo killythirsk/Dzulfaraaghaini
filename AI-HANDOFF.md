@@ -15,9 +15,9 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; six are live on the site so far, plus two
-more (0188, 2140) with a complete character roster but no synopsis yet —
-see
+various stages of publication; seven are live on the site so far, plus
+three coming-soon books with a character roster (0188, 2140, 3115) and five
+cover-only coming-soon entries (3312, 3887, 4442, 0000B, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
 
@@ -157,8 +157,8 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twelve entries: six published,
-                            six coming-soon — see §6)
+/books.html             Full book list (currently fifteen entries: seven published,
+                            eight coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -169,13 +169,14 @@ book's own page rather than as their own top-level sections.
                             threefold-crown, decree-of-luminescence;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (156 total — 10 for
+/characters/<slug>.html    One page per character (175 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
                             Vessel of Unmediated Grace, 12 for the Songs
                             Never Mention the Cats, 15 for the Third Grain,
-                            24 for the Listening Water; see §6)
+                            24 for the Listening Water, 19 for the Heavenly
+                            Thunder-Serpent; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -272,11 +273,11 @@ Envoy row per book and `lore/catalyst.html` one Catalyst row per book,
 automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
-`catalyst` and/or `envoy` record — the six published books, plus 0188 (both
+`catalyst` and/or `envoy` record — the seven published books (4438 included), plus 0188 (both
 records), 2140 (envoy only — see §6) and 3115 (both records — see §6) now
 that their rosters have been merged in. Canon-guide cases with no book dict
 on the site at all (0156, 1268, 4425) or only an empty coming-soon stub with
-no cast (3312, 3887, 4442) are not.
+no cast (3312, 3887, 4442, 0000B, 2114) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -769,6 +770,90 @@ every other character), and the `alt` text template (&ldquo;Character
 reference sheet for %s&rdquo;) turns out to describe this whole site's
 character art exactly, not just this batch's.
 
+### Book: *The Heavenly Thunder-Serpent* (Case 4438)
+
+Status: **Published** (Google Books). Added straight into master (no staging
+copy) from a batch containing the cover, the complete manuscript
+(`Case_4438_The_Heavenly_Thunder-Serpent_2026-09-14_1215PM_GMT_7_FINAL.md`), a
+zip of 19 character reference sheets and 15 scene paintings, and the Google
+Books link `https://play.google.com/store/books/details?id=hRoSEgAAQBAJ`
+(not opened by an AI: Google blocks automated fetches, the same gap as the
+4417 and 4420 links). **`pages` is still the `EDITOR_PAGES` placeholder** &mdash;
+no page count was given and the Google page could not be read. Genre
+(*Historical Fantasy &middot; Political Intrigue &middot; Tragedy*) is Claude's call
+(§8). The synopsis, character bios and scene captions were written from the
+manuscript and the sheets; they are not author-confirmed jacket copy.
+
+The premise: a fisherman, **Ren Duo**, is shocked by something black under a
+fallen lintel in the flooded ruins below Nine Bends and does the honest
+thing &mdash; tells the magistrate. The Yan court takes the creature alive (six
+men drown securing the transport), the Chief Alchemist **Zhou Xuan** names its
+water the Nectar of the Thunder Dao, and court Reckoner **Mei Suwen** keeps the
+only accurate ledger of its discharge intervals. The **Yongkang Emperor**,
+raised on a prophecy that Heaven owes him a debt, enters the water in full
+ceremonial armor at the Solstice Trial and dies; his son **Prince Yue**, the
+one man who understood Mei Suwen's numbers, turns the Second Trial into a
+purge &mdash; twelve ranking officials enter the basin, eleven die, the eleventh
+man to enter survives because the eel has nothing left. A southern warlord,
+**Du Heng**, takes Yujing, has the basin filled with stone, and the chronicles
+record that the Fetus of the Chaos Epoch departed the world of its own accord.
+The Cultivator's own log: Case Study 4,438, Mundane Class, **Elder Peng**
+(Observer 403) having entered the unauthorized phrase &ldquo;rounding error&rdquo;
+eleven times.
+
+Nineteen characters have pages, in this order (the first six feed the
+homepage cast wall): `mei-suwen`, `yue`, `yongkang-emperor`, `ren-duo`,
+`the-heavenly-thunder-serpent` (the Catalyst, treated as a character per the
+Listening Water precedent), `elder-peng` (the Envoy), `wan-er`, `sun-lin`,
+`kang-yi`, `zhou-xuan`, `fu-baishi`, `physician-kao`, `zheng-kui`,
+`meng-kuo`, `pei-rong`, `du-heng`, `master-bai`, `zhuo-sheng`, `yun-wei`. No
+slug collisions with the existing 156. Fifteen scenes, in story order (first
+`the-net-meets-the-serpent`, last `the-teahouse`); the homepage scene band
+gets the eighth entry `the-solstice-ascension`. Catalyst record: the eel
+(Mundane Class), pointing at its character page; Envoy record: Observer 403
+(&ldquo;the Hermit of Nine Bends&rdquo;), pointing at Elder Peng's page. Cultivator
+and Catalyst lore prose each picked up one new line, as with 4420 and 3115.
+
+Judgment calls worth knowing: (1) **Kang Yi's sheet contradicts itself** &mdash;
+it says both &ldquo;25 years of service&rdquo; and &ldquo;nineteen years,&rdquo; and lists
+&ldquo;25 years old&rdquo;; the manuscript says nineteen, so the page says nineteen and
+gives no age. (2) **Observer 403** and the **141 local years** come from
+Elder Peng's sheet only; the manuscript never numbers him. Master Bai's age
+(66), the name &ldquo;Heaven-Shattering Thunder Strike&rdquo; and Pei Rong's being the
+*second* to enter the water likewise come from the sheets. (3) One scene
+(`the-eleventh-entrant`) shows an unnamed man standing unharmed in the basin;
+it is captioned as the survivor of the Second Trial from the image alone &mdash;
+change the caption if the author meant someone else. (4) &ldquo;The Reckoner&rdquo; is
+Mei Suwen's title here, a third use alongside the Boy's epithet and the
+assassin's contract-name in Case 0000 (see that book's naming-collision note
+above); they are different characters, and no slug collides. (5) The canon
+guide lists a **Case 0333 &ldquo;Thunder-Serpent Eel&rdquo; (Mythic Class)**; this
+manuscript is **Case 4438, Mundane Class** and never mentions 0333, so the
+site follows the manuscript. Whether they are the same story is the author's
+call.
+
+Images: cover 900w; character sheets 980w / 320w thumb; scenes 1000px long
+edge / 450px grid &mdash; the same specs as every other book. The Case 4420 cover
+was replaced in the same pass (new file, same name `4420.jpg`, same 900x1350).
+
+### Cover-only entries added with it: Case 0000B and Case 2114
+
+Both are `coming-soon` stubs in the same shape as 3312 / 3887 / 4442: cover,
+`case_tag`, a one-line `hook` taken from the cover's own tagline, and the
+bare `EDITOR_*` placeholders for pages, genre and synopsis; no cast, scenes,
+`catalyst` or `envoy` record (so neither appears in the lore rosters). They
+sit at the end of `BOOKS`, in the order the author listed them.
+
+- **`0000b` &mdash; *Sword of Valeria: The Empty Hand*** (Case 0000B). The slug is
+  lowercase on purpose (GitHub Pages URLs are case-sensitive); the on-page tag
+  reads &ldquo;Case 0000B.&rdquo; Cover tagline: &ldquo;Want. Reflex. Ledger. Exception.
+  Unrecorded.&rdquo; It appears to be the published form of the canon guide's
+  *Pax Aldrovana* continuation of Case 0000 (guide &sect;6.1) &mdash; an inference
+  from the tagline and the title, not something the author has said.
+- **`2114` &mdash; *A Fraction of an Inch*** (Case 2114). Cover tagline:
+  &ldquo;Arithmetic. Regalia. Convergence. Warning. Still uncounted.&rdquo; Nothing else
+  is known about it here, and the canon guide has no entry for Case 2114.
+
 ## 7. What's placeholder / incomplete right now
 
 - Genres and page counts are settled for Books 1–4: 102 / 99 / 96 / 109
@@ -810,8 +895,12 @@ character art exactly, not just this batch's.
   footer). There is deliberately **no email** — don't add one.
 - The four earlier placeholder-only books (Ghost, Aldemark, Illumaria,
   Carbon Echo Beacon) that existed at one point are still not on the site.
-  "More than a dozen novels" total were mentioned early on — only six are
-  live, plus 0188 and 2140 with a roster but no synopsis yet (§6).
+  "More than a dozen novels" total were mentioned early on — only seven are
+  live, plus 0188, 2140 and 3115 with a roster but no synopsis yet (§6).
+- **Case 4438** (*The Heavenly Thunder-Serpent*) is live with a full cast,
+  scene gallery, both roster records and its Google Books link, but `pages` is
+  still the `EDITOR_PAGES` placeholder, and the link hasn't been opened by an
+  AI. **Cases 0000B and 2114** are cover-only coming-soon stubs (§6).
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -868,7 +957,18 @@ character art exactly, not just this batch's.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest merge (Case 3115 characters into master).** From a batch
+- **Latest merge (Case 4438 + two stubs, straight into master).** No staging
+  copy this time: the author sent the files with the request. Added: the full
+  Case 4438 dict (synopsis, 19 characters, 15 scenes, `catalyst`, `envoy`,
+  Google Books link), placed after 4555 so the published books stay grouped;
+  two coming-soon stubs (`0000b`, `2114`) appended after 4442; an eighth
+  `HOME_SCENES` entry (`the-solstice-ascension`); one new sentence each
+  in the Cultivator and Catalyst lore prose. Images: 4 covers (three new, and
+  `4420.jpg` replaced in place), 38 character files (19 slugs x full + thumb),
+  30 scene files (15 slugs x full + grid). Case 4420's old cover was not
+  otherwise touched. Recount after rebuilding: cases 12 -> 15, characters
+  156 -> 175, scenes 90 -> 105; every local link in every page resolves.
+- **Earlier merge (Case 3115 characters into master).** From a batch
   called `WEB CHANGE 3` (24 character-sheet portraits, plus the complete
   manuscript supplied only for context, per the author's own one-line
   instruction): the previously-empty Book, Case 3115 (*The Listening

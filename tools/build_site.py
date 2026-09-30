@@ -1337,6 +1337,234 @@ BOOKS = [
         ],
     },
     {
+        "slug": "4438", "title": "The Heavenly Thunder-Serpent",
+        "status": ["published", "google-books"],
+        "cover_file": "4438.jpg",
+        "hook": "One tired fish, one polished suit of armor, and an empire that mistook a shock for a mandate.",
+        "case_tag": "Case 4438",
+        "catalyst": {
+            "name": "The Heavenly Thunder-Serpent",
+            "meta": "Mundane Class",
+            "page": "characters/the-heavenly-thunder-serpent.html",
+            "img": "characters/the-heavenly-thunder-serpent-thumb.jpg",
+            "html": "<p>A scale-less electric eel, eight feet long and thick as a fisherman's forearm, capable of a self-generated discharge of up to 860 volts. Left to live under a fallen lintel in a flooded ruin, then hauled alive to a capital that names it a spirit-beast, a god, and finally a fetus of the Chaos Epoch &mdash; and never once a fish.</p>",
+        },
+        "envoy": {
+            "name": "Observer 403",
+            "meta": "&ldquo;the Hermit of Nine Bends&rdquo;",
+            "page": "characters/elder-peng.html",
+            "img": "characters/elder-peng-thumb.jpg",
+            "html": "<p>A hermit among the flooded ruins below Nine Bends for one hundred and forty-one local years, rotating through identities as the district forgets the last one. Places the eel in the basin, then does almost nothing &mdash; and keeps entering the same unauthorized phrase in his notes.</p>",
+        },
+        "pages": EDITOR_PAGES,
+        "genre": """Historical Fantasy &middot; Political Intrigue &middot; Tragedy""",
+        "google_books_url": "https://play.google.com/store/books/details?id=hRoSEgAAQBAJ",
+        "synopsis_html": """<p>For eleven years the fisherman <a href="../characters/ren-duo.html">Ren Duo</a> has worked the flooded ruins below Nine Bends, where a river drowned an old town and left its stone gateways standing in the shallows. Then one morning his net brushes something black beneath a fallen lintel, the water lights from the inside, and he is thrown into the shallows with his fingers curled into claws he cannot open. He does the small, honest, sensible thing: he tells the magistrate. Within the month the Yan court has sent armed men and a wagon; six men drown securing the creature for the road; and by the time it reaches the capital it has a new name &mdash; the Heavenly Thunder-Serpent &mdash; and a waiting list for its water.</p>
+          <p>At Yujing, Chief Alchemist <a href="../characters/zhou-xuan.html">Zhou Xuan</a> gives the creature a theology long before anyone has thought to measure it, and the court's ladies and dukes line up to be shocked. Only <a href="../characters/mei-suwen.html">Mei Suwen</a>, a court Reckoner with no rank and a hand so small a servant once mistook her columns for brocade, keeps the numbers: how long the current takes to come, how much weaker the next one is, what a frightened animal does. Her warnings are carefully worded, carefully ranked, and carefully filed beneath the grain tallies. The <a href="../characters/yongkang-emperor.html">Yongkang Emperor</a> &mdash; nine years into a reign no one has dared audit, raised on a childhood prophecy that Heaven owes him a debt &mdash; hears the same water differently. He means to step into it, in full ceremonial armor, before witnesses, and collect.</p>
+          <p>What the Trial does to the empire afterward is arithmetic: a dead sovereign, a court that mistakes a shock for a verdict, and a son, <a href="../characters/yue.html">Prince Yue</a>, who is the one man who ever asked Mei Suwen what her numbers actually meant &mdash; and understood every word. Twelve of the empire's ranking officials are sent into the water in the Second Trial; eleven do not come out. A warlord in the southern salt marshes stops forwarding the tribute, a three-province coalition reaches Yujing's walls, and a court physician writes the only honest page anyone ever produces about the creature, then burns it himself. <em>The Heavenly Thunder-Serpent</em> closes on a Cultivator's own archival log &mdash; Case Study 4,438: one large, increasingly tired fish, a hermit who keeps filing the same unauthorized phrase, and the chronicles that will remember none of it.</p>""",
+        "characters": [
+            {
+                "slug": "mei-suwen", "name": "Mei Suwen",
+                "epithets": "The Reckoner &middot; Court Reckoner of Yujing &middot; 28 years old",
+                "teaser": "Measures the serpent for eleven months and warns everyone who will listen &mdash; and is understood perfectly by exactly the wrong man.",
+                "bio_html": """<p>A court Reckoner with no formal rank, raised on the omens and lucky days of the minor gentry until her eleventh year, when a diviner's confident and entirely wrong forecast of drought cost her father three harvests and taught her that confidence and accuracy are different currencies. She has spent the seventeen years since betting her career that the second one eventually pays its debts. When the serpent reaches Yujing she does what no alchemist thinks to do: she times it. Her ledger, in a hand so small that a servant dusting her desk once mistook the columns for decorative brocade, records how long the current takes to come, how much weaker the next discharge is, and why a disturbed animal is a less predictable one.</p>
+          <p>She warns <a href="../characters/zhou-xuan.html">Zhou Xuan</a>, sends a final written warning to <a href="../characters/zheng-kui.html">Zheng Kui</a> that his office files unread, and watches the Second Trial unfold in exactly the order she least wanted to be right about. The one person who ever asks what her numbers actually say is <a href="../characters/yue.html">Prince Yue</a>, and she learns too late what it means that he understood them perfectly. She keeps, in the same locked chest as her most sensitive ledgers, a small and entirely unscientific collection of pressed flowers gathered from every posting she has ever held &mdash; a habit she has never recorded in any professional capacity. She outlives two emperors and the empire that employed her, and in the one account no chronicle confirms, she is last seen pouring tea in a teahouse with <a href="../characters/wan-er.html">Wan-er</a>.</p>""",
+                "quote": "Numbers do not kneel for anyone, Your Highness. They only tell the truth.",
+            },
+            {
+                "slug": "yue", "name": "Yue",
+                "epithets": "Prince Yue &middot; third son of the Yongkang Emperor &middot; later Emperor Yue &middot; 40 years old",
+                "teaser": "The only man at court who asks what the numbers actually say &mdash; and then chooses the conclusion.",
+                "bio_html": """<p>Third among the Yongkang Emperor's sons, and the one man at court who goes looking for <a href="../characters/mei-suwen.html">Mei Suwen</a> in the archive to ask not what the alchemists say the water means, but what it does. He listens, asks sharper questions than she expected, and sits through a whole session drinking a specific bitter tisane his mother once brewed for him during a childhood illness, which no one since has ever managed to make correctly. He argues his father out of the Solstice Trial on pure strategic grounds and is dismissed. His daughter <a href="../characters/wan-er.html">Wan-er</a> is the one person in the palace he has least often found time to notice.</p>
+          <p>When his father dies in the water, Yue takes the throne against the court's plain expectation and turns the Second Trial into a purge whose order he had written, in his own hand, across two years of ordinary court paranoia &mdash; long before any fish had entered any tank. He added <a href="../characters/pei-rong.html">Pei Rong</a> last, underlined once, and left off <a href="../characters/kang-yi.html">Kang Yi</a> on the plain arithmetic that a throne with no rivals and no soldiers to hold its walls is merely an inheritance for whichever warlord notices first. The arithmetic is sound. It is also, he discovers in the siege that follows, not the whole of the sum. When the last wall falls he wears his father's armor, and enters the water himself.</p>""",
+                "quote": "Ritual is data. Power is interpretation. I choose the conclusion.",
+            },
+            {
+                "slug": "yongkang-emperor", "name": "The Yongkang Emperor",
+                "epithets": "Emperor of Yan &middot; ninth year of his reign &middot; Deceased",
+                "teaser": "Inherits a Mandate no one has ever audited, and decides to audit it himself &mdash; in polished steel, in front of witnesses.",
+                "bio_html": """<p>Nine years into a reign built on nine generations of everyone agreeing not to test whether the Mandate still applied, with a salt-marsh warlord quietly keeping his tribute and a western general calling him &ldquo;the old man in the Jade Hall&rdquo; in private letters the Ministry of Rites intercepted and wished it had not. At nine years old, in the year his own father nearly lost the throne to a coalition of uncles, a wandering Daoist read his birth chart at his mother's frightened insistence and named a fate: the Mark of the Unclosed Ledger, in which Heaven itself owes the child a debt that will come due, in full, exactly once, at a moment of the boy's own choosing. His mother repeated it to him until he could not separate it from the fact of surviving.</p>
+          <p>He does not, strictly, believe the eel is a dragon. He needs three provinces to believe the water is holy, by the only method they have ever found persuasive: watching a man risk everything and either die or not. He remembers <a href="../characters/master-bai.html">Master Bai</a>'s singed beard, in the small hours before his own Trial, as evidence rather than warning. The night before, he summons no minister, only his granddaughter <a href="../characters/wan-er.html">Wan-er</a>, who tries on his gauntlets, three sizes too large, while he tells her about the carp that swam upstream until it became a dragon. Two days later the court records that he ascended to the Nine Heavens, his body received rather than killed.</p>""",
+                "quote": "Heaven owes me a debt.",
+            },
+            {
+                "slug": "ren-duo", "name": "Ren Duo",
+                "epithets": "Fisherman of Nine Bends &middot; eleven years on the flooded ruins",
+                "teaser": "Tells the truth once, to the nearest official, and watches a small true thing become a large official one without his permission.",
+                "bio_html": """<p>A fisherman with a widowed mother, a debt to his boat's previous owner, and a private rule of arithmetic about when frightening water is worth fishing. For ten of his eleven years on the flooded ruins the place gives him nothing stranger than good carp and the occasional drowned roof-tile. Then his net brushes something black beneath a fallen lintel, the water lights from the inside, and he is thrown into the shallows with his fingers curled like claws. He avoids the basin for eleven days, goes back on the ninth night with a coil of rope and a half-formed plan to lead the creature out himself, and does not try it. <a href="../characters/elder-peng.html">Elder Peng</a>, watching, lets him leave.</p>
+          <p>What finally moves him is the same arithmetic that governs everything else in his life, and a smaller, less flattering wish to be believed. He stands outside the district magistrate's residence for the better part of an hour before he knocks. He had imagined a clerk writing the report down and filing it somewhere it would quietly wait to be useful; instead six armed men and a specially commissioned wagon arrive within the fortnight, and six men drown securing the transport. No history records their names. Ren Duo remembers all six for the rest of his life, though he never learns which name belongs to which face, and the not-knowing becomes its own shape of guilt. His own account of a numb hand is filed with the commission that studies the creature, and very likely burned with the rest.</p>""",
+                "quote": "I did not seek the serpent. The river showed me&mdash;and I spoke.",
+            },
+            {
+                "slug": "the-heavenly-thunder-serpent", "name": "The Heavenly Thunder-Serpent",
+                "epithets": "An Electric Eel, Eight Feet Long &middot; the Catalyst of Case 4438",
+                "teaser": "A large, shy, increasingly tired fish that an empire named a god &mdash; then renamed a bigger one.",
+                "bio_html": """<p><em>Electrophorus voltai</em>: a scale-less electric eel, black, thick as a fisherman's forearm and longer than his boat, capable of a self-generated discharge of up to 860 volts. It is nocturnal, dislikes sudden movement, defends rather than attacks, and eats carp. It spends its early years beneath a fallen lintel in the flooded ruins below Nine Bends, then its captivity in a porcelain-and-gilt tank in the capital, retreating to the northern shadow whenever the crowd presses close. Everything the empire believes about it &mdash; the Nectar of the Thunder Dao, then the Yin-Lightning Fetus of the Chaos Epoch &mdash; is supplied by men who never once measure it. It was placed in the basin four years before the case opens by <a href="../characters/elder-peng.html">Elder Peng</a>, and then simply left.</p>
+          <p>What actually kills the Yongkang Emperor is his own armor: wet steel sealed around a body, with no gap for the current to lose interest in. Its discharge weakens with every disturbance, and by the eleventh man in the Second Trial it has spent every volt it possessed across ten bodies and has nothing left to give him. It does not survive its last flooding; the order to fill the basin with stone is carried out by a crew paid to fill a basin, not to empty one first, and it dies within the season in stone-choked water. The chronicles record that it departed this lower world of its own accord.</p>""",
+                "quote": "It is said to coil like a rope of night, and strike like the wrath of heaven. Yet it is no god, no dragon&mdash;only a creature of water and current.",
+            },
+            {
+                "slug": "elder-peng", "name": "Elder Peng",
+                "epithets": "Observer 403 &middot; Hermit of Nine Bends &middot; 141 local years in the ruins",
+                "teaser": "A hermit who has outlasted every legend the district built about him, and keeps filing the same unauthorized phrase.",
+                "bio_html": """<p>The <a href="../lore/cultivator.html">Cultivators</a>' Envoy at Nine Bends, and the only person in the story who knows what the fish is. He has occupied the flooded ruin for one hundred and forty-one local years under a rotation of identities &mdash; shipwreck survivor, hermit, mute penitent, and once, unhappily, a minor tax collector &mdash; and the district credits his sun-cured silence to a miracle of the sea-cave that let him survive a wreck. In truth his lungs draw on gases no local physician has a name for, an ocular array reads every pulse within sight, and a monitoring mechanism no larger than a beetle, sewn into the lining of his sleeve, records the water's conductivity and the serpent's discharge.</p>
+          <p>The Prime Directive lets him intervene at several points, and he takes almost none of them. He lets <a href="../characters/ren-duo.html">Ren Duo</a> knock on a magistrate's door when a single sentence would have stopped him, and lets him leave the ruin with his rope and his half-formed plan when the protocol permits a less generous accounting. Instead he writes a single non-standard phrase into his log &mdash; &ldquo;rounding error&rdquo; &mdash; on eleven separate occasions, each time about someone outside his mandate. The Custodian's analyst notes it corresponds to no authorized metric, and that his cover identity remains unretired. Recommends no action. Recommends, in fact, nothing.</p>""",
+                "quote": "Mountains remember what men forget. Rivers carry what men refuse to see.",
+            },
+            {
+                "slug": "wan-er", "name": "Wan-er",
+                "epithets": "The Yongkang Emperor's granddaughter &middot; Prince Yue's daughter &middot; 7 years old",
+                "teaser": "Asks the only question worth asking twice &mdash; and is lied to kindly the first time.",
+                "bio_html": """<p>Prince <a href="../characters/yue.html">Yue</a>'s daughter, seven years old at the Solstice, beloved of her grandfather and, by a standing exception to protocol no one has the courage to revoke, allowed to fall asleep most nights in a chair outside his private study. On the last evening of his life she tries on his ceremonial gauntlets, three sizes too large for her wrist, while he tells her the old story about the carp that swam upstream until it became a dragon. She does not understand that she is being given something. She understands only that her grandfather is, for once, not busy.</p>
+          <p>When he dies in the water, a nursemaid not equal to the question tells her that yes, he became a dragon, because it is the only answer that does not require either of them to know anything true. It is a kind lie, and it is the moment she stops believing adults. During the siege <a href="../characters/mei-suwen.html">Mei Suwen</a> walks her to the western postern three evenings out of every seven, and she quietly rewrites the carp's ending so that it simply swims somewhere the river cannot follow. Years later, in a teahouse, she asks Mei one question &mdash; whether she thinks he became one &mdash; and is told, for the first time, an honest <em>I do not know.</em></p>""",
+                "quote": "Did you truly become a dragon, Grandfather?",
+            },
+            {
+                "slug": "sun-lin", "name": "Sun Lin",
+                "epithets": "Inspector of Palace Accounts &middot; eunuch &middot; eleven years in post",
+                "teaser": "Audits the alchemists for eleven years out of a grudge he never explains, then burns the records to save the men they would condemn.",
+                "bio_html": """<p>Holds a minor, unglamorous post that eunuchs have traditionally used to enrich themselves, and has spent eleven years using it instead to quietly catalog every occasion the Court Alchemists' expenditures made no defensible sense &mdash; out of a hatred for that ministry so old and so specific that he has stopped explaining its origin even to himself. A reputation for getting inconvenient answers written down, rather than quietly buried, is the one thing eleven years of auditing has earned him in full. So when a frightened chamber-servant finds a folded list among Prince <a href="../characters/yue.html">Yue</a>'s discarded papers, it is Sun Lin she brings it to, and Sun Lin who hands it to <a href="../characters/mei-suwen.html">Mei Suwen</a>.</p>
+          <p>He helps her and <a href="../characters/physician-kao.html">Physician Kao</a> measure what the Second Trial left behind, and during the siege he does the one thing no one asks of him: feeds the palace's own financial and requisition records into a brazier in the Ministry of Accounts, a few sheaves at a time, on the calm and entirely accurate theory that whichever administration inherits the city should not inherit the evidence to punish anyone with. His last letter to the Reckoner mentions that the Marshal once asked him whether an empire that killed its own competence deserved to be saved by either side. Then the correspondence stops, for reasons the record does not supply.</p>""",
+                "quote": "Numbers do not lie. Men do.",
+            },
+            {
+                "slug": "kang-yi", "name": "Kang Yi",
+                "epithets": "Grand Marshal &middot; commander of the northern garrisons &middot; nineteen years of service",
+                "teaser": "The one senior officer the Second Trial fails to consume &mdash; left off the list on arithmetic he is never told about.",
+                "bio_html": """<p>Commander of the northern garrisons, and the only senior officer of the empire the Second Trial somehow fails to consume, because the prince who wrote its list did not lift the brush when the Marshal's name occurred to him. During the siege he finds himself in the position every competent man in a collapsing empire eventually finds himself in: responsible for a defense he did not design, using an army he did not train, on behalf of an Emperor he did not choose and increasingly does not trust. He gives no speeches. He drills the wall crews at the hours he always has, delivers the same clipped, unornamented instructions, and sees to it that they eat &mdash; and it is that plain arithmetic of rice, more than anything the court's theologians offer, that holds the eastern wall.</p>
+          <p>He raises the possibility of a ceded province or a marriage alliance once, and only once, and reads in the Emperor's stillness that the answer is a decision already made. He comes closer than any man in the empire will to saying aloud what the Second Trial's own arithmetic made obvious &mdash; and does not, from the plain calculation that a marshal accused of treason defends nothing, while a marshal who holds his tongue might yet hold a wall. He opposes feeding the creature the palace's dwindling live carp with everything short of open refusal. By the end he is exchanging private letters with commanders on the far side of a wall that has not yet finished falling.</p>""",
+                "quote": "Feed the soldiers, then speak of victory.",
+            },
+            {
+                "slug": "zhou-xuan", "name": "Zhou Xuan",
+                "epithets": "Chief Alchemist of the Yan Court &middot; thirty years of elixirs &middot; Deceased",
+                "teaser": "Names the water before anyone measures it, and is the first man sent into it by the theology he invented.",
+                "bio_html": """<p>For thirty years he has compounded elixirs that cured nothing and offended no one. When the serpent reaches Yujing he lets the Court Alchemists debate its provenance for four days with total confidence and no evidence whatsoever, then declares, on the fifth, that the water has been transformed by prolonged contact with a spirit-beast of the old Heavenly Tribulation lineage. This Nectar of the Thunder Dao, as he names it on the spot &mdash; testing the phrase in his mouth like a man trying on a ring he already intended to keep &mdash; can cleanse mortal impurity from anyone permitted to enter it. The theology he improvises over a tank of river water becomes the intellectual foundation of the Solstice Trial.</p>
+          <p><a href="../characters/mei-suwen.html">Mei Suwen</a> brings him her numbers, and he has a fluent answer to every one. After the old Emperor's death, Prince <a href="../characters/yue.html">Yue</a> names the Chief Alchemist first into the basin of the Second Trial, and the court enters his death under theology rather than command. His rival and successor <a href="../characters/fu-baishi.html">Fu Baishi</a> spends the rest of the siege improving on his doctrine.</p>""",
+                "quote": "The water is not poison, but the gate. It is the Nectar of the Thunder Dao.",
+            },
+            {
+                "slug": "fu-baishi", "name": "Fu Baishi",
+                "epithets": "Court Alchemist &middot; successor to Zhou Xuan",
+                "teaser": "Improves the god once, and survives the empire once.",
+                "bio_html": """<p>Spends a professional lifetime watching <a href="../characters/zhou-xuan.html">Zhou Xuan</a>'s mediocre compounds earn praise his own more rigorous ones never do, and concludes that the difference was never talent but nerve. Within days of his rival's death he announces that the truth was more magnificent than Zhou Xuan's small imagination allowed: the creature is no mere spirit-beast but a Yin-Lightning Fetus of the Chaos Epoch, a fragment of the world's own unformed birth-matter &mdash; which explains, with the satisfaction of a man correcting a rival's homework in public, why lesser theologies kept failing to predict its behavior.</p>
+          <p>During the siege he keeps a private ledger of the Fetus's nightly communications, in a script he says predates writing and which one servant, glimpsing a page before being dismissed from the room, recognizes as Fu Baishi's own hand held at an unfamiliar angle. He proposes that its silence means displeasure, and that displeasure requires sacrifice &mdash; a proposal <a href="../characters/kang-yi.html">Kang Yi</a> rejects in council with a single flat sentence &mdash; and later that it be fed the palace's live carp. He survives the fall of Yujing by converting the authorship of his own doctrine, within a single week, into a testimonial for <a href="../characters/du-heng.html">Du Heng</a>'s more modest claim on Heaven's favor, and spends the last years of a long and comfortable life as the new court's most senior religious consultant.</p>""",
+                "quote": "The world trembles because it has forgotten the root of lightning.",
+            },
+            {
+                "slug": "physician-kao", "name": "Physician Kao",
+                "epithets": "Court Physician &middot; investigator",
+                "teaser": "Writes the one honest page anyone ever produces about the water &mdash; and burns it himself so no one can twist it.",
+                "bio_html": """<p>A court physician who joins <a href="../characters/mei-suwen.html">Mei Suwen</a> and <a href="../characters/sun-lin.html">Sun Lin</a> in the first quiet week after the Second Trial to measure what remains. Between them they test the basin's water, drawn down, against silk thread and iron nails; they examine the Emperor's ruined breastplate, its interior scorched in a pattern that matches, node for node, the exact points at which his skin blistered; and they examine the exhausted animal itself. They write the finding on a single unadorned page: an unusually large specimen of an unremarkable river species, nocturnal, sensitive to sudden movement, with a defensive reflex rather than a judgment &mdash; and an Emperor killed by his own armor.</p>
+          <p>He reads it aloud to the small commission that receives it, and watches their faces arrange themselves into the polite blankness of people who have decided in advance not to be persuaded. Then he takes the page home and burns it himself, so that the court cannot twist the truth into another lie. The histories do not record the page, or its author.</p>""",
+                "quote": "What the court called divine fury was only flesh, blood, and heat.",
+            },
+            {
+                "slug": "zheng-kui", "name": "Zheng Kui",
+                "epithets": "Minister of the Court of Tribute",
+                "teaser": "Loses four months' salary at dice and files the only warning that could have mattered beneath the grain tallies.",
+                "bio_html": """<p>Minister of the Court of Tribute, whose office receives more urgent correspondence in an average week than any three clerks could read in full, and has settled into an unwritten triage: sorted by the sender's rank rather than the report's contents. It is a system that reliably places a woman with no formal title beneath the grain tallies of ministers who outrank her.</p>
+          <p>On the morning of the Solstice Trial, <a href="../characters/mei-suwen.html">Mei Suwen</a>'s final written warning arrives at the tail end of a night he never once discusses for the rest of his career, having lost, by his own accounting, four months' salary at dice to a pair of provincial tax assessors he remains almost certain had been cheating him. He files it unread. It is a lapse that costs the empire a good deal more than four months' salary, and he spends what remains of his life failing to mention it to anyone.</p>""",
+                "quote": "The dice are cold. Heaven is colder.",
+            },
+            {
+                "slug": "meng-kuo", "name": "Meng Kuo",
+                "epithets": "General &middot; Commander of the Western Passes &middot; nineteen years in command",
+                "teaser": "Runs the numbers on refusing the summons and goes in anyway, in full armor, in front of his own soldiers.",
+                "bio_html": """<p>Commanded the western passes for nineteen years, and in private correspondence the Ministry of Rites intercepted and wished it had not, called the old Emperor &ldquo;the old man in the Jade Hall.&rdquo; He arrives at the basin already understanding the true purpose of the summons, and steps in anyway, in full lamellar armor, because he has run the numbers on refusing &mdash; public disgrace, stripped rank, a slow provincial death against a fast public one &mdash; and a man who has spent his career ordering soldiers into worse odds cannot, in front of them, be seen to flinch from his own.</p>
+          <p>The current takes him within the space of eleven breaths. The court, still fresh from the Chief Alchemist's death and unwilling to abandon a doctrine it has only just finished re-consecrating, tells itself a soldier's test is simply blunter and more physical than a scholar's, and that the water is working through the court by kind. He goes first of the war council's own dead.</p>""",
+                "quote": "To refuse is to invite suspicion. To go is to die. I will choose the path that burdens no one.",
+            },
+            {
+                "slug": "pei-rong", "name": "Pei Rong",
+                "epithets": "Duke of Pei &middot; second to enter the Second Trial &middot; Deceased",
+                "teaser": "Spends his last private minute balancing his estate's accounts so his sons will inherit clean books.",
+                "bio_html": """<p>A duke whose only real offense is a competence at the Ministry of Tribute that Prince <a href="../characters/yue.html">Yue</a> intends, in time, to hold himself. His name is added last to Yue's list and underlined once, on the reckoning that his death will cost the empire one capable administrator and cost Yue, so far as he can then calculate, nothing he expects to need again. He is meticulous in accounts and in private responsibility, and he is the second to enter the water in the Second Trial.</p>
+          <p>The one manservant who survives the week remembers him spending his final private minute not in prayer but in a rapid, whispered accounting of his estate's debts to three separate creditors, apparently determined that whichever of his sons inherits will at least inherit clean books. His death produces a fresh and marginally more strained theory &mdash; that purity runs differently through different bloodlines &mdash; and, months later, a small silence in a besieged council when the Emperor asks for the one administrator he would have trusted to reconcile a granary count, and remembers, unaided, why he is not available.</p>""",
+                "quote": "Before the basin takes me, I will settle every number.",
+            },
+            {
+                "slug": "du-heng", "name": "Du Heng",
+                "epithets": "Warlord of the Southern Salt Marshes",
+                "teaser": "Stops forwarding the tribute, renames his levies a rescue, and fills the basin with stone.",
+                "bio_html": """<p>Warlord of the salt marshes to the south, who stopped forwarding the province's tribute to the capital and quietly began keeping it well before the Solstice. When the Emperor dies in the basin and the court follows him into it, he stops calling his levies a tax and begins calling them, without apparent irony, a rescue: the throne, he tells his captains, has proved itself unequal to Heaven and therefore to men, and someone competent will need to hold the empire together while the Jade Hall finishes counting its dead. Two more provinces echo him within the season, each by a different justification and the identical conclusion.</p>
+          <p>He reaches the walls of Yujing at the head of a three-province coalition and refuses every delegation the dwindling court sends, calling the whole thing correction rather than conquest. When the city falls he finds the throne empty and the basin drained a second time, and orders it filled in with stone rather than water &mdash; on the grounds, reasonable to absolutely everyone by then, that an empire could not afford a third Emperor discovering the same door. His own scribes write the histories that follow.</p>""",
+                "quote": "The capital fell not to chaos, but to correction.",
+            },
+            {
+                "slug": "master-bai", "name": "Master Bai",
+                "epithets": "Master of the Nine-Fold Mountain &middot; cultivator &middot; 66 years old",
+                "teaser": "Forty years beneath a waterfall in pursuit of the True Yang Breath, and one open palm against a fish.",
+                "bio_html": """<p>A cultivator of considerable and largely self-reported fame, who has spent forty years meditating beneath a waterfall in pursuit of the True Yang Breath and has grown, in that time, entirely convinced that no divine phenomenon can occur within his own generation without his personal involvement. When word of the Heavenly Thunder-Serpent reaches the Jianghu, he arrives barefoot at the court, addresses the tank in the ringing register cultivators reserve for audiences of one, and strikes the water with an open palm &mdash; the Heaven-Shattering Thunder Strike, qi against a fish.</p>
+          <p>The eel answers with everything it has. His eyes roll back with an audible click several witnesses swear they heard from the second row; his beard, famous throughout three provinces and insured, by one account, against fire, vanishes in a bright, ozone-scented flash; and he folds to the marble. The court draws the wrong lesson entirely: the <a href="../characters/yongkang-emperor.html">Yongkang Emperor</a> will remember the singed beard as evidence rather than warning. Master Bai regrows the beard within two years and refuses to discuss the incident.</p>""",
+                "quote": "Heaven and earth have their way. So has electricity.",
+            },
+            {
+                "slug": "zhuo-sheng", "name": "Zhuo Sheng",
+                "epithets": "Merchant &middot; 45 years old &middot; son of a tanner",
+                "teaser": "Sells the nectar, the queue, and the numb arm &mdash; and pours it all into a canal the afternoon he sees where it leads.",
+                "bio_html": """<p>A tanner's son who, within a year of the serpent's arrival, is running three separate operations: bottled river water sold to provincial nobles as <em>Genuine Nectar, Blessed at Source</em>; forged appointment tallies sold to heirs too impatient to wait their family's turn; and, for buyers who want the bragging rights of the burn without the indignity of the basin, a service in which hired substitutes stand in the queue and take the shock in their place. He makes in eight months more silver than his father the tanner made in forty years of honest work, and describes the period, later, to the two associates he trusts, as the finest and most fraudulent of his career.</p>
+          <p>On the afternoon the Second Trial turns into a mass execution, he quietly empties his stock into the nearest canal, along with two crates of forged appointment tallies he judges, correctly, to have become considerably more incriminating than valuable. The silver outlives the empire.</p>""",
+                "quote": "Merit is purchasable. Even the Thunder-Serpent can be traded.",
+            },
+            {
+                "slug": "yun-wei", "name": "Yun Wei",
+                "epithets": "Imperial Consort &middot; the first courtier to touch the water",
+                "teaser": "Calls it the most wonderful pain of her life &mdash; and makes the basin fashionable.",
+                "bio_html": """<p>It is not faith, strictly, that makes the first courtier volunteer a hand. It is ambition, wearing faith as a coat because the coat fits better in public. Consort Yun Wei, favored least by a duke who has never once looked at her directly, dips two fingers into the basin before the assembled court and receives, for her trouble, a jolt that snaps her wrist backward and leaves her whole arm numb through supper. She does not scream. She laughs, high and startled, and calls it the most wonderful pain of her life.</p>
+          <p>Within a week every noblewoman at court who has heard the story secondhand is requesting an audience with the serpent as though it were a visiting dignitary rather than an eight-foot fish with an itch to defend its own tank. The shock becomes a tale, and the basin becomes fashionable. She will tell her granddaughters, decades later, in a country the old empire would no longer recognize, that she once touched Heaven with her bare hand, and none of them will ever learn what she actually touched.</p>""",
+                "quote": "The current bit her, yet the court called it the dragon's kiss.",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-net-meets-the-serpent",
+             "alt": "A fisherman in a small boat hauls a net through churning white-blue water while a huge black serpent swirls beneath him, flooded stone gateways behind",
+             "caption_html": """<a href="../characters/ren-duo.html">Ren Duo</a>'s net brushes the serpent's flank in the flooded ruins below Nine Bends."""},
+            {"slug": "elder-peng-in-the-reeds",
+             "alt": "A grey-bearded hermit in ragged robes sits among tall reeds while a fisherman kneels at the water's edge beside flooded stone pillars",
+             "caption_html": """<a href="../characters/elder-peng.html">Elder Peng</a> watches from the reeds while <a href="../characters/ren-duo.html">Ren Duo</a> kneels at the water's edge."""},
+            {"slug": "the-serpent-taken-alive",
+             "alt": "Soldiers under red banners drag ropes across churning white water as a huge black serpent coils among flooded ruins",
+             "caption_html": """Six men drown securing the serpent for the road to the capital &mdash; and no history remembers their names."""},
+            {"slug": "the-basin-hall",
+             "alt": "Courtiers in gold and crimson gather around a great round gilded basin, a dark serpent shape coiled in its water, a raised throne and banners beyond",
+             "caption_html": """The court gathers around the water at Yujing, in the season when a turn beside it is the most coveted appointment east of the river."""},
+            {"slug": "yun-wei-touches-the-water",
+             "alt": "A consort in pale silk and gold hairpins reaches toward a gilded basin with her eyes closed as white lightning flickers across her fingers, courtiers watching behind her",
+             "caption_html": """<a href="../characters/yun-wei.html">Consort Yun Wei</a> is the first courtier to touch the water &mdash; and calls it the most wonderful pain of her life."""},
+            {"slug": "mei-suwen-and-the-ledger",
+             "alt": "A young woman in pale robes writes in a small book by lantern light at a desk piled with scrolls and charts in a dark archive",
+             "caption_html": """<a href="../characters/mei-suwen.html">Mei Suwen</a> keeps her ledger of the serpent's intervals in the archive, in a hand small enough to be mistaken for brocade."""},
+            {"slug": "the-heaven-shattering-thunder-strike",
+             "alt": "A white-bearded cultivator in flowing white robes strikes the water with an open palm as blue-white lightning bursts around him and courtiers draw back",
+             "caption_html": """<a href="../characters/master-bai.html">Master Bai</a>'s Heaven-Shattering Thunder Strike: qi against a fish."""},
+            {"slug": "the-gauntlets-the-night-before",
+             "alt": "An elderly emperor in a lamplit study holds a small girl who wears an oversized golden gauntlet, a suit of ceremonial armor standing behind them",
+             "caption_html": """The night before the Trial, <a href="../characters/yongkang-emperor.html">the Yongkang Emperor</a> lets <a href="../characters/wan-er.html">Wan-er</a> try on his gauntlets."""},
+            {"slug": "the-solstice-ascension",
+             "alt": "An emperor in gilded plate armor stands in a round basin with his arms flung wide as lightning runs across the steel, a crowd banked up around him beneath a blazing sun",
+             "caption_html": """The Solstice Trial: <a href="../characters/yongkang-emperor.html">the Yongkang Emperor</a> raises his arms toward the sun as the current finds his armor."""},
+            {"slug": "wan-er-outside-the-study",
+             "alt": "A small girl in pale robes sits alone on the steps of a lantern-lit palace corridor beside an empty carved chair, a golden gauntlet on the floor near her",
+             "caption_html": """<a href="../characters/wan-er.html">Wan-er</a> waits outside her grandfather's study, the evening no one comes to find her as usual."""},
+            {"slug": "the-court-waits-in-ranks",
+             "alt": "Dukes, generals and officials in ceremonial armor and silks stand in ranks along a marble terrace beside a great basin, red banners hanging overhead",
+             "caption_html": """The summoned wait in ranks on the terrace for the Second Trial &mdash; attendance entirely voluntary."""},
+            {"slug": "the-eleventh-entrant",
+             "alt": "A young man in a dark wet robe stands waist-deep in a basin below a stepped terrace of stunned courtiers, a huge coiled serpent dark in the water beneath him",
+             "caption_html": """The eleventh man to enter the Second Trial stands in the water a long, absurd moment, waiting for a judgment that does not arrive."""},
+            {"slug": "the-western-postern",
+             "alt": "A woman in a dark hooded cloak shelters a small girl against a palace gate wall at sunset as guards stand in the courtyard beyond",
+             "caption_html": """<a href="../characters/mei-suwen.html">Mei Suwen</a> walks <a href="../characters/wan-er.html">Wan-er</a> to the western postern, three evenings out of every seven."""},
+            {"slug": "the-second-ascension",
+             "alt": "An emperor in dark gilded armor and a red cloak stands waist-deep in a basin while the palace burns behind him under a smoke-black sky",
+             "caption_html": """<a href="../characters/yue.html">Emperor Yue</a> enters the water in his father's armor as Yujing burns."""},
+            {"slug": "the-teahouse",
+             "alt": "Two women sit across a low table with a teapot and cups in a lamplit teahouse, a window behind them opening on hills at sunset",
+             "caption_html": """<a href="../characters/mei-suwen.html">Mei Suwen</a> and <a href="../characters/wan-er.html">Wan-er</a>, years later, in a teahouse two provinces west of Yujing &mdash; in the one account no chronicle confirms."""},
+        ],
+    },
+    {
         "slug": "0188", "title": "The Songs Never Mention the Cats",
         "status": ["coming-soon"],
         "cover_file": "0188.jpg",
@@ -1857,6 +2085,30 @@ BOOKS = [
         "characters": [],
         "scenes": [],
     },
+    {
+        "slug": "0000b", "title": "Sword of Valeria: The Empty Hand",
+        "status": ["coming-soon"],
+        "cover_file": "0000b.jpg",
+        "hook": "Want. Reflex. Ledger. Exception. Unrecorded.",
+        "case_tag": "Case 0000B",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
+    {
+        "slug": "2114", "title": "A Fraction of an Inch",
+        "status": ["coming-soon"],
+        "cover_file": "2114.jpg",
+        "hook": "Arithmetic. Regalia. Convergence. Warning. Still uncounted.",
+        "case_tag": "Case 2114",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
 ]
 
 LORE = [
@@ -1864,14 +2116,14 @@ LORE = [
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
-          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch. Every Envoy on file is listed below.</p>
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
           <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
-        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Every Catalyst on file is listed below.</p>""",
+        "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone, an eight-foot electric eel &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
@@ -2093,7 +2345,7 @@ ROSTER = {
 # One scene per book for the homepage band: (book slug, scene slug).
 HOME_SCENES = [("0000", "valeria-full-power"), ("4099", "tower-burning"),
                ("0157", "vartaz-and-the-floor"), ("4417", "the-chrome-heels"),
-               ("4420", "yvaine-in-the-south"), ("4555", "the-beam-finds-blakk"),
+               ("4420", "yvaine-in-the-south"), ("4555", "the-beam-finds-blakk"), ("4438", "the-solstice-ascension"),
                ("0188", "the-granary-of-rats")]
 
 

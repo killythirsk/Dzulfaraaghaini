@@ -10,7 +10,7 @@ the project from scratch each time.
 
 ## Where things stand
 
-Six books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
+Seven books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
 synopsis, a full cast of 10 characters, an 8-image scene gallery, and
 working "View on Google Books" / "Read on Royal Road" links — *The Ledger
 of a Single Sweetness* (Case 4099) — real cover, synopsis, a full cast of
@@ -20,11 +20,14 @@ War* (Case 0157) — real cover, synopsis, a full cast of 35 characters, a
 19-image scene gallery, a confirmed page count (96), and a working "View
 on Google Books" link — and *The Iron Stiletto War* (Case 4417) — real
 cover, synopsis, a full cast of 13 characters, a 4-image
-scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Two more are live but not described in
-detail here: *The Vessel of the Betrayed Host* (Case 4420) and *The Vessel
-of Unmediated Grace* (Case 4555). Two further books, 0188 and 2140, are
-marked coming-soon but already carry full character rosters, and four more
-(3115, 3312, 3887, 4442) are still empty coming-soon placeholders. The
+scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Three more are live but not described in
+detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
+of Unmediated Grace* (Case 4555) and *The Heavenly Thunder-Serpent* (Case
+4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
+gallery and a working "View on Google Books" link; its page count is still
+to add). Three further books, 0188, 2140 and 3115, are marked coming-soon
+but already carry character rosters, and five more (3312, 3887, 4442, 0000B,
+2114) are cover-only coming-soon entries. The
 Lore glossary has five entries: Cultivator (listing every Envoy) and
 Catalyst (listing every Catalyst), each built automatically from the
 books' own data, plus three religions — the Faith of Ardwen, the
@@ -38,7 +41,7 @@ and dragging are blocked, and full-size files aren't linked directly) — a
 deterrent, not a lock: anything a browser can display can still be captured.
 
 Still open:
-- Four of "more than a dozen" novels are live — more can be added the
+- Seven of "more than a dozen" novels are live — more can be added the
   same way these were.
 
 ## Making changes
@@ -188,3 +191,24 @@ Edited (re-applied to master's own copies; nothing overwritten from the part):
 Totals: cases 12 -> 12, characters 132 -> 156, scenes 90 -> 90. A recount from the merged site gives the same figures.
 
 Merged: 2026-09-30, 04:36PM GMT+7 - as logged, except: (1) this part's README carried no `[PENDING] Part 3115` entry (first run of the change-log process), so the log was taken from the 3115 write-up in the part's own `AI-HANDOFF.md`, on the author's instruction; (2) that write-up itemises only the generated pages, not `tools/build_site.py`, `AI-HANDOFF.md`, `README.md` or the footer stamp; (3) its "existing 107 characters" was stale (the part was built on 105, master held 132) and reads 132 in master's copy, with the slug-collision check re-run against those 132 (none).
+
+### [MERGED] Part 4438 — Case 4438, *The Heavenly Thunder-Serpent*, plus Cases 0000B and 2114 and a new Case 4420 cover
+
+Added:
+- `books/4438.html`, `books/0000b.html`, `books/2114.html` — new book pages
+- `characters/` — 19 pages: yue, yongkang-emperor, physician-kao, zheng-kui, zhou-xuan, du-heng, elder-peng, fu-baishi, meng-kuo, sun-lin, mei-suwen, kang-yi, ren-duo, the-heavenly-thunder-serpent, wan-er, pei-rong, yun-wei, master-bai, zhuo-sheng
+- `images/characters/` — 38 files: a sheet and a `-thumb` for each of those 19 slugs
+- `images/scenes/` — 30 files: a full image and a `-grid` for each of 15 scenes
+- `images/covers/` — `4438.jpg`, `0000b.jpg`, `2114.jpg`
+
+Edited:
+- `images/covers/4420.jpg` — replaced with the new cover (same name, same 900x1350)
+- `tools/build_site.py` — Case 4438's `BOOKS` entry added after 4555 (catalyst, envoy Observer 403, 19 characters, 15 scenes, Google Books link; `pages` left as the placeholder); `0000b` and `2114` stubs appended after 4442; `HOME_SCENES` gained `the-solstice-ascension`; one sentence each added to the Cultivator and Catalyst lore prose
+- `books.html`, `index.html`, `lore/cultivator.html`, `lore/catalyst.html` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 4438 and the two stubs in §6, open items in §7, merge note in §8; site-map counts and lore-roster paragraph updated
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp only
+
+Totals: cases 12 -> 15, characters 156 -> 175, scenes 90 -> 105. A recount from the rebuilt site gives the same figures.
+
+Merged: 2026-10-01, straight into master at the author's request (no staging copy, so no `[PENDING]` entry existed).
