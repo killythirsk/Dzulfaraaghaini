@@ -167,3 +167,24 @@ Nothing about this structure is GitHub-specific, so the move is just a
 hosting change: connect this same repository to Cloudflare Pages, leave the
 build command empty, and set the output directory to the repo root. No
 files need to move or change.
+
+## Change Log
+
+One entry per part: `[PENDING] Part NNNN` while it exists only in a slave's zip, `[MERGED]` once the master has appended it.
+
+### [MERGED] Part 3115 — Case 3115, *The Listening Water*: 24-character roster
+
+Added:
+- `characters/` — 24 pages: cao, chunhui, duan, huairen, huaiyu, jian, meilan, mingxuan, observer-471, peizhi, rao, suyin, the-custodian, the-herald, the-kitchen-boy, the-listening-water, the-physician, the-scribes-apprentice, the-soldier-who-killed-huaiyu, the-under-steward, xiaobao, yancheng, yanshuis-third-son, zhuo
+- `images/characters/` — 48 files: a portrait and a `-thumb` for each of those 24 slugs
+
+Edited (re-applied to master's own copies; nothing overwritten from the part):
+- `tools/build_site.py` — Case 3115's `BOOKS` entry replaced (catalyst *The Listening Water*, envoy Observer 471 "the Salt-Root Woman", 24 characters; `pages`, `genre`, `synopsis_html` and `status` untouched, so the book stays coming-soon); one sentence added to the Cultivator lore text and one to the Catalyst lore text
+- `books/3115.html`, `index.html`, `lore/cultivator.html`, `lore/catalyst.html` — regenerated from the script
+- `AI-HANDOFF.md` — the slave's 3115 notes carried in (Book write-up in §6, open-items bullet in §7, merge note in §8); site-map character total, lore-roster paragraph and merge labels updated to match
+- `README.md` — this entry
+- every other page — footer "Site last built" stamp only
+
+Totals: cases 12 -> 12, characters 132 -> 156, scenes 90 -> 90. A recount from the merged site gives the same figures.
+
+Merged: 2026-09-30, 04:36PM GMT+7 - as logged, except: (1) this part's README carried no `[PENDING] Part 3115` entry (first run of the change-log process), so the log was taken from the 3115 write-up in the part's own `AI-HANDOFF.md`, on the author's instruction; (2) that write-up itemises only the generated pages, not `tools/build_site.py`, `AI-HANDOFF.md`, `README.md` or the footer stamp; (3) its "existing 107 characters" was stale (the part was built on 105, master held 132) and reads 132 in master's copy, with the slug-collision check re-run against those 132 (none).

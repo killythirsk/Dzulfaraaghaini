@@ -1613,10 +1613,212 @@ BOOKS = [
         "cover_file": "3115.jpg",
         "hook": "Reckoning. Rationed. Witnessed. Roster. Closed.",
         "case_tag": "Case 3115",
+        "catalyst": {
+            "name": "The Listening Water",
+            "meta": "High-Concept, Cultural and Social",
+            "page": "characters/the-listening-water.html",
+            "img": "characters/the-listening-water-thumb.jpg",
+            "html": "<p>A stoppered glass bottle holding five measured sips of plain-seeming water. One sip grants its drinker fifteen minutes of understanding &mdash; never speech, never command &mdash; of the perception of nearby animals, after which the effect lapses without residue or memory-loss.</p>",
+        },
+        "envoy": {
+            "name": "Observer 471",
+            "meta": "&ldquo;the Salt-Root Woman&rdquo;",
+            "page": "characters/observer-471.html",
+            "img": "characters/observer-471-thumb.jpg",
+            "html": "<p>Poses as an itinerant herbalist and peddler in Jinlu, and sells four crates of ordinary trade stock &mdash; the bottle among them &mdash; to a palace under-steward without ever learning whose hands it would reach.</p>",
+        },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
         "synopsis_html": EDITOR_SYNOPSIS,
-        "characters": [],
+        "characters": [
+            {
+                "slug": "huairen", "name": "Huairen",
+                "epithets": "King of Qinghe &middot; forty-one years on the throne &middot; 79 years old",
+                "teaser": "Learns, on his own deathbed, exactly whose son he raised &mdash; and asks the realm to remember only that the boy was loved.",
+                "bio_html": """<p>King of Qinghe for forty-one years, and by the novel's opening already visibly diminished by an illness that turns out, far too late for anyone to act on it, to be <a href="../characters/cao.html">Cao</a>'s own slow, measured dosing rather than age alone. He keeps <a href="../characters/xiaobao.html">Xiaobao</a> curled against him through most of his final months, and it is the dog's own fear of a familiar step that eventually hands <a href="../characters/mingxuan.html">Mingxuan</a> the pattern no human witness would give him.</p>
+              <p>Whatever he comes to understand about Queen <a href="../characters/meilan.html">Meilan</a>, Prince <a href="../characters/huaiyu.html">Huaiyu</a>, and the true parentage of the son the Father's Reckoning has already made legally his own, he takes the last sip of <a href="../characters/the-listening-water.html">the Listening Water</a> from Mingxuan's own hand and spends it not on confrontation but on a final instruction, delivered to the room rather than to any one person in it: tell them the boy is loved, and tell them nothing else.</p>""",
+                "quote": "Tell them the boy is loved. Tell them nothing else.",
+            },
+            {
+                "slug": "meilan", "name": "Meilan",
+                "epithets": "Queen of Qinghe &middot; 30 years old &middot; later Regent",
+                "teaser": "Chooses, in the only way left to her, by declining to choose otherwise &mdash; and spends the rest of her life quietly paying for what that choice cost.",
+                "bio_html": """<p>Queen of Qinghe for nine years before the novel opens, and the one person in Jinlu who understands exactly what the Father's Reckoning is worth: it makes Prince Jiyun her husband <a href="../characters/huairen.html">Huairen</a>'s legal son the moment <a href="../characters/peizhi.html">Warden Peizhi</a> records it, whatever the truth of his conception with <a href="../characters/huaiyu.html">Huaiyu</a> happens to be. She spends the entire novel protecting that single piece of paper, by whatever quiet, unglamorous means the household affords a woman who cannot be seen to act at all.</p>
+              <p>When <a href="../characters/suyin.html">Suyin</a>'s accidental knowledge threatens to undo it, Meilan has <a href="../characters/chunhui.html">Chunhui</a> gently questioned rather than raise her own voice once, and the household's quieter instruments &mdash; <a href="../characters/cao.html">Cao</a>'s, Chancellor <a href="../characters/jian.html">Jian</a>'s &mdash; do the rest without her ever giving a documented order. She rules as Regent once the throne is hers to hold, outlives every man who did the actual killing on her behalf, and marks the one debt she can never openly repay by quietly doubling, every season, an anonymous stipend to a dead maid's brother who has no idea whose money it is.</p>""",
+                "quote": "I chose, the only way I could: by declining to choose otherwise.",
+            },
+            {
+                "slug": "huaiyu", "name": "Huaiyu",
+                "epithets": "Prince, half-brother to King Huairen &middot; March-Lord of Beiyan &middot; 38 years old",
+                "teaser": "Keeps a soldier's chest packed with an infant's cap he was never allowed to claim, and dies at a ford still not knowing his son survived him.",
+                "bio_html": """<p>Half-brother to King <a href="../characters/huairen.html">Huairen</a> and March-Lord of the frontier at Beiyan &mdash; a prince by blood who built his whole adult identity on being a soldier by choice instead. His affair with Queen <a href="../characters/meilan.html">Meilan</a> produces the one child neither of them can ever publicly claim: Prince Jiyun, sealed to the throne as Huairen's own son by <a href="../characters/peizhi.html">Warden Peizhi</a>'s Reckoning before Huaiyu is ever told the boy exists as anything other than the King's heir. He keeps an infant's cap in his own campaign chest for the rest of his life, and tells no one what it means.</p>
+              <p>When the throne he never contested becomes something worth fighting over anyway, he leads the faction that will not accept Chancellor <a href="../characters/jian.html">Jian</a>'s account of the old King's death, and dies at the second autumn's crossing of the Shuang ford, shot by <a href="../characters/the-soldier-who-killed-huaiyu.html">a seventeen-year-old soldier</a> of the Queen's own garrison who believes, to his own dying day, that he has struck down a traitor rather than the father of the child that garrison exists to protect.</p>""",
+                "quote": "A prince by blood, a soldier by choice.",
+            },
+            {
+                "slug": "the-listening-water", "name": "The Listening Water",
+                "epithets": "A Stoppered Glass Bottle, Five Measured Sips &middot; the Catalyst of Case 3115",
+                "teaser": "Grants fifteen minutes of another creature's own perception, never its speech or its obedience &mdash; and asks nothing back for the privilege.",
+                "bio_html": """<p>A single stoppered glass bottle, plain and unmarked, holding five individually measured sips of water indistinguishable from any other by taste, smell, or any test available in Qinghe. One sip grants its drinker fifteen minutes of a nearby animal's own perception &mdash; never its speech, never its command &mdash; after which the effect lapses without residue or memory-loss. It is introduced into Qinghe as ordinary trade stock by <a href="../characters/observer-471.html">Observer 471</a>, and never once reclaimed.</p>
+              <p>Four of its five sips are used deliberately &mdash; by <a href="../characters/mingxuan.html">Mingxuan</a> twice, by <a href="../characters/yancheng.html">Yancheng</a> once, and by King <a href="../characters/huairen.html">Huairen</a> himself on his own deathbed &mdash; while the first is spent by <a href="../characters/suyin.html">Suyin</a> entirely by accident. Qinghe's own soldiers, knowing only rumor of it by the war's end, have already begun mythologizing it as &ldquo;the god-water&rdquo; long before the emptied bottle is kept, quietly, as somebody's private keepsake.</p>""",
+                "quote": "Understanding, not command; borrowed, not kept.",
+            },
+            {
+                "slug": "suyin", "name": "Suyin",
+                "epithets": "Maid in Queen Meilan's Household &middot; third year of service &middot; 20 years old",
+                "teaser": "Drinks what she thinks is spilled water, and spends her last fifteen minutes of understanding on a caged bird that knows more than she does.",
+                "bio_html": """<p>A maid in Queen <a href="../characters/meilan.html">Meilan</a>'s household, in her third year of service and unremarkable by every court standard except a habitual watchfulness she never quite leaves off duty. A small private ritual is the only real extravagance anyone would find if they looked: a jar of coins counted by candlelight each new moon, not for the money so much as for the pleasure of watching a number grow.</p>
+              <p>She drinks what she assumes is a spilled mouthful of ordinary water while tending the Queen's caged moon-finch, and spends the next fifteen minutes understanding, through the bird's own memory, exactly what it has watched happen in that room for longer than she has served in it. She tells no one before she is found dead on the covered bridge at dawn, the fall recorded as an accident by a physician who is never given reason to look closer.</p>""",
+                "quote": "Not for the money. For the pleasure of watching a number grow.",
+            },
+            {
+                "slug": "mingxuan", "name": "Mingxuan",
+                "epithets": "Court Alchemist to King Huairen &middot; 44 years old &middot; later of the peace council under the Jinlu Concord",
+                "teaser": "Measures out his own sip of a stranger's water to verify what it does, and spends the rest of his life wishing he'd measured wrong.",
+                "bio_html": """<p>Court Alchemist to King <a href="../characters/huairen.html">Huairen</a>, and the one man in Jinlu who treats a servant's fright as a question rather than an inconvenience. When <a href="../characters/suyin.html">Suyin</a> is brought to him shaking and unable to say why, he listens to her account of an overheard truth she cannot possibly have overheard, and instead of dismissing it, measures out one of the four remaining sips himself &mdash; not to help her, he tells himself, but to know precisely what he is dealing with. It works exactly as she described: fifteen minutes of a nearby animal's own perception, then nothing, no residue, no memory of having granted it at all.</p>
+              <p>He carries that same discipline &mdash; verify, then act &mdash; through everything that follows, including the slow poisoning he eventually traces through <a href="../characters/xiaobao.html">Xiaobao</a>'s own fear of a steward's step, and gives the King the last sip in his own hand rather than anyone else's, on the night Huairen dies. Chancellor <a href="../characters/jian.html">Jian</a> recasts the whole investigation as Mingxuan's own coup dressed as medicine, and <a href="../characters/duan.html">Duan</a> gets him out of Jinlu ahead of the arrest that never quite catches him. He signs the Jinlu Concord as a member of the peace council twenty-six years later, and near the very end of his life answers a village scribe's apprentice's one honest question about a bottle that could speak to birds &mdash; then lets the boy write down neither the question nor his answer.</p>""",
+                "quote": "A man who does not keep his own accounts has no business auditing a kingdom's.",
+            },
+            {
+                "slug": "cao", "name": "Cao",
+                "epithets": "Steward to Queen Meilan's Household &middot; 52 years old",
+                "teaser": "Spends nine years of quiet, competent service measuring out a king's medicine &mdash; and, for months, something else besides.",
+                "bio_html": """<p>Steward to Queen <a href="../characters/meilan.html">Meilan</a>'s household for nine years, and the kind of servant a great house is built to stop noticing: plain robes, an unhurried step, a medicine kit at his belt that no one ever asks to see opened. He measures out King <a href="../characters/huairen.html">Huairen</a>'s dose himself, night after night, with the same steady hand he uses for every other household errand, and tells his interrogators afterward that he had never in nine years of service done anything the Queen's household had not, in some fashion, already wanted done.</p>
+              <p>He confesses the whole of it to <a href="../characters/duan.html">Duan</a>'s questioning once <a href="../characters/mingxuan.html">Mingxuan</a>'s suspicions finally catch him, and Chancellor <a href="../characters/jian.html">Jian</a> has him executed within the same day &mdash; not for the poisoning itself, but for how little time it would have taken him to name who else knew.</p>""",
+                "quote": "He moves like a shadow in a house of silk and power &mdash; always present, never seen.",
+            },
+            {
+                "slug": "duan", "name": "Duan",
+                "epithets": "Chamberlain of the Jinlu Court &middot; 83 years old &middot; served three kings before Huairen",
+                "teaser": "Has never once given the King's Guard cause to question his word, and spends the last use of that trust smuggling out the one man the court wants silenced.",
+                "bio_html": """<p>Chamberlain of the Jinlu court, and old enough to have served three kings before a crown ever sat on <a href="../characters/huairen.html">Huairen</a>'s own head. Forty years of never once being questioned by the King's Guard is not an accident; it is the entire instrument he spends on <a href="../characters/mingxuan.html">Mingxuan</a>'s behalf, walking him past men who would stop anyone else, on the strength of a reputation he has spent decades not spoiling with a single lie.</p>
+              <p>He uses that same reputation once more, and for the last time, to get Mingxuan out of Jinlu ahead of Chancellor <a href="../characters/jian.html">Jian</a>'s version of events &mdash; a debt on forty years of quiet composure that he pays without visibly changing expression. What it costs him afterward, the record doesn't say; only that he is still alive, and still trusted, when the Jinlu Concord is signed.</p>""",
+                "quote": "No guard in forty years has ever questioned my word. I have never once given them cause to start.",
+            },
+            {
+                "slug": "jian", "name": "Jian",
+                "epithets": "Chancellor &middot; Queen Meilan's Chief Political Minister &middot; 56 years old",
+                "teaser": "Silences the one confession that could unravel everything, and is silenced, a little later, the very same quiet way himself.",
+                "bio_html": """<p>Chancellor and chief political minister to Queen <a href="../characters/meilan.html">Meilan</a>, and the one man in Jinlu who understands that a realm is not won in battle so much as in the order of what endures afterward. He has <a href="../characters/cao.html">Cao</a> executed within hours of the steward's confession under <a href="../characters/duan.html">Duan</a>'s questioning, less to punish the poisoning than to close, permanently, the question of who else knew &mdash; and spends the months after building the account that recasts <a href="../characters/mingxuan.html">Mingxuan</a>'s own investigation as the real conspiracy.</p>
+              <p>He asks Meilan for more authority than a chancellor has ever formally held, not long after the Concord is signed, and dies of a sudden illness shortly afterward &mdash; the record no more curious about that death than his own account of Cao's ever was.</p>""",
+                "quote": "The realm is not won in battle, but in the order of what endures.",
+            },
+            {
+                "slug": "peizhi", "name": "Peizhi",
+                "epithets": "Warden of the Crown, Jinlu Temple &middot; 58 years old",
+                "teaser": "Enters a Reckoning without ceremony, and signs a peace decades later without ever learning which of the two mattered more.",
+                "bio_html": """<p>Warden of the Crown at Jinlu Temple, ink-stained from decades of exactly the kind of record-keeping that gives the Threefold Crown's Father's Reckoning its legal teeth: whoever a ceremony declares a father to be becomes, for every purpose the realm recognizes, the truth. He enters Prince Jiyun's own Reckoning without any particular ceremony, one birth among the many he has recorded, never once suspecting that this specific entry will end up mattering more than any other line in his temple's ledgers.</p>
+              <p>He affixes the temple's seal to the Jinlu Concord years later with the same unhurried, professional attention, still unaware that the peace he is witnessing and the Reckoning he once wrote down are, in the most literal sense, the same document's two halves.</p>""",
+                "quote": "Records endure when we are gone.",
+            },
+            {
+                "slug": "yancheng", "name": "Yancheng",
+                "epithets": "Court Poet &middot; 31 years old",
+                "teaser": "Warns the woman he loves about a bottle he thinks is just gossip, and never learns what that one sentence cost.",
+                "bio_html": """<p>Court poet, close enough to <a href="../characters/mingxuan.html">Mingxuan</a>'s household to be treated as family rather than a guest, and in love with <a href="../characters/chunhui.html">Chunhui</a> in the unhurried way of a man who assumes he has years left to say so properly. He means nothing by mentioning, in passing, the odd story going around about water in a finer bottle than <a href="../characters/suyin.html">Suyin</a>'s own household keeps &mdash; and never learns that the words reach Queen <a href="../characters/meilan.html">Meilan</a>'s own household within the day, or what they cost the woman he was talking about.</p>
+              <p>He helps <a href="../characters/duan.html">Duan</a> and Mingxuan question <a href="../characters/cao.html">Cao</a> at Wanling once the war has made him useful for more than verse, and dies afterward on a courier's road, killed by his own side under <a href="../characters/zhuo.html">General Zhuo</a>'s standing order against capture. No chronicle in Qinghe ever learns whose arrow it actually was; the histories remember him only as a poet-martyr, cut down by the Queen's forces for carrying loyalist words.</p>""",
+                "quote": "Words are the only things I can carry across a far distance.",
+            },
+            {
+                "slug": "chunhui", "name": "Chunhui",
+                "epithets": "Lady-in-Waiting to Queen Meilan &middot; 23 years old",
+                "teaser": "Is gently questioned once by a queen who already knows the answer, and carries what it cost someone else for the rest of her life.",
+                "bio_html": """<p>Lady-in-waiting to Queen <a href="../characters/meilan.html">Meilan</a>, petite and careful-mannered, with a habit of pressing her own sleeve to her mouth when startled that the household finds endearing rather than telling. <a href="../characters/yancheng.html">Yancheng</a> loves her plainly and patiently, and it is his one offhand mention of water in a finer bottle, repeated to her in confidence, that Meilan draws out of her in a single gentle, unhurried conversation &mdash; no threat in it anywhere, and no need for one.</p>
+              <p>She leaves court service not long after the war, marries a silk merchant who never asks why she flinches at caged birds, and burns every poem she was ever given within the week of hearing he's dead. She regrets the burning, quietly and completely, for the rest of her life, and never once explains to her husband what he was actually apologizing for when he offered to buy her a replacement.</p>""",
+                "quote": "She burned his poems within the week, and regretted it, quietly, for the rest of her life.",
+            },
+            {
+                "slug": "the-physician", "name": "The Physician",
+                "epithets": "Palace Physician &middot; 47 years old &middot; unrelated to Mingxuan's own inquiry",
+                "teaser": "Examines a body on the ice and records the kinder of two possible truths, never knowing there was a crueler one.",
+                "bio_html": """<p>The palace physician actually sent for when <a href="../characters/the-kitchen-boy.html">a kitchen boy</a> finds <a href="../characters/suyin.html">Suyin</a> on the covered bridge at dawn &mdash; deliberately not <a href="../characters/mingxuan.html">Mingxuan</a>, whose closeness to the household makes him the wrong choice for this one examination. He kneels on the ice, does his clinical work without sentiment, and records the death exactly as it appears: an accidental fall on a treacherous surface, nothing more sinister than a wet morning and a careless step.</p>
+              <p>Nothing in the record suggests he ever learns how incomplete that finding is. He signs it, files it, and by every account goes back to his rounds the same afternoon.</p>""",
+                "quote": "Records the death as an accidental fall on treacherous ice.",
+            },
+            {
+                "slug": "the-kitchen-boy", "name": "The Kitchen Boy",
+                "epithets": "Kitchen Worker, Palace of Jinlu &middot; 14 years old",
+                "teaser": "Finds a woman he knew only well enough to nod to, lying on the ice at dawn, and never has to describe it twice.",
+                "bio_html": """<p>A fourteen-year-old kitchen worker who had known <a href="../characters/suyin.html">Suyin</a> only well enough to nod to in a corridor, and who happens to cross the covered bridge early enough one winter morning to be the one who finds her. He is alert and quick-moving by long habit &mdash; a kitchen boy learns fast to stay out of the way when adults are working &mdash; and it is that same habit that has him on the bridge before anyone else that day.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-custodian", "name": "The Custodian",
+                "epithets": "Cultivator Terrarium-Oversight Staff &middot; appears 32&ndash;34",
+                "teaser": "Reopens a dead maid's file four times past any audit requirement, and never once writes down why.",
+                "bio_html": """<p>Oversight staff for the <a href="../lore/cultivator.html">Cultivators</a>' terrarium program &mdash; a different function entirely from a field <a href="../characters/observer-471.html">Envoy</a>: no disguise, no ground presence, just a console and an archive of records she is paid to audit, not to feel anything about. <a href="../characters/suyin.html">Suyin</a>'s individual file crosses her review four separate times after the case technically closes, well past what any audit requirement demands of her.</p>
+              <p>Her own private log gives the anomaly exactly three words, filed under a header the Corps' style guide would call adequate and complete: irregular, non-actionable, self-contained. She never escalates it, and never explains, even to herself on the page, why she kept opening a closed drawer to look at the same name.</p>""",
+                "quote": "Irregular. Non-actionable. Self-contained.",
+            },
+            {
+                "slug": "zhuo", "name": "Zhuo",
+                "epithets": "General, Commander of the Garrison at Wanling &middot; 65 years old",
+                "teaser": "Shelters the two men the Crown wants most, then gives an order that kills one of his own without ever meaning to.",
+                "bio_html": """<p>Commander of the loyalist garrison at Wanling, plain-spoken and old enough to have made his peace with the arithmetic of this kind of war well before <a href="../characters/mingxuan.html">Mingxuan</a> and <a href="../characters/duan.html">Duan</a> arrive at his gate needing shelter. He takes them in without much ceremony, on the reasoning that the alternative &mdash; sending them back to Jinlu &mdash; solves nothing and costs him nothing to refuse.</p>
+              <p>It is his own standing order &mdash; that any courier who cannot avoid capture is to be stopped by his own side rather than let fall into the Queen's hands &mdash; that gets <a href="../characters/yancheng.html">Yancheng</a> killed on the road by young <a href="../characters/rao.html">Rao</a>'s hand, a mistake Zhuo never rescinds and never quite apologizes for, on the grounds that he would rather live with one wrong death than with the whole camp's secrets in enemy hands. He signs the Jinlu Concord as one of its more reluctant witnesses, and sits afterward on the peace council he never much wanted a seat on.</p>""",
+                "quote": "A camp that can't keep its own secrets deserves whatever the Queen's interrogators do to it.",
+            },
+            {
+                "slug": "rao", "name": "Rao",
+                "epithets": "Young Officer, Loyalist Army at Wanling &middot; 26 years old",
+                "teaser": "Follows a standing order at a river crossing, and spends eleven months carrying a debt he doesn't know how to put down.",
+                "bio_html": """<p>A young officer under <a href="../characters/zhuo.html">General Zhuo</a> at Wanling, obedient by training and, until this posting, untested by anything worse than drills. He is the one who carries out Zhuo's standing order against letting a courier fall into enemy hands, on a road where the courier turns out to be <a href="../characters/yancheng.html">Yancheng</a>, not an infiltrator.</p>
+              <p>He carries what he did for eleven months before he can bring himself to confess it to <a href="../characters/mingxuan.html">Mingxuan</a> directly, weeping through the whole account &mdash; the only figure in Case 3115's entire file who is recorded crying over what the war made of him.</p>""",
+                "quote": "I could no longer stand beside him, carrying a debt he did not know was owed.",
+            },
+            {
+                "slug": "the-soldier-who-killed-huaiyu", "name": "The Soldier Who Killed Huaiyu",
+                "epithets": "Soldier, Queen's Garrison &middot; 17 years old",
+                "teaser": "Looses one arrow at a ford, certain he's stopped a traitor, and never learns whose son he was actually protecting.",
+                "bio_html": """<p>A seventeen-year-old recruit in the Queen's garrison, given no other distinction in the record beyond the one act he performs at the Shuang ford in the war's second autumn: sighting a mounted man he has been told is a traitor to the Crown, and loosing the arrow that kills <a href="../characters/huaiyu.html">Prince Huaiyu</a>. He never learns, and the record gives no sign anyone ever tells him, that the man he shot was the true, unacknowledged father of the very child his garrison exists to protect.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-herald", "name": "The Herald (White Pennant)",
+                "epithets": "Herald in the Crown's Service &middot; 29 years old",
+                "teaser": "Carries the Crown's first move against Wanling in a leather message-case, and never learns what's inside it.",
+                "bio_html": """<p>A career herald, chosen for the ride to <a href="../characters/zhuo.html">General Zhuo</a>'s garrison at Wanling precisely because a single rider under a white pennant reads as diplomacy, not war. He carries the Crown's opening summons to <a href="../characters/mingxuan.html">Mingxuan</a> sealed in a road-stained message-case, delivers it exactly as instructed, and rides back out the way he came, unaware he was ever the gentler of the two options the Crown had considered.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-under-steward", "name": "The Under-Steward",
+                "epithets": "Under-Steward, Palace Kitchens of Jinlu &middot; 39 years old",
+                "teaser": "Buys four crates from a peddler he never sees again, and picks one bottle for the Queen's stores on nothing but its handsome stopper.",
+                "bio_html": """<p>Under-steward of the palace kitchens at Jinlu, practical and businesslike, who buys four crates of ordinary trade goods from an itinerant herbalist &mdash; <a href="../characters/observer-471.html">Observer 471</a>, though he has no reason to suspect she is anything but what she appears &mdash; without a second thought. He routes one particular bottle to Queen <a href="../characters/meilan.html">Meilan</a>'s own private stores on no better reasoning than that its stopper is unusually fine glass, fit for a household that notices such things.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-scribes-apprentice", "name": "The Scribe's Apprentice",
+                "epithets": "Scribe's Apprentice, from an Unnamed Village &middot; 16 years old",
+                "teaser": "Asks an old man one honest question about a bottle that could speak to birds, and has the grace never to write down the answer.",
+                "bio_html": """<p>A scribe's apprentice from a village he never names, sent decades after the war to record whatever an aging <a href="../characters/mingxuan.html">Mingxuan</a> is willing to say for the historical account. Instead of asking about the peace council, or the war, or the Concord that ended it, he asks the one question that has apparently followed him from wherever he first heard the rumor: whether the old Alchemist really once owned a bottle that could speak to birds.</p>
+              <p>Mingxuan answers him honestly. The boy writes down neither the question nor the answer, which is, as far as the record goes, the closest anyone in Qinghe ever comes to being told the truth about Case 3115 on purpose.</p>""",
+                "quote": "Is it true the Alchemist once owned a bottle that could speak to birds?",
+            },
+            {
+                "slug": "yanshuis-third-son", "name": "Duke of Yanshui's Third Son",
+                "epithets": "Son of the Duke of Yanshui &middot; inheritor of the Yanshui dukedom under the Father's Reckoning",
+                "teaser": "Inherits a dukedom over two cousins with a stronger claim by blood, on the strength of a ceremony that says blood was never really the point.",
+                "bio_html": """<p>Cited in Jinlu's own legal memory as the standing precedent for how the Father's Reckoning actually functions: when two cousins swear the third son's father was at sea at the relevant time, the temple's own recorded ceremony outweighs their testimony, and he inherits the Yanshui dukedom anyway. His own case is decades cold by the time Prince Jiyun's Reckoning is entered, but it is the exact precedent the court reaches for whenever it needs proof the doctrine holds even against contradictory evidence.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "xiaobao", "name": "Xiaobao",
+                "epithets": "King Huairen's Lapdog &middot; approximately 4 years old during the novel's main action",
+                "teaser": "Hides under the King's bed every time one particular steward visits, and never has any way to say why.",
+                "bio_html": """<p>King <a href="../characters/huairen.html">Huairen</a>'s small, devoted lapdog, kept at the old King's side through most of his final illness. He hides under the bed, without fail, every time <a href="../characters/cao.html">Cao</a> comes to administer the King's evening dose &mdash; a pattern no one in the room reads as significant until <a href="../characters/mingxuan.html">Mingxuan</a> spends the Listening Water's own last sip understanding, for fifteen borrowed minutes, exactly what Xiaobao has known all along.</p>
+              <p>He outlives the King by six years, taken in afterward by the Alchemist himself, and is, by every account, thoroughly spoiled for the rest of his life.</p>""",
+                "quote": "He knew Cao's step, distinct from every other step that ever crossed that threshold.",
+            },
+            {
+                "slug": "observer-471", "name": "Observer 471",
+                "epithets": "Cultivator Field Envoy &middot; &ldquo;the Salt-Root Woman&rdquo; &middot; Case 3115",
+                "teaser": "Sells a kitchen steward four crates of ordinary goods, and is three postings distant before anyone ever drinks what was inside them.",
+                "bio_html": """<p>A field agent of the <a href="../lore/cultivator.html">Cultivators</a>, presenting in Jinlu as an itinerant herbalist and peddler known locally only as the Salt-Root Woman &mdash; stooped, travel-worn, entirely unremarkable, pushing a cart of dried ginseng and salves through the palace district on an ordinary trade day. She sells four crates of goods to the <a href="../characters/the-under-steward.html">under-steward</a> of the palace kitchens, the bottle among them, and never learns whose hands it eventually reaches or what it costs the household that bought it.</p>
+              <p>She does not look back at the gate. She never does. By the time Case 3115 closes, she is three postings distant, filing reports on a subject world that has no idea it was ever observed at all.</p>""",
+                "quote": "She did not look back at the gate. She never did.",
+            },
+        ],
         "scenes": [],
     },
     {
@@ -1663,13 +1865,13 @@ LORE = [
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
           <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color.</p>""",
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. Every Catalyst on file is listed below.</p>""",
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",

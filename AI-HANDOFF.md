@@ -169,13 +169,13 @@ book's own page rather than as their own top-level sections.
                             threefold-crown, decree-of-luminescence;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (132 total — 10 for
+/characters/<slug>.html    One page per character (156 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
                             Vessel of Unmediated Grace, 12 for the Songs
-                            Never Mention the Cats, 15 for the Third Grain;
-                            see §6)
+                            Never Mention the Cats, 15 for the Third Grain,
+                            24 for the Listening Water; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -273,10 +273,10 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the six published books, plus 0188 (both
-records) and 2140 (envoy only — see §6) now that their rosters have been
-merged in. Canon-guide cases with no book dict on the site at all (0156,
-1268, 4425) or only an empty coming-soon stub with no cast (3115, 3312,
-3887, 4442) are not.
+records), 2140 (envoy only — see §6) and 3115 (both records — see §6) now
+that their rosters have been merged in. Canon-guide cases with no book dict
+on the site at all (0156, 1268, 4425) or only an empty coming-soon stub with
+no cast (3312, 3887, 4442) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -695,6 +695,80 @@ to point a roster thumbnail at (2140's `scenes` list is still empty), so
 inventing one would mean a broken `<img>` on the Catalyst lore page. Add
 it once real art exists for the bearing itself or a scene depicting it.
 
+### Book: *The Listening Water* (Case 3115)
+
+Status: **Coming soon** — not yet published. This pass added only the
+character roster (24 pages, plus fresh `catalyst`/`envoy` summary dicts)
+from a batch called `WEB CHANGE 3`, which included 24 character-sheet
+portraits and the complete manuscript (used for context only, per the
+author's own instruction: &ldquo;add 3115 char, i include the manuscript
+draft for context&rdquo;). `pages`, `genre`, `synopsis_html`, and `status`
+are untouched and still the `EDITOR_*` placeholders; no scene art has
+arrived yet either. (Note: this file has no dedicated write-up for Book
+6, Case 4555, *The Vessel of Unmediated Grace* — it was merged in a
+session that didn't update this doc. Its data is complete and live on the
+site; only this handoff's own notes are behind. Worth a future pass
+filling that gap in separately.)
+
+The premise, reconstructed from the manuscript for this write-up (not
+author-confirmed as final jacket copy): the Threefold Crown faith's
+Father's Reckoning makes whoever a ceremony declares a father to be the
+*legal* father, regardless of blood — precedent: the **Duke of Yanshui's
+Third Son** inherits over two blood cousins. King **Huairen** of Qinghe
+is 79 and dying, slowly poisoned by his own Queen's steward, **Cao**, on
+Chancellor **Jian**'s orders. Nine years earlier, Queen **Meilan** had an
+affair with the King's own half-brother, **Huaiyu** (March-Lord of
+Beiyan); their son, Prince Jiyun, was sealed to the throne as Huairen's
+own by **Warden Peizhi**'s Reckoning. The whole plot turns on a
+Cultivator Catalyst: **the Listening Water**, a stoppered bottle of 5
+sips smuggled into Qinghe as ordinary trade stock by **Observer 471**
+(&ldquo;the Salt-Root Woman&rdquo;), sold on by **the Under-Steward** of
+the palace kitchens. A sip grants 15 minutes of a nearby animal's own
+perception. Maid **Suyin** drinks one by accident via the Queen's caged
+finch and learns the truth about Jiyun's parentage; she's found dead days
+later (**the Kitchen Boy** finds the body; **the Physician**, deliberately
+not **Mingxuan**, rules it an accidental fall) after court poet
+**Yancheng** unwittingly tips off the household through his beloved
+**Chunhui**. Mingxuan (the King's own alchemist) becomes the story's
+investigator, eventually using the Water himself, tracing the King's
+poisoning through the King's own lapdog **Xiaobao**'s fear of Cao's step,
+and getting smuggled out of Jinlu by chamberlain **Duan** once Jian
+recasts his own investigation as a coup. War follows Huairen's death;
+General **Zhuo** shelters the loyalists at Wanling, his own standing
+order gets Yancheng killed by young officer **Rao** (who confesses to
+Mingxuan 11 months later), and Huaiyu himself dies at the Shuang ford,
+shot by **the Soldier Who Killed Huaiyu**, never knowing the boy he was
+fighting over was his own son. It ends on the Jinlu Concord, and an
+epilogue beat decades later: **the Scribe's Apprentice** asks an old
+Mingxuan the one true question anyone in Qinghe ever asks him outright,
+and neither of them writes down his answer.
+
+Twenty-four characters have pages, added in this one batch: **Huairen**,
+**Meilan**, **Huaiyu**, **the Listening Water** (the Catalyst, treated as
+a character per The Sweets' precedent), **Suyin**, **Mingxuan**, **Cao**,
+**Duan**, **Jian**, **Peizhi**, **Yancheng**, **Chunhui**, **the
+Physician**, **the Kitchen Boy**, **the Custodian** (Cultivator oversight
+staff — distinct from a field Envoy, no disguise or ground presence, just
+audits terrarium records), **Zhuo**, **Rao**, **the Soldier Who Killed
+Huaiyu**, **the Herald** (`the-herald`), **the Under-Steward**, **the
+Scribe's Apprentice** (`the-scribes-apprentice`), **Duke of Yanshui's
+Third Son** (`yanshuis-third-son`), **Xiaobao**, and the Envoy, **Observer
+471** (`observer-471`). No slug collisions with the existing 132
+characters, so none needed disambiguation. Cultivator and Catalyst lore
+prose each picked up one new line for this data point, the same way Case
+4420's did.
+
+The reference-sheet art for this batch is a different in-house style from
+earlier books' character portraits: each sheet is itself a dense, labeled
+design document (name, role, age, a physical-traits list, an in-world
+quote where the author chose to give one, small captioned story-moment
+vignettes), not just a single portrait plus a detail crop. Nothing about
+the schema needed to change for it — full/thumb images are still a
+straight proportional resize of the whole sheet (980w / 320w, same as
+every other character), and the `alt` text template (&ldquo;Character
+reference sheet for %s&rdquo;) turns out to describe this whole site's
+character art exactly, not just this batch's.
+
 ## 7. What's placeholder / incomplete right now
 
 - Genres and page counts are settled for Books 1–4: 102 / 99 / 96 / 109
@@ -738,6 +812,11 @@ it once real art exists for the bearing itself or a scene depicting it.
   Carbon Echo Beacon) that existed at one point are still not on the site.
   "More than a dozen novels" total were mentioned early on — only six are
   live, plus 0188 and 2140 with a roster but no synopsis yet (§6).
+- **Case 3115** (*The Listening Water*) now has its full 24-character
+  cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
+  but is still `coming-soon`: no confirmed `pages`, `genre`, or
+  `synopsis_html`, and no scene art yet. Resolve the same way Books 1–4
+  were once the author sends more.
 
 ## 8. Decisions already made — please don't relitigate these without cause
 
@@ -789,7 +868,27 @@ it once real art exists for the bearing itself or a scene depicting it.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest merge (0188 + 2140 rosters into master), plus revisions.** Two
+- **Latest merge (Case 3115 characters into master).** From a batch
+  called `WEB CHANGE 3` (24 character-sheet portraits, plus the complete
+  manuscript supplied only for context, per the author's own one-line
+  instruction): the previously-empty Book, Case 3115 (*The Listening
+  Water*), got its full 24-character cast — see the Book write-up in §6
+  above for the complete list and plot summary — plus fresh
+  `catalyst`/`envoy` summary dicts (**The Listening Water**, High-Concept/
+  Cultural-and-Social; **Observer 471**, &ldquo;the Salt-Root
+  Woman&rdquo;), written fresh the same way Book 5's were, so this book
+  doesn't silently drop out of either lore roster. Cultivator and Catalyst
+  lore prose each picked up one new line, the same pattern as the Case
+  4420 merge. `pages`, `genre`, `synopsis_html`, and `status` were left
+  untouched (still `coming-soon`) — this batch was characters only, no
+  scene art and no publish-readiness signal from the author. No slug
+  collisions with the existing cast, so nothing needed disambiguating.
+  Images were a pure addition (48 new files, 24 slugs × full + thumb);
+  after regenerating, only `books/3115.html`, `index.html`,
+  `lore/cultivator.html`, `lore/catalyst.html`, and the 24 new character
+  pages changed (the footer build stamp, which every rebuild refreshes on all
+  pages, aside) — confirmed by diffing against the pre-merge master.
+- **Earlier merge (0188 + 2140 rosters into master), plus revisions.** Two
   staging copies came back at once, both clean forks of master whose only
   differences were additions — checked with a full diff of `build_site.py`
   and a byte-compare of every shared image (no same-named file differed,
