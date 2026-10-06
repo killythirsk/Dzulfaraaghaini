@@ -2162,6 +2162,10 @@ BIOGRAPHY_PARAGRAPHS = [
 ]
 
 
+import time as _t
+ASSET_V = _t.strftime("%Y%m%d%H%M")  # cache-buster: changes every build
+
+
 def rel(depth):
     return "../" * depth
 
@@ -2187,7 +2191,7 @@ def head_html(title, description, depth):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
-  <link rel="stylesheet" href="%scss/style.css">""" % (title, description, r, r, r)
+  <link rel="stylesheet" href="%scss/style.css?v=%s">""" % (title, description, r, r, r, ASSET_V)
 
 
 def header_html(active_file, depth):
@@ -2221,7 +2225,7 @@ def footer_html(depth):
     </div>
     <p class="build-info wrap">Site last built %s</p>
   </footer>
-  <script src="%sjs/site.js" defer></script>""" % (AUTHOR, contact, BUILD_TIME, r)).replace("@@SOCIALS@@", socials)
+  <script src="%sjs/site.js?v=%s" defer></script>""" % (AUTHOR, contact, BUILD_TIME, r, ASSET_V)).replace("@@SOCIALS@@", socials)
 
 
 def page(title, description, depth, active_file, body):
