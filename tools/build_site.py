@@ -2661,8 +2661,8 @@ def featured_html():
       <h2>Featured case</h2>
       <a class="featured-cover" href="books/%s.html"><img class="entry-cover" src="images/covers/%s" alt="Cover of %s"></a>
       <div class="featured-body">
-        <p class="entry-fileno">%s</p>
-        <h3 class="entry-title"><a href="books/%s.html">%s</a></h3>
+        <p class="featured-label">%s</p>
+        <h3 class="featured-title"><a href="books/%s.html">%s</a></h3>
         <p>%s</p>
         <p><a class="btn btn--ink" href="books/%s.html">Open case</a></p>
       </div>

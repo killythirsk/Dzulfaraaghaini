@@ -846,3 +846,10 @@ body.lightbox-open { overflow: hidden; }
 .rec-meta { display: block; margin: 0; font: 0.68rem var(--font-mono); letter-spacing: 0.06em; color: var(--ink-soft); }
 .rec-scene img { display: block; width: 100%; height: auto; outline: 1px solid rgba(27,27,27,.4); }
 .rec-scene .scene-caption { margin: 0.4rem 0 0.2rem; }
+
+/* Featured case text (own classes; .entry-fileno is the cover-less placeholder box) */
+.featured-label { margin: 0 0 var(--space-3xs); font: 0.75rem var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+.featured-title { margin: 0 0 var(--space-xs); font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 4.5vw, 2.4rem); line-height: 1.15; }
+.featured-title a { color: var(--ink); text-decoration: none; }
+.featured-title a:hover, .featured-title a:focus-visible { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
+.featured-body p:not(.featured-label) { max-width: 36rem; }

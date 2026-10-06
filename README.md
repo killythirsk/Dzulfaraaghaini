@@ -219,3 +219,4 @@ Edited: `css/style.css` (palette, fonts, new section 12), `tools/build_site.py` 
 Also added: `characters.html`, `scenes.html` (new top-level index pages with search and case filters), a Featured Case block on the home page, and a mobile menu; nav is now Home / Books / Characters / Scenes / Lore / About / Contact.
 Also: CSS and JS links now carry `?v=<build time>` so browsers and the GitHub Pages cache cannot serve a stale stylesheet after a deploy.
 Also: the star mark is replaced by the author's calligraphy logo — `assets/logo-gold.png` (hero) and `assets/logo-gold-sm.png` (header) are gold-on-transparent for the dark UI; `assets/logo.png` is the same logo in its original ink colours, transparent, for light backgrounds.
+Fixed: the home page Featured Case no longer reuses `.entry-fileno` (the cover-less placeholder box); it has its own `.featured-label` / `.featured-title`.
