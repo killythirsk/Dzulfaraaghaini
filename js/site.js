@@ -229,6 +229,7 @@
       var ok = (!book || el.dataset.book === book) && (!s || el.dataset.text.indexOf(s) > -1);
       el.hidden = !ok; if (ok) cnt++;
     });
+    root.classList.toggle("is-filtering", !!(book || s));
     empty.hidden = cnt > 0;
   }
   q.addEventListener("input", run);
@@ -239,4 +240,58 @@
       run();
     });
   });
+  // Deep link from a case page: characters.html?case=4099 opens with that case's chip on.
+  var m = /[?&]case=([\w]+)/.exec(location.search);
+  if (m) chips.forEach(function (c) { if (c.dataset.book === m[1]) c.click(); });
+})();
+
+/* Mobile "see more": long segments fold on phones (<= 40rem) and unfold on tap.
+   Markup opts in:  data-cap="N"      only the first N list items show until tapped
+                    data-collapse="N" the block is clipped to N rem until tapped */
+(function () {
+  var mq = window.matchMedia("(max-width: 40rem)"), added = [];
+  function mk(label, onclick) {
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "more-btn"; b.textContent = label;
+    b.setAttribute("aria-expanded", "false"); b.addEventListener("click", onclick);
+    return b;
+  }
+  function put(el, btn) { el.parentNode.insertBefore(btn, el.nextSibling); added.push(btn); }
+  function clear() {
+    added.forEach(function (n) { if (n.parentNode) n.parentNode.removeChild(n); });
+    added = [];
+    document.querySelectorAll(".cap-hide").forEach(function (el) { el.classList.remove("cap-hide"); });
+    document.querySelectorAll(".is-collapsed").forEach(function (el) { el.classList.remove("is-collapsed"); el.style.maxHeight = ""; });
+  }
+  function apply() {
+    clear();
+    if (!mq.matches) return;
+    document.querySelectorAll("[data-cap]").forEach(function (list) {
+      var n = parseInt(list.dataset.cap, 10), kids = Array.prototype.slice.call(list.children);
+      if (kids.length <= n + 1) return;
+      var hide = kids.slice(n), open = false, more = "Show " + hide.length + " more";
+      hide.forEach(function (k) { k.classList.add("cap-hide"); });
+      var btn = mk(more, function () {
+        open = !open;
+        hide.forEach(function (k) { k.classList.toggle("cap-hide", !open); });
+        btn.textContent = open ? "Show fewer" : more;
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      put(list, btn);
+    });
+    document.querySelectorAll("[data-collapse]").forEach(function (el) {
+      var h = parseFloat(el.dataset.collapse), px = h * parseFloat(getComputedStyle(document.documentElement).fontSize);
+      if (el.scrollHeight <= px + 80) return;
+      el.classList.add("is-collapsed"); el.style.maxHeight = h + "rem";
+      var open = false, btn = mk("See more", function () {
+        open = !open;
+        el.classList.toggle("is-collapsed", !open); el.style.maxHeight = open ? "" : h + "rem";
+        btn.textContent = open ? "See less" : "See more";
+        btn.setAttribute("aria-expanded", String(open));
+      });
+      put(el, btn);
+    });
+  }
+  if (mq.addEventListener) mq.addEventListener("change", apply); else mq.addListener(apply);
+  apply();
 })();

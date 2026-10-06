@@ -220,3 +220,9 @@ Also added: `characters.html`, `scenes.html` (new top-level index pages with sea
 Also: CSS and JS links now carry `?v=<build time>` so browsers and the GitHub Pages cache cannot serve a stale stylesheet after a deploy.
 Also: the star mark is replaced by the author's calligraphy logo — `assets/logo-gold.png` (hero) and `assets/logo-gold-sm.png` (header) are gold-on-transparent for the dark UI; `assets/logo.png` is the same logo in its original ink colours, transparent, for light backgrounds.
 Fixed: the home page Featured Case no longer reuses `.entry-fileno` (the cover-less placeholder box); it has its own `.featured-label` / `.featured-title`.
+
+### [MERGED] Case-archive pass — Cases / Subjects / Records / Archive
+
+Edited: `tools/build_site.py` (nav + labels, `PRINCIPALS`, `RELATED_THEMES`, case grids, READ buttons, subject split, related-cases logic, page templates), `css/style.css` (section 14), `js/site.js` (mobile "see more", `?case=` filter link), `AI-HANDOFF.md` (§3 note), `README.md` (this entry); all pages regenerated.
+Changed: nav and headings now read Cases / Subjects / Records / Archive (file names and URLs unchanged); the hero button is centred; published and awaiting-release cases are separate sections; every case page has a READ button at the top and bottom, principal subjects with the rest folded away, and Related Cases; subject and archive pages gained related blocks; long segments fold behind "See more" on phones.
+Totals unchanged: cases 15, characters 175, scenes 105.

@@ -5,6 +5,8 @@ Run with `python3 build_site.py` from anywhere; it locates the project
 root relative to this file's own location.
 """
 import os
+import re
+from html import escape as _esc
 from datetime import datetime, timezone, timedelta
 
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -18,10 +20,10 @@ BUILD_TIME = datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d, %I:%
 
 NAV = [
     ("index.html", "Home"),
-    ("books.html", "Books"),
-    ("characters.html", "Characters"),
-    ("scenes.html", "Scenes"),
-    ("lore.html", "Lore"),
+    ("books.html", "Cases"),
+    ("characters.html", "Subjects"),
+    ("scenes.html", "Records"),
+    ("lore.html", "Archive"),
     ("about.html", "About"),
     ("contact.html", "Contact"),
 ]
@@ -31,7 +33,7 @@ TAG_LABELS = {
     "google-books": "Available on Google Books",
     "kindle": "Available on Kindle",
     "royal-road": "Available on Royal Road",
-    "coming-soon": "Coming Soon",
+    "coming-soon": "Awaiting Release",
 }
 
 # Maps a status tag to the book-dict field holding its URL, for tags_html()
@@ -53,6 +55,28 @@ SOCIALS = [
     ("Instagram", "@killythirsk", "https://www.instagram.com/killythirsk"),
     ("Threads", "@killythirsk", "https://www.threads.com/@killythirsk"),
 ]
+
+# ---- case-archive settings --------------------------------------------------------
+# Principal subjects shown first on each case page (character slugs, in display
+# order). Everyone else is filed under "Additional Case Records". A case with
+# SPLIT_MIN subjects or fewer shows all of them as principal. A case with no entry
+# here falls back to the first six characters in its list. EDIT THESE FREELY.
+SPLIT_MIN = 7
+PRINCIPALS = {
+    "0000": ["the-boy", "valeria", "ardwen", "maren", "wendric"],
+    "4099": ["principal-handmaid", "suzuriko", "hana", "observer-4099", "nine-threads"],
+    "0157": ["vartaz", "nairi", "torvash", "doreth", "the-golden-catacomb", "observer-0157"],
+    "4417": ["aurelia", "beatrice", "vane", "corvin", "wren"],
+    "4555": ["blakk", "astraea", "cassian", "ignis", "aethelgard", "observer-902"],
+    "4438": ["mei-suwen", "yue", "yongkang-emperor", "ren-duo", "the-heavenly-thunder-serpent", "elder-peng"],
+    "0188": ["dharmasena", "chandralekha", "somadatta", "the-eternal-grief-lily", "kamalini", "dhumra"],
+    "2140": ["garibald", "observer-419", "landulf", "grimoald", "gisela"],
+    "3115": ["huairen", "meilan", "huaiyu", "the-listening-water", "mingxuan", "observer-471"],
+}
+
+# Hand-written "Related Cases" links, on top of the automatic ones (same catalyst
+# class, shared faith). One tuple per pair: (case slug, case slug, "reason shown").
+RELATED_THEMES = []
 
 BOOKS = [
     {
@@ -2307,8 +2331,211 @@ def book_entry_html(book, depth):
       </article>""" % (cover_src, cover_src, book["title"], book_href, book["title"], tags_html(book), book["hook"], book_href)
 
 
+# ---- case-archive helpers ---------------------------------------------------------
+def is_published(b):
+    return any(s != "coming-soon" for s in b["status"])
+
+
+def _n(count, one, many):
+    return "%d %s" % (count, one if count == 1 else many)
+
+
+def case_card_html(b, depth, why=None):
+    r = rel(depth)
+    href = "%sbooks/%s.html" % (r, b["slug"])
+    cover = "%simages/covers/%s" % (r, b["cover_file"])
+    extra = "".join('<span class="case-why">%s</span>' % w for w in (why or [])[:2])
+    if not extra:
+        extra = '<span class="case-hook">%s</span>' % b["hook"]
+    cls = "case-card" if is_published(b) else "case-card case-card--muted"
+    return ('<li class="%s"><a href="%s"><img src="%s" alt="Cover of %s" loading="lazy">'
+            '<span class="case-no">%s</span><span class="case-title">%s</span>%s</a></li>'
+            % (cls, href, cover, _esc(b["title"]), b["case_tag"], b["title"], extra))
+
+
+def case_grid_html(books, depth, cls="", cap=None, why_map=None):
+    items = "\n".join("        " + case_card_html(b, depth, (why_map or {}).get(b["slug"])) for b in books)
+    return '<ul class="case-grid %s"%s>\n%s\n      </ul>' % (cls, ' data-cap="%d"' % cap if cap else "", items)
+
+
+def _case_head(title, n):
+    return '<header class="case-head"><h2>%s</h2><p class="count">%s</p></header>' % (title, _n(n, "book", "books"))
+
+
+def published_section_html(depth, teaser=False):
+    live = [b for b in BOOKS if is_published(b)]
+    more = ""
+    if teaser:
+        waiting = len(BOOKS) - len(live)
+        more = '\n      <p><a href="books.html#awaiting">%s awaiting release &rarr;</a></p>' % _n(waiting, "more case", "more cases")
+    return ('<section class="case-section" id="published">\n      %s\n      %s%s\n    </section>'
+            % (_case_head("Published Cases", len(live)), case_grid_html(live, depth), more))
+
+
+def awaiting_band_html(depth):
+    wait = [b for b in BOOKS if not is_published(b)]
+    return ('<section class="case-band" id="awaiting">\n      <div class="wrap">\n        %s\n        %s\n      </div>\n    </section>'
+            % (_case_head("Cases Awaiting Release", len(wait)), case_grid_html(wait, depth, "case-grid--muted")))
+
+
+def read_buttons(b):
+    """[(label, url)] for every place the book can be read, primary first."""
+    out = []
+    for tag, label, field in (("google-books", "Read on Google Books", "google_books_url"),
+                              ("kindle", "Read on Kindle", "kindle_url"),
+                              ("royal-road", "Read on Royal Road", "royal_road_url")):
+        if tag in b["status"]:
+            out.append((label, b.get(field, "#")))
+    return out
+
+
+def cta_html(b, where):
+    """The dominant READ button (top of a case page) or the full set (bottom)."""
+    btns = read_buttons(b)
+    if not btns:
+        return ""
+    out = []
+    for i, (label, url) in enumerate(btns):
+        if where == "top" and i:
+            break
+        cls = "cta cta--primary" if i == 0 else "cta cta--ghost"
+        out.append('<a class="%s" href="%s" target="_blank" rel="noopener">%s</a>' % (cls, url, label))
+    if where == "top" and b["characters"]:
+        out.append('<a class="cta cta--ghost" href="#subjects">Explore subjects</a>')
+    if where == "bottom" and b["characters"]:
+        out.append('<a class="cta cta--ghost" href="#subjects">Back to subjects</a>')
+    return '<div class="cta-row">%s</div>' % "".join(out)
+
+
+def principals_of(b):
+    chars = b["characters"]
+    if len(chars) <= SPLIT_MIN:
+        return chars, []
+    want = PRINCIPALS.get(b["slug"])
+    by = dict((c["slug"], c) for c in chars)
+    main = [by[s] for s in want if s in by] if want else chars[:6]
+    keep = set(c["slug"] for c in main)
+    return main, [c for c in chars if c["slug"] not in keep]
+
+
+def character_rec_html(c, depth):
+    r = rel(depth)
+    img = c["slug"] + "-thumb.jpg"
+    if not os.path.isfile(os.path.join(OUT, "images", "characters", img)):
+        img = c["slug"] + ".jpg"
+    return ('<li class="rec"><a href="%scharacters/%s.html"><img src="%simages/characters/%s" alt="" loading="lazy">'
+            '<span><span class="rec-name">%s</span><span class="rec-meta">%s</span></span></a></li>'
+            % (r, c["slug"], r, img, c["name"], c["epithets"]))
+
+
+def subjects_section_html(b):
+    chars = b["characters"]
+    if not chars:
+        return '<h2>Subjects</h2>\n        <p class="editor-note">Subject roster coming soon.</p>'
+    main, extra = principals_of(b)
+    out = '<h2>%s</h2>\n        <ul class="catalog-list subjects-list">\n%s\n        </ul>' % (
+        "Principal Subjects" if extra else "Subjects", "\n".join(character_entry_html(c, 1) for c in main))
+    if extra:
+        out += """
+        <h3 class="sub-head">Additional Case Records</h3>
+        <details class="additional">
+          <summary>%d additional %s documented</summary>
+          <div class="additional-body">
+            <ul class="recs recs--cast">
+%s
+            </ul>
+            <p><a href="../characters.html?case=%s">Open the subject index for %s &rarr;</a></p>
+          </div>
+        </details>""" % (len(extra), "subject" if len(extra) == 1 else "subjects",
+                         "\n".join("              " + character_rec_html(c, 1) for c in extra), b["slug"], b["case_tag"])
+    return out
+
+
+# ---- related cases / subjects / records ---------------------------------------------
+CHAR_INDEX = dict((c["slug"], (c, b)) for b in BOOKS for c in b["characters"])
+
+
+def _class_of(b):
+    return b["catalyst"]["meta"] if b.get("catalyst") else None
+
+
+def _faiths(b):
+    return [l for l in LORE if l.get("group") == "Religion" and ("books/%s.html" % b["slug"]) in l.get("appears_html", "")]
+
+
+def related_cases(b, limit=6):
+    rows = []
+    mine = set(l["slug"] for l in _faiths(b))
+    for o in BOOKS:
+        if o is b:
+            continue
+        why = []
+        if _class_of(b) and _class_of(b) == _class_of(o):
+            why.append("Same catalyst class: %s" % _class_of(b).replace(" Class", ""))
+        for l in _faiths(o):
+            if l["slug"] in mine:
+                why.append("Shared faith: %s" % l["name"].replace("The ", ""))
+        for x, y, text in RELATED_THEMES:
+            if set((x, y)) == set((b["slug"], o["slug"])):
+                why.append(text)
+        if why:
+            rows.append((o, why))
+    rows.sort(key=lambda t: (-len(t[1]), not is_published(t[0]), BOOKS.index(t[0])))
+    return rows[:limit]
+
+
+def related_cases_html(b, depth):
+    rows = related_cases(b)
+    if not rows:
+        return ""
+    return ('<section class="subsection related" id="related">\n        <h2>Related Cases</h2>\n        %s\n      </section>'
+            % case_grid_html([o for o, _w in rows], depth, "case-grid--related", cap=4, why_map=dict((o["slug"], w) for o, w in rows)))
+
+
+def related_subjects(c, b, limit=6):
+    def links(x):
+        return re.findall(r'href="\.\./characters/([\w\-]+)\.html"', x["bio_html"])
+    out = [s for s in links(c) if s in CHAR_INDEX and s != c["slug"]]
+    out += [o["slug"] for o in b["characters"] if o["slug"] != c["slug"] and c["slug"] in links(o)]
+    if len(set(out)) < 3:
+        out += [o["slug"] for o in principals_of(b)[0] if o["slug"] != c["slug"]]
+    seen, res = set(), []
+    for slug in out:
+        if slug not in seen:
+            seen.add(slug)
+            res.append(CHAR_INDEX[slug][0])
+    return res[:limit]
+
+
+def related_records(c, b, limit=4):
+    key = "characters/%s.html" % c["slug"]
+    return [sc for sc in b["scenes"] if key in sc["caption_html"]][:limit]
+
+
+def related_records_html(scenes, depth):
+    r = rel(depth)
+    items = "\n".join(
+        '        <li><a class="lightbox-link" data-group="related-records" href="#" data-full="%simages/scenes/%s.jpg"><img src="%simages/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p></li>'
+        % (r, sc["slug"], r, sc["slug"], _esc(sc["alt"]), sc["caption_html"]) for sc in scenes)
+    return '<ul class="rel-records">\n%s\n      </ul>' % items
+
+
+def lore_cases(l):
+    if l.get("roster"):
+        return [b for b in BOOKS if b.get(l["roster"])]
+    slugs = re.findall(r'books/([\w]+)\.html', l.get("appears_html", ""))
+    return [b for b in BOOKS if b["slug"] in slugs]
+
+
+def _check_principals():
+    for slug, want in PRINCIPALS.items():
+        have = set(c["slug"] for b in BOOKS if b["slug"] == slug for c in b["characters"])
+        missing = [w for w in want if w not in have]
+        assert not missing, "PRINCIPALS[%s] names unknown subjects: %s" % (slug, missing)
+
+
+
 def _index_body_base():
-    book_items = "\n".join(book_entry_html(b, 0) for b in BOOKS)
     lore_items = "\n".join(
         "          <li><a href=\"lore/%s.html\">%s</a></li>" % (l["slug"], l["name"])
         for l in LORE
@@ -2325,23 +2552,20 @@ def _index_body_base():
     </section>
 
 @@FEATURED@@
-    <section class="section wrap">
-      <h2>Books</h2>
-      <ul class="catalog-list">
-%s
-      </ul>
-    </section>
+    <div class="section wrap">
+    %s
+    </div>
 
 @@SECTIONS@@
     <section class="section wrap">
-      <h2>Lore</h2>
+      <h2>Archive</h2>
       <p>A glossary of terms and systems from the setting.</p>
       <ul class="index-list">
 %s
       </ul>
-      <p><a href="lore.html">See the full glossary</a></p>
+      <p><a href="lore.html">Open the archive &rarr;</a></p>
     </section>
-""" % (AUTHOR, AUTHOR, book_items, lore_items)
+""" % (AUTHOR, AUTHOR, published_section_html(0, teaser=True), lore_items)
 
 
 ROSTER = {
@@ -2402,22 +2626,22 @@ def home_scenes_html():
 def index_body():
     n_chars = sum(len(b["characters"]) for b in BOOKS)
     n_scenes = sum(len(b["scenes"]) for b in BOOKS)
-    ledger = '<ul class="ledger-stats"><li><b>%d</b><span>Cases</span></li><li><b>%d</b><span>Characters</span></li><li><b>%d</b><span>Scenes</span></li></ul>' % (len(BOOKS), n_chars, n_scenes)
+    ledger = '<ul class="ledger-stats"><li><b>%d</b><span>Cases</span></li><li><b>%d</b><span>Subjects</span></li><li><b>%d</b><span>Records</span></li></ul>' % (len(BOOKS), n_chars, n_scenes)
     sections = """    <section class="section wrap">
-      <h2>Cast</h2>
-      <p>A few faces from each case &mdash; every character has a page of their own.</p>
-      <ul class="wall">
+      <h2>Subjects</h2>
+      <p>A few faces from each case &mdash; every subject has a file of their own.</p>
+      <ul class="wall" data-cap="12">
 %s
       </ul>
-      <p><a href="characters.html">View all characters &rarr;</a></p>
+      <p><a href="characters.html">View all subjects &rarr;</a></p>
     </section>
 
     <section class="section wrap">
-      <h2>Scenes</h2>
-      <ul class="wall wall--scenes">
+      <h2>Records</h2>
+      <ul class="wall wall--scenes" data-cap="6">
 %s
       </ul>
-      <p><a href="scenes.html">View all scenes &rarr;</a></p>
+      <p><a href="scenes.html">View all records &rarr;</a></p>
     </section>
 """ % (home_wall_html(), home_scenes_html())
     return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections).replace("@@FEATURED@@", featured_html())
@@ -2454,7 +2678,7 @@ def lore_detail_body(l):
     else:
         second = "<h2>Appears In</h2>\n          %s" % l["appears_html"]
     return """    <div class="wrap page-content">
-      <a class="back-link" href="%s">&larr; All Lore</a>
+      <a class="back-link" href="%s">&larr; Archive</a>
       <h1>%s</h1>
 
       <div class="prose">
@@ -2467,25 +2691,28 @@ def lore_detail_body(l):
           %s
         </section>
       </div>
+
+      <section class="subsection related">
+        <h2>Cases Where This Appears</h2>
+        %s
+      </section>
     </div>
-""" % (lore_href, l["name"], l["definition_html"], second)
+""" % (lore_href, l["name"], l["definition_html"], second, case_grid_html(lore_cases(l), 1, "case-grid--related", cap=4))
 
 
 def books_body():
-    entries = "\n".join(book_entry_html(b, 0) for b in BOOKS)
     return """    <section class="hero hero--compact">
       <div class="wrap">
-        <h1>Books</h1>
-        <p class="lede">Each novel below opens into its own page: book info, characters, key scenes, and where to read it.</p>
+        <h1>Cases</h1>
+        <p class="lede">Every novel is filed as a case. Open one to read its file: principal subjects, records, and where to read it.</p>
       </div>
     </section>
 
-    <section class="wrap page-content">
-      <ul class="catalog-list">
-%s
-      </ul>
-    </section>
-""" % entries
+    <div class="wrap page-content">
+    %s
+    </div>
+    %s
+""" % (published_section_html(0), awaiting_band_html(0))
 
 
 def lore_index_html(depth):
@@ -2516,8 +2743,8 @@ def lore_index_html(depth):
 def lore_body():
     return """    <section class="hero hero--compact">
       <div class="wrap">
-        <h1>Lore</h1>
-        <p class="lede">A glossary of terms and systems from the setting &mdash; growing as new books add to it.</p>
+        <h1>Archive</h1>
+        <p class="lede">A glossary of terms and systems from the setting &mdash; growing as new cases are filed.</p>
       </div>
     </section>
 
@@ -2552,82 +2779,73 @@ def book_detail_body(book):
     cover_src = "%simages/covers/%s" % (r, b["cover_file"])
     books_href = "%sbooks.html" % r
 
-    if any(s != "coming-soon" for s in b["status"]):
-        links = []
-        if "google-books" in b["status"]:
-            links.append('<li><a class="button-link" href="%s" target="_blank" rel="noopener">View on Google Books</a></li>' % b.get("google_books_url", "#"))
-        if "kindle" in b["status"]:
-            links.append('<li><a class="button-link" href="%s" target="_blank" rel="noopener">View on Kindle</a></li>' % b.get("kindle_url", "#"))
-        if "royal-road" in b["status"]:
-            links.append('<li><a class="button-link" href="%s" target="_blank" rel="noopener">Read on Royal Road</a></li>' % b.get("royal_road_url", "#"))
-        read_section = "<ul class=\"button-list\">\n            " + "\n            ".join(links) + "\n          </ul>"
+    if is_published(b):
+        bottom = "<h2>Read This Book</h2>\n          " + cta_html(b, "bottom")
     else:
-        read_section = "<p>Not yet available &mdash; this panel will link out once there is somewhere to read it.</p>"
+        bottom = "<h2>Awaiting Release</h2>\n          <p>Not yet available &mdash; this panel will link out once there is somewhere to read it.</p>"
+    top_cta = cta_html(b, "top")
+    if not top_cta and b["characters"]:
+        top_cta = '<div class="cta-row"><a class="cta cta--ghost" href="#subjects">Explore subjects</a></div>'
 
     case_tag_html = '<p class="case-tag">%s</p>\n          ' % b["case_tag"] if b.get("case_tag") else ""
 
     if b["scenes"]:
         scenes_section = """<div class="scene-header">
-          <h2>Scenes</h2>
+          <h2>Records</h2>
           <div class="scene-nav">
-            <button type="button" class="scene-btn scene-btn--prev" aria-label="Previous scene">&lsaquo;</button>
-            <button type="button" class="scene-btn scene-btn--next" aria-label="Next scene">&rsaquo;</button>
+            <button type="button" class="scene-btn scene-btn--prev" aria-label="Previous record">&lsaquo;</button>
+            <button type="button" class="scene-btn scene-btn--next" aria-label="Next record">&rsaquo;</button>
           </div>
         </div>
-        <ul class="scene-gallery" tabindex="0" aria-label="Scenes, %d images, scroll horizontally or use the buttons above">
+        <ul class="scene-gallery" tabindex="0" aria-label="Records, %d images, scroll horizontally or use the buttons above">
 %s
         </ul>""" % (len(b["scenes"]), scene_gallery_html(b, 1))
     else:
-        scenes_section = """<h2>Scenes</h2>
-        <p class="editor-note">Add scene illustrations here once they're ready.</p>"""
-
-    if b["characters"]:
-        characters_section = """<h2>Characters</h2>
-        <ul class="catalog-list">
-%s
-        </ul>""" % characters_index_html(b, 1)
-    else:
-        characters_section = """<h2>Characters</h2>
-        <p class="editor-note">Character roster coming soon.</p>"""
+        scenes_section = """<h2>Records</h2>
+        <p class="editor-note">Record illustrations will be filed here once they are ready.</p>"""
 
     return """    <div class="wrap page-content">
-      <a class="back-link" href="%s">&larr; All Books</a>
+      <a class="back-link" href="%s">&larr; All Cases</a>
       <div class="detail-header">
         <a class="lightbox-link" data-group="covers" href="#" data-full="%s"><img class="detail-cover" src="%s" alt="Cover of %s"></a>
         <div class="detail-meta">
           %s<h1>%s</h1>
+          %s
           %s
         </div>
       </div>
 
       <div class="prose">
         <section class="subsection">
-          <h2>Book Info</h2>
+          <h2>Case File</h2>
           <ul class="detail-list">
             <li><strong>Pages</strong> &mdash; %s</li>
             <li><strong>Genre</strong> &mdash; %s</li>
           </ul>
+          <div class="synopsis" data-collapse="15">
           %s
+          </div>
         </section>
       </div>
 
-      <section class="subsection">
+      <section class="subsection" id="subjects">
         %s
       </section>
 
-      <section class="subsection">
+      <section class="subsection" id="records">
         %s
       </section>
 
       <div class="prose">
         <section class="subsection purchase-panel">
-          <h2>Read This Book</h2>
           %s
         </section>
       </div>
+
+      %s
     </div>
-""" % (books_href, cover_src, cover_src, b["title"], case_tag_html, b["title"], tags_html(b), b["pages"], b["genre"],
-       b["synopsis_html"], characters_section, scenes_section, read_section)
+""" % (books_href, cover_src, cover_src, _esc(b["title"]), case_tag_html, b["title"], tags_html(b), top_cta,
+       b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section, bottom, related_cases_html(b, 1))
 
 
 def character_detail_body(c, book):
@@ -2635,8 +2853,15 @@ def character_detail_body(c, book):
     book_href = "%sbooks/%s.html" % (r, book["slug"])
     full_src = "%simages/characters/%s.jpg" % (r, c["slug"])
     quote_html = "<blockquote>&ldquo;%s&rdquo;</blockquote>" % c["quote"] if c.get("quote") else ""
+    subj = related_subjects(c, book)
+    recs = related_records(c, book)
+    more = '\n      <section class="subsection related">\n        <h2>Appears In</h2>\n        %s\n      </section>' % case_grid_html([book], 1, "case-grid--one")
+    if subj:
+        more += '\n      <section class="subsection related">\n        <h2>Related Subjects</h2>\n        <ul class="recs recs--cast">\n%s\n        </ul>\n      </section>' % "\n".join("          " + character_rec_html(x, 1) for x in subj)
+    if recs:
+        more += '\n      <section class="subsection related">\n        <h2>Related Records</h2>\n        %s\n      </section>' % related_records_html(recs, 1)
     return """    <div class="wrap page-content">
-      <a class="back-link" href="%sbooks.html">&larr; All Books</a>
+      <a class="back-link" href="%s">&larr; %s &middot; %s</a>
       <div class="character-entry">
         <a class="lightbox-link" data-group="characters" href="#" data-full="%s"><img class="character-portrait" src="%s" alt="Character reference sheet for %s"></a>
         <div>
@@ -2646,9 +2871,9 @@ def character_detail_body(c, book):
           %s
         </div>
       </div>
-      <p>Appears in <a href="%s">%s</a></p>
+%s
     </div>
-""" % (r, full_src, full_src, c["name"], c["name"], c["epithets"], c["bio_html"], quote_html, book_href, book["title"])
+""" % (book_href, book["case_tag"], book["title"], full_src, full_src, c["name"], c["name"], c["epithets"], c["bio_html"], quote_html, more)
 
 
 from html import escape as _esc
@@ -2685,11 +2910,11 @@ def filter_page_body(title, count, noun, ph, books, items, cls):
       <input class="f-search" type="search" placeholder="%s" aria-label="%s">
       <div class="chips" role="group" aria-label="Filter by case">%s</div>
       <p class="f-empty" hidden>No records match.</p>
-      <ul class="recs %s">
+      <ul class="recs %s" data-cap="%d">
 %s
       </ul>
     </section>
-""" % (title, count, noun, ph, ph, chips, cls, "\n".join(items))
+""" % (title, count, noun, ph, ph, chips, cls, 24 if cls == "recs--cast" else 8, "\n".join(items))
 
 
 def characters_page_body():
@@ -2701,7 +2926,7 @@ def characters_page_body():
                 img = c["slug"] + ".jpg"
             txt = _esc(" ".join([c["name"], c["epithets"], c["teaser"], b["title"]]).lower(), quote=True)
             items.append('        <li class="rec" data-book="%s" data-text="%s"><a href="characters/%s.html"><img src="images/characters/%s" alt="" loading="lazy"><span><span class="rec-name">%s</span><span class="rec-meta">%s &middot; %s</span></span></a></li>' % (b["slug"], txt, c["slug"], img, c["name"], c["epithets"], b["case_tag"]))
-    return filter_page_body("Characters", len(items), "records", "Search characters...", books, items, "recs--cast")
+    return filter_page_body("Subjects", len(items), "subjects", "Search subjects...", books, items, "recs--cast")
 
 
 def scenes_page_body():
@@ -2710,7 +2935,7 @@ def scenes_page_body():
         for sc in b["scenes"]:
             txt = _esc(" ".join([sc["alt"], _re.sub(r"<[^>]+>", "", sc["caption_html"]), b["title"]]).lower(), quote=True)
             items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p><p class="rec-meta"><a href="books/%s.html">%s</a> &middot; %s</p></li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), b["slug"], b["title"], b["case_tag"]))
-    return filter_page_body("Scenes", len(items), "records", "Search scenes...", books, items, "recs--scenes")
+    return filter_page_body("Records", len(items), "records", "Search records...", books, items, "recs--scenes")
 
 
 def write(path, content):
@@ -2721,12 +2946,14 @@ def write(path, content):
     print("wrote", path, len(content), "bytes")
 
 
+_check_principals()
+
 # ---- top-level pages ---------------------------------------------------------
 write("index.html", page("%s \u2014 Speculative Fiction Author" % AUTHOR,
                           "Speculative fiction novels and the lore behind them.", 0, "index.html", index_body()))
-write("books.html", page("Book \u2014 %s" % AUTHOR,
-                          "The novels, and where to read them.", 0, "books.html", books_body()))
-write("lore.html", page("Lore \u2014 %s" % AUTHOR,
+write("books.html", page("Cases \u2014 %s" % AUTHOR,
+                          "Every case in the archive: published novels and cases awaiting release.", 0, "books.html", books_body()))
+write("lore.html", page("Archive \u2014 %s" % AUTHOR,
                          "A glossary of terms and systems from the setting.", 0, "lore.html", lore_body()))
 write("about.html", page("About \u2014 %s" % AUTHOR,
                           "Biography.", 0, "about.html", about_body()))
@@ -2734,13 +2961,13 @@ write("contact.html", page("Contact \u2014 %s" % AUTHOR,
                             "Get in touch.", 0, "contact.html", contact_body()))
 
 # ---- book detail pages, and each book's characters ----------------------------
-write("characters.html", page("Characters \u2014 %s" % AUTHOR, "Every character across the books.", 0, "characters.html", characters_page_body()))
-write("scenes.html", page("Scenes \u2014 %s" % AUTHOR, "Key scenes across the books.", 0, "scenes.html", scenes_page_body()))
+write("characters.html", page("Subjects \u2014 %s" % AUTHOR, "Every subject documented across the cases.", 0, "characters.html", characters_page_body()))
+write("scenes.html", page("Records \u2014 %s" % AUTHOR, "Key records across the cases.", 0, "scenes.html", scenes_page_body()))
 
 for book in BOOKS:
     write("books/%s.html" % book["slug"],
           page("%s \u2014 %s" % (book["title"], AUTHOR),
-               "%s Book info, characters, and where to read it." % book["hook"],
+               "%s Case file, principal subjects, records, and where to read it." % book["hook"],
                1, "books.html", book_detail_body(book)))
 
     for c in book["characters"]:
