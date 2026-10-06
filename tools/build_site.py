@@ -18,7 +18,9 @@ BUILD_TIME = datetime.now(timezone(timedelta(hours=7))).strftime("%Y-%m-%d, %I:%
 
 NAV = [
     ("index.html", "Home"),
-    ("books.html", "Book"),
+    ("books.html", "Books"),
+    ("characters.html", "Characters"),
+    ("scenes.html", "Scenes"),
     ("lore.html", "Lore"),
     ("about.html", "About"),
     ("contact.html", "Contact"),
@@ -2184,7 +2186,7 @@ def head_html(title, description, depth):
   <link rel="alternate icon" href="%sassets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
   <link rel="stylesheet" href="%scss/style.css">""" % (title, description, r, r, r)
 
 
@@ -2194,8 +2196,9 @@ def header_html(active_file, depth):
     return """  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner wrap">
-      <a class="site-title" href="%s">%s</a>
-      <nav class="site-nav" aria-label="Main">
+      <a class="site-title" href="%s"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l1.8 8.2L22 12l-8.2 2.8L12 23l-1.8-8.2L2 12l8.2-2.8z" fill="currentColor"/></svg>%s</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           %s
         </ul>
@@ -2209,6 +2212,7 @@ def footer_html(depth):
     contact = (r + "contact.html") if depth else "contact.html"
     socials = "".join('\n        <li><a href="%s" target="_blank" rel="noopener">%s</a></li>' % (u, label) for label, _t, u in SOCIALS)
     return ("""  <footer class="site-footer">
+    <p class="footer-quote">Not all stories are meant to be forgotten. Some are kept, for a reason.</p>
     <div class="footer-inner wrap">
       <p>&copy; 2026 %s</p>
       <ul class="footer-links">
@@ -2305,19 +2309,18 @@ def _index_body_base():
         "          <li><a href=\"lore/%s.html\">%s</a></li>" % (l["slug"], l["name"])
         for l in LORE
     )
-    return """    <section class="hero">
+    return """    <section class="hero hero--home">
       <div class="wrap">
+        <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="11" fill="none" stroke="currentColor" stroke-width=".25" stroke-dasharray="40 30"/><path d="M12 2l1.8 8.2L22 13l-8.2 2.8L12 24l-1.8-8.2L2 13l8.2-2.8z" fill="currentColor"/></svg>
         <h1>%s</h1>
         <p class="tagline">Speculative fiction. The fragility of human systems, one kingdom at a time.</p>
         <p class="lede">%s writes speculative fiction about the rise and collapse of kingdoms, the evolution of faiths, and the small moments of pride, fear, and vanity that bring great structures down. This site collects the novels, and the lore behind them.</p>
-        <ul class="hero-links">
-          <li><a href="books.html">Read the books</a></li>
-          <li><a href="lore.html">Browse the lore</a></li>
-        </ul>
+        <p><a class="btn" href="books.html">Enter the archive</a></p>
         @@LEDGER@@
       </div>
     </section>
 
+@@FEATURED@@
     <section class="section wrap">
       <h2>Books</h2>
       <ul class="catalog-list">
@@ -2395,13 +2398,14 @@ def home_scenes_html():
 def index_body():
     n_chars = sum(len(b["characters"]) for b in BOOKS)
     n_scenes = sum(len(b["scenes"]) for b in BOOKS)
-    ledger = '<p class="ledger-line">%d cases on file &middot; %d characters &middot; %d scenes</p>' % (len(BOOKS), n_chars, n_scenes)
+    ledger = '<ul class="ledger-stats"><li><b>%d</b><span>Cases</span></li><li><b>%d</b><span>Characters</span></li><li><b>%d</b><span>Scenes</span></li></ul>' % (len(BOOKS), n_chars, n_scenes)
     sections = """    <section class="section wrap">
       <h2>Cast</h2>
       <p>A few faces from each case &mdash; every character has a page of their own.</p>
       <ul class="wall">
 %s
       </ul>
+      <p><a href="characters.html">View all characters &rarr;</a></p>
     </section>
 
     <section class="section wrap">
@@ -2409,9 +2413,10 @@ def index_body():
       <ul class="wall wall--scenes">
 %s
       </ul>
+      <p><a href="scenes.html">View all scenes &rarr;</a></p>
     </section>
 """ % (home_wall_html(), home_scenes_html())
-    return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections)
+    return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections).replace("@@FEATURED@@", featured_html())
 
 
 def contact_body():
@@ -2466,7 +2471,7 @@ def books_body():
     entries = "\n".join(book_entry_html(b, 0) for b in BOOKS)
     return """    <section class="hero hero--compact">
       <div class="wrap">
-        <h1>Book</h1>
+        <h1>Books</h1>
         <p class="lede">Each novel below opens into its own page: book info, characters, key scenes, and where to read it.</p>
       </div>
     </section>
@@ -2642,6 +2647,68 @@ def character_detail_body(c, book):
 """ % (r, full_src, full_src, c["name"], c["name"], c["epithets"], c["bio_html"], quote_html, book_href, book["title"])
 
 
+from html import escape as _esc
+import re as _re
+
+
+def featured_html():
+    b = next(x for x in BOOKS if x["slug"] == "4555")
+    return """    <section class="section wrap featured">
+      <h2>Featured case</h2>
+      <a class="featured-cover" href="books/%s.html"><img class="entry-cover" src="images/covers/%s" alt="Cover of %s"></a>
+      <div class="featured-body">
+        <p class="entry-fileno">%s</p>
+        <h3 class="entry-title"><a href="books/%s.html">%s</a></h3>
+        <p>%s</p>
+        <p><a class="btn btn--ink" href="books/%s.html">Open case</a></p>
+      </div>
+    </section>
+""" % (b["slug"], b["cover_file"], _esc(b["title"]), b["case_tag"], b["slug"], b["title"], b["hook"], b["slug"])
+
+
+def filter_page_body(title, count, noun, ph, books, items, cls):
+    chips = '<button type="button" class="chip is-on" data-book="">All</button>' + "".join(
+        '<button type="button" class="chip" data-book="%s" title="%s">%s</button>' % (b["slug"], _esc(b["title"]), b["case_tag"].replace("Case ", ""))
+        for b in books)
+    return """    <section class="hero hero--compact">
+      <div class="wrap">
+        <h1>%s</h1>
+        <p class="count">%d %s</p>
+      </div>
+    </section>
+
+    <section class="wrap page-content" data-filter>
+      <input class="f-search" type="search" placeholder="%s" aria-label="%s">
+      <div class="chips" role="group" aria-label="Filter by case">%s</div>
+      <p class="f-empty" hidden>No records match.</p>
+      <ul class="recs %s">
+%s
+      </ul>
+    </section>
+""" % (title, count, noun, ph, ph, chips, cls, "\n".join(items))
+
+
+def characters_page_body():
+    items, books = [], [b for b in BOOKS if b["characters"]]
+    for b in books:
+        for c in b["characters"]:
+            img = c["slug"] + "-thumb.jpg"
+            if not os.path.isfile(os.path.join(OUT, "images", "characters", img)):
+                img = c["slug"] + ".jpg"
+            txt = _esc(" ".join([c["name"], c["epithets"], c["teaser"], b["title"]]).lower(), quote=True)
+            items.append('        <li class="rec" data-book="%s" data-text="%s"><a href="characters/%s.html"><img src="images/characters/%s" alt="" loading="lazy"><span><span class="rec-name">%s</span><span class="rec-meta">%s &middot; %s</span></span></a></li>' % (b["slug"], txt, c["slug"], img, c["name"], c["epithets"], b["case_tag"]))
+    return filter_page_body("Characters", len(items), "records", "Search characters...", books, items, "recs--cast")
+
+
+def scenes_page_body():
+    items, books = [], [b for b in BOOKS if b["scenes"]]
+    for b in books:
+        for sc in b["scenes"]:
+            txt = _esc(" ".join([sc["alt"], _re.sub(r"<[^>]+>", "", sc["caption_html"]), b["title"]]).lower(), quote=True)
+            items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p><p class="rec-meta"><a href="books/%s.html">%s</a> &middot; %s</p></li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), b["slug"], b["title"], b["case_tag"]))
+    return filter_page_body("Scenes", len(items), "records", "Search scenes...", books, items, "recs--scenes")
+
+
 def write(path, content):
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -2663,6 +2730,9 @@ write("contact.html", page("Contact \u2014 %s" % AUTHOR,
                             "Get in touch.", 0, "contact.html", contact_body()))
 
 # ---- book detail pages, and each book's characters ----------------------------
+write("characters.html", page("Characters \u2014 %s" % AUTHOR, "Every character across the books.", 0, "characters.html", characters_page_body()))
+write("scenes.html", page("Scenes \u2014 %s" % AUTHOR, "Key scenes across the books.", 0, "scenes.html", scenes_page_body()))
+
 for book in BOOKS:
     write("books/%s.html" % book["slug"],
           page("%s \u2014 %s" % (book["title"], AUTHOR),

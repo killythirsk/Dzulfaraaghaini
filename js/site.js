@@ -213,3 +213,30 @@
     }
   }
 })();
+
+/* Mobile menu + search/filter on the Characters and Scenes pages */
+(function () {
+  document.documentElement.classList.add("js");
+  var t = document.querySelector(".nav-toggle"), nav = document.getElementById("site-nav");
+  if (t && nav) t.addEventListener("click", function () { t.setAttribute("aria-expanded", nav.classList.toggle("open")); });
+  var root = document.querySelector("[data-filter]");
+  if (!root) return;
+  var q = root.querySelector(".f-search"), chips = root.querySelectorAll(".chip"), empty = root.querySelector(".f-empty");
+  var items = root.querySelectorAll(".recs > li"), book = "";
+  function run() {
+    var s = q.value.trim().toLowerCase(), cnt = 0;
+    items.forEach(function (el) {
+      var ok = (!book || el.dataset.book === book) && (!s || el.dataset.text.indexOf(s) > -1);
+      el.hidden = !ok; if (ok) cnt++;
+    });
+    empty.hidden = cnt > 0;
+  }
+  q.addEventListener("input", run);
+  chips.forEach(function (c) {
+    c.addEventListener("click", function () {
+      book = c.dataset.book;
+      chips.forEach(function (x) { x.classList.toggle("is-on", x === c); });
+      run();
+    });
+  });
+})();

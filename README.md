@@ -212,3 +212,8 @@ Edited:
 Totals: cases 12 -> 15, characters 156 -> 175, scenes 90 -> 105. A recount from the rebuilt site gives the same figures.
 
 Merged: 2026-10-01, straight into master at the author's request (no staging copy, so no `[PENDING]` entry existed).
+
+### [MERGED] Redesign — archive theme (dark ink / parchment / gold)
+
+Edited: `css/style.css` (palette, fonts, new section 12), `tools/build_site.py` (fonts link, header star mark, home hero + counts, footer quote), `AI-HANDOFF.md` (§3 note), `README.md` (this entry); all pages regenerated. Added: `images/backgrounds/hero.jpg`.
+Also added: `characters.html`, `scenes.html` (new top-level index pages with search and case filters), a Featured Case block on the home page, and a mobile menu; nav is now Home / Books / Characters / Scenes / Lore / About / Contact.

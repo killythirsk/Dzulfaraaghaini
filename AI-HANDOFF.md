@@ -108,6 +108,8 @@ filename.
 
 ## 3. Design system
 
+**Update (Oct 2026): the site was re-themed to the author's "archive" mockup** (dark ink header/hero/footer, parchment page, gold accent; Playfair Display + Lora + Source Code Pro). The "cool grey, not warm parchment" bullets below describe the *previous* theme and are superseded: current tokens are in `:root` plus the "12. Archive theme" block at the end of `css/style.css`. Covers get a shadow and hairline outline so they still stand off the warmer ground. The hero image `images/backgrounds/hero.jpg` is a crop from the author's mockup (placeholder; swap in a proper image under the same name). Also added from the mockup: top-level `characters.html` and `scenes.html` (search + per-case filter chips, driven by `BOOKS`), a Featured Case block on the home page (Case 4555), and a mobile hamburger menu. Not built: a category-tabbed Lore page, a global cross-site search, a mobile bottom tab bar.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -151,7 +153,7 @@ Everything visual is CSS custom properties at the top of `css/style.css`
 
 ## 4. Site map
 
-Nav (same on every page): **Home / Book / Lore / About / Contact.**
+Nav (same on every page): **Home / Books / Characters / Scenes / Lore / About / Contact.**
 Notably *not* in the nav: Characters, Scenes — both live inside each
 book's own page rather than as their own top-level sections.
 

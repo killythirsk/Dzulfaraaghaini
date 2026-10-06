@@ -10,18 +10,21 @@
   <link rel="alternate icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="header-inner wrap">
-      <a class="site-title" href="index.html">Dzulfaraaghaini</a>
-      <nav class="site-nav" aria-label="Main">
+      <a class="site-title" href="index.html"><svg class="mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1l1.8 8.2L22 12l-8.2 2.8L12 23l-1.8-8.2L2 12l8.2-2.8z" fill="currentColor"/></svg>Dzulfaraaghaini</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="books.html">Book</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="characters.html">Characters</a></li>
+          <li><a href="scenes.html">Scenes</a></li>
           <li><a href="lore.html">Lore</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -30,16 +33,25 @@
     </div>
   </header>
   <main id="main">
-    <section class="hero">
+    <section class="hero hero--home">
       <div class="wrap">
+        <svg class="emblem" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="11" fill="none" stroke="currentColor" stroke-width=".25" stroke-dasharray="40 30"/><path d="M12 2l1.8 8.2L22 13l-8.2 2.8L12 24l-1.8-8.2L2 13l8.2-2.8z" fill="currentColor"/></svg>
         <h1>Dzulfaraaghaini</h1>
         <p class="tagline">Speculative fiction. The fragility of human systems, one kingdom at a time.</p>
         <p class="lede">Dzulfaraaghaini writes speculative fiction about the rise and collapse of kingdoms, the evolution of faiths, and the small moments of pride, fear, and vanity that bring great structures down. This site collects the novels, and the lore behind them.</p>
-        <ul class="hero-links">
-          <li><a href="books.html">Read the books</a></li>
-          <li><a href="lore.html">Browse the lore</a></li>
-        </ul>
-        <p class="ledger-line">15 cases on file &middot; 175 characters &middot; 105 scenes</p>
+        <p><a class="btn" href="books.html">Enter the archive</a></p>
+        <ul class="ledger-stats"><li><b>15</b><span>Cases</span></li><li><b>175</b><span>Characters</span></li><li><b>105</b><span>Scenes</span></li></ul>
+      </div>
+    </section>
+
+    <section class="section wrap featured">
+      <h2>Featured case</h2>
+      <a class="featured-cover" href="books/4555.html"><img class="entry-cover" src="images/covers/4555.jpg" alt="Cover of The Vessel of Unmediated Grace"></a>
+      <div class="featured-body">
+        <p class="entry-fileno">Case 4555</p>
+        <h3 class="entry-title"><a href="books/4555.html">The Vessel of Unmediated Grace</a></h3>
+        <p>A traffic cone, a reluctant duke, and forty-one years spent trying to give a crown back.</p>
+        <p><a class="btn btn--ink" href="books/4555.html">Open case</a></p>
       </div>
     </section>
 
@@ -249,6 +261,7 @@
         <li><a href="characters/suyin.html"><img src="images/characters/suyin-thumb.jpg" alt="" loading="lazy"><span>Suyin</span></a></li>
         <li><a href="characters/mingxuan.html"><img src="images/characters/mingxuan-thumb.jpg" alt="" loading="lazy"><span>Mingxuan</span></a></li>
       </ul>
+      <p><a href="characters.html">View all characters &rarr;</a></p>
     </section>
 
     <section class="section wrap">
@@ -263,6 +276,7 @@
         <li><a href="books/4438.html"><img src="images/scenes/the-solstice-ascension-grid.jpg" alt="" loading="lazy"><span>The Heavenly Thunder-Serpent</span></a></li>
         <li><a href="books/0188.html"><img src="images/scenes/the-granary-of-rats-grid.jpg" alt="" loading="lazy"><span>The Songs Never Mention the Cats</span></a></li>
       </ul>
+      <p><a href="scenes.html">View all scenes &rarr;</a></p>
     </section>
 
     <section class="section wrap">
@@ -280,6 +294,7 @@
 
   </main>
   <footer class="site-footer">
+    <p class="footer-quote">Not all stories are meant to be forgotten. Some are kept, for a reason.</p>
     <div class="footer-inner wrap">
       <p>&copy; 2026 Dzulfaraaghaini</p>
       <ul class="footer-links">
@@ -289,7 +304,7 @@
         <li><a href="https://www.threads.com/@killythirsk" target="_blank" rel="noopener">Threads</a></li>
       </ul>
     </div>
-    <p class="build-info wrap">Site last built 2026-10-01, 04:27AM GMT+7</p>
+    <p class="build-info wrap">Site last built 2026-10-06, 11:58AM GMT+7</p>
   </footer>
   <script src="js/site.js" defer></script>
 </body>
