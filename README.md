@@ -24,10 +24,10 @@ scene gallery, and a working "View on Google Books" link, and a confirmed page c
 detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
 of Unmediated Grace* (Case 4555) and *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
-gallery and a working "View on Google Books" link; its page count is still
-to add). Three further books, 0188, 2140 and 3115, are marked coming-soon
-but already carry character rosters, and five more (3312, 3887, 4442, 0000B,
-2114) are cover-only coming-soon entries. The
+gallery, a working "View on Google Books" link and a confirmed page count of
+82). Five further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115
+and 0000B, are marked coming-soon but already carry character rosters, and four
+more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has five entries: Cultivator (listing every Envoy) and
 Catalyst (listing every Catalyst), each built automatically from the
 books' own data, plus three religions — the Faith of Ardwen, the
@@ -226,3 +226,23 @@ Fixed: the home page Featured Case no longer reuses `.entry-fileno` (the cover-l
 Edited: `tools/build_site.py` (nav + labels, `PRINCIPALS`, `RELATED_THEMES`, case grids, READ buttons, subject split, related-cases logic, page templates), `css/style.css` (section 14), `js/site.js` (mobile "see more", `?case=` filter link), `AI-HANDOFF.md` (§3 note), `README.md` (this entry); all pages regenerated.
 Changed: nav and headings now read Cases / Subjects / Records / Archive (file names and URLs unchanged); the hero button is centred; published and awaiting-release cases are separate sections; every case page has a READ button at the top and bottom, principal subjects with the rest folded away, and Related Cases; subject and archive pages gained related blocks; long segments fold behind "See more" on phones.
 Totals unchanged: cases 15, characters 175, scenes 105.
+
+### [MERGED] Update — Case 4438 page count, Case 0000B cast, new Case 0156 (*The Purging of Charsianon*)
+
+Added:
+- `books/0156.html` — new book page (awaiting release)
+- `characters/` — 45 pages: 19 for Case 0000B (the-anchorite, aveline, halvard, vasarion, aimeric, ganeth, kest, massinen, berant, dorenzo, corse-0000b, wendrics-wife, wendrics-son, yorbulan, branimir, coren, verrin, the-wounded-archer, the-vault-guard) and 26 for Case 0156 (bardas, theodora, the-carbon-echo, the-quiet-one, keeper-photios, lord-leo, kyr-symeon, kyr-niketas, kyr-andronikos, loukas, melias, brother-ignatios, georgios, petros, basileios, artavasdos, marina, zoe, stephanos, ioannes, theoktistos, kassia, isidoros, lord-constantine, lady-anastasia, ardwen-0156)
+- `images/characters/` — 90 files: a sheet and a `-thumb` for each of those 45 slugs
+- `images/scenes/` — 28 files: a full image and a `-grid` for each of 14 scenes
+- `images/covers/` — `0156.jpg`
+
+Edited:
+- `tools/build_site.py` — Case 4438's `pages` set to 82; 19 characters added to the `0000b` stub; Case 0156's `BOOKS` entry added after 3115 (catalyst *The Carbon Echo*, envoy The Quiet One, 26 characters, 14 scenes; `pages`, `genre` and `synopsis_html` left as placeholders, so the book stays awaiting-release); `PRINCIPALS` gained `0156` and `0000b`; one sentence each added to the Cultivator and Catalyst lore prose and one to the Faith of Ardwen's appearances
+- `books/4438.html`, `books/0000b.html`, `books.html`, `index.html`, `characters.html`, `scenes.html`, `lore/cultivator.html`, `lore/catalyst.html`, `lore/faith-of-ardwen.html` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 0156 and the 0000B cast in §6, §7 bullets, merge note in §8; counts updated
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp only
+
+Totals: cases 15 -> 16, characters 175 -> 220, scenes 105 -> 119. A recount from the rebuilt site gives the same figures, and every local link resolves.
+
+Merged: 2026-10-07, straight into master at the author's request (no staging copy, so no `[PENDING]` entry existed).

@@ -72,6 +72,8 @@ PRINCIPALS = {
     "0188": ["dharmasena", "chandralekha", "somadatta", "the-eternal-grief-lily", "kamalini", "dhumra"],
     "2140": ["garibald", "observer-419", "landulf", "grimoald", "gisela"],
     "3115": ["huairen", "meilan", "huaiyu", "the-listening-water", "mingxuan", "observer-471"],
+    "0156": ["bardas", "theodora", "the-carbon-echo", "the-quiet-one", "keeper-photios", "lord-leo"],
+    "0000b": ["the-anchorite", "aveline", "halvard", "vasarion", "aimeric", "ganeth"],
 }
 
 # Hand-written "Related Cases" links, on top of the automatic ones (same catalyst
@@ -1382,7 +1384,7 @@ BOOKS = [
             "img": "characters/elder-peng-thumb.jpg",
             "html": "<p>A hermit among the flooded ruins below Nine Bends for one hundred and forty-one local years, rotating through identities as the district forgets the last one. Places the eel in the basin, then does almost nothing &mdash; and keeps entering the same unauthorized phrase in his notes.</p>",
         },
-        "pages": EDITOR_PAGES,
+        "pages": "82",
         "genre": """Historical Fantasy &middot; Political Intrigue &middot; Tragedy""",
         "google_books_url": "https://play.google.com/store/books/details?id=hRoSEgAAQBAJ",
         "synopsis_html": """<p>For eleven years the fisherman <a href="../characters/ren-duo.html">Ren Duo</a> has worked the flooded ruins below Nine Bends, where a river drowned an old town and left its stone gateways standing in the shallows. Then one morning his net brushes something black beneath a fallen lintel, the water lights from the inside, and he is thrown into the shallows with his fingers curled into claws he cannot open. He does the small, honest, sensible thing: he tells the magistrate. Within the month the Yan court has sent armed men and a wagon; six men drown securing the creature for the road; and by the time it reaches the capital it has a new name &mdash; the Heavenly Thunder-Serpent &mdash; and a waiting list for its water.</p>
@@ -2076,6 +2078,279 @@ BOOKS = [
         "scenes": [],
     },
     {
+        "slug": "0156", "title": "The Purging of Charsianon",
+        "status": ["coming-soon"],
+        "cover_file": "0156.jpg",
+        "hook": "Ledger. Unhastening. Reconstruction. Arithmetic. Filed.",
+        "case_tag": "Case 0156",
+        "catalyst": {
+            "name": "The Carbon Echo",
+            "meta": "Mythic Class",
+            "page": "characters/the-carbon-echo.html",
+            "img": "characters/the-carbon-echo-thumb.jpg",
+            "html": "<p>A dormant, buried bio-reconstruction beacon under Hemiakmon Ridge, built to keep whatever enters its chamber intact. It takes a full accounting of each person who crosses its threshold, discards the original, and returns an exact copy &mdash; perfect in everything that can be measured, and in nothing that can't.</p>",
+        },
+        "envoy": {
+            "name": "The Quiet One",
+            "meta": "Custodian Observer",
+            "page": "characters/the-quiet-one.html",
+            "img": "characters/the-quiet-one-thumb.jpg",
+            "html": "<p>Looks eleven to thirteen and has looked it for longer than any living shepherd can account for. Inspects the fissure on a schedule the moon has nothing to do with, logs every containment fault and every rider, and &mdash; by protocol &mdash; does nothing at all.</p>",
+        },
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [
+            {
+                "slug": "bardas", "name": "Bardas",
+                "epithets": "Lord of Charsianon &middot; mid-40s to early 50s &middot; reconstructed",
+                "teaser": "Comes back from the cave kinder, sleepless and perfectly just &mdash; then walks out of his own gate to spend the smallest number he can.",
+                "bio_html": """<p>Lord of Charsianon, heir to a fortress with more history than roof and a reputation for paying every debt his lands ever incurred &mdash; to a moneylender, a rival, or a mountain. When the shepherds bring him the keening below Hemiakmon Ridge he hears not a ghost story but a ledger left unbalanced, and rides up with twelve knights to collect the silence he is owed. <a href="../characters/the-carbon-echo.html">The chamber</a> takes a full accounting of all thirteen, discards the originals, and sends thirteen back, exact down to a thumbprint.</p>
+          <p>What returns forgives <a href="../characters/marina.html">Marina</a>'s four years of rent, refuses his father's wine and does not sleep. He sends <a href="../characters/basileios.html">Basileios</a>'s annual brandy back with an itemised account of nine years of skimming, hands <a href="../characters/artavasdos.html">Artavasdos</a> a ledger in place of a bribe, and tells <a href="../characters/theodora.html">Theodora</a>, truthfully, that he felt no distress in her absence. When <a href="../characters/lord-leo.html">Leo</a>'s coalition reaches the river he does the arithmetic, and on the third of Ferren he walks out of the gate unarmed with the Twelve. He is executed last, by <a href="../characters/loukas.html">Loukas</a>, and spends his final words on the metallurgy of the blade. The Custodian's closing log singles out his voluntary self-termination, calculated to minimise harm to non-subjects, as behavior no standing model predicted.</p>""",
+                "quote": "Better to be forgotten for mercy than remembered for the blood of thousands.",
+            },
+            {
+                "slug": "theodora", "name": "Theodora",
+                "epithets": "Lady of Charsianon &middot; 37&ndash;42 years old",
+                "teaser": "Presses her palm to her husband's in the dark, finds a warmth with no weather in it &mdash; and keeps the ledgers herself afterward.",
+                "bio_html": """<p>Wife of <a href="../characters/bardas.html">Bardas</a> for eleven years, and the first to catalogue what the cave took: the three tuneless notes he no longer hums over correspondence, the hand he no longer reaches for beneath the table. Asked whether he missed her, he answers that he felt no distress at all, and she makes it as far as the corridor before her body stops consulting her. She tests him once more, with the barn at Psychrolimne and a storm, and he recalls every fact but the cloak.</p>
+          <p>When <a href="../characters/brother-ignatios.html">Brother Ignatios</a> comes to console her and in fact to depose her, she gives him an answer that is true only in the narrow sense that a ledger entry can be. Her husband makes the last choice without asking her; she never remarries, and afterward keeps Charsianon's books herself, to his old standard.</p>""",
+            },
+            {
+                "slug": "the-carbon-echo", "name": "The Carbon Echo",
+                "epithets": "Catalyst &middot; automated sub-atomic bio-reconstruction beacon &middot; Hemiakmon Ridge",
+                "teaser": "A buried chamber with one duty &mdash; keep whatever enters it intact &mdash; carried out by discarding the original and building another.",
+                "bio_html": """<p>Also called the Carbon Copy or the Echo Cave: an old, patient mechanism buried under Hemiakmon Ridge for longer than Charsianon has had a name for iron, tasked with keeping whatever enters its chamber intact. It does not heal; it re-fabricates. When <a href="../characters/bardas.html">Bardas</a>'s boot crosses its threshold it brightens like a coal under a bellows, reads every man inside, discards the originals, and rebuilds thirteen from carbon and silica &mdash; right down to the old crook in <a href="../characters/kyr-niketas.html">Niketas</a>'s wrist &mdash; faithful in every particular that can be measured and in none that can't.</p>
+          <p>It does nothing in six years but hum. After a goatherd, <a href="../characters/georgios.html">Georgios</a>, leans across its threshold, its logged containment faults climb &mdash; thirteen, twenty-one, thirty-four, fifty-five, eighty-nine &mdash; and everything that follows is built by people who never touched it. The reference sheet's notes read: dampens limbic resonance; emotional deviation is structurally corrected; affect suppressed.</p>""",
+            },
+            {
+                "slug": "the-quiet-one", "name": "The Quiet One",
+                "epithets": "Custodian Observer &middot; appears 11&ndash;13 years old &middot; actual age immeasurable",
+                "teaser": "Inspects the fissure on a schedule the moon has nothing to do with, logs everything, and does nothing &mdash; by protocol.",
+                "bio_html": """<p>The valley takes her for an abandoned child, a changeling, a mercy that failed to take, and leaves bread at the treeline that she does not eat. She has watched four generations of the same three families age past her in both directions while she stays exactly as tall as when the ridge first received her. On a schedule of her own she presses one flat palm to the cold stone at the fissure for the same unbroken count; it looks like a mourner's vigil and is an inspection.</p>
+          <p>She logs the containment faults as they climb, logs <a href="../characters/bardas.html">Bardas</a>'s thirteen riding out, and logs <a href="../characters/keeper-photios.html">Photios</a>'s pamphlet, noting that it uses <em>soul</em> four times, <em>mercy</em> never and <em>cost</em> not at all. Her Prime Directive does not forbid grief; it simply never accounted for the possibility. When the case closes she is reassigned to a newer terrarium on a ridge three ranges north, with one line to enter in a record that has no field for what she felt.</p>""",
+                "quote": "I do not intervene. I only remember. And I will record what must be known.",
+            },
+            {
+                "slug": "keeper-photios", "name": "Keeper Photios",
+                "epithets": "Keeper of the Dorylaion Vigil &middot; early 60s",
+                "teaser": "Names the Doctrine of the Stolen Vessel, cannot make it fail a test, and calls the missing seam proof of a cleverer theft.",
+                "bio_html": """<p>A careful, ambitious cleric who has spent thirty years waiting for a heresy interesting enough to build a career on, and finds one in Charsianon. His pamphlet, the Doctrine of the Stolen Vessel, holds that a soul can be devoured whole by a patient enough evil, leaving a body that walks, speaks and loves with perfect fidelity. His interest is not purely theological: the Dorylaion Vigil has lost three decades of tithes to Charsianon's own House of Vigil, and a successful prosecution would bring that House back to the Vigil's ledgers.</p>
+          <p>Six months of observation produce not one seam. He tells <a href="../characters/brother-ignatios.html">Ignatios</a> that the absence is the proof of a more cunning theft, an argument so elegant he almost believes it, and then cannot sleep. He eats, standing, a too-heavily-salted barley cake of the kind his mother baked, and has arranged his whole late life so that no correctly seasoned one ever reaches him.</p>""",
+                "quote": "The Vessel was never meant to choose. It was meant to be taken.",
+            },
+            {
+                "slug": "lord-leo", "name": "Lord Leo",
+                "epithets": "Neighboring lord &middot; mid-40s &middot; political leader of the coalition against Charsianon",
+                "teaser": "Raises an army on a forty-acre grudge, and a speech about mercy he drafted the autumn before anyone asked.",
+                "bio_html": """<p>His lands border Charsianon on three sides, and his grandfather lost a war and a daughter to <a href="../characters/bardas.html">Bardas</a>'s grandfather over exactly forty acres of poor grazing. He finds the Doctrine of the Stolen Vessel considerably easier to credit than his peers do, and spends the spring praying loudly in rooms where he can be seen and writing letters to every lord who has ever resented Charsianon its river crossing.</p>
+          <p>He rehearses his speech &mdash; mercy for the man, judgment only for the thing wearing him &mdash; to an elderly spaniel, Sabbas, who sleeps through it. On the third reading he notices that the speech was never built to forgive Bardas of anything; it was built to be forgiven, by history, for what he meant to do regardless. The chronicles quote it nearly word for word, though he never finished delivering it.</p>""",
+                "quote": "A coalition is not built on love of crown, but on memory of wounds.",
+            },
+            {
+                "slug": "kyr-symeon", "name": "Kyr Symeon",
+                "epithets": "Knight of the Silver Reliquary &middot; one of the Twelve &middot; late 30s",
+                "teaser": "Can still recite every prayer word for word, and can no longer find the ache that used to sit beneath them.",
+                "bio_html": """<p>One of the Twelve, whose faith ran so deep his men joked he prayed in his sleep. Before the cave he wept at the third repetition of the Unhastening's name, a swelling in the chest he privately called being seen. Afterward he kneels in the same House of Vigil, says the same words in the same order with a technical fluency a choirmaster would have approved, and searches for the ache the way a man searches a dark room for furniture that used to stand there. Even the Return, the unwitnessed second repetition, changes nothing.</p>
+          <p>The absence, he decides, is structural, and he files that too. His wife, <a href="../characters/kassia.html">Kassia</a>, hears the difference in his voice before she has a word for it. The sheet calls him the one most spiritually affected by reconstruction.</p>""",
+                "quote": "Faith remade me where flesh once failed.",
+            },
+            {
+                "slug": "kyr-niketas", "name": "Kyr Niketas",
+                "epithets": "Knight and master swordsman &middot; one of the Twelve &middot; around 50 years old &middot; deceased",
+                "teaser": "Keeps the crooked wrist and loses the thirty-year argument with his body &mdash; and now fights like pure geometry.",
+                "bio_html": """<p>One of the Twelve, a swordsman other swordsmen studied, whose whole style was built around a wrist he broke as a squire and never let heal straight. It comes back from the chamber exactly as crooked as it left, and he still steps the half-pace wider and invites the attack to the weak side. But the half-beat of punishment that once arrived a shade late now arrives at the single optimal instant, against every opponent, as though the wrist were one more fixed variable in an equation he solves without interest.</p>
+          <p>He dismantles four squires and two guardsmen in an afternoon, each bout ending in a clean disarm rather than a wound, because wounding is inefficient. <a href="../characters/theoktistos.html">Theoktistos</a> sees it first and puts the word to it: not swordsmanship but geometry.</p>""",
+                "quote": "A wrist that bends shapes the path of a blade.",
+            },
+            {
+                "slug": "kyr-andronikos", "name": "Kyr Andronikos",
+                "epithets": "Knight of Charsianon &middot; one of the Twelve &middot; early 40s &middot; deceased",
+                "teaser": "Explains the sunset's shade of red at unwelcome length &mdash; and brings his sword to the council like something he forgot to put down.",
+                "bio_html": """<p>One of the Twelve, a knight who had never lost a wager or a battle in the same season. Back from the cave, he takes first watch beside <a href="../characters/stephanos.html">Stephanos</a>, agrees that it is a fine sunset, and then describes the cause of the red, the angle of the sun against the ridge and how often the valley may expect one of the kind &mdash; accurate, complete, and without a flicker of the wonder Stephanos was fishing for.</p>
+          <p>At the council in the undercroft he alone has brought his sword, and holds it not as a weapon but the way a man holds an object he has simply forgotten to put down. The sheet's closing note: he fell as he lived, his vow unbroken.</p>""",
+                "quote": "Steel is vows made visible. I kept mine until the last breath.",
+            },
+            {
+                "slug": "loukas", "name": "Loukas",
+                "epithets": "Spearman, later executioner &middot; early 30s",
+                "teaser": "Draws the duty by lot to behead the lord, asks for last words, and is given a lecture on metallurgy.",
+                "bio_html": """<p>A veteran pike in the third rank, who has fought two proper wars and one demon-hunt and says, three nights before the river, that this feels like none of them. When <a href="../characters/bardas.html">Bardas</a> walks out unarmed, the worst of it is not fear but that nothing in him can locate a feeling appropriate to what he is watching, because no Keeper or captain ever gave him a story that ended like this.</p>
+          <p>He draws the duty by lot, and at the block asks whether the lord has any final words. Bardas answers with the composition of the blade and its temper-line; Loukas blurts half a prayer, Bardas stops and waits until he has finished it, badly, and resumes where he left off. Within a week Loukas is a changed and less stable man, and tells the story that night, in overwrought detail, to anyone who will listen. By morning it has become the panic that burns the countryside.</p>""",
+                "quote": "Orders are a spear thrown once; you do not call it back.",
+            },
+            {
+                "slug": "melias", "name": "Melias",
+                "epithets": "Mercenary captain &middot; mid-50s",
+                "teaser": "Commands the coalition's army and cannot read a single tell from the walls.",
+                "bio_html": """<p>A mercenary captain with four sieges and one particularly unpleasant urban pacification behind him, who reads <a href="../characters/lord-leo.html">Leo</a>'s Doctrine of the Stolen Vessel with the polite indifference he brings to any employer's reasons for wanting men killed. He cares that the retainer is paid in full and in advance, that the engines are the coalition's problem, and that the target apparently will not fight back.</p>
+          <p>He brings eleven hundred spears, four hundred horse and three engines he considers decorative. But Charsianon's walls, which he reads every evening, give him nothing back; the tells themselves seem to report nothing. He doubles the pickets and tells no one why. It is a professional's version of prayer.</p>""",
+                "quote": "I do not fight for kings. I fight for victory.",
+            },
+            {
+                "slug": "brother-ignatios", "name": "Brother Ignatios",
+                "epithets": "Priest sent by Keeper Photios &middot; late 20s",
+                "teaser": "Deposes Theodora gently over two cups of wine, and is first to say aloud that the Doctrine never produced a seam.",
+                "bio_html": """<p>A young cleric sent by <a href="../characters/keeper-photios.html">Photios</a>, nominally to comfort <a href="../characters/theodora.html">Theodora</a> through her husband's long recovery, in fact to ask whether she has seen anything that troubles her conscience before Ardwen. He drinks none of his wine, writes down her careful non-answer, and reports it faithfully and without embellishment, since embellishment is not among his talents.</p>
+          <p>Back in Photios's study he says the sentence that costs the Keeper his sleep: that a vessel wearing virtue as a disguise should eventually show a seam, and six months of watching have produced none.</p>""",
+                "quote": "Truth is a wound God allows so that we may see the rot beneath.",
+            },
+            {
+                "slug": "georgios", "name": "Georgios",
+                "epithets": "Goatherd &middot; 19 years old",
+                "teaser": "Leans across a threshold while chasing a nanny goat, feels a cold behind his teeth, and never connects it to anything.",
+                "bio_html": """<p>Nineteen winters old when he follows a wandering nanny goat further up Hemiakmon Ridge than any sane animal goes, through a fissure he has passed a hundred times without noticing. For about three heartbeats he feels a cold that sits behind the teeth rather than on the skin, like a struck bell in the jaw. He finds his goat and walks home. He lives another forty-one years, marries twice, and never once connects the ache to anything.</p>
+          <p>The Custodian's log names his incidental proximity contact as the origin of the breach, six years before the terminal cascade, and records that nobody introduced the anomaly on purpose.</p>""",
+                "quote": "I found a crack in the mountain where the goats would not go. I did not mean to open anything.",
+            },
+            {
+                "slug": "petros", "name": "Petros",
+                "epithets": "Steward of Charsianon &middot; mid-50s",
+                "teaser": "The first to feel the ground shift under the celebration, and the one who says what troubles him to his lord's face.",
+                "bio_html": """<p>The steward who has balanced Charsianon's books for eleven years and takes a professional's private pride in never letting a debtor escape a legitimate claim. He is first to feel the ground move under the valley's celebration, on the third morning, when <a href="../characters/bardas.html">Bardas</a> forgives the widow <a href="../characters/marina.html">Marina</a> four years of rent without consulting him.</p>
+          <p>The sheet draws him as counsel, record and quiet observation, reporting his concerns to his lord with loyalty and care.</p>""",
+                "quote": "The accounts are in order, my lord. It is not the ledgers that trouble me, but you.",
+            },
+            {
+                "slug": "basileios", "name": "Basileios",
+                "epithets": "Seneschal of Charsianon &middot; in his 50s",
+                "teaser": "Nine years of skimming the eastern bridge tolls, answered with an itemised account and a deadline of spring.",
+                "bio_html": """<p>A stout, cheerfully corrupt seneschal who has spent nine years quietly skimming the toll receipts from the eastern bridge and buying <a href="../characters/bardas.html">Bardas</a>'s silence with an annual gift of the province's finest brandy. He arrives with the usual offering one Iverin and finds it accepted, examined and returned the next morning with a courteous account of the exact sum he has diverted and the flat expectation, stated once, that it will be repaid by spring.</p>
+          <p>The sheet's last panels show him feigning loyalty, displeased, and pleading.</p>""",
+                "quote": "Accounts can be arranged. Loyalty is more... negotiable.",
+            },
+            {
+                "slug": "artavasdos", "name": "Artavasdos",
+                "epithets": "Trader in curiosities, scavenger &middot; mid-40s",
+                "teaser": "Comes to sell the lord his silence and leaves with an itemised accounting and no shame left to nurse a grudge with.",
+                "bio_html": """<p>Calls himself a trader in curiosities and is known more honestly as a stripper of the dead. He watches the column ride out and begins totalling the worth of thirteen sets of knights' plate, and when they return unmarked he simply starts calculating something else. By spring he has a private accounting of his own, enough smoke to be worth a great deal of silence, and requests an audience to sell it.</p>
+          <p><a href="../characters/bardas.html">Bardas</a> listens without interruption and asks for parchment. He forgives every debt Artavasdos's family ever owed the house, then sets the value of a lifetime of scavenging beside one honest year of his labor, and calls the net loss so great that forgiveness is unnecessary. Artavasdos never attempts blackmail again, and is not entirely sure he remembers how.</p>""",
+                "quote": "Information is a coin that buys anything.",
+            },
+            {
+                "slug": "marina", "name": "Marina",
+                "epithets": "Widow tenant &middot; 30s&ndash;40s",
+                "teaser": "Owes four years of grazing rent, is forgiven all of it, and weeps before she understands why.",
+                "bio_html": """<p>A widow who owes the house four years of unpaid grazing rent. On the third morning after the column's return <a href="../characters/bardas.html">Bardas</a> summons her and forgives the entire sum with a gentleness so complete that she weeps before she understands she has reason to. &ldquo;Debts,&rdquo; he tells her, &ldquo;are only useful to the living. Go home. Feed your children.&rdquo;</p>
+          <p>It is the first sign the valley gets that something has changed, and she is the one who receives it. The sheet pairs her with gratitude beyond words.</p>""",
+                "quote": "I never asked for mercy, my lord. Only time to pay.",
+            },
+            {
+                "slug": "zoe", "name": "Zoe",
+                "epithets": "Court fool &middot; 30s",
+                "teaser": "Aims the sharpest joke she has ever dared at a sitting lord, and gets back a careful, humorless replica of a laugh.",
+                "bio_html": """<p>A sharp-tongued woman who has spent a decade calibrating her jokes to the pressure of <a href="../characters/bardas.html">Bardas</a>'s temper, knowing which barb earns a bark of laughter and which a warning look. Her craft is made suddenly and uselessly obsolete. At the Longest Vigil she tests him with the sharpest joke she has ever aimed at a sitting lord, and gets a small, correctly timed exhalation through the nose that any stranger might take for a laugh and that she, who built a career on the difference, recognizes as its replica.</p>""",
+                "quote": "Laughter is a mirror; when it cracks, truth steps through.",
+            },
+            {
+                "slug": "stephanos", "name": "Stephanos",
+                "epithets": "Castle guard &middot; early 30s",
+                "teaser": "Remarks that it is a fine sunset, and is given the wavelength.",
+                "bio_html": """<p>Left behind to guard the keep, and deeply resentful for six days at missing what he had assumed would be a heroic slaughter of something. That winter he takes first watch beside <a href="../characters/kyr-andronikos.html">Kyr Andronikos</a> and remarks, as the sun drops red behind Hemiakmon Ridge, that it is the kind of sunset a man wants to remember. He gets a complete technical explanation, and excuses himself from a watch he is obliged to finish, no longer certain which he finds more exhausting to stand beside: the cold, or the man reciting its temperature.</p>""",
+                "quote": "I have seen men weep, and I have seen men fight. What I saw in him was neither.",
+            },
+            {
+                "slug": "ioannes", "name": "Ioannes",
+                "epithets": "Squire to Lord Bardas &middot; 14 years old",
+                "teaser": "Spends three years learning which cup, which hand &mdash; and asks for the stables when his lord no longer needs anything served.",
+                "bio_html": """<p>A boy who has spent three years learning the small liturgies of service &mdash; which cup, which hand, how long to let the wine breathe &mdash; for a lord he genuinely loves. When <a href="../characters/bardas.html">Bardas</a> no longer needs the wine to breathe and drinks in one unbroken motion, he finds he cannot watch it without his hands going cold, and within the year asks to be reassigned to the stables.</p>
+          <p>He is the one who comes out at dusk to fetch the old deerhound Skylax in from the last post of the lord's ground.</p>""",
+                "quote": "I listen, I remember, I serve.",
+            },
+            {
+                "slug": "theoktistos", "name": "Theoktistos",
+                "epithets": "Arms-master of the garrison &middot; 58 years old",
+                "teaser": "Spends eleven years teaching men to fight like Niketas, then watches Niketas do it and wants no part of it.",
+                "bio_html": """<p>The garrison's arms-master, a veteran who has spent eleven years teaching young men to fight like <a href="../characters/kyr-niketas.html">Niketas</a> without ever managing it. He is first to put a private word to what Niketas now does with a sword: not swordsmanship, which must read, guess and sometimes misjudge, but geometry. He watches him dismantle four squires and two guardsmen in an afternoon and finds that he has wanted, all this time, something he wants no part of, because a man who no longer needs to guess at another man's fear has stopped fighting like a man at all.</p>
+          <p>He dismisses the squires early, citing an injury drill, and tells no one the truth: a solved wall frightens him more than a crumbling one, because a crumbling wall could still surprise you.</p>""",
+                "quote": "He moves not by strength nor rage, but by proofs that do not err.",
+            },
+            {
+                "slug": "kassia", "name": "Kassia",
+                "epithets": "Wife of Kyr Symeon &middot; 37 years old",
+                "teaser": "Watches the light go out of a husband who still prays word-perfect.",
+                "bio_html": """<p>Wife of <a href="../characters/kyr-symeon.html">Kyr Symeon</a>, who has spent a decade half-amused and half-exhausted by a husband who prayed too loudly and too long over meals gone cold. On their first Ardwen's Day home she strains to recognize the man kneeling beside her in the House of Vigil: the words are the same, but delivered with the fluency of a man reading aloud rather than the fumbling fervor she married. Asked whether the cave changed his faith, he calls faith a debt like any other.</p>
+          <p>She sees the hollow where devotion should be, bears the silence alone, and prays he will find his way.</p>""",
+                "quote": "He kneels before altars, yet nothing lives in his eyes.",
+            },
+            {
+                "slug": "isidoros", "name": "Isidoros",
+                "epithets": "Ferryman at the Charsianon ford &middot; apparent age 50s",
+                "teaser": "Has kept the ferry longer than any grandmother can account for, and ages unusually slowly.",
+                "bio_html": """<p>The ferryman at the Charsianon ford, who rows without haste and speaks only when the water asks. In the tavern he says nothing and pays for an old woman's wine; years after the burning someone in the valley wonders aloud, once, to a single neighbor, whether a man could be a Stolen Vessel for so long and so gently that a valley simply forgets to be afraid of him. The neighbor laughs, and the question is never asked again.</p>
+          <p>The sheet gives his distinguishing feature as that he ages unusually slowly. He keeps the ferry another eleven years.</p>""",
+                "quote": "The river remembers what men forget.",
+            },
+            {
+                "slug": "lord-constantine", "name": "Lord Constantine",
+                "epithets": "Regional lord of Psychrolimne &middot; 58 years old",
+                "teaser": "Joins the coalition for fishing rights a great-uncle won at cards and never quite returned.",
+                "bio_html": """<p>Lord of Psychrolimne, a lakeland lordship of eel-weirs and netted shallows whose whole wealth rests on fishing rights argued, bartered and once gambled away across three generations. He answers <a href="../characters/lord-leo.html">Leo</a>'s letter for reasons that have nothing to do with demons: he wants the fishing rights <a href="../characters/bardas.html">Bardas</a>'s great-uncle won from his own family in a card game two generations ago and never quite returned.</p>
+          <p>The sheet sums him up as old borders, old blood, unsettled debts.</p>""",
+                "quote": "The lake remembers what the crown forgets.",
+            },
+            {
+                "slug": "lady-anastasia", "name": "Lady Anastasia",
+                "epithets": "Lady of Karyopolis &middot; 40s",
+                "teaser": "Joins the coalition to marry her son into whatever remains of Charsianon once the dust settles.",
+                "bio_html": """<p>Lady of Karyopolis, a walled market-town among walnut and chestnut orchards whose chief export is, by common and cynical agreement, well-placed daughters. She answers <a href="../characters/lord-leo.html">Leo</a>'s letter wanting her son married into whatever remains of Charsianon, doctrine or no doctrine, and the sheet draws her calculating, appraising and composed, offering advantage across a negotiating table.</p>""",
+                "quote": "Advantage is a crown no one sees until it is too late.",
+            },
+            {
+                "slug": "ardwen-0156", "name": "Ardwen",
+                "epithets": "The Unhastening &middot; the Sky-Answered &middot; goddess of the Vigil of Ardwen",
+                "teaser": "The one goddess of the Vigil, whom nobody in Charsianon sees and everyone invokes.",
+                "bio_html": """<p>The one goddess of the <a href="../lore/faith-of-ardwen.html">Vigil of Ardwen</a>, without rival, consort or child: the Unhastening, the Sky-Answered. Her teaching comes down to a handful of difficult habits &mdash; wait rather than demand, ask honestly rather than well, keep a promise past the point where anyone remains to collect, and keep one's accounts truthful even when the truth is the entry that refuses to balance. Its oldest maxim holds that Ardwen answers the honest, but never on command.</p>
+          <p>In Charsianon she is kept in a plain House of Vigil of stone and candles with no image in it, and her doctrine is quoted at the characters' lowest moments: <a href="../characters/kyr-symeon.html">Symeon</a>'s Return, <a href="../characters/loukas.html">Loukas</a>'s half-prayer at the block. The sheet draws her in traditional iconography, a veiled, crowned figure with a tear and a white lily, as the Mother of Mercy, intercessor for the faithful and protectress of widows, orphans and the humble. The same goddess is <a href="../characters/ardwen.html">Ardwen</a> in Case 0000.</p>""",
+                "quote": "She who weeps for the lowly, and crowns the faithful.",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-goatherd-and-the-fissure",
+             "alt": "A young goatherd in a hooded cloak with a staff walks a snowy ridge at sunset toward a dark crack in the rock face, a goat ahead of him",
+             "caption_html": """<a href="../characters/georgios.html">Georgios</a> follows a stray nanny goat up Hemiakmon Ridge, past a fissure he never connects to anything again."""},
+            {"slug": "the-valley-listens",
+             "alt": "Villagers and dogs gather at the edge of a mountain village at night beneath a swirling sky, a snow-capped ridge beyond the dark treeline",
+             "caption_html": """The valley at night, listening to a sound it cannot place below Hemiakmon Ridge."""},
+            {"slug": "the-quiet-ones-inspection",
+             "alt": "A small dark-haired child in a long dark cloak presses one palm to a rock wall beside a line of footprints in the snow, a treeline and mountains behind",
+             "caption_html": """<a href="../characters/the-quiet-one.html">The Quiet One</a> presses a flat palm to the same cold stone, on a schedule the moon has nothing to do with."""},
+            {"slug": "the-twelve-ride-out",
+             "alt": "A lord in a crimson cloak rides at the head of a column of knights up a snowy mountain pass, banners flying",
+             "caption_html": """<a href="../characters/bardas.html">Bardas</a> rides up to Hemiakmon Ridge with the Twelve, to collect the silence he is owed."""},
+            {"slug": "the-chamber-takes-its-count",
+             "alt": "Thirteen cloaked figures stand in a ring beneath a towering column of white light inside a vast crystalline chamber",
+             "caption_html": """Thirteen men enter <a href="../characters/the-carbon-echo.html">the chamber</a>; it takes a full accounting of each, discards the originals, and sends thirteen back."""},
+            {"slug": "the-widows-debt-forgiven",
+             "alt": "A bearded lord in fur-trimmed armor hands a folded document across a wooden table to a weeping woman in a headscarf, children behind her, a candle lit between them",
+             "caption_html": """<a href="../characters/bardas.html">Bardas</a> forgives <a href="../characters/marina.html">Marina</a> four years of unpaid grazing rent, and she weeps before she understands why."""},
+            {"slug": "the-return-without-the-ache",
+             "alt": "A knight in a white surcoat marked with a gold cross kneels with clasped hands among banks of candles in a stone vigil-house",
+             "caption_html": """<a href="../characters/kyr-symeon.html">Kyr Symeon</a> performs the Return in the House of Vigil, word for word, and finds only floor where the ache used to be."""},
+            {"slug": "a-fine-sunset-explained",
+             "alt": "Two armored men on a stone rampart before a blood-red sunset, one gesturing as he explains while the other rests his chin in his hand",
+             "caption_html": """<a href="../characters/kyr-andronikos.html">Kyr Andronikos</a> agrees that it is a fine sunset, and explains the angle, the cause and the decade's average to <a href="../characters/stephanos.html">Stephanos</a>."""},
+            {"slug": "a-justice-without-warmth",
+             "alt": "A lord in fur-trimmed mail sits at a table with a brass balance scale and a large ledger while petitioners plead before him",
+             "caption_html": """<a href="../characters/bardas.html">Bardas</a> reviews every judgment himself and reverses the bought ones, without temper and without exception."""},
+            {"slug": "the-accounting-for-artavasdos",
+             "alt": "A lord holds up a long parchment scroll headed with an account of debts and wrongdoings to a dark-robed man across a table stacked with papers by candlelight",
+             "caption_html": """<a href="../characters/artavasdos.html">Artavasdos</a> comes to sell his silence and is handed an itemised accounting of everything he has ever owed or taken."""},
+            {"slug": "the-wall-in-the-corridor",
+             "alt": "A veiled noblewoman in crimson and gold leans her forehead against a stone wall, a distant robed figure standing in a lit archway behind her",
+             "caption_html": """<a href="../characters/theodora.html">Theodora</a> makes it as far as the corridor before her body stops consulting her."""},
+            {"slug": "the-walk-out-through-the-gate",
+             "alt": "A man in a plain pale tunic walks unarmed with a column of plain-clothed men toward a massed army before a gatehouse hung with crimson banners, nobles in the foreground",
+             "caption_html": """<a href="../characters/bardas.html">Bardas</a> and the Twelve walk out of the gate at noon, unarmed, to hand themselves over to the coalition."""},
+            {"slug": "the-last-execution",
+             "alt": "A kneeling lord in fur-trimmed armor faces a standing soldier holding a sword as soldiers look on in a stone courtyard",
+             "caption_html": """<a href="../characters/bardas.html">Bardas</a> kneels for <a href="../characters/loukas.html">Loukas</a> and begins, unasked, on the metallurgy of the blade."""},
+            {"slug": "the-burning",
+             "alt": "A ruined hilltop castle and burning farmhouses smoke beneath a jagged mountain ridge at dusk, a few figures walking the wrecked road below",
+             "caption_html": """What the coalition leaves behind: a castle, a granary, a House of Vigil and a ring of farmhouses that no tally ever counts."""},
+        ],
+    },
+    {
         "slug": "3312", "title": "The Debt Is Settled",
         "status": ["coming-soon"],
         "cover_file": "3312.jpg",
@@ -2120,7 +2395,144 @@ BOOKS = [
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
         "synopsis_html": EDITOR_SYNOPSIS,
-        "characters": [],
+        "characters": [
+            {
+                "slug": "the-anchorite", "name": "The Anchorite",
+                "epithets": "Anchorite of the Vigil of Ardwen &middot; enclosed at nineteen &middot; approx. 30 years old",
+                "teaser": "Breaks the eleventh siege alone by lifting Valeria after five centuries of failed attempts &mdash; and refuses to be named for it.",
+                "bio_html": """<p>An anchorite of the <a href="../lore/faith-of-ardwen.html">Vigil of Ardwen</a>, walled in at nineteen; her office and rank are never recorded beyond the vow itself. By the eleventh siege of Ardenwake she has spent eleven years enclosed, and she does what five centuries of attempts had not: she lifts <a href="../characters/valeria.html">Valeria</a>. Afterward she refuses to be named or credited. The sheet files her as the story's second protagonist, alongside Xu Lian, and as the centre of its &ldquo;no want&rdquo; thesis.</p>
+          <p>Slight but not frail, about 5'4&quot;, with dark hair cut short under a plain grey wimple, pale grey eyes of an attention the sheet calls &ldquo;entirely undivided,&rdquo; and the pallor of eleven years without direct sun. She wears the coarse undyed wool habit of an enclosed anchorite and carries no weapon until the sword. Her life before the enclosure, and her name, are deliberately left unresolved; only a private tune that matches no hymnal hints at somewhere outside the capital.</p>""",
+            },
+            {
+                "slug": "aveline", "name": "Aveline",
+                "epithets": "Empress of Pax Aldrovana &middot; 39 years old",
+                "teaser": "Walks to Ardenwake as a disguised pilgrim after the eleventh siege, a plain ring hidden on a cord.",
+                "bio_html": """<p>Empress of Pax Aldrovana, an Aldrovan woman of thirty-nine with a fair, faintly sun-touched complexion, dark brown hair plainly bound back, deep brown eyes and a composed bearing. After the eleventh siege she makes the pilgrimage to Ardenwake in disguise, in muted stone-grey wool and a weathered charcoal-brown cloak, her hands unmarked by labor and her ring hidden on a cord. Her consort is Emperor <a href="../characters/halvard.html">Halvard</a>.</p>
+          <p>The sheet's expressions run solemn, watchful, resolve, and one it labels &ldquo;The Line Spoken.&rdquo;</p>""",
+                "quote": "A crown is not always worn. Sometimes it is carried within.",
+            },
+            {
+                "slug": "halvard", "name": "Halvard",
+                "epithets": "Emperor of Pax Aldrovana &middot; consort to Empress Aveline &middot; 41&ndash;44 years old",
+                "teaser": "Rebuilds Ardenwake with his own calloused hands, overseeing the construction of Anchorhold.",
+                "bio_html": """<p>Emperor of Pax Aldrovana and consort to Empress <a href="../characters/aveline.html">Aveline</a>. An Aldrovan in his early forties, about 6'0&quot; and solidly built, tanned and weathered from outdoor work, with dark brown hair, hazel eyes and a short practical beard going grey. He is drawn at the rebuilding of Ardenwake, working alongside his masons, and overseeing the construction of Anchorhold; his hands are calloused from manual labor, in a grey-brown coat and beige-grey tunic rather than regalia.</p>
+          <p>The sheet's expressions: determined, thoughtful.</p>""",
+            },
+            {
+                "slug": "vasarion", "name": "Vasarion",
+                "epithets": "Emperor of the Corvane Imperium &middot; 46 years old",
+                "teaser": "Issues the final withdrawal from Ardenwake, from an empire that endures through discipline rather than glory.",
+                "bio_html": """<p>Emperor of the Corvane Imperium, forty-six, olive and weathered, with dark brown-black hair greying at the temples and dark brown eyes. He wears muted iron-grey armor with restrained dark-bronze trim over the cuirass and carries a ceremonial imperial sword. The sheet draws him twice, before the withdrawal and after it, at Ardenwake command, issuing the final withdrawal. His chief engineer, <a href="../characters/berant.html">Berant</a>, writes him the private notes on what conventional siegecraft cannot do to a holy city.</p>""",
+                "quote": "The Imperium endures not through glory, but through discipline.",
+            },
+            {
+                "slug": "aimeric", "name": "Aimeric",
+                "epithets": "Duke of Vosmark &middot; leads the second siege of Ardenwake &middot; 38 years old",
+                "teaser": "The only one of the first five besiegers to breach the cathedral itself &mdash; and he fails there, in public, before his own army.",
+                "bio_html": """<p>Duke of Vosmark, thirty-eight, Frankish in appearance (the sheet says Carolingian): broad-shouldered and heavyset, about 6'0&quot;, ruddy and weathered, with a square jaw, furrowed brow, trimmed full beard, dark blond hair and pale grey eyes. An old sword-scar runs across the back of his right hand, and he wears burnished armor with a ducal-crest signet ring over deep crimson.</p>
+          <p>He leads the second siege of Ardenwake and is the only one of the first five besiegers to breach the cathedral itself; he fails publicly before his own army. The sheet sets two traits against each other: ambition (the throne) and devotion (heaven).</p>""",
+            },
+            {
+                "slug": "ganeth", "name": "Ganeth",
+                "epithets": "Marshal-Priest of Cassoria &middot; fourth siege of Ardenwake &middot; 49 years old",
+                "teaser": "Takes the army through the breach and stops in front of the sacred plinth, his certainty visibly failing.",
+                "bio_html": """<p>Marshal-Priest of Cassoria, forty-nine, powerfully built at about 6'1&quot;, with deep-set dark eyes, olive-bronze skin weathered by decades outdoors, and ordination marks scarred into both forearms. He wears bronze scaled armor and a horned priestly headdress over a braided ceremonial beard and long, dark, greying hair.</p>
+          <p>He leads the fourth siege of Ardenwake. The sheet's last image has him at the plinth after the breach, his army still intact behind him, confronting the sacred artifact as his theological certainty visibly breaks.</p>""",
+            },
+            {
+                "slug": "kest", "name": "Kest",
+                "epithets": "Kest the Anointed &middot; leader of the Bright Remnant warband &middot; late 30s",
+                "teaser": "A self-declared prophet who ends alone in the cathedral hall, taking his solitude for proof of his holiness.",
+                "bio_html": """<p>A homegrown fringe prophet of Aldrovan stock (Pax Aldrovana) who styles himself &ldquo;Kest the Anointed&rdquo; and leads the Bright Remnant warband. Gaunt and ascetic-thin at about 5'11&quot;, hollow-cheeked and pale, with intense fixed grey-blue eyes, long unkempt prematurely greying hair and beard hung with bone talismans, and self-inflicted ritual scars on both forearms.</p>
+          <p>The sheet's final image: after his followers have scattered to loot, Kest stays on alone in the cathedral hall, exhausted and fervent, convinced that his solitude proves his holiness. Its expressions: furious certainty, ascetic resolve, prophetic fervor.</p>""",
+                "quote": "The light is not in the heavens, but in those who refuse to forget.",
+            },
+            {
+                "slug": "massinen", "name": "Massinen",
+                "epithets": "Warlord of the Tazenna Reach &middot; seventh siege of Ardenwake &middot; 67&ndash;70 years old",
+                "teaser": "Commands the seventh siege from a staff and a table of generals, and never reaches the walls.",
+                "bio_html": """<p>Warlord of the Tazenna Reach, about seventy, around 5'10&quot;, with dark bronze sun-weathered skin, thin close-cropped white hair and a long white beard, sharp dark eyes in a deeply lined face, and old campaign scars across both forearms. He is drawn at the seventh siege of Ardenwake, relying on his staff and his generals, in sand, cream and desert ochre with weathered brown leather.</p>
+          <p>The sheet's closing image is captioned three months into the siege &mdash; he never reached the walls. Its expressions: command, pride, weariness, final resolve.</p>""",
+            },
+            {
+                "slug": "berant", "name": "Berant",
+                "epithets": "Chief Engineer, Corvane Imperium &middot; 51&ndash;54 years old",
+                "teaser": "Designs the eleventh siege against Ardenwake, and writes the private notes that tell his emperor what a siege cannot do to a holy city.",
+                "bio_html": """<p>Chief Engineer of the Corvane Imperium, in his early fifties, lean at about 5'9&quot;, olive and weathered, with salt-and-pepper hair and dark brown eyes. He designs the engineering campaign of the eleventh siege against Ardenwake, including the spire-targeting morale strategy, and he authors the private notes to <a href="../characters/vasarion.html">Vasarion</a> that separate conventional siegecraft from breaking a holy city's morale.</p>
+          <p>He wears aged bronze and a charcoal cloak, with brass measuring tools at his belt; the sheet's expressions include determined, tired from campaigns, and skeptical.</p>""",
+            },
+            {
+                "slug": "dorenzo", "name": "Dorenzo",
+                "epithets": "Prince of Solvarre &middot; 32 years old",
+                "teaser": "Takes the field in ornamental parade armor with Valeria's refusal letter folded inside his breastplate.",
+                "bio_html": """<p>Prince of Solvarre, thirty-two: slim, fashionably dressed even on campaign, fine-featured and handsome with a petulant mouth, dark curled hair, dark brown eyes, a thin fashionable mustache and an ornate signet ring. His armor is ornamental parade steel in silver-grey with rich decorative accents, over luxurious Solvarre court colors.</p>
+          <p>He carries <a href="../characters/valeria.html">Valeria</a>'s refusal letter inside his breastplate. The sheet pairs two traits: courtly pride, and entitlement refused.</p>""",
+            },
+            {
+                "slug": "corse-0000b", "name": "Corse",
+                "epithets": "Steward to King Wendric of Rovain &middot; 55 years old",
+                "teaser": "Keeps the paper of the Crown's Due &mdash; and keeps the king's last words out of the ledger.",
+                "bio_html": """<p>Steward to King <a href="../characters/wendric.html">Wendric</a> of Rovain &mdash; the office held by <a href="../characters/corse.html">Corse</a> in Case 0000 &mdash; fifty-five, spare and slightly stooped at about 5'7&quot;, with a long, deeply lined face of careful neutrality, grey thinning hair and pale watchful grey-blue eyes. The middle finger of his writing hand carries an ink-stain callus. The sheet lays out his documents: the Crown's Due, the Commission Fiction, a confiscation order, a recall notice, and a wax tablet of private notes.</p>
+          <p>He is present with <a href="../characters/wendrics-wife.html">the Queen</a> at Wendric's private breakdown after the king fails to lift Valeria, one of only two witnesses to that hour; after the king's death, the sheet says, he keeps the last words private.</p>""",
+                "quote": "A king's last word is not a ledger entry.",
+            },
+            {
+                "slug": "wendrics-wife", "name": "Wendric's Wife",
+                "epithets": "Queen of Rovain &middot; 31&ndash;34 years old",
+                "teaser": "One of only two witnesses to the hour in which a king learns he cannot lift the sword.",
+                "bio_html": """<p>Queen of Rovain and wife of King <a href="../characters/wendric.html">Wendric</a>; a Rovain woman, Anglo-Saxon in appearance, about 5'5&quot;, with a composed court bearing, a fair court-pale complexion, light brown hair in an elaborate court style, hazel eyes and a dignified face that gives little away in public. She wears rich formal court robes.</p>
+          <p>She is present alongside <a href="../characters/corse-0000b.html">Corse</a> at Wendric's private breakdown after he fails to lift Valeria, and is one of only two witnesses to that hour.</p>""",
+            },
+            {
+                "slug": "wendrics-son", "name": "Wendric's Son",
+                "epithets": "Heir to the throne of Rovain &middot; never crowned &middot; 11 years old",
+                "teaser": "Eleven years old when his father dies; the realm is governed in his name by a Regent Council.",
+                "bio_html": """<p>Heir to the throne of <a href="../characters/wendric.html">Wendric</a>'s Rovain, never crowned. A slight child of eleven, about 4'6&quot;, fair, with a gentle-featured face, a simple light-brown boy's cut and blue eyes resembling his father's, in plain charcoal-and-ivory court dress with a mourning collar. After his father's death a Regent Council rules in his name.</p>
+          <p>The sheet's expressions: gentleness, mourning, bearing duty, quiet hope.</p>""",
+            },
+            {
+                "slug": "yorbulan", "name": "Yorbulan",
+                "epithets": "Khagan of the Sarnak Horde &middot; first siege of Ardenwake &middot; 48 years old",
+                "teaser": "Leads the first siege on a dying kam's prophetic vision, and dies of winter fever outside walls he never breaches.",
+                "bio_html": """<p>Khagan of the Sarnak Horde, forty-eight, with a broad, wind-burned face, black braided hair, dark brown eyes, a long braided mustache and short beard, deeply weathered bronze skin, many old clan war scars and the powerful frame of a horse-warrior. He wears dark leather and iron lamellar in earth and fur-grey tones, with clan tokens on his war gear.</p>
+          <p>He leads the first siege of Ardenwake, following a dying kam's prophetic vision. The sheet's last image is the eleventh day before Ardenwake: he dies of winter fever outside the walls after an eleven-day siege, and the walls are never breached.</p>""",
+            },
+            {
+                "slug": "branimir", "name": "Branimir",
+                "epithets": "Prince of Belnograd &middot; mid-30s",
+                "teaser": "Dies of river fever outside the walls, knowing he will not live to order the assault &mdash; and the grudge ends with him.",
+                "bio_html": """<p>Prince of Belnograd, thirty-four to thirty-six, Rus/Slavic in appearance: solidly built at about 5'10&quot;, with a broad, heavy-browed face ruddy from cold-weather campaigning, long dark brown hair often braided back, pale blue eyes and a full beard in the fashion of Belnograd's princely line. His face is prematurely lined, which his advisors attribute to eleven years of privately nursing the campaign. He wears layered mail over a fur-lined coat, a fur-trimmed princely cloak and a curved cavalry saber, with a small icon of his great-grandmother on a cord beneath his armor.</p>
+          <p>The sheet shows him pursuing the grudge, then before the final assault, knowing he will not live to order it, then dying of river fever outside the walls; its caption reads that the grudge ends with him, before the siege begins.</p>""",
+            },
+            {
+                "slug": "coren", "name": "Coren",
+                "epithets": "First Factor of the Merchant-Council of Velmoro &middot; early 50s",
+                "teaser": "Orders the Ardenwake blockade withdrawn the moment the numbers turn unprofitable.",
+                "bio_html": """<p>First Factor of the Merchant-Council of Velmoro, in her early fifties: sharp-featured and built for negotiation, with grey-streaked dark hair in a severe knot, dark brown assessing eyes, olive city-pale skin and the ink-stained fingertips of a lifetime of ledgers. She wears deep charcoal and muted burgundy weathered wool and carries a black lacquered ledger-case.</p>
+          <p>The sheet shows her at the Ardenwake blockade; she orders it withdrawn when the numbers turn unprofitable. Its expressions: measured, assessing, impatient, cold resolve.</p>""",
+            },
+            {
+                "slug": "verrin", "name": "Verrin",
+                "epithets": "Captain, the Free Company of the Blind Ford &middot; 42 years old",
+                "teaser": "A mercenary captain the source never describes &mdash; drawn as a scarred, guarded professional.",
+                "bio_html": """<p>Captain of the Free Company of the Blind Ford, forty-two: a sturdy, scarred professional soldier at about 5'11&quot;, with a weathered, guarded face of practiced mercenary neutrality, cropped brown hair going grey, brown eyes, short unkempt stubble, and a notched ear from an old campaign injury. His armor is mismatched worn steel, brown leather and dark iron, over faded charcoal.</p>
+          <p>The text gives him no physical description; everything above was invented for the sheet.</p>""",
+            },
+            {
+                "slug": "the-wounded-archer", "name": "The Wounded Archer",
+                "epithets": "Archer in Aldwick's defense &middot; 16 years old",
+                "teaser": "Sixteen, lied about his age to enlist, and retells the story once a year.",
+                "bio_html": """<p>An archer in Aldwick's defense, sixteen, slight and still growing at about 5'5&quot;, with light brown cropped hair, brown eyes and fair skin. He fights in borrowed military leathers too large for him, with a simple hunting bow, and carries a healed puncture wound in the lower leg from the siege.</p>
+          <p>He lied about his age to enlist, and later retells the story once a year.</p>""",
+            },
+            {
+                "slug": "the-vault-guard", "name": "The Vault Guard",
+                "epithets": "Palace Guard, vault entrance &middot; Marrowgate &middot; 28 years old",
+                "teaser": "Stands the door of the vault at Marrowgate as a listener and a witness &mdash; and later retells what he saw.",
+                "bio_html": """<p>A palace guard of twenty-eight posted at the vault entrance at Marrowgate: solidly built, with cropped brown hair, warm brown eyes, fair weathered skin, a plain attentive face and light stubble. He wears Rovish palace mail and a deep-red-and-cream surcoat, with a spear and a short sword.</p>
+          <p>The sheet's expressions are listening, witnessing, retelling the story and attention.</p>""",
+            },
+        ],
         "scenes": [],
     },
     {
@@ -2143,20 +2555,20 @@ LORE = [
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
           <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them.</p>""",
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone, an eight-foot electric eel &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Every Catalyst on file is listed below.</p>""",
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
         "teaser": "A monotheism built on waiting, honest prayer, and a sword no one else can lift.",
         "definition_html": """<p>A monotheism built around a single historical miracle: an honest prayer, answered from the sky. Ardwen &mdash; the Unhastening, the Sky-Answered &mdash; is worshipped as the one eternal goddess, without rival, consort, or divine family, and asks less of her followers than most faiths do: wait, ask honestly, keep your promises, and act responsibly without pretending to know a god's mind for her. Her clergy are careful to distinguish what is known from what is merely mysterious, and the faith's own maxim is built to resist any shortcut: <em>Ardwen answers the honest, but never on command.</em></p>
           <p>Her institutional church, the Vigil of Ardwen, is led by a First Keeper and organized into regional Houses of Vigil, with confession, baptism, marriage, funerals, and pilgrimage among its sacred rites. The faith reveres its founding miracle &mdash; and the sword that came with it &mdash; as a sacred sign of that day, never as a rival object of worship. Whatever else it is, Valeria is not a god.</p>""",
-        "appears_html": """<p>The founding faith of <a href="../books/0000.html">The Sword of Valeria</a>, where the goddess herself and the relic she left behind both have entries of their own: <a href="../characters/ardwen.html">Ardwen</a> and <a href="../characters/valeria.html">Valeria</a>. Generations later, in <a href="../books/0157.html">The Stolen Prince War</a>, the Vigil's doctrine of unearned, uncommandable grace is tested to its limit by a dungeon that answers the same chest the same way every single time &mdash; a contradiction its own Keeper, <a href="../characters/yudith.html">Yudith</a>, spends eleven years trying to preach around.</p>""",
+        "appears_html": """<p>The founding faith of <a href="../books/0000.html">The Sword of Valeria</a>, where the goddess herself and the relic she left behind both have entries of their own: <a href="../characters/ardwen.html">Ardwen</a> and <a href="../characters/valeria.html">Valeria</a>. Generations later, in <a href="../books/0157.html">The Stolen Prince War</a>, the Vigil's doctrine of unearned, uncommandable grace is tested to its limit by a dungeon that answers the same chest the same way every single time &mdash; a contradiction its own Keeper, <a href="../characters/yudith.html">Yudith</a>, spends eleven years trying to preach around. In <a href="../books/0156.html">The Purging of Charsianon</a>, a Byzantine-styled river valley keeps the Vigil in a plain House of stone and candles, and a Keeper of the Dorylaion Vigil turns a name for a strange calm &mdash; the Doctrine of the Stolen Vessel &mdash; into an army.</p>""",
     },
     {
         "slug": "threefold-crown", "name": "The Threefold Crown", "group": "Religion",

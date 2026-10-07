@@ -16,8 +16,8 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; seven are live on the site so far, plus
-three coming-soon books with a character roster (0188, 2140, 3115) and five
-cover-only coming-soon entries (3312, 3887, 4442, 0000B, 2114) — see
+five coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B) and four
+cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
 
@@ -166,8 +166,8 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently fifteen entries: seven published,
-                            eight coming-soon — see §6)
+/books.html             Full book list (currently sixteen entries: seven published,
+                            nine coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -178,14 +178,15 @@ book's own page rather than as their own top-level sections.
                             threefold-crown, decree-of-luminescence;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (175 total — 10 for
+/characters/<slug>.html    One page per character (220 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
                             Vessel of Unmediated Grace, 12 for the Songs
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
-                            Thunder-Serpent; see §6)
+                            Thunder-Serpent, 26 for the Purging of
+                            Charsianon, 19 for the Empty Hand; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -283,10 +284,10 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the seven published books (4438 included), plus 0188 (both
-records), 2140 (envoy only — see §6) and 3115 (both records — see §6) now
-that their rosters have been merged in. Canon-guide cases with no book dict
-on the site at all (0156, 1268, 4425) or only an empty coming-soon stub with
-no cast (3312, 3887, 4442, 0000B, 2114) are not.
+records), 2140 (envoy only — see §6), 3115 (both records — see §6) and 0156 (both
+records — see §6) now that their rosters have been merged in. Canon-guide cases
+with no book dict on the site at all (1268, 4425) or only an empty coming-soon
+stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -787,8 +788,8 @@ copy) from a batch containing the cover, the complete manuscript
 zip of 19 character reference sheets and 15 scene paintings, and the Google
 Books link `https://play.google.com/store/books/details?id=hRoSEgAAQBAJ`
 (not opened by an AI: Google blocks automated fetches, the same gap as the
-4417 and 4420 links). **`pages` is still the `EDITOR_PAGES` placeholder** &mdash;
-no page count was given and the Google page could not be read. Genre
+4417 and 4420 links). **`pages` was the `EDITOR_PAGES` placeholder when first merged; the author has since given it as 82** (Oct 2026 update) &mdash;
+the Google page itself still could not be read. Genre
 (*Historical Fantasy &middot; Political Intrigue &middot; Tragedy*) is Claude's call
 (§8). The synopsis, character bios and scene captions were written from the
 manuscript and the sheets; they are not author-confirmed jacket copy.
@@ -844,6 +845,95 @@ call.
 Images: cover 900w; character sheets 980w / 320w thumb; scenes 1000px long
 edge / 450px grid &mdash; the same specs as every other book. The Case 4420 cover
 was replaced in the same pass (new file, same name `4420.jpg`, same 900x1350).
+
+### Book: *The Purging of Charsianon* (Case 0156)
+
+Status: **Coming soon** (awaiting release; the author's word was &ldquo;not published&rdquo;). Added
+straight into master from a batch of: the cover (`0156_0_5x.jpg`, titled **The Purging of
+Charsianon**, tagline &ldquo;Ledger. Unhastening. Reconstruction. Arithmetic. Filed.&rdquo;),
+26 character reference sheets, 14 scene paintings, and the manuscript
+`Case_0156_The_Vault_of_the_Carbon_Echo_2026-10-01_0444AM_GMT_7.md` (revision 3, about 14,700
+words), which arrived in a follow-up message. **`pages`, `genre` and `synopsis_html` are
+untouched `EDITOR_*` placeholders** (the 3115 precedent: manuscript used for context only).
+
+**Title:** the site follows the cover, *The Purging of Charsianon*. The manuscript's own title is
+*The Vault of the Carbon Echo*, and the manuscript's epilogue says the surviving chronicles
+remember the affair as &ldquo;the Purging of Charsianon&rdquo; &mdash; so the cover title is the in-world
+chronicle name. (Same pattern as 0000B, whose cover title differs from its manuscript's.) If the
+author would rather have *The Vault of the Carbon Echo* as the site title, it is one string in the `0156` dict.
+
+The premise, from the manuscript (not author-confirmed jacket copy): a goatherd, **Georgios**,
+chasing a nanny goat, leans across the threshold of a buried, dormant bio-reconstruction beacon
+under Hemiakmon Ridge (**the Carbon Echo**; Mythic Class, 0000 Series) and notices nothing. Six
+years on, its containment faults climb (13, 21, 34, 55, 89) and the valley hears a keening it calls a
+demon. **Lord Bardas** of Charsianon, who hears an unbalanced ledger rather than a ghost story,
+rides up with twelve knights; the chamber takes a full accounting of all thirteen, discards the
+originals, and returns exact copies, flawless in everything measurable and flattened in affect. Bardas
+forgives debts, loses all use for favor and fear, and becomes perfectly, unbearably just. His wife
+**Theodora** is the first to name the absence. **Keeper Photios** of the Dorylaion Vigil names it the
+Doctrine of the Stolen Vessel (and wants the tithes of Charsianon's own House of Vigil back),
+**Lord Leo** supplies a forty-acre grudge and a speech, **Lord Constantine** and **Lady Anastasia**
+join for fishing rights and a marriage, and the mercenary **Melias** commands 1,100 spears and 400
+horse. Bardas does the arithmetic and walks out of his own gate unarmed with the Twelve; all thirteen
+are executed, Bardas last by **Loukas**, who asks for last words and is given a lecture on the
+blade's metallurgy. The resulting panic burns the countryside. The Custodian's log (the **Quiet One**,
+a child-shaped Observer who has watched four generations and may only record) flags Bardas's
+voluntary self-termination as a calculation no standing model predicted.
+
+Twenty-six characters have pages, in this order (the first six feed the homepage cast wall and are
+the case's principals): `bardas`, `theodora`, `the-carbon-echo` (the Catalyst, treated as a
+character per The Sweets' precedent), `the-quiet-one` (the Envoy), `keeper-photios`, `lord-leo`,
+`kyr-symeon`, `kyr-niketas`, `kyr-andronikos`, `loukas`, `melias`, `brother-ignatios`,
+`georgios`, `petros`, `basileios`, `artavasdos`, `marina`, `zoe`, `stephanos`, `ioannes`,
+`theoktistos`, `kassia`, `isidoros`, `lord-constantine`, `lady-anastasia`, `ardwen-0156`. Fourteen
+scenes in story order (first `the-goatherd-and-the-fissure`, last `the-burning`). Catalyst record:
+the Carbon Echo (&ldquo;Mythic Class&rdquo;, which also makes 0000 and 0157 its automatic related cases);
+Envoy record: the Quiet One (&ldquo;Custodian Observer&rdquo;, no observer number given anywhere).
+Cultivator and Catalyst lore prose each picked up one new line, and the Faith of Ardwen's
+`appears_html` gained a sentence naming 0156, so the faith-sharing logic now relates it to 0000 and 0157.
+
+Judgment calls worth knowing: (1) **`ardwen` was taken** (Case 0000's Observer 000), so this goddess is
+`ardwen-0156`; her page links back to the 0000 page. Her sheet is *traditional iconography* (crown, tear,
+white lily, &ldquo;Mother of Mercy&rdquo;) while the manuscript says Houses of Vigil are unadorned by any
+image; the page reports both and does not reconcile them. (2) **Photios**: the sheet says *Bishop of
+Dorylaion*, but manuscript revision 2 deliberately changed bishop to **Keeper** (Ardwen-world
+vocabulary), so the page says Keeper and the slug is `keeper-photios`. (3) The Carbon Echo's
+sheet says &ldquo;memory rewritten&rdquo;; the manuscript says memory was copied faithfully in everything
+measurable. The page uses the manuscript and quotes only the sheet's limbic-resonance / affect notes.
+(4) The analyst note in the Archival Log calls its subject &ldquo;Subject B. (primary reconstruction)&rdquo;;
+Bardas's page treats that as him, which is an inference. (5) **Scene captions are written from the
+images and the manuscript.** `the-valley-listens` is the vaguest (a night village under a swirling sky
+beside the ridge); `the-chamber-takes-its-count` shows thirteen figures before a column of light in a
+crystalline hall, captioned as the chamber scene rather than the undercroft council; `a-justice-without-warmth`
+is captioned from chapter 8 (Bardas reviewing judgments). Change any that miss. (6) Isidoros's &ldquo;ages
+unusually slowly&rdquo; is from his sheet only; the manuscript only has a villager wondering about him once.
+
+Images: cover 900x1350; character sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid &mdash;
+the same specs as every other book.
+
+### Cast added to Case 0000B (*Sword of Valeria: The Empty Hand*)
+
+Nineteen character reference sheets (`char.zip`) were added to the `0000b` stub. **No manuscript came with
+them**, so `pages`, `genre` and `synopsis_html` are still `EDITOR_*`, there is no `catalyst`/`envoy`
+record, and the bios use only what the sheets print. The sheets' setting: Ardenwake, a holy city besieged
+eleven times; **Valeria** (the sword) is lifted at the eleventh siege by **the Anchorite** of the Vigil of
+Ardwen after five centuries of failed attempts; the sheets' world includes Pax Aldrovana, the Corvane
+Imperium, Rovain, Solvarre, Vosmark, Cassoria, Belnograd, Velmoro, the Sarnak Horde and the Tazenna
+Reach. The inference that 0000B is the published form of the canon guide's *Pax Aldrovana* continuation
+(see below) is now supported by the sheets themselves, which say &ldquo;Aldrovan (Pax Aldrovana)&rdquo; on
+several of them.
+
+In order: `the-anchorite`, `aveline`, `halvard`, `vasarion`, `aimeric`, `ganeth` (the six principals, and the
+homepage wall), then `kest`, `massinen`, `berant`, `dorenzo`, `corse-0000b`, `wendrics-wife`, `wendrics-son`,
+`yorbulan`, `branimir`, `coren`, `verrin`, `the-wounded-archer`, `the-vault-guard`. The principals are a first
+pass, edit them freely. Judgment calls: (1) **`corse` was taken** by Case 0000's steward to King Wendric;
+this sheet's Corse has the same office and the same king, so it is `corse-0000b` and links back to the
+0000 page, but whether they are literally the same man is the author's call. (2) `wendric`, `valeria`
+and `ardwen` are Case 0000 pages and are linked rather than duplicated; there is no 0000B sheet for Wendric
+himself. (3) Verrin's and the Anchorite's sheets say outright that their appearance details are invented.
+(4) The Anchorite's sheet names a second protagonist, **Xu Lian**, who has no page here. (5) Several
+sheets show scenes (e.g. the Vault Guard's &ldquo;Witnessing&rdquo; panel) that the pages describe only by caption;
+the bios deliberately stop where the sheets stop.
 
 ### Cover-only entries added with it: Case 0000B and Case 2114
 
@@ -907,9 +997,12 @@ sit at the end of `BOOKS`, in the order the author listed them.
   "More than a dozen novels" total were mentioned early on — only seven are
   live, plus 0188, 2140 and 3115 with a roster but no synopsis yet (§6).
 - **Case 4438** (*The Heavenly Thunder-Serpent*) is live with a full cast,
-  scene gallery, both roster records and its Google Books link, but `pages` is
-  still the `EDITOR_PAGES` placeholder, and the link hasn't been opened by an
-  AI. **Cases 0000B and 2114** are cover-only coming-soon stubs (§6).
+  scene gallery, both roster records, its Google Books link and a confirmed
+  page count (82); the link hasn't been opened by an AI. **Case 2114** is a
+  cover-only coming-soon stub, **Case 0000B** is coming-soon with a 19-character
+  cast but no pages, genre, synopsis or catalyst/envoy record, and **Case 0156**
+  (*The Purging of Charsianon*) is coming-soon with a 26-character cast, 14
+  scenes and both roster records but no pages, genre or synopsis (§6).
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -966,7 +1059,17 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest merge (Case 4438 + two stubs, straight into master).** No staging
+- **Latest update (4438 page count, 0000B cast, new Case 0156 — straight into master).**
+  The author sent the whole site as `Dzulfaraaghaini.zip` plus `char.zip` (0000B),
+  `0156.zip` + the cover + the manuscript, and the line &ldquo;4438 page number is 82&rdquo;.
+  Done: `pages` for 4438 set to `"82"`; 19 characters added to the `0000b` stub and a
+  `PRINCIPALS` entry; a full new `0156` dict (26 characters, 14 scenes, `catalyst`, `envoy`)
+  placed after 3115, with a `PRINCIPALS` entry; one new sentence each in the Cultivator and
+  Catalyst lore prose; one new sentence in the Faith of Ardwen's `appears_html`. Images: 1 cover,
+  90 character files (45 slugs x full + thumb), 28 scene files (14 slugs x full + grid). Recount
+  after rebuilding: cases 15 -> 16, characters 175 -> 220, scenes 105 -> 119; every local link in
+  every page resolves. `HOME_SCENES` was not changed (no 0156 scene on the homepage band).
+- **Earlier merge (Case 4438 + two stubs, straight into master).** No staging
   copy this time: the author sent the files with the request. Added: the full
   Case 4438 dict (synopsis, 19 characters, 15 scenes, `catalyst`, `envoy`,
   Google Books link), placed after 4555 so the published books stay grouped;
