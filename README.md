@@ -252,7 +252,7 @@ Merged: 2026-10-07, straight into master at the author's request (no staging cop
 ### [MERGED] Update — where to begin, record lines, share buttons, link previews
 
 Added:
-- Home page **Where to begin** block (`#begin`, linked from the hero): says there is no first book, each case stands alone and all are connected, then lists the seven published cases by their hook with case and genre. Published case pages carry a one-line "Stands alone" note; the Cases page says the same under its intro.
+- Home page **Where to begin** block (`#begin`, the last section of the page, linked from the hero button): says there is no first book, each case stands alone and all are connected, then lists the seven published cases by their hook with case and genre. Published case pages carry a one-line "Stands alone" note; the Cases page says the same under its intro.
 - Every record (scene) now has a descriptive line, `Subject / Archive` (e.g. *Subject* The Principal Handmaid / *Archive* Case 4099), on the case page, the Records index and its own page. Subjects come from the characters the record's caption links to, or from an optional `"subjects": [slugs]` list on the scene; 36 of 119 records name no subject because their captions link to no one.
 - `records/<slug>.html` — 119 new pages, one per record, so a shared record link has its own preview. Each shows the image, the Subject/Archive line, previous/next record and a link to read the case.
 - One **Share** button on every case page, subject page and record (case page slider, Records index, record page). Uses the device share sheet where there is one, otherwise copies the link; hidden until `js/site.js` runs.

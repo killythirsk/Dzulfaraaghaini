@@ -942,6 +942,7 @@ body.lightbox-open { overflow: hidden; }
 .btn--ghost { margin-left: 0.4rem; border-color: #6b6552; color: #d8cfb6; }
 .btn--ghost:hover, .btn--ghost:focus-visible { border-color: var(--gold); }
 
+.begin { scroll-margin-top: 5rem; } /* keep the heading clear of the sticky header when jumped to */
 .begin-lede { max-width: 40rem; margin-top: var(--space-xs); font-size: 1.05rem; }
 .begin-list { list-style: none; margin: var(--space-sm) 0 0; padding: 0; border-top: 1px solid var(--rule); }
 .begin-list li { border-bottom: 1px solid var(--rule); }

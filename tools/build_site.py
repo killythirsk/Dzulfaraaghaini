@@ -3105,7 +3105,6 @@ def _index_body_base():
       </div>
     </section>
 
-@@BEGIN@@
 @@FEATURED@@
     <div class="section wrap">
     %s
@@ -3120,7 +3119,8 @@ def _index_body_base():
       </ul>
       <p><a href="lore.html">Open the archive &rarr;</a></p>
     </section>
-""" % (AUTHOR, AUTHOR, published_section_html(0, teaser=True), lore_items)
+
+@@BEGIN@@""" % (AUTHOR, AUTHOR, published_section_html(0, teaser=True), lore_items)
 
 
 ROSTER = {

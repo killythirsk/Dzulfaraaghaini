@@ -123,7 +123,7 @@ filename.
 - **Records have their own pages**, `records/<scene-slug>.html` (`record_detail_body()`), because a scene had no URL of its own to share or preview. Scene slugs share one namespace across books (checked: no duplicates); keep it that way. The old lightbox links are untouched.
 - **Record line (Subject / Archive)** is `record_meta_html()`. Subjects = characters linked from the caption, or an optional `"subjects": [character slugs]` on the scene dict, which wins when present. Nothing is guessed; records with neither show Archive only.
 - **Share buttons** (`share_btn()`) carry `data-share-url/-title/-text` and are `hidden` until `js/site.js` shows them. New page types that should be shareable need one.
-- **Where to begin** (`begin_html()`, home `#begin`) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected.
+- **Where to begin** (`begin_html()`, home `#begin`, deliberately the last section of the home page; the hero's second button jumps to it) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected.
 - **`robots.txt` is ignored on the project address** (crawlers read it only at the host root); `sitemap.xml` has to be submitted in Search Console. Image protection is unchanged, but note that `og:image` necessarily names the image file for previews to work.
 
 Everything visual is CSS custom properties at the top of `css/style.css`
