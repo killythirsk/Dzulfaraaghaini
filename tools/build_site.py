@@ -2557,6 +2557,18 @@ BOOKS = [
         "characters": [],
         "scenes": [],
     },
+    {
+        "slug": "2365", "title": "The Decree of Luminescence",
+        "status": ["coming-soon"],
+        "cover_file": "2365.jpg",
+        "hook": "Ash. Roll. Residue. Append. Nil.",
+        "case_tag": "Case 2365",
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [],
+        "scenes": [],
+    },
 ]
 
 LORE = [
@@ -2592,7 +2604,7 @@ LORE = [
         "teaser": "A theology of measured light: what is favored is lit, and what is lit has been favored.",
         "definition_html": """<p>The youngest of the faiths on file, promulgated after a kingdom-threatening catastrophe: years of ash-blotted sky broken, at the exact point of famine, by a single standing column of true daylight over the capital. <strong>Sol-Invictus, the Unconquered Sun,</strong> is worshipped as the one eternal, lending light, and its doctrine is unusually literal for a religion: light is not read as a sign of favor, it <em>is</em> favor, measured out to every soul at birth as a store of borrowed fire and returned, spent or unspent, at death. It is a creditor's theology at bottom, and its own clergy don't pretend otherwise. The doctrine's core article states the idea plainly: <em>Whatever was favored was lit, and whatever was lit had been favored.</em></p>
           <p>Its church, the Last Order, is led by a High Pontiff and keeps its own doctrine correctable only by further entry, never by erasure. A claimant to real favor stands before a lens that concentrates true daylight onto them, to see whether they visibly glow; a crown is carried through open flame, to see whether the gold endures. What three centuries of both tests have never quite worked out is how to tell light that's generated from light that's merely, cleverly, reflected.</p>""",
-        "appears_html": """<p>Founded three centuries before the events of <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
+        "appears_html": """<p>Its founding is the subject of <a href="../books/2365.html">The Decree of Luminescence</a>. Three centuries on, in <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
     },
 ]
 
