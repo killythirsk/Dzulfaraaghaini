@@ -12,6 +12,16 @@ from datetime import datetime, timezone, timedelta
 OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 AUTHOR = "Dzulfaraaghaini"
 
+# Absolute address of the live site, WITH a trailing slash. Canonical links, Open Graph
+# tags, share buttons and sitemap.xml are all built from this one value. It is the
+# GitHub Pages project address today; when the site moves (custom domain, Cloudflare
+# Pages, a <username>.github.io repo) change this line and rebuild, nothing else.
+SITE_URL = "https://killythirsk.github.io/Dzulfaraaghaini/"
+
+# Preview image for pages that have no picture of their own (home, lists, lore, about).
+DEFAULT_OG_IMAGE = "images/backgrounds/hero.jpg"
+DEFAULT_OG_ALT = "Dzulfaraaghaini — speculative fiction"
+
 # Recomputed every time this script runs, so the footer always reflects the
 # moment this exact version of the site was generated. Since a revision on
 # this static site only takes effect once it's rebuilt, this same value
@@ -2615,19 +2625,97 @@ def nav_html(active_file, depth):
     return "\n          ".join(items)
 
 
-def head_html(title, description, depth):
+import struct as _struct
+from html import unescape as _unesc
+
+# Every page registered through page() lands here; sitemap.xml is written from it.
+SITEMAP_PATHS = []
+
+
+def plain(html_text):
+    """Tags stripped, entities decoded, whitespace collapsed: safe to reuse as share text."""
+    return re.sub(r"\s+", " ", _unesc(re.sub(r"<[^>]+>", "", html_text or ""))).strip()
+
+
+def attr(text):
+    """Escape text for use inside a double-quoted HTML attribute."""
+    return _esc(plain(text), quote=True)
+
+
+def abs_url(path):
+    """Absolute live URL for a site-relative path ('' or 'index.html' is the site root)."""
+    if path in ("", "index.html"):
+        return SITE_URL
+    return SITE_URL + path
+
+
+def jpeg_size(rel_path):
+    """(width, height) of a JPEG under the project root, read from its header; None if unreadable."""
+    try:
+        with open(os.path.join(OUT, rel_path), "rb") as f:
+            f.read(2)
+            while True:
+                b = f.read(1)
+                while b and b != b"\xff":
+                    b = f.read(1)
+                while b == b"\xff":
+                    b = f.read(1)
+                if not b:
+                    return None
+                m = b[0]
+                if 0xC0 <= m <= 0xCF and m not in (0xC4, 0xC8, 0xCC):
+                    f.read(3)
+                    h, w = _struct.unpack(">HH", f.read(4))
+                    return w, h
+                ln = _struct.unpack(">H", f.read(2))[0]
+                f.read(ln - 2)
+    except (OSError, _struct.error):
+        return None
+
+
+def head_html(title, description, depth, path=None, image=None, image_alt=None, og_type="website"):
     r = rel(depth)
+    seo = ""
+    if path is not None:
+        img = image if image and os.path.isfile(os.path.join(OUT, image)) else DEFAULT_OG_IMAGE
+        alt = image_alt if (image and img == image and image_alt) else DEFAULT_OG_ALT
+        size = jpeg_size(img)
+        # The art here is portrait, so a large-image card would be cropped hard: only
+        # use it for images at least 1.5x wider than tall.
+        card = "summary_large_image" if size and size[0] >= 1.5 * size[1] else "summary"
+        url = abs_url(path)
+        og_title = attr(title)
+        og_desc = attr(description)
+        seo = """
+  <link rel="canonical" href="%(url)s">
+  <meta property="og:site_name" content="%(site)s">
+  <meta property="og:type" content="%(type)s">
+  <meta property="og:title" content="%(title)s">
+  <meta property="og:description" content="%(desc)s">
+  <meta property="og:url" content="%(url)s">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="%(img)s">%(dims)s
+  <meta property="og:image:alt" content="%(alt)s">
+  <meta name="twitter:card" content="%(card)s">
+  <meta name="twitter:title" content="%(title)s">
+  <meta name="twitter:description" content="%(desc)s">
+  <meta name="twitter:image" content="%(img)s">
+  <meta name="twitter:image:alt" content="%(alt)s">""" % {
+            "url": url, "site": attr(AUTHOR), "type": og_type, "title": og_title, "desc": og_desc,
+            "img": abs_url(img), "alt": attr(alt), "card": card,
+            "dims": ('\n  <meta property="og:image:width" content="%d">\n  <meta property="og:image:height" content="%d">' % size) if size else "",
+        }
     return """  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>%s</title>
   <meta name="description" content="%s">
-  <meta name="robots" content="noimageindex">
+  <meta name="robots" content="noimageindex">%s
   <link rel="icon" href="%sassets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="%sassets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
-  <link rel="stylesheet" href="%scss/style.css?v=%s">""" % (title, description, r, r, r, ASSET_V)
+  <link rel="stylesheet" href="%scss/style.css?v=%s">""" % (title, attr(description), seo, r, r, r, ASSET_V)
 
 
 def header_html(active_file, depth):
@@ -2664,7 +2752,11 @@ def footer_html(depth):
   <script src="%sjs/site.js?v=%s" defer></script>""" % (AUTHOR, contact, BUILD_TIME, r, ASSET_V)).replace("@@SOCIALS@@", socials)
 
 
-def page(title, description, depth, active_file, body):
+def page(title, description, depth, active_file, body, path=None, image=None, image_alt=None, og_type="website"):
+    """`path` is the page's own site-relative file name; passing it turns on the canonical
+    link, the Open Graph / Twitter tags and the sitemap entry for the page."""
+    if path is not None:
+        SITEMAP_PATHS.append(path)
     return """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2678,7 +2770,7 @@ def page(title, description, depth, active_file, body):
 %s
 </body>
 </html>
-""" % (head_html(title, description, depth), header_html(active_file, depth), body, footer_html(depth))
+""" % (head_html(title, description, depth, path, image, image_alt, og_type), header_html(active_file, depth), body, footer_html(depth))
 
 
 def tags_html(book):
@@ -2693,6 +2785,54 @@ def tags_html(book):
         else:
             spans.append("<li class=\"%s\">%s</li>" % (cls, label))
     return "<ul class=\"tags\">" + "".join(spans) + "</ul>"
+
+
+def share_btn(path, title, text, cls=""):
+    """One Share button. Hidden until js/site.js shows it, so it never appears inert."""
+    return ('<button type="button" class="share-btn%s" hidden data-share-url="%s" data-share-title="%s" data-share-text="%s">Share</button>'
+            % (" " + cls if cls else "", abs_url(path), attr(title), attr(text)))
+
+
+# ---- records (scenes): descriptive line, own pages ------------------------------------
+def record_path(sc):
+    return "records/%s.html" % sc["slug"]
+
+
+def record_title(sc):
+    t = plain(sc["caption_html"]).rstrip(".")
+    return t[:1].upper() + t[1:]
+
+
+def record_subjects(sc):
+    """Subjects a record is about: an explicit "subjects" list on the scene if given, else the
+    characters its caption links to. Nothing is guessed beyond that."""
+    slugs = sc.get("subjects") or re.findall(r'characters/([\w\-]+)\.html', sc["caption_html"])
+    seen, out = set(), []
+    for s in slugs:
+        if s in CHAR_INDEX and s not in seen:
+            seen.add(s)
+            out.append(CHAR_INDEX[s][0])
+    return out
+
+
+def record_meta_html(sc, b, depth, short=False):
+    """The descriptive line under a record: Subject / Archive. `short` drops the case title
+    (used on the case's own page, where the title is already the page heading)."""
+    r = rel(depth)
+    parts = []
+    subs = record_subjects(sc)
+    if subs:
+        parts.append('<span class="rm-label">Subject</span> ' + ", ".join(
+            '<a href="%scharacters/%s.html">%s</a>' % (r, c["slug"], c["name"]) for c in subs))
+    parts.append('<span class="rm-label">Archive</span> <a href="%sbooks/%s.html">%s</a>'
+                 % (r, b["slug"], b["case_tag"] if short else "%s &middot; %s" % (b["case_tag"], b["title"])))
+    return '<p class="record-meta">%s</p>' % ' <span class="rm-sep" aria-hidden="true">/</span> '.join(parts)
+
+
+def record_actions_html(sc, b, depth):
+    r = rel(depth)
+    return ('<p class="record-actions"><a class="record-open" href="%s%s">Open record</a>%s</p>'
+            % (r, record_path(sc), share_btn(record_path(sc), record_title(sc) + " — " + b["case_tag"], record_title(sc) + ".")))
 
 
 def character_entry_html(c, depth):
@@ -2724,7 +2864,9 @@ def scene_gallery_html(book, depth):
         items.append("""      <li>
         <a class="lightbox-link" data-group="scenes" href="#" data-full="%s"><img src="%s" alt="%s"></a>
         <p class="scene-caption">%s</p>
-      </li>""" % (full, grid, s["alt"], s["caption_html"]))
+        %s
+        %s
+      </li>""" % (full, grid, s["alt"], s["caption_html"], record_meta_html(s, book, depth, short=True), record_actions_html(s, book, depth)))
     return "\n".join(items)
 
 
@@ -2958,11 +3100,12 @@ def _index_body_base():
         <h1>%s</h1>
         <p class="tagline">Speculative fiction. The fragility of human systems, one kingdom at a time.</p>
         <p class="lede">%s writes speculative fiction about the rise and collapse of kingdoms, the evolution of faiths, and the small moments of pride, fear, and vanity that bring great structures down. This site collects the novels, and the lore behind them.</p>
-        <p><a class="btn" href="books.html">Enter the archive</a></p>
+        <p><a class="btn" href="books.html">Enter the archive</a> <a class="btn btn--ghost" href="#begin">Where to begin</a></p>
         @@LEDGER@@
       </div>
     </section>
 
+@@BEGIN@@
 @@FEATURED@@
     <div class="section wrap">
     %s
@@ -3056,7 +3199,7 @@ def index_body():
       <p><a href="scenes.html">View all records &rarr;</a></p>
     </section>
 """ % (home_wall_html(), home_scenes_html())
-    return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections).replace("@@FEATURED@@", featured_html())
+    return _index_body_base().replace("@@LEDGER@@", ledger).replace("@@SECTIONS@@", sections).replace("@@BEGIN@@", begin_html(0)).replace("@@FEATURED@@", featured_html())
 
 
 def contact_body():
@@ -3117,6 +3260,7 @@ def books_body():
       <div class="wrap">
         <h1>Cases</h1>
         <p class="lede">Every novel is filed as a case. Open one to read its file: principal subjects, records, and where to read it.</p>
+        <p class="lede">There is no required order. Each case stands alone, so start with whichever promise draws you &mdash; <a href="index.html#begin">here is a short guide</a>.</p>
       </div>
     </section>
 
@@ -3198,6 +3342,15 @@ def book_detail_body(book):
     top_cta = cta_html(b, "top")
     if not top_cta and b["characters"]:
         top_cta = '<div class="cta-row"><a class="cta cta--ghost" href="#subjects">Explore subjects</a></div>'
+    share = share_btn("books/%s.html" % b["slug"], "%s — %s" % (b["title"], b["case_tag"]), b["hook"], "share-btn--cta")
+    if top_cta:
+        top_cta = top_cta.replace("</div>", share + "</div>")
+    else:
+        top_cta = '<div class="cta-row">%s</div>' % share
+    standalone = ""
+    if is_published(b):
+        standalone = ('<p class="standalone-note">Stands alone. No other case needs to be read first. '
+                      '<a href="%sindex.html#begin">Choose another by its promise</a>.</p>\n          ' % r)
 
     case_tag_html = '<p class="case-tag">%s</p>\n          ' % b["case_tag"] if b.get("case_tag") else ""
 
@@ -3230,7 +3383,7 @@ def book_detail_body(book):
       <div class="prose">
         <section class="subsection">
           <h2>Case File</h2>
-          <ul class="detail-list">
+          %s<ul class="detail-list">
             <li><strong>Pages</strong> &mdash; %s</li>
             <li><strong>Genre</strong> &mdash; %s</li>
           </ul>
@@ -3257,7 +3410,7 @@ def book_detail_body(book):
       %s
     </div>
 """ % (books_href, cover_src, cover_src, _esc(b["title"]), case_tag_html, b["title"], tags_html(b), top_cta,
-       b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section, bottom, related_cases_html(b, 1))
+       standalone, b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section, bottom, related_cases_html(b, 1))
 
 
 def character_detail_body(c, book):
@@ -3279,17 +3432,79 @@ def character_detail_body(c, book):
         <div>
           <h1>%s</h1>
           <p class="character-epithets">%s</p>
+          <p class="share-row">%s</p>
           %s
           %s
         </div>
       </div>
 %s
     </div>
-""" % (book_href, book["case_tag"], book["title"], full_src, full_src, c["name"], c["name"], c["epithets"], c["bio_html"], quote_html, more)
+""" % (book_href, book["case_tag"], book["title"], full_src, full_src, c["name"], c["name"], c["epithets"],
+       share_btn("characters/%s.html" % c["slug"], "%s — %s" % (c["name"], book["case_tag"]), plain(c["teaser"])),
+       c["bio_html"], quote_html, more)
 
 
 from html import escape as _esc
 import re as _re
+
+
+def record_detail_body(sc, b):
+    r = rel(1)
+    scenes = b["scenes"]
+    i = scenes.index(sc)
+    full = "%simages/scenes/%s.jpg" % (r, sc["slug"])
+    title = record_title(sc)
+    step = []
+    if i:
+        step.append('<a href="%s.html">&larr; Previous record</a>' % scenes[i - 1]["slug"])
+    if i + 1 < len(scenes):
+        step.append('<a href="%s.html">Next record &rarr;</a>' % scenes[i + 1]["slug"])
+    steps = '<p class="record-step">%s</p>' % " ".join(step) if step else ""
+    read = read_buttons(b)
+    cta = ('<p><a class="cta cta--primary" href="%s" target="_blank" rel="noopener">%s</a></p>' % (read[0][1], read[0][0].replace("Read on", "Read this case on"))) if read else ""
+    return """    <div class="wrap page-content">
+      <a class="back-link" href="%sbooks/%s.html#records">&larr; %s &middot; %s</a>
+      <div class="character-entry record-entry">
+        <a class="lightbox-link" data-group="records" href="#" data-full="%s"><img class="character-portrait record-image" src="%s" alt="%s"></a>
+        <div>
+          <p class="case-tag">Record %d of %d</p>
+          <h1>%s</h1>
+          %s
+          <p>%s</p>
+          <p class="share-row">%s</p>
+          %s
+          %s
+        </div>
+      </div>
+      <section class="subsection related">
+        <h2>Appears In</h2>
+        %s
+      </section>
+    </div>
+""" % (r, b["slug"], b["case_tag"], b["title"], full, full, _esc(title), i + 1, len(scenes), title,
+       record_meta_html(sc, b, 1), _esc(sc["alt"]) + ".",
+       share_btn(record_path(sc), "%s — %s" % (title, b["case_tag"]), title + "."),
+       steps, cta, case_grid_html([b], 1, "case-grid--one"))
+
+
+def begin_html(depth=0):
+    """Home-page 'Where to begin': tells a new reader there is no required first book."""
+    rows = []
+    for b in BOOKS:
+        if not is_published(b):
+            continue
+        genre = plain(re.sub(r'<span class="editor-note">.*?</span>', "", b["genre"]))
+        rows.append('        <li><a href="%sbooks/%s.html"><span class="begin-hook">%s</span>'
+                    '<span class="begin-meta">%s &middot; %s</span><span class="begin-genre">%s</span></a></li>'
+                    % (rel(depth), b["slug"], b["hook"], b["case_tag"], b["title"], genre))
+    return """    <section class="section wrap begin" id="begin">
+      <h2>Where to begin</h2>
+      <p class="begin-lede">There is no first book. Every case stands alone, and every case is connected to the rest. Open any of them cold &mdash; choose the promise that pulls at you.</p>
+      <ul class="begin-list">
+%s
+      </ul>
+    </section>
+""" % "\n".join(rows)
 
 
 def featured_html():
@@ -3345,8 +3560,8 @@ def scenes_page_body():
     items, books = [], [b for b in BOOKS if b["scenes"]]
     for b in books:
         for sc in b["scenes"]:
-            txt = _esc(" ".join([sc["alt"], _re.sub(r"<[^>]+>", "", sc["caption_html"]), b["title"]]).lower(), quote=True)
-            items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p><p class="rec-meta"><a href="books/%s.html">%s</a> &middot; %s</p></li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), b["slug"], b["title"], b["case_tag"]))
+            txt = _esc(" ".join([sc["alt"], _re.sub(r"<[^>]+>", "", sc["caption_html"]), b["title"], b["case_tag"]] + [c["name"] for c in record_subjects(sc)]).lower(), quote=True)
+            items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p>%s%s</li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), record_meta_html(sc, b, 0), record_actions_html(sc, b, 0)))
     return filter_page_body("Records", len(items), "records", "Search records...", books, items, "recs--scenes")
 
 
@@ -3362,38 +3577,51 @@ _check_principals()
 
 # ---- top-level pages ---------------------------------------------------------
 write("index.html", page("%s \u2014 Speculative Fiction Author" % AUTHOR,
-                          "Speculative fiction novels and the lore behind them.", 0, "index.html", index_body()))
+                          "Standalone speculative-fiction novels about the fragility of kingdoms, faiths and human systems, filed as cases. "
+                          "Start with any book; each one stands alone.", 0, "index.html", index_body(), path="index.html"))
 write("books.html", page("Cases \u2014 %s" % AUTHOR,
-                          "Every case in the archive: published novels and cases awaiting release.", 0, "books.html", books_body()))
+                          "Every case in the archive: published novels and cases awaiting release. Each stands alone, so start with any.",
+                          0, "books.html", books_body(), path="books.html"))
 write("lore.html", page("Archive \u2014 %s" % AUTHOR,
-                         "A glossary of terms and systems from the setting.", 0, "lore.html", lore_body()))
+                         "A glossary of terms and systems from the setting.", 0, "lore.html", lore_body(), path="lore.html"))
 write("about.html", page("About \u2014 %s" % AUTHOR,
-                          "Biography.", 0, "about.html", about_body()))
+                          "%s %s" % (plain(BIOGRAPHY_PARAGRAPHS[0]), plain(BIOGRAPHY_PARAGRAPHS[1]).split(". ")[0] + "."),
+                          0, "about.html", about_body(), path="about.html"))
 write("contact.html", page("Contact \u2014 %s" % AUTHOR,
-                            "Get in touch.", 0, "contact.html", contact_body()))
+                            "Where to find %s online: %s." % (AUTHOR, ", ".join(label for label, _t, _u in SOCIALS)),
+                            0, "contact.html", contact_body(), path="contact.html"))
 
 # ---- book detail pages, and each book's characters ----------------------------
-write("characters.html", page("Subjects \u2014 %s" % AUTHOR, "Every subject documented across the cases.", 0, "characters.html", characters_page_body()))
-write("scenes.html", page("Records \u2014 %s" % AUTHOR, "Key records across the cases.", 0, "scenes.html", scenes_page_body()))
+write("characters.html", page("Subjects \u2014 %s" % AUTHOR, "Every subject documented across the cases.", 0, "characters.html", characters_page_body(), path="characters.html"))
+write("scenes.html", page("Records \u2014 %s" % AUTHOR, "Key records across the cases.", 0, "scenes.html", scenes_page_body(), path="scenes.html"))
 
 for book in BOOKS:
     write("books/%s.html" % book["slug"],
           page("%s \u2014 %s" % (book["title"], AUTHOR),
-               "%s Case file, principal subjects, records, and where to read it." % book["hook"],
-               1, "books.html", book_detail_body(book)))
+               "%s, %s: %s Case file, principal subjects, records, and where to read it." % (book["title"], book["case_tag"], book["hook"]),
+               1, "books.html", book_detail_body(book), path="books/%s.html" % book["slug"],
+               image="images/covers/%s" % book["cover_file"], image_alt="Cover of %s" % plain(book["title"]), og_type="book"))
 
     for c in book["characters"]:
         write("characters/%s.html" % c["slug"],
               page("%s \u2014 %s" % (c["name"], AUTHOR),
-                   "%s" % c["teaser"],
-                   1, "books.html", character_detail_body(c, book)))
+                   "%s Subject file from %s, %s." % (plain(c["teaser"]), book["case_tag"], book["title"]),
+                   1, "books.html", character_detail_body(c, book), path="characters/%s.html" % c["slug"],
+                   image="images/characters/%s.jpg" % c["slug"], image_alt="Character reference sheet for %s" % plain(c["name"]), og_type="article"))
+
+    for sc in book["scenes"]:
+        write(record_path(sc),
+              page("%s \u2014 %s" % (record_title(sc), AUTHOR),
+                   "%s. Record from %s, %s." % (sc["alt"].rstrip("."), book["case_tag"], book["title"]),
+                   1, "scenes.html", record_detail_body(sc, book), path=record_path(sc),
+                   image="images/scenes/%s.jpg" % sc["slug"], image_alt=sc["alt"], og_type="article"))
 
 # ---- lore detail pages ---------------------------------------------------------
 for l in LORE:
     write("lore/%s.html" % l["slug"],
           page("%s \u2014 %s" % (l["name"], AUTHOR),
                "%s Definition and where it appears." % l["teaser"],
-               1, "lore.html", lore_detail_body(l)))
+               1, "lore.html", lore_detail_body(l), path="lore/%s.html" % l["slug"]))
 
 # ---- old URLs that now redirect ---------------------------------------------------
 REDIRECTS = {"lore/catalyst-tier.html": "catalyst.html"}
@@ -3411,6 +3639,18 @@ for old_path, target in REDIRECTS.items():
   <p>This page moved to <a href="%s">%s</a>.</p>
 </body>
 </html>
-""" % (target, target, target, target))
+""" % (target, abs_url(os.path.join(os.path.dirname(old_path), target)), target, target))
+
+# ---- sitemap.xml and robots.txt ---------------------------------------------------
+# Every page that went through page(path=...) is listed; the redirect stub is not.
+write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n'
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+      + "".join("  <url><loc>%s</loc></url>\n" % _esc(abs_url(p)) for p in SITEMAP_PATHS)
+      + "</urlset>\n")
+# Note: crawlers only read robots.txt at the root of a host. On a GitHub Pages project
+# address (…github.io/Dzulfaraaghaini/) this file is therefore not picked up; submit
+# sitemap.xml in Search Console instead. On a custom domain, or any host where the site
+# sits at the root, it works as written.
+write("robots.txt", "User-agent: *\nAllow: /\n\nSitemap: %s\n" % abs_url("sitemap.xml"))
 
 print("done")

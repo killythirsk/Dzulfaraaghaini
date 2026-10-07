@@ -117,6 +117,15 @@ filename.
 - **Mobile "see more":** markup opts in with `data-cap="N"` (show N list items, button reveals the rest) or `data-collapse="N"` (clip a block to N rem). `js/site.js` adds the buttons on phones (<= 40rem) only; desktop is untouched, and the Subjects/Records indexes lift the cap while a search or case filter is active.
 - **Fix:** the hero "Enter the archive" button sat off-centre because the global `p { max-width: 68ch }` left its paragraph left-aligned; `.hero--home p { margin-inline: auto }` fixes it.
 
+**Update (Oct 2026, discoverability pass).** All in `tools/build_site.py` + CSS section 15 + `js/site.js`:
+- **Absolute URLs come from one constant, `SITE_URL`** (top of the script; today `https://killythirsk.github.io/Dzulfaraaghaini/`, a GitHub Pages *project* address, which is why the repo is not named `<username>.github.io`). Canonical links, Open Graph/Twitter tags, share-button URLs and `sitemap.xml` all derive from it. Relative links everywhere else are unchanged. Change it when the host changes.
+- **`page()` takes `path=` (the page's own file name), `image=`, `image_alt=`, `og_type=`.** Passing `path` is what switches on the canonical link, OG/Twitter tags and the sitemap entry, so any new page type must pass it. `image` falls back to `DEFAULT_OG_IMAGE`. Twitter card is `summary_large_image` only for images at least 1.5x wider than tall (none today; all the art is portrait).
+- **Records have their own pages**, `records/<scene-slug>.html` (`record_detail_body()`), because a scene had no URL of its own to share or preview. Scene slugs share one namespace across books (checked: no duplicates); keep it that way. The old lightbox links are untouched.
+- **Record line (Subject / Archive)** is `record_meta_html()`. Subjects = characters linked from the caption, or an optional `"subjects": [character slugs]` on the scene dict, which wins when present. Nothing is guessed; records with neither show Archive only.
+- **Share buttons** (`share_btn()`) carry `data-share-url/-title/-text` and are `hidden` until `js/site.js` shows them. New page types that should be shareable need one.
+- **Where to begin** (`begin_html()`, home `#begin`) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected.
+- **`robots.txt` is ignored on the project address** (crawlers read it only at the host root); `sitemap.xml` has to be submitted in Search Console. Image protection is unchanged, but note that `og:image` necessarily names the image file for previews to work.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 

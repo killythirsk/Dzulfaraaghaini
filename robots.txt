@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://killythirsk.github.io/Dzulfaraaghaini/sitemap.xml

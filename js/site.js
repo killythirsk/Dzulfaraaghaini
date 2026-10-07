@@ -295,3 +295,47 @@
   if (mq.addEventListener) mq.addEventListener("change", apply); else mq.addListener(apply);
   apply();
 })();
+
+/* Share buttons. Each <button class="share-btn"> carries data-share-url / -title / -text and
+   starts hidden, so a visitor without this script never sees a dead button. Uses the
+   device's own share sheet where there is one (phones, Safari, Chrome), otherwise copies the
+   link. */
+(function () {
+  var btns = document.querySelectorAll(".share-btn");
+  if (!btns.length) return;
+
+  function copy(text) {
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise(function (resolve, reject) {
+      var ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy") ? resolve() : reject(); } catch (e) { reject(e); }
+      document.body.removeChild(ta);
+    });
+  }
+
+  btns.forEach(function (b) {
+    b.hidden = false;
+    b.setAttribute("aria-live", "polite");
+    var label = b.textContent, timer = null;
+
+    function say(msg) {
+      b.textContent = msg; b.classList.add("is-done");
+      clearTimeout(timer);
+      timer = setTimeout(function () { b.textContent = label; b.classList.remove("is-done"); }, 2200);
+    }
+    function fallback(url) {
+      copy(url).then(function () { say("Link copied"); }, function () { window.prompt("Copy this link:", url); });
+    }
+
+    b.addEventListener("click", function () {
+      var data = { title: b.dataset.shareTitle, text: b.dataset.shareText, url: b.dataset.shareUrl };
+      if (navigator.share) {
+        navigator.share(data).catch(function (e) { if (!e || e.name !== "AbortError") fallback(data.url); });
+      } else {
+        fallback(data.url);
+      }
+    });
+  });
+})();

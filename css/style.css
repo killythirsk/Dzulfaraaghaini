@@ -935,3 +935,44 @@ body.lightbox-open { overflow: hidden; }
 }
 .case-grid--one { grid-template-columns: minmax(7.5rem, 9rem); }
 .recs { align-items: start; }
+
+/* ----------------------------------------------------------------------------
+   15. Where to begin, record lines, share buttons
+   ---------------------------------------------------------------------------- */
+.btn--ghost { margin-left: 0.4rem; border-color: #6b6552; color: #d8cfb6; }
+.btn--ghost:hover, .btn--ghost:focus-visible { border-color: var(--gold); }
+
+.begin-lede { max-width: 40rem; margin-top: var(--space-xs); font-size: 1.05rem; }
+.begin-list { list-style: none; margin: var(--space-sm) 0 0; padding: 0; border-top: 1px solid var(--rule); }
+.begin-list li { border-bottom: 1px solid var(--rule); }
+.begin-list a { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.2rem; padding: 0.95rem 0; color: var(--ink); text-decoration: none; }
+.begin-hook { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.3; }
+.begin-meta, .begin-genre { font: 0.68rem var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.begin-meta { color: var(--accent); }
+.begin-list a:hover .begin-hook, .begin-list a:focus-visible .begin-hook { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
+@media (min-width: 48rem) {
+  .begin-list a { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); column-gap: var(--space-md); align-items: baseline; }
+  .begin-hook { grid-row: 1 / span 2; }
+  .begin-meta, .begin-genre { grid-column: 2; }
+}
+.standalone-note { margin: 0 0 var(--space-xs); font-size: 0.92rem; font-style: italic; color: var(--ink-soft); }
+
+.record-meta { margin: 0.35rem 0 var(--space-xs); font: 0.72rem var(--font-mono); letter-spacing: 0.04em; line-height: 1.55; color: var(--ink-soft); }
+.rm-label { margin-right: 0.3rem; font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.rm-sep { margin: 0 0.35rem; color: var(--rule); }
+.record-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; margin: 0.45rem 0 var(--space-xs); }
+.record-open { font: 0.68rem var(--font-mono); letter-spacing: 0.14em; text-transform: uppercase; }
+.record-entry > .lightbox-link { flex: 0 1 24rem; max-width: 100%; }
+.record-image { width: 100%; }
+.record-step { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin: var(--space-xs) 0; font-size: 0.9rem; }
+.share-row { margin: var(--space-xs) 0; }
+
+.share-btn { padding: 0.45rem 0.95rem; border: 1px solid var(--rule); background: none; color: var(--ink); font: 0.68rem var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+.share-btn:hover, .share-btn:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.share-btn[hidden] { display: none; }
+.share-btn.is-done { border-color: var(--accent); color: var(--accent); }
+.share-btn--cta { padding: 0.85rem 1.4rem; font-size: 0.78rem; letter-spacing: 0.18em; }
+@media (max-width: 40rem) {
+  .cta-row .share-btn { flex: 1 1 100%; text-align: center; }
+  .btn--ghost { margin: 0.6rem 0 0; }
+}
