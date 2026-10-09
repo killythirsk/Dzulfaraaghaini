@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; seven are live on the site so far, plus
-five coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B) and four
+six coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2365) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -175,8 +175,8 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently sixteen entries: seven published,
-                            nine coming-soon — see §6)
+/books.html             Full book list (currently seventeen entries: seven published,
+                            ten coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -187,7 +187,7 @@ book's own page rather than as their own top-level sections.
                             threefold-crown, decree-of-luminescence;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (220 total — 10 for
+/characters/<slug>.html    One page per character (244 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -195,7 +195,8 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the
+                            Decree of Luminescence; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -293,8 +294,8 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the seven published books (4438 included), plus 0188 (both
-records), 2140 (envoy only — see §6), 3115 (both records — see §6) and 0156 (both
-records — see §6) now that their rosters have been merged in. Canon-guide cases
+records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both
+records — see §6) and 2365 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (1268, 4425) or only an empty coming-soon
 stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
@@ -920,6 +921,67 @@ unusually slowly&rdquo; is from his sheet only; the manuscript only has a villag
 Images: cover 900x1350; character sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid &mdash;
 the same specs as every other book.
 
+### Book: *The Decree of Luminescence* (Case 2365)
+
+Status: **Coming soon** (awaiting release). Built on branch `case-2365-stub` from: the cover
+(`images/covers/2365.jpg`, tagline "Ash. Roll. Residue. Append. Nil."), 24 character reference
+sheets (two batches), 15 scene paintings, and the manuscript
+`Case_2365_The_Decree_of_Luminescence_Final.md` (revision 3). **`pages`, `genre` and
+`synopsis_html` are untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
+was used for the bios and captions only). The case was first committed as a cover-only stub, then
+filled in.
+
+The premise, from the manuscript (not author-confirmed jacket copy): Vallombra, a terraced kingdom
+that rules by arithmetic and keeps the Concord of the Year (the sky shows up on the dates in the
+Table), is buried in ash when the Ashduct hills breathe. Its Reckoner, **Severin**, extends the
+year's grace from three days to a season and, on the morning of the third spring's First Furrow,
+states a false figure: the sun will stand over the Round at the sixth hour. He is **Observer 117**,
+Custodian of record for a dormant aperture unit (**the Round-Bed**) beneath the tower; he activates
+it and the ash parts in a hard-edged column, the Standing Noon, held open for 421 days. His senior
+apprentice **Piero** compiles the Roll of the Lit, from which a copyist's guttering lamp drops 311
+names of the Saltway Quarter. Hungry Verrenhal marches south under **Sigrid** (the Staff-Keeper, who
+says on the first day that the light has an edge, so someone is holding it); a herald's mistranslation
+of "the low hour" sends four thousand uncovered northerners across the line into noon, and the
+wardens of **Rufio**'s Edge loose for eleven minutes (2,304 dead, six of the Order). **Faustin**
+the king dies of the soup he ladles. **Marcello** finds the omitted column and the forged names, and
+he and Piero vow to correct it in the open on the day **Livia** is twenty-one, a promise deferred for
+three centuries. Piero's scaffold hardens into the Decree of Luminescence, Vallombra becomes
+Illumaria, and the Order writes one word, *Nil*, every evening. The Corps' closing audit files it all.
+It is the founding of the faith that the lore page and Case 4555 already describe.
+
+Twenty-four characters have pages, in this order (the first six feed the homepage cast wall and are the
+case's principals, a first pass): `piero`, `severin` (the Envoy), `marcello`, `livia`, `faustin`,
+`sigrid`, then `arne`, `ragnvald`, `fulvio`, `rufio`, `nardo`, `costanza`, `aldo`, `lino`, `nina`,
+`tito`, `the-goldsmith`, `anselmo`, `the-granary-physician`, `the-tanners-widow`, `the-nameless-girl`,
+`the-senior-clerk-of-the-hall`, `the-interpreter`, `the-herald-2365`. Fifteen scenes in story order:
+`the-share-breaks`, `the-standing-noon-opens`, `the-crowds-come-to-the-light`, `piero-reads-the-gold`,
+`the-reckoner-is-taken-up`, `the-lamp-that-guttered`, `the-host-crosses-the-pass`,
+`sigrid-reads-the-edge`, `the-parley-at-the-saltway-gate`, `the-blinding`, `the-king-ladles-the-soup`,
+`marcello-reconciles-the-roll`, `the-child-queen-is-crowned`, `the-grand-basilica`,
+`the-first-judgment`. Roster records: Catalyst **The Round-Bed**, Envoy **Observer 117** ("the
+Reckoner", page `severin`). Cultivator and Catalyst lore prose each picked up one sentence; the Decree
+of Luminescence `appears_html` now names this case, so the faith-sharing logic relates 2365 and 4555.
+
+Judgment calls worth knowing: (1) **The Catalyst has no character sheet**, so its roster row links to
+the case page and borrows a scene image (`the-standing-noon-opens-grid.jpg`), the same way Case 4417's
+chrome heels do. The name is the manuscript's own designation ("the Round-bed", Interlude II). Its
+`meta` reads "Atmospheric aperture unit" because the manuscript gives no Class for 2365 (only the
+number, 2,365); don't invent one. If a sheet arrives, add a `the-round-bed` character page and repoint
+the record. (2) **`the-herald-2365`**: `the-herald` is Case 3115's. No other slug collided. (3) The
+**Marcello** sheet calls him "senior apprentice alongside Piero" while the manuscript calls Piero the
+senior of the seven; the page follows the sheet and keeps both. (4) **Scene art versus text.** The
+parley painting puts Piero's party on the lit side but a helmeted soldier and a book-holder on
+Sigrid's (the text has Rufio and Marcello with Piero) and a blindfolded figure on the lit side, so the
+caption names only Piero and Sigrid. `the-reckoner-is-taken-up` shows a stair and a boy where the text
+has the parapet and a 24-year-old; the caption follows the text. `the-host-crosses-the-pass` shows the
+gold glow far below, so it sits at Chapter 10 rather than the Chapter 4 departure. (5) The
+Interpreter, the Nameless Girl and the Granary Physician's looks are the sheets' own inventions, and
+their bios say so. Costanza's "holds her pen still" and Anselmo's glass-dust hands and cough are from
+the sheets too and are labelled as such. (6) Nina is never shown alive; her sheet draws her only as
+remembered. (7) Images: cover 900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px
+grid, the same specs as every other book. Every portrait and scene was checked against its name
+on a contact sheet of the files as built.
+
 ### Cast added to Case 0000B (*Sword of Valeria: The Empty Hand*)
 
 Nineteen character reference sheets (`char.zip`) were added to the `0000b` stub. **No manuscript came with
@@ -1012,6 +1074,9 @@ sit at the end of `BOOKS`, in the order the author listed them.
   cast but no pages, genre, synopsis or catalyst/envoy record, and **Case 0156**
   (*The Purging of Charsianon*) is coming-soon with a 26-character cast, 14
   scenes and both roster records but no pages, genre or synopsis (§6).
+- **Case 2365** (*The Decree of Luminescence*) is coming-soon with a 24-character
+  cast, 15 scenes and both roster records but no pages, genre or synopsis, and no
+  sheet for its Catalyst (§6). It is on branch `case-2365-stub` until merged.
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -1068,7 +1133,17 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (4438 page count, 0000B cast, new Case 0156 — straight into master).**
+- **Latest update (Case 2365 — on branch `case-2365-stub`, not yet in master).** The author sent
+  the cover, then 24 character sheets and 15 scene paintings in two batches through chat, plus the
+  manuscript. Done: a full `2365` dict (24 characters, 15 scenes, `catalyst`, `envoy`) with a
+  `PRINCIPALS` entry, one new sentence each in the Cultivator and Catalyst lore prose, and the Decree
+  of Luminescence `appears_html` naming the case. Images: 1 cover, 48 character files (24 slugs x
+  full + thumb), 30 scene files (15 slugs x full + grid). Recount after rebuilding: cases 16 -> 17,
+  characters 220 -> 244, scenes 119 -> 134, sitemap 367 -> 407; every local link in every page
+  resolves (14,685 checked), and the new pages were opened in Chromium. `HOME_SCENES` was not changed.
+  Lesson from this run: the order of attached files does not necessarily match the order the images
+  are displayed in, so identify each image by looking at it (a contact sheet), never by position.
+- **Earlier update (4438 page count, 0000B cast, new Case 0156 — straight into master).**
   The author sent the whole site as `Dzulfaraaghaini.zip` plus `char.zip` (0000B),
   `0156.zip` + the cover + the manuscript, and the line &ldquo;4438 page number is 82&rdquo;.
   Done: `pages` for 4438 set to `"82"`; 19 characters added to the `0000b` stub and a
