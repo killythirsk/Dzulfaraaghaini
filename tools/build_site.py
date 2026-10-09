@@ -83,6 +83,7 @@ PRINCIPALS = {
     "2140": ["garibald", "observer-419", "landulf", "grimoald", "gisela"],
     "3115": ["huairen", "meilan", "huaiyu", "the-listening-water", "mingxuan", "observer-471"],
     "0156": ["bardas", "theodora", "the-carbon-echo", "the-quiet-one", "keeper-photios", "lord-leo"],
+    "2365": ["piero", "severin", "marcello", "livia", "faustin", "sigrid"],
     "0000b": ["the-anchorite", "aveline", "halvard", "vasarion", "aimeric", "ganeth"],
 }
 
@@ -2557,6 +2558,260 @@ BOOKS = [
         "characters": [],
         "scenes": [],
     },
+    {
+        "slug": "2365", "title": "The Decree of Luminescence",
+        "status": ["coming-soon"],
+        "cover_file": "2365.jpg",
+        "hook": "Ash. Roll. Residue. Append. Nil.",
+        "case_tag": "Case 2365",
+        "catalyst": {
+            "name": "The Round-Bed",
+            "meta": "Atmospheric aperture unit",
+            "page": "books/2365.html",
+            "img": "scenes/the-standing-noon-opens-grid.jpg",
+            "html": "<p>A dormant aperture unit buried beneath a threshing-floor by an earlier, unrelated pass of the Corps. Activated once, it parts the ash above a kingdom's capital into a hard-edged column of clear sky and holds it open for four hundred and twenty-one days. It is never retrieved; it still lies, inert, under the floor of the hall that was built over it.</p>",
+        },
+        "envoy": {
+            "name": "Observer 117",
+            "meta": "&ldquo;the Reckoner&rdquo;",
+            "page": "characters/severin.html",
+            "img": "characters/severin-thumb.jpg",
+            "html": "<p>Custodian of record for the unit, working under cover as the court astronomer-priest of Vallombra. Files his reports with no first-person pronoun, keeps a private table of the dead children he can name, and on the one evening he exceeds his instructions is recalled from the tower parapet within the day.</p>",
+        },
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [
+            {
+                "slug": "piero", "name": "Piero",
+                "epithets": "Senior apprentice to the Reckoner &middot; later Regent of Illumaria and first High Pontiff &middot; 21 at the story's opening",
+                "teaser": "Wants only to count sacks, hums in threes, and builds a religion out of one vanished master and one sentence he cannot afford to examine.",
+                "bio_html": """<p>The left-handed son of the Lower Granary's clerk, taken on at twelve for the neatness of his hand and wanting, from then on, nothing more ambitious than to count sacks. Senior of the seven apprentices of <a href="../characters/severin.html">Severin</a>, he hums when he computes, softly and always in threes: a nursery counting-song of his mother's, eleven verses of loaves, lamps and a door that is always warm, which <a href="../characters/nina.html">Nina</a> sang until she could not. <a href="../characters/marcello.html">Marcello</a> shares his bread crusts on the tower stair and is, without either of them ever saying so, the check to his count.</p>
+          <p>On the evening of the Standing Noon the Reckoner lays a brass plumb across his palm, says <em>The residue holds</em>, and is not on the tower when Piero turns round; Piero writes a zero in the book, and the sentence beneath it. He takes the head of the table that compiles the Roll of the Lit, answers the king's question at the Saltway Gate with <em>It was his rule</em> and a stranger's with a sentence that every witness hears as a refusal, and learns from Marcello that the Roll is three hundred and eleven names short. He chooses to append rather than disclose, promising a correction in the open on the day <a href="../characters/livia.html">Livia</a> is twenty-one, and drafts the Decree of Luminescence around the only true things he has: a tower at dusk, and the last words a man said there. The promised day is deferred, again and again, for good reasons. He climbs to take the evening reading for thirty-one years, until a novice, <a href="../characters/aldo.html">Aldo</a>, asks what the command is for. He dies in his fifty-seventh year with the brass weight in his sleeve.</p>""",
+                "quote": "Because he told me to.",
+            },
+            {
+                "slug": "severin", "name": "Severin",
+                "epithets": "The Reckoner of Vallombra, sixth of that name &middot; Observer 117, Custodian of record &middot; appears about fifty",
+                "teaser": "Has never shown a false figure; on the morning of the First Furrow he states one, and the sky is cut open to make it true.",
+                "bio_html": """<p>A lean, courteous, unhurried astronomer-priest, sixth of his name to keep the Concord's Table from the tower beside the Threshing Round, who teaches his seven apprentices that a Reckoner who cannot show his work is merely a priest, and a priest is a man who has stopped being checkable. When the Ashduct hills breathe and the sun withdraws, he extends the year's grace from three days to a season and carries the missed appointments forward, entry upon entry. A week before the third spring's First Furrow he nails a line to the tower door that no notice has ever carried: the sun will stand over the Round at the sixth hour, and the ash will part to let it. <a href="../characters/marcello.html">Marcello</a> asks for the derivation. It is not in the tables.</p>
+          <p>He is also Observer 117 of the Cultivator Envoy Corps, Custodian of record for a dormant unit beneath the tower. He files reports with no first-person pronoun, is answered with the single word <em>Noted</em>, and keeps in the vault's margin a private table of the dead children he can name, <a href="../characters/nina.html">Nina</a> ninth among them. He activates the unit himself; that evening a recall names the narrow north stair, and he is gone from the parapet before <a href="../characters/piero.html">Piero</a> has finished turning round, with the lamp still burning. He never learns, so far as the file shows, that the Order will worship him as the Kindled Reckoner. Reassigned to a world whose sky is entirely clear, he notes in his first report that it has a great many appointments, and, on a struck-through second line, that nobody there hums when they count.</p>""",
+                "quote": "The residue holds.",
+            },
+            {
+                "slug": "marcello", "name": "Marcello",
+                "epithets": "Magistrate's son &middot; senior apprentice &middot; the Order's first Examiner &middot; 22&ndash;23 at the story's opening",
+                "teaser": "Measures the edge of the light, writes down what it means, and tells no one for five months.",
+                "bio_html": """<p>A magistrate's son with an ink-stained thumb and an unshakable conviction that anything which cannot be reconciled has not, in any meaningful sense, happened. He is the friend and the check of <a href="../characters/piero.html">Piero</a>. On the first afternoon of the Standing Noon he is first to the northern edge with a plumb-line and a folding rule, finds a boundary with no penumbra, and writes in the margin of his book <em>Nothing in the sky holds a line. Something holds this one</em>, showing it to no one. At the Saltway Gate he privately suspects that the missing three hundred and eleven are no more than a clerical error, and says only that the Roll is the one rule that has held.</p>
+          <p>Named the Order's first Examiner, he reconciles the Roll against the sealed parish books and finds the omitted column, <a href="../characters/nardo.html">Nardo</a>'s forty-one forged names, and the unopened letter under the Reckoner's paperweight. He lays them before Piero with his own confession of five months' silence, and founds the Examiners' Book on its one rule, that nothing is erased and everything is appended. He argues the Decree's clauses with Piero, proposes the windowless Basilica as a control entry, and writes beside the lens <em>We have built the wrong instrument, and named it for the right miracle</em>. He hands the book to <a href="../characters/costanza.html">Costanza</a> in his last lucid week, four winters before Piero dies.</p>""",
+                "quote": "We do not erase it, Piero. We append.",
+            },
+            {
+                "slug": "livia", "name": "Livia",
+                "epithets": "Princess of Vallombra, then Queen of Illumaria &middot; 9 at her coronation, 21 at the first Judgment &middot; reigns 51 years",
+                "teaser": "Notices at nine that her crown has got heavier, and spends fifty-one years never saying so.",
+                "bio_html": """<p>The daughter of <a href="../characters/faustin.html">Faustin</a>, nine years old when he dies, crowned in the seventh month on the Round in a circlet of gilded lead washed in vinegar and wine, and held very still for eleven minutes. When the true-gold circlet has been cast and passed through the fire, she asks <a href="../characters/piero.html">Piero</a> in the corridor outside the treasury whether it is the same crown. It is the same crown, Majesty, he says. <em>Then it has got heavier</em>, says Livia, and goes in to her supper.</p>
+          <p>At twenty-one she stands alone on the black floor of the Basilica while the beam falls through the Arc onto her head, and glows, and looks faintly amused; the chroniclers record serenity. That night she asks Piero for her father's private ledger, the one with the debt in it, reads it standing to the last line, and says only that he always did carry a debt oddly. She keeps it, and for fifty-one years sends forty wagons of grain to the Saltway Quarter on the anniversary of the First Furrow, without a label. The last line she writes in the ledger is the two words the rule allows for a debt that will not close: <em>Carried forward.</em></p>""",
+                "quote": "Then it has got heavier.",
+            },
+            {
+                "slug": "faustin", "name": "Faustin",
+                "epithets": "King of Vallombra, called &lsquo;the Fortunate&rsquo; &middot; widower &middot; 49 years old",
+                "teaser": "A beekeeping king who sells his crown for bread, breaks the kingdom's first furrow, and dies of the soup he ladles.",
+                "bio_html": """<p>A stout, near-sighted, gentle widower whose only known vice is bees: sixteen skeps on the palace roof, one for each lord of his council, every one of them dead by the first spring of the Long Night. He rules by a contract with the year, and in the second winter he has the kingdom's three-hundred-and-forty-year-old gold circlet melted by <a href="../characters/the-goldsmith.html">a goldsmith</a> and sold weight for weight to a southern grain-factor, which buys eleven days of bread. At the First Furrow he walks out alone to turn the first furrow of the year, and the share snaps in two. <em>Then let it be recorded</em>, he says, <em>that I tried.</em></p>
+          <p>When <a href="../characters/sigrid.html">Sigrid</a>'s host is blinded and shot at the Gate he rides out bareheaded to stop the arrows, then opens every gate, name or no name, and has <a href="../characters/marcello.html">Marcello</a> do the sum: four thousand seven hundred and twelve more mouths, and a thousand and forty-one dead among his own. He writes it down himself. He ladles soup in the sheds for three months, is told by <a href="../characters/the-granary-physician.html">the Granary's physician</a> exactly what is passing from bowl to bowl, thanks her for the figure, and dies in eleven days among the empty hives. He leaves a daughter, <a href="../characters/livia.html">Livia</a>, a ledger, and a debt, and asks <a href="../characters/piero.html">Piero</a> not to let her think she is wearing the sun.</p>""",
+                "quote": "It was only ever a hat, Severin. The bread, I am told, is real.",
+            },
+            {
+                "slug": "sigrid", "name": "Sigrid",
+                "epithets": "Warden of the Winter Stores &middot; Staff-Keeper of Verrenhal &middot; 40 years old &middot; later regent for eleven years",
+                "teaser": "The one person who says out loud, on the first day, what the light is, and is remembered now as a proverb about landlords.",
+                "bio_html": """<p>The king's sister and Verrenhal's Warden of the Winter Stores, a broad, sardonic, sharp-eyed woman who by a hereditary duty nobody can explain also carries and cuts the pale ash-wood calendar staff on which the kingdom's year is tallied, with her dead husband's belt buckle on a thong at its head. Her arithmetic is simpler than the Reckoner's and, across three winters of ash, more accurate: she counts the days between today and the day the barley runs out, and shows <a href="../characters/ragnvald.html">Ragnvald</a> where the staff and the tally cross. She sings, when she believes herself alone, in a voice of such unrelieved flatness that her young nephew once left a room rather than hear the end of a verse.</p>
+          <p>She buries her brother under a cairn on the pass, writes the Reckoner a letter on how the light must be made (it lies unopened under a paperweight for five months), and finds at the Saltway Gate a row of a hundred and forty-one dead with their feet toward the gold. She lays her staff across the line, hangs her lead plumb from it and holds it for a hundred breaths in a gale: the weight swings and the edge does not. At the parley she tells <a href="../characters/piero.html">Piero</a> that men are not taken into the light, they go down stairs. Her son <a href="../characters/arne.html">Arne</a> loses his sight at the Blinding, and she never crosses the line herself. She rules Verrenhal as regent for eleven years with the dead king's ring on her thumb, and her one true diagnosis survives only as a saying about landlords.</p>""",
+                "quote": "Nothing in the sky has an edge. Someone is holding it.",
+            },
+            {
+                "slug": "arne", "name": "Arne",
+                "epithets": "Sigrid's son &middot; 17 at the Blinding &middot; lives to eighty",
+                "teaser": "Leads the vanguard down at the low hour with his eyes uncovered, never sees the light again, and becomes the best-loved singer in the north.",
+                "bio_html": """<p>Seventeen, rawboned and chewing something that is not food, <a href="../characters/sigrid.html">Sigrid</a>'s son marches south at her side, and is given the vanguard because he is the Staff-Keeper's son and nobody else in the host is still strong enough to walk at its head. <a href="../characters/the-herald-2365.html">The herald</a> has cried the king's promise of the low hour in a tongue where the low hour means noon, and Arne leads four thousand of the best of them down the Saltway in good order and in silence, with their eyes uncovered and, because a northerner does not go among strangers without them, their weapons.</p>
+          <p>The glare takes him in the first instant, and <a href="../characters/rufio.html">Rufio</a>'s wardens loose for eleven minutes. His mother finds him kneeling in the road among the dead with both hands pressed to his eyes, alive and permanently blind. He lives to eighty and becomes, to the astonishment of everyone who ever heard her sing, the best-loved singer in the north. Asked late in life by a young skald what the light had looked like, he says he saw it for about as long as it takes to be wrong about a step.</p>""",
+            },
+            {
+                "slug": "ragnvald", "name": "Ragnvald",
+                "epithets": "King of Verrenhal &middot; approx. 45 years old",
+                "teaser": "A big, tired, honest man with a cough, who chooses to starve on somebody else's road.",
+                "bio_html": """<p>The jarl-king of a poor and proud northern realm and <a href="../characters/sigrid.html">Sigrid</a>'s brother, who spends three winters of ash watching the barley run down and is shown, at his own table, the place where the calendar staff and the grain tally cross, three weeks before the ground could be expected to thaw, if it thawed. <em>We can starve in our own halls</em>, he says, <em>or we can starve on somebody else's road.</em> He chooses the road. It is the last decision of his that anyone troubles to count.</p>
+          <p>He marches south on the morning the staff names for the first thaw, nine thousand men and a few hundred women with empty barley wagons and the king on a litter behind them, and dies on the ninth day on the last saddle of the pass, of the cough and the cold and the knowledge that he chose wrongly and could not find the other choice. His last order, taken in a voice so thin that Sigrid has to lean into it, is that they go down and find out who is holding the match.</p>""",
+                "quote": "We can starve in our own halls, or we can starve on somebody else's road.",
+            },
+            {
+                "slug": "fulvio", "name": "Fulvio",
+                "epithets": "Lord of the Weirs &middot; one of the sixteen lords of Vallombra &middot; approx. 54 years old",
+                "teaser": "Weeps as loudly as any at the Round, then names the price of his silence.",
+                "bio_html": """<p>A sodden, prosperous eel-and-salt lord of the valley's southern mouth, whose harbors bought the crown's gold and whose grain-ships are the last ships left on that coast. In the ninth week after <a href="../characters/faustin.html">Faustin</a>'s funeral he rises at the end of the second hour of the council and proposes, with real regret and evident sincerity, that the king's nine-year-old daughter be betrothed to his own second son, and the regency pass to him until the year should see fit to show its face again. As arithmetic it is sound.</p>
+          <p><a href="../characters/piero.html">Piero</a> answers with a retort rather than a theology (<em>It fell on her father's furrow, my lords. It did not fall on the Weirs</em>) and Fulvio sits down, but not before naming his price in the flattest tone of the night: a charter making his grain-ships the Order's sole licensed factor for whatever is to be built on the strength of that noon, and a seat among whoever comes to steward it. Piero grants both. When the Standing Noon closes, House Fulvio's ships bring the first true cargo of iron, glass and southern grain up the coast, at a price the charter fixed in advance.</p>""",
+            },
+            {
+                "slug": "rufio", "name": "Rufio",
+                "epithets": "Captain of the Edge &middot; 50 years old",
+                "teaser": "Draws every bread-line on the north road for sixteen days, and gives the one order he cannot remember giving.",
+                "bio_html": """<p>A broad, honest, careworn captain of the guard, commander of the wardens of the Edge &mdash; palace guardsmen and Granary men in borrowed grey &mdash; who opens the nine gates on the Roll of the Lit and, at the Saltway Gate, turns back with regret and in perfect good order the first of the people whose names cannot be found. He keeps the Order's orders: no armed body is to be admitted to the light on any pretext, and forty thousand people eat from the Gates.</p>
+          <p>At the low hour he sees four thousand armed men step across the line into noon, and gives the word. The wardens loose for eleven minutes at what they can see, which is a mass of stumbling figures with their hands held out; two thousand three hundred and four northerners die, and the Order's tally of its own losses is six. It is perfectly true, as he will say once, to the empty room that is the only audience he ever chooses, that the men were armed. They were also blind. He cannot remember, for the rest of his life, which of those two facts he was looking at when he gave the word.</p>""",
+            },
+            {
+                "slug": "nardo", "name": "Nardo",
+                "epithets": "Notary, formerly of the Saltway courts &middot; later the Roll's first Registrar of Names &middot; approx. 52&ndash;55",
+                "teaser": "Sells forty-one names for eleven bushels of seed barley apiece, and is pensioned for it.",
+                "bio_html": """<p>A small, courteous, well-groomed notary with the manners of a family physician and the ethics of a weather-vane, who understands before any clerk in the hall what the Roll has made of the parish books: a scarce good, with a fixed supply and no market. He charges eleven bushels of seed barley, or their equivalent, for a name entered at the foot of a page, and makes forty-one such entries between the second night and the third, in a hand no examination would have told from <a href="../characters/lino.html">Lino</a>'s. He regards the Roll, he says afterward, as the most honest document the valley has ever produced, since it alone admits that being counted is a matter of being written down by someone with a pen, and that a pen, like a lamp, has a price.</p>
+          <p>Summoned by <a href="../characters/marcello.html">Marcello</a>, he admits everything with the affability of a man declining a second cup of tea, and is pensioned within the year as the Roll's first Registrar of Names: the only person in the valley competent to say which of its entries are false, and therefore the only one who can never be permitted to say so.</p>""",
+            },
+            {
+                "slug": "costanza", "name": "Costanza",
+                "epithets": "Examiner of the Order &middot; Marcello's chosen successor &middot; late 20s",
+                "teaser": "Told to enter everything and forgive nothing, she does it for four years without asking the question her predecessor would have asked within the hour.",
+                "bio_html": """<p>A stern, exacting young woman who receives the Examiners' Book from <a href="../characters/marcello.html">Marcello</a> in his last lucid week, with a single instruction: <em>enter everything and forgive nothing</em>. She keeps it to the letter for four years, through the death of the man who gave it to her, without once asking <a href="../characters/piero.html">Piero</a> the question Marcello would have asked within the hour. The first page of the book still holds a date, and the promise beside it has been carried forward again and again in a book nobody opens.</p>
+          <p>Her sheet gives her a habit the text does not: she holds her pen perfectly still before she writes, as if daring the figure in front of her to be wrong.</p>""",
+                "quote": "Enter everything and forgive nothing.",
+            },
+            {
+                "slug": "aldo", "name": "Aldo",
+                "epithets": "Novice of the Last Order &middot; later Second High Pontiff &middot; 9 years old as introduced",
+                "teaser": "Asks what the command is for, and gets five words and a collapse.",
+                "bio_html": """<p>A literal child, brought to the tower that autumn to carry the Reading Book up the stair, who on his seventh evening watches the High Pontiff write <em>Nil</em> for the eleven thousand three hundred and twelfth time and asks the question nobody in the Order has been permitted to ask in thirty years: why do we write it, Holiness, if it is always nothing? <a href="../characters/piero.html">Piero</a> says that it was the Kindled's last command, then that it is for the light, and then, asked why the Kindled commanded it, hears himself say <em>Because he told me to</em>. What follows is not weeping, and Aldo, who tells the story once, fifty years afterward, to his own novices, is very exact on the point. He runs for help down all one hundred and eleven steps, counting them.</p>
+          <p>He becomes the second High Pontiff. He writes the Decree's fourth Article, which holds that the empty reading is the fullest and that faithful obedience is the only proof the Sun requires, and writes it, he says, for a man he once saw fall down a stair; and he has the novices of every House of Vigil taught to hum through the evening reading, softly and in threes, until several thousand people who never met a granary clerk's mother are keeping faith, without knowing it, with her song.</p>""",
+                "quote": "Why do we write it, Holiness, if it is always nothing?",
+            },
+            {
+                "slug": "lino", "name": "Lino",
+                "epithets": "Copyist of the Bell and Granary orders &middot; 14 years old, in his second week of service",
+                "teaser": "Trims a guttering wick, loses his place, and skips three hundred and eleven names; dies believing his work was perfect.",
+                "bio_html": """<p>A copyist of fourteen with a small, neat, unhurried hand and an unusual gift for staying on the line, placed by an uncle of the Bell order who wished, in the winter of the ash, to see one member of the family securely employed near a fire. He sits at the far end of the long table, nearest the failing lamp, with a wick cut from the hem of somebody's shirt, while forty copyists compile the Roll of the Lit in the dark.</p>
+          <p>At the ninth hour of the night he comes to the Saltway Quarter: three hundred and eleven names in a single close-written column, the fourth of the ninth parish book. The wick gutters. He trims it, loses his place for the length of time it takes a small flame to steady, finds it again at the head of the next column and copies on, and it does not occur to him, then or for sixty years, that a page ought to have been longer. He is promoted in his thirtieth year to the head of the copying-hall and honored in his seventieth as the First Fair Hand of the Order, whose flawless Roll is the model of all faithful record. He is never told. <a href="../characters/marcello.html">Marcello</a> writes in the Examiners' Book on the day of the investiture: <em>Fair copy. Wrong. Honored.</em></p>""",
+            },
+            {
+                "slug": "nina", "name": "Nina",
+                "epithets": "Daughter of the Lower Granary clerk &middot; Piero's sister &middot; 9 years old at her death",
+                "teaser": "Sang the counting-song on the second night of the first winter until she could not.",
+                "bio_html": """<p>Nine winters old when she dies in the granary house, on the second night of the first winter of the ash, having sung her mother's nursery counting-song, eleven verses of loaves, lamps and a door that is always warm, until she could not. She is the ninth entry in <a href="../characters/severin.html">Severin</a>'s private table of the dead children he can name. She is never shown alive; her sheet draws her only as she is remembered. Her brother <a href="../characters/piero.html">Piero</a> goes on singing the song under his breath, in threes, through the three years before the Standing Noon and the thirty-one after, as though the tune were a column that had to be carried forward or the whole account would fail to balance.</p>
+          <p>The song outlives them both. <a href="../characters/aldo.html">Aldo</a> has the novices of the Order taught to hum it through the evening reading, and in the mouths of several thousand people who never met her mother it becomes a liturgy.</p>""",
+                "quote": "Nina, daughter of the Lower Granary clerk, aged nine winters; sang.",
+            },
+            {
+                "slug": "tito", "name": "Tito",
+                "epithets": "Plough-boy &middot; nephew of the two brothers who draw the ceremonial plough &middot; 13 years old",
+                "teaser": "Leads the plough at the First Furrow and thinks, mostly, about not crying in front of the king.",
+                "bio_html": """<p>A thirteen-year-old plough-boy who leads the ceremonial plough at the First Furrow of the third spring. The oxen have been eaten, so it is drawn instead by his two uncles, a pair of Granary brothers who have not eaten since Tuesday. He walks thinking mostly about how he must on no account cry in front of the king, and secondarily about how neither of his uncles will be able to stand much longer.</p>
+          <p><a href="../characters/faustin.html">Faustin</a> takes the handles. The share goes into the crust of frozen ash and bites for perhaps a foot, and then there is a crack that every person present will remember, and the wooden share, which has turned the first furrow of the kingdom for three hundred and forty springs, snaps clean in two.</p>""",
+            },
+            {
+                "slug": "the-goldsmith", "name": "The Goldsmith",
+                "epithets": "Palace goldsmith of Vallombra &middot; approx. 47 years old",
+                "teaser": "Weeps into the crucible while he melts the crown of the kingdom, and is paid extra to stop.",
+                "bio_html": """<p>The goldsmith who, in the second winter, melts the kingdom's plain band of river-gold, three hundred and forty years old and worn at every First Furrow since the first Faustin, in the palace forge on <a href="../characters/faustin.html">Faustin</a>'s order, and weeps into the crucible so steadily that he has to be paid extra to stop. The gold is sold weight for weight to a southern grain-factor and buys forty thousand loaves, which is to say eleven days. The same week he casts a second circlet of gilded lead, so like the first that he, the treasurer and the king have some difficulty afterward remembering which was which.</p>
+          <p>The only other person in the palace who knows is <a href="../characters/severin.html">the Reckoner</a>. Nobody in the High Realm's later centuries will say that the first crown of the Sun's kingdom was sold for bread by a beekeeper; it will be recorded instead that it endured the flame. Whether the Order's goldsmith, who later casts a true-gold circlet in a single night, is the same man, the text does not say.</p>""",
+            },
+            {
+                "slug": "anselmo", "name": "Anselmo",
+                "epithets": "Master glassmaker of the Glassmakers' Row, Illumaria &middot; approx. 52 years old",
+                "teaser": "Grinds the Sol-Focus Arc by hand for eleven years and dies of the grinders' lung, having written down nothing.",
+                "bio_html": """<p>Master of the Glassmakers' Row and of the guild commissioned by the Order to make the Sol-Focus Arc, a lens the diameter of a cartwheel, to catch and concentrate the single shaft of true sun that falls through the oculus of the Grand Basilica. He and his guild grind it by hand across eleven years, and die within a decade of finishing it, one after another, of the grinders' lung, with none of them having written down how.</p>
+          <p>It is a very fine instrument. It is also, as <a href="../characters/marcello.html">Marcello</a> notes on the night it is unwrapped, an instrument that gathers a light it had not made, where the Standing Noon had parted a dark it had not touched. His sheet gives Anselmo hands silvered with embedded glass dust and a dry cough in the lens's later years.</p>""",
+            },
+            {
+                "slug": "the-granary-physician", "name": "The Granary Physician",
+                "epithets": "Physician of the Granary order &middot; approx. 44 years old",
+                "teaser": "Tells the king exactly what is in the soup, and is thanked for the figure.",
+                "bio_html": """<p>A tired woman who has buried a husband and two apprentices that winter, the physician of the Granary order tells <a href="../characters/faustin.html">Faustin</a> in the second week of the sheds that a fever is passing from bowl to bowl, that no room in Torrecalda is large enough to keep the sick from the well, and that there is no fuel to spare for boiling the bowls, since the fuel that would have boiled them is the fuel that bakes the bread.</p>
+          <p>The king thanks her for the figure and goes on ladling. He dies of it in eleven days. Her sheet draws her in a plain undyed coat over a widow's dark clothing, with a satchel whose herbs and instruments the famine has depleted, and a level, plain delivery even for the worst news.</p>""",
+            },
+            {
+                "slug": "the-tanners-widow", "name": "The Tanner's Widow",
+                "epithets": "Widow of Torrecalda's tanning trade &middot; 35&ndash;38 years old",
+                "teaser": "Lost three children, and did not care who heard her call the light a door.",
+                "bio_html": """<p>A tanner's widow in the crowd at the First Furrow, who has lost three children and does not care who hears it. When the ash draws back and the shaft of noon falls on the Round, by evening it has been called a pillar, a stair, a spear and a throne. She calls it a door.</p>
+          <p>It is one line in the account of that evening. The name that sticks belongs to <a href="../characters/the-nameless-girl.html">a girl who had never seen a noon in her life</a>.</p>""",
+                "quote": "A door.",
+            },
+            {
+                "slug": "the-nameless-girl", "name": "The Nameless Girl at the Round",
+                "epithets": "A child in the crowd at the First Furrow &middot; about 10&ndash;12 years old",
+                "teaser": "Had never seen a noon in her life, and shouted its name over and over.",
+                "bio_html": """<p>A girl in the crowd on the Threshing Round who has never seen a noon in her life, and who shouts the first name of the light over and over, in the voice of someone identifying a stranger at a funeral: <em>Noon! Noon! Noon!</em> It is entered in the tower's record that afternoon as the Standing Noon, and it sticks through every chronicle and every later hymn.</p>
+          <p>She is never named. The text gives her only that she has never seen a noon, so her age and her famine-hollowed look are her sheet's own.</p>""",
+                "quote": "Noon! Noon! Noon!",
+            },
+            {
+                "slug": "the-senior-clerk-of-the-hall", "name": "The Senior Clerk of the Hall",
+                "epithets": "Senior clerk overseeing the compiling of the Roll &middot; approx. 56 years old",
+                "teaser": "Orders the working papers burned so that nothing can disagree with the fair copy: the first ruling of the Last Order to be remembered as doctrine.",
+                "bio_html": """<p>The senior clerk of the long hall beneath the tower's north wing, where forty copyists of the Bell and Granary orders compile the Roll of the Lit by the yellow ration of seven lamps. At the coldest hour before dawn he orders the working papers burned in the braziers, the copyists, who have been writing in gloves cut down to fingerless stumps, not needing to be asked twice, and the parish books sealed in their chests.</p>
+          <p>The tally sheets, the scrap on which each page was first drafted and on which the omission <a href="../characters/lino.html">Lino</a>'s lamp had made would have been visible to anyone who laid one beside the other, go into the coals with a small, warm, sighing sound. He explains, to nobody in particular, that a record that existed twice was a record that could disagree with itself. It is the first ruling of the Last Order that will be remembered as doctrine, and it was made for the sake of a fire.</p>""",
+                "quote": "A record that existed twice was a record that could disagree with itself.",
+            },
+            {
+                "slug": "the-interpreter", "name": "The Interpreter",
+                "epithets": "Interpreter with Sigrid's party at the Saltway Gate &middot; approx. 38 years old",
+                "teaser": "Renders a sentence faithfully into the northern tongue, and so renders it as a refusal.",
+                "bio_html": """<p>The tired interpreter who stands beside <a href="../characters/sigrid.html">Sigrid</a> at the parley on the twentieth day. When <a href="../characters/piero.html">Piero</a> answers her in the old tongue with <em>Let no shadow claim what shadow did not make</em>, meant as a confession that the light belongs to none of them, the interpreter renders it as a refusal. So do the wardens, and so, in due course and in every succeeding century, does the Decree.</p>
+          <p>The text gives only &ldquo;a tired interpreter&rdquo;; the sheet says outright that the gender, age and appearance it shows are invented for consistency.</p>""",
+            },
+            {
+                "slug": "the-herald-2365", "name": "The Herald",
+                "epithets": "Herald, clerk of the Gate order &middot; approx. 24 years old",
+                "teaser": "Cries the king's promise through the northern camp, faithfully and completely, in a language where the low hour means noon.",
+                "bio_html": """<p>A nervous clerk of the Gate order who learned the northern speech from a nurse. On the night after the parley he cries <a href="../characters/faustin.html">Faustin</a>'s promise through the northern camp, in that language, faithfully and completely: that the king will open the Gate to <a href="../characters/sigrid.html">Sigrid</a>'s host on the following evening, at the low hour, when the light lies gentle.</p>
+          <p>In doing so he makes the single error of the whole affair that no one on either side will ever be able to trace to a single hand. The old tongue's word for the low light of evening is, in the northern speech, the word for the low sun of a northern noon: the standing joke of the Saltway Quarter, of which no clerk of the palace has ever heard. Sigrid, who understood the promise correctly as dusk, is three miles away arguing with a wagon-master about the linen when he cries it.</p>""",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-share-breaks",
+             "alt": "A bearded man in a rough cloak and a gold band stands over a snapped wooden plough in a frozen field before a vast crowd, with a tall spired city behind under a grey sky",
+             "caption_html": """<a href="../characters/faustin.html">Faustin</a> takes the handles at the First Furrow, and the share that has turned the kingdom's first furrow for three hundred and forty springs snaps in two."""},
+            {"slug": "the-standing-noon-opens",
+             "alt": "A shaft of white-gold light falls through a ring of clear sky onto a tall tower above a dense crowd on a paved square, under dark ash cloud",
+             "caption_html": """At the sixth hour the ash draws back along a line no compass could better, and a single shaft of noon falls on the Round, the tower and thirty-one thousand upturned faces."""},
+            {"slug": "the-crowds-come-to-the-light",
+             "alt": "A stone bell tower beside a wall of golden light at dusk, hooded townspeople walking toward it down a wet street",
+             "caption_html": """By evening the light has an outside, and every road in the valley is full of people walking toward it."""},
+            {"slug": "piero-reads-the-gold",
+             "alt": "A young man with dark hair in a grey hooded robe looks back over his shoulder on a stone parapet at sunset, a lit lantern on the wall and a brass plumb hanging from a cord",
+             "caption_html": """<a href="../characters/piero.html">Piero</a> on the parapet at the hour of the Gold, with the brass plumb on its cord and the lamp lit: the first of the evening readings he will take for thirty-one years."""},
+            {"slug": "the-reckoner-is-taken-up",
+             "alt": "An elderly white-haired man in a grey robe dissolves into drifting particles on a dim stair, one hand reaching toward a boy who reaches back, a lantern burning above them",
+             "caption_html": """At the Gold the grey lid breaks for the length of one breath, and when the apprentice opens his eyes <a href="../characters/severin.html">Severin</a> is no longer on the tower; only the lamp is still burning."""},
+            {"slug": "the-lamp-that-guttered",
+             "alt": "A young copyist in a dark robe trims a lamp wick at a long candlelit table of open ledgers in a vaulted hall with frosted windows, rows of copyists beyond him",
+             "caption_html": """<a href="../characters/lino.html">Lino</a>, fourteen and in his second week, trims a guttering wick and loses his place. The next column he copies is Wool Lane, and three hundred and eleven names are not on the Roll."""},
+            {"slug": "the-host-crosses-the-pass",
+             "alt": "A woman in grey furs holding a tall staff leads a long column of hooded figures and wagons through a snowy mountain pass, a bearded man lying on a cart beside her and a boy walking at its wheel, a gold glow far down the valley behind them",
+             "caption_html": """The host of Verrenhal comes down the pass in the ash, the light a gold coin far below: <a href="../characters/sigrid.html">Sigrid</a> at its head with the calendar staff, <a href="../characters/ragnvald.html">Ragnvald</a> on his litter, and <a href="../characters/arne.html">Arne</a> beside the cart."""},
+            {"slug": "sigrid-reads-the-edge",
+             "alt": "A woman in a tattered cloak holds a staff across the edge of a wall of golden light, a small weight hanging from it, on a dark ash-strewn hillside",
+             "caption_html": """<a href="../characters/sigrid.html">Sigrid</a> lays the calendar staff across the line, hangs her lead plumb from it and holds it a hundred breaths in a gale: the weight swings, and the edge does not."""},
+            {"slug": "the-parley-at-the-saltway-gate",
+             "alt": "Two groups face each other across a sharp line between golden daylight and black ash; on the lit side a young man in a grey cloak with two companions, on the ash side a woman with a tall staff, a helmeted soldier and a man holding a large book",
+             "caption_html": """The parley across the line, bright inside and black outside: <a href="../characters/piero.html">Piero</a> in the Reckoner's grey faces <a href="../characters/sigrid.html">Sigrid</a>, and a sentence he did not know he knew goes over the line as a refusal."""},
+            {"slug": "the-blinding",
+             "alt": "Archers loose arrows from a shadowed foreground into a golden-lit field where a crowd of figures stumble and fall in the glare, a hilltop castle on the dark horizon",
+             "caption_html": """<a href="../characters/arne.html">Arne</a> leads four thousand northerners across the line at the low hour, eyes uncovered, and the wardens of <a href="../characters/rufio.html">Rufio</a>'s Edge loose for eleven minutes at figures who cannot see them."""},
+            {"slug": "the-king-ladles-the-soup",
+             "alt": "A bearded man in a linen apron ladles soup from a steaming cauldron into a bowl held out by a bowed man in a long queue under a canvas awning hung with banners",
+             "caption_html": """<a href="../characters/faustin.html">Faustin</a> in a linen apron over plain wool, ladling soup in the great canvas sheds on the Round every evening for three months, to the men who had tried to reach him through a light that blinded them."""},
+            {"slug": "marcello-reconciles-the-roll",
+             "alt": "A young man with dark hair sits cross-legged among open parish books and loose pages by an oil lamp in a dim study",
+             "caption_html": """<a href="../characters/marcello.html">Marcello</a> reconciling the Roll against the sealed parish books, and following a leak of three hundred and eleven names down the pages to a single column: the fourth of the ninth book."""},
+            {"slug": "the-child-queen-is-crowned",
+             "alt": "A girl in a pale gold-trimmed gown and cloak with a circlet on her braided hair stands alone on a round of paving between rows of robed lords and priests beneath dark banners",
+             "caption_html": """<a href="../characters/livia.html">Livia</a>, nine years old, in a circlet of gilded lead washed in vinegar and wine, holds very still on the Round for eleven minutes."""},
+            {"slug": "the-grand-basilica",
+             "alt": "A vast windowless black domed hall of dark columns, a single narrow shaft of white light falling from a round opening at the crown of the dome onto the floor, a few small robed figures along the walls",
+             "caption_html": """The Grand Basilica of Sol-Invictus, raised over the Round in black Ashduct marble with walls forty feet thick and one shuttered oculus set in the axis of the vanished column: a room built to hold nothing, as <a href="../characters/marcello.html">Marcello</a> argued, so that the true light might be seen for what it was."""},
+            {"slug": "the-first-judgment",
+             "alt": "A woman in a pale gold-embroidered gown and a fine circlet stands alone on a polished black cracked-marble floor in a tall beam of golden light, in darkness",
+             "caption_html": """The first Judgment: every torch doused, <a href="../characters/livia.html">Livia</a> alone on the black floor, the beam falling through the Arc onto her circlet. The gold flares, the room weeps, and the queen looks faintly amused."""},
+        ],
+    },
 ]
 
 LORE = [
@@ -2564,14 +2819,14 @@ LORE = [
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
-          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs.</p>""",
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a court astronomer-priest who keeps a kingdom's calendar from a tower, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone, an eight-foot electric eel &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Every Catalyst on file is listed below.</p>""",
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Another, left beneath a threshing-floor, cuts a circle of clear noon with a ruler's edge out of a sky of ash and holds it open for four hundred and twenty-one days. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
@@ -2592,7 +2847,7 @@ LORE = [
         "teaser": "A theology of measured light: what is favored is lit, and what is lit has been favored.",
         "definition_html": """<p>The youngest of the faiths on file, promulgated after a kingdom-threatening catastrophe: years of ash-blotted sky broken, at the exact point of famine, by a single standing column of true daylight over the capital. <strong>Sol-Invictus, the Unconquered Sun,</strong> is worshipped as the one eternal, lending light, and its doctrine is unusually literal for a religion: light is not read as a sign of favor, it <em>is</em> favor, measured out to every soul at birth as a store of borrowed fire and returned, spent or unspent, at death. It is a creditor's theology at bottom, and its own clergy don't pretend otherwise. The doctrine's core article states the idea plainly: <em>Whatever was favored was lit, and whatever was lit had been favored.</em></p>
           <p>Its church, the Last Order, is led by a High Pontiff and keeps its own doctrine correctable only by further entry, never by erasure. A claimant to real favor stands before a lens that concentrates true daylight onto them, to see whether they visibly glow; a crown is carried through open flame, to see whether the gold endures. What three centuries of both tests have never quite worked out is how to tell light that's generated from light that's merely, cleverly, reflected.</p>""",
-        "appears_html": """<p>Founded three centuries before the events of <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
+        "appears_html": """<p>Its founding is the subject of <a href="../books/2365.html">The Decree of Luminescence</a>. Three centuries on, in <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
     },
 ]
 
