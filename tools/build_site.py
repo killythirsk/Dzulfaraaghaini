@@ -84,12 +84,15 @@ PRINCIPALS = {
     "3115": ["huairen", "meilan", "huaiyu", "the-listening-water", "mingxuan", "observer-471"],
     "0156": ["bardas", "theodora", "the-carbon-echo", "the-quiet-one", "keeper-photios", "lord-leo"],
     "2365": ["piero", "severin", "marcello", "livia", "faustin", "sigrid"],
+    "2231": ["observer-618", "shizuka", "jokei", "sadamune", "bertran", "gersenda"],
     "0000b": ["the-anchorite", "aveline", "halvard", "vasarion", "aimeric", "ganeth"],
 }
 
 # Hand-written "Related Cases" links, on top of the automatic ones (same catalyst
 # class, shared faith). One tuple per pair: (case slug, case slug, "reason shown").
-RELATED_THEMES = []
+RELATED_THEMES = [
+    ("2231", "4099", "Same subject world: Himuro descends from the court of Case 4099"),
+]
 
 BOOKS = [
     {
@@ -2560,7 +2563,7 @@ BOOKS = [
     },
     {
         "slug": "2365", "title": "The Decree of Luminescence",
-        "status": ["coming-soon"],
+        "status": ["published", "google-books"],
         "cover_file": "2365.jpg",
         "hook": "Ash. Roll. Residue. Append. Nil.",
         "case_tag": "Case 2365",
@@ -2578,7 +2581,8 @@ BOOKS = [
             "img": "characters/severin-thumb.jpg",
             "html": "<p>Custodian of record for the unit, working under cover as the court astronomer-priest of Vallombra. Files his reports with no first-person pronoun, keeps a private table of the dead children he can name, and on the one evening he exceeds his instructions is recalled from the tower parapet within the day.</p>",
         },
-        "pages": EDITOR_PAGES,
+        "pages": "88",
+        "google_books_url": "https://play.google.com/store/books/details?id=spIXEgAAQBAJ",
         "genre": EDITOR_GENRE,
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
@@ -2812,6 +2816,161 @@ BOOKS = [
              "caption_html": """The first Judgment: every torch doused, <a href="../characters/livia.html">Livia</a> alone on the black floor, the beam falling through the Arc onto her circlet. The gold flares, the room weeps, and the queen looks faintly amused."""},
         ],
     },
+    {
+        "slug": "2231", "title": "The Stone of the Clean Hand",
+        "status": ["coming-soon"],
+        "cover_file": "2231.jpg",
+        "hook": "Cat. Hand. Stone. Signature. Omitted.",
+        "case_tag": "Case 2231",
+        "catalyst": {
+            "name": "The Kiyote Pair",
+            "meta": "Matched one-way matter-transit stones",
+            "page": "books/2231.html",
+            "img": "covers/2231-stone-thumb.jpg",
+            "html": "<p>A matched pair of one-way matter-transit stones, dressed by the same hand as a shrine ordeal-stone in one realm and as a village tally-stone in another. The sender works on bare open-palm contact alone: cloth, a broom, or the backs of the fingers do not register. The receiver was set first. A short column of notches cut into the flank of each, one, one, two, three, five, eight, is the Envoy's standing signature and does nothing. All the sending realm ever sees of the device is absence.</p>",
+        },
+        "envoy": {
+            "name": "Observer 618",
+            "meta": "&ldquo;the Dumb Mason&rdquo;",
+            "page": "characters/observer-618.html",
+            "img": "characters/observer-618-thumb.jpg",
+            "html": "<p>Custodian of record for the Pair, working under cover as a mute stonecutter who dresses both blocks and then takes a quarry-hand's post beside the one that receives, keeping it for thirty-one years. Files in the third person, latches a quarry gate every evening and then walks back to try it, and on one winter night leaves it unlatched for a party already in flight.</p>",
+        },
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [
+            {
+                "slug": "observer-618", "name": "Observer 618",
+                "epithets": "Cultivator Envoy and Custodian of record for Case 2231 &middot; a mute stonecutter, called the Dumb Mason by the shrine's priests &middot; appears about 45&ndash;50",
+                "teaser": "Dresses both ends of a matched pair of stones, may not answer the one question he is asked, and leaves a gate unlatched.",
+                "bio_html": """<p>A lean, silent man in a leather apron with a satchel of chisels, who answers the Left Ministry's call for a shrine-stone with the lowest of three bids and then works the block for eleven days at Mikusa, tapping and pausing with his head tilted, as a physician sounds a chest. At the end he cuts a short column of notches into its flank, one, one, two, three, five, eight, and walks away down the cedar approach. The shrine's priests call him the Dumb Mason and take the notches for his mark. He had dressed the receiving block first, in a village green on the far side of the world, and stays on there as a quarry-hand. His instruction for the one event he came to see is a single word: <em>observe</em>.</p>
+          <p>When the stranger who came out of the stone draws the column of notches in the dust and turns his palms toward the east, he gives neither answer; the bar on correcting a subject's reading, he reasons, extends to confirming it. His reports record, as a deviation with no operational reason given, that he latches the quarry gate each evening and then walks back up the road to try it, and note that he has begun to leave the heel of his bread on the green's stone at dusk. On the night the village burns he stands at the quarry gate with a lantern and, as the fleeing party reaches it, steps aside and lets it swing open. Nineteen years on, on the first of Averin, he reduces the western stone to dust and recovers the eastern, and the stranger, finding the hollow on the green, walks over and bows to him. He returns the bow, the only answer he is permitted, and leaves the post that night without collecting the bread. The reviewing desk has not yet replied to whether he observed or rescued.</p>""",
+            },
+            {
+                "slug": "shizuka", "name": "Shizuka",
+                "epithets": "Tomobe no Shizuka &middot; wife of Tomobe no Higaide, daughter of a provincial scholar &middot; 29 years old at the story's opening",
+                "teaser": "The only person who asks how he looked, and who then does the sum and decides, at great cost, not to press it.",
+                "bio_html": """<p>A tall woman who walks as though the floor owed her something, and who at nineteen was the only person in the capital to read one of the poems of her future husband, Higaide, aloud, to its author, with a perfectly straight face. She keeps every sheet of his verse in a lacquer box under the dressing-table because they are, she says, the best things in the house. On the night before the ordeal she reads him one about a heron in the rain, tells him that if it is a mistake he will be extremely angry afterward and that she is looking forward to it, and takes his strong left hand and turns it over, as though to learn it like a poem.</p>
+          <p>Two days after the notice she goes to Mikusa and asks the Warden, <a href="../characters/jokei.html">Jōkei</a>, how Higaide had looked and whether his sentence was entered, and then to the Bureau of Inquiry, where an Examiner among his sparrows tells her only that a report existed and was eleven sheets long. She does the sum, and does not press it, not with a daughter of six and a court whose beneficiaries would hear a question about the Law's foundations as a confession. She takes the child north to Fort Shirakane, keeps a small school there for the garrison's daughters, and declines the estate offered when the Law lapses. Every first frost she tastes the plum brine with her eyes shut and says, to the empty room, that he would have complained about the salt. She does not learn, within the period of this record, that he lived.</p>""",
+            },
+            {
+                "slug": "jokei", "name": "Jōkei",
+                "epithets": "Warden-Priest of Mikusa Shrine &middot; 60 at the story's opening, 79 when the Stone comes apart",
+                "teaser": "Sweeps the Stone every morning for eleven years and never once lays his bare palm on it.",
+                "bio_html": """<p>A bald, mild, apologetic priest who tended the hillside shrine of Mikusa for thirty years before the Stone arrived, in which time he presided over some seven hundred weddings and a larger number of funerals. He sweeps the ordeal court with a broom and wipes the block with a damp cloth, and has never in eleven years set his bare palm to it; the backs of his fingers have found it cold in summer and, in winter, faintly warm. He sits with the accused as the Law requires, and with <a href="../characters/shizuka.html">Shizuka</a>'s husband he goes further, pointing out a door at the back of the chamber, the most dangerous sentence of his life. He is told there is no door for an innocent man.</p>
+          <p>He writes the finding in the Book of the Ordeal and, under it, without being told, the Captain's one sentence. He gives <a href="../characters/shizuka.html">Shizuka</a> the whole account. By the third hand he watches go, <a href="../characters/kanemichi.html">Kanemichi</a>'s, he has begun to keep a tally on the inside of his sleeve with a thumbnail, because someone ought to. At seventy-nine he finds the Stone come apart into a low heap of pale dust in the exact shape of itself, sweeps the last of it into the rill, and enters one line: that the Stone has gone and the kami has given no reason. He leaves untouched the former Minister's signed sheet pasted into the last leaf.</p>""",
+            },
+            {
+                "slug": "sadamune", "name": "Sadamune",
+                "epithets": "Ki no Sadamune &middot; Secretary of the Bureau of Inquiry &middot; 43 years old &middot; later Governor of a northern province",
+                "teaser": "Reads the Stone's tally to a room pleased with it, and puts a denominator under the figure.",
+                "bio_html": """<p>A dry, upright, fastidious man who holds the post of Secretary because nobody else at the Bureau can be trusted to count. For a fortnight he reconciles the Warden of Mikusa's entries against his own, and at the quarterly Reading of the Tally he stands in the Hall of the Two Seals with the Book of the Ordeal open on his forearm and reads it out: nine accused in a little over eleven years, five confessed and beheaded at the Southern Gate, four who put out a hand and were taken. <em>Four for four</em>, says the Deputy Minister, with real pleasure, and the whole dais warms to it.</p>
+          <p>He had been told in the corridor that a man who reads a tally and sits has done his duty, and finds he cannot be that man. Either the Stone takes the guilty and refuses the innocent, he says, or it takes whoever puts a hand to it, in which case four of four describes the stone and not the hands. The Bureau has no instrument to tell the two apart. The Right Minister answers him courteously and correctly: a man who has gone cannot be offered in evidence. The remark is entered as &ldquo;a procedural observation, not pursued,&rdquo; and within the month he is made Governor of a northern province whose principal export is weather, where he governs honestly for nineteen years and writes nothing further about stones.</p>""",
+            },
+            {
+                "slug": "kanemichi", "name": "Kanemichi",
+                "epithets": "Ono no Kanemichi &middot; rice-warden of the Right Ministry's eastern granary &middot; 52 years old",
+                "teaser": "Has never entered a figure he did not count, and will not sign one he did not do.",
+                "bio_html": """<p>A broad, plain man with counting-rod calluses on his left hand, who in thirty years has never put a figure in a ledger that he had not counted. A wet autumn rots the thatch over the third bay of his granary and forty koku go to mold; he records the loss in the month it occurs and asks for new thatch. His accurate page is read by someone who needs it to be a theft. At dawn on the twenty-sixth of Jorren he is shown the Stone in the white of the accused, with his warden's tally-token on a cord at his breast, and a decent young clerk of the Bureau holds out a warmed brush and a confession ruled in every column but the signature.</p>
+          <p>He reads it, and finds he cannot sign a figure he has not counted; it is not courage, he thinks, since he has none that he knows of. He gives the brush back and puts out his left hand, the one he counts with. <a href="../characters/jokei.html">Jōkei</a> is watching, and counting. The clerk folds the unsigned sheet in thirds and keeps it, to be found forty years later by a daughter who takes it for a laundry list. His ledger is audited the following month by a successor, who finds it exact in every column, and the page about the thatch is filed beneath it with one word in its margin. He had been right in every figure he ever entered. It was the one thing nobody had wanted.</p>""",
+            },
+            {
+                "slug": "kurige", "name": "Kurige",
+                "epithets": "Chestnut pony of the Festival of the Small Bow &middot; named only by a stablehand in a hurry &middot; 7 years old by his sheet",
+                "teaser": "A pony who bolts at the one small, furious thing he knows by smell.",
+                "bio_html": """<p>A chestnut pony whose name means only &ldquo;chestnut-colored,&rdquo; conferred by a stablehand in a hurry. On the twelfth of Eldren, on the meadow below the Shirase River, he carries the Minister of the Left's nine-year-old grandson at a walk and then a canter for the Festival's short course, while a hundred and twenty paces off the boy's teacher watches with his hands in his sleeves. A small russet cat who knows his smell leaps for the saddlecloth, misses, and catches his hock.</p>
+          <p>He does not bolt toward the awnings, or toward the river with its water to stop him; he bolts on a diagonal toward the stone footings of the old bridge, which takes him four seconds. The boy goes over his shoulder with an arrow still in his hand. Afterward a patient Examiner finds a scrap of his chestnut hair in the grass at the starting line, with three tufts of russet fur beside it. The sheet's seven years and its white sock are its own; the manuscript gives him only his name, his colour, and the four seconds.</p>""",
+            },
+            {
+                "slug": "bureau-officers", "name": "The Bureau Officers",
+                "epithets": "Officers of the Bureau of Inquiry &middot; one about 40, one about 28 by their sheet",
+                "teaser": "Two men in dark robes who serve a summons with the regretful courtesy reserved for the condemned.",
+                "bio_html": """<p>Two officers of the Bureau of Inquiry, one older and one younger, in dark robes, who come to a compound in the third ward on the twelfth of Garren, a week after the Seven Sevens have ended, and bow with the careful, regretful courtesy kept for the condemned. They bring a summons under the seals of both Ministers: that the Fifth Article obliges the Captain to answer for the day of the Festival, that his motive has been established to the satisfaction of the Left Ministry, that the Bureau has entered no finding to excuse him, and that he may clear his hand at the Stone of Mikusa at dawn on the twentieth.</p>
+          <p>Eight days later they walk behind him at a polite distance through the dark to the shrine, with a boy before them carrying a lantern, and are two of the nine witnesses on the dais. The manuscript gives them neither names nor ages, and the figures on their sheet are its own.</p>""",
+            },
+            {
+                "slug": "bertran", "name": "Bertran",
+                "epithets": "Sir Bertran de Lanta &middot; master-at-arms of Castelmaur &middot; knight &middot; 38 years old",
+                "teaser": "Cannot enter a mercy in any column, so he rides out alone one night to repay it.",
+                "bio_html": """<p>A stern, lean, well-made man of thirty-eight who has fought in six minor wars and won five, and who goes through life by double entry: debts incurred and debts paid, blows given and blows returned. On the green at Vilarnau he is disarmed in a single movement by a foreigner who then sheathes both swords and bows with the painful apology of a man who has spilled wine, having left him alive by choice. Bertran has no column in which to enter a mercy. He does not hate the man; it is a respect so complete that it has nowhere to go. In the evenings he carves small pearwood horses and sends them, in rags, to his widowed sister's four children, who have never been told who makes them.</p>
+          <p>On the sixteenth of Jorren, when the baron orders the stone broken and the guest taken, he rides down to the mill alone and without a banner, knocks at the door, and tells <a href="../characters/gersenda.html">Gersenda</a> once what is coming. At the end of the yard, without turning, he adds the one line that was not a warning. On the night of the torches he is given forty men and spends forty minutes in a thicket on a perfectly sound hoof. He asks leave to resign his sword, is refused, and rides out of the gate without it. In the fourteenth year he comes to Lasserra on foot, sets a small grey gelding on the bench of the last house, and is not seen again.</p>""",
+                "quote": "Tell him that we are even.",
+            },
+            {
+                "slug": "gersenda", "name": "Gersenda",
+                "epithets": "Miller's daughter &middot; later wife of the smith's surviving son and leader of the High Ground &middot; 16 at the story's opening, 35 at the departure",
+                "teaser": "Teaches a stranger the word for door, and keeps his unreadable poem in the bread-box.",
+                "bio_html": """<p>The miller's daughter at the Mill of the Two Weirs, sixteen, with her mother's gap in her front teeth and her late father's long patient face, and the frank clinical interest of a girl who has been told to find something wrong with a person and cannot. She is appointed, by the unspoken vote of the household, to teach the foreigner the language, in the slow flat voice one uses to an elderly, intelligent animal, working through the whole kitchen from the pot to the ladle to the small cracked salt-bowl. She drives a hard bargain at the wool-market, and in return he teaches her his word for stone.</p>
+          <p>She is the first to hear him in the barn, and she keeps everyone away from it that afternoon. She answers the door to <a href="../characters/bertran.html">Bertran</a> at night with a candle and an iron ladle held down against her thigh, and on the night of the torches takes the halter, and the others, across the plank into the dark. On the ridge she marries the smith's surviving son and bears five children; she runs the High Ground's affairs with a hard bargain and a long patient face. She keeps a few of the old man's verses, hidden, in a bread-box, and on the day he goes east she hears him say the name at the boundary-stone, as though telling someone where he was going. The morning after, it is she who finds the sheet he has left for her.</p>""",
+            },
+            {
+                "slug": "bernat", "name": "Bernat",
+                "epithets": "Old Bernat &middot; reeve of Vilarnau &middot; 79 years old",
+                "teaser": "Has seen a great deal and been impressed by very little, and does not leave.",
+                "bio_html": """<p>The reeve of Vilarnau, an ancient with a cold clay pipe, who sits on the bench outside the forge with the posture of a man who has seen a great deal and been impressed by very little of it. Told a man has come out of the stone, he does not look up. He settles the first morning's trouble by the Charter: any stranger who comes to the green at dusk and is not turned out by sunrise is the village's guest, and the guest, he rules, is the miller's widow's, since she fed him first. He walks the foreigner out under the oak to a flat grey fieldstone the size of a bread-board and tells him that the last man had lain there nine years.</p>
+          <p>At the tavern, on the evening it is decided to weigh at the oak, he is seen reckoning on his fingers, and says only that the baron would have to be told civilly. On the green, facing the baron, he says the stone is not to be used that day. When the baron's banner has vanished behind the hill it is he who says, in a voice that does not sound like winning, that they have won. On the night of the torches he goes from door to door with a lantern. He is seventy-nine, and he does not leave. His pipe is found afterward in the ashes of the bench outside the forge.</p>""",
+                "quote": "The last one died.",
+            },
+            {
+                "slug": "brunissen", "name": "Brunissen",
+                "epithets": "Keeper of the tavern of Vilarnau &middot; 40 years old",
+                "teaser": "Never lets a silence last a minute, and is the one person in the lane who says what the stone will cost.",
+                "bio_html": """<p>A broad, bright-faced, loud-voiced woman of forty, who sells a thin bitter ale and a thinner red wine under a crooked chestnut-branch sign painted yellow in her father's time, and who has never in twenty years allowed a silence to last more than a minute. It is she who asks, wiping a mug on her apron, where the stone goes if it is a door. On the sleet-ticking evening when the lane votes to take its grain to a plank under the oak and keep the green's stone clear for its guest, hers is one of the two hands that stay in a lap, because she does not vote on anything she will have to serve drinks through afterward.</p>
+          <p>Through a crack in her shutter she watches the foreigner lay his hand on the polished stone in the sleet, and says, to no one, in a very quiet voice, that it is going to be a long winter. She is correct on every point but the length. After the burning she carries her father's sign up the quarry road, scorched along one edge, and hangs it in the second spring on the door of the largest house on the path. She keeps a tavern there for thirty years and never again allows a silence to last a minute. Nobody asks her why.</p>""",
+            },
+            {
+                "slug": "villagers-of-vilarnau", "name": "The Villagers of Vilarnau",
+                "epithets": "The village chorus: the cooper, the smith and his wife, a young wife three months gone, a feverish boy, a very old woman, the mill's hired boy &middot; aged 12&ndash;85 by their sheet",
+                "teaser": "Touch the stone on the way to somewhere else, and turn a weighing-place into a door.",
+                "bio_html": """<p>Forty-one hearths and a hundred and ninety souls, drawn here as the people they are: a wiry cooper who has been drinking and calls the foreigner the Eastern Angel, a broad smith who comes to the green with his hammer, the smith's wife who sends round a dish of boiled sausage and weeps when it is returned untouched, a young wife three months gone who walked three miles that spring to touch a shrine of Elara and now lays her palm where the stranger lays his, a cooper's boy whose fever is said by his mother to have broken at once, a very old woman with four teeth who smiles openly, and the mill's hired boy, who adores the man who mends the sluice. In a fortnight half of them are touching the green's stone on their way to somewhere else, and the top of it begins to take a polish.</p>
+          <p>They mean no harm. It is a pious gesture, out of kindness to a stranger and fear of a god, and out of a pleasing sense of being for once in the middle of something; and it is made a plank at a time, by warm people, in a tavern. The smith does not live to reach the ridge; his surviving son, who once read a book, carries the dead man's hammer up on his back and finds no use for it in thirty years. Of the village's hundred and ninety, seventy-four are dead by the second of Kerren, and eight more by the thaw.</p>""",
+            },
+            {
+                "slug": "masons-of-castelmaur", "name": "The Masons",
+                "epithets": "Masons of the baron's household &middot; the elder about 50, the younger about 30 by their sheet",
+                "teaser": "Two patient, indifferent men with a sledge, three iron wedges, and a stone that will not take a mark.",
+                "bio_html": """<p>Two broad, patient, indifferent men in leather aprons who ride down to Vilarnau with the baron on the twentieth of Jorren, carrying iron wedges and a great sledge-hammer slung on a pole. They have been told to break an obstruction. The first wedge goes against the stone's flank at the join where the green vein runs, and the elder swings; the sound rings clean and bright across the whole valley and is followed by a noise like a twig snapping. The iron wedge, from the best smith in Castelmaur, lies in the dust in two halves. The second goes the same way.</p>
+          <p>The third, a thicker one, strikes a scatter of sparks and rebounds so hard that one of them drops the hammer and stands nursing his wrist. Where it struck there is no mark; the grey surface lies in the sunlight, cool and smooth, as though it had been struck by a feather. The elder, who has broken stones his whole life, tells the baron that it is not a stone a man can break, and that if his lordship wishes it moved he will need forty oxen and a good deal more than a morning.</p>""",
+            },
+            {
+                "slug": "castelmaur-men-at-arms", "name": "The Men-at-Arms of Castelmaur",
+                "epithets": "Men-at-arms and sergeants of the Barony of Castelmaur &middot; mostly 19&ndash;40 by their sheet",
+                "teaser": "Ordinary soldiers following an order to burn, and none of them able to lay a hand on the stone afterward.",
+                "bio_html": """<p>The baron's household troops: six who ride behind the bailiff to the first weighing, twenty who come with the baron on the twentieth of Jorren, a sergeant named Sicard with ten men and a cart who go down the east lane on the first of Kerren, and the forty who carry torches on the night of the burning. They are told what the barony is owed, and they do the work. Nine hearths are distrained in the forenoon, a pig screaming all the way to the cart. At the mill a boy of eight goes for one man's hand with his teeth and lays the knuckle open to the bone, and three of them are dead in the loft inside a dozen heartbeats.</p>
+          <p>On the night they are sent after the man responsible, the first six down a narrow lane find a thing in the road they have no instruction for and go down in a pile, and the forty behind them stop. Nobody wishes to be next. The thatch is put to the torch behind the line, and at dawn they are still in a ring about the moot-green, a hundred paces from the ashes of the nearest house, looking at a grey block with a charred wreath of ivy on it, exactly as it always stood. In forty men, not one of them can find it in himself to lay a hand on it. Their knight, <a href="../characters/bertran.html">Bertran</a>, reports in the morning that the village is burned, the man escaped, and the stone cannot be broken.</p>""",
+            },
+            {
+                "slug": "folquet", "name": "Folquet",
+                "epithets": "Clerk to the bailiff of Castelmaur &middot; later clerk of record to the Count of Rocafort's assizes &middot; 26 at the distraint, 60 at his death",
+                "teaser": "Believes arithmetic is a form of mercy, and writes the one line he would most like to have left blank.",
+                "bio_html": """<p>A pale, tidy, ink-fingered young bailiff's clerk of twenty-six, taught from boyhood that a column which does not add is a sin and that arithmetic is a mercy, since it tells people what they owe so that they need not guess. He walks down the lane of Vilarnau behind the cart on the first of Kerren with his book open on his forearm, entering the condition of each hearth in a neat, unemotional shorthand, and does not look at the faces of the people at their doors, since he holds it unprofessional. Of eleven hearths in the east lane, nine are distrained, one is unfortunate, and one is the sort that ought to be put in a ledger. On the tenth line he writes, in clean copperplate, that the widow's hearth violently resisted and that three of the sergeant's men are dead by a foreigner.</p>
+          <p>On the third of Kerren he totals the account at sixty-one solidi, and writes in the margin the only comment he permits himself: that the lane would not pay again. He lives to sixty, and becomes clerk of record at the Count of Rocafort's assizes, admired for the exactness of his entries and the economy of his opinions. In the thirty-first year after the burning he is asked to read from the oldest book in his keeping, and reads the tenth line aloud to a room of lawyers. The count's judge supposes it the work of a Saracen mercenary in the late baron's pay, and Folquet, who has never entered an opinion in forty years, says nothing. It is entered. It is the version the district keeps.</p>""",
+            },
+            {
+                "slug": "odilo", "name": "Odilo",
+                "epithets": "Hierarch of the temple of Auron at Castelmaur &middot; about 60 years old by his sheet",
+                "teaser": "Lays an interdict on a lane in the tone of a man initialing a receipt.",
+                "bio_html": """<p>The Hierarch Odilo sits in judgment of the barony's morals from a squat round temple of red brick at the gate of Castelmaur, and dines on lamb on feast-days. Father Guiraut's honest report on the stranger's bowing, the refused pig, and a stone being touched by half the parish under a foreign name reaches him, and it is, to a certain kind of reader, indistinguishable from an accusation. When the report of the sergeant's dead men comes, he arrives in his scarlet, with a small smile, to bless the enterprise. He is not a cruel man; he is simply a man whose faith holds that every other crown in the world is stolen, and who has never been made to reckon what that means in thatch.</p>
+          <p>He lays the interdict of the temple on Vilarnau, so that no hearth in the barony may feed, shelter or bury any soul of that lane until the idol is cast down, and pronounces it in the tone of a man initialing a receipt. It costs the Church a line of parchment and costs the ridge its winter. When the barony's tithes begin to fall off in the years after, he preaches against sloth. The temple's chronicle remembers a raid of Saracens and a heathen idol cast down by his zeal, with the blessing of the Three.</p>""",
+            },
+            {
+                "slug": "guilhem", "name": "Guilhem",
+                "epithets": "Younger brother of Baron Aimeric &middot; hostage of the Count of Rocafort &middot; 38 years old",
+                "teaser": "Writes funny letters from a damp cell, and begs his brother not to do anything foolish on his account.",
+                "bio_html": """<p>A lean, charming, careless, good-natured man of thirty-eight with a talent for being liked, whom his brother the baron sends in the late summer with forty men to take a small weir on the Sarrac, which both baron and count have claimed for forty years. The count's riders are already waiting at the ford. They take the weir, forty men, two banners and the baron's brother in a morning, and send back a courteous letter naming a price of four hundred solidi, to be counted at Rocafort before the count's chaplain.</p>
+          <p>His four letters are, like everything he has written, funny. The count's cook has resolved to starve him by degrees, though the sauces are the real tragedy; the Basque guard has taught him a song of forty verses about a goat. The last says in the same light tone that the cell is damp, that he is coughing a little, and that he would be glad to be home by the winter feast. He dies on a pallet of straw on the fourteenth of Lorren, with the guard sitting by him singing the sixth verse. The count, being a man of honor, returns the body without ransom, and keeps the weir. It is forty-two days before the sum would have fallen due. The baron folds the letter in three, and puts it in the box with the other four.</p>""",
+            },
+            {
+                "slug": "jaume", "name": "Jaume",
+                "epithets": "Boy of the High Ground &middot; 9 in the second winter",
+                "teaser": "Finds by accident the exact place on a stick where the thumb belongs, and is never told what he was given.",
+                "bio_html": """<p>One of the boys of Lasserra who, in the long evenings of the second winter on the ridge, find in the lean old man with the long jaw a master for the sticks. He teaches them with grave patience to hold a wooden sword as one holds a thing that might one day hold one back: the grip, the breath, the settling of the thumb. He teaches them to bow to a stick before they strike it. None of them becomes a swordsman, which he regards as the most successful outcome possible.</p>
+          <p>Jaume, nine, finds by pure accident the exact place on the stick where the thumb belongs, and looks up in alarm at the sudden silence. The old man says <em>Perfect</em> in the speech of the High Ground, and then, under his breath, in his own, and goes out to stand a while among the goats. Nobody asks him why. The boy keeps the grip for the rest of his life and is never told what he has been given. The manuscript gives only his age and the moment; the sheet says outright that his appearance is invented.</p>""",
+            },
+        ],
+        "scenes": [],
+    },
 ]
 
 LORE = [
@@ -2820,13 +2979,13 @@ LORE = [
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
           <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a court astronomer-priest who keeps a kingdom's calendar from a tower, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him.</p>""",
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him. Another, a mute stonecutter, dresses both ends of a matched pair of stones, spends thirty-one years as a quarry-hand beside the one that receives, and is asked, in notches drawn in the dust, the one question he may not answer.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone, an eight-foot electric eel &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Another, left beneath a threshing-floor, cuts a circle of clear noon with a ruler's edge out of a sky of ash and holds it open for four hundred and twenty-one days. Every Catalyst on file is listed below.</p>""",
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Another, left beneath a threshing-floor, cuts a circle of clear noon with a ruler's edge out of a sky of ash and holds it open for four hundred and twenty-one days. Another is a pair of stones, one in a shrine and one on a village green, that carries whoever lays a bare palm on the first to the second, and no one ever back. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
@@ -2840,7 +2999,7 @@ LORE = [
         "teaser": "Three gods, or one god wearing three faces &mdash; the Crown has never resolved which.",
         "definition_html": """<p>An old pagan faith built around three supreme gods who may, or may not, be one god wearing three faces &mdash; a contradiction its own believers call the Threefold Mystery and have never been in any hurry to resolve. <strong>Auron</strong> the Father governs heaven, law, kingship, judgment, and oaths; <strong>Elara</strong> the Mother governs earth, birth, fertility, harvest, and hearth; <strong>Solan</strong> the Son governs the sun, fire, youth, passion, and sacrifice. A believer may favor one god over the other two without ever quite denying that all three are, somehow, the same throne. The formula recited at its temples leaves the contradiction standing on purpose: <em>Father above. Mother beneath. Son beside us. Three crowns. One Heaven.</em></p>
           <p>Ritual-heavy and elaborately hierarchical, with wine treated as sacred and pork freely eaten, the Threefold Crown holds that its own throne is the one true one &mdash; a claim that makes its temple politics every bit as susceptible to ambition as any earthly court, and its priesthood just as capable of turning a private grief, or a private embezzlement, into doctrine.</p>""",
-        "appears_html": """<p>Vantashen's state religion in <a href="../books/0157.html">The Stolen Prince War</a>, where Hierarch <a href="../characters/doreth.html">Doreth</a> turns a private grief into a war he tells himself is a monument, and the guardian at Level 40 is known to delvers as <a href="../characters/the-ember-judge.html">the Trial of Solan</a>. In <a href="../books/4417.html">The Iron Stiletto War</a>, the Order of the Pale Cloth's High Cleric <a href="../characters/ambrose.html">Ambrose</a> declares a pair of shoes heretical on the Crown's own authority. And in <a href="../books/2140.html">The Third Grain</a>, a legal claim over a county mill is argued and won entirely inside the Crown's own law, under a courtroom ceiling painted with <a href="../characters/eldest-witness-of-the-writ.html">a judge</a> who has spent thirty years complaining that Auron's three scales were never painted quite level.</p>""",
+        "appears_html": """<p>Vantashen's state religion in <a href="../books/0157.html">The Stolen Prince War</a>, where Hierarch <a href="../characters/doreth.html">Doreth</a> turns a private grief into a war he tells himself is a monument, and the guardian at Level 40 is known to delvers as <a href="../characters/the-ember-judge.html">the Trial of Solan</a>. In <a href="../books/4417.html">The Iron Stiletto War</a>, the Order of the Pale Cloth's High Cleric <a href="../characters/ambrose.html">Ambrose</a> declares a pair of shoes heretical on the Crown's own authority. In <a href="../books/2140.html">The Third Grain</a>, a legal claim over a county mill is argued and won entirely inside the Crown's own law, under a courtroom ceiling painted with <a href="../characters/eldest-witness-of-the-writ.html">a judge</a> who has spent thirty years complaining that Auron's three scales were never painted quite level. And in <a href="../books/2231.html">The Stone of the Clean Hand</a>, a hearth-priest's honest report of a stranger's bow to Solan's Fire and refusal of the feast-pig reaches Hierarch <a href="../characters/odilo.html">Odilo</a> at Castelmaur, who lays the temple's interdict on a whole lane until its idol is cast down.</p>""",
     },
     {
         "slug": "decree-of-luminescence", "name": "The Decree of Luminescence", "group": "Religion",

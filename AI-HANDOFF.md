@@ -15,8 +15,8 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; seven are live on the site so far, plus
-six coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2365) and four
+various stages of publication; eight are live on the site so far, plus
+six coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -175,8 +175,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently seventeen entries: seven published,
-                            ten coming-soon — see §6)
+/books.html             Full book list (currently eighteen entries: eight published, ten coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -187,7 +186,7 @@ book's own page rather than as their own top-level sections.
                             threefold-crown, decree-of-luminescence;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (244 total — 10 for
+/characters/<slug>.html    One page per character (262 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -195,8 +194,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the
-                            Decree of Luminescence; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -293,9 +291,8 @@ Envoy row per book and `lore/catalyst.html` one Catalyst row per book,
 automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
-`catalyst` and/or `envoy` record — the seven published books (4438 included), plus 0188 (both
-records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both
-records — see §6) and 2365 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
+`catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
+records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6) and 2231 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (1268, 4425) or only an empty coming-soon
 stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
@@ -923,11 +920,16 @@ the same specs as every other book.
 
 ### Book: *The Decree of Luminescence* (Case 2365)
 
-Status: **Coming soon** (awaiting release). Built on branch `case-2365-stub` from: the cover
+Status: **Published** (2026-10-10), with `pages` "88" and a Google Play Books link
+(`https://play.google.com/store/books/details?id=spIXEgAAQBAJ`; the link has not been opened by an AI),
+both sent by the author in chat, which is the confirmation to publish. It was merged into `main` as
+coming-soon on 2026-10-09 via pull request #1. **`genre` and `synopsis_html` are still `EDITOR_*`
+placeholders**, so the page shows empty genre and synopsis spots until the author sends them. Built on
+branch `case-2365-stub` from: the cover
 (`images/covers/2365.jpg`, tagline "Ash. Roll. Residue. Append. Nil."), 24 character reference
 sheets (two batches), 15 scene paintings, and the manuscript
-`Case_2365_The_Decree_of_Luminescence_Final.md` (revision 3). **`pages`, `genre` and
-`synopsis_html` are untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
+`Case_2365_The_Decree_of_Luminescence_Final.md` (revision 3). **`genre` and
+`synopsis_html` were left as untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
 was used for the bios and captions only). The case was first committed as a cover-only stub, then
 filled in.
 
@@ -981,6 +983,62 @@ the sheets too and are labelled as such. (6) Nina is never shown alive; her shee
 remembered. (7) Images: cover 900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px
 grid, the same specs as every other book. Every portrait and scene was checked against its name
 on a contact sheet of the files as built.
+
+### Book: *The Stone of the Clean Hand* (Case 2231)
+
+Status: **Coming soon** (awaiting release; no purchase link was supplied). Added straight into
+`main`, the cover-and-sheets pass in one go, from: the cover (`images/covers/2231.jpg`, tagline
+"Cat. Hand. Stone. Signature. Omitted."), 18 character-dossier sheets, and the manuscript
+`Case_2231_The_Stone_of_the_Clean_Hand_2026-10-08_1630PM_GMT+7.md` (revision 7). **`pages`, `genre`
+and `synopsis_html` are untouched `EDITOR_*` placeholders**, and there are **no scenes** yet
+(`scenes: []`, so the page has no gallery and the case adds nothing to `scenes.html` or the records
+list). The manuscript was used for the bios only.
+
+The premise, from the manuscript (not author-confirmed jacket copy): the subject world is 812-G.
+Himuro, the Japanese side, is the successor population of the court of Case 4099 (hence the
+`RELATED_THEMES` row linking the two). Vilarnau and Castelmaur are in Auvarre, under the Threefold
+Crown. **Observer 618**, a mute stonecutter, is the Dumb Mason of a pair of matched one-way
+matter-transit stones, the **Kiyote Pair**: one stands in a shrine, the other on a village green.
+A cat, the Fifth Article, the Stone's tally, the Hearth Weighing and distraint, a night of torches,
+the quarry gate, Lasserra and a nineteen-year wait are the beats; the ending is open. By the
+author's Revision 6, **Higaide** is not dead, and returns after Cases 0202, 1414, 0333 and 0456.
+In the Threefold Crown's lore, a hearth-priest's honest report of a stranger's bow to Solan's Fire
+and refusal of the feast-pig reaches Hierarch **Odilo** at Castelmaur, who lays the temple's interdict
+on a whole lane until its idol is cast down. That is the sentence the lore page now carries.
+
+Eighteen characters have pages, in this order: `observer-618` (the Envoy), `shizuka`, `jokei`
+(Jōkei, written with ō on the page), `sadamune`, `kanemichi`, `kurige`, `bureau-officers`,
+`bertran`, `gersenda`, `bernat`, `brunissen`, `villagers-of-vilarnau`, `masons-of-castelmaur`,
+`castelmaur-men-at-arms`, `folquet`, `odilo`, `guilhem`, `jaume`. The `PRINCIPALS` entry (the six who
+feed the homepage cast wall, a first pass) is `observer-618`, `shizuka`, `jokei`, `sadamune`,
+`bertran`, `gersenda`. Roster records: Catalyst **The Kiyote Pair** ("Matched one-way matter-transit
+stones", page `books/2231.html`), Envoy **Observer 618** ("the Dumb Mason", page `observer-618`).
+Cultivator and Catalyst lore prose each picked up one sentence, and the Threefold Crown's
+`appears_html` now names this case (it also changed "And in" to "In" at the start of the 2140 sentence
+before it, so that "And in" only opens the last sentence).
+
+**Only 18 sheets exist.** Higaide, Arikuni, Sukenori, Ermengarda, Aimeric, Peire, Narimune, Guiraut
+and others who matter in the manuscript have no sheet and so no page. Don't invent them; add them
+when art arrives, and add them to the roster in story order.
+
+Judgment calls worth knowing: (1) **The Catalyst has no character sheet**, so its roster image
+(`covers/2231-stone-thumb.jpg`) is a 2:3 crop of the cover (the hand, the green vein and the
+notches, no title text), and its row links to the case page. If a sheet of the Stone arrives, add a
+`the-kiyote-pair` character page and repoint the record. (2) The `hook` is the cover's own tagline,
+verbatim. (3) Observer 618's "thirty-one years" as a quarry-hand is 12 + 19 (the manuscript gives the
+two figures separately); don't re-derive it differently. (4) Details that come from the *sheets* and
+not the manuscript are labelled as such in the bios: Kurige's age (7) and white sock, the Bureau
+Officers, Jaume. (5) 2231 shares the Threefold Crown with 0157, 4417 and 2140, so the faith-sharing
+logic relates them automatically. (6) Slugs: `jokei` and the rest did not collide with any existing
+slug; character slugs are one global namespace (checked). (7) **Lesson from this run:** the first
+draft of the bios was written before the manuscript had been read, and it contained errors (an
+invented Bureau-Officers bow, a wrong order of Observer 618's dust, bow and bread-heel sequence, a
+misattributed "four for four" line, and a few wrong details for Bernat, the Masons, the men-at-arms,
+Odilo and Gersenda). All of them were corrected against the manuscript, and a script then checked
+every capitalised name and number in the bios against the manuscript text. Read the manuscript
+before writing a bio, not after. (8) Images: cover 900x1350; sheets 980w / 320w thumb, the same
+specs as every other book; every portrait was identified by looking at its title strip, never by
+the order of the attachments.
 
 ### Cast added to Case 0000B (*Sword of Valeria: The Empty Hand*)
 
@@ -1065,7 +1123,7 @@ sit at the end of `BOOKS`, in the order the author listed them.
   footer). There is deliberately **no email** — don't add one.
 - The four earlier placeholder-only books (Ghost, Aldemark, Illumaria,
   Carbon Echo Beacon) that existed at one point are still not on the site.
-  "More than a dozen novels" total were mentioned early on — only seven are
+  "More than a dozen novels" total were mentioned early on — only eight are
   live, plus 0188, 2140 and 3115 with a roster but no synopsis yet (§6).
 - **Case 4438** (*The Heavenly Thunder-Serpent*) is live with a full cast,
   scene gallery, both roster records, its Google Books link and a confirmed
@@ -1074,9 +1132,15 @@ sit at the end of `BOOKS`, in the order the author listed them.
   cast but no pages, genre, synopsis or catalyst/envoy record, and **Case 0156**
   (*The Purging of Charsianon*) is coming-soon with a 26-character cast, 14
   scenes and both roster records but no pages, genre or synopsis (§6).
-- **Case 2365** (*The Decree of Luminescence*) is coming-soon with a 24-character
-  cast, 15 scenes and both roster records but no pages, genre or synopsis, and no
-  sheet for its Catalyst (§6). It is on branch `case-2365-stub` until merged.
+- **Case 2365** (*The Decree of Luminescence*) is **published**: a 24-character
+  cast, 15 scenes, both roster records, 88 pages and a Google Play Books link
+  (not opened by an AI), merged via PR #1 and published on 2026-10-10. Its
+  `genre` and `synopsis_html` are still placeholders, and its Catalyst has no
+  sheet (§6).
+- **Case 2231** (*The Stone of the Clean Hand*) is coming-soon with an
+  18-character cast and both roster records but no pages, genre, synopsis or
+  scenes, and no sheet for its Catalyst. Its principals Higaide, Arikuni and
+  others have no sheet yet (§6).
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -1133,7 +1197,20 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 2365 — on branch `case-2365-stub`, not yet in master).** The author sent
+- **Latest update (Case 2231 + Case 2365 link and pages — straight into `main`).** The author
+  sent the cover, the manuscript and 18 character-dossier sheets for Case 2231, then, for Case 2365,
+  the Google Play Books link and "88 page". Done: a full `2231` dict (18 characters, `catalyst`,
+  `envoy`, no scenes) with a `PRINCIPALS` entry, a `RELATED_THEMES` row linking 2231 to 4099, one new
+  sentence each in the Cultivator and Catalyst lore prose, and one in the Threefold Crown's
+  `appears_html`; and `status`, `pages` and `google_books_url` for 2365, which makes it published
+  (the author's link and page count are the confirmation). Images: 2 covers (the cover and the
+  Catalyst thumb), 36 character files (18 slugs x full + thumb). Recount after rebuilding: cases
+  17 -> 18, characters 244 -> 262, records 134 unchanged, sitemap 407 -> 426; every local link in
+  every page resolves (15,393 checked), and the new and changed pages were opened in Chromium with no
+  broken images. `HOME_SCENES` was not changed. Lessons: read the manuscript before writing the bios
+  (the first draft had errors, now corrected and checked by script), and identify sheets by looking
+  at them.
+- **Earlier update (Case 2365 — on branch `case-2365-stub`, merged into `main` on 2026-10-09 via PR #1).** The author sent
   the cover, then 24 character sheets and 15 scene paintings in two batches through chat, plus the
   manuscript. Done: a full `2365` dict (24 characters, 15 scenes, `catalyst`, `envoy`) with a
   `PRINCIPALS` entry, one new sentence each in the Cultivator and Catalyst lore prose, and the Decree
