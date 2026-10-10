@@ -10,7 +10,7 @@ the project from scratch each time.
 
 ## Where things stand
 
-Seven books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
+Eight books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
 synopsis, a full cast of 10 characters, an 8-image scene gallery, and
 working "View on Google Books" / "Read on Royal Road" links — *The Ledger
 of a Single Sweetness* (Case 4099) — real cover, synopsis, a full cast of
@@ -20,13 +20,11 @@ War* (Case 0157) — real cover, synopsis, a full cast of 35 characters, a
 19-image scene gallery, a confirmed page count (96), and a working "View
 on Google Books" link — and *The Iron Stiletto War* (Case 4417) — real
 cover, synopsis, a full cast of 13 characters, a 4-image
-scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Three more are live but not described in
-detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
-of Unmediated Grace* (Case 4555) and *The Heavenly Thunder-Serpent* (Case
+scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Four more are live but not described in detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
+of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
-gallery, a working "View on Google Books" link and a confirmed page count of
-82). Six further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
-0000B and 2365 (*The Decree of Luminescence*, with 24 subjects and 15 records), are
+gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88; its genre and synopsis are still placeholders). Six further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
+0000B and 2231 (*The Stone of the Clean Hand*, with 18 subjects), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has five entries: Cultivator (listing every Envoy) and
@@ -42,7 +40,7 @@ and dragging are blocked, and full-size files aren't linked directly) — a
 deterrent, not a lock: anything a browser can display can still be captured.
 
 Still open:
-- Seven of "more than a dozen" novels are live — more can be added the
+- Eight of "more than a dozen" novels are live — more can be added the
   same way these were.
 
 ## Making changes
@@ -266,9 +264,9 @@ Edited: `tools/build_site.py` (new `SITE_URL` constant, `head_html`/`page` take 
 
 Totals: cases 16, characters 220, records 119; pages in sitemap 367.
 
-### [PENDING] Update — Case 2365 (*The Decree of Luminescence*): 24-subject cast and 15 records
+### [MERGED] Update — Case 2365 (*The Decree of Luminescence*): 24-subject cast and 15 records
 
-On branch `case-2365-stub`, awaiting merge into `main`.
+On branch `case-2365-stub`.
 
 Added:
 - `characters/` — 24 pages: piero, severin, marcello, livia, faustin, sigrid, arne, ragnvald, fulvio, rufio, nardo, costanza, aldo, lino, nina, tito, the-goldsmith, anselmo, the-granary-physician, the-tanners-widow, the-nameless-girl, the-senior-clerk-of-the-hall, the-interpreter, the-herald-2365
@@ -285,3 +283,25 @@ Edited:
 - every other page — footer "Site last built" stamp only
 
 Totals: cases 16 -> 17, characters 220 -> 244, scenes 119 -> 134; pages in sitemap 367 -> 407. A recount from the rebuilt site gives the same figures, and every local link resolves.
+
+Merged: 2026-10-09, 10:22AM GMT+7, via pull request #1 (`case-2365-stub`). The case was merged as coming-soon; it was published by the next entry below.
+
+### [MERGED] Update — Case 2231 (*The Stone of the Clean Hand*): new 18-subject case, plus Case 2365 published
+
+Straight into `main` at the author's request (no staging copy, so no `[PENDING]` entry existed). The author sent the cover, the manuscript (`Case_2231_The_Stone_of_the_Clean_Hand_2026-10-08_1630PM_GMT+7.md`) and 18 character-dossier sheets; then, for Case 2365, the Google Play Books link (`https://play.google.com/store/books/details?id=spIXEgAAQBAJ`) and a page count of 88.
+
+Added:
+- `books/2231.html` — Case 2231, coming-soon (no purchase link was supplied)
+- `characters/` — 18 pages: observer-618, shizuka, jokei, sadamune, kanemichi, kurige, bureau-officers, bertran, gersenda, bernat, brunissen, villagers-of-vilarnau, masons-of-castelmaur, castelmaur-men-at-arms, folquet, odilo, guilhem, jaume
+- `images/characters/` — 36 files: a sheet and a `-thumb` for each of those 18 slugs
+- `images/covers/2231.jpg` (900x1350) and `images/covers/2231-stone-thumb.jpg` (the Catalyst's roster image, a crop of the cover)
+
+Edited:
+- `tools/build_site.py` — a full `2231` `BOOKS` entry (18 characters, `catalyst` *The Kiyote Pair*, `envoy` Observer 618 "the Dumb Mason"; `pages`, `genre` and `synopsis_html` left as the placeholders; no scenes); `PRINCIPALS` gained `2231`; one `RELATED_THEMES` row linking 2231 to 4099; one sentence each added to the Cultivator and Catalyst lore prose; the Threefold Crown `appears_html` now names the case. Case 2365: `status` set to published + google-books, `pages` "88", `google_books_url` set (its `genre` and `synopsis_html` are still placeholders)
+- `books.html`, `index.html`, `characters.html`, `sitemap.xml`, `lore/cultivator.html`, `lore/catalyst.html`, `lore/threefold-crown.html`, `lore/decree-of-luminescence.html`, `books/2365.html`, `books/4099.html` (related-case line), and the character and record pages of Case 2365 — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 2231 in §6, the 2365 write-up and §7 bullets, §8 entry; counts updated
+- `README.md` — this entry, the previous entry's status, and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp only
+
+Totals: cases 17 -> 18, characters 244 -> 262, records 134 unchanged; pages in sitemap 407 -> 426. A recount from the rebuilt site gives the same figures, and every local link resolves (15,393 checked).
+
