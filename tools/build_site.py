@@ -86,12 +86,17 @@ PRINCIPALS = {
     "2365": ["piero", "severin", "marcello", "livia", "faustin", "sigrid"],
     "2231": ["observer-618", "shizuka", "jokei", "sadamune", "bertran", "gersenda"],
     "0000b": ["the-anchorite", "aveline", "halvard", "vasarion", "aimeric", "ganeth"],
+    "1153": ["levan", "bagrat", "vazha", "demna", "observer-419-1153", "the-eleven-fingered-hand"],
 }
 
 # Hand-written "Related Cases" links, on top of the automatic ones (same catalyst
 # class, shared faith). One tuple per pair: (case slug, case slug, "reason shown").
 RELATED_THEMES = [
     ("2231", "4099", "Same subject world: Himuro descends from the court of Case 4099"),
+    ("2365", "4555", "Same kingdom: Case 2365 is the founding of its religion, Case 4555 is set many years after"),
+    ("1153", "2140", "Same Observer: Observer 419 is posted to both cases"),
+    ("1153", "0000b", "Shared subjects: Xu Lian and the Anchorite of Ardenwake appear in both cases"),
+    ("1153", "0000", "Shared subject: the founding wielder of the sword is the boy of Case 0000"),
 ]
 
 BOOKS = [
@@ -128,7 +133,7 @@ BOOKS = [
                 "slug": "the-boy", "name": "The Boy",
                 "epithets": "The Reckoner &middot; The Answered Boy &middot; The Uncrowned &middot; The Unhastening &middot; Ardwen's Wielder",
                 "teaser": "A valley goatherd who never gets a name, only titles.",
-                "bio_html": """<p>Never given a name that survives the telling &mdash; only the titles the decades hang on him one at a time. A valley goatherd and ledger-keeper, thirteen years old when a hillside prayer was answered with a sword named Valeria. He carries it for the rest of a long life without once asking to be crowned or believed &mdash; only reckoned with honestly, the way he was raised to keep a column of figures.</p>""",
+                "bio_html": """<p>Never given a name that survives the telling &mdash; only the titles the decades hang on him one at a time. A valley goatherd and ledger-keeper, thirteen years old when a hillside prayer was answered with a sword named Valeria. He carries it for the rest of a long life without once asking to be crowned or believed &mdash; only reckoned with honestly, the way he was raised to keep a column of figures. Later, in <a href="../characters/the-founding-wielder.html">Case 1153</a>, he is cited at Ardenwake as the nameless founding wielder.</p>""",
                 "quote": "I keep the count, so the valley is not forgotten.",
             },
             {
@@ -1772,7 +1777,7 @@ BOOKS = [
                 "slug": "observer-419", "name": "Observer 419",
                 "epithets": "Envoy/Observer, Case 2,140 &middot; publicly an itinerant clockmaker",
                 "teaser": "Installs a single unremarkable sphere in a failing county mill, then disappears before anyone thinks to ask his name twice.",
-                "bio_html": """<p>A field agent of the <a href="../lore/cultivator.html">Cultivators</a>, deployed to Vardane disguised as a traveling clockmaker with nothing more remarkable about him than a satchel of pocket chronometers. <a href="../characters/garibald.html">Count Garibald</a> shelters him for a night's lodging before asking a single question about his business &mdash; a courtesy no prior posting has required of him, and which his own field note admits, against protocol, he was not required to find noteworthy, and did. He replaces one worn axle joint with a single dull grey sphere, refuses every offer of help, and leaves three days later on foot, forgotten the way useful strangers generally are. The wheel is not.</p>""",
+                "bio_html": """<p>A field agent of the <a href="../lore/cultivator.html">Cultivators</a>, deployed to Vardane disguised as a traveling clockmaker with nothing more remarkable about him than a satchel of pocket chronometers. <a href="../characters/garibald.html">Count Garibald</a> shelters him for a night's lodging before asking a single question about his business &mdash; a courtesy no prior posting has required of him, and which his own field note admits, against protocol, he was not required to find noteworthy, and did. He replaces one worn axle joint with a single dull grey sphere, refuses every offer of help, and leaves three days later on foot, forgotten the way useful strangers generally are. The wheel is not. He is posted next, as a clockmaker again, to <a href="../characters/observer-419-1153.html">Case 1153</a>.</p>""",
                 "quote": "Introduce. Observe. Withdraw before attachment becomes measurable.",
             },
             {
@@ -2414,7 +2419,7 @@ BOOKS = [
                 "slug": "the-anchorite", "name": "The Anchorite",
                 "epithets": "Anchorite of the Vigil of Ardwen &middot; enclosed at nineteen &middot; approx. 30 years old",
                 "teaser": "Breaks the eleventh siege alone by lifting Valeria after five centuries of failed attempts &mdash; and refuses to be named for it.",
-                "bio_html": """<p>An anchorite of the <a href="../lore/faith-of-ardwen.html">Vigil of Ardwen</a>, walled in at nineteen; her office and rank are never recorded beyond the vow itself. By the eleventh siege of Ardenwake she has spent eleven years enclosed, and she does what five centuries of attempts had not: she lifts <a href="../characters/valeria.html">Valeria</a>. Afterward she refuses to be named or credited. The sheet files her as the story's second protagonist, alongside Xu Lian, and as the centre of its &ldquo;no want&rdquo; thesis.</p>
+                "bio_html": """<p>An anchorite of the <a href="../lore/faith-of-ardwen.html">Vigil of Ardwen</a>, walled in at nineteen; her office and rank are never recorded beyond the vow itself. By the eleventh siege of Ardenwake she has spent eleven years enclosed, and she does what five centuries of attempts had not: she lifts <a href="../characters/valeria.html">Valeria</a>. Afterward she refuses to be named or credited. She is the main protagonist of this case, with <a href="../characters/xu-lian.html">Xu Lian</a> beside her, and the centre of its &ldquo;no want&rdquo; thesis. She is cited again, secondhand, in <a href="../characters/anchorite-of-ardenwake.html">Case 1153</a>.</p>
           <p>Slight but not frail, about 5'4&quot;, with dark hair cut short under a plain grey wimple, pale grey eyes of an attention the sheet calls &ldquo;entirely undivided,&rdquo; and the pallor of eleven years without direct sun. She wears the coarse undyed wool habit of an enclosed anchorite and carries no weapon until the sword. Her life before the enclosure, and her name, are deliberately left unresolved; only a private tune that matches no hymnal hints at somewhere outside the capital.</p>""",
             },
             {
@@ -2971,6 +2976,207 @@ BOOKS = [
         ],
         "scenes": [],
     },
+    {
+        "slug": "1153", "title": "The Second Hand",
+        "status": ["coming-soon"],
+        "cover_file": "1153.jpg",
+        "hook": "Hand. Debt. Doctrine. Mercy. Exile.",
+        "case_tag": "Case 1153",
+        "catalyst": {
+            "name": "The Eleven-Fingered Hand",
+            "meta": "Grafted prosthetic left hand",
+            "page": "characters/the-eleven-fingered-hand.html",
+            "img": "characters/the-eleven-fingered-hand-thumb.jpg",
+            "html": "<p>A grafted prosthetic left hand with eleven digits: two thumbs set opposite each other on one broad palm, and beneath them two folding rows of ordinary fingers, four in plain sight and five more folded flat behind. Fitted over three nights to a prince whose own hand had been unmade in a ritual duel, it serves him better than the original ever did. A kingdom spends eighteen years deciding whether it is a hand at all.</p>",
+        },
+        "envoy": {
+            "name": "Observer 419",
+            "meta": "&ldquo;the clockmaker&rdquo; &middot; also the Envoy of Case 2140",
+            "page": "characters/observer-419-1153.html",
+            "img": "characters/observer-419-1153-thumb.jpg",
+            "html": "<p>The same Observer as <a href=\"../books/2140.html\">Case 2140</a>, posted next to Tavgora under cover as a clockmaker whose brass instruments never lose a second. He grafts the hand in three nights and is gone by the next dawn &mdash; then keeps watching, against the letter of a posting formally concluded, from a rented room two valleys away, until a column leaves a burning city by a goat track and he leaves a field on his form open for thirty-four seconds too long.</p>",
+        },
+        "pages": EDITOR_PAGES,
+        "genre": EDITOR_GENRE,
+        "synopsis_html": EDITOR_SYNOPSIS,
+        "characters": [
+            {
+                "slug": "levan", "name": "Levan",
+                "epithets": "Son and heir of King Guram &middot; physician &middot; called Mikel in exile &middot; about 14 at the Proving, 32 at the war &middot; dies at 63",
+                "teaser": "Loses a hand to a loose strap, wins one back from a stranger, and spends eighteen years being kind to everyone but his own claim.",
+                "bio_html": """<p>The King's son, older than <a href="../characters/bagrat.html">Bagrat</a> by fourteen months and quieter by nature, more drawn to the physicians' wing of the palace than to the training yards. At the Proving a re-buckled strap gives way and four inches of real, Auron-blessed steel come down across his raised left hand; he does not scream, and looks, the court thinks, almost apologetic. Over three nights <a href="../characters/observer-419-1153.html">a clockmaker</a> fits him with <a href="../characters/the-eleven-fingered-hand.html">an eleven-fingered hand</a>, and it is Levan himself who counts the fingers first. No petition is ever filed to enter his name on the temple's succession rolls, because he never asks for one.</p>
+          <p>He spends the next eighteen years as a physician, apprenticed to the three court doctors who once agreed his arm would have to go: laying his instruments out left to right in the same count every time, brewing the same bitter mountain tea for frightened patients, and playing a four-stringed lute alone, badly, for the pleasure of failing at something that costs no one anything. He saves Bagrat's arm in a six-hour surgery, refuses the throne twice, wins the duel called the Answer without drawing blood, and is carried out of Tavgora on the night its outer wall falls by <a href="../characters/otar.html">Otar</a> and eleven of his former patients. In Otsane he is &lsquo;Mikel&rsquo; to <a href="../characters/amets.html">Keeper Amets</a>, keeps a small, mostly unpaid surgery for thirty-one years, teaches four novices, writes the compendium he always wanted to write and leaves it to be copied freely, and dies there at sixty-three.</p>
+          <p>The sheet draws him lean and wiry, with long angular face, deep-set dark-brown eyes, near-black hair and a close-trimmed beard that greys at the temples, in undyed charcoal, the grafted hand pale ivory-grey; it gives his age as about thirty-two during the central conflict, which the manuscript's arithmetic supports.</p>""",
+                "quote": "I want no crown. I only wanted to see you stand.",
+            },
+            {
+                "slug": "bagrat", "name": "Bagrat",
+                "epithets": "Guram's nephew &middot; later King of Sarkveti &middot; 13 at the Proving, 31 at the duel &middot; reigns 26 more years",
+                "teaser": "Cannot bear to owe his cousin an arm, builds a righteous case in one sleepless night, and spends six years searching for the man he exiled.",
+                "bio_html": """<p>The orphaned son of King Guram's brother, taken by a fever with both parents in one winter, and raised alongside <a href="../characters/levan.html">Levan</a>, who taught him to swim in the cold river below Tavgora's walls. Thirteen at the Proving, when the strap on his blade gives and cuts his cousin's hand, he becomes the prince still standing: the temple seals a provisional entry for him within the week. He leads the answer to the Vashtir raids, takes an arrow low and wrong in the dark and a fall from a horse onto rock, and is carried home over eight days with his sword arm swollen black to the elbow, until Levan saves it.</p>
+          <p>He cannot repay the debt. He offers the throne, then a duchy, a stipend and a title invented for the occasion, and is refused every time by a man who wants nothing. Crowned and unable to look at his own five ordinary fingers, he challenges Levan to the Answer, unwrapped steel in the open hall, and loses to mercy a second time: disarmed, unmarked, and spared. He kneels in a corridor behind the northern pillar, builds the entire righteous case in a single sleepless night from a sentence of <a href="../characters/demna.html">Demna</a>'s, and petitions for the Writ of Examination without reading the paragraph beneath it. He rules for twenty-six more years, spends nearly six of them quietly searching every unmapped fold of the western range, and keeps a small carved wooden horse Levan made him in a drawer under the state papers.</p>
+          <p>The sheet draws him taller and broader than Levan, with dark wavy hair going grey, a square-trimmed beard after the coronation and a thin scar on the forearm Levan rebuilt; its own footnote says all of this is visual invention, since the manuscript describes only his ordinary, five-fingered hands.</p>""",
+                "quote": "Then let us see if mercy can parry.",
+            },
+            {
+                "slug": "guram", "name": "Guram",
+                "epithets": "King of Sarkveti &middot; Levan's father, Bagrat's uncle &middot; late 50s at his death",
+                "teaser": "Buries a wife, a brother and his patience for miracles with strings, and chooses an heir he asks to be left unannounced.",
+                "bio_html": """<p>King of Sarkveti, father of <a href="../characters/levan.html">Levan</a> and uncle to <a href="../characters/bagrat.html">Bagrat</a>, who has buried a wife, a brother and most of his patience for miracles that come with strings attached. He takes the surgeons' verdict standing and dry-eyed, as the histories like to say every Sarkveti king took bad news, then walks the northern wall with <a href="../characters/vazha.html">Vazha</a> and puts both hands over his face. When the clockmaker offers a working hand in exchange for the freedom to leave, he asks only whether it is sorcery, heresy or something a Hierarch must bless first, and accepts the answer that it is craft.</p>
+          <p>In his last illness he tells Levan that he was never meant to need it, and that a boy who never needed to be extraordinary might have made a very dull king. He dies eight days later. That same night he has chosen between the two young men he raised, and has asked Vazha to see the choice honored quietly rather than announced, so that the kingdom might come to it freely. The sheet gives his age as the late fifties at death, with cropped grey hair, a trimmed grey beard, warm brown eyes and a dark chokha embroidered in muted silver.</p>""",
+                "quote": "You were never meant to need it, and I find I am glad of that more than I am sorry for the rest of it.",
+            },
+            {
+                "slug": "vazha", "name": "Vazha",
+                "epithets": "Senior steward to King Guram &middot; leader of the loyalist faction &middot; outlives the war by nearly thirty years",
+                "teaser": "Follows the soundest advice he ever heard, and spends the war learning which of loyalty's two creditors collects first.",
+                "bio_html": """<p>Guram's senior steward, the one man in the palace who had known the King longer than the King had known his own crown, and who had carried both princes on his shoulders as infants. Against his better judgment he arranges the clockmaker's audience. When Guram dies he tells the court that no choice was left, a lie he carries for the rest of his life, because Guram's real choice had been made in confidence and he reasons that a crown installed by a father's whisper would always be one <a href="../characters/bagrat.html">Bagrat</a> could say was stolen. He never petitions the temple to enter <a href="../characters/levan.html">Levan</a>'s name on the succession rolls, which he later calls the single worst piece of good advice he ever followed.</p>
+          <p>After <a href="../characters/demna.html">Demna</a>'s ruling he tells the court the truth and is believed by perhaps a third of the room. He leads the smaller faction through one winter and part of a spring, refuses three offers of surrender, the last of which asks only for Levan, and keeps a private ledger of a little under two thousand dead. He survives the war and the peace by nearly thirty years, and asks <a href="../characters/otar.html">Otar</a> exactly once whether the prince lived; he chooses to read the small, tired smile as a yes. The sheet draws him spare, upright and slightly stooped, with thin close-cropped white hair, a short white beard and a steward's seal; it also gives an age that cannot be squared with his surviving the war by nearly thirty years, so none is stated here.</p>""",
+            },
+            {
+                "slug": "demna", "name": "Demna",
+                "epithets": "Hierarch, senior priest of Auron's temple in Tavgora &middot; late 50s&ndash;60s on the sheet",
+                "teaser": "Believes every word of a ruling he was paid to make, and cannot prove to himself that the gold is not the reason.",
+                "bio_html": """<p>Senior priest of Auron's temple in Tavgora, who rules that the Doctrine of the Unbroken Hand bars a hand that claims the wholeness a sleeve would honestly confess it lacks. Three weeks earlier Bagrat's gold reached him by way of <a href="../characters/sandro.html">Sandro</a>, and he has never once, in his own prayers, managed to convince himself that the gold is the reason he believes what he is about to say. The night before the ruling he kneels alone at Auron's altar and tells the god that the gold changes nothing about the law's truth, only about how quickly he got around to remembering it; the distinction satisfies him there, and considerably less so in court the next morning. He is not struck down, which one faction treats as proof of nothing and the other as proof of everything.</p>
+          <p>It is Demna who first says aloud, in <a href="../characters/bagrat.html">Bagrat</a>'s hearing, the sentence that gives the king's private ledger a public name: that a false wholeness worn long enough begins to believe itself real. By the war's second month he is unpaid, unasked, and at the wall, praying in the same words over a dying man from each faction in the same week. The sheet draws him stooped and war-worn, clean-shaven with cropped iron-grey hair, in threadbare iron-grey vestments and carrying no weapon.</p>""",
+                "quote": "The Doctrine does not ask whether a hand functions. It asks whether a hand is the one Auron gave.",
+            },
+            {
+                "slug": "observer-419-1153", "name": "Observer 419",
+                "epithets": "Envoy/Observer, Case 1,153 &middot; publicly a clockmaker &middot; also the Observer of Case 2,140 &middot; outwardly 40s&ndash;50s",
+                "teaser": "Grafts an eleven-fingered hand in three nights, leaves by dawn, and cannot quite stop watching for eighteen years.",
+                "bio_html": """<p>The same field agent of the <a href="../lore/cultivator.html">Cultivators</a> who installs a single grey sphere in a county mill in <a href="../characters/observer-419.html">Case 2140</a>, posted next to Tavgora, where he has kept a stall in the lower market for thirteen weeks by the morning of the Proving: small brass instruments that run for years without a smell of oil. He watches the Proving from the back of the crowd and files his report that evening, recommending a Tier 1000-series functional intervention and flagging the prince's temperament as an unusually favorable variable. What he does not write down is that he felt <em>recognition</em>, the second posting running in which the feeling arrived before there were grounds for it.</p>
+          <p>He asks the King for an audience, offers craft rather than sorcery, and asks only that no one keep him in Tavgora once the work is done. His one instruction to <a href="../characters/levan.html">Levan</a> is the only thing he ever says to him that anyone overhears. His posting formally ends the morning after the graft; he does not travel far. For eighteen years he watches from a rented room two valleys away, files a note on the ruling in which he finds himself, against every manual, <em>glad</em>, and on the night the city falls stands on the ridge above the western road and logs a column of twelve leaving by a goat track. He notes the lute, and files nothing about it. The sheet draws him in earth browns with grey-streaked brown hair, pale grey eyes and a short, neatly kept beard, deliberately unremarkable.</p>""",
+                "quote": "This will not make you whole. It will make you capable. They are not the same, and you would do well to remember which one your doctrine actually asks for.",
+            },
+            {
+                "slug": "the-eleven-fingered-hand", "name": "The Eleven-Fingered Hand",
+                "epithets": "Catalyst, Case 1,153 &middot; a grafted prosthetic left hand &middot; two thumbs, eleven digits",
+                "teaser": "Built by someone who had studied hands rather than grown one; a kingdom rounds it up to twelve fingers and down to abomination.",
+                "bio_html": """<p>The prosthetic that replaces <a href="../characters/levan.html">Levan</a>'s ruined left hand, fitted by <a href="../characters/observer-419-1153.html">the clockmaker</a> over three nights: no blood after the first hour, no fever after the second night, and by the third morning a hand lying pale and still on the pillow, unmistakably wrong in the way a correctly drawn diagram of a hand is wrong when you have only ever seen the real thing. It has two thumbs set opposite each other along one broad palm, and beneath them two rows of ordinary fingers: four in the row that shows, and five more folded flat beneath it, hinged along a second knuckle no natural hand possesses, the way a fan holds nine-tenths of itself in reserve until a wrist decides otherwise. Nobody who handles it can say what it is made of.</p>
+          <p>It sets compound fractures with a precision no natural hand could match, ties sutures too small for the physicians' own eyes to follow, and reaches into a wound at an angle no ordinary wrist could offer. Its hidden row unfolds fully for the first time in the six-hour surgery on <a href="../characters/bagrat.html">Bagrat</a>'s arm, and again in the duel, when all five hidden fingers close over the guard of his sword like a hand closing over a key it has always known. Legend then does what the file declines to: the lower market calls it the Twelvefold Hand, then gold cast at Solan's anvil that cannot be burned; the court chronicles call it a lie told in metal; and a small shrine in a lower valley keeps a gilded wooden hand with too many fingers on a shelf behind its altar. The sheet draws it pale matte ivory with muted iron-grey joints, in panels showing the folded second row, the joint mechanism and the opposed thumbs.</p>""",
+            },
+            {
+                "slug": "the-doctrine-of-the-unbroken-hand", "name": "The Doctrine of the Unbroken Hand",
+                "epithets": "Auron temple archive &middot; codified in the same century as the Proving, four centuries before the events",
+                "teaser": "Precise about absence, silent about substitution, and a very old weapon looking for a hand to be used on.",
+                "bio_html": """<p>An older and considerably colder text than the Proving that shares its theology, filed in the temple archive alongside two dozen other doctrines no living Hierarch had needed to cite: that a king's hand is the instrument of Auron's law made visible, and that no man missing the wholeness Auron gave him at birth can be trusted to hold that law without some essential piece of it also missing. It speaks of men who lack the god's gift and says nothing of men who have been given another, and it is in that silence that Vazha's allies and Bagrat's lawyers both make their camps. The form that turns it into procedure, the Writ of Examination, sits beside it in the same archive, and the paragraph beneath the summons fixes what a court of three is to do on a finding of counterfeit.</p>
+          <p>Once it has been shown to be usable, it is used: against a nephew with a limp in the second reign, a daughter with a squint in the third, a prince with a withered foot in the fourth, until succession in Sarkveti is a contest of defect rather than claim, and the temple that charges a fee for each examination grows rich as the crown grows poor. The manuscript never says what it looks like; the sheet draws it as a bound codex of yellowed vellum with an iron-grey seal and a wood-and-iron clasp.</p>""",
+            },
+            {
+                "slug": "sandro", "name": "Sandro",
+                "epithets": "Gold-broker of Tavgora's court &middot; 40s&ndash;50s on the sheet",
+                "teaser": "Carries the bribe to the Hierarch, and finds priests his easiest customers because they never haggle.",
+                "bio_html": """<p>A broker who makes a modest living arranging exactly the kind of transaction between men too proud to negotiate their own convictions directly. He carries <a href="../characters/bagrat.html">Bagrat</a>'s gold to Hierarch <a href="../characters/demna.html">Demna</a>, and remarks, to no one in particular and entirely for his own amusement, that priests are his easiest customers precisely because they never haggle. The sheet draws him soft-built and comfortably prosperous, olive-skinned, with dark oiled hair thinning at the crown, quick dark eyes and a thin, carefully groomed mustache, in muted charcoal and umber with a coin-purse and a ledger.</p>""",
+                "quote": "A man who believes his own argument will accept any price for saying it out loud, since he was always going to say it for free.",
+            },
+            {
+                "slug": "otar", "name": "Otar",
+                "epithets": "Border soldier, later informal leader of the faction that would not fight &middot; 50s&ndash;60s at the extraction on the sheet",
+                "teaser": "Walks out of the surgery on a leg he was told to lose, visits it weekly for life, and then walks its owner out of the city.",
+                "bio_html": """<p>A soldier who arrives at <a href="../characters/levan.html">Levan</a>'s surgery three years into his apprenticeship with a leg the border garrison's healer has recommended taking off at the knee, and leaves six weeks later without a stick, unable to stop telling anyone that the prince's hand had felt like eleven separate decisions being made at once, each one correct. He visits that surgery once a week for the rest of his life, whether or not he needs anything mended.</p>
+          <p>When the war splits the city he gathers the third faction that has no banner: eleven men chosen for nothing a recruiter would recognize except that each carries a piece of work Levan's hands once did. On the night the outer wall falls he cannot bring himself to carry a surgeon off a table, so his men stand along the surgery wall and hold lamps for an hour while Levan finishes closing a wound on a boy in <a href="../characters/bagrat.html">Bagrat</a>'s colors. Then he makes his argument once, plainly, and takes Levan out by a goat track and eleven days of unwatched mountain paths to a place he will not name. The sheet draws him broad-shouldered in youth, leaner and weathered after two decades, iron-grey and short-bearded, with a faint permanent limp in the leg Levan saved and a worn dark belt-knife.</p>""",
+                "quote": "A secret held by one man dies with him, and I intend for this one to outlive me.",
+            },
+            {
+                "slug": "eka", "name": "Eka",
+                "epithets": "Bonesetter's daughter &middot; physician of Tavgora &middot; early-to-mid 30s on the sheet",
+                "teaser": "Asks every man carried through her door how badly he is hurt, and never which banner he fought under.",
+                "bio_html": """<p>A bonesetter's daughter who spends a month watching <a href="../characters/levan.html">Levan</a>'s surgery from the doorway before asking whether she might hold the instruments, and is told she may, provided she puts them back in order. She trains with him for the better part of a decade and becomes the nearest thing Tavgora has to a second such hand: one of the two physicians at <a href="../characters/bagrat.html">Bagrat</a>'s six-hour surgery, who stop trying to follow what Levan is doing in the fourth hour and simply hand him whatever he silently reaches for. During the siege she keeps her own surgery open and asks exactly one question of every man carried in. The hardest hour of the war, she will say decades later, is the morning she treats two men from the same street who put those wounds on each other, side by side, each asking whether the other will live. Levan hands her the one-eyed grey cat before he leaves. Her craft survives one generation of apprentices, and not a second.</p>
+          <p>The text gives her no physical description beyond being a young woman and a skilled physician; her sheet says everything else on it, a sturdy, dark-haired, dark-eyed figure in a bloodstained apron with chapped, over-washed hands, is invented for consistency.</p>""",
+            },
+            {
+                "slug": "sulqan", "name": "Sulqan",
+                "epithets": "Healer attached to Sarkveti's border garrison &middot; 48 on the sheet",
+                "teaser": "A decent, exhausted man who has already begun preparing a household to lose its king-to-be.",
+                "bio_html": """<p>The border garrison's own healer, a decent and exhausted man, who sees <a href="../characters/bagrat.html">Bagrat</a> carried to Tavgora's gates fevered past recognizing his own name, his sword arm swollen black to the elbow, and has already begun preparing the household for losing him. <a href="../characters/levan.html">Levan</a>'s six-hour surgery makes that preparation unnecessary. The sheet makes him forty-eight, stocky and built for lifting wounded men rather than fighting, with thinning grey-brown hair, an unkempt greying beard, a ruddy complexion from years at a cold border post, ink- and herb-stained hands and a patched off-white coat. It shows him treating the arm on the return march, then preparing the household for the loss.</p>""",
+            },
+            {
+                "slug": "dato", "name": "Dato",
+                "epithets": "Levied farmhand &middot; common soldier &middot; 17 years old",
+                "teaser": "Carries a king home before anyone has settled on calling him one, and is never named in a chronicle.",
+                "bio_html": """<p>A levied farmhand of seventeen, among the common soldiers who carry <a href="../characters/bagrat.html">Bagrat</a>'s litter for eight days, who is entirely unaware until he sets his commander down in the palace courtyard that his own trembling relief at finally reaching help looks, to the assembled court, exactly like grief. He is never named in any chronicle, and spends the rest of a long, ordinary life telling his grandchildren, with more pride than the moment probably warranted, that he once helped carry a king home. The sheet draws him lanky and wiry, with rough-cut sandy-brown hair, light brown eyes and the callused hands of farm work.</p>""",
+            },
+            {
+                "slug": "gia", "name": "Gia",
+                "epithets": "Conscripted household-guard soldier &middot; 19&ndash;20 on the sheet",
+                "teaser": "Meets a man he last saw wincing through the same stitches, and later tells the night a breath kinder than it was.",
+                "bio_html": """<p>A young man conscripted off his family's terrace two seasons earlier and given a spear he barely knows how to hold and a banner he has stopped believing in; he holds the eastern breach with <a href="../characters/bagrat.html">Bagrat</a>'s household guard on the night the outer wall gives way. <a href="../characters/levan.html">Levan</a>'s hands had set his broken wrist two winters before, after a training accident neither he nor the man he now faces, <a href="../characters/beso.html">Beso</a>, thought worth mentioning. They recognize each other in the half-second before contact, and neither lowers his weapon. Gia takes nothing worse than a fall that knocks the wind from him; in his old age he will tell a version in which he recognized Beso a full breath sooner and let the blow go wide on purpose, a small, forgivable improvement on the truth that even he can no longer separate from what happened in the dark. The sheet draws him slight and still growing, with short black hair, wide dark-brown eyes and a faint scar on one wrist, in borrowed, ill-fitting armor.</p>""",
+            },
+            {
+                "slug": "beso", "name": "Beso",
+                "epithets": "Soldier for Vazha's loyalist faction &middot; about 22&ndash;23 on the sheet",
+                "teaser": "Carries a white scar in the shape of a story he will never tell without crediting whose hands began it.",
+                "bio_html": """<p>A loyalist who walked with a stick for the better part of a year after a border skirmish, until <a href="../characters/levan.html">Levan</a>'s hands rebuilt the tendon a border healer had written off. At the eastern breach on the night the outer wall falls he comes at the line from the other direction and recognizes <a href="../characters/gia.html">Gia</a>, three years his junior, in the half-second before contact. He takes a shallow cut along the forearm that scars white for the rest of his life, in a shape he never shows anyone without also explaining, unprompted, exactly whose hand had put the first version of that arm back together. The sheet draws him tall and fully grown, with dark brown hair tied back, sharp brown eyes, a short patchy young beard and a long pale scar on one forearm; it notes that everything beyond his age relation and the lifelong scar is reconstruction.</p>""",
+            },
+            {
+                "slug": "amets", "name": "Amets",
+                "epithets": "Keeper of the Vigil of Ardwen, in Otsane &middot; 50s&ndash;60s on the sheet",
+                "teaser": "Gives a stranger a plain name, an open door, and a household that has never heard of anyone called Levan.",
+                "bio_html": """<p>The Keeper of the <a href="../lore/faith-of-ardwen.html">Vigil of Ardwen</a> in Otsane, a small theocracy tucked into a fold of the western range so thoroughly unremarkable that Sarkveti's maps render it as an unlabeled patch of grey. She sits in a plain wooden chair in a Vigil house with no cathedral and no gold, because Ardwen's doctrine asks for empty hands before anything else, and she receives the stranger Otar's men deliver to her gate with a silence that is unhurried in a way nothing in Tavgora's court ever managed. Before the week is out she gives him a name for the register that is not his own, <em>Mikel</em>, and a standing instruction to her household, kept without a single question, that no man called <a href="../characters/levan.html">Levan</a> has ever come to that gate. A gate-warden who dislikes lying so much that she practices it exactly once in her life tells the one rider who does reach Otsane that no man of that name ever came there. The sheet draws her as a small-framed, wind-browned Basque-coded mountain woman, grey hair beneath a plain wool kerchief, in undyed wool and calf-laced abarkas.</p>""",
+                "quote": "Ardwen does not ask what your hands have done. Only that you keep them open now.",
+            },
+            {
+                "slug": "xu-lian", "name": "Xu Lian",
+                "epithets": "Foreign scholar &middot; Jinhai &middot; also in Case 0000B &middot; age not established",
+                "teaser": "Leaves eleven notebooks at a cathedral that give a faraway rumor its theological shape.",
+                "bio_html": """<p>A careful foreign scholar who spends two years cataloguing every recorded attempt on <a href="../characters/valeria.html">Valeria</a> before returning, empty-handed and unbitter, to a country half a world away. The eleven notebooks he leaves behind are donated to the Vigil and are what give the news from Sarkveti its theological shape at Ardenwake: among his annotations sits <a href="../characters/anchorite-of-ardenwake.html">an anchorite</a> walled into a cell against the cathedral's north face, who crossed a hall full of soldiers who had just failed to move the sword and lifted it without once thinking about succeeding, failing or the blade. He is also the foreign scholar of Case 0000B, where he appears beside <a href="../characters/the-anchorite.html">the Anchorite</a> herself. The sheet draws him East Asian-coded and restrained, with dark hair, dark eyes, ink-stained hands and a satchel of weathered bindings, and files him under Jinhai; it says his appearance follows earlier canon and adds nothing new.</p>""",
+            },
+            {
+                "slug": "anchorite-of-ardenwake", "name": "Anchorite of Ardenwake",
+                "epithets": "Anchorite of the Vigil of Ardwen &middot; the protagonist of Case 0000B &middot; cited here secondhand",
+                "teaser": "A woman who wanted enclosure rather than glory, cited at a distance as one of two precedents for a third lifter of the sword.",
+                "bio_html": """<p>In this case the Anchorite of <a href="../characters/the-anchorite.html">Case 0000B</a> appears only as a precedent, through <a href="../characters/xu-lian.html">Xu Lian</a>'s donated notebooks: a woman walled into a cell against the cathedral's north face who lifted <a href="../characters/valeria.html">Valeria</a> without once, by her own account, thinking about the blade. With <a href="../characters/the-founding-wielder.html">the founding wielder</a>, she is one half of the pattern Ardenwake's pilgrims and younger clerks try to extend to a healer who refused a throne twice, in a kingdom that answered the refusal with a writ of fire. The Vigil's scholars complicate the enthusiasm before it settles into doctrine, and the Keeper of Ardenwake declines to settle it from a plinth hall a mountain range away. The sheet adds no new physical detail and sends the reader back to Case 0000B for her appearance, drawing her hooded in stone-grey and parchment with a plain devotional cord and Xu Lian's notebooks in her hands.</p>""",
+            },
+            {
+                "slug": "the-founding-wielder", "name": "The Founding Wielder",
+                "epithets": "The valley reckoner &middot; the boy of Case 0000 &middot; permanently unnamed &middot; cited here secondhand",
+                "teaser": "The nameless first bearer of the sword, whose namelessness has grown a superstition the Vigil's scholars cannot quite examine.",
+                "bio_html": """<p>The first bearer of <a href="../characters/valeria.html">Valeria</a>, cited at Ardenwake as a nameless valley reckoner: <a href="../characters/the-boy.html">the boy of Case 0000</a>, who is never given a name that survives the telling. His namelessness has given rise to the order's oldest and least examined superstition, that renouncing one's name is itself part of the mechanism, which the Vigil's scholars use to argue that <a href="../characters/levan.html">Levan</a>, known across three kingdoms by a story harder to renounce than a crown, is the furthest thing from the pattern. The sheet adds no new physical detail, treats his appearance as canonically inherited from Case 0000, and draws him pale-haired in layered, weathered cloth, shown in the margin of the Vigil scholars' debate.</p>""",
+            },
+        ],
+        "scenes": [
+            {"slug": "the-proving-strap-gives",
+             "alt": "A dark-haired youth in black and gold robes recoils with a bloodied open left hand and a blade in his right while a lighter-haired youth in pale robes lunges to catch him, his own sword falling with a leather strap trailing, courtiers watching from a stone stair beneath a mountain citadel",
+             "caption_html": """The Proving: a strap that was re-buckled twice gives way, and four inches of real steel come down across <a href="../characters/levan.html">Levan</a>'s raised left hand. It is <a href="../characters/bagrat.html">Bagrat</a>, not Levan, who screams, dropping his own blade to catch his cousin before he falls."""},
+            {"slug": "the-king-on-the-northern-wall",
+             "alt": "A crowned old man in a fur-trimmed cloak covers his face with both hands at a battlement above a snowy valley while a grey-bearded man in a dark cloak stands behind him",
+             "caption_html": """<a href="../characters/guram.html">Guram</a> takes the surgeons' news standing and dry-eyed, and then, on the northern wall with <a href="../characters/vazha.html">Vazha</a> and no one else, puts both hands over his face and makes a sound Vazha will never repeat."""},
+            {"slug": "the-clockmaker-at-his-stall",
+             "alt": "A man with grey-streaked brown hair and a short beard in a hooded brown cloak and leather apron works on a small brass mechanism at a market stall hung with gold pocket watches, a hilltop citadel and a crowded market behind him",
+             "caption_html": """<a href="../characters/observer-419-1153.html">The clockmaker</a>'s stall in Tavgora's lower market: small brass instruments that run for years without a smell of oil, sold to a court that mostly tells time by bells. He has kept it for thirteen weeks by the morning of the Proving."""},
+            {"slug": "the-graft-over-three-nights",
+             "alt": "By candlelight a bearded man in a hooded brown cloak fits a jointed golden-brown mechanical hand to the arm of a sleeping dark-haired youth in a bed, two robed men watching from behind",
+             "caption_html": """Over three nights <a href="../characters/observer-419-1153.html">the clockmaker</a> works on <a href="../characters/levan.html">Levan</a>'s ruined hand while the two physicians present, sworn to silence, keep that oath more faithfully than any other they swear. No blood after the first hour, no fever after the second night: by the third morning, <a href="../characters/the-eleven-fingered-hand.html">a hand</a> lying pale and still on the pillow, too regular, too considered."""},
+            {"slug": "levan-counts-his-fingers",
+             "alt": "A dark-haired young man propped in a bed beside a sunlit window holds up a pale jointed prosthetic left hand, a mountain and a citadel beyond the glass",
+             "caption_html": """<a href="../characters/levan.html">Levan</a> wakes to eleven fingers, and counts them himself before any physician or the clockmaker can: two thumbs set opposite each other along one broad palm, four fingers in the row he can see, five more folded flat beneath it. His first thought is neither horror nor gratitude, but a small, shameful, private satisfaction at finding he can still count at all."""},
+            {"slug": "demna-before-the-ruling",
+             "alt": "A grey-haired priest in a heavy iron-grey robe kneels at a stone altar with clasped hands and an oil lamp, looking up at a dark temple door carved with a sword and a pair of balanced scales",
+             "caption_html": """<a href="../characters/demna.html">Demna</a>, alone before Auron's altar the night before the ruling, telling the god that the gold changes nothing about the law's own truth, only about how quickly he got around to remembering it &mdash; a distinction he finds entirely satisfying there, and considerably less so in court the next morning."""},
+            {"slug": "the-vashtir-snow",
+             "alt": "A wounded man in a frost-covered fur coat lies in the snow with an arrow in his side beside a rearing white horse, mounted archers with torches closing in through a night snowstorm",
+             "caption_html": """The northern answer to the Vashtir raids, led by <a href="../characters/bagrat.html">Bagrat</a> because a kingdom that cannot agree on its king can still agree on who should be sent to freeze on its behalf: a Vashtir arrow taken low and wrong in the dark, a fall from a startled horse onto rock, and eight days on a litter to come."""},
+            {"slug": "the-king-in-the-corridor",
+             "alt": "A crowned young king in an ermine-trimmed crimson cloak kneels on a stone floor in a narrow dark corridor with both hands pressed over his face",
+             "caption_html": """<a href="../characters/bagrat.html">Bagrat</a> behind the hall's northern pillar after the duel: his knees strike stone before he decides to kneel, both ordinary hands pressed flat over a face no one but the corridor's cold walls will see uncomposed. He straightens his collar before he walks back out."""},
+            {"slug": "the-outer-wall-falls",
+             "alt": "A walled hill city of white terraces burns at night while siege engines hurl flaming stones at a breaking wall under red and blue banners",
+             "caption_html": """Tavgora's outer wall goes to <a href="../characters/bagrat.html">Bagrat</a>'s siege engines after <a href="../characters/vazha.html">Vazha</a>'s faction has refused three separate offers of surrender. The engines are brought up on the nineteenth day of Lorren, and Bagrat does not go to watch them."""},
+            {"slug": "the-eastern-breach",
+             "alt": "Two young soldiers face each other across crossed swords among rubble at night, one in red household-guard colors and one in blue with a heraldic beast, torchlit ranks behind them",
+             "caption_html": """The night the outer wall gives way, at the eastern breach: <a href="../characters/gia.html">Gia</a> of Bagrat's household guard and <a href="../characters/beso.html">Beso</a> of Vazha's loyalists recognize each other in the half-second before contact, two former patients of the same eleven fingers, and neither lowers his weapon."""},
+            {"slug": "the-keeper-meets-the-stranger",
+             "alt": "A bearded dark-haired man in a heavy cloak stands at a stone gate facing a grey-haired woman in a hooded wool robe, a plain timber Vigil house and grazing sheep behind her",
+             "caption_html": """<a href="../characters/amets.html">Keeper Amets</a> receives the stranger Otar's men have delivered to her gate in Otsane, and tells <a href="../characters/levan.html">Levan</a>, before he has said a word about any of it, that Ardwen does not ask what his hands have done, only that he keep them open now."""},
+            {"slug": "levan-at-the-workbench-in-otsane",
+             "alt": "A grey-bearded man in a leather apron sits at a candlelit workbench with both hands laid flat on the wood, one of them a pale jointed prosthetic, a mountain lute leaning against the shelves beside him and a mountain through the window",
+             "caption_html": """<a href="../characters/levan.html">Levan</a>, called Mikel, at his workbench in Otsane on the evening a trader tells him how it ended: both hands, the four ordinary fingers and the five hidden ones alike, laid flat and motionless on the wood. He plays the lute again that night, later than his habit."""},
+            {"slug": "one-attempt-on-valeria",
+             "alt": "A robed figure kneels on cathedral steps reaching toward a glowing sword on a plinth in a shaft of light, robed onlookers lining a stained-glass hall",
+             "caption_html": """The plinth hall at Ardenwake, where every pilgrim who climbs the cathedral steps is permitted exactly one attempt on <a href="../characters/valeria.html">Valeria</a> and almost none ever lift it: the ritual the Vigil's scholars call the Empty Hand. This record names no one."""},
+        ],
+    },
 ]
 
 LORE = [
@@ -2978,35 +3184,88 @@ LORE = [
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
         "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
-          <p>Their field agents are called Envoys, or Observers. Every case has its own, and no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a court astronomer-priest who keeps a kingdom's calendar from a tower, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
-          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him. Another, a mute stonecutter, dresses both ends of a matched pair of stones, spends thirty-one years as a quarry-hand beside the one that receives, and is asked, in notches drawn in the dust, the one question he may not answer.</p>""",
+          <p>Their field agents are called Envoys, or Observers. Every case has its own, and &mdash; with a single exception on file, an Envoy posted to two cases in succession &mdash; no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a court astronomer-priest who keeps a kingdom's calendar from a tower, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
+          <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him. Another, a mute stonecutter, dresses both ends of a matched pair of stones, spends thirty-one years as a quarry-hand beside the one that receives, and is asked, in notches drawn in the dust, the one question he may not answer. And one, a clockmaker in two successive postings, goes on watching his second subject from a rented room two valleys away for eighteen years after the posting has formally ended.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
         "teaser": "The single object at the center of every case.",
         "definition_html": """<p>The one object a Cultivator puts into a society to see what the society does with it. A Catalyst is rarely dangerous in itself &mdash; a jar of candy, a pair of shoes, a sword no one else can lift, a hole in a hillside, a flask that never lets its contents go cold, a traffic cone, an eight-foot electric eel &mdash; and it arrives with no explanation and no instructions. What matters is everything that happens after: the miracle someone declares, the heresy someone else does, the pride that takes offense, and the office that quietly writes it all down.</p>
-          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Another, left beneath a threshing-floor, cuts a circle of clear noon with a ruler's edge out of a sky of ash and holds it open for four hundred and twenty-one days. Another is a pair of stones, one in a shrine and one on a village green, that carries whoever lays a bare palm on the first to the second, and no one ever back. Every Catalyst on file is listed below.</p>""",
+          <p>Each Catalyst belongs to one case, is placed by one Envoy, and is filed under a number and a class of its own. Some are handed to one person, some are slipped into a court, and one is a hundred-level structure left in a hillside for someone to find, and one is a living animal, released into a flooded ruin and left to be found. Redundancy is standard on some cases: one Catalyst was seeded three times over in the same ditch, so that a single unit lost to a flood or an incurious passerby wouldn't end the case before it began. One Catalyst on file grants nothing but another creature's own perception, on loan for a quarter of an hour at a time, and is never once used by the same hand twice. Another is a buried chamber that rebuilds whatever enters it, exact in everything that can be measured. Another, left beneath a threshing-floor, cuts a circle of clear noon with a ruler's edge out of a sky of ash and holds it open for four hundred and twenty-one days. Another is a pair of stones, one in a shrine and one on a village green, that carries whoever lays a bare palm on the first to the second, and no one ever back. Another is a prosthetic left hand with eleven fingers, grafted onto a prince over three nights, that a kingdom spends eighteen years deciding is not a hand at all. Every Catalyst on file is listed below.</p>""",
     },
     {
         "slug": "faith-of-ardwen", "name": "The Faith of Ardwen", "group": "Religion",
         "teaser": "A monotheism built on waiting, honest prayer, and a sword no one else can lift.",
         "definition_html": """<p>A monotheism built around a single historical miracle: an honest prayer, answered from the sky. Ardwen &mdash; the Unhastening, the Sky-Answered &mdash; is worshipped as the one eternal goddess, without rival, consort, or divine family, and asks less of her followers than most faiths do: wait, ask honestly, keep your promises, and act responsibly without pretending to know a god's mind for her. Her clergy are careful to distinguish what is known from what is merely mysterious, and the faith's own maxim is built to resist any shortcut: <em>Ardwen answers the honest, but never on command.</em></p>
           <p>Her institutional church, the Vigil of Ardwen, is led by a First Keeper and organized into regional Houses of Vigil, with confession, baptism, marriage, funerals, and pilgrimage among its sacred rites. The faith reveres its founding miracle &mdash; and the sword that came with it &mdash; as a sacred sign of that day, never as a rival object of worship. Whatever else it is, Valeria is not a god.</p>""",
-        "appears_html": """<p>The founding faith of <a href="../books/0000.html">The Sword of Valeria</a>, where the goddess herself and the relic she left behind both have entries of their own: <a href="../characters/ardwen.html">Ardwen</a> and <a href="../characters/valeria.html">Valeria</a>. Generations later, in <a href="../books/0157.html">The Stolen Prince War</a>, the Vigil's doctrine of unearned, uncommandable grace is tested to its limit by a dungeon that answers the same chest the same way every single time &mdash; a contradiction its own Keeper, <a href="../characters/yudith.html">Yudith</a>, spends eleven years trying to preach around. In <a href="../books/0156.html">The Purging of Charsianon</a>, a Byzantine-styled river valley keeps the Vigil in a plain House of stone and candles, and a Keeper of the Dorylaion Vigil turns a name for a strange calm &mdash; the Doctrine of the Stolen Vessel &mdash; into an army.</p>""",
+        "appears_html": """<p>The founding faith of <a href="../books/0000.html">The Sword of Valeria</a>, where the goddess herself and the relic she left behind both have entries of their own: <a href="../characters/ardwen.html">Ardwen</a> and <a href="../characters/valeria.html">Valeria</a>. Generations later, in <a href="../books/0157.html">The Stolen Prince War</a>, the Vigil's doctrine of unearned, uncommandable grace is tested to its limit by a dungeon that answers the same chest the same way every single time &mdash; a contradiction its own Keeper, <a href="../characters/yudith.html">Yudith</a>, spends eleven years trying to preach around. In <a href="../books/0156.html">The Purging of Charsianon</a>, a Byzantine-styled river valley keeps the Vigil in a plain House of stone and candles, and a Keeper of the Dorylaion Vigil turns a name for a strange calm &mdash; the Doctrine of the Stolen Vessel &mdash; into an army. In <a href="../books/1153.html">The Second Hand</a>, a hidden mountain fold called Otsane keeps the Vigil in a plain house with no cathedral, where its Keeper, <a href="../characters/amets.html">Amets</a>, gives an exile a new name and an open door, and the cathedral at Ardenwake turns a distant rumor into a question about <a href="../characters/anchorite-of-ardenwake.html">the Anchorite</a>, <a href="../characters/the-founding-wielder.html">the founding wielder</a> and a sword no one else can lift.</p>""",
     },
     {
         "slug": "threefold-crown", "name": "The Threefold Crown", "group": "Religion",
         "teaser": "Three gods, or one god wearing three faces &mdash; the Crown has never resolved which.",
         "definition_html": """<p>An old pagan faith built around three supreme gods who may, or may not, be one god wearing three faces &mdash; a contradiction its own believers call the Threefold Mystery and have never been in any hurry to resolve. <strong>Auron</strong> the Father governs heaven, law, kingship, judgment, and oaths; <strong>Elara</strong> the Mother governs earth, birth, fertility, harvest, and hearth; <strong>Solan</strong> the Son governs the sun, fire, youth, passion, and sacrifice. A believer may favor one god over the other two without ever quite denying that all three are, somehow, the same throne. The formula recited at its temples leaves the contradiction standing on purpose: <em>Father above. Mother beneath. Son beside us. Three crowns. One Heaven.</em></p>
           <p>Ritual-heavy and elaborately hierarchical, with wine treated as sacred and pork freely eaten, the Threefold Crown holds that its own throne is the one true one &mdash; a claim that makes its temple politics every bit as susceptible to ambition as any earthly court, and its priesthood just as capable of turning a private grief, or a private embezzlement, into doctrine.</p>""",
-        "appears_html": """<p>Vantashen's state religion in <a href="../books/0157.html">The Stolen Prince War</a>, where Hierarch <a href="../characters/doreth.html">Doreth</a> turns a private grief into a war he tells himself is a monument, and the guardian at Level 40 is known to delvers as <a href="../characters/the-ember-judge.html">the Trial of Solan</a>. In <a href="../books/4417.html">The Iron Stiletto War</a>, the Order of the Pale Cloth's High Cleric <a href="../characters/ambrose.html">Ambrose</a> declares a pair of shoes heretical on the Crown's own authority. In <a href="../books/2140.html">The Third Grain</a>, a legal claim over a county mill is argued and won entirely inside the Crown's own law, under a courtroom ceiling painted with <a href="../characters/eldest-witness-of-the-writ.html">a judge</a> who has spent thirty years complaining that Auron's three scales were never painted quite level. And in <a href="../books/2231.html">The Stone of the Clean Hand</a>, a hearth-priest's honest report of a stranger's bow to Solan's Fire and refusal of the feast-pig reaches Hierarch <a href="../characters/odilo.html">Odilo</a> at Castelmaur, who lays the temple's interdict on a whole lane until its idol is cast down.</p>""",
+        "appears_html": """<p>Vantashen's state religion in <a href="../books/0157.html">The Stolen Prince War</a>, where Hierarch <a href="../characters/doreth.html">Doreth</a> turns a private grief into a war he tells himself is a monument, and the guardian at Level 40 is known to delvers as <a href="../characters/the-ember-judge.html">the Trial of Solan</a>. In <a href="../books/4417.html">The Iron Stiletto War</a>, the Order of the Pale Cloth's High Cleric <a href="../characters/ambrose.html">Ambrose</a> declares a pair of shoes heretical on the Crown's own authority. In <a href="../books/2140.html">The Third Grain</a>, a legal claim over a county mill is argued and won entirely inside the Crown's own law, under a courtroom ceiling painted with <a href="../characters/eldest-witness-of-the-writ.html">a judge</a> who has spent thirty years complaining that Auron's three scales were never painted quite level. And in <a href="../books/2231.html">The Stone of the Clean Hand</a>, a hearth-priest's honest report of a stranger's bow to Solan's Fire and refusal of the feast-pig reaches Hierarch <a href="../characters/odilo.html">Odilo</a> at Castelmaur, who lays the temple's interdict on a whole lane until its idol is cast down. And in <a href="../books/1153.html">The Second Hand</a>, the kingdom of Sarkveti keeps the Crown as its faith the way it keeps its terraces, and Hierarch <a href="../characters/demna.html">Demna</a> of Auron's temple in Tavgora rules, on <a href="../characters/the-doctrine-of-the-unbroken-hand.html">the Doctrine of the Unbroken Hand</a>, that a prince's grafted hand is not his own.</p>""",
     },
     {
         "slug": "decree-of-luminescence", "name": "The Decree of Luminescence", "group": "Religion",
         "teaser": "A theology of measured light: what is favored is lit, and what is lit has been favored.",
         "definition_html": """<p>The youngest of the faiths on file, promulgated after a kingdom-threatening catastrophe: years of ash-blotted sky broken, at the exact point of famine, by a single standing column of true daylight over the capital. <strong>Sol-Invictus, the Unconquered Sun,</strong> is worshipped as the one eternal, lending light, and its doctrine is unusually literal for a religion: light is not read as a sign of favor, it <em>is</em> favor, measured out to every soul at birth as a store of borrowed fire and returned, spent or unspent, at death. It is a creditor's theology at bottom, and its own clergy don't pretend otherwise. The doctrine's core article states the idea plainly: <em>Whatever was favored was lit, and whatever was lit had been favored.</em></p>
           <p>Its church, the Last Order, is led by a High Pontiff and keeps its own doctrine correctable only by further entry, never by erasure. A claimant to real favor stands before a lens that concentrates true daylight onto them, to see whether they visibly glow; a crown is carried through open flame, to see whether the gold endures. What three centuries of both tests have never quite worked out is how to tell light that's generated from light that's merely, cleverly, reflected.</p>""",
-        "appears_html": """<p>Its founding is the subject of <a href="../books/2365.html">The Decree of Luminescence</a>. Three centuries on, in <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor.</p>""",
+        "appears_html": """<p>Its founding is the subject of <a href="../books/2365.html">The Decree of Luminescence</a>. Three centuries on, in <a href="../books/4555.html">The Vessel of Unmediated Grace</a>, where King <a href="../characters/aethelgard.html">Aethelgard</a>'s death without an heir turns the succession into a lit competition, High Pontiff <a href="../characters/sarel.html">Sarel</a> presides over the Grand Basilica's Great Judgment, and a peddler named <a href="../characters/fenn.html">Fenn</a> makes an honest living selling pilgrims small shards of warmed river quartz as splinters of the crown. The <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a> sect keeps its own small, tolerated counter-doctrine on the Sun's behalf, practicing His absence rather than His favor. The kingdom's map, drawn under both its names, is filed as the <a href="illumaria.html">Gazetteer of Illumaria</a>.</p>""",
+    },
+    {
+        "slug": "illumaria", "name": "Gazetteer of Illumaria", "group": "Gazetteers",
+        "teaser": "One kingdom under two names: the map of Vallombra at its founding, and of Illumaria long after.",
+        "map": {
+            "file": "illumaria",
+            "alt": "Parchment map titled Illumaria. A long kingdom labelled Vallombra, Illumaria runs south along a river from mountains and the Saltway Gate to a harbour at the Weirs, with the Torrecalda keep, the Grand Basilica of Sol-Invictus, Mud-Reach marsh and Illmere Ford marked; the March of Verrenhal lies to the north-west, Ashduct hills to the east, unknown lands at the margins and a sea with a ship and serpent to the south",
+        },
+        "definition_html": """<p>A map of a single kingdom at two moments. <a href="../books/2365.html">Case 2365</a> knows it as Vallombra, in the years of ash when its kings and its Reckoner found a religion; <a href="../books/4555.html">Case 4555</a> knows it as Illumaria, long after, when the religion has a Basilica, a High Pontiff and a succession to settle. The map prints both names together, as <em>Vallombra / Illumaria</em>, and sets the March of Verrenhal beside it to the north-west.</p>
+          <p>It is filed here as a gazetteer, not as a subject or a record. The places below are the ones printed on the map, from north to south; each note is drawn from the case files, and a place that no case file yet describes is said to be unfiled rather than guessed at.</p>""",
+        "places": [
+            ("Unknown Lands", """Printed along the map's northern, western and eastern margins. No case file describes them."""),
+            ("March of Verrenhal", """The northern realm of <a href="../characters/ragnvald.html">King Ragnvald</a> and his sister <a href="../characters/sigrid.html">Sigrid</a> in Case 2365, who rules it as regent for eleven years after him. Its host comes down a mountain pass into Vallombra in the ash. The map files it as a March."""),
+            ("Saltway Gate", """The northern gate on the Saltway, where <a href="../characters/rufio.html">Rufio</a>'s wardens turn back the people whose names cannot be found, where <a href="../characters/arne.html">Arne</a>'s four thousand are met at the low hour, and where <a href="../characters/sigrid.html">Sigrid</a> finds a row of a hundred and forty-one dead with their feet toward the gold. <a href="../records/the-parley-at-the-saltway-gate.html">The parley</a> is held here."""),
+            ("Saltway Quarter", """A parish of the Roll of the Lit. It is the column of three hundred and eleven names that the copyist <a href="../characters/lino.html">Lino</a> skips when his wick gutters, and the quarter to which <a href="../characters/livia.html">Livia</a> sends forty wagons of grain, unlabelled, on the anniversary of the First Furrow for fifty-one years."""),
+            ("Ashduct", """The hills in the east. When they breathe and the sun withdraws, <a href="../characters/severin.html">Severin</a> extends the year's grace in Case 2365 from three days to a season."""),
+            ("Vallombra / Illumaria", """The kingdom itself. In Case 2365 it is Vallombra, the realm of <a href="../characters/faustin.html">King Faustin</a> and then his daughter <a href="../characters/livia.html">Livia</a>, Princess of Vallombra and later Queen of Illumaria. In Case 4555 it is Illumaria, the High Realm of <a href="../characters/aethelgard.html">King Aethelgard</a> and, in time, of <a href="../characters/blakk.html">High Sovereign Blakk</a>."""),
+            ("Torrecalda", """The walled city on the river, drawn with a keep. In Case 2365 it is where the Granary's physician tells <a href="../characters/faustin.html">Faustin</a> that no room is large enough to keep the sick from the well, and the city whose tanning trade <a href="../characters/the-tanners-widow.html">the Tanner's Widow</a> belongs to."""),
+            ("Lower Granaries", """The grain-houses below Torrecalda. <a href="../characters/nina.html">Nina</a>, Piero's sister, is the daughter of the Lower Granary clerk and dies in the granary house in the first winter of the ash."""),
+            ("Threshing Round", """The Round, where the First Furrow is turned. The Reckoner's tower stands beside it; <a href="../characters/livia.html">Livia</a> is crowned there at nine; and it is the ground on which the sun stands at the sixth hour when <a href="../characters/severin.html">Severin</a> states his one false figure."""),
+            ("Grand Basilica of Sol-Invictus", """The seat of the religion the first case founds. In Case 2365 a lens the diameter of a cartwheel is ground to catch the single shaft of sun through its oculus; in Case 4555 the Great Judgment is held here under High Pontiff <a href="../characters/sarel.html">Sarel</a>, and <a href="../characters/observer-902.html">Observer 902</a> watches from an alcove in its black stone."""),
+            ("Tanners' Row", """Marked on the map; no case file describes it yet."""),
+            ("Wool Lane", """A column on the Roll of the Lit: the next one <a href="../characters/lino.html">Lino</a> copies after the Saltway Quarter."""),
+            ("Glassmakers' Row", """The street of <a href="../characters/anselmo.html">Anselmo</a>, master of the guild that grinds the Sol-Focus Arc by hand for eleven years."""),
+            ("Furrow reserve", """Marked on the map; no case file describes it yet."""),
+            ("Round-bed", """Marked on the map; no case file describes it yet."""),
+            ("Mud-Reach", """<a href="../characters/blakk.html">Blakk</a>'s duchy in Case 4555: nine hundred square miles of drained marsh, standing timber and tenant debt."""),
+            ("Illmere Ford", """The Standing at Illmere Ford, the engagement that follows <a href="../characters/blakk.html">Blakk</a>'s unread letters of surrender. <a href="../characters/astraea.html">Astraea</a>'s cavalry meets <a href="../characters/ignis.html">Ignis</a>'s raiding column here, and <a href="../characters/cassian.html">Cassian</a> arrives on the fifth day to find no one left worth conquering."""),
+            ("Sarn's Crossing", """Where <a href="../characters/astraea.html">Astraea</a> throws herself between <a href="../characters/blakk.html">Blakk</a> and Canon Voss's blade, taking a wound that troubles her for the rest of her life."""),
+            ("Weirs", """The harbour at the river's mouth. Lord <a href="../characters/fulvio.html">Fulvio</a> of the Weirs, one of the sixteen lords of Vallombra, offers his grain-ships in Case 2365 as the Order's sole licensed factor for whatever is built on the strength of the noon."""),
+        ],
+        "appears_html": """<p>Vallombra, at the founding of its religion, is the kingdom of <a href="../books/2365.html">The Decree of Luminescence</a> (Case 2365). The same kingdom, long after and under the name Illumaria, is the kingdom of <a href="../books/4555.html">The Vessel of Unmediated Grace</a> (Case 4555). Their shared faith is <a href="decree-of-luminescence.html">the Decree of Luminescence</a>.</p>""",
+    },
+    {
+        "slug": "iron-stiletto-war", "name": "Gazetteer of the Iron Stiletto War", "group": "Gazetteers",
+        "teaser": "The map of Case 4417: Solis, Ironhold, and the country between them.",
+        "map": {
+            "file": "iron-stiletto-war",
+            "alt": "Parchment map titled The Iron Stiletto War, Gazetteer. The coastal kingdom of Solis, with a castle and Great Hall on the Greywater river, lies south-west; the mountain country of Ironhold lies north-east, with House Vell's keep on the forest line between them; the Stonewic Hills lie to the south, the eastern marches to the east, and a sea with ships lies to the west",
+        },
+        "definition_html": """<p>The country of <a href="../books/4417.html">Case 4417</a>, drawn from the sea inland: Solis on the coast, Ironhold in the mountains to the north-east, and the forest line and the river between them. It is filed here as a gazetteer, not as a subject or a record. The places below are the ones printed on the map; each note is drawn from the case file, and a place the file never mentions is said to be unfiled rather than guessed at.</p>""",
+        "places": [
+            ("Unknown Lands", """Printed along the map's northern and southern margins. No case file describes them."""),
+            ("House Vell", """Shown as a keep north of Solis. House Vell commits to Solis in secret, and its Lord is the brother of <a href="../characters/isolde.html">Isolde</a> of Ironhold, a connection that matters more to the war than she first realizes."""),
+            ("Ironhold", """The mountain country of Duke <a href="../characters/aldous.html">Aldous</a> and Duchess <a href="../characters/beatrice.html">Beatrice</a>, whose steward <a href="../characters/osric.html">Osric</a> has kept its accounts for three dukes and whose Lord of the Western Passes is <a href="../characters/fenric.html">Fenric</a>. Beatrice's humiliation at the Great Concord is the war's original grievance."""),
+            ("Solis", """The coastal kingdom of Queen <a href="../characters/aurelia.html">Aurelia</a>, where <a href="../characters/vane.html">Vane</a> arrives disguised as a wandering hermit and leaves a pair of chrome heels, and where Chancellor <a href="../characters/wren.html">Wren</a> has served three monarchs. The siege reaches its walls at the war's end."""),
+            ("Great Hall", """Shown beneath Solis's castle. Duke <a href="../characters/aldous.html">Aldous</a> goes into the war's final confrontation here unarmed and offering terms, and is killed in it."""),
+            ("Greywater", """The river that runs west to the sea below Solis's castle. No case file names it."""),
+            ("The Greywater crossing", """Marked with a cross on the river's course. No case file describes it."""),
+            ("Stonewic Hills", """The hills in the south. No case file describes them."""),
+            ("The eastern marches", """The country of <a href="../characters/corvin.html">Baron Corvin</a>, Baron of the Eastern Marches, patient and outwardly neutral while he works every side of the war he helps prolong."""),
+        ],
+        "appears_html": """<p>The country of <a href="../books/4417.html">The Iron Stiletto War</a> (Case 4417).</p>""",
     },
 ]
 
@@ -3638,7 +3897,69 @@ def contact_body():
 """ % items
 
 
+def gazetteer_body(l):
+    """A gazetteer entry: the map first (opens in the lightbox), then About / Places / Appears In."""
+    r = rel(1)
+    m = l["map"]
+    full = "%simages/maps/%s.jpg" % (r, m["file"])
+    places = "\n".join("            <dt>%s</dt>\n            <dd>%s</dd>" % (n, note) for n, note in l["places"])
+    return """    <div class="wrap page-content">
+      <a class="back-link" href="%slore.html">&larr; Archive</a>
+      <h1>%s</h1>
+
+      <div class="gazetteer">
+        <figure class="map-figure">
+          <a class="lightbox-link" data-group="maps" href="#" data-full="%s"><img class="map-image" src="%s" alt="%s"></a>
+          <figcaption>Select the map to enlarge it.</figcaption>
+        </figure>
+        <div class="prose gazetteer-text">
+          <section class="subsection">
+            <h2>About the Map</h2>
+            %s
+          </section>
+
+          <section class="subsection">
+            <h2>Places</h2>
+            <dl class="places">
+%s
+            </dl>
+          </section>
+
+          <section class="subsection">
+            <h2>Appears In</h2>
+            %s
+          </section>
+        </div>
+      </div>
+
+      <section class="subsection related">
+        <h2>Cases Where This Appears</h2>
+        %s
+      </section>
+    </div>
+""" % (r, l["name"], full, full, _esc(m["alt"]), l["definition_html"], places, l["appears_html"],
+       case_grid_html(lore_cases(l), 1, "case-grid--related", cap=4))
+
+
+def gazetteers_for(b):
+    return [l for l in LORE if l.get("map") and b["slug"] in [x["slug"] for x in lore_cases(l)]]
+
+
+def gazetteer_cards_html(b, depth):
+    r = rel(depth)
+    gz = gazetteers_for(b)
+    if not gz:
+        return ""
+    items = "\n".join(
+        '          <li><a class="gz-card" href="%slore/%s.html"><img src="%simages/maps/%s-thumb.jpg" alt="" loading="lazy">'
+        '<span><span class="gz-name">%s</span><span class="gz-meta">%s</span></span></a></li>'
+        % (r, l["slug"], r, l["map"]["file"], l["name"], l["teaser"]) for l in gz)
+    return ('<section class="subsection" id="gazetteer">\n        <h2>Gazetteer</h2>\n        <ul class="gz-list">\n%s\n        </ul>\n      </section>' % items)
+
+
 def lore_detail_body(l):
+    if l.get("map"):
+        return gazetteer_body(l)
     r = rel(1)
     lore_href = "%slore.html" % r
     if l.get("roster"):
@@ -3815,6 +4136,8 @@ def book_detail_body(book):
         %s
       </section>
 
+      %s
+
       <div class="prose">
         <section class="subsection purchase-panel">
           %s
@@ -3824,7 +4147,8 @@ def book_detail_body(book):
       %s
     </div>
 """ % (books_href, cover_src, cover_src, _esc(b["title"]), case_tag_html, b["title"], tags_html(b), top_cta,
-       standalone, b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section, bottom, related_cases_html(b, 1))
+       standalone, b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section,
+       gazetteer_cards_html(b, 1), bottom, related_cases_html(b, 1))
 
 
 def character_detail_body(c, book):
@@ -4035,7 +4359,8 @@ for l in LORE:
     write("lore/%s.html" % l["slug"],
           page("%s \u2014 %s" % (l["name"], AUTHOR),
                "%s Definition and where it appears." % l["teaser"],
-               1, "lore.html", lore_detail_body(l), path="lore/%s.html" % l["slug"]))
+               1, "lore.html", lore_detail_body(l), path="lore/%s.html" % l["slug"],
+               **({"image": "images/maps/%s.jpg" % l["map"]["file"], "image_alt": l["map"]["alt"]} if l.get("map") else {})))
 
 # ---- old URLs that now redirect ---------------------------------------------------
 REDIRECTS = {"lore/catalyst-tier.html": "catalyst.html"}

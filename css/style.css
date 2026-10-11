@@ -977,3 +977,31 @@ body.lightbox-open { overflow: hidden; }
   .cta-row .share-btn { flex: 1 1 100%; text-align: center; }
   .btn--ghost { margin: 0.6rem 0 0; }
 }
+
+/* ----------------------------------------------------------------------------
+   Gazetteers — a map page (lore/illumaria.html, lore/iron-stiletto-war.html) and
+   the "Gazetteer" card on a case page that shares the map. The map is a
+   gazetteer, not a subject or a record, so it never uses the character/record styles.
+   ---------------------------------------------------------------------------- */
+.gazetteer { display: grid; gap: var(--space-md); align-items: start; margin-top: var(--space-sm); }
+.map-figure { margin: 0; }
+.map-figure .lightbox-link { display: block; }
+.map-image { display: block; width: 100%; height: auto; border: 1px solid var(--rule); box-shadow: 0 6px 18px rgba(0,0,0,.3); }
+.map-figure figcaption { margin: 0.5rem 0 0; font: 0.68rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+.gazetteer-text .subsection:first-child { margin-top: 0; }
+.places { margin: 0; }
+.places dt { margin: var(--space-xs) 0 0.15rem; font-family: var(--font-display); font-weight: 600; }
+.places dt:first-child { margin-top: 0; }
+.places dd { margin: 0 0 var(--space-xs); padding-bottom: var(--space-xs); border-bottom: 1px solid var(--rule); max-width: 68ch; }
+.places dd:last-child { border-bottom: none; }
+@media (min-width: 56rem) {
+  .gazetteer { grid-template-columns: minmax(0, 26rem) minmax(0, 1fr); gap: var(--space-lg); }
+  .map-figure { position: sticky; top: var(--space-sm); }
+}
+
+.gz-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: var(--space-sm) var(--space-md); }
+.gz-card { display: flex; align-items: center; gap: 0.9rem; padding: 0.5rem 0; border-bottom: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+.gz-card img { flex: none; width: 4.2rem; height: 6.3rem; object-fit: cover; object-position: top; outline: 1px solid rgba(27,27,27,.4); }
+.gz-name { display: block; font-family: var(--font-display); font-size: 1.05rem; }
+.gz-card:hover .gz-name, .gz-card:focus-visible .gz-name { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
+.gz-meta { display: block; margin-top: 0.15rem; font-size: 0.88rem; line-height: 1.4; color: var(--ink-soft); }
