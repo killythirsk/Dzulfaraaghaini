@@ -925,14 +925,16 @@ the same specs as every other book.
 Status: **Published** (2026-10-10), with `pages` "88" and a Google Play Books link
 (`https://play.google.com/store/books/details?id=spIXEgAAQBAJ`; the link has not been opened by an AI),
 both sent by the author in chat, which is the confirmation to publish. It was merged into `main` as
-coming-soon on 2026-10-09 via pull request #1. **`genre` and `synopsis_html` are still `EDITOR_*`
-placeholders**, so the page shows empty genre and synopsis spots until the author sends them. Built on
+coming-soon on 2026-10-09 via pull request #1. **`synopsis_html` was written on 2026-10-12** (three
+paragraphs, in the house style of the other published cases, drafted by Claude from manuscript revision 3
+at the author's request; it is not author-confirmed jacket copy, so the author may want to rewrite it).
+**`genre` is still an `EDITOR_*` placeholder**, so the page shows an empty genre spot until the author sends it. Built on
 branch `case-2365-stub` from: the cover
 (`images/covers/2365.jpg`, tagline "Ash. Roll. Residue. Append. Nil."), 24 character reference
 sheets (two batches), 15 scene paintings, and the manuscript
 `Case_2365_The_Decree_of_Luminescence_Final.md` (revision 3). **`genre` and
-`synopsis_html` were left as untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
-was used for the bios and captions only). The case was first committed as a cover-only stub, then
+`synopsis_html` were originally left as untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
+was used for the bios and captions only); the synopsis was filled in later, as noted above. The case was first committed as a cover-only stub, then
 filled in.
 
 The premise, from the manuscript (not author-confirmed jacket copy): Vallombra, a terraced kingdom
@@ -1322,7 +1324,8 @@ sit at the end of `BOOKS`, in the order the author listed them.
 - **Case 2365** (*The Decree of Luminescence*) is **published**: a 24-character
   cast, 15 scenes, both roster records, 88 pages and a Google Play Books link
   (not opened by an AI), merged via PR #1 and published on 2026-10-10. Its
-  `genre` and `synopsis_html` are still placeholders, and its Catalyst has no
+  `synopsis_html` was drafted on 2026-10-12 (Claude, from the manuscript; not
+  author-confirmed), its `genre` is still a placeholder, and its Catalyst has no
   sheet (§6).
 - **Case 2231** (*The Stone of the Clean Hand*) is coming-soon with an
   18-character cast and both roster records but no pages, genre, synopsis or
@@ -1397,7 +1400,16 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 1153 + two gazetteers + the 2365 / 4555 link — branch `case-1153`, pull request).** The
+- **Latest update (Case 2365 synopsis — branch `case-2365-synopsis`, 2026-10-12).** The author asked
+  for the missing synopsis of Case 2365 to be written from the manuscript (revision 3, re-attached in chat;
+  the repo itself holds no manuscript files). Done: `synopsis_html` on the `2365` dict in
+  `tools/build_site.py` is now three paragraphs in the house style (premise, the Roll and the Saltway,
+  the Decree and the Corps' closing log), linking Severin, Faustin, Piero, Sigrid, Marcello and Livia;
+  every figure in it was checked against the manuscript. `genre` is still a placeholder. The site was
+  regenerated, but a rebuild restamps the build time and cache-bust query on all ~490 pages, so only the
+  three files that actually changed were committed (`tools/build_site.py`, `books/2365.html`, this file);
+  the next full rebuild will refresh the stamps everywhere.
+- **Earlier update (Case 1153 + two gazetteers + the 2365 / 4555 link — branch `case-1153`, pull request).** The
   author sent the cover, the manuscript and 20 character sheets (19 used, one a duplicate) and 13 scene
   paintings for Case 1153, a re-send of the Case 2365 manuscript (the same revision 3), and two map images.
   They also said 2365 and 4555 are the same kingdom, that Xu Lian is in 0000B, that Observer 419 is also
