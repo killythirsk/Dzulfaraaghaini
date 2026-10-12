@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; eight are live on the site so far, plus
-seven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 1153) and four
+eight coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1153) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -187,7 +187,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria and iron-stiletto-war;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (281 total — 10 for
+/characters/<slug>.html    One page per character (298 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -195,7 +195,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand, 19 for the Second Hand; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -294,7 +294,7 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
-records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6) and 2231 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
+records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (1268, 4425) or only an empty coming-soon
 stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
@@ -1042,6 +1042,91 @@ before writing a bio, not after. (8) Images: cover 900x1350; sheets 980w / 320w 
 specs as every other book; every portrait was identified by looking at its title strip, never by
 the order of the attachments.
 
+### Book: *The Tear of the Dragon* (Case 0247)
+
+Status: **Coming soon** (awaiting release; no purchase link was supplied). Added on branch
+`case-0247` (opened as a pull request, not pushed to `main`, so that another session working on the
+repo is not disturbed), the cover-and-sheets pass and then the records, from: the cover
+(`images/covers/0247.jpg`, tagline "Copied. Borrowed. Ledger. Unwilling. Hollow.", used verbatim as the
+`hook`), 17 reference sheets, 11 record paintings, and the manuscript
+`Case_0247_The_Tear_of_the_Dragon_2026-10-07_0411AM_GMT_7.md` (revision 5), which was used for the
+bios, the two roster records and the record captions only and is **not committed** (the repo is
+public). **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*` placeholders.** The case has
+**11 records** (scenes), in story order, in the palette-knife painterly style of Books 4 and 5; their
+order and captions are Claude's inference from the art and the manuscript, not author-confirmed.
+
+The premise, from the manuscript (not author-confirmed jacket copy): the culture is Tang Chinese
+(inferred from naming, not stated in-text), no religion is named, and the setting is Mount Qingxuan.
+**Kuang Zhi**, 71, founder of the Hollow Pine Sect, climbs alone to the **Dragon's Tear**, a spring
+that copies the complete memory and skill of the last person to touch its waters into the next person
+who drinks, and deposits forty years of technique there with seven drops of blood and his whole face
+under the water; he dies before dawn with **the Hollow Hermit** (the Envoy, a Custodian of
+"Terrarium Designation Qingxuan") sitting three feet away. Eighty-nine hours later three shepherds,
+Chen Wu, Fang and **Bai Rong**, drink at the screened southern grazing bank, and Bai Rong, drinking
+last and longest, receives it. Kuang Zhi's heir **Shen Lie**, back from an errand two days south,
+tracks him through **Old Cao**, who sells the same location to the Xuanwu Sect for a second fee. A
+strand of Kuang Zhi's undyed hemp mourning cord, snapped from Shen Lie's wrist in the ambush, is read
+by the Xuanwu searchers as proof of an assassin; **Xuanwu Kai**, whose only son died in the clearing,
+invokes the founding oath's clause and declares war. The war lasts forty-one days and kills perhaps
+sixty to avenge one. Bai Rong survives a second submersion and Shen Lie receives a compound deposit,
+and rebuilds Hollow Pine on the same mountain. The chronicles call it the War of the Stolen Style.
+
+**Connections.** Revision 5 of the manuscript names the Xuanwu Sect's founder as General **Kang Yi**,
+last Grand Marshal of the Yan's northern garrisons, which is the existing `kang-yi` page of Case 4438;
+Xuanwu Kai's bio links to it and `RELATED_THEMES` has a row linking 0247 to 4438. Its closing log files
+it under Mythic Class "alongside Case 0000 for deposit-mechanism similarity", and its Catalyst's
+`meta` is "Mythic Class", so the automatic same-class links relate it to 0000, 0157 and 0188. Don't
+state more about the Yan than the manuscript and 4438 already say.
+
+Seventeen characters have pages, in this order: `the-hollow-hermit` (the Envoy), `the-dragons-tear`
+(the Catalyst), `kuang-zhi`, `shen-lie`, `bai-rong`, `xuanwu-kai`, `chen-wu`, `fang`, `widow-bai`,
+`deputy-song`, `old-cao`, `xuanwu-kais-son`, `wei-bo`, `the-mourning-cord`, `chen-rui`, `old-fen`, `bo`.
+Roster records: Catalyst **The Dragon's Tear** ("Mythic Class", page `the-dragons-tear`; it has a
+sheet, so unlike 2231 it needed no cover crop), Envoy **The Hollow Hermit** ("Custodian, Terrarium
+Designation Qingxuan", page `the-hollow-hermit`). The manuscript gives him no personal or archetype
+number; don't invent one. The `PRINCIPALS` entry is `bai-rong`, `shen-lie`, `kuang-zhi`, `xuanwu-kai`,
+`the-dragons-tear`, `the-hollow-hermit`, a first pass. **The home cast wall takes the first six
+subjects in list order, not `PRINCIPALS`**, so those same six were put first in the list and the rest
+follow in story order.
+
+Judgment calls worth knowing: (1) Two sheets are things, not people: the Dragon's Tear (the Catalyst
+as a character, as with the Sweets and the Golden Catacomb) and the Mourning Cord (a relic of its own).
+(2) The heir has no name in the manuscript, so his slug is `xuanwu-kais-son`; `fang` and `bo` collided
+with nothing (checked; slugs are one global namespace). (3) Ages: the manuscript gives Bai Rong 31, the
+young master 22 and Bo "perhaps fourteen"; every other age comes from a sheet and is labelled "by his
+sheet" in the epithet (Kuang Zhi's sheet says 71, and the manuscript only says he reached his
+conclusion "somewhere in his sixty-eighth year"). (4) The Dragon's Tear's sheet shows the water
+unnaturally cold for Kuang Zhi and unnaturally warm for Bai Rong; the manuscript says only that the
+second time it was not as cold as water at that altitude had any right to be, so the bio labels the
+colder/warmer detail as the sheet's. The Hollow Hermit's and Shen Lie's sheets say outright that their
+appearance is invented. (5) **The Xuanwu Kai's Son sheet has a garbled second "Physical Traits" block
+(nonsense text)**; the bio uses only the manuscript and the sheet's first block. Replace the sheet if a
+clean one arrives. (6) **A manuscript inconsistency, not resolved in the bios:** Chapters Seven and
+Nine have Widow Bai waiting with the herd in the hollow (frightened, half a mile off; later selling
+cheese to a trader), while Chapter Twelve has her three valleys away buying salt on the morning of the
+ambush and told by a note to wait at her sister's house. Her bio follows the Chapter Seven/Nine and
+Epilogue version and leaves the salt and the note out. (7) No sheet exists for Deputy Song's junior,
+Kuang Zhi's two seniors, the provincial governor or the retired soldier of the six hundred, so none
+has a page; don't invent them. (8) Images: cover 900x1350 (from a 1717x2576 upload); sheets 980w with a
+320w thumb, except the Mourning Cord (941w source, not upscaled). The order of the attachments matched
+the order shown (checked at the two odd-sized sheets, the Mourning Cord and the Dragon's Tear), and
+every sheet was confirmed from a contact sheet of its title strip before it was filed. (9) The bios
+were written after reading the manuscript, then every word and number in them was checked against it by
+script; what the script could not find is sheet-sourced appearance detail, labelled as such.
+
+The 11 records, in story order: `not-the-first` (Ch. 1), `three-shepherds-at-the-southern-bank` (Ch. 2),
+`shen-lie-finds-the-body` (Ch. 3), `bai-rong-at-the-gate` and `widow-bai-watches-his-hands` (Ch. 4),
+`old-cao-counts-the-coins` (Ch. 5), `the-fire-in-the-hollow` (Ch. 6), `the-shepherds-reckoning` (Ch. 7),
+`the-oath-is-invoked` (Ch. 8), `back-up-the-mountain` (Ch. 9), `the-second-emptying` (Ch. 10). Judgment
+calls: (a) **`the-oath-is-invoked` is read as Xuanwu Kai** (the grey-robed students, blue banners and
+the black and silver robe match his sheet and Chapter 8), but the painting gives him long white hair
+where his sheet says black streaked with grey; it could be a different Grandmaster, so the author
+should confirm. Its caption names no hair colour. (b) In `three-shepherds-at-the-southern-bank` the
+caption does not say which of the two shepherds is Chen Wu and which is Fang. (c) The unnamed distant
+figure with a staff in `shen-lie-finds-the-body` is not named in the caption. (d) Scene slugs share one
+namespace across books (checked: none collide). (e) No record was added for Chapter 11 or 12 or the
+epilogue; there is no painting for them.
+
 ### Book: *The Second Hand* (Case 1153)
 
 Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-1153`, as a pull
@@ -1105,9 +1190,13 @@ the bios use eighteen, matching Levan's eighteen years and the night the city fa
 Faith of Ardwen, so the faith relations pick up 0157, 4417, 2140 and 2231 (Crown) and 0000,
 0157 and 0156 (Ardwen) automatically; the two `appears_html` paragraphs name the case. (8) **Lesson, repeated from 2231:** the
 scene images were first written under working names that did not match the slugs in the data, which the
-link check caught; rename the files or the data before the check, never after. (9) Images: cover
-900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid; maps as supplied (1024x1536,
-575 KB) plus a 450w thumb, the same specs as every other book. Originals were not committed.
+link check caught; rename the files or the data before the check, never after. (9) A record's
+Subject line comes from the characters its caption links, so *The Outer Wall Falls* lists Bagrat and Vazha
+although neither is in the picture (it shows the burning city and the siege engines); it was left that way
+because the record is about their act, and an empty `"subjects"` list falls back to the caption links.
+(10) Images: cover 900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid; maps as
+supplied (1024x1536, 575 KB) plus a 450w thumb, the same specs as every other book. Originals were not
+committed.
 
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
@@ -1239,6 +1328,10 @@ sit at the end of `BOOKS`, in the order the author listed them.
   18-character cast and both roster records but no pages, genre, synopsis or
   scenes, and no sheet for its Catalyst. Its principals Higaide, Arikuni and
   others have no sheet yet (§6).
+- **Case 0247** (*The Tear of the Dragon*) is coming-soon with a 17-character
+  cast, 11 records and both roster records but no pages, genre or synopsis (§6). The
+  Xuanwu Kai's Son sheet has a garbled second traits block, and the manuscript contradicts itself on
+  where Widow Bai was during the ambush.
 - **Case 1153** (*The Second Hand*) is coming-soon with a 19-character cast, 13
   records and both roster records but no pages, genre, synopsis or purchase link
   (§6). The manuscript title differs from the cover title (*The Eleven-Fingered
@@ -1314,9 +1407,29 @@ sit at the end of `BOOKS`, in the order the author listed them.
   / `gazetteer_cards_html` code and CSS (§6); cross-link edits to the 0000B Anchorite, 0000 Boy and 2140
   Observer 419 bios; sentences in the Cultivator, Catalyst, Faith of Ardwen, Threefold Crown and Decree of
   Luminescence lore. Images: 1 cover, 38 character files, 26 scene files, 4 map files. Recount after
-  rebuilding: cases 18 -> 19, characters 262 -> 281, records 134 -> 147, sitemap 426 -> 461; every local
-  link in every page resolves (15,834 checked), and the new pages were opened in Chromium at desktop and
+  rebuilding (against `main` after Case 0247 was merged in): cases 19 -> 20, characters 279 -> 298, records
+  145 -> 158, sitemap 455 -> 490; every local link in every page resolves (16,945 checked), and the new pages were opened in Chromium at desktop and
   phone width with no overflow or broken images. `HOME_SCENES` was not changed.
+- **Earlier update (Case 0247 — on branch `case-0247`, as a pull request).** The author sent the cover,
+  the manuscript and 17 reference sheets for Case 0247 in one message, asking for the cover and then
+  the cast, and then, in a second message, 11 record paintings, with an instruction to be mindful of
+  other AIs working on the repo and of the subject and record counts. Done: a full `0247` dict (17
+  characters, 11 scenes, `catalyst`, `envoy`) with a `PRINCIPALS` entry, a `RELATED_THEMES` row
+  linking 0247 to 4438 through the Xuanwu Sect's founder Kang Yi, and one new sentence each in the
+  Cultivator and Catalyst lore prose. Images: 1 cover, 34 character files (17 slugs x full + thumb), 22
+  scene files (11 slugs x full + grid; full is 1000px on the long side, grid 450px, as in the existing
+  scenes). Recount after rebuilding: cases 18 -> 19, characters 262 -> 279, records 134 -> 145 (the
+  11 new records, and nothing else), sitemap 426 -> 455; every local link in every page resolves
+  (16,582 checked). The manuscript was not committed. `HOME_SCENES` was not changed. Because another
+  session may be working on `main`, this was not pushed there: `origin/main` was checked before the
+  work started and again before the push (see the README entry), and every generated page, the
+  sitemap and the counts are rebuilt from the script, so if `main` has moved, rebase the branch,
+  re-run `tools/build_site.py` and take the regenerated pages rather than hand-merging them. Lessons
+  kept: bios written after reading the manuscript and checked against it by script; every sheet and
+  every painting identified from a contact sheet, not by position; the home cast wall is the first six
+  subjects in list order; a record's Subject line comes from the characters its caption links, so a
+  caption that names someone who is not in the picture needs an explicit `"subjects"` list (the
+  Second Emptying and the Shepherd's Reckoning have one).
 - **Earlier update (Case 2231 + Case 2365 link and pages — straight into `main`).** The author
   sent the cover, the manuscript and 18 character-dossier sheets for Case 2231, then, for Case 2365,
   the Google Play Books link and "88 page". Done: a full `2231` dict (18 characters, `catalyst`,
