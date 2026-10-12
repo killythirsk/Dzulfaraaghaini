@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; eight are live on the site so far, plus
-seven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247) and four
+eight coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1153) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -113,7 +113,7 @@ filename.
 **Update (Oct 2026, case-archive pass).** The site now speaks in archive terms. Nav and headings: Books -> **Cases**, Characters -> **Subjects**, Scenes -> **Records**, Lore -> **Archive**, "Coming Soon" -> **Awaiting Release**. File names and URLs were deliberately NOT changed (`books.html`, `characters.html`, ...), so every shared link still works. What was added, all in `tools/build_site.py` + CSS section 14 + `js/site.js`:
 - **Cases page / home:** *Published Cases* (grid, count) and *Cases Awaiting Release* (separate dark band, desaturated covers) via `published_section_html()` / `awaiting_band_html()`. Home shows the published grid plus a link to `books.html#awaiting`.
 - **Case page:** dominant `READ ON GOOGLE BOOKS` button under the title and again after the Records (`cta_html()`; falls back to Kindle / Royal Road if there is no Google Books link; awaiting cases get no READ button). Subjects are split into **Principal Subjects** and a folded `<details>` "N additional subjects documented" (`subjects_section_html()`), with a link to `characters.html?case=<slug>` (the index reads `?case=`). Principals are set per case in the **`PRINCIPALS`** dict at the top of the script (author-confirmed only for 4099; the rest are a first pass, edit freely). Cases with 7 or fewer subjects (`SPLIT_MIN`) show everyone as principal; a case with no `PRINCIPALS` entry falls back to its first six.
-- **Related Cases / Subjects / Records** are generated from existing data, nothing invented: cases relate by *same catalyst class* (each book's `catalyst.meta`) and *shared faith* (the Religion lore pages' `appears_html` links); subjects relate by character cross-links inside bios (both directions), falling back to the case's principals; records are the scenes whose caption links to that subject; lore pages list the cases where the concept appears. Hand-written thematic links go in **`RELATED_THEMES`** as `(case slug, case slug, "reason")`. "Same Observer" is intentionally absent: each case has a different Observer (see §6).
+- **Related Cases / Subjects / Records** are generated from existing data, nothing invented: cases relate by *same catalyst class* (each book's `catalyst.meta`) and *shared faith* (the Religion lore pages' `appears_html` links); subjects relate by character cross-links inside bios (both directions), falling back to the case's principals; records are the scenes whose caption links to that subject; lore pages list the cases where the concept appears. Hand-written thematic links go in **`RELATED_THEMES`** as `(case slug, case slug, "reason")`. "Same Observer" is not a generated relation: each case has its own Observer, with **one exception on file, Observer 419**, who is the Envoy of both 2140 and 1153 (a hand-written `RELATED_THEMES` row links the two; the Cultivator lore says so; see §6).
 - **Mobile "see more":** markup opts in with `data-cap="N"` (show N list items, button reveals the rest) or `data-collapse="N"` (clip a block to N rem). `js/site.js` adds the buttons on phones (<= 40rem) only; desktop is untouched, and the Subjects/Records indexes lift the cap while a search or case filter is active.
 - **Fix:** the hero "Enter the archive" button sat off-centre because the global `p { max-width: 68ch }` left its paragraph left-aligned; `.hero--home p { margin-inline: auto }` fixes it.
 
@@ -181,12 +181,13 @@ book's own page rather than as their own top-level sections.
 /books/0157.html          The Stolen Prince War's full page
 /books/4417.html          The Iron Stiletto War's full page
 /lore.html               Glossary index (plain list on top, then a "Religion"
-                            heading over the three faiths — `group` field, §8)
+                            heading over the three faiths, then a "Gazetteers" heading over the two map pages — `group` field, §8)
 /lore/<slug>.html          One page per term (cultivator, catalyst, faith-of-ardwen,
-                            threefold-crown, decree-of-luminescence;
+                            threefold-crown, decree-of-luminescence, and the two
+                            gazetteers illumaria and iron-stiletto-war;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (279 total — 10 for
+/characters/<slug>.html    One page per character (298 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -194,7 +195,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand, 17 for the Tear of the Dragon; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -204,7 +205,8 @@ In order: back-link → cover + title + status tags → Book Info (pages,
 genre, synopsis) → **Characters** (a `catalog-list` of every character in
 *that* book, links to their own page) → **Scenes** (a *horizontal slider*
 if the book has any scene art, or a plain "not yet added" note if it
-doesn't — see §7 for which is which right now) → a boxed "Read This Book"
+doesn't — see §7 for which is which right now) → a **Gazetteer** card, only on a
+case that shares a map (2365, 4555, 4417; see §6) → a boxed "Read This Book"
 purchase panel.
 
 The Characters vs. Scenes layout difference (vertical list vs. horizontal
@@ -1125,6 +1127,106 @@ figure with a staff in `shen-lie-finds-the-body` is not named in the caption. (d
 namespace across books (checked: none collide). (e) No record was added for Chapter 11 or 12 or the
 epilogue; there is no painting for them.
 
+### Book: *The Second Hand* (Case 1153)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-1153`, as a pull
+request rather than straight into `main`, from: the cover (`images/covers/1153.jpg`, tagline "Hand.
+Debt. Doctrine. Mercy. Exile."), 20 character-dossier sheets (19 used), 13 scene paintings and the
+manuscript `Case_1153_The_Eleven-Fingered_Mercy_2026-10-07_1737PM_GMT_7.md`. **`pages`, `genre` and
+`synopsis_html` are untouched `EDITOR_*` placeholders.** The manuscript was read in full before the
+bios were written, and used for the bios and the scene captions.
+
+**Title discrepancy:** the cover says *The Second Hand*; the manuscript file and its heading say *The
+Eleven-Fingered Mercy*. The site uses the cover's title, because that is what the author called it
+("the cover of 1153 : The Second Hand"). Ask the author if the manuscript title is meant to replace it.
+
+The premise, from the manuscript (not author-confirmed jacket copy): the kingdom of Sarkveti, whose
+royal city is Tavgora, keeps the Threefold Crown. At a sanctioned ritual combat exercise, the Proving, a
+re-buckled strap gives way and cuts the left hand of **Levan**, the king's son. **Observer 419**, posted
+to Tavgora as a clockmaker, fits him over three nights with a grafted prosthetic left hand, **the
+eleven-fingered hand** (two opposed thumbs and two folding rows of fingers). The Hierarch **Demna** rules,
+on the old **Doctrine of the Unbroken Hand**, that a hand which hides its absence is no hand; the king
+**Guram**'s nephew **Bagrat** cannot bear to owe his cousin an arm; a civil war follows, and **Otar** and
+eleven former patients carry Levan out of the falling city to **Otsane**, a hidden Vigil-of-Ardwen
+theocracy, where he lives as "Mikel". The Ardenwake thread (a pilgrim rumor reaching the cathedral where
+the sword **Valeria** stands) is cited secondhand.
+
+Nineteen characters have pages, in this order: `levan`, `bagrat`, `guram`, `vazha`, `demna`,
+`observer-419-1153` (the Envoy), `the-eleven-fingered-hand` (the Catalyst), `the-doctrine-of-the-unbroken-hand`,
+`sandro`, `otar`, `eka`, `sulqan`, `dato`, `gia`, `beso`, `amets`, `xu-lian`, `anchorite-of-ardenwake`,
+`the-founding-wielder`. The `PRINCIPALS` entry is `levan`, `bagrat`, `vazha`, `demna`,
+`observer-419-1153`, `the-eleven-fingered-hand` (a first pass; edit freely). Roster records: Catalyst
+**The Eleven-Fingered Hand** ("Grafted prosthetic left hand", page `the-eleven-fingered-hand`), Envoy
+**Observer 419** (`&ldquo;the clockmaker&rdquo; &middot; also the Envoy of Case 2140`, page `observer-419-1153`).
+The catalyst `meta` and the `hook` are my wording and the cover's tagline respectively; the `meta` is
+the thing the "same catalyst class" relation keys on, so it is unique on purpose.
+
+Thirteen records, in this order: `the-proving-strap-gives`, `the-king-on-the-northern-wall`,
+`the-clockmaker-at-his-stall`, `the-graft-over-three-nights`, `levan-counts-his-fingers`,
+`demna-before-the-ruling`, `the-vashtir-snow`, `the-king-in-the-corridor`, `the-outer-wall-falls`,
+`the-eastern-breach`, `the-keeper-meets-the-stranger`, `levan-at-the-workbench-in-otsane`,
+`one-attempt-on-valeria`. Every painting was identified by viewing it; the captions come from the
+manuscript. The last one names no one (the kneeling figure is unnamed in the painting and the
+manuscript's ritual is only "the Empty Hand"), so its caption links only Valeria.
+
+**Cross-links the author asked for.** Xu Lian is also in Case 0000B; the 0000B Anchorite bio now links his
+page. The anchorite on the sheet is the main protagonist of 0000B, and `anchorite-of-ardenwake` is a
+separate page here (cited secondhand, with the sheet's "adds no new physical detail" respected) that links
+back to `the-anchorite`. `the-founding-wielder` is the boy of Case 0000 and links to `the-boy`, whose bio
+links forward. Observer 419 is the same agent as Case 2140's, so **`observer-419-1153` is a second page**,
+not a reuse of `observer-419` (character slugs are one global namespace, and each page belongs to one
+case); the two bios link to each other, the Cultivator lore text allows the one exception to "no two are
+the same person", and a `RELATED_THEMES` row relates 1153 to 2140, to 0000B and to 0000.
+
+Judgment calls worth knowing: (1) **Levan has two sheets**; the one used is the second one sent
+(sheet B); the other is unused. (2) **Vazha's sheet gives an age that cannot be squared with the manuscript**
+(he outlives the war by nearly thirty years), so no age is stated and the bio says so. (3) **Bagrat's sheet
+footnote says he reigns twenty-seven years; the manuscript (revision 4, the latest) says twenty-six
+everywhere**, so the site says 26. (4) Details that come from the *sheets* and not the manuscript are
+labelled as such in the bios ("The sheet draws him…"); Eka's and Beso's looks are said, on the
+sheets themselves, to be invented or reconstructed. (5) The Doctrine of the Unbroken Hand and the Hand have sheets, so both are
+character pages rather than lore. (6) The manuscript gives Observer 419's watching as both seventeen and eighteen years;
+the bios use eighteen, matching Levan's eighteen years and the night the city falls. (7) 1153 shares the Threefold Crown and the
+Faith of Ardwen, so the faith relations pick up 0157, 4417, 2140 and 2231 (Crown) and 0000,
+0157 and 0156 (Ardwen) automatically; the two `appears_html` paragraphs name the case. (8) **Lesson, repeated from 2231:** the
+scene images were first written under working names that did not match the slugs in the data, which the
+link check caught; rename the files or the data before the check, never after. (9) A record's
+Subject line comes from the characters its caption links, so *The Outer Wall Falls* lists Bagrat and Vazha
+although neither is in the picture (it shows the burning city and the siege engines); it was left that way
+because the record is about their act, and an empty `"subjects"` list falls back to the caption links.
+(10) Images: cover 900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid; maps as
+supplied (1024x1536, 575 KB) plus a 450w thumb, the same specs as every other book. Originals were not
+committed.
+
+### Gazetteers (new Archive group, 2365 + 4555 and 4417)
+
+The author sent two map images and asked for them to go "into something else", not into the subjects or
+records: *Illumaria* (shared by Cases 2365 and 4555) and *The Iron Stiletto War — Gazetteer* (Case 4417).
+They are two new `LORE` entries (`illumaria`, `iron-stiletto-war`) in a new `group: "Gazetteers"`, so
+the Archive index shows them under their own heading, and the home page's Archive list names them. A
+gazetteer entry carries two extra fields: **`map`** (`file`, the image slug under `images/maps/`, and
+`alt`) and **`places`** (a list of `(name, note_html)` pairs). `lore_detail_body` hands any entry with a
+`map` to **`gazetteer_body`**: the map (opens in the lightbox, group `maps`) beside "About the Map",
+"Places" and "Appears In", then the usual "Cases Where This Appears". `lore_cases` still reads the case
+slugs out of `appears_html`, so that paragraph must link `../books/<slug>.html`. A case page whose slug
+appears there gets a **Gazetteer** card (`gazetteer_cards_html`, `#gazetteer`) between Records and the
+purchase panel. CSS is the "Gazetteers" section at the end of `css/style.css`.
+
+**The Case 2365 / 4555 link.** The author said they are the same kingdom, 2365 the founding of its
+religion and 4555 many years after it. Recorded in four places: the Illumaria map page (which prints both
+names, as the map does: *Vallombra / Illumaria*), a `RELATED_THEMES` row ("Same kingdom: Case 2365 is the
+founding of its religion, Case 4555 is set many years after"), the Decree of Luminescence lore (which
+points at the map), and the map's own "Appears In". Livia's epithet already read "Princess of Vallombra,
+then Queen of Illumaria". The lore says "Three centuries on" while Observer 902's bio says "four centuries
+of reports"; that disagreement was there already and has not been resolved.
+
+**Place notes use only what the case files say.** Every note was written from the existing bios and
+captions; a place the files never mention says "Marked on the map; no case file describes it yet" (Tanners'
+Row, Furrow reserve, Round-bed, the Greywater, the Greywater crossing and the Stonewic Hills). Don't fill
+those in from imagination; add a sentence when a manuscript names them. "Unknown Lands" is noted as such.
+Two labels on the 4417 map are damaged and were left as printed (the eastern marches carries a doubled
+"the"; the western "Lands" label is cropped by the margin); they are not mentioned on the site.
+
 ### Cast added to Case 0000B (*Sword of Valeria: The Empty Hand*)
 
 Nineteen character reference sheets (`char.zip`) were added to the `0000b` stub. **No manuscript came with
@@ -1145,7 +1247,7 @@ this sheet's Corse has the same office and the same king, so it is `corse-0000b`
 0000 page, but whether they are literally the same man is the author's call. (2) `wendric`, `valeria`
 and `ardwen` are Case 0000 pages and are linked rather than duplicated; there is no 0000B sheet for Wendric
 himself. (3) Verrin's and the Anchorite's sheets say outright that their appearance details are invented.
-(4) The Anchorite's sheet names a second protagonist, **Xu Lian**, who has no page here. (5) Several
+(4) The Anchorite's sheet names a second protagonist, **Xu Lian**, who had no page here. The author has since said the Anchorite is the main protagonist of 0000B; the bio now says so, and links Xu Lian's page, which was filed under Case 1153 (`xu-lian`). Xu Lian is **not** in the 0000B roster, since no 0000B sheet or manuscript describes him; add one when that material arrives. (5) Several
 sheets show scenes (e.g. the Vault Guard's &ldquo;Witnessing&rdquo; panel) that the pages describe only by caption;
 the bios deliberately stop where the sheets stop.
 
@@ -1230,6 +1332,15 @@ sit at the end of `BOOKS`, in the order the author listed them.
   cast, 11 records and both roster records but no pages, genre or synopsis (§6). The
   Xuanwu Kai's Son sheet has a garbled second traits block, and the manuscript contradicts itself on
   where Widow Bai was during the ambush.
+- **Case 1153** (*The Second Hand*) is coming-soon with a 19-character cast, 13
+  records and both roster records but no pages, genre, synopsis or purchase link
+  (§6). The manuscript title differs from the cover title (*The Eleven-Fingered
+  Mercy*). Vazha, Bagrat and the unnamed kneeling figure are flagged in §6.
+  The people the manuscript names with a real part to play all
+  have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
+  raiders do not, and shouldn't be invented one by one.
+- **Gazetteers** (`illumaria`, `iron-stiletto-war`): six places on the maps have no
+  case-file text yet (§6); add notes as manuscripts name them.
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -1286,7 +1397,20 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 0247 — on branch `case-0247`, as a pull request).** The author sent the cover,
+- **Latest update (Case 1153 + two gazetteers + the 2365 / 4555 link — branch `case-1153`, pull request).** The
+  author sent the cover, the manuscript and 20 character sheets (19 used, one a duplicate) and 13 scene
+  paintings for Case 1153, a re-send of the Case 2365 manuscript (the same revision 3), and two map images.
+  They also said 2365 and 4555 are the same kingdom, that Xu Lian is in 0000B, that Observer 419 is also
+  Case 2140's Observer, that the founding wielder is the boy of Case 0000, and that the Anchorite is the
+  main protagonist of 0000B. Done: a full `1153` dict (19 characters, 13 scenes, `catalyst`, `envoy`) with
+  a `PRINCIPALS` entry and four `RELATED_THEMES` rows; two gazetteer `LORE` entries and the `gazetteer_body`
+  / `gazetteer_cards_html` code and CSS (§6); cross-link edits to the 0000B Anchorite, 0000 Boy and 2140
+  Observer 419 bios; sentences in the Cultivator, Catalyst, Faith of Ardwen, Threefold Crown and Decree of
+  Luminescence lore. Images: 1 cover, 38 character files, 26 scene files, 4 map files. Recount after
+  rebuilding (against `main` after Case 0247 was merged in): cases 19 -> 20, characters 279 -> 298, records
+  145 -> 158, sitemap 455 -> 490; every local link in every page resolves (16,945 checked), and the new pages were opened in Chromium at desktop and
+  phone width with no overflow or broken images. `HOME_SCENES` was not changed.
+- **Earlier update (Case 0247 — on branch `case-0247`, as a pull request).** The author sent the cover,
   the manuscript and 17 reference sheets for Case 0247 in one message, asking for the cover and then
   the cast, and then, in a second message, 11 record paintings, with an instruction to be mindful of
   other AIs working on the repo and of the subject and record counts. Done: a full `0247` dict (17
