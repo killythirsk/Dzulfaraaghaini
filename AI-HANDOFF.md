@@ -187,7 +187,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria and iron-stiletto-war;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (298 total — 10 for
+/characters/<slug>.html    One page per character (323 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -195,7 +195,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 18 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -995,8 +995,8 @@ Status: **Coming soon** (awaiting release; no purchase link was supplied). Added
 "Cat. Hand. Stone. Signature. Omitted."), 18 character-dossier sheets, and the manuscript
 `Case_2231_The_Stone_of_the_Clean_Hand_2026-10-08_1630PM_GMT+7.md` (revision 7). **`pages`, `genre`
 and `synopsis_html` are untouched `EDITOR_*` placeholders**, and there are **no scenes** yet
-(`scenes: []`, so the page has no gallery and the case adds nothing to `scenes.html` or the records
-list). The manuscript was used for the bios only.
+(`scenes: []` in that first pass; the 14 records and 25 more Subjects came later, see the update
+paragraph at the end of this section). The manuscript was used for the bios only.
 
 The premise, from the manuscript (not author-confirmed jacket copy): the subject world is 812-G.
 Himuro, the Japanese side, is the successor population of the court of Case 4099 (hence the
@@ -1010,7 +1010,7 @@ In the Threefold Crown's lore, a hearth-priest's honest report of a stranger's b
 and refusal of the feast-pig reaches Hierarch **Odilo** at Castelmaur, who lays the temple's interdict
 on a whole lane until its idol is cast down. That is the sentence the lore page now carries.
 
-Eighteen characters have pages, in this order: `observer-618` (the Envoy), `shizuka`, `jokei`
+In the first pass eighteen characters had pages, in this order: `observer-618` (the Envoy), `shizuka`, `jokei`
 (Jōkei, written with ō on the page), `sadamune`, `kanemichi`, `kurige`, `bureau-officers`,
 `bertran`, `gersenda`, `bernat`, `brunissen`, `villagers-of-vilarnau`, `masons-of-castelmaur`,
 `castelmaur-men-at-arms`, `folquet`, `odilo`, `guilhem`, `jaume`. The `PRINCIPALS` entry (the six who
@@ -1021,14 +1021,14 @@ Cultivator and Catalyst lore prose each picked up one sentence, and the Threefol
 `appears_html` now names this case (it also changed "And in" to "In" at the start of the 2140 sentence
 before it, so that "And in" only opens the last sentence).
 
-**Only 18 sheets exist.** Higaide, Arikuni, Sukenori, Ermengarda, Aimeric, Peire, Narimune, Guiraut
-and others who matter in the manuscript have no sheet and so no page. Don't invent them; add them
-when art arrives, and add them to the roster in story order.
+**Only characters with a sheet have pages** (18 in the first pass, 43 now; see below). Higaide (the
+protagonist), Arikuni, Yasutsugu, Tamenaga, Narimune, Peire and Guiraut still have no sheet and so no
+page. Don't invent them; add them when art arrives, and add them to the roster in story order.
 
-Judgment calls worth knowing: (1) **The Catalyst has no character sheet**, so its roster image
+Judgment calls worth knowing: (1) **The Catalyst's roster image**
 (`covers/2231-stone-thumb.jpg`) is a 2:3 crop of the cover (the hand, the green vein and the
-notches, no title text), and its row links to the case page. If a sheet of the Stone arrives, add a
-`the-kiyote-pair` character page and repoint the record. (2) The `hook` is the cover's own tagline,
+notches, no title text). A Kiyote Pair sheet has since arrived: `the-kiyote-pair` is a character page
+and the roster row's page now points to it (the image is unchanged). (2) The `hook` is the cover's own tagline,
 verbatim. (3) Observer 618's "thirty-one years" as a quarry-hand is 12 + 19 (the manuscript gives the
 two figures separately); don't re-derive it differently. (4) Details that come from the *sheets* and
 not the manuscript are labelled as such in the bios: Kurige's age (7) and white sock, the Bureau
@@ -1043,6 +1043,41 @@ every capitalised name and number in the bios against the manuscript text. Read 
 before writing a bio, not after. (8) Images: cover 900x1350; sheets 980w / 320w thumb, the same
 specs as every other book; every portrait was identified by looking at its title strip, never by
 the order of the attachments.
+
+**Update: 25 more Subjects and 14 Records (branch `case-2231-records-v2`, pull request, 2026-10-13).**
+The author sent 14 scene paintings and 25 character sheets in two messages and said the manuscript
+(revision 7) was context, and that the work belonged on the GitHub site, not in the manuscript. Case 2231
+now has **43 Subjects and 14 Records**. New Subjects, in roster order: `the-kiyote-pair` (the Catalyst,
+as an object), `tsuru`, `three-senior-priests`, `sukenori`, `deputy-minister-of-the-left`,
+`bureau-clerk`, `kaneyoshi`, `kiyomaro`, `azuki`, `kinji`, `rider-from-the-north`,
+`old-master-one-eye`, `new-left-minister`, `boy-sovereign-of-himuro`, `bertrans-sister`,
+`ermengarda`, `smiths-son`, `weighers-widow`, `gaucelm`, `sicard`, `arnaut`, `aimeric-2231`, `ors`,
+`count-raimon`, `basque-guard-of-rocafort`; the full roster order is in `build_site.py`. **Slug note:**
+`aimeric` already belongs to Case 0000B's Duke of Vosmark, so the Baron of Castelmaur is
+`aimeric-2231` (display name "Aimeric of Castelmaur"). Records, in story order:
+the-cat-at-the-starting-line, was-my-thumb-right, the-warmed-cushion, the-sparrow-examiner,
+the-night-before, dawn-at-mikusa, the-stranger-at-the-doorstone, the-weighing, solans-fire, the-barn,
+the-stone-holds-a-man, the-bridge-at-the-lower-race, the-quarry-gate, the-eleven-sheets; their order and
+captions are Claude's, from the paintings and the manuscript, not author-confirmed.
+
+Judgment calls: (a) several new sheets are for people the manuscript hardly describes (the Deputy
+Minister of the Left, the Bureau Clerk, Kinji, the Rider, the Basque Guard, Bertran's Sister, the
+Weigher's Widow, the Three Senior Priests). Those bios stay inside the manuscript's own sentences, say
+when it is silent, and give ages as "by his/her sheet" in the epithets; where the manuscript states an
+age (Kiyomaro 9, Tsuru 6, Aimeric 50, Arnaut 45, Bertran 38 and so on) it is plain. (b) The Old Master is
+"a one-eyed veteran", "his old master" and "old One-Eye" in the text, never stated to be one man; the
+sheet takes them as one and the entry says so. (c) The manuscript puts Sicard both at the head of the
+men on the mill ladder and outside holding the horses; his entry reports both and does not reconcile
+them. (d) The paintings differ from the text in places and the captions follow the text: the Mikusa
+Stone is painted as an upright pillar, not the knee-high block of chapter 5, and fewer than the nine
+witnesses are visible. (e) Higaide, Arikuni, Yasutsugu, Tamenaga, Narimune, Peire, Guiraut, Pons,
+Lady Adalaïs and others still have no sheet and so no page; their names are plain text in the bios and
+captions, never links. (f) The Kiyote Pair page describes the pair as the manuscript does (Interlude I
+and the dust in Epilogue iii) and labels the colour notes as the sheet's. Images: sheets 980w / 320w
+thumb, scenes long side 1000 with a 0.45x grid image, identified by looking at each sheet's title.
+Checks run after rebuilding: 18,419 local links all resolve, no duplicate character or scene slugs,
+sitemap 490 -> 529, key pages opened in Chromium with no broken images. Totals: characters 298 -> 323,
+records 158 -> 172.
 
 ### Book: *The Tear of the Dragon* (Case 0247)
 
@@ -1327,10 +1362,10 @@ sit at the end of `BOOKS`, in the order the author listed them.
   `synopsis_html` was drafted on 2026-10-12 (Claude, from the manuscript; not
   author-confirmed), its `genre` is still a placeholder, and its Catalyst has no
   sheet (§6).
-- **Case 2231** (*The Stone of the Clean Hand*) is coming-soon with an
-  18-character cast and both roster records but no pages, genre, synopsis or
-  scenes, and no sheet for its Catalyst. Its principals Higaide, Arikuni and
-  others have no sheet yet (§6).
+- **Case 2231** (*The Stone of the Clean Hand*) is coming-soon with a
+  43-character cast (the Catalyst has its own page, `the-kiyote-pair`), 14 records and both roster
+  records, but no pages, genre or synopsis. Its principals Higaide, Arikuni, Yasutsugu and others
+  still have no sheet (§6).
 - **Case 0247** (*The Tear of the Dragon*) is coming-soon with a 17-character
   cast, 11 records and both roster records but no pages, genre or synopsis (§6). The
   Xuanwu Kai's Son sheet has a garbled second traits block, and the manuscript contradicts itself on
@@ -1400,7 +1435,18 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 2365 synopsis — branch `case-2365-synopsis`, 2026-10-12).** The author asked
+- **Latest update (Case 2231 — 25 more Subjects and 14 Records, branch `case-2231-records-v2`, pull request, 2026-10-13).**
+  The author sent 14 scene paintings and 25 character sheets in two rounds, told us other AIs use the
+  repo too, and asked us to watch the Subject and Record counts. `main` moved while this was prepared
+  (0247 and 1153 were merged, then the Case 2365 synopsis), so the branch was brought up to date before the
+  final rebuild and the counts re-measured: characters 298 -> 323, records 158 -> 172, sitemap
+  490 -> 529; Case 2231 is now 43 Subjects and 14 Records. The 2231 dict gained 25 `characters` entries,
+  14 `scenes` and a Catalyst roster `page` pointing at the new `the-kiyote-pair` page; `aimeric-2231` is a
+  new slug because `aimeric` is taken (§6 has the full list and the judgment calls). Only the files that
+  really changed were committed (the script, the new pages and images, `books/2231.html`, `characters.html`,
+  `scenes.html`, `index.html`, `sitemap.xml`, `lore/catalyst.html`, 15 existing 2231 character pages and
+  these two docs); the footer-stamp-only pages were left alone. Every local link resolves (18,419 checked).
+- **Earlier update (Case 2365 synopsis — branch `case-2365-synopsis`, 2026-10-12).** The author asked
   for the missing synopsis of Case 2365 to be written from the manuscript (revision 3, re-attached in chat;
   the repo itself holds no manuscript files). Done: `synopsis_html` on the `2365` dict in
   `tools/build_site.py` is now three paragraphs in the house style (premise, the Roll and the Saltway,
