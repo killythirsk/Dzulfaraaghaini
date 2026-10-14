@@ -10,7 +10,7 @@ the project from scratch each time.
 
 ## Where things stand
 
-Eight books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
+Nine books are live. The first four: *The Sword of Valeria* (Case 0000) — real cover,
 synopsis, a full cast of 10 characters, an 8-image scene gallery, and
 working "View on Google Books" / "Read on Royal Road" links — *The Ledger
 of a Single Sweetness* (Case 4099) — real cover, synopsis, a full cast of
@@ -20,12 +20,12 @@ War* (Case 0157) — real cover, synopsis, a full cast of 35 characters, a
 19-image scene gallery, a confirmed page count (96), and a working "View
 on Google Books" link — and *The Iron Stiletto War* (Case 4417) — real
 cover, synopsis, a full cast of 13 characters, a 4-image
-scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Four more are live but not described in detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
+scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Five more are live but not described in detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
 of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
-gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88; its genre and synopsis are still placeholders). Eight further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
-0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1153
-(*The Second Hand*, with 19 subjects, 13 records and a cover), are
+gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88; its genre and synopsis are still placeholders) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records and a working "Read on Google Books" link; its page count, genre and synopsis are still placeholders). Eight further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
+0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
+(*Independent Observation*, with 11 subjects and a cover), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has seven entries: Cultivator (listing every Envoy) and
@@ -43,7 +43,7 @@ and dragging are blocked, and full-size files aren't linked directly) — a
 deterrent, not a lock: anything a browser can display can still be captured.
 
 Still open:
-- Eight of "more than a dozen" novels are live — more can be added the
+- Nine of "more than a dozen" novels are live — more can be added the
   same way these were.
 
 ## Making changes
@@ -368,3 +368,21 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals (counted after the branch was brought up to date with `main`): cases 20 -> 20, characters 298 -> 323, records 158 -> 172; pages in sitemap 490 -> 529. A recount from the rebuilt site gives the same figures, and every local link resolves (18,419 checked).
+
+### [PENDING] Update — Case 1268 (*Independent Observation*): new 11-subject case, plus Case 1153 published
+
+On branch `case-1268`, as a pull request rather than straight into `main`, because other sessions work on the repo (`origin/main` was at `ca8c808`, the merge of PR #6, when the work started). The author sent the cover (titled *Independent Observation*), the manuscript (`Case_1268_The_Eleventh_Astral_Dream_2026-10-01_0518AM_GMT_7.md`, revision 1; its own title is *The Eleventh Astral Dream*), and 11 character sheets, and said Case 1153 is live on Google Books (`https://play.google.com/store/books/details?id=3IYZEgAAQBAJ`). No scene paintings came, so Case 1268 has no records yet. The manuscript is not committed (the repo is public); the bios were written after reading it in full and every number and quoted phrase in them was checked against it by script, with facts that appear only on a sheet labelled as the sheet's.
+
+Added:
+- `books/1268.html` — Case 1268, coming-soon (no purchase link, page count, genre, synopsis or records yet; those stay placeholders)
+- `characters/` — 11 pages, in roster order: hraban, anchorite-of-ardwen, otker, adaltrude, ansovald, sigward, ymma, the-probe-network, cultivator-observer, solan, elara
+- `images/covers/1268.jpg`; `images/characters/` — 22 files (a sheet and a `-thumb` for each of those 11 slugs)
+
+Edited:
+- `tools/build_site.py` — Case 1153 `status` is now `["published", "google-books"]` with its `google_books_url`; a full `1268` `BOOKS` entry (catalyst *The Probe Network*, envoy Cultivator Observer, no scenes; `pages`, `genre` and `synopsis_html` left as the placeholders); `PRINCIPALS` gained `1268`; one `RELATED_THEMES` row relating 1268 to 0000; one sentence each added to the Cultivator, Catalyst, Threefold Crown and Faith of Ardwen lore (the Cultivator lore now says "Nearly every case has its own" Envoy, since 1268 has none posted in person)
+- `books/1153.html`, its 19 character pages and 13 record pages — regenerated (the case is no longer muted and the record pages gain a Google Books link); `books/0000.html`, `0000b`, `0156`, `0157`, `2140`, `2231` and `4417` (related-case blocks); `books.html`, `index.html`, `characters.html`, `sitemap.xml`, `lore/cultivator.html`, `lore/catalyst.html`, `lore/faith-of-ardwen.html`, `lore/threefold-crown.html` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 1268 in §6 (with the judgment calls), 1153 marked published, counts, §7 bullets, §8 entry
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals: cases 20 -> 21, characters (subjects) 323 -> 334, records 172 (unchanged); pages in sitemap 529 -> 541. A recount from the rebuilt site gives the same figures, and every local link resolves (18,881 checked).
