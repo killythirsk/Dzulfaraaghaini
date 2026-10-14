@@ -15,8 +15,8 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; eight are live on the site so far, plus
-eight coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1153) and four
+various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
+eight coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -113,7 +113,7 @@ filename.
 **Update (Oct 2026, case-archive pass).** The site now speaks in archive terms. Nav and headings: Books -> **Cases**, Characters -> **Subjects**, Scenes -> **Records**, Lore -> **Archive**, "Coming Soon" -> **Awaiting Release**. File names and URLs were deliberately NOT changed (`books.html`, `characters.html`, ...), so every shared link still works. What was added, all in `tools/build_site.py` + CSS section 14 + `js/site.js`:
 - **Cases page / home:** *Published Cases* (grid, count) and *Cases Awaiting Release* (separate dark band, desaturated covers) via `published_section_html()` / `awaiting_band_html()`. Home shows the published grid plus a link to `books.html#awaiting`.
 - **Case page:** dominant `READ ON GOOGLE BOOKS` button under the title and again after the Records (`cta_html()`; falls back to Kindle / Royal Road if there is no Google Books link; awaiting cases get no READ button). Subjects are split into **Principal Subjects** and a folded `<details>` "N additional subjects documented" (`subjects_section_html()`), with a link to `characters.html?case=<slug>` (the index reads `?case=`). Principals are set per case in the **`PRINCIPALS`** dict at the top of the script (author-confirmed only for 4099; the rest are a first pass, edit freely). Cases with 7 or fewer subjects (`SPLIT_MIN`) show everyone as principal; a case with no `PRINCIPALS` entry falls back to its first six.
-- **Related Cases / Subjects / Records** are generated from existing data, nothing invented: cases relate by *same catalyst class* (each book's `catalyst.meta`) and *shared faith* (the Religion lore pages' `appears_html` links); subjects relate by character cross-links inside bios (both directions), falling back to the case's principals; records are the scenes whose caption links to that subject; lore pages list the cases where the concept appears. Hand-written thematic links go in **`RELATED_THEMES`** as `(case slug, case slug, "reason")`. "Same Observer" is not a generated relation: each case has its own Observer, with **one exception on file, Observer 419**, who is the Envoy of both 2140 and 1153 (a hand-written `RELATED_THEMES` row links the two; the Cultivator lore says so; see §6).
+- **Related Cases / Subjects / Records** are generated from existing data, nothing invented: cases relate by *same catalyst class* (each book's `catalyst.meta`) and *shared faith* (the Religion lore pages' `appears_html` links); subjects relate by character cross-links inside bios (both directions), falling back to the case's principals; records are the scenes whose caption links to that subject; lore pages list the cases where the concept appears. Hand-written thematic links go in **`RELATED_THEMES`** as `(case slug, case slug, "reason")`. "Same Observer" is not a generated relation: each case has its own Observer, with **one exception on file, Observer 419**, who is the Envoy of both 2140 and 1153 (Case 1268 has no Envoy posted in person; its `envoy` roster record is the Custodian-Office analyst, §6) (a hand-written `RELATED_THEMES` row links the two; the Cultivator lore says so; see §6).
 - **Mobile "see more":** markup opts in with `data-cap="N"` (show N list items, button reveals the rest) or `data-collapse="N"` (clip a block to N rem). `js/site.js` adds the buttons on phones (<= 40rem) only; desktop is untouched, and the Subjects/Records indexes lift the cap while a search or case filter is active.
 - **Fix:** the hero "Enter the archive" button sat off-centre because the global `p { max-width: 68ch }` left its paragraph left-aligned; `.hero--home p { margin-inline: auto }` fixes it.
 
@@ -175,7 +175,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently nineteen entries: eight published, eleven coming-soon — see §6)
+/books.html             Full book list (currently twenty-one entries: nine published, twelve coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -187,7 +187,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria and iron-stiletto-war;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (323 total — 10 for
+/characters/<slug>.html    One page per character (334 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -195,7 +195,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -1166,7 +1166,7 @@ epilogue; there is no painting for them.
 
 ### Book: *The Second Hand* (Case 1153)
 
-Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-1153`, as a pull
+Status: **Published** since 2026-10-14, when the author reported it live on Google Books and gave the link (`status` is `["published", "google-books"]` and `google_books_url` is `https://play.google.com/store/books/details?id=3IYZEgAAQBAJ`; Google blocks automated fetches, so the link has not been opened by an AI). **`pages`, `genre` and `synopsis_html` are still `EDITOR_*` placeholders, so the published page shows "add page count" until the author supplies one.** It was added, while still coming-soon, on branch `case-1153`, as a pull
 request rather than straight into `main`, from: the cover (`images/covers/1153.jpg`, tagline "Hand.
 Debt. Doctrine. Mercy. Exile."), 20 character-dossier sheets (19 used), 13 scene paintings and the
 manuscript `Case_1153_The_Eleven-Fingered_Mercy_2026-10-07_1737PM_GMT_7.md`. **`pages`, `genre` and
@@ -1234,6 +1234,76 @@ because the record is about their act, and an empty `"subjects"` list falls back
 (10) Images: cover 900x1350; sheets 980w / 320w thumb; scenes 1000px long edge / 450px grid; maps as
 supplied (1024x1536, 575 KB) plus a 450w thumb, the same specs as every other book. Originals were not
 committed.
+
+### Book: *Independent Observation* (Case 1268)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-1268`, as a pull request
+rather than straight into `main`, from: the cover (`images/covers/1268.jpg`, tagline "Altitude. Round. Audit.
+Dormant. Unhastening.", used verbatim as the `hook`), 11 character sheets and the manuscript
+`Case_1268_The_Eleventh_Astral_Dream_2026-10-01_0518AM_GMT_7.md` (revision 1), which was used for the bios only
+and is **not committed** (the repo is public). **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*`
+placeholders.** No scene paintings came with it, so the case has **no records** and its Records section shows the
+"will be filed here once they are ready" note.
+
+**Title discrepancy** (the same shape as 1153): the cover says *Independent Observation*, which is also what the
+author called it ("Case 1268 : Independent Observation") and is the manuscript's Chapter III heading; the manuscript
+file and its heading say *The Eleventh Astral Dream*. The site uses the cover's title. Ask the author if the
+manuscript title is meant to appear anywhere.
+
+The premise, from the manuscript (not author-confirmed jacket copy): **Aldemark**, a Frankish-rooted theocracy "circa
+the turn of the ninth century", is governed by the Threefold Crown, whose three Triarchs are **Ansovald** (Auron's
+seat), **Adaltrude** (Elara's) and **Sigward** (Solan's). A network of dormant probes seeded generations earlier
+begins, on a schedule fixed before the seeding, to give the sleeping people of one village at a time an unmediated
+vantage above their world: eleven days of visitation, eleven months of silence. Halstead is first (**Ymma** dreams
+first; the farmhand **Otker** reports the world is round and will not recant), and Warden **Hraban**, sent from
+Ansdorf, asks for guidance before he asks for punishment. The Crown purges Halstead (forty-one dead), and nine
+villages in all burn or purge themselves, while one unaffiliated Ardwenist **Anchorite** is present at every
+burning. Aschendale's elders decline the tithe, which turns the dreaming into an audit of the Crown; the eleventh
+selection falls on the capital, Dornhal, and on the Triarchs themselves, who split three ways. The Crown survives as a
+faith rather than a government, Elara's seat absorbs the temple's civil authority, Hraban breaks, resigns and lives
+thirteen more years, and the Anchorite, who had asked the sky to let her come and reached a dormant presence that
+answers to the Sky-Answerer and the Unhastening, goes back to the road. The Custodian log counts 1,211 dead.
+
+Eleven characters have pages, in this order: `hraban`, `anchorite-of-ardwen`, `otker`, `adaltrude`, `ansovald`,
+`sigward` (the six principals), then `ymma`, `the-probe-network` (the Catalyst), `cultivator-observer`, `solan`,
+`elara`. The `PRINCIPALS` entry is those first six, a first pass; **the home cast wall takes the first six
+subjects in list order, so they are first in the list too.** Roster records: Catalyst **The Probe Network**
+(`meta` "Distributed autonomous celestial probe network", unique on purpose so no automatic same-class link is
+invented), Envoy **Cultivator Observer** (see judgment call 1).
+
+Judgment calls worth knowing: (1) **No Envoy, but an Observer sheet.** The manuscript header says "None assigned
+&mdash; autonomous network; no Envoy delivers or observes in person", yet one sheet is titled "Cultivator Observer /
+Observer / Case 1268 / Custodian-Office Analytical Authority". The `envoy` roster record is that sheet, labelled "no
+Envoy posted in person", so the case still appears in the Cultivator roster; the Cultivator lore now says "Nearly every
+case has its own" and gained one sentence. The sheet gives no gender and the bio uses no pronoun. If the author wants
+the case to have no Envoy at all, delete the `envoy` dict and the page. (2) **The Case 0000 link is an inference.** The
+dormant presence in the Anchorite's ascent answers to "the Sky-Answerer, the Unhastening"; the Archival Log speaks of a
+designation filed under "a name that had once belonged to a sword", of a valley watched through "one boy's natural
+life" and of at least six earlier sealed case files. That matches Case 0000's Ardwen (Observer 000), the sword Valeria
+and the boy, but the manuscript never names Case 0000. The Anchorite's bio says the echoes "point toward" Ardwen and
+links the `ardwen` page, and a `RELATED_THEMES` row relates 1268 to 0000; the Ardwen page itself was **not** edited.
+Ask the author before saying more. (3) **Sheet pull-quotes that are not in the manuscript:** Hraban, Adaltrude, Sigward
+and the Cultivator Observer each carry one, and each bio says so. Otker's, Ansovald's and the Anchorite's quotes are the
+manuscript's. (4) **Adaltrude's vestment colours disagree with Elara's sheet.** Her sheet says "Elara's traditional
+colors" and draws blue and ivory ("Elara blue" in its palette); the Elara sheet is deep red and cream (and Solan's flame
+red and white). Both are given as drawn; the author should say which is right. (5) **Sigward's age:** the manuscript
+calls him "a young man defending an old institution"; his sheet's trait list says middle-aged to older adult, while its
+caption says "a younger man in the service of an old institution". Left as it stands. (6) **Years:** Adaltrude is
+twenty-six years in office at the Aschendale vote and twenty-eight at the eleventh dream (read as two moments);
+Ansovald's nineteen years governing the defense and twenty-eight of clerical career match his sheet; Hraban is
+seventeen years by his file and twenty-six by the Custodian log, which says the file was never revised. (7) **Solan and
+Elara are temple iconography**, their sheets say so and their bios say the gods take no part in the events. **There is
+no Auron sheet, so no Auron page; don't invent one.** (8) **Ymma's fate is not in the manuscript**, so her bio does not
+say. **The Anchorite is never named**, and the manuscript gives no name to the junior Warden, the Inquisitor, the
+Tallyman, the woman of Ansdorf who told no one, the spearman at Reinfeld or the blacksmith of Faldrun; none has a sheet,
+so none has a page. (9) **Counts:** the manuscript says "nine burnings" although ten villages were selected (Aschendale
+was never purged; Wulfsholt and Stonewick purged themselves); the bios say "nine burnings" as it does. The log counts
+1,104 dead across ten selections and 1,211 after the eleventh (107 more from riot, reprisal and clergy who could not bear
+what they had seen); Halstead is 41. (10) Images: cover 900x1350 (from a 1717x2576 upload); sheets 980w with a 320w thumb;
+every sheet was identified from a contact sheet of its title strip before it was filed (the upload order was not the
+display order). Originals were not committed. (11) The bios were written after reading the manuscript in full, then every
+number and quoted phrase in them was checked against it by script; what the script could not find is sheet-sourced
+detail (labelled as such), "Case 0000", and one spoken line the manuscript splits in two.
 
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
@@ -1370,13 +1440,21 @@ sit at the end of `BOOKS`, in the order the author listed them.
   cast, 11 records and both roster records but no pages, genre or synopsis (§6). The
   Xuanwu Kai's Son sheet has a garbled second traits block, and the manuscript contradicts itself on
   where Widow Bai was during the ambush.
-- **Case 1153** (*The Second Hand*) is coming-soon with a 19-character cast, 13
-  records and both roster records but no pages, genre, synopsis or purchase link
-  (§6). The manuscript title differs from the cover title (*The Eleven-Fingered
+- **Case 1153** (*The Second Hand*) is **published** (the author reported it live
+  on Google Books on 2026-10-14 and gave the link; not opened by an AI), with a
+  19-character cast, 13 records and both roster records, but no page count, genre
+  or synopsis (§6), so its page still shows "add page count". The manuscript title
+  differs from the cover title (*The Eleven-Fingered
   Mercy*). Vazha, Bagrat and the unnamed kneeling figure are flagged in §6.
   The people the manuscript names with a real part to play all
   have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
   raiders do not, and shouldn't be invented one by one.
+- **Case 1268** (*Independent Observation*) is coming-soon with an 11-character cast
+  and both roster records but no pages, genre, synopsis, scene art or purchase link
+  (§6). The manuscript title differs from the cover title (*The Eleventh Astral
+  Dream*); the Cultivator Observer's place on the Envoys roster, the Case 0000
+  echo, Adaltrude's vestment colours and Sigward's age are flagged in §6. There is
+  no Auron sheet.
 - **Gazetteers** (`illumaria`, `iron-stiletto-war`): six places on the maps have no
   case-file text yet (§6); add notes as manuscripts name them.
 - **Case 3115** (*The Listening Water*) now has its full 24-character
@@ -1435,7 +1513,26 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 2231 — 25 more Subjects and 14 Records, branch `case-2231-records-v2`, pull request, 2026-10-13).**
+- **Latest update (Case 1268 added, Case 1153 published — branch `case-1268`, pull request, 2026-10-14).**
+  The author sent the cover (titled *Independent Observation*), the manuscript
+  (`Case_1268_The_Eleventh_Astral_Dream_2026-10-01_0518AM_GMT_7.md`, revision 1) and 11 character
+  sheets, with "char included, manuscript included", and said Case 1153 is live on Google Books
+  (`https://play.google.com/store/books/details?id=3IYZEgAAQBAJ`). Done: 1153 `status` is now
+  `["published", "google-books"]` with its `google_books_url` (page count, genre and synopsis still
+  placeholders); a full `1268` dict (11 characters, `catalyst` The Probe Network, `envoy` Cultivator
+  Observer, no scenes) with a `PRINCIPALS` entry and one `RELATED_THEMES` row (1268 with 0000); one
+  new sentence each in the Cultivator, Catalyst, Threefold Crown and Faith of Ardwen lore (the
+  Cultivator lore also now says "Nearly every case has its own" Envoy). Images: 1 cover and 22
+  character files (11 slugs x full + thumb). Recount after rebuilding: cases 20 -> 21, characters
+  323 -> 334, records 172 unchanged, sitemap 529 -> 541; every local link resolves (18,881 checked)
+  and the new and changed pages were opened in Chromium at desktop and phone width with no broken
+  images (the home page's 13px horizontal overflow at 390px wide is on `main` too and was not
+  touched). Publishing 1153 also changed its 19 character pages and 13 record pages (its case card
+  is no longer muted; each record page gains a Read link) and the related-case blocks of 0000,
+  0000B, 0156, 0157, 2140, 2231 and 4417. The manuscript was not committed. `HOME_SCENES` was not
+  changed. Only files that really changed were committed; the footer-stamp-only pages (482) were left
+  alone, as before.
+- **Earlier update (Case 2231 — 25 more Subjects and 14 Records, branch `case-2231-records-v2`, pull request, 2026-10-13).**
   The author sent 14 scene paintings and 25 character sheets in two rounds, told us other AIs use the
   repo too, and asked us to watch the Subject and Record counts. `main` moved while this was prepared
   (0247 and 1153 were merged, then the Case 2365 synopsis), so the branch was brought up to date before the
