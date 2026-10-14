@@ -3705,7 +3705,53 @@ BOOKS = [
           <p>The sheet draws the goddess as temple art does: ageless and larger than human, with a calm maternal face, long dark-gold hair set with a gold diadem, red-jeweled ornaments and amber eyes, in layered deep-red and cream robes, beside a lit hearth and a household altar. It notes that her seat eventually becomes the principal surviving civil authority of the diminished temple.</p>""",
             },
         ],
-        "scenes": [],
+        "scenes": [
+            {"slug": "ymma-wakes-before-dawn", "title": "Ymma wakes before dawn",
+             "alt": "A young woman in a linen headscarf with dark braids sits up in a log-walled bed, looking upward with her lips parted, a bearded man asleep beside her, a candle burning on a small table and a frosted window showing stars over a snowy village",
+             "caption_html": """<a href="../characters/ymma.html">Ymma</a> sits up before dawn on the first night of Brayen, in the iron cold of Elara's Fast, with her husband still asleep beside her. She is about to wake him to say that she has been nowhere and everywhere."""},
+            {"slug": "a-dreamer-drifts-toward-the-moon", "title": "A dreamer drifts toward the moon",
+             "alt": "A barefoot youth in a leather vest and rolled linen sleeves floats through black space with his arms loose and his face lifted toward an enormous cratered moon, a curve of the blue world below him among scattered stars",
+             "caption_html": """A dreamer of Halstead drifts through a black field of unfamiliar lights toward the moon, reaching it, as the first dreamers describe it, simply by wishing to."""},
+            {"slug": "the-world-seen-from-the-moon", "title": "The world seen from the moon",
+             "alt": "A young man in a leather vest and boots stands with his back to us on a rocky grey ledge and looks at the whole round world hanging in black space, its blue seas, green land and swirling white cloud filling the sky",
+             "caption_html": """From far enough away the world stops looking like a floor and starts looking like a stone: round on every side, hanging in the dark with nothing beneath it and nothing propping it up."""},
+            {"slug": "hraban-questions-otker", "title": "Hraban questions Otker",
+             "alt": "In a timbered hall by lamplight a bearded man in a dark coat with a gold medallion leans on a table with one hand, face to face with a lean young man in a leather vest and linen shirt who stands upright and unflinching, villagers crowded behind them, a lantern and a sheet of paper on the table",
+             "caption_html": """<a href="../characters/hraban.html">Hraban</a> questions <a href="../characters/otker.html">Otker</a> last and longest, with Halstead crowded into the room behind them. Otker tells him plainly, the way a man reports weather, that the world is round."""},
+            {"slug": "a-village-after-the-purge", "title": "A village after the purge",
+             "alt": "A bearded man in a long dark coat stands alone among the burned timbers, broken cart wheel and puddled mud of a destroyed village, a torn dark banner with a star on a pole beside him, smoke rising under a heavy grey sky and a ruined tower on the far hill",
+             "caption_html": """What is left of a purged village: burned timbers, a cart wheel in the mud, smoke still rising, a torn banner on its pole and one man standing among the ruins."""},
+            {"slug": "the-anchorite-kneels-in-halstead", "title": "The Anchorite kneels in Halstead",
+             "alt": "In steady rain a hooded woman in tattered undyed grey wool kneels alone in black mud among the charred posts and chimneys of a burned village, a staff and pouch at her back, two hollows in the ash in front of her, a ruined tower on a misty hill beyond",
+             "caption_html": """<a href="../characters/anchorite-of-ardwen.html">The Anchorite</a> kneels in the ashes of Halstead for the better part of an afternoon without asking a single neighboring farm what happened there. The next rain will fill the two hollows her knees leave."""},
+            {"slug": "the-singing-at-grenmoor", "title": "The singing at Grenmoor",
+             "alt": "At sunset a hooded woman in tattered grey wool stands at the left of a shrine of stacked fieldstone draped in unbleached cloth with candles, flowers and baskets of bread, a crowd of villagers lifting their hands and singing toward a swirling night sky, armed knights with banners crossing the field on the right",
+             "caption_html": """Grenmoor raises a shrine of fieldstone and unbleached cloth to the Star-Walkers and sings, while armed men of the Crown come across the field. <a href="../characters/anchorite-of-ardwen.html">The Anchorite</a> stands before it and tells no one which god she thinks the singing was for."""},
+            {"slug": "the-iron-globe-at-faldrun", "title": "The iron globe at Faldrun",
+             "alt": "In a firelit forge a bearded blacksmith swings a hammer at a glowing iron globe on an anvil in a shower of sparks, a hooded woman in grey raising one hand over it in blessing while a group of villagers watch from the shadows",
+             "caption_html": """At Faldrun a blacksmith hammers an iron globe on his anvil, and <a href="../characters/anchorite-of-ardwen.html">the Anchorite</a> lays her hand above it and blesses it in Ardwen's name while the village watches."""},
+            {"slug": "the-boundary-stone-at-aschendale", "title": "The boundary stone at Aschendale",
+             "alt": "On an autumn hillside grey-bearded elders and villagers stand around a lichen-covered boundary stone carved with a sunburst, one elder with his palm open toward a black-and-gold robed official holding a great book with a gold sunburst on its cover, armed guards at the official's side and a hooded woman standing quietly behind the stone",
+             "caption_html": """At Aschendale's boundary stone the elders face an official of the Crown with a great book and an escort of soldiers, and choose a hard truth over an easy lie. <a href="../characters/anchorite-of-ardwen.html">The Anchorite</a> stands among the villagers behind them. No purge is ever ordered here."""},
+            {"slug": "the-anchorite-is-taken-at-reinfeld", "title": "The Anchorite is taken at Reinfeld",
+             "alt": "Soldiers in dark helmets and cloaks marked with a sunburst take a hooded woman in ragged grey by the wrists beside a harbor where smoke rises from a distant village, a young spearman in the foreground looking away, banners behind them and a crowd of villagers watching",
+             "caption_html": """At Reinfeld soldiers of the Crown take <a href="../characters/anchorite-of-ardwen.html">the Anchorite</a> on charges of vagrancy and obstruction. She asks the one who binds her wrists whether he was at Halstead."""},
+            {"slug": "the-anchorite-asks-to-come", "title": "The Anchorite asks to come",
+             "alt": "A hooded woman in a ragged grey robe kneels in a narrow stone cell, one wrist in an iron cuff on a chain, her hands lifted into a shaft of moonlight from a single barred window that shows stars and a full moon",
+             "caption_html": """In a cell too narrow to lie down in, <a href="../characters/anchorite-of-ardwen.html">the Anchorite</a> kneels toward the one barred slit and asks, not for rescue or vindication, only to be let come."""},
+            {"slug": "the-anchorite-rises-above-aldemark", "title": "The Anchorite rises above Aldemark",
+             "alt": "A hooded figure in a pale cloak floats upright above the curve of a blue-and-white world, a glowing path of stars and golden suns spiralling away overhead, a walled city and a river valley below",
+             "caption_html": """<a href="../characters/anchorite-of-ardwen.html">The Anchorite</a> rises above Aldemark, past the globe, the furnace of the sun and a river of suns, farther than any dreamer in the kingdom's history has been given."""},
+            {"slug": "the-dormant-figure", "title": "The dormant figure",
+             "alt": "A colossal pale figure with long straight black hair and unblinking red eyes, its white robe spreading like a mountain across the whole frame, fills the darkness; at its feet, on black water, a tiny hooded figure stands",
+             "caption_html": """At the top of the ascent <a href="../characters/anchorite-of-ardwen.html">the Anchorite</a> stands before a dormant figure with straight black hair, a white too fine to name and red unblinking eyes. She asks whether it called her. It does not answer."""},
+            {"slug": "the-eleventh-dream-over-dornhal", "title": "The eleventh dream over Dornhal",
+             "alt": "A cathedral city lit gold under a starry night beside a river with a stone bridge; the faint translucent figures of three robed rulers, one in red and cream, one in dark with gold and one in pale blue, rise above it with crowds of ghostly faces among the stars while soldiers and townsfolk fill the street below",
+             "caption_html": """The eleventh selection falls on the capital itself. Dornhal dreams wall to wall, and the Triarchs <a href="../characters/ansovald.html">Ansovald</a>, <a href="../characters/sigward.html">Sigward</a> and <a href="../characters/adaltrude.html">Adaltrude</a> rise above it among the faces of its sleepers."""},
+            {"slug": "hraban-finds-the-anchorite", "title": "Hraban finds the Anchorite",
+             "alt": "A weathered man in a plain grey coat and a hooded woman in tattered grey sit on a ruined stone ledge on either side of a vine-covered wayside shrine with a candle lit in its niche, a river valley and a distant castle under a sunset sky behind them",
+             "caption_html": """Within the year <a href="../characters/hraban.html">Hraban</a>, in a plain grey coat with no insignia, finds <a href="../characters/anchorite-of-ardwen.html">the Anchorite</a> at a crossroads shrine and asks whether she dreamed what the city dreamed."""},
+        ],
     },
 ]
 
@@ -3797,6 +3843,33 @@ LORE = [
         ],
         "appears_html": """<p>The country of <a href="../books/4417.html">The Iron Stiletto War</a> (Case 4417).</p>""",
     },
+    {
+        "slug": "vessel-of-the-betrayed-host", "name": "Gazetteer of the Vessel of the Betrayed Host", "group": "Gazetteers",
+        "teaser": "The map of Case 4420: Mount Skahr and House Skarth in the far north, the Broken Glacier, and the marches that run south to Sumne.",
+        "map": {
+            "file": "vessel-of-the-betrayed-host",
+            "alt": "Parchment map of a northern country. Mount Skahr rises at the top above a gorge of broken ice; House Skarth's castle lies to its west on the tundra, with House Varga and House Tolvin to the south-west and the keep of Kettish to the east; the Broken Glacier and the ice line lie in the east; Cindale, a ring of small marks, stands at the centre; the walled town of Thornfield lies to the south-east and Sumne, with a castle on a hill, in the south; the western, northern and southern marches and the lowlands are marked around them",
+        },
+        "definition_html": """<p>The country of <a href="../books/4420.html">Case 4420</a>, drawn from Mount Skahr in the far north southward: House Skarth beneath the mountain, the Broken Glacier and the ice line, and the marches that run on to Sumne and the lowlands. It is filed here as a gazetteer, not as a subject or a record. The places below are the ones printed on the map; each note is drawn from the case file, and a place the file never mentions is said to be unfiled rather than guessed at.</p>""",
+        "places": [
+            ("Mount Skahr", """The mountain at the head of the map. House Skarth's legend says its steel flask came down from the dragon who keeps the mountain. <a href="../characters/observer-4420.html">Observer 814</a> came down onto its summit in a black, wingless vessel some four centuries before the war and was folded by the clans into that keeper, the Dragon-Speaker. <a href="../characters/yvaine.html">Yvaine</a> climbs it to ask him for a blessing."""),
+            ("House Skarth", """Shown as a castle west of the mountain gorge. The house of Baron <a href="../characters/kaelen.html">Kaelen</a> and his twin <a href="../characters/yvaine.html">Yvaine</a>, which has carried one steel flask for four centuries without asking where it came from."""),
+            ("Kettish", """Drawn as a small keep at the eastern edge of the mountains. Marked on the map; no case file describes it yet."""),
+            ("House Varga", """Drawn as a keep in the western tundra. Marked on the map; no case file describes it yet."""),
+            ("House Tolvin", """Drawn as a keep beside House Varga. Marked on the map; no case file describes it yet."""),
+            ("Broken Glacier", """The ice east of the mountain. Duke <a href="../characters/maros.html">Maros</a>'s hunt reaches it in the northern winter, and by the fourth week it has cost him every toe on both feet. See the record <a href="../records/the-broken-glacier.html">The Broken Glacier</a>."""),
+            ("Cindale", """Drawn as a ring of small marks at the centre of the map. A frightened border holdfast that <a href="../characters/yvaine.html">Yvaine</a> spares on her march south."""),
+            ("Thornfield", """Drawn as a walled town in the south-east. Marked on the map; no case file describes it yet."""),
+            ("Sumne", """Printed in large letters across the southern country, with a castle on a hill below. The case file says only that <a href="../characters/soren.html">Soren</a>, after delivering the recovered flask to <a href="../characters/vane-4420.html">Duke Vane</a>, leaves Sumne within the month."""),
+            ("The tundra", """Printed across the north-west. Duke <a href="../characters/maros.html">Maros</a> drags a royal hunt two hundred miles into the northern tundra to answer a stag's head, and Baron <a href="../characters/kaelen.html">Kaelen</a> joins it on guest-right alone."""),
+            ("The ice line", """Printed across the glacier country in the east. The northern clans mark their dead along it with <a href="../records/the-black-fletched-arrow.html">black-fletched arrows</a>."""),
+            ("The northern marches", """The country of Duke <a href="../characters/maros.html">Maros</a>, Duke of the Northern March and Lord of Karhold Keep. <a href="../characters/yvaine.html">Yvaine</a> ends the war in the hall of his captured keep, where she finds Vane. The map does not mark the keep by name."""),
+            ("The western march", """Marked on the map; no case file describes it yet."""),
+            ("The southern marches", """The country of <a href="../characters/vane-4420.html">Duke Vane</a>, Duke of the Southern March and Lord of Vane Keep, who wounds Maros with a summer-killed stag's head and then sells him his rescue. The map does not mark the keep by name."""),
+            ("The lowlands", """Marked on the map; no case file describes it yet."""),
+        ],
+        "appears_html": """<p>The country of <a href="../books/4420.html">The Vessel of the Betrayed Host</a> (Case 4420).</p>""",
+    },
 ]
 
 BIOGRAPHY_PARAGRAPHS = [
@@ -3874,6 +3947,14 @@ def jpeg_size(rel_path):
                 f.read(ln - 2)
     except (OSError, _struct.error):
         return None
+
+
+def share_image(prefix, original):
+    """Square link-preview version of a cover or map (made by tools/make_share_images.py, it
+    shows the whole picture instead of a slice cut from the middle of a tall one), or the
+    original art itself if that file has not been made yet."""
+    candidate = "images/share/%s-%s" % (prefix, os.path.basename(original))
+    return candidate if os.path.isfile(os.path.join(OUT, candidate)) else original
 
 
 def head_html(title, description, depth, path=None, image=None, image_alt=None, og_type="website"):
@@ -4002,6 +4083,11 @@ def record_path(sc):
 
 
 def record_title(sc):
+    """A record's heading, page title and share title. Short records use their caption as is;
+    a record with a longer caption carries an optional "title" (the caption is then shown as
+    a paragraph on the record's own page, see record_detail_body)."""
+    if sc.get("title"):
+        return sc["title"]
     t = plain(sc["caption_html"]).rstrip(".")
     return t[:1].upper() + t[1:]
 
@@ -4436,6 +4522,7 @@ def gazetteer_body(l):
     return """    <div class="wrap page-content">
       <a class="back-link" href="%slore.html">&larr; Archive</a>
       <h1>%s</h1>
+      <p class="share-row">%s</p>
 
       <div class="gazetteer">
         <figure class="map-figure">
@@ -4467,7 +4554,8 @@ def gazetteer_body(l):
         %s
       </section>
     </div>
-""" % (r, l["name"], full, full, _esc(m["alt"]), l["definition_html"], places, l["appears_html"],
+""" % (r, l["name"], share_btn("lore/%s.html" % l["slug"], l["name"], plain(l["teaser"])),
+       full, full, _esc(m["alt"]), l["definition_html"], places, l["appears_html"],
        case_grid_html(lore_cases(l), 1, "case-grid--related", cap=4))
 
 
@@ -4737,7 +4825,7 @@ def record_detail_body(sc, b):
         <div>
           <p class="case-tag">Record %d of %d</p>
           <h1>%s</h1>
-          %s
+          %s%s
           <p>%s</p>
           <p class="share-row">%s</p>
           %s
@@ -4750,6 +4838,7 @@ def record_detail_body(sc, b):
       </section>
     </div>
 """ % (r, b["slug"], b["case_tag"], b["title"], full, full, _esc(title), i + 1, len(scenes), title,
+       ('<p class="record-caption">%s</p>\n          ' % sc["caption_html"]) if sc.get("title") else "",
        record_meta_html(sc, b, 1), _esc(sc["alt"]) + ".",
        share_btn(record_path(sc), "%s — %s" % (title, b["case_tag"]), title + "."),
        steps, cta, case_grid_html([b], 1, "case-grid--one"))
@@ -4868,7 +4957,7 @@ for book in BOOKS:
           page("%s \u2014 %s" % (book["title"], AUTHOR),
                "%s, %s: %s Case file, principal subjects, records, and where to read it." % (book["title"], book["case_tag"], book["hook"]),
                1, "books.html", book_detail_body(book), path="books/%s.html" % book["slug"],
-               image="images/covers/%s" % book["cover_file"], image_alt="Cover of %s" % plain(book["title"]), og_type="book"))
+               image=share_image("cover", "images/covers/%s" % book["cover_file"]), image_alt="Cover of %s" % plain(book["title"]), og_type="book"))
 
     for c in book["characters"]:
         write("characters/%s.html" % c["slug"],
@@ -4890,7 +4979,7 @@ for l in LORE:
           page("%s \u2014 %s" % (l["name"], AUTHOR),
                "%s Definition and where it appears." % l["teaser"],
                1, "lore.html", lore_detail_body(l), path="lore/%s.html" % l["slug"],
-               **({"image": "images/maps/%s.jpg" % l["map"]["file"], "image_alt": l["map"]["alt"]} if l.get("map") else {})))
+               **({"image": share_image("map", "images/maps/%s.jpg" % l["map"]["file"]), "image_alt": l["map"]["alt"]} if l.get("map") else {})))
 
 # ---- old URLs that now redirect ---------------------------------------------------
 REDIRECTS = {"lore/catalyst-tier.html": "catalyst.html"}

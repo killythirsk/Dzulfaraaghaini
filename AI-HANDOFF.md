@@ -126,6 +126,11 @@ filename.
 - **Where to begin** (`begin_html()`, home `#begin`, deliberately the last section of the home page; the hero's second button jumps to it) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected.
 - **`robots.txt` is ignored on the project address** (crawlers read it only at the host root); `sitemap.xml` has to be submitted in Search Console. Image protection is unchanged, but note that `og:image` necessarily names the image file for previews to work.
 
+**Update (Oct 2026, link previews, gazetteer sharing, record titles).** Three small things, all in `tools/build_site.py`:
+- **Gazetteer pages have a Share button** under the title (`gazetteer_body`), the same `share_btn()` the subject and record pages use.
+- **Case and gazetteer links now preview with a square image.** Those pages already carried Open Graph / Twitter tags, but pointing at the tall 2:3 cover or map; platforms that show one small square thumbnail (X's `summary` card, WhatsApp, Telegram, Facebook, iMessage) cut a slice from the middle of a tall image, losing the title, while subject sheets are nearly square (980x1045) and show whole. `images/share/cover-<name>.jpg` and `images/share/map-<name>.jpg` (1200x1200: the whole cover or map on the `--night` ground, each under 280 KB) are made from `images/covers/` and `images/maps/` by **`tools/make_share_images.py`** (needs Pillow; `build_site.py` itself still needs nothing). `share_image()` picks the share file and falls back to the original art if it has not been made, so a missing file never breaks a page. **After adding or replacing a cover or map, run `python3 tools/make_share_images.py`, then `build_site.py`.** Subject and record previews were left alone. Platforms cache a link's preview by page URL, so a link shared before this change keeps its old preview until the platform is made to re-fetch it (Facebook's Sharing Debugger "Scrape Again", etc.); that is the platform's cache, not a site fault. This could not be tested on the live platforms from the build environment (outbound access to the site is blocked there); the tags were checked in the generated HTML only.
+- **A scene may carry an optional `"title"`.** `record_title()` uses it for the record's heading, page title and share title, and the record's own page then prints the full caption as a paragraph (`record-caption`). Without `"title"` nothing changes: the caption is still its own heading. The 15 Case 1268 records use it because their captions run to two or three sentences.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -181,10 +186,10 @@ book's own page rather than as their own top-level sections.
 /books/0157.html          The Stolen Prince War's full page
 /books/4417.html          The Iron Stiletto War's full page
 /lore.html               Glossary index (plain list on top, then a "Religion"
-                            heading over the three faiths, then a "Gazetteers" heading over the two map pages — `group` field, §8)
+                            heading over the three faiths, then a "Gazetteers" heading over the three map pages — `group` field, §8)
 /lore/<slug>.html          One page per term (cultivator, catalyst, faith-of-ardwen,
                             threefold-crown, decree-of-luminescence, and the two
-                            gazetteers illumaria and iron-stiletto-war;
+                            gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
 /characters/<slug>.html    One page per character (334 total — 10 for
@@ -206,7 +211,7 @@ genre, synopsis) → **Characters** (a `catalog-list` of every character in
 *that* book, links to their own page) → **Scenes** (a *horizontal slider*
 if the book has any scene art, or a plain "not yet added" note if it
 doesn't — see §7 for which is which right now) → a **Gazetteer** card, only on a
-case that shares a map (2365, 4555, 4417; see §6) → a boxed "Read This Book"
+case that shares a map (2365, 4555, 4417, 4420; see §6) → a boxed "Read This Book"
 purchase panel.
 
 The Characters vs. Scenes layout difference (vertical list vs. horizontal
@@ -1242,8 +1247,8 @@ rather than straight into `main`, from: the cover (`images/covers/1268.jpg`, tag
 Dormant. Unhastening.", used verbatim as the `hook`), 11 character sheets and the manuscript
 `Case_1268_The_Eleventh_Astral_Dream_2026-10-01_0518AM_GMT_7.md` (revision 1), which was used for the bios only
 and is **not committed** (the repo is public). **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*`
-placeholders.** No scene paintings came with it, so the case has **no records** and its Records section shows the
-"will be filed here once they are ready" note.
+placeholders.** No scene paintings came with it at first; 15 were added later (see "Records added to Case 1268"
+below).
 
 **Title discrepancy** (the same shape as 1153): the cover says *Independent Observation*, which is also what the
 author called it ("Case 1268 : Independent Observation") and is the manuscript's Chapter III heading; the manuscript
@@ -1305,6 +1310,29 @@ display order). Originals were not committed. (11) The bios were written after r
 number and quoted phrase in them was checked against it by script; what the script could not find is sheet-sourced
 detail (labelled as such), "Case 0000", and one spoken line the manuscript splits in two.
 
+**Records added to Case 1268 (15).** The author sent 15 paintings in one batch ("case 1268 update records"),
+unnamed and unordered. Each was identified by looking at it against the subject sheets and the bios already on the
+site (nothing was read from the manuscript, which is not in the repo), then filed in the order the bios tell the
+story: `ymma-wakes-before-dawn`, `a-dreamer-drifts-toward-the-moon`, `the-world-seen-from-the-moon`,
+`hraban-questions-otker`, `a-village-after-the-purge`, `the-anchorite-kneels-in-halstead`,
+`the-singing-at-grenmoor`, `the-iron-globe-at-faldrun`, `the-boundary-stone-at-aschendale`,
+`the-anchorite-is-taken-at-reinfeld`, `the-anchorite-asks-to-come`, `the-anchorite-rises-above-aldemark`,
+`the-dormant-figure`, `the-eleventh-dream-over-dornhal`, `hraban-finds-the-anchorite`. Each has a short `"title"`
+(§3) and a one- to three-sentence caption written only from what the bios say and what the painting shows.
+Judgment calls: (1) **Three records name no subject on purpose.** The two moon paintings (a barefoot dreamer
+drifting toward the moon; a young man on it looking back at the world) could be Ymma, Otker or neither (Ymma's own
+sheet shows her floating toward a full moon), and the burned village with one man under a torn banner could be
+Halstead or another village and Hraban or another man. Ask the author who they are. (2) **The three Triarchs in the
+Dornhal painting are named by vestment colour:** the figures in black and gold, crimson and ivory, and pale blue
+match Ansovald's, Sigward's and Adaltrude's sheets, so the caption links all three without saying which is which.
+(3) **Settings come from the bios, not from the art alone:** the shrine of fieldstone and unbleached cloth is
+Grenmoor's (the Star-Walkers), the iron globe is Faldrun's, the stone with the sunburst is Aschendale's boundary
+stone, the arrest is Reinfeld's, the grey-coated man at the crossroads shrine is Hraban after his resignation and the
+two hollows in the ash are the Anchorite's knees in Halstead. If the author says a painting shows something else,
+change its caption. (4) The tall pale figure with black hair and red eyes is drawn as the bios describe the dormant
+presence; the Case 0000 link is still not stated anywhere on the site. (5) Images: full image long edge 1000 px,
+grid 450 px, as everywhere (178-259 KB each); originals were not committed. (6) Records 172 -> 187.
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1333,6 +1361,25 @@ Row, Furrow reserve, Round-bed, the Greywater, the Greywater crossing and the St
 those in from imagination; add a sentence when a manuscript names them. "Unknown Lands" is noted as such.
 Two labels on the 4417 map are damaged and were left as printed (the eastern marches carries a doubled
 "the"; the western "Lands" label is cropped by the margin); they are not mentioned on the site.
+
+### Gazetteer of the Vessel of the Betrayed Host (Case 4420)
+
+A third map, for Case 4420, is `LORE` entry `vessel-of-the-betrayed-host` (`group: "Gazetteers"`, image
+`images/maps/vessel-of-the-betrayed-host.jpg` plus its `-thumb`), in the same shape as the other two, so the Archive
+index, the home page's Archive list, the sitemap and a Gazetteer card on `books/4420.html` came with it.
+**The map's printed banner still reads the old title, *The Thermal Vessel War*,** which Book 5 above says the author
+renamed away from. The page title, slug, alt text and every other word of the site use *The Vessel of the Betrayed
+Host*; the image was filed exactly as the author sent it. If the author wants the banner changed, replace
+`images/maps/vessel-of-the-betrayed-host.jpg` (and the `-thumb`) under the same names and run
+`python3 tools/make_share_images.py --force`. Printed on the map: Mount Skahr, House Skarth, Kettish, House Varga,
+House Tolvin, the Broken Glacier, Cindale, Thornfield, Sumne, and the labels tundra, ice line, northern marches,
+western march, southern marches and lowlands. Notes use only the case file: Mount Skahr (Observer 814, the
+Dragon-Speaker, and Yvaine's climb), House Skarth, the Broken Glacier (Maros's hunt, and the existing record), Cindale
+(the holdfast Yvaine spares), Sumne (Soren leaves it within the month), the tundra, the ice line (the black-fletched
+arrow record) and the northern and southern marches (Maros's and Vane's countries). **Unfiled, and said so on the
+page:** Kettish, House Varga, House Tolvin, Thornfield, the western march and the lowlands. The map does not label
+Karhold Keep or Vane Keep, and the page says so rather than choosing a drawn castle for either; it does not say Sumne
+is where Vane sits, only what the file says.
 
 ### Cast added to Case 0000B (*Sword of Valeria: The Empty Hand*)
 
@@ -1450,13 +1497,14 @@ sit at the end of `BOOKS`, in the order the author listed them.
   have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
   raiders do not, and shouldn't be invented one by one.
 - **Case 1268** (*Independent Observation*) is coming-soon with an 11-character cast
-  and both roster records but no pages, genre, synopsis, scene art or purchase link
+  and both roster records and 15 records, but no page count, genre, synopsis or purchase link
   (§6). The manuscript title differs from the cover title (*The Eleventh Astral
   Dream*); the Cultivator Observer's place on the Envoys roster, the Case 0000
   echo, Adaltrude's vestment colours and Sigward's age are flagged in §6. There is
   no Auron sheet.
-- **Gazetteers** (`illumaria`, `iron-stiletto-war`): six places on the maps have no
-  case-file text yet (§6); add notes as manuscripts name them.
+- **Gazetteers** (`illumaria`, `iron-stiletto-war`, `vessel-of-the-betrayed-host`): six places on the first two maps
+  and six on the 4420 map (Kettish, House Varga, House Tolvin, Thornfield, the western march, the lowlands) have no
+  case-file text yet (§6); add notes as manuscripts name them. The 4420 map's banner still prints the old title (§6).
 - **Case 3115** (*The Listening Water*) now has its full 24-character
   cast and fresh `catalyst`/`envoy` records (see the Book write-up above),
   but is still `coming-soon`: no confirmed `pages`, `genre`, or
@@ -1513,7 +1561,19 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 1268 added, Case 1153 published — branch `case-1268`, pull request, 2026-10-14).**
+- **Latest update (Case 1268 records, Case 4420 gazetteer, gazetteer sharing and square link previews — branch `case-1268-records-4420-gazetteer`, pull request, 2026-10-14).**
+  The author sent 15 scene paintings for Case 1268 and one map for Case 4420, and asked for the 1268 records, the
+  4420 gazetteer, the gazetteers to be shareable like subjects, and book and gazetteer links to show a thumbnail on
+  other platforms the way subject links do. Done: 15 `scenes` on the `1268` dict (each with an optional short
+  `"title"`, §3); a `vessel-of-the-betrayed-host` `LORE` entry; a Share button on gazetteer pages; square preview
+  images (`images/share/`, 24 files) wired into book and gazetteer pages through `share_image()`, with
+  `tools/make_share_images.py` to make them; 15 x 2 record images and the map plus its thumb. Recount after
+  rebuilding: cases 21 (unchanged), characters 334 (unchanged), records 172 -> 187, sitemap 541 -> 557; every local
+  link resolves; the new and changed pages were opened in Chromium with no broken images. Only files that really
+  changed were committed (the footer-stamp-only pages were left alone, as before). **Open questions for the author:**
+  who the dreamer in the two moon paintings is, who the man in the burned village is, and whether the 4420 map's
+  banner should keep the old title (§6). Link previews could not be tested on the live platforms from here.
+- **Earlier update (Case 1268 added, Case 1153 published — branch `case-1268`, pull request, 2026-10-14).**
   The author sent the cover (titled *Independent Observation*), the manuscript
   (`Case_1268_The_Eleventh_Astral_Dream_2026-10-01_0518AM_GMT_7.md`, revision 1) and 11 character
   sheets, with "char included, manuscript included", and said Case 1153 is live on Google Books

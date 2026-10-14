@@ -25,16 +25,16 @@ of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
 gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88; its genre and synopsis are still placeholders) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records and a working "Read on Google Books" link; its page count, genre and synopsis are still placeholders). Eight further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
 0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
-(*Independent Observation*, with 11 subjects and a cover), are
+(*Independent Observation*, with 11 subjects, 15 records and a cover), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
-Lore glossary has seven entries: Cultivator (listing every Envoy) and
+Lore glossary has eight entries: Cultivator (listing every Envoy) and
 Catalyst (listing every Catalyst), each built automatically from the
 books' own data, plus three religions — the Faith of Ardwen, the
 Threefold Crown, and the Decree of Luminescence — under their own
-Religion heading, and two gazetteers (maps with a note on each place) —
-Illumaria, shared by Cases 2365 and 4555, and the Iron Stiletto War
-(Case 4417) — under a Gazetteers heading; a case page links to its map. Every page's footer shows when the site was last built
+Religion heading, and three gazetteers (maps with a note on each place) —
+Illumaria, shared by Cases 2365 and 4555, the Iron Stiletto War
+(Case 4417) and the Vessel of the Betrayed Host (Case 4420) — under a Gazetteers heading; a case page links to its map. Every page's footer shows when the site was last built
 (GMT+7), stamped automatically each time `tools/build_site.py` runs. Images
 enlarge on click, and you can step between them without closing the view;
 a book's Scenes gallery (when it has one) slides sideways, its Characters
@@ -386,3 +386,20 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals: cases 20 -> 21, characters (subjects) 323 -> 334, records 172 (unchanged); pages in sitemap 529 -> 541. A recount from the rebuilt site gives the same figures, and every local link resolves (18,881 checked).
+
+### [PENDING] Update — Case 1268 records (15), Case 4420 gazetteer, gazetteer sharing and square link previews
+
+On branch `case-1268-records-4420-gazetteer`, as a pull request. The author sent 15 scene paintings for Case 1268 and one map for Case 4420, and asked for the 1268 records, the 4420 gazetteer, the gazetteers to be shareable like subjects, and book and gazetteer links to show a thumbnail on other platforms the way subject links do. The 4420 map's printed banner still reads the old title, *The Thermal Vessel War*; the site names the gazetteer *The Vessel of the Betrayed Host* and the image was filed as sent (see `AI-HANDOFF.md` §6).
+
+Added:
+- `records/` — 15 pages for Case 1268 (`ymma-wakes-before-dawn` ... `hraban-finds-the-anchorite`); `images/scenes/` — 30 files, a full image and a `-grid` for each
+- `lore/vessel-of-the-betrayed-host.html` — the Case 4420 gazetteer; `images/maps/vessel-of-the-betrayed-host.jpg` and its `-thumb`
+- `images/share/` — 24 square (1200x1200) link-preview images, one per cover and per map, made by the new `tools/make_share_images.py`
+
+Edited:
+- `tools/build_site.py` — 15 `scenes` on the `1268` dict; the new `LORE` entry; a Share button on gazetteer pages; `share_image()` so case and gazetteer pages preview with the square image (falling back to the original art); an optional scene `"title"` (the record's own page then prints the full caption as a paragraph)
+- the 21 case pages and the three gazetteer pages (new preview image), the 1268 subject pages (related records), `books/4420.html` (Gazetteer card), `index.html`, `lore.html`, `scenes.html`, `sitemap.xml` — regenerated from the script
+- `AI-HANDOFF.md` and `README.md` — this entry, the 1268 records and 4420 gazetteer write-ups, the link-preview note in §3
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals: cases 21 (unchanged), characters (subjects) 334 (unchanged), records 172 -> 187; pages in sitemap 541 -> 557. Every local link resolves. Link previews were checked in the generated HTML only; a link shared before this change keeps its cached preview until the platform re-fetches it.
