@@ -1272,7 +1272,7 @@ BOOKS = [
         },
         "pages": "103",
         "genre": """Epic Fantasy &middot; Satire &middot; Political Intrigue""",
-        "google_books_url": "https://play.google.com/store/books/details/Dzul_Faraaghaini_Case_4555_The_Vessel_of_Unmediate?id=TOQFEgAAQBAJ",
+        "google_books_url": "https://play.google.com/store/books/details?id=TOQFEgAAQBAJ",
         "synopsis_html": """<p>When King Aethelgard the Resplendent dies without an heir, Illumaria's whole theology of visible grace turns the search for his successor into a lit competition: three rival claimants &mdash; Archduke <a href="../characters/ignis.html">Ignis</a>, Duchess <a href="../characters/astraea.html">Astraea</a>, and Duke <a href="../characters/cassian.html">Cassian</a> &mdash; arrive at the Grand Basilica of Sol-Invictus each wearing a device built to make them glow. Duke <a href="../characters/blakk.html">Blakk</a> of Mud-Reach, the poorest and least ambitious name on the guest-roll, comes only to vote for whoever won't raise the timber tax &mdash; and three nights before his household guard crosses a nameless drainage ditch, an <a href="../characters/anchorite-of-the-drowned-road.html">Anchorite of the Drowned Road</a>, working for the Cultivator Envoy Corps' <a href="../characters/observer-902.html">Observer 902</a>, plants three identical objects in the mud as standard redundancy. Blakk's horse finds the first.</p>
           <p>He sets the resulting hollow orange cone on his own head as a joke, forgets to take it off, and is still wearing it in the Basilica's last row when High Pontiff <a href="../characters/sarel.html">Sarel</a>'s ceremonial beam of concentrated light finds it &mdash; and its retroreflective bands throw the beam straight back down the line it arrived on, cracking a three-century-old lens and blinding half the congregation with what looks, to three thousand kneeling monks, like the most convincing grace the Decree of Luminescence has ever produced. Blakk spends the next forty-one years trying to give the throne back. Nobody believes him: not the three houses whose war at the Standing at Illmere Ford turns his identical, unread letters of surrender into a legendary act of strategic mercy, and not Canon Voss, the one man who does the geometry correctly and spends four decades, and one exile, trying and failing to prove it.</p>
           <p>What follows is less a triumph than an audit: a marriage settled by one underlined line in a private ledger, a Law of Succession that costs Blakk the very thing forty years of reluctant grace had bought him, and a Rite of Reconsecration, delayed until his deathbed, that finally puts the Vessel to the one test it was never built to survive. <em>The Vessel of Unmediated Grace</em> closes on a Cultivator's own archival log &mdash; Case Study 4,555: one 0.2-pound cone, a kingdom that never gets to read its own founding accident correctly, and an Observer already three ditches away before the file is closed.</p>""",
@@ -5062,6 +5062,14 @@ from html import escape as _esc
 import re as _re
 
 
+def _search_text(*parts):
+    """Lower-cased, tag-free, entity-decoded text for a data-text search attribute.
+    Entities must be decoded *before* the attribute is escaped, otherwise the
+    haystack holds literal '&middot;' / '&mdash;' strings and curly quotes never match."""
+    txt = " ".join(_unesc(_re.sub(r"<[^>]+>", "", p)) for p in parts)
+    return _esc(_re.sub(r"\s+", " ", txt).strip().lower(), quote=True)
+
+
 def record_detail_body(sc, b):
     r = rel(1)
     scenes = b["scenes"]
@@ -5166,7 +5174,7 @@ def characters_page_body():
             img = c["slug"] + "-thumb.jpg"
             if not os.path.isfile(os.path.join(OUT, "images", "characters", img)):
                 img = c["slug"] + ".jpg"
-            txt = _esc(" ".join([c["name"], c["epithets"], c["teaser"], b["title"]]).lower(), quote=True)
+            txt = _search_text(c["name"], c["epithets"], c["teaser"], b["title"])
             items.append('        <li class="rec" data-book="%s" data-text="%s"><a href="characters/%s.html"><img src="images/characters/%s" alt="" loading="lazy"><span><span class="rec-name">%s</span><span class="rec-meta">%s &middot; %s</span></span></a></li>' % (b["slug"], txt, c["slug"], img, c["name"], c["epithets"], b["case_tag"]))
     return filter_page_body("Subjects", len(items), "subjects", "Search subjects...", books, items, "recs--cast")
 
@@ -5175,7 +5183,7 @@ def scenes_page_body():
     items, books = [], [b for b in BOOKS if b["scenes"]]
     for b in books:
         for sc in b["scenes"]:
-            txt = _esc(" ".join([sc["alt"], _re.sub(r"<[^>]+>", "", sc["caption_html"]), b["title"], b["case_tag"]] + [c["name"] for c in record_subjects(sc)]).lower(), quote=True)
+            txt = _search_text(sc["alt"], sc["caption_html"], b["title"], b["case_tag"], *[c["name"] for c in record_subjects(sc)])
             items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p>%s%s</li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), record_meta_html(sc, b, 0), record_actions_html(sc, b, 0)))
     return filter_page_body("Records", len(items), "records", "Search records...", books, items, "recs--scenes")
 
