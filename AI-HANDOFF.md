@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
-eight coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268) and four
+nine coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -180,7 +180,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twenty-one entries: nine published, twelve coming-soon — see §6)
+/books.html             Full book list (currently twenty-two entries: nine published, thirteen coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -192,7 +192,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (334 total — 10 for
+/characters/<slug>.html    One page per character (361 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -200,7 +200,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -299,8 +299,8 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
-records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247 (both records — see §6) now that their rosters have been merged in. Canon-guide cases
-with no book dict on the site at all (1268, 4425) or only an empty coming-soon
+records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247, 1268 and 0202 (both records each — see §6) now that their rosters have been merged in. Canon-guide cases
+with no book dict on the site at all (4425) or only an empty coming-soon
 stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
@@ -1333,6 +1333,86 @@ change its caption. (4) The tall pale figure with black hair and red eyes is dra
 presence; the Case 0000 link is still not stated anywhere on the site. (5) Images: full image long edge 1000 px,
 grid 450 px, as everywhere (178-259 KB each); originals were not committed. (6) Records 172 -> 187.
 
+### Book: *Fossa* (Case 0202)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-0202-fossa`, as a pull request
+rather than straight into `main`, from: the cover (`images/covers/0202.jpg`, titled FOSSA, tagline "Swarm. Ditch.
+Signature. Tithe. Miracle.", used verbatim as the `hook`), 27 character sheets (17 in the author's "first batch", then
+10 more), 10 scene paintings, the manuscript `Case_0202_The_Sun-Turned_Harvest_2026-10-08_1035AM_GMT_7.md`
+(revision 4) and a publication package (`The_Sun-Turned_Harvest_publication.MD`). The manuscript and the package were
+used for the bios and records only and are **not committed** (the repo is public). **`pages`, `genre` and
+`synopsis_html` are untouched `EDITOR_*` placeholders.** The package contains a drafted synopsis and genre
+suggestion, which can be adopted on request. The author called the upload "first batch of the char", so **more
+characters are expected**.
+
+**Title discrepancy** (the same shape as 1153 and 1268): the author, the cover and one of the package's title options
+say *Fossa*; the manuscript file and the package's working title say *The Sun-Turned Harvest*. The site uses *Fossa*.
+Ask the author if the working title is meant to appear anywhere.
+
+The premise, from the manuscript (not author-confirmed jacket copy): **Auvarre**, a small Occitan-flavoured Frankish
+kingdom of the Lauze valley, in the barony of Castelmaur (the village of **Vilarnau**, the Mill of the Two Weirs, the
+Throat gorge and its Dawn Wall). On the eleventh of Garren the Cultivator Envoy **Observer 551**, in the guise of the
+rat-catcher Ratièr, breaks one clay bait-pot of **Strain H-202** in the roosting scrub ahead of a migrating swarm of
+red grasshoppers. The infected swarm turns to the sun at first light and dies on the east-facing cliff with a
+thirty-three-band collar (1, 1, 2, 3, 5, 8, 13), and the dead are edible. The stranger of Case 2231, **Tomobe no
+Higaide**, who has been displaced onto the Stone at Vilarnau, says one word on the green (`fossa`, which in the dialect
+means a long trench, a grave and a plague-pit) and heads the digging of the three ranks of trench in the Narrow of the
+Throat that hold the swarm. The three altars (Hierarch **Odilo** of the Threefold Crown, the Provost of the Last Order,
+Decree of Luminescence, here **Ottavio Brandi**, and the Keeper **Alazaïs** of the Faith of Ardwen) then claim the harvest
+under **the Accord of Montclar**, the charter of the Right of First Naming; the Keeper says she does not know. After
+the duel at the Edge on the third of Iverin (**Bertran** loses it for the Threefold), Odilo declares the Accord void
+on the fifth of Iverin and is believed by eleven of the realm's seventeen barons; the Last Order calls the crown's
+loan; King Ramon III signs, on the ninth of Lorren in the third winter, an instrument that divides Auvarre into two
+countries, the Lit Reach and the Baronies. It is called the War of the Tithe and lasts thirty-three months. Vilarnau
+is burned, a stone is left standing in the ashes, and the histories call the whole thing "the gift of the three crowns"
+with no ditch and no stranger in it. Higaide's own end is **not** in this case: the manuscript says he returns "after
+Cases 0202, 1414, 0333 and 0456" (see the 2231 write-up).
+
+Twenty-seven pages, in this order: `observer-551` (the Envoy), `strain-h-202` (the Catalyst), `the-accord-of-montclar`,
+`king-ramon-iii`, `pons`, `ibrahim-ibn-nasr`, `ottavio-brandi`, `matteo`, `alazais`, `joan`, `paciencia`,
+`bertran-0202`, `baron-of-saint-aventin`, `the-provosts-daughter`, `the-provosts-sister`, `smith-of-vilarnau`,
+`smiths-wife`, `arnal`, `bernat-the-younger`, `bernat-the-youngers-wife`, `sergeant-of-the-levy`,
+`corporal-of-the-order`, `goose`, `elis-mother`, `vara`, `genzo`, `yo-su`. The `PRINCIPALS` entry is
+`alazais`, `ottavio-brandi`, `bertran-0202`, `king-ramon-iii`, `strain-h-202`, `observer-551` (a first pass; the rest
+sit behind "21 additional subjects documented"). Roster records: Catalyst **Strain H-202**, Envoy **Observer 551**.
+Ten records, in manuscript order: `the-news-from-the-south`, `the-stone-at-mikusa`, `the-bowl-on-the-green`,
+`the-lesson-at-the-mill`, `what-the-tavern-knew`, `the-fire-in-the-ditch`, `the-dawn-wall`, `the-long-graves`,
+`the-cairn-on-the-ridge`, `the-hermit-of-val-muta`. Each carries a short `"title"` (§3) and a caption of 41-53 words
+(the site median is about 32; the long captions the first draft had were cut). The old woman with the wooden spoon
+appears only in `the-bowl-on-the-green`. The cover also has a square link-preview image,
+`images/share/cover-0202.jpg`, made with `tools/make_share_images.py`.
+
+**Characters shared with Case 2231** (the author said some appear in both). Where a person is the same man in both
+cases but the two manuscripts do not agree, he has a **separate, cross-linked page**, as with `aimeric-2231`:
+`bertran-0202` sits beside 2231's `bertran`. Others who appear in both (Arnaut, Brunissen, Gaucelm, Gersenda,
+Kaneyoshi, the Kiyote pair, the villagers of Vilarnau, Observer 618) already had pages and are linked from the
+0202 pages rather than duplicated. A `RELATED_THEMES` row relates 0202 with 2231. Reciprocal sentences were added to
+2231's `bertran`, `observer-618`, `villagers-of-vilarnau`, `the-kiyote-pair` and `kaneyoshi` pages, and to the
+Cultivator, Catalyst, Faith of Ardwen, Threefold Crown and Decree of Luminescence lore (each carries a link to
+`books/0202.html`, which is also what puts 0202 in that faith's "Appears in" list and related cases).
+
+Judgment calls worth knowing: (1) **Bertran's age is not reconciled.** 0202 says he is 41, 2231 says 38; both pages say
+so. (2) **Kaneyoshi's stay in the smith's loft** is 11 days in 0202 and 3 days in 2231; both pages say the files are
+not reconciled. (3) **The Stone's last use is told two ways.** In 0202 Vara kneels at it; in 2231 the Custodian
+reduces the western stone to dust. The Kiyote-pair page now says the two files tell its end differently; nothing was
+harmonised. (4) **Vara's hair:** the sheet draws white-silver; the publication package's notes say dark brown.
+The page follows the sheet and says so; the author should say which is right. (5) **Sheet-only detail** (pull-quotes,
+ages, palettes) is labelled "the sheet's ... are its own" in the bios; the Baron of Saint-Aventin's quotation "No
+creditor in grey shall take our grain" is the sheet's gloss, not the manuscript's. (6) **No sheet, no page.** The
+manuscript has Elis, Elis's great-grandmother, Peire, Lo Rog, the old woman with the wooden spoon (she is in the
+`the-bowl-on-the-green` record only), the Sergeant Who Lost His Truncheon, Gersenda's family and more; none came
+with a sheet, so none has a page and none appears as a link. **Don't invent pages for them**; they appear as plain
+text where a bio needs them. (7) **Odd-shaped sheets:** Matteo's and Elis's Mother's sheets are not 2:3; they were
+resized with the others and load, but check how their roster tiles crop if anyone complains. (8) **Scene order** is
+manuscript order, not the upload order. (9) **Numbers:** the seventeen barons, the eleven who believe the
+Accord void and the date of the fifth of Iverin are the manuscript's; Ottavio's "Arnaut's compromise paper" is the
+paper on unsealing barns, not a partition paper. (10) Images: cover 900x1350; 27 sheets 980w with a 320w thumb;
+10 scenes at 1000px long edge with a `-grid.jpg`; all progressive JPEG; each sheet and painting was identified from
+a contact sheet before it was filed (the upload order was not the display order). Originals were not committed.
+(11) The bios were written after reading the manuscript in full; every number and quoted phrase was then checked
+against it by script, and the wording the check flagged (the corporal, the goose, Genzo, the Baron, the sister,
+Bernat's wife) was cut back to what the manuscript supports.
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1502,6 +1582,13 @@ sit at the end of `BOOKS`, in the order the author listed them.
   Dream*); the Cultivator Observer's place on the Envoys roster, the Case 0000
   echo, Adaltrude's vestment colours and Sigward's age are flagged in §6. There is
   no Auron sheet.
+- **Case 0202** (*Fossa*) is coming-soon with a 27-character cast, both roster
+  records and ten records (scene paintings), but no `pages`, `genre`, `synopsis_html`
+  or purchase link (§6). The title on the manuscript differs from the cover (*The
+  Sun-Turned Harvest*); more characters are expected from the author. Bertran's age,
+  Kaneyoshi's days in the loft and the Stone's last use disagree with Case 2231 and
+  are flagged on the pages and in §6; Vara's hair colour (sheet vs. package notes)
+  is open.
 - **Gazetteers** (`illumaria`, `iron-stiletto-war`, `vessel-of-the-betrayed-host`): six places on the first two maps
   and six on the 4420 map (Kettish, House Varga, House Tolvin, Thornfield, the western march, the lowlands) have no
   case-file text yet (§6); add notes as manuscripts name them. The 4420 map's banner still prints the old title (§6).
@@ -1561,7 +1648,24 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 1268 records, Case 4420 gazetteer, gazetteer sharing and square link previews — branch `case-1268-records-4420-gazetteer`, pull request, 2026-10-14).**
+- **Latest update (Case 0202 added — branch `case-0202-fossa`, pull request, 2026-10-15).**
+  The author asked to add "Case 0202 : Fossa", a publication for the characters, said some also appear in
+  2231, attached the manuscript, and sent the cast in two rounds ("first batch of the char : 17 char", then
+  10 more characters and 10 scene paintings). Done: a full `0202` dict (27 `characters`, `catalyst` Strain
+  H-202, `envoy` Observer 551, 10 `scenes`, `status` coming-soon, placeholders for `pages` / `genre` /
+  `synopsis_html`), a `PRINCIPALS` entry, one `RELATED_THEMES` row (0202 with 2231), one sentence each in
+  the Cultivator, Catalyst, Faith of Ardwen, Threefold Crown and Decree of Luminescence lore, and five
+  reciprocal sentences on 2231 pages (`bertran`, `observer-618`, `villagers-of-vilarnau`,
+  `the-kiyote-pair`, `kaneyoshi`). The 10 `scenes` carry the short `"title"` that PR #8 introduced. Images: 1 cover, its square
+  `images/share/cover-0202.jpg`, 54 character files (27 slugs x full + thumb) and 20 scene
+  files (10 x full + grid). `main` moved (Case 1268, PR #7, then Case 1268 records and the 4420 gazetteer, PR #8) while this was prepared, so the branch was rebased
+  onto it twice and the counts re-measured after the second rebase: cases 21 -> 22, characters 334 -> 361, records 187 ->
+  197, sitemap 557 -> 595; every local link resolves (20,865 checked) and the new and changed pages were opened in Chromium with no
+  broken images or script errors. Shared-person rule: a man who is the same in both cases but told differently
+  gets a separate cross-linked page (`bertran-0202`, like `aimeric-2231`). The manuscript and the publication
+  package were not committed. `HOME_SCENES` was not changed. Only files that really changed were committed; the
+  footer-stamp-only pages were left alone, as before.
+- **Earlier update (Case 1268 records, Case 4420 gazetteer, gazetteer sharing and square link previews — branch `case-1268-records-4420-gazetteer`, pull request, 2026-10-14).**
   The author sent 15 scene paintings for Case 1268 and one map for Case 4420, and asked for the 1268 records, the
   4420 gazetteer, the gazetteers to be shareable like subjects, and book and gazetteer links to show a thumbnail on
   other platforms the way subject links do. Done: 15 `scenes` on the `1268` dict (each with an optional short
