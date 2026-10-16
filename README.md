@@ -25,7 +25,8 @@ of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
 gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88; its genre and synopsis are still placeholders) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records and a working "Read on Google Books" link; its page count, genre and synopsis are still placeholders). Nine further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
 0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
-(*Independent Observation*, with 11 subjects, 15 records and a cover) and 0202 (*Fossa*, with 27 subjects and 10 records), are
+(*Independent Observation*, with 11 subjects, 15 records and a cover), 0202 (*Fossa*, with 27 subjects and 10 records) and 3001
+(*The Uncounted Dinar*, with 13 subjects and a cover), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has eight entries: Cultivator (listing every Envoy) and
@@ -423,3 +424,21 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals (counted after the rebase onto `main`): cases 21 -> 22, characters (subjects) 334 -> 361, records 187 -> 197; pages in sitemap 557 -> 595. A recount from the rebuilt site gives the same figures, and every local link resolves (20,865 checked).
+
+### [PENDING] Update — Case 3001 (*The Uncounted Dinar*): new 13-subject case
+
+On branch `case-3001`, as a pull request rather than straight into `main`, because other sessions work on the repo. The author sent the cover (`30010_5x.jpg`, 1717x2576), the manuscript (`Case_3001_The_Uncounted_Dinar_2026-10-14_1712PM_GMT_7.md`, revision 6) and 13 character sheets, with "read repo, add 3001". The manuscript was read for the bios only and is **not committed** (the repo is public).
+
+Added:
+- `books/3001.html` — Case 3001, coming-soon (no purchase link, page count, genre, synopsis or records; those stay placeholders)
+- `characters/` — 13 pages, in roster order: malik-ibn-sabir, amina-bint-rashid, sulayman-ibn-ghanim, nur, qasim-al-fahmi, the-dinar, observer-1140, hammad, maliks-cousin, the-smith-of-the-dunes, the-sentry-of-banu-kathir, the-witnessed-akad, the-provincial-archive-clerk
+- `images/covers/3001.jpg`; `images/characters/` — 26 files (a sheet and a `-thumb` for each of those 13 slugs); `images/share/cover-3001.jpg` (square link preview, made by `tools/make_share_images.py`)
+
+Edited:
+- `tools/build_site.py` — a full `3001` `BOOKS` entry (catalyst *The Dinar*, envoy Observer 1140, no scenes; `pages`, `genre` and `synopsis_html` left as the placeholders) a `PRINCIPALS` entry and one `RELATED_THEMES` row (3001 with 0202: the trader Ibrahim ibn Nasr appears in both)
+- `books.html`, `books/3115.html` (a Related Cases card: both cases are "High-Concept, Cultural and Social"), `characters.html`, `index.html` (counts and cast wall), `lore/catalyst.html`, `lore/cultivator.html`, `sitemap.xml` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 3001 in §6 (with the judgment calls), counts, §7 bullet, §8 entry
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals (counted after the rebase onto `main`, which now holds Case 0202): cases 22 -> 23, characters (subjects) 361 -> 374, records 197 (unchanged); pages in sitemap 595 -> 609. Every local link resolves (21,391 checked), and the new and changed pages were opened in Chromium at desktop and phone width with no broken images. **Open questions for the author** are listed in the Case 3001 write-up in `AI-HANDOFF.md` §6; the first is that the cover's tagline reads "RICE." where the manuscript's word is probably "Price". Also flagged there: Ibrahim ibn Nasr's age is 38 on Case 0202's sheet but about 55 by the 3001 manuscript, and `books/0202.html` does not list 3001 as a related case because of the existing six-card cap.
