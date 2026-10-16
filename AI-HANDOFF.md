@@ -123,7 +123,7 @@ filename.
 - **Records have their own pages**, `records/<scene-slug>.html` (`record_detail_body()`), because a scene had no URL of its own to share or preview. Scene slugs share one namespace across books (checked: no duplicates); keep it that way. The old lightbox links are untouched.
 - **Record line (Subject / Archive)** is `record_meta_html()`. Subjects = characters linked from the caption, or an optional `"subjects": [character slugs]` on the scene dict, which wins when present. Nothing is guessed; records with neither show Archive only.
 - **Share buttons** (`share_btn()`) carry `data-share-url/-title/-text` and are `hidden` until `js/site.js` shows them. New page types that should be shareable need one.
-- **Where to begin** (`begin_html()`, home `#begin`, deliberately the last section of the home page; the hero's second button jumps to it) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected.
+- **Where to begin** (`begin_html()`, home `#begin`, deliberately the last section of the home page; the hero's second button jumps to it) lists published cases by `hook`, case tag and genre (editor-note spans stripped). It is generated, so a newly published case appears automatically. The author's rule behind it: no required starting point, each case stands alone, all are connected. **A published case's `hook` should be a one-sentence promise in the shape of the others** ("A pair of chrome heels, and the war two crowns paid for them."), not the cover's five-word tagline; a tagline kept as a placeholder hook on a coming-soon case should be rewritten when the case is published (2365 and 1153 were, 2026-10-16, using only details from their own synopsis and roster text). The `hook` also feeds the case cards, share text and meta descriptions.
 - **`robots.txt` is ignored on the project address** (crawlers read it only at the host root); `sitemap.xml` has to be submitted in Search Console. Image protection is unchanged, but note that `og:image` necessarily names the image file for previews to work.
 
 **Update (Oct 2026, link previews, gazetteer sharing, record titles).** Three small things, all in `tools/build_site.py`:
@@ -1200,7 +1200,7 @@ Nineteen characters have pages, in this order: `levan`, `bagrat`, `guram`, `vazh
 `observer-419-1153`, `the-eleven-fingered-hand` (a first pass; edit freely). Roster records: Catalyst
 **The Eleven-Fingered Hand** ("Grafted prosthetic left hand", page `the-eleven-fingered-hand`), Envoy
 **Observer 419** (`&ldquo;the clockmaker&rdquo; &middot; also the Envoy of Case 2140`, page `observer-419-1153`).
-The catalyst `meta` and the `hook` are my wording and the cover's tagline respectively; the `meta` is
+The catalyst `meta` is my wording, and the `hook` was the cover's tagline until 2026-10-16, when it was rewritten as a one-sentence line for Where to begin; the `meta` is
 the thing the "same catalyst class" relation keys on, so it is unique on purpose.
 
 Thirteen records, in this order: `the-proving-strap-gives`, `the-king-on-the-northern-wall`,
