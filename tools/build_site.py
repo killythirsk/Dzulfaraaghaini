@@ -2576,7 +2576,7 @@ BOOKS = [
         "slug": "2365", "title": "The Decree of Luminescence",
         "status": ["published", "google-books"],
         "cover_file": "2365.jpg",
-        "hook": "Ash. Roll. Residue. Append. Nil.",
+        "hook": "A column of clear sky, a guttering lamp, and three hundred and eleven names left off the Roll.",
         "case_tag": "Case 2365",
         "catalyst": {
             "name": "The Round-Bed",
@@ -3394,7 +3394,7 @@ BOOKS = [
         "slug": "1153", "title": "The Second Hand",
         "status": ["published", "google-books"],
         "cover_file": "1153.jpg",
-        "hook": "Hand. Debt. Doctrine. Mercy. Exile.",
+        "hook": "An eleven-fingered hand, a hierarch's ruling, and eighteen years spent deciding whether it was a hand at all.",
         "case_tag": "Case 1153",
         "catalyst": {
             "name": "The Eleven-Fingered Hand",
