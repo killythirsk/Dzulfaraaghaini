@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
-nine coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202) and four
+ten coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -180,7 +180,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twenty-two entries: nine published, thirteen coming-soon — see §6)
+/books.html             Full book list (currently twenty-three entries: nine published, fourteen coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -192,7 +192,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (361 total — 10 for
+/characters/<slug>.html    One page per character (374 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -200,7 +200,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -299,7 +299,7 @@ automatically. The author's rule: **every Envoy goes on lore/cultivator and
 every Catalyst on lore/catalyst** — a new book's dict must include both records
 when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
-records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247, 1268 and 0202 (both records each — see §6) now that their rosters have been merged in. Canon-guide cases
+records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247, 1268, 0202 and 3001 (both records each — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (4425) or only an empty coming-soon
 stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
 
@@ -1413,6 +1413,80 @@ a contact sheet before it was filed (the upload order was not the display order)
 against it by script, and the wording the check flagged (the corporal, the goose, Genzo, the Baron, the sister,
 Bernat's wife) was cut back to what the manuscript supports.
 
+### Book: *The Uncounted Dinar* (Case 3001)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-3001`, as a pull request rather
+than straight into `main`, from: the cover (`images/covers/3001.jpg`, tagline "Rice. Grievance. Ledger.
+Stillness. Vindication.", used verbatim as the `hook`), 13 character sheets and the manuscript
+`Case_3001_The_Uncounted_Dinar_2026-10-14_1712PM_GMT_7.md` (revision 6), which was used for the bios only and is
+**not committed** (the repo is public). **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*`
+placeholders.** No scene paintings came with it, so `"scenes"` is empty. The cover and the manuscript agree on the
+title.
+
+The premise, from the manuscript (not author-confirmed jacket copy): a Cultivator Envoy, **Observer 1140** ("the
+Empty-Handed"), is fed a poor shepherd's last meal and leaves him a single gold dinar that returns to its most
+recently and legitimately established owner the morning after it is spent. **Malik ibn Sabir** of the Banu
+Kathir spends it, notches it, and gives it to **Amina bint Rashid** of the Banu Harith in the marriage akad (the
+coin's rule: a witnessed akad transfers it; absent one, an owner's death gives it to whoever's hand next closes
+around it). Amina leaves him, is murdered by the thief **Zaid**, and the Banu Harith under **Sulayman ibn
+Ghanim**, her uncle, seize Malik, doubting the case but unable to be seen doing nothing. A war of some three
+hundred lives follows; Zaid dies of excess in a river-city wine-house after confessing to **Nur**, who takes the
+coin and, nearly two years later, passes it by akad to the scholar **Qasim al-Fahmi**. He sends the truth north,
+melts the coin and scatters it in the dunes; Malik is released, and the archive files the war as the *Grazing
+Rights Dispute of the Two Confederations*. Culture per the manuscript header: Central Arabian Bedouin
+confederations (Banu Kathir, Banu Harith), plus Andalusi Arabs for the trader Ibrahim ibn Nasr; religion none
+named, so no lore page was touched.
+
+Thirteen characters have pages, in this order: `malik-ibn-sabir`, `amina-bint-rashid`, `sulayman-ibn-ghanim`,
+`nur`, `qasim-al-fahmi`, `the-dinar` (the six principals; the `PRINCIPALS` entry is those six, a first pass, and the
+home cast wall takes the first six subjects in list order), then `observer-1140`, `hammad`, `maliks-cousin`,
+`the-smith-of-the-dunes`, `the-sentry-of-banu-kathir`, `the-witnessed-akad`, `the-provincial-archive-clerk`.
+Roster records: Catalyst **The Dinar** (`meta` "High-Concept, Cultural and Social", which is the manuscript
+header's class and is also Case 3115's, so the two cases relate automatically as "same catalyst class"), Envoy
+**Observer 1140**.
+
+Judgment calls worth knowing: (1) **The cover's tagline reads "RICE."** The manuscript never uses the word, and
+"price" occurs eight times in it, so this is probably a typo for "Price" on the cover. The `hook` follows the cover
+verbatim, as for every other case; ask the author whether to fix the cover or the hook. (2) **Owner counts.** The
+Nur sheet calls her the dinar's "third legitimate owner" and the Qasim sheet calls him "Fourth Owner". The
+manuscript has five holders in five transfers (Malik, Amina, Zaid, Nur, Qasim) and says Zaid became "exactly as
+legitimate an owner as a shepherd's bride", so the bios say fourth and fifth and quote the sheet labels. Ask the
+author if the sheets are meant to stand. (3) **Sulayman's private visit.** His sheet (one panel and one line of
+text) puts it with "a Banu Kathir family his raiders had wronged"; the manuscript's family is a Banu Harith family
+whose stored grain the Banu Kathir burned. The bio follows the manuscript and says so. (4) **Qasim's scar.** The
+manuscript says he scored the coin's *face*; the Dinar sheet draws a testing scar on the rim beside Malik's notch.
+The Dinar's bio says so. (5) **The Smith.** The manuscript says Qasim melted the coin "in a smith's forge he paid
+for" and does not say who worked the metal; the sheet shows the smith melting it over three labelled days, in a
+palm-ringed town, and gives him an age of about forty. Those are the sheet's and the bio says so. His trait list
+says "dark incurious eyes" while an expression panel reads "Curiosity (Suppressed)", so the bio says only "dark
+eyes". (6) **Malik's flock.** The sheet draws a large flock of sheep behind him; the manuscript gives him four
+goats, later six. His bio notes it. (7) **Pull-quotes.** Amina's is the manuscript's narration of her, not a line
+she speaks (her bio says so); the first sentence of Hammad's is the manuscript's and the rest is the sheet's;
+the Sentry's is the sheet's own; Observer 1140's and the Akad's are the manuscript's. Observer 1140's quote is
+one line the manuscript splits around "the stranger said". (8) **The Witnessed Akad is an institution, not a
+person.** It is filed as a Subject, the way the Golden Catacomb and the Nine Threads are, because its sheet
+came with the cast; it could instead be an Archive entry. Ask the author. (9) **No sheet, so no page, so don't
+invent one:** Zaid (the murderer, who is named in the bios in plain text without a link), the garrison captain,
+the boy Salim, the Banu Harith rider the Sentry kills, the caravan's chief factor. (10) **Case 0202 and Ibrahim
+ibn Nasr.** The trader reappears thirty-four years later in Case 0202 (*Fossa*, Observer 551), which landed on
+`main` while this branch was open and already has an `ibrahim-ibn-nasr` page. Amina's bio links that page;
+Observer 1140's closing bio links Ibrahim, `books/0202.html` and `characters/observer-551.html`; and a
+`RELATED_THEMES` row ("Same trader: Ibrahim ibn Nasr ...") ties 3001 to 0202. `books/3001.html` shows both 3115
+(same catalyst class) and 0202 as related cases. `books/0202.html` does **not** show 3001, because
+`related_cases()` caps at six and ranks by number of reasons, so a one-reason match sits behind 0202's
+two-reason cards; that is the existing six-card cap, not a bug, and the site logic was left alone. **Age
+mismatch to raise with the author:** the 0202 sheet gives Ibrahim as 38, but the 3001 manuscript has him
+twenty-one in his first season and riding north thirty-four years later (about 55). Neither page was edited. (11) **Ages are the sheets'** (Sulayman 58-62, Hammad
+57-60, Malik early-to-mid twenties, Amina 23, Nur late twenties, Qasim 27-29, the Sentry 15-17, the Cousin
+mid-to-late twenties, the Smith about forty, the Clerk 35-45); the manuscript gives only Amina's twenty-two, "nineteen
+years" for Sulayman and "half his age" for the Sentry. The Cousin's gender is the sheet's too. (12) Dates: Amina
+is murdered on the twenty-sixth of Deyren and Zaid dies on the nineteenth of Havren, as in the manuscript's
+thirteen-month calendar. (13) Images: cover 900x1350 (from a 1717x2576 upload); sheets 980w with a 320w thumb
+(Hammad's is shorter, 980x1170); every sheet was identified from a contact sheet of its title strip before it was
+filed (the upload order was not the display order). Originals were not committed. (14) The bios were written
+after reading the manuscript in full, then every italicised or quoted phrase in them was checked against it by
+script; what the script could not find is sheet-sourced and labelled as such.
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1576,6 +1650,12 @@ sit at the end of `BOOKS`, in the order the author listed them.
   The people the manuscript names with a real part to play all
   have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
   raiders do not, and shouldn't be invented one by one.
+- **Case 3001** (*The Uncounted Dinar*) is coming-soon with a 13-character cast and both roster
+  records, but no page count, genre, synopsis, records or purchase link (§6). The cover's tagline
+  reads "Rice", probably a typo for "Price"; the sheets' owner counts for Nur and Qasim, Sulayman's
+  private visit, Qasim's scar and the Akad's filing as a Subject are flagged in §6. Zaid has no
+  sheet, so no page; Ibrahim ibn Nasr's page comes from Case 0202, and his age there (38) does not match
+  3001 (about 55).
 - **Case 1268** (*Independent Observation*) is coming-soon with an 11-character cast
   and both roster records and 15 records, but no page count, genre, synopsis or purchase link
   (§6). The manuscript title differs from the cover title (*The Eleventh Astral
@@ -1648,7 +1728,22 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 0202 added — branch `case-0202-fossa`, pull request, 2026-10-15).**
+- **Latest update (Case 3001 added — branch `case-3001`, pull request, 2026-10-15).**
+  The author sent the cover (`30010_5x.jpg`), the manuscript (revision 6) and 13 character sheets, with "read
+  repo, add 3001". Done: a full `3001` dict (13 `characters`, `catalyst` The Dinar, `envoy` Observer 1140, no
+  scenes; `pages`, `genre` and `synopsis_html` left as the `EDITOR_*` placeholders), a `PRINCIPALS` entry and one `RELATED_THEMES` row (3001 with 0202, same
+  trader); no
+  lore text changed (the Cultivator and Catalyst rosters pick the case up automatically, and Case 3115 gains a
+  Related Cases card because both share a catalyst class). Images: 1 cover, 26 character files, 1 share image.
+  Recount after rebasing onto `main` (which now holds 0202) and rebuilding: cases 22 -> 23, characters 361 -> 374,
+  records 197 (unchanged), sitemap 595 -> 609; every local link resolves (21,391 checked) and the new and changed pages were opened in Chromium at desktop
+  and phone width with no broken images (the home page's 13px horizontal overflow at 390px wide is on `main`
+  too and was not touched). Only files that really changed were committed (the script, the new pages and
+  images, `books.html`, `books/3115.html`, `characters.html`, `index.html`, the two lore rosters,
+  `sitemap.xml` and these two docs); the footer-stamp-only pages were left alone, as before. The manuscript
+  was not committed. **Open questions for the author** are the numbered judgment calls in §6, first among them
+  the cover's "Rice." and the sheets' owner counts.
+- **Earlier update (Case 0202 added — branch `case-0202-fossa`, pull request, 2026-10-15).**
   The author asked to add "Case 0202 : Fossa", a publication for the characters, said some also appear in
   2231, attached the manuscript, and sent the cast in two rounds ("first batch of the char : 17 char", then
   10 more characters and 10 scene paintings). Done: a full `0202` dict (27 `characters`, `catalyst` Strain
