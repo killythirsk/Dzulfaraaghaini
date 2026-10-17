@@ -131,6 +131,12 @@ filename.
 - **Case and gazetteer links now preview with a square image.** Those pages already carried Open Graph / Twitter tags, but pointing at the tall 2:3 cover or map; platforms that show one small square thumbnail (X's `summary` card, WhatsApp, Telegram, Facebook, iMessage) cut a slice from the middle of a tall image, losing the title, while subject sheets are nearly square (980x1045) and show whole. `images/share/cover-<name>.jpg` and `images/share/map-<name>.jpg` (1200x1200: the whole cover or map on the `--night` ground, each under 280 KB) are made from `images/covers/` and `images/maps/` by **`tools/make_share_images.py`** (needs Pillow; `build_site.py` itself still needs nothing). `share_image()` picks the share file and falls back to the original art if it has not been made, so a missing file never breaks a page. **After adding or replacing a cover or map, run `python3 tools/make_share_images.py`, then `build_site.py`.** Subject and record previews were left alone. Platforms cache a link's preview by page URL, so a link shared before this change keeps its old preview until the platform is made to re-fetch it (Facebook's Sharing Debugger "Scrape Again", etc.); that is the platform's cache, not a site fault. This could not be tested on the live platforms from the build environment (outbound access to the site is blocked there); the tags were checked in the generated HTML only.
 - **A scene may carry an optional `"title"`.** `record_title()` uses it for the record's heading, page title and share title, and the record's own page then prints the full caption as a paragraph (`record-caption`). Without `"title"` nothing changes: the caption is still its own heading. The 15 Case 1268 records use it because their captions run to two or three sentences.
 
+**Update (2026-10-17, home counts, featured case, connected cases, metadata).** All in `tools/build_site.py` + `css/style.css`:
+- **The home hero's stats row (23 Cases / 374 Subjects / 197 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
+- **The Featured Case block has two buttons, in this order: Open case, then Read on Google Books** (`featured_html()`, using `read_buttons()`, so it follows the case's primary read link and opens in a new tab). Layout is `.featured-actions` (a wrapping flex row; full-width stacked on phones).
+- **`CONNECTED_CASES`** (a dict just above `BOOKS`) makes a published case's "Stands alone" note add "It is connected to Case NNNN (Title)." It is set both ways for **4555 and 2365**, at the author's request; add a pair in both directions to connect others. This is separate from `RELATED_THEMES`, which only feeds the "Related Cases" panel.
+- **Metadata given by the author:** Case 4420 is 130 pages, genre *Fiction / Fantasy / Epic* (replacing the staging copy's `~123` estimate and suggested genre); Case 2365 genre is *Fiction / Fantasy / Historical*; Case 1153 is 77 pages, genre *Fiction / Fantasy / Epic*, with a synopsis written from manuscript revision 4 (the author pasted it). These three genres use the plain Google Books category form with slashes, unlike the older cases' dotted lists. The 1153 synopsis names the cover title, *The Second Hand*, not the manuscript title.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -641,8 +647,9 @@ Status: **Published**, with a Google Books link supplied in the
 SLAVE-4420 staging copy (`google_books_url` on `BOOKS[4]`) — wired in
 without being opened, same caveat as Book 4's. Pages/genre are still that
 copy's own unconfirmed estimate (`~123` pages, suggested genre, both
-still carrying the `editor-note` span) — unlike Books 1–4, nobody has
-confirmed these for real yet.
+still carrying the `editor-note` span) — unlike Books 1–4, nobody had
+confirmed these for real yet. **Superseded 2026-10-17: the author gave 130 pages and the genre
+*Fiction / Fantasy / Epic*, and both now stand without the `editor-note` span.**
 
 The premise: House Skarth has carried one steel flask for four centuries
 without asking where it came from — family legend says it came down from
@@ -939,7 +946,7 @@ branch `case-2365-stub` from: the cover
 sheets (two batches), 15 scene paintings, and the manuscript
 `Case_2365_The_Decree_of_Luminescence_Final.md` (revision 3). **`genre` and
 `synopsis_html` were originally left as untouched `EDITOR_*` placeholders** (the 0156 / 3115 precedent: the manuscript
-was used for the bios and captions only); the synopsis was filled in later, as noted above. The case was first committed as a cover-only stub, then
+was used for the bios and captions only); the synopsis was filled in later, as noted above, and the author gave the genre on 2026-10-17 (*Fiction / Fantasy / Historical*). The case was first committed as a cover-only stub, then
 filled in.
 
 The premise, from the manuscript (not author-confirmed jacket copy): Vallombra, a terraced kingdom
@@ -1171,7 +1178,7 @@ epilogue; there is no painting for them.
 
 ### Book: *The Second Hand* (Case 1153)
 
-Status: **Published** since 2026-10-14, when the author reported it live on Google Books and gave the link (`status` is `["published", "google-books"]` and `google_books_url` is `https://play.google.com/store/books/details?id=3IYZEgAAQBAJ`; Google blocks automated fetches, so the link has not been opened by an AI). **`pages`, `genre` and `synopsis_html` are still `EDITOR_*` placeholders, so the published page shows "add page count" until the author supplies one.** It was added, while still coming-soon, on branch `case-1153`, as a pull
+Status: **Published** since 2026-10-14, when the author reported it live on Google Books and gave the link (`status` is `["published", "google-books"]` and `google_books_url` is `https://play.google.com/store/books/details?id=3IYZEgAAQBAJ`; Google blocks automated fetches, so the link has not been opened by an AI). **`pages` (77), `genre` (*Fiction / Fantasy / Epic*) and `synopsis_html` were filled in on 2026-10-17** (the author gave the first two and pasted the manuscript for the synopsis); they were `EDITOR_*` placeholders before that. It was added, while still coming-soon, on branch `case-1153`, as a pull
 request rather than straight into `main`, from: the cover (`images/covers/1153.jpg`, tagline "Hand.
 Debt. Doctrine. Mercy. Exile."), 20 character-dossier sheets (19 used), 13 scene paintings and the
 manuscript `Case_1153_The_Eleven-Fingered_Mercy_2026-10-07_1737PM_GMT_7.md`. **`pages`, `genre` and
@@ -1582,9 +1589,9 @@ sit at the end of `BOOKS`, in the order the author listed them.
 - Genres and page counts are settled for Books 1–4: 102 / 99 / 96 / 109
   pages, none carrying an unconfirmed-genre `editor-note` (chosen by
   Claude at the author's instruction). **Book 5 is the exception** — its
-  `~123` pages and suggested genre are still the SLAVE-4420 staging
-  copy's own unconfirmed estimate, `editor-note` span and all; resolve
-  the same way Books 1–4 were.
+  `~123` pages and suggested genre were the SLAVE-4420 staging
+  copy's own unconfirmed estimate, `editor-note` span and all; **resolved 2026-10-17**
+  (130 pages, *Fiction / Fantasy / Epic*, given by the author).
 - **0188 and 2140 are roster-only** (§6). Both are still `coming-soon`;
   0188's pages/genre are unconfirmed estimates, and 2140 has no synopsis,
   page count, or genre at all, no scene art (so its Scenes slider shows the
@@ -1643,8 +1650,8 @@ sit at the end of `BOOKS`, in the order the author listed them.
   where Widow Bai was during the ambush.
 - **Case 1153** (*The Second Hand*) is **published** (the author reported it live
   on Google Books on 2026-10-14 and gave the link; not opened by an AI), with a
-  19-character cast, 13 records and both roster records, but no page count, genre
-  or synopsis (§6), so its page still shows "add page count". The manuscript title
+  19-character cast, 13 records and both roster records; page count, genre and synopsis
+  were added 2026-10-17 (§3). The manuscript title
   differs from the cover title (*The Eleven-Fingered
   Mercy*). Vazha, Bagrat and the unnamed kneeling figure are flagged in §6.
   The people the manuscript names with a real part to play all

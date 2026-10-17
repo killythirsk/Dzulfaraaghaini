@@ -798,6 +798,12 @@ body.lightbox-open { overflow: hidden; }
 .ledger-stats { display: flex; justify-content: center; gap: var(--space-lg); list-style: none; padding: 0; margin: var(--space-md) 0 0; }
 .ledger-stats b { display: block; font: 400 2rem var(--font-display); color: var(--paper); }
 .ledger-stats span { font: 0.68rem var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+/* Each count is a link to its index page (Cases, Subjects, Records) */
+.ledger-stats a { display: block; padding: 0.2rem 0.4rem; text-align: center; text-decoration: none; color: inherit; border-bottom: 1px solid transparent; transition: border-color 0.2s ease; }
+.ledger-stats a b { transition: color 0.2s ease; }
+.ledger-stats a:hover, .ledger-stats a:focus-visible { border-bottom-color: var(--gold); }
+.ledger-stats a:hover b, .ledger-stats a:focus-visible b { color: var(--gold); }
+.ledger-stats a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 .section > h2 { font: 400 0.8rem var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); padding-bottom: var(--space-2xs); border-bottom: 1px solid var(--rule); }
 .entry-fileno, .entry-meta, .tag, .build-info { font-family: var(--font-mono); letter-spacing: 0.06em; }
@@ -853,6 +859,8 @@ body.lightbox-open { overflow: hidden; }
 .featured-title a { color: var(--ink); text-decoration: none; }
 .featured-title a:hover, .featured-title a:focus-visible { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
 .featured-body p:not(.featured-label) { max-width: 36rem; }
+.featured-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+@media (max-width: 40rem) { .featured-actions .btn { flex: 1 1 100%; text-align: center; } }
 
 /* ----------------------------------------------------------------------------
    14. Case archive — grids, READ buttons, subject split, related cases, mobile "see more"
