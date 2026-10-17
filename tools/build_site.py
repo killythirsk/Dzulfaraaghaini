@@ -107,6 +107,13 @@ RELATED_THEMES = [
     ("0202", "2231", "Same village and the same stranger: Vilarnau, the Stone, Tomobe no Higaide, Bertran, Gersenda and others appear in both cases"),
 ]
 
+# Cases the author has said are connected. Shown in the "Stands alone" note on a published
+# case page ("It is connected to Case NNNN (Title)"). List it both ways: each case names the other.
+CONNECTED_CASES = {
+    "4555": ["2365"],
+    "2365": ["4555"],
+}
+
 BOOKS = [
     {
         "slug": "0000", "title": "The Sword of Valeria",
@@ -1141,8 +1148,8 @@ BOOKS = [
             "img": "characters/observer-4420-thumb.jpg",
             "html": "<p>Deployed to the summit of Mount Skahr four centuries before the war, and folded by the clans, within a generation, into the Dragon-Speaker who keeps the mountain &mdash; a name he never corrects. Hands the flask to a frostbitten climber with no ceremony at all, then simply waits.</p>",
         },
-        "pages": """~123 <span class="editor-note">(estimated from manuscript word count &mdash; confirm or edit)</span>""",
-        "genre": """Epic Fantasy &middot; Political Intrigue &middot; War &amp; Military Fiction <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        "pages": "130",
+        "genre": "Fiction / Fantasy / Epic",
         "google_books_url": "https://play.google.com/store/books/details?id=CAEDEgAAQBAJ",
         "synopsis_html": """<p>House Skarth has kept one steel flask far longer than anyone in it has thought to ask where it came from. It never lets its broth go cold; the family's oldest women say it came down from the sacred peak as a gift from the dragon who keeps court there; and its steward, Giles, has scrubbed it with lye soap every winter for forty years without once asking how it works. When Duke Maros, humiliated at his own table by a rival's gift of a stag's head, drags a royal hunt two hundred miles into the northern tundra to save face, Baron Kaelen of House Skarth accepts the invitation before the messenger has finished reciting it. Guest-right is the whole of his faith: a guest fed at his table is simply fed.</p>
           <p>On the eleventh night, with the King gone silent and breaking frozen venison against a rock, Kaelen finally unscrews the stopper. The broth hits air some hundred and twenty degrees colder than it is and unrolls into a white cloud &mdash; and Sir Corvus of the royal bodyguard, still haunted by a spore-choked cave he survived eleven months earlier, sees only the thing that almost killed him. He kills Kaelen before the cup reaches the King. The Crown's sealed account of the death is true in every clause and never mentions broth; House Skarth reads it as a throne signing its name beneath a murder. Kaelen's twin sister Yvaine cuts her hair, puts on his ancestral mail, climbs the mountain for a blessing she doesn't quite believe in, and leads the northern clans south, with the flask &mdash; cased in silver now, and renamed the Vessel of the Betrayed Host &mdash; carried at the front of their war-bands.</p>
@@ -2596,7 +2603,7 @@ BOOKS = [
         },
         "pages": "88",
         "google_books_url": "https://play.google.com/store/books/details?id=spIXEgAAQBAJ",
-        "genre": EDITOR_GENRE,
+        "genre": "Fiction / Fantasy / Historical",
         "synopsis_html": """<p>Vallombra is a small, terraced kingdom that rules itself by arithmetic. Its faith, the Concord of the Year, asks only that the sky keep its appointments, and for six hundred years it has. Then the Ashduct hills breathe, and the ash does not stop for three winters. The court astronomer-priest <a href="../characters/severin.html">Severin</a> stretches the year's grace from three days to a season and carries every missed appointment forward like a debt; the beekeeper-king <a href="../characters/faustin.html">Faustin</a> melts down the kingdom's gold circlet for eleven days of bread. A week before the third spring's First Furrow, Severin posts a line no Reckoner has ever posted, one he cannot derive from his own tables: the sun will stand over the Threshing Round at the sixth hour, and the ash will part for it. It does, along a line so straight that nothing in the sky could have drawn it.</p>
           <p>The Standing Noon feeds a starving valley, and it has an outside. Bread is issued by name, from a single Roll compiled in three nights by the Reckoner's apprentices under <a href="../characters/piero.html">Piero</a>, a granary clerk's son who wanted nothing more than to count sacks. In the fourth column of the ninth parish book a copyist's lamp gutters, and three hundred and eleven people of the Saltway Quarter &mdash; northern guests and the Vallombran households that feed them &mdash; are never written down. Severin has already vanished from the tower at dusk, and the parish books are sealed under a law that nobody will be the first to call binding. Hungry Verrenhal marches south behind <a href="../characters/sigrid.html">Sigrid</a>, its Staff-Keeper, who takes one look at the edge of the light and says what no one in Vallombra will hear: nothing in the sky holds a line, so someone is holding this one. A herald's mistranslation of one phrase, the low hour, which means dusk to one nation and noon to the other, sends four thousand uncovered northerners across it in full sun, and for eleven minutes the wardens at the Saltway Gate loose into the glare.</p>
           <p>What follows is an accounting. Faustin ladles soup into the bowls of the men who came against him, and dies of the fever in them. <a href="../characters/marcello.html">Marcello</a>, the Order's first Examiner, reconciles the Roll and finds the missing column, the purchased names and a drift of unread petitions, and he and Piero promise to correct it in the open on the day the child queen <a href="../characters/livia.html">Livia</a> turns twenty-one. Meanwhile Piero needs a sentence strong enough to hold a kingdom together, and it hardens into the Decree of Luminescence: Vallombra becomes Illumaria, a windowless basilica of black marble rises over the Round, and the promised day is deferred, for good reasons, again and again. Each evening at the Gold the tower's book is signed with a single word, <em>Nil</em>. <em>The Decree of Luminescence</em> closes on a Cultivator's own archival log &mdash; Case Study 2,365: one dormant unit beneath a threshing-floor, a Custodian recalled the night he used it, and a record that moves the cause of the war from a clerk's lamp to a neighbor's envy.</p>""",
@@ -3412,10 +3419,12 @@ BOOKS = [
             "img": "characters/observer-419-1153-thumb.jpg",
             "html": "<p>The same Observer as <a href=\"../books/2140.html\">Case 2140</a>, posted next to Tavgora under cover as a clockmaker whose brass instruments never lose a second. He grafts the hand in three nights and is gone by the next dawn &mdash; then keeps watching, against the letter of a posting formally concluded, from a rented room two valleys away, until a column leaves a burning city by a goat track and he leaves a field on his form open for thirty-four seconds too long.</p>",
         },
-        "pages": EDITOR_PAGES,
+        "pages": "77",
         "google_books_url": "https://play.google.com/store/books/details?id=3IYZEgAAQBAJ",
-        "genre": EDITOR_GENRE,
-        "synopsis_html": EDITOR_SYNOPSIS,
+        "genre": "Fiction / Fantasy / Epic",
+        "synopsis_html": """<p>Sarkveti is a kingdom of terraces that believes anything worth having must be climbed for, and its temple keeps the rolls on which a prince's name becomes a fact. Before a prince can be entered on them he must survive the Proving: a rite of blunted blades, fought against a prince of his own blood. When <a href="../characters/levan.html">Levan</a>, the quiet King's son who would rather be in the physicians' wing, raises his guard against his cousin <a href="../characters/bagrat.html">Bagrat</a>, a badly re-buckled strap gives way and four inches of real steel come down across his left hand. That week a petition goes to the temple for Bagrat's provisional entry on the rolls; none goes for Levan, who is a boy deciding whether to live. Within a fortnight <a href="../characters/observer-419-1153.html">a clockmaker</a> from the lower market talks his way into the King's presence and, over three nights, fits the prince with <a href="../characters/the-eleven-fingered-hand.html">a grafted hand</a> of eleven fingers: two thumbs, four fingers in plain sight and five more folded flat behind them.</p>
+          <p>Levan spends eighteen years being gentle with it, as a physician, a teacher, and one of the worst lute players in Tavgora. When King <a href="../characters/guram.html">Guram</a> dies, <a href="../characters/vazha.html">Vazha</a>, his steward, keeps the dying man's quiet choice of heir to himself, and the temple's rolls hold an entry for Bagrat and none for Levan. The old <a href="../characters/the-doctrine-of-the-unbroken-hand.html">Doctrine of the Unbroken Hand</a> bars the maimed from the crown and is silent about a man given another hand, and Hierarch <a href="../characters/demna.html">Demna</a>, whose conviction is sincere and whose purse was filled by Bagrat three weeks earlier, rules that a false wholeness may not hold it. Bagrat is then carried home from a Vashtir campaign with a rotting sword arm, which his cousin saves in six hours of surgery. He offers to put Levan's name on the rolls himself and is told, &ldquo;I want no crown. I only wanted to see you stand.&rdquo; He cannot bear the debt. He challenges Levan to the Answer, fought with real steel, and watches the hand that could have ended him take his sword and let him go unmarked. In the dark afterward he finds in Demna's doctrine a way to want his cousin gone without calling it by its name, and spends the next months asking, in a grieving voice, for a Writ of Examination whose penalty clause he never reads.</p>
+          <p>The war takes a winter and part of a spring and a little under two thousand lives. Its first casualty is a wool-seller who never held an opinion about the Doctrine, and its breach is held by two soldiers who were both Levan's patients. When the third offer of surrender asks for the surgeon himself, <a href="../characters/otar.html">Otar</a> and eleven of his former patients lead him out of the city by a goat track on the night the outer wall falls. He lives thirty-one more years in Otsane as &lsquo;Mikel&rsquo;, a plain glove on his hand, and never goes back. Bagrat rules a further twenty-six, searches six of them, and keeps a carved wooden horse in a drawer. Sarkveti, which now owns a doctrine that can be used, is used by it, reign after reign, until Corvane absorbs what is left. <em>The Second Hand</em> closes on a Cultivator's own archival log &mdash; Case Study 1,153: one graft, one doctrine that survives its test, and an Observer who left a field on his form open thirty-four seconds too long.</p>""",
         "characters": [
             {
                 "slug": "levan", "name": "Levan",
@@ -4875,7 +4884,12 @@ def home_scenes_html():
 def index_body():
     n_chars = sum(len(b["characters"]) for b in BOOKS)
     n_scenes = sum(len(b["scenes"]) for b in BOOKS)
-    ledger = '<ul class="ledger-stats"><li><b>%d</b><span>Cases</span></li><li><b>%d</b><span>Subjects</span></li><li><b>%d</b><span>Records</span></li></ul>' % (len(BOOKS), n_chars, n_scenes)
+    # Each count links to its own index page (books.html = Cases, characters.html = Subjects, scenes.html = Records).
+    ledger = ('<ul class="ledger-stats">'
+              '<li><a href="books.html"><b>%d</b><span>Cases</span></a></li>'
+              '<li><a href="characters.html"><b>%d</b><span>Subjects</span></a></li>'
+              '<li><a href="scenes.html"><b>%d</b><span>Records</span></a></li>'
+              '</ul>') % (len(BOOKS), n_chars, n_scenes)
     sections = """    <section class="section wrap">
       <h2>Subjects</h2>
       <p>A few faces from each case &mdash; every subject has a file of their own.</p>
@@ -5107,8 +5121,12 @@ def book_detail_body(book):
         top_cta = '<div class="cta-row">%s</div>' % share
     standalone = ""
     if is_published(b):
-        standalone = ('<p class="standalone-note">Stands alone. No other case needs to be read first. '
-                      '<a href="%sindex.html#begin">Choose another by its promise</a>.</p>\n          ' % r)
+        links = ["<a href=\"%sbooks/%s.html\">%s</a> (%s)" % (r, o["slug"], o["case_tag"], o["title"])
+                 for o in (next((y for y in BOOKS if y["slug"] == s), None) for s in CONNECTED_CASES.get(b["slug"], []))
+                 if o]
+        connected = (" It is connected to %s." % " and ".join(links)) if links else ""
+        standalone = ('<p class="standalone-note">Stands alone. No other case needs to be read first.%s '
+                      '<a href="%sindex.html#begin">Choose another by its promise</a>.</p>\n          ' % (connected, r))
 
     case_tag_html = '<p class="case-tag">%s</p>\n          ' % b["case_tag"] if b.get("case_tag") else ""
 
@@ -5279,6 +5297,12 @@ def begin_html(depth=0):
 
 def featured_html():
     b = next(x for x in BOOKS if x["slug"] == "4555")
+    # Two buttons, in this order: 1. Open case, 2. Read on Google Books (the case's primary read link).
+    buttons = '<a class="btn btn--ink" href="books/%s.html">Open case</a>' % b["slug"]
+    read = read_buttons(b)
+    if read:
+        label, url = read[0]
+        buttons += ' <a class="btn btn--ink" href="%s" target="_blank" rel="noopener">%s</a>' % (url, label)
     return """    <section class="section wrap featured">
       <h2>Featured case</h2>
       <a class="featured-cover" href="books/%s.html"><img class="entry-cover" src="images/covers/%s" alt="Cover of %s"></a>
@@ -5286,10 +5310,10 @@ def featured_html():
         <p class="featured-label">%s</p>
         <h3 class="featured-title"><a href="books/%s.html">%s</a></h3>
         <p>%s</p>
-        <p><a class="btn btn--ink" href="books/%s.html">Open case</a></p>
+        <p class="featured-actions">%s</p>
       </div>
     </section>
-""" % (b["slug"], b["cover_file"], _esc(b["title"]), b["case_tag"], b["slug"], b["title"], b["hook"], b["slug"])
+""" % (b["slug"], b["cover_file"], _esc(b["title"]), b["case_tag"], b["slug"], b["title"], b["hook"], buttons)
 
 
 def filter_page_body(title, count, noun, ph, books, items, cls):
