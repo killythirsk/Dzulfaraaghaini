@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
-ten coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001) and four
+eleven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001, 4181) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -132,7 +132,7 @@ filename.
 - **A scene may carry an optional `"title"`.** `record_title()` uses it for the record's heading, page title and share title, and the record's own page then prints the full caption as a paragraph (`record-caption`). Without `"title"` nothing changes: the caption is still its own heading. The 15 Case 1268 records use it because their captions run to two or three sentences.
 
 **Update (2026-10-17, home counts, featured case, connected cases, metadata).** All in `tools/build_site.py` + `css/style.css`:
-- **The home hero's stats row (23 Cases / 374 Subjects / 197 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
+- **The home hero's stats row (24 Cases / 391 Subjects / 197 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
 - **The Featured Case block has two buttons, in this order: Open case, then Read on Google Books** (`featured_html()`, using `read_buttons()`, so it follows the case's primary read link and opens in a new tab). Layout is `.featured-actions` (a wrapping flex row; full-width stacked on phones).
 - **`CONNECTED_CASES`** (a dict just above `BOOKS`) makes a published case's "Stands alone" note add "It is connected to Case NNNN (Title)." It is set both ways for **4555 and 2365**, at the author's request; add a pair in both directions to connect others. This is separate from `RELATED_THEMES`, which only feeds the "Related Cases" panel.
 - **Metadata given by the author:** Case 4420 is 130 pages, genre *Fiction / Fantasy / Epic* (replacing the staging copy's `~123` estimate and suggested genre); Case 2365 genre is *Fiction / Fantasy / Historical*; Case 1153 is 77 pages, genre *Fiction / Fantasy / Epic*, with a synopsis written from manuscript revision 4 (the author pasted it). These three genres use the plain Google Books category form with slashes, unlike the older cases' dotted lists. The 1153 synopsis names the cover title, *The Second Hand*, not the manuscript title.
@@ -198,7 +198,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (374 total — 10 for
+/characters/<slug>.html    One page per character (391 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -206,7 +206,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 17 for the Sable Skin; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -307,7 +307,7 @@ when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
 records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247, 1268, 0202 and 3001 (both records each — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (4425) or only an empty coming-soon
-stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114) are not.
+stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114, 4181) are not.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -1494,6 +1494,90 @@ filed (the upload order was not the display order). Originals were not committed
 after reading the manuscript in full, then every italicised or quoted phrase in them was checked against it by
 script; what the script could not find is sheet-sourced and labelled as such.
 
+### Book: *The Sable Skin* (Case 4181)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-4181-sable-skin`, as a pull
+request rather than straight into `main`, from: the cover (`images/covers/4181.jpg`, tagline "Oath. Dust. Doorless.
+Uncounted. Mare.", used verbatim as the `hook`), 17 character sheets, one map (the Gazetteer) and the manuscript
+`Case_4181_The_Sable_Skin_2026-10-13_1415PM_GMT_7.md`, which was used for the bios only and is **not committed**
+(the repo is public). The author's brief was "add 4181 / gazetteer / the main character are higaide from 2231 so
+make sure to link him to 4181 and vice versa / 17 characters dossier attached / and last a cover". **`pages`,
+`genre` and `synopsis_html` are untouched `EDITOR_*` placeholders.** No scene paintings came with it, so
+`"scenes"` is empty. The cover and the manuscript agree on the title.
+
+The premise, from the manuscript (not author-confirmed jacket copy): an Observer, **614** ("the Black-Salt
+Peddler"), sells a journeyman smith in the Low Market of Marnholt, capital of the kingdom of Austrenne, a linen sack
+of black powder (2.16 kg, 144 horn-scoop measures, "black salt") for his last nine pennies. **Ansbert** of the Low
+Forge, his wife Hiltrude and his apprentice Lantfrid find that a scoop in the crucible makes a sword that does not
+break under the Hammer-Oath Guild's Third Stroke; the Guild dies, the Duke of Tarnwald's steward **Odilo** buys the
+swords and, with the King's Chancellor **Ricbert**, the clerk Marl's count of them, King **Theudebald** dies leaving a succession written with an
+ambiguous pronoun, and at the Ordeal two sound blades leave the Law with no verdict. The war ends on the Uncounted
+Day, the one unwritten day of the year, when a mercenary company of eighty sits down in the road and the Duke dies
+at the crown of the Nine Arches after a captain bars the great gate on a word it was never meant to carry.
+**Tomobe no Higaide**, the survivor of Case 2231 (a sword-captain of Himuro who touched the Stone and came out at
+Vilarnau), walks into the case as an "uncontrolled variable" (the Observer's own words) and ends entered on the
+Order's roll twice, as "Higa" and "idem". Religion: the Threefold Crown. The manuscript header says World 812-G is
+shared with Case 2,231 and is "the same world as Case 4,099, a different population".
+
+Seventeen characters have pages, the six principals first and then the rest in story order: `ansbert`, `wolfram`,
+`brun`, `wido`, `sigebert-marl`, `theudebald`, `rich-merchants-son`, `carters-wife`, `old-sot-by-the-fire`,
+`ruodhard`, `waldradas-nephew`, `ricbert`, `nailer`, `boy-with-the-basin`, `the-dukes-pages`, `sexton`, `gerold`.
+The `PRINCIPALS` entry is those six, a first pass, and the home cast wall takes the first six subjects in list
+order, so it shows the same six; the other eleven sit under "Additional Case Records".
+**There is no `catalyst` or `envoy` record**, because neither the sack nor Observer 614 came with a sheet, so
+neither the Cultivator nor the Catalyst roster lists 4181, and `catalyst`/`envoy` are simply omitted from the dict
+(`_class_of` and the roster code use `.get`, so this is safe).
+
+**How Higaide is linked, both ways.** He has no sheet and therefore no page, so the link is case-level and in
+prose. (a) `RELATED_THEMES` row `("4181", "2231", "Same stranger: ...")`: each case page shows the other as a
+Related Case with that reason. (b) The bios of `ansbert`, `brun`, `carters-wife`, `waldradas-nephew`, `wolfram` and
+`wido` link him, in plain text, to `books/2231.html` (and Ansbert's links the Stone to
+`characters/the-kiyote-pair.html`). (c) Two reciprocal sentences were added to 2231 bios: `observer-618` (Observer
+614 files him as "the surviving subject of Case 2,231, closed in the previous season by a different Custodian") and
+`the-kiyote-pair` (the Stone's end as he remembers it). (d) The Gazetteer's `appears_html` names both
+`books/4181.html` and `books/2231.html`, so its card shows on both case pages; the map draws Castelmaur, Vilarnau
+and Lasserra, which are 2231's places. (e) The Threefold Crown's `appears_html` gained a 4181 sentence that also
+points back at 2231 (Rothari's "He was merely early"). **If the author later sends Higaide's sheet, give him a
+page and link it from all of these.**
+
+Judgment calls worth knowing: (1) **Who is the main character.** The author calls Higaide the main character; the
+manuscript files him as an uncontrolled variable and builds the case around Ansbert's household. The pages follow
+the author where they use a word ("protagonist" in the RELATED_THEMES row and the Gazetteer), and otherwise
+describe what the manuscript shows. (2) **No sheet, so no page, so don't invent one:** Observer 614, the sack
+(Catalyst), Higaide, Hiltrude, Lantfrid, Gundobad Rotger the Guildmaster, Odilo the steward, Duke Waldo, Adalgund,
+Rothari, Hagen Brandt, Theodard, Ragnulf, Berthar and the one-eyed Lombard. They are named in the bios in plain text
+without links. (3) **Brun's age.** The sheet says "about 19 at the opening"; the manuscript has him walking the wheel
+for about three years, six more after the war, then dying "in his twenty-sixth year", which does not add up. The
+bio reports both. (4) **The copper penny.** Chapter 7 has Higaide give a copper penny to Waldrada's nephew for the
+news of a sermon; chapters 14 and 16 have the same penny in Lantfrid's left sleeve and returned by Hiltrude "as the
+coin he had once given a boy for the news of a sermon". Nothing says how it passed. The nephew's bio reports both.
+(5) **The map against the manuscript.** The map prints Marnholt apart at the cliff top and the High Town, Middle
+Town and Low Market as separate names; the manuscript makes Marnholt the whole city and the three its parts. The
+mountains and glacier at the head of the map are not in the manuscript. A bridge with a gate-tower, a forge with
+smoke and a hamlet with salt-pans are drawn without labels; the manuscript has a nine-arch bridge, the Low Forge and
+the Salt Landing. The Gazetteer reports all this in its text and does not say the unlabelled drawings are those
+places. (6) **Two sextons, one sheet.** The manuscript has a bell-loft sexton who tolls midnight and a "Hierarch's
+sexton" in the almonry yard who feeds Brun oats; the sheet draws one man and captions him both ways. The page joins
+them and says the manuscript does not. (7) **Two Odilos.** The steward of Tarnwald in this case shares a name with
+the Hierarch Odilo of 2231 and 0202; Gerold's bio says they are different men and links the Hierarch. (8) **Ages
+and looks are the sheets'** unless the manuscript gives them (Ansbert 41, Marl 35, Wolfram 33/34, Wido 23, Ricbert's
+thirty years in practice, Theudebald 63/64, the two pages' 15, the basin boy's 11); each bio says which is which.
+(9) **Theudebald's reign.** Chapter 1 has him ruling thirty-one years, chapter 12 and the sheet thirty-three. The bio
+says so. (10) **Higaide's chronology follows 2231's** (three months at Vilarnau, nineteen years at Lasserra, the Stone
+gone on the first morning of Averin); Case 0202 tells the end of the Stone differently and is already flagged as
+unreconciled on the Kiyote Pair's page. 4181 was **not** tied to 0202 or to 4099 on the site, although the manuscript
+says the same world as 4099; 4181 does share the Threefold Crown with 0202 and shows it as a Related Case there.
+Ask the author whether to add either link. (11) **"Sisuka."** The manuscript's dawn-word is a woman's name, and 2231's
+Shizuka is not connected to it anywhere; no page makes the connection. (12) **Pull-quotes** are all the manuscript's
+own words (checked by script; three differ only in trailing punctuation: "I will think," "Feed the ox," and "I
+thought of it three times,"), except where a bio says it is the sheet's. (13) **Principals** are a first pass, picked by how much of the
+plot each carries; the author may want a different six. (14) Images: cover 900x1350; sheets and a
+thumb for each of the 17 slugs; map `images/maps/sable-skin.jpg` with a 450w thumb; share images
+`images/share/cover-4181.jpg` and `map-sable-skin.jpg`; every sheet was identified from its title strip before it
+was filed (the upload order was not the display order). Originals were not committed. (15) The bios were written
+after reading the manuscript in full, then every quoted or italicised phrase in them was checked against it by
+script; what the script could not find is sheet-sourced and labelled as such.
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1657,6 +1741,11 @@ sit at the end of `BOOKS`, in the order the author listed them.
   The people the manuscript names with a real part to play all
   have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
   raiders do not, and shouldn't be invented one by one.
+- **Case 4181** (*The Sable Skin*) is coming-soon with a 17-character cast and a gazetteer, but no catalyst
+  or envoy record, page count, genre, synopsis, records or purchase link (§6). Higaide is the protagonist per the
+  author but has no sheet, so no page: he is linked to and from Case 2231 at case level (§6). Observer 614, the
+  sack and most of the named cast have no sheet either. The map's Marnholt differs from the manuscript's, Brun's
+  sheet age does not fit the manuscript, and the copper penny is told two ways; all flagged in §6.
 - **Case 3001** (*The Uncounted Dinar*) is coming-soon with a 13-character cast and both roster
   records, but no page count, genre, synopsis, records or purchase link (§6). The cover's tagline
   reads "Rice", probably a typo for "Price"; the sheets' owner counts for Nur and Qasim, Sulayman's
@@ -1735,7 +1824,21 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 3001 added — branch `case-3001`, pull request, 2026-10-15).**
+- **Latest update (Case 4181 added — branch `case-4181-sable-skin`, pull request, 2026-10-17/18).**
+  The author sent the cover (`41810_5x.jpg`), the manuscript, one map and 17 character sheets, with "add 4181 /
+  gazetter / the main character are higaide from 2231 so make sure to link him to 4181 and vice versa / 17
+  characters dossier attached / and last a cover". Done: a full `4181` dict (17 `characters`, no `catalyst` or
+  `envoy`, no scenes; `pages`, `genre` and `synopsis_html` left as the `EDITOR_*` placeholders), a `PRINCIPALS`
+  entry, one `RELATED_THEMES` row (4181 with 2231, same stranger), a new `sable-skin` Gazetteer `LORE` entry, one
+  sentence in the Threefold Crown lore, and two reciprocal sentences on 2231 bios (`observer-618`,
+  `the-kiyote-pair`). Images: 1 cover, 34 character files, the map and its thumb, 2 share images. Recount after
+  rebuilding: cases 23 -> 24, characters 374 -> 391, records 197 (unchanged), sitemap 609 -> 628; every local link
+  resolves (22,086 checked), no duplicate character slugs, and the new and changed pages were opened in Chromium at
+  desktop and phone width with no horizontal overflow. Only files that really changed were committed; the
+  footer-stamp-only pages were left alone, as before. The manuscript and the original images were not committed.
+  **Open questions for the author** are the numbered judgment calls in §6, first among them whether Higaide gets a
+  sheet of his own, and the three that touch the manuscript (Brun's age, the copper penny, the map's Marnholt).
+- **Earlier update (Case 3001 added — branch `case-3001`, pull request, 2026-10-15).**
   The author sent the cover (`30010_5x.jpg`), the manuscript (revision 6) and 13 character sheets, with "read
   repo, add 3001". Done: a full `3001` dict (13 `characters`, `catalyst` The Dinar, `envoy` Observer 1140, no
   scenes; `pages`, `genre` and `synopsis_html` left as the `EDITOR_*` placeholders), a `PRINCIPALS` entry and one `RELATED_THEMES` row (3001 with 0202, same
