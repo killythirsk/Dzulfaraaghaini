@@ -23,10 +23,10 @@ cover, synopsis, a full cast of 13 characters, a 4-image
 scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Five more are live but not described in detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
 of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
-gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88 and a genre of Fiction / Fantasy / Historical) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records, a working "Read on Google Books" link, 77 pages, genre Fiction / Fantasy / Epic and a synopsis). Nine further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
+gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88 and a genre of Fiction / Fantasy / Historical) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records, a working "Read on Google Books" link, 77 pages, genre Fiction / Fantasy / Epic and a synopsis). Ten further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
 0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
 (*Independent Observation*, with 11 subjects, 15 records and a cover), 0202 (*Fossa*, with 27 subjects and 10 records) and 3001
-(*The Uncounted Dinar*, with 13 subjects and a cover), are
+(*The Uncounted Dinar*, with 13 subjects and a cover) and 4181 (*The Sable Skin*, with 17 subjects, a cover and a gazetteer), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has eight entries: Cultivator (listing every Envoy) and
@@ -442,3 +442,22 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals (counted after the rebase onto `main`, which now holds Case 0202): cases 22 -> 23, characters (subjects) 361 -> 374, records 197 (unchanged); pages in sitemap 595 -> 609. Every local link resolves (21,391 checked), and the new and changed pages were opened in Chromium at desktop and phone width with no broken images. **Open questions for the author** are listed in the Case 3001 write-up in `AI-HANDOFF.md` §6; the first is that the cover's tagline reads "RICE." where the manuscript's word is probably "Price". Also flagged there: Ibrahim ibn Nasr's age is 38 on Case 0202's sheet but about 55 by the 3001 manuscript, and `books/0202.html` does not list 3001 as a related case because of the existing six-card cap.
+
+### [PENDING] Update — Case 4181 (*The Sable Skin*): new 17-subject case and a gazetteer, linked to Case 2231 through Higaide
+
+On branch `case-4181-sable-skin`, as a pull request rather than straight into `main`, because other sessions work on the repo. The author sent the cover (`41810_5x.jpg`), the manuscript (`Case_4181_The_Sable_Skin_2026-10-13_1415PM_GMT_7.md`), one map and 17 character sheets, asking to add 4181, a gazetteer, and to link Higaide (the main character, carried over from Case 2231) to 4181 "and vice versa". The manuscript was read for the bios only and is **not committed** (the repo is public); neither are the original images.
+
+Added:
+- `books/4181.html` — Case 4181, coming-soon (no purchase link, page count, genre, synopsis, records, catalyst or envoy; the last two because no sheet came for Observer 614 or the sack)
+- `characters/` — 17 pages, the six principals first and then the rest in story order: ansbert, wolfram, brun, wido, sigebert-marl, theudebald, rich-merchants-son, carters-wife, old-sot-by-the-fire, ruodhard, waldradas-nephew, ricbert, nailer, boy-with-the-basin, the-dukes-pages, sexton, gerold
+- `lore/sable-skin.html` — Gazetteer of the Sable Skin (11 labelled places; its card shows on both the 4181 and 2231 case pages)
+- `images/covers/4181.jpg`; `images/characters/` — 34 files (a sheet and a `-thumb` for each of those 17 slugs); `images/maps/sable-skin.jpg` and `sable-skin-thumb.jpg`; `images/share/cover-4181.jpg` and `map-sable-skin.jpg` (square link previews, made by `tools/make_share_images.py`)
+
+Edited:
+- `tools/build_site.py` — a full `4181` `BOOKS` entry, a `PRINCIPALS` entry, a `RELATED_THEMES` row (4181 with 2231: Higaide), the `sable-skin` `LORE` entry, a 4181 sentence in the Threefold Crown lore, and reciprocal sentences on the 2231 `observer-618` and `the-kiyote-pair` bios
+- `books.html`, `books/2231.html` (a gazetteer card and a Related Cases card), `characters.html`, `characters/observer-618.html`, `characters/the-kiyote-pair.html`, `index.html` (counts and cast wall), `lore.html`, `lore/threefold-crown.html`, `sitemap.xml` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 4181 in §6 (with the judgment calls), counts, §7 bullet, §8 entry
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals (counted after rebuilding on `main`): cases 23 -> 24, characters (subjects) 374 -> 391, records 197 (unchanged); pages in sitemap 609 -> 628. Every local link resolves (22,086 checked), and the new and changed pages were opened in Chromium at desktop and phone width with no horizontal overflow. **Open questions for the author** are listed in the Case 4181 write-up in `AI-HANDOFF.md` §6; the first is whether Higaide gets a sheet of his own (he has no page, so the link is case-level). Also flagged there: Brun's sheet age does not fit the manuscript, the copper penny is told two ways, and the map's Marnholt differs from the manuscript's.
