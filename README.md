@@ -23,10 +23,10 @@ cover, synopsis, a full cast of 13 characters, a 4-image
 scene gallery, and a working "View on Google Books" link, and a confirmed page count (109). Five more are live but not described in detail here: *The Vessel of the Betrayed Host* (Case 4420), *The Vessel
 of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
-gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88 and a genre of Fiction / Fantasy / Historical) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records, a working "Read on Google Books" link, 77 pages, genre Fiction / Fantasy / Epic and a synopsis). Ten further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
+gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88 and a genre of Fiction / Fantasy / Historical) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records, a working "Read on Google Books" link, 77 pages, genre Fiction / Fantasy / Epic and a synopsis). Eleven further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
 0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
 (*Independent Observation*, with 11 subjects, 15 records and a cover), 0202 (*Fossa*, with 27 subjects and 10 records) and 3001
-(*The Uncounted Dinar*, with 13 subjects and a cover) and 4181 (*The Sable Skin*, with 54 subjects, 15 records, a cover and a gazetteer), are
+(*The Uncounted Dinar*, with 13 subjects and a cover) 4181 (*The Sable Skin*, with 54 subjects, 15 records, a cover and a gazetteer) and 0277 (*The Uncounted Variable*, with 21 subjects, 15 records and a cover), are
 marked coming-soon but already carry character rosters, and four
 more (3312, 3887, 4442, 2114) are cover-only coming-soon entries. The
 Lore glossary has eight entries: Cultivator (listing every Envoy) and
@@ -479,3 +479,22 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals (counted after rebuilding): cases 24 (unchanged), characters (subjects) 391 -> 428, records 197 -> 212; pages in sitemap 628 -> 680. Every local link resolves (25,901 checked), and the new and changed pages were opened in Chromium at desktop and phone width. `pages`, `genre` and `synopsis_html` are still placeholders. **Open questions for the author** are in `AI-HANDOFF.md` §6 ("37 + 15" block): the Eschwin Aunt's sheet draws the Countess as a fair young woman in blue, against Adalgund's own sheet; Brun's age; Rothari's bedding stair; and a few identifications the pages still hedge.
+
+### [PENDING] Update — Case 0277 (*The Uncounted Variable*): new 21-subject case with 15 records
+
+On branch `case-0277`, as a pull request rather than straight into `main`, because other sessions work on the repo. The author sent the cover (`02770.5x.jpg`), the manuscript (`Case_0277_The_Uncounted_Variable_2026-10-17_0648AM_GMT7.md`, revision 4) and 18 character sheets ("ADD CASE 0277 : THE UNCOUNTED VARIABLE"), then four more sheets (Emmerich, The Hush, Rosalind and a re-rendered Vara), 12 scene paintings and a character-reference file ("more character dossier for 0277 and scene / add MD file for context / continue"), then 5 more scene paintings ("second batch of the scene, continue"). The manuscript, the character-reference file and the original images are **not committed** (the repo is public). The reference file was used for context only.
+
+Added:
+- `books/0277.html` — Case 0277, coming-soon (no purchase link, page count, genre or synopsis)
+- `characters/` — 21 pages: hildegund, vara-0277, otwin, reinolt, frida, ulrich, sigward-0277, gero, adalger, hagen, gertrud, oderic, osgerd, baldric, the-under-cook, emmerich, rosalind, erchanbald, the-hush, the-hereditary-marker (the Catalyst), the-auditor (the Cultivator Envoy)
+- `records/` — 15 pages, in chapter order: the-second-stair, the-corridor-at-vahlreth, the-second-river, the-low-table, a-bowl-of-unshelled-peas, twenty-men-at-the-ford, the-gate-of-hartenmark, before-the-questions, tea-before-chairs, twelve-who-did-not-walk-back, a-wrongness-in-the-wine, the-window-three-floors-up, behind-the-old-armory, a-cup-of-hot-water, are-you-the-queen-now
+- `images/covers/0277.jpg`; `images/share/cover-0277.jpg` (square link preview, made by `tools/make_share_images.py`); `images/characters/` — 42 files (a sheet and a `-thumb` for each of those 21 slugs); `images/scenes/` — 30 files (a 1000 px picture and a `-grid` for each record)
+
+Edited:
+- `tools/build_site.py` — a full `0277` `BOOKS` entry (21 characters, 15 scenes, `catalyst`, `envoy`), a `PRINCIPALS` entry, a `RELATED_THEMES` row (0277 with 0202: Vara), one sentence each in the Cultivator, Catalyst, Faith of Ardwen and Threefold Crown lore, and a reciprocal paragraph on the 0202 `vara` bio
+- `books.html`, `characters.html`, `scenes.html`, `index.html`, `sitemap.xml`, `characters/vara.html`, `lore/cultivator.html`, `lore/catalyst.html`, `lore/faith-of-ardwen.html`, `lore/threefold-crown.html`, and the Related Cases cards on `books/0000.html`, `0156`, `0157`, `0188`, `0202`, `0247`, `1153` and `1268` — regenerated from the script
+- `AI-HANDOFF.md` — Book write-up for 0277 in §6 (with the judgment calls), counts, §7 bullet, §8 entry
+- `README.md` — this entry and the "Where things stand" paragraph
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals (counted after rebasing onto `main`, which now holds the extra Case 4181 subjects): cases 24 -> 25, characters (subjects) 428 -> 449, records 212 -> 227; pages in sitemap 680 -> 717. Every local link resolves (26,007 checked), there are no duplicate character slugs, every quoted or italicised phrase in the new bios and captions was checked against the manuscript by script, and the new and changed pages were opened in Chromium at desktop and phone width with no broken images and no horizontal overflow. A separate reader then checked every bio and caption against the manuscript and found 15 slips (for example "four working notes" where the manuscript has three plus the closing log, and Otwin credited with the Unbroken Blood "on his side" when it is his obstacle); all were fixed. `pages`, `genre` and `synopsis_html` are still placeholders. **Open questions for the author** are in the Case 0277 write-up in `AI-HANDOFF.md` §6; the first is whether the Vara of this case and the Vara of Case 0202 are one person (the pages link them as an inference).
