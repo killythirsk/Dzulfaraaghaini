@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
-eleven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001, 4181) and four
+twelve coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001, 4181, 0277) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -132,7 +132,7 @@ filename.
 - **A scene may carry an optional `"title"`.** `record_title()` uses it for the record's heading, page title and share title, and the record's own page then prints the full caption as a paragraph (`record-caption`). Without `"title"` nothing changes: the caption is still its own heading. The 15 Case 1268 records use it because their captions run to two or three sentences.
 
 **Update (2026-10-17, home counts, featured case, connected cases, metadata).** All in `tools/build_site.py` + `css/style.css`:
-- **The home hero's stats row (24 Cases / 443 Subjects / 212 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
+- **The home hero's stats row (25 Cases / 464 Subjects / 227 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
 - **The Featured Case block has two buttons, in this order: Open case, then Read on Google Books** (`featured_html()`, using `read_buttons()`, so it follows the case's primary read link and opens in a new tab). Layout is `.featured-actions` (a wrapping flex row; full-width stacked on phones).
 - **`CONNECTED_CASES`** (a dict just above `BOOKS`) makes a published case's "Stands alone" note add "It is connected to Case NNNN (Title)." It is set both ways for **4555 and 2365**, at the author's request; add a pair in both directions to connect others. This is separate from `RELATED_THEMES`, which only feeds the "Related Cases" panel.
 - **Metadata given by the author:** Case 4420 is 130 pages, genre *Fiction / Fantasy / Epic* (replacing the staging copy's `~123` estimate and suggested genre); Case 2365 genre is *Fiction / Fantasy / Historical*; Case 1153 is 77 pages, genre *Fiction / Fantasy / Epic*, with a synopsis written from manuscript revision 4 (the author pasted it). These three genres use the plain Google Books category form with slashes, unlike the older cases' dotted lists. The 1153 synopsis names the cover title, *The Second Hand*, not the manuscript title.
@@ -186,7 +186,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twenty-three entries: nine published, fourteen coming-soon — see §6)
+/books.html             Full book list (currently twenty-five entries: nine published, sixteen coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -198,7 +198,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (443 total — 10 for
+/characters/<slug>.html    One page per character (464 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -206,7 +206,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 54 for the Sable Skin; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -1093,8 +1093,7 @@ Checks run after rebuilding: 18,419 local links all resolve, no duplicate charac
 sitemap 490 -> 529, key pages opened in Chromium with no broken images. Totals: characters 298 -> 323,
 records 158 -> 172.
 
-**Update: 15 more Subjects and the Catalyst thumbnail (branch `case-2231-more-subjects`, pull request stacked on
-`case-4181-more-subjects`, 2026-10-22/23).** The author said the Kiyote Pair's thumbnail on the Catalyst page "is not
+**Update: 15 more Subjects and the Catalyst thumbnail (branch `case-2231-more-subjects`, pull request, 2026-10-22/23).** The author said the Kiyote Pair's thumbnail on the Catalyst page "is not
 right" and sent 15 more character sheets, with the manuscript (revision 7) "for context". Case 2231 now has **58
 Subjects and 14 Records**. New Subjects, in roster order: `higaide` (the protagonist, placed right after the Kiyote
 Pair), `priests-boys-of-mikusa`, `arikuni`, `yasutsugu`, `tamenaga`, `the-examiners-report` (an object, the Bureau's
@@ -1127,8 +1126,8 @@ Arikuni 66 and 71, Tamenaga about 75 and 80 at death, Narimune 40 and 42, are th
 Witness, the Two Ministers and the Miller's Widow had "no sheet, so no page" was wrong about the last five: they are
 2231's `boy-sovereign-of-himuro`, `kiyomaro`, `soroku`, `arikuni` and `sukenori`, and `ermengarda`; corrected in the
 4181 block below. Images: `images/characters/<slug>.jpg` (980w) and `-thumb.jpg` (320w), progressive JPEG Q85, each
-identified by its title strip. Recount: characters 428 -> 443, records 212 (unchanged), sitemap 680 -> 695; every
-local link resolves (25,306 checked), no duplicate slugs; Higaide's, the Catalyst, the case, a record and Peire's pages
+identified by its title strip. Recount after merging `main` (which had gained Case 0277) and rebuilding: characters 449 -> 464, records 227 and
+cases 25 (unchanged), sitemap 717 -> 732; every local link resolves (26,870 checked), no duplicate slugs; Higaide's, the Catalyst, the case, a record and Peire's pages
 were opened in Chromium at desktop and phone width with no horizontal overflow. `pages`, `genre` and `synopsis_html` are
 still `EDITOR_*` placeholders.
 
@@ -1676,6 +1675,89 @@ Boy-Sovereign, the Child of Himuro, the Hired Witness, the Two Ministers, the Mi
 (`boy-sovereign-of-himuro`, `kiyomaro`, `soroku`, `arikuni`, `sukenori`, `ermengarda`), and Higaide has one too
 (`higaide`, 2231).
 
+### Book: *The Uncounted Variable* (Case 0277)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-0277`, as a pull request rather
+than straight into `main`, from: the cover (`images/covers/0277.jpg`, tagline "Arithmetic. Shrimp. Unimportance.
+Twenty-One. Chancellor.", used verbatim as the `hook`), 18 character sheets, then (a second drop) 3 more sheets and a
+re-rendered Vara, 12 scene paintings and `character_reference.md`, then (a third drop) 5 more scene paintings, and the
+manuscript `Case_0277_The_Uncounted_Variable_2026-10-17_0648AM_GMT7.md` (revision 4), which was used for the bios and
+is **not committed** (the repo is public), nor are the original images. The author's briefs were "ADD CASE 0277 : THE
+UNCOUNTED VARIABLE", "more character dossier for 0277 and scene / add MD file for context / continue" and "second
+batch of the scene, continue". The reference file was used for context only (what a sheet draws) and is **not
+committed**. **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*` placeholders.** The cover and the
+manuscript agree on the title.
+
+The premise, from the manuscript (not author-confirmed jacket copy): Vahlreth falls over eleven days (the 9th to the
+19th of Havren) to the duke **Otwin**, three months after King **Sigward** was poisoned. His daughter **Hildegund**,
+seventeen and unanointed, is the one obstacle under Vahlreth's own law, the Unbroken Blood, which voids a ducal claim
+while a drop of the king's line breathes uncrowned. Her blood carries a "thinness" (the Catalyst, **The Hereditary
+Marker**, class Mythic): in great fright it strikes through every branch that ends with her dead and leaves her the
+one number remaining. It wakes in a burning corridor; the manuscript counts five confirmed activations. She flees
+with the guard **Reinolt** to a pale hermit, **Vara**, who looks thirty, eats salted river shrimp and kills twenty
+men at a ford and twelve in a clearing without ever giving anyone a true number. She reaches her uncle **Ulrich**'s
+Hartenmark, spends nine years learning to rule through ledgers (from a windowless room off the treasury), survives
+seven attempts (arrow, ford, clearing, wine, flagstone, carriage wheel, the Hush) and is recognised by six
+chancellories and crowned. The Envoy is **The Auditor** ("Terrarium 0277-Vahlreth"), who never makes contact, files
+three unfiled working notes and a closing log, and cannot categorise the variable. Religion: the Faith of Ardwen (the
+Vigil) and, through Otwin, the Threefold Crown.
+
+The cast: 21 subjects, in this order, the six principals first: `hildegund`, `vara-0277`, `otwin`, `reinolt`, `frida`,
+`ulrich`, `sigward-0277`, `gero`, `adalger`, `hagen`, `gertrud`, `oderic`, `osgerd`, `baldric`, `the-under-cook`,
+`emmerich`, `rosalind`, `erchanbald`, `the-hush`, `the-hereditary-marker`, `the-auditor`. The `PRINCIPALS` entry
+is `hildegund`, `vara-0277`, `otwin`, `reinolt`, `the-hereditary-marker`, `the-auditor`, a first pass. The Catalyst
+and the Envoy both have records, so the Cultivator and Catalyst rosters list 0277 and their lore text gained one
+sentence each. **Records:** 15, in chapter order, each with a `title` (sentence case), an `alt` that describes the
+painting and a 41-53 word `caption_html` that links the subject pages: `the-second-stair`, `the-corridor-at-vahlreth`,
+`the-second-river`, `the-low-table`, `a-bowl-of-unshelled-peas`, `twenty-men-at-the-ford`, `the-gate-of-hartenmark`,
+`before-the-questions`, `tea-before-chairs`, `twelve-who-did-not-walk-back`, `a-wrongness-in-the-wine`,
+`the-window-three-floors-up`, `behind-the-old-armory`, `a-cup-of-hot-water`, `are-you-the-queen-now`. Images are
+`images/scenes/<slug>.jpg` (1000 px long edge) and `-grid.jpg` (450 px); sheets are 980w with a 320w `-thumb`; the
+cover is 900x1350 and the square share image is `images/share/cover-0277.jpg`.
+
+Cross-links: `RELATED_THEMES` row `("0277", "0202", "Same hermit, on inference: ...")`; a reciprocal paragraph on the
+0202 `vara` bio (`characters/vara.html`); one sentence each in the `cultivator`, `catalyst`, `faith-of-ardwen` and
+`threefold-crown` lore (Emmerich, the Keeper of Hartenmark's "sign worth remembering", Otwin's "unmarried cousin" of
+a faith); and the automatic Related Cases (same catalyst class or faith) now show 0277 on `books/0000`, `0156`,
+`0157`, `0188`, `0247`, `1153` and `1268`.
+
+Judgment calls worth knowing: (1) **Vara of 0277 and Vara of 0202 are one person only on inference.** Same name, pale
+and thirty-looking, river shrimp, and the sheets match; neither manuscript says so. Both pages say it is an
+inference. If the author says they are or are not the same, edit the 0202 `vara` bio and the `RELATED_THEMES`
+row. (2) **Two Vara sheets.** The first drop's sheet (with a staff) was replaced by the re-rendered sheet from the
+second drop; the first was not kept. (3) **Slug collisions** (character slugs are one global namespace):
+`sigward-0277` (the Triarch Sigward of Case 1268 is `sigward`; the bio says they are different men) and
+`vara-0277` (0202's is `vara`). Hagen is `hagen`, not Hagen Brandt of 4181 (`hagen-brandt`). (4) **Hagen is Sigward's
+poisoner.** The manuscript's revision note says so, Chapter 13 has the supplier "once in a king's cup and once on a
+riverbank" and Chapter 23 "a riverbank poisoner named Hagen"; the bios read the chapters together. (5) **The Hush.**
+The sheet calls the night "the fifth and final attempt"; the manuscript's own tally is seven, with the Hush last.
+His appearance is unknown in-universe, the sheet says so, and his page says the sheet's face is not a likeness. (6)
+**Frida:** the sheet says "lady's maid", the Cast List says chambermaid (the page uses the manuscript's word and
+says the other is the sheet's); her sheet age is 26. **Adalger:** the sheet says royal guard, the Cast List says
+soldier. **Reinolt:** the Cast List says "Guard" (only Gero is "Royal Guard"); his sheet labels a forearm scar
+"poisoned-arrow", where the manuscript puts the arrow in his shoulder and the cut on his forearm at the ford. (7)
+**Paintings against the manuscript.** The low-table painting shows Reinolt with a bandaged forearm, which the
+manuscript gives him only later, at the ford. The ford painting shows Reinolt crouched with Hildegund, where the
+manuscript has him fighting beside Vara; the "twelve" painting shows Hildegund and Frida crouched behind a shield,
+which the manuscript does not stage. The captions follow the manuscript and the `alt` text describes the picture.
+(8) **The Auditor** has no pronoun and no body in the manuscript, and the page follows it; the sheet's grey humanoid is
+labelled the sheet's. The manuscript has **three** "Auditor's working note" interludes and the closing "Interlude
+IV - Archival Log" (which holds the Custodian Diagnostic Log), so the pages say three working notes and a closing log.
+(9) **Gero's pull-quote** ("Time takes the body, not the oath.") is the sheet's, not the manuscript's, and his page
+says so. (10) **No sheet, so no page:** Wendel and Berthold (the two men-at-arms), the serving girl and the
+carriage driver. (11) **Ages and looks are the sheets'** unless the manuscript gives them (Hildegund 17 at the fall,
+26 at the shack visit and about 30 at the crowning are the manuscript's); each bio says which is which. (12)
+**Quotes:** every quoted or italicised phrase in the bios and captions was checked against the manuscript by script;
+the only three not found are the sheet's own ("lady's maid", "poisoned-arrow", Gero's line) and are labelled. (13)
+**A fact-check by a separate reader** against the manuscript, after the first build, found 15 slips (for example
+"four working notes", "the only child of Sigward", the Unbroken Blood "on his side", Reinolt "watching" the ford,
+a "treasury clerk" Oderic, Frida "within four years"); all were fixed and the pages rebuilt. A few borderline
+phrasings were left: Hildegund's bio says Gero "has already decided to stay" at the second stair, which follows
+Chapter 1's "already decided ... that the arithmetic of his own life had come out roughly even". (14) **Principals**
+are a first pass; the author may want a different six. (15) While this was being built `main` moved (the extra Case
+4181 subjects merged), so the work was rebased onto it and rebuilt; the only conflict was in the Threefold Crown
+lore sentence, resolved by keeping both.
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1839,6 +1921,10 @@ sit at the end of `BOOKS`, in the order the author listed them.
   The people the manuscript names with a real part to play all
   have pages; groups such as the three court doctors, the eleven escorts and the Vashtir
   raiders do not, and shouldn't be invented one by one.
+- **Case 0277** (*The Uncounted Variable*) is coming-soon with a 21-subject cast, 15 records, a Catalyst and an Envoy
+  record (so both lore rosters list it), but no page count, genre, synopsis or purchase link (§6). The Vara of this case
+  is linked to the Vara of Case 0202 on inference only; the Hush's "fifth" attempt, Frida's lady's-maid label, the
+  low-table painting's bandaged forearm and the ford painting's Reinolt differ from the manuscript; all flagged in §6.
 - **Case 4181** (*The Sable Skin*) is coming-soon with a 54-subject cast, 15 records and a gazetteer, but no catalyst
   or envoy record, page count, genre, synopsis or purchase link (§6). Higaide is the protagonist per the
   author; his page is `higaide` in Case 2231, linked from here and back (§6). Observer 614 and the
@@ -1923,18 +2009,34 @@ sit at the end of `BOOKS`, in the order the author listed them.
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
 - **Latest update (more subjects for Case 2231 and the Kiyote Pair thumbnail — branch `case-2231-more-subjects`, pull
-  request stacked on `case-4181-more-subjects`, 2026-10-22/23).** The author wrote "2231 / add the kiyote pair thumbnail
+  request, 2026-10-22/23).** The author wrote "2231 / add the kiyote pair thumbnail
   is not right / add these dossier to 2231 please / manuscript added for context", with a screenshot of the Pair's
   card and 15 character sheets. Done: the Catalyst roster image is now `characters/the-kiyote-pair-thumb.jpg`; 15 new
   `characters` in the `2231` dict (Higaide first, after the Kiyote Pair), `higaide` added to `PRINCIPALS["2231"]`, new
   names linked at first mention across the 2231 and 0202 text, Higaide's `books/2231.html` links in the 4181 block repointed to his page,
   a rewritten 4181 `peire` second paragraph, Lo Rog links in Brun's bio and a record caption, and the wrong "no sheet"
-  sentences in the 4181 block corrected. Images: 30 character files. Recount after rebuilding: characters 428 -> 443,
-  records 212 (unchanged), sitemap 680 -> 695; every local link resolves (25,306 checked), no duplicate slugs, key pages opened in Chromium at desktop and phone width.
+  sentences in the 4181 block corrected. Images: 30 character files. Recount after merging `main` (which had
+  gained Case 0277) and rebuilding: characters 449 -> 464, records 227 and cases 25 (unchanged), sitemap 717 -> 732; every
+  local link resolves (26,870 checked), no duplicate slugs, key pages opened in Chromium at desktop and phone width.
   Only files that really changed were committed; the footer-stamp-only pages were left alone. The manuscript and the
   original images were not committed. **Open questions for the author** are the discrepancies in the 15-subject block in
   §6: Higaide's departure year, Peire's two sheets, Elis's lineage, the Examiner's report's shelf-time, the two unlabelled
   men on the Sōroku and Plum Gate sheets, and the Priests' Boys count.
+- **Earlier update (Case 0277 added — branch `case-0277`, pull request, 2026-10-21/23).**
+  The author sent the cover, the manuscript (revision 4) and 18 character sheets ("ADD CASE 0277 : THE UNCOUNTED
+  VARIABLE"), then 4 more sheets, 12 scene paintings and a character-reference file ("more character dossier for
+  0277 and scene / add MD file for context / continue"), then 5 more scene paintings ("second batch of the scene,
+  continue"). Done: a full `0277` dict (21 `characters`, 15 `scenes`, `catalyst` The Hereditary Marker, `envoy` The
+  Auditor; `pages`, `genre` and `synopsis_html` left as the `EDITOR_*` placeholders), a `PRINCIPALS` entry, one
+  `RELATED_THEMES` row (0277 with 0202, same hermit on inference), one sentence each in the Cultivator, Catalyst,
+  Faith of Ardwen and Threefold Crown lore, and a reciprocal paragraph on the 0202 `vara` bio. Images: 1 cover, 1
+  share image, 42 character files, 30 scene files. Recount after rebasing onto `main` (which had gained the extra
+  4181 subjects) and rebuilding: cases 24 -> 25, characters 428 -> 449, records 212 -> 227, sitemap 680 -> 717; every
+  local link resolves (26,007 checked), no duplicate character slugs, every quoted phrase checked against the
+  manuscript by script, a separate reader's 15 corrections applied, and the new and changed pages opened in Chromium
+  at desktop and phone width. Only files that really changed were committed; the footer-stamp-only pages were left
+  alone. The manuscript, the character-reference file and the original images were not committed. **Open questions
+  for the author** are the numbered judgment calls in §6, first among them whether the two Varas are one person.
 - **Earlier update (more subjects and records for Case 4181 — branch `case-4181-more-subjects`, pull request, 2026-10-21/22).**
   The author sent 20 and then 17 more character sheets for 4181, then 15 scene paintings and the case's
   publication-prep file ("this is the scene for 4181, and publication file for context / continue"). Done: 37 new
