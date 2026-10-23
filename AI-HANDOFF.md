@@ -1471,8 +1471,9 @@ promise in the shape of the other published cases), 13 character sheets and the 
 `Case_3001_The_Uncounted_Dinar_2026-10-14_1712PM_GMT_7.md` (revision 6), which was used for the bios only and is
 **not committed** (the repo is public). **On 2026-10-23 `pages`, `google_books_url`, `hook` and `synopsis_html` were
 set (the three-paragraph synopsis is written from manuscript revision 6; the author asked for the synopsis and
-the "Where to begin" line, and the home page's "Where to begin" entry is generated from the `hook`). `genre` is
-still the `EDITOR_GENRE` placeholder: the author has not given one.** No scene paintings came with it, so `"scenes"` is empty. The cover and the manuscript agree on the
+the "Where to begin" line, and the home page's "Where to begin" entry is generated from the `hook`). `genre` was
+set later the same day, when the author chose it (*Fiction / Fantasy / Epic*); it also shows in the home page's
+"Where to begin" entry.** No scene paintings came with it, so `"scenes"` is empty. The cover and the manuscript agree on the
 title.
 
 The premise, from the manuscript (not author-confirmed jacket copy): a Cultivator Envoy, **Observer 1140** ("the
@@ -1936,7 +1937,7 @@ sit at the end of `BOOKS`, in the order the author listed them.
   sack have no sheet, so no page. The map's Marnholt differs from the manuscript's, Brun's
   sheet age does not fit the manuscript, and the copper penny is told two ways; all flagged in §6.
 - **Case 3001** (*The Uncounted Dinar*) is published (Google Books, 65 pages; synopsis and hook written
-  2026-10-23) with a 13-character cast and both roster records, but no genre or records (§6). The cover's tagline
+  2026-10-23) with a 13-character cast and both roster records, and its genre (*Fiction / Fantasy / Epic*, given by the author), but no records (§6). The cover's tagline
   reads "Rice", probably a typo for "Price"; the sheets' owner counts for Nur and Qasim, Sulayman's
   private visit, Qasim's scar and the Akad's filing as a Subject are flagged in §6. Zaid has no
   sheet, so no page; Ibrahim ibn Nasr's page comes from Case 0202, and his age there (38) does not match
