@@ -132,7 +132,7 @@ filename.
 - **A scene may carry an optional `"title"`.** `record_title()` uses it for the record's heading, page title and share title, and the record's own page then prints the full caption as a paragraph (`record-caption`). Without `"title"` nothing changes: the caption is still its own heading. The 15 Case 1268 records use it because their captions run to two or three sentences.
 
 **Update (2026-10-17, home counts, featured case, connected cases, metadata).** All in `tools/build_site.py` + `css/style.css`:
-- **The home hero's stats row (25 Cases / 449 Subjects / 227 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
+- **The home hero's stats row (25 Cases / 464 Subjects / 227 Records) is now three links**, to `books.html`, `characters.html` and `scenes.html` (the Cases, Subjects and Records indexes). Built in `index_body()`; styled by `.ledger-stats a` in the Archive theme block of `css/style.css`. The numbers are still counted from `BOOKS`.
 - **The Featured Case block has two buttons, in this order: Open case, then Read on Google Books** (`featured_html()`, using `read_buttons()`, so it follows the case's primary read link and opens in a new tab). Layout is `.featured-actions` (a wrapping flex row; full-width stacked on phones).
 - **`CONNECTED_CASES`** (a dict just above `BOOKS`) makes a published case's "Stands alone" note add "It is connected to Case NNNN (Title)." It is set both ways for **4555 and 2365**, at the author's request; add a pair in both directions to connect others. This is separate from `RELATED_THEMES`, which only feeds the "Related Cases" panel.
 - **Metadata given by the author:** Case 4420 is 130 pages, genre *Fiction / Fantasy / Epic* (replacing the staging copy's `~123` estimate and suggested genre); Case 2365 genre is *Fiction / Fantasy / Historical*; Case 1153 is 77 pages, genre *Fiction / Fantasy / Epic*, with a synopsis written from manuscript revision 4 (the author pasted it). These three genres use the plain Google Books category form with slashes, unlike the older cases' dotted lists. The 1153 synopsis names the cover title, *The Second Hand*, not the manuscript title.
@@ -198,7 +198,7 @@ book's own page rather than as their own top-level sections.
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (449 total — 10 for
+/characters/<slug>.html    One page per character (464 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -206,7 +206,7 @@ book's own page rather than as their own top-level sections.
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 43 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable; see §6)
+                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable; see §6)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
@@ -1033,14 +1033,16 @@ Cultivator and Catalyst lore prose each picked up one sentence, and the Threefol
 `appears_html` now names this case (it also changed "And in" to "In" at the start of the 2140 sentence
 before it, so that "And in" only opens the last sentence).
 
-**Only characters with a sheet have pages** (18 in the first pass, 43 now; see below). Higaide (the
-protagonist), Arikuni, Yasutsugu, Tamenaga, Narimune, Peire and Guiraut still have no sheet and so no
-page. Don't invent them; add them when art arrives, and add them to the roster in story order.
+**Only characters with a sheet have pages** (18 in the first pass, 43, then 58; see below). Higaide (the
+protagonist), Arikuni, Yasutsugu, Tamenaga, Narimune, Peire and Guiraut all have pages now (the 15-subject
+update below). Don't invent anyone else; add people when art arrives, and add them to the roster in story order.
 
-Judgment calls worth knowing: (1) **The Catalyst's roster image**
-(`covers/2231-stone-thumb.jpg`) is a 2:3 crop of the cover (the hand, the green vein and the
-notches, no title text). A Kiyote Pair sheet has since arrived: `the-kiyote-pair` is a character page
-and the roster row's page now points to it (the image is unchanged). (2) The `hook` is the cover's own tagline,
+Judgment calls worth knowing: (1) **The Catalyst's roster image** was first
+`covers/2231-stone-thumb.jpg`, a 2:3 crop of the cover (the hand, the green vein and the
+notches, no title text). A Kiyote Pair sheet then arrived and the roster row's page pointed to it, but the
+image stayed the cover crop; the author said that thumbnail "is not right", and it is now the Pair's own
+sheet thumb, `characters/the-kiyote-pair-thumb.jpg`, like every other Catalyst card
+(`covers/2231-stone-thumb.jpg` is no longer used). (2) The `hook` is the cover's own tagline,
 verbatim. (3) Observer 618's "thirty-one years" as a quarry-hand is 12 + 19 (the manuscript gives the
 two figures separately); don't re-derive it differently. (4) Details that come from the *sheets* and
 not the manuscript are labelled as such in the bios: Kurige's age (7) and white sock, the Bureau
@@ -1083,13 +1085,51 @@ men on the mill ladder and outside holding the horses; his entry reports both an
 them. (d) The paintings differ from the text in places and the captions follow the text: the Mikusa
 Stone is painted as an upright pillar, not the knee-high block of chapter 5, and fewer than the nine
 witnesses are visible. (e) Higaide, Arikuni, Yasutsugu, Tamenaga, Narimune, Peire, Guiraut, Pons,
-Lady Adalaïs and others still have no sheet and so no page; their names are plain text in the bios and
-captions, never links. (f) The Kiyote Pair page describes the pair as the manuscript does (Interlude I
+Lady Adalaïs and others had no sheet and so no page, and their names were plain text in the bios and
+captions (all but Pons now have pages and are linked; see the next update). (f) The Kiyote Pair page describes the pair as the manuscript does (Interlude I
 and the dust in Epilogue iii) and labels the colour notes as the sheet's. Images: sheets 980w / 320w
 thumb, scenes long side 1000 with a 0.45x grid image, identified by looking at each sheet's title.
 Checks run after rebuilding: 18,419 local links all resolve, no duplicate character or scene slugs,
 sitemap 490 -> 529, key pages opened in Chromium with no broken images. Totals: characters 298 -> 323,
 records 158 -> 172.
+
+**Update: 15 more Subjects and the Catalyst thumbnail (branch `case-2231-more-subjects`, pull request, 2026-10-22/23).** The author said the Kiyote Pair's thumbnail on the Catalyst page "is not
+right" and sent 15 more character sheets, with the manuscript (revision 7) "for context". Case 2231 now has **58
+Subjects and 14 Records**. New Subjects, in roster order: `higaide` (the protagonist, placed right after the Kiyote
+Pair), `priests-boys-of-mikusa`, `arikuni`, `yasutsugu`, `tamenaga`, `the-examiners-report` (an object, the Bureau's
+eleven sheets), `soroku`, `plum-gate-patrons`, `narimune`, `miller-of-vilarnau`, `peire-2231`, `lo-rog`, `guiraut`,
+`adalais`, and `elis` last. **Slug note:** `peire` already belongs to Case 4181's Peire, so Case 2231's is `peire-2231`
+(display name "Peire (Higa the Younger)"). `PRINCIPALS["2231"]` gained `higaide` at the front (seven now). The
+manuscript was used for every bio; each says which details are "the sheet's own", and each quoted line was checked
+against the manuscript by script (the exceptions are Tamenaga's "I thought it would be a mercy", where the manuscript
+gives indirect speech, and Adalaïs's "A quiet mind sees more than a loud heart", which the sheet supplies; both bios say so).
+
+*Cross-links.* The new names were linked at first mention in every existing 2231 bio and caption, about 45 links to the
+new pages in the 2231 text plus the same for Higaide, Elis, Lo Rog and Guiraut in Case 0202. In Case 4181 every
+`books/2231.html` link on Higaide's name (26) now points to `characters/higaide.html`, plain mentions are linked at
+first mention, and the Gazetteer's Castelmaur, Vilarnau and Lasserra places link him. Ansbert's "no page of his own"
+sentence says his page is in 2231. Brun's bio and the bowing record link `lo-rog`. The 4181 `peire` bio now links
+`peire-2231` (the 2231 manuscript agrees with the age of 27 and the walk to the boundary-stone).
+
+Judgment calls and discrepancies, all stated on the pages: (a) **Higaide's departure.** His sheet has him go east "in
+Brayen of the twentieth year"; the manuscript text and revision log say the nineteenth. The page reports both. (b) **Peire
+differs across cases.** The 4181 sheet gives grey eyes and no scar; the 2231 sheet gives hazel eyes and a scar through the
+left eyebrow (the manuscript's cracked skull). Two pages, each saying it takes the two to be one man. (c) **Elis and the
+great-grandmother.** The 0202 page ("Elis's Mother") has Elis, six, in the same year; neither case reconciles which woman
+of Ermengarda's line is the great-grandmother. (d) **The Examiner's report** is on its shelf "the better part of two
+decades" and also opened by Arikuni in the fifth winter; the page takes both to be so. (e) **Sheet panels that name no
+one:** the second man in Sōroku's "Twelve Bolts of Silk" panel, and the fourth man in the Plum Gate panel; neither is
+identified. (f) **The Priests' Boys.** The manuscript's nine witnesses include one boy, yet the sentence about sickness
+speaks of "boys in the priests' row"; the page reports both. (g) Ages: Higaide 34 at the opening and 53 at the close,
+Arikuni 66 and 71, Tamenaga about 75 and 80 at death, Narimune 40 and 42, are the manuscript's; the rest are the sheets'.
+(h) The earlier hand-edited text in the 4181 block that said Higaide, the Boy-Sovereign, the Child of Himuro, the Hired
+Witness, the Two Ministers and the Miller's Widow had "no sheet, so no page" was wrong about the last five: they are
+2231's `boy-sovereign-of-himuro`, `kiyomaro`, `soroku`, `arikuni` and `sukenori`, and `ermengarda`; corrected in the
+4181 block below. Images: `images/characters/<slug>.jpg` (980w) and `-thumb.jpg` (320w), progressive JPEG Q85, each
+identified by its title strip. Recount after merging `main` (which had gained Case 0277) and rebuilding: characters 449 -> 464, records 227 and
+cases 25 (unchanged), sitemap 717 -> 732; every local link resolves (26,870 checked), no duplicate slugs; Higaide's, the Catalyst, the case, a record and Peire's pages
+were opened in Chromium at desktop and phone width with no horizontal overflow. `pages`, `genre` and `synopsis_html` are
+still `EDITOR_*` placeholders.
 
 ### Book: *The Tear of the Dragon* (Case 0247)
 
@@ -1530,7 +1570,8 @@ home cast wall takes the first six subjects in list order, so it still shows the
 neither the Cultivator nor the Catalyst roster lists 4181, and `catalyst`/`envoy` are simply omitted from the dict
 (`_class_of` and the roster code use `.get`, so this is safe).
 
-**How Higaide is linked, both ways.** He has no sheet and therefore no page, so the link is case-level and in
+**How Higaide is linked, both ways.** (Updated 2026-10-23: he now has a page, `characters/higaide.html`, in Case
+2231, and every link below points to it; the paragraph is kept as first written.) He had no sheet and therefore no page, so the link was case-level and in
 prose. (a) `RELATED_THEMES` row `("4181", "2231", "Same stranger: ...")`: each case page shows the other as a
 Related Case with that reason. (b) The bios of `ansbert`, `brun`, `carters-wife`, `waldradas-nephew`, `wolfram` and
 `wido` link him, in plain text, to `books/2231.html` (and Ansbert's links the Stone to
@@ -1539,8 +1580,8 @@ Related Case with that reason. (b) The bios of `ansbert`, `brun`, `carters-wife`
 `the-kiyote-pair` (the Stone's end as he remembers it). (d) The Gazetteer's `appears_html` names both
 `books/4181.html` and `books/2231.html`, so its card shows on both case pages; the map draws Castelmaur, Vilarnau
 and Lasserra, which are 2231's places. (e) The Threefold Crown's `appears_html` gained a 4181 sentence that also
-points back at 2231 (Rothari's "He was merely early"). **If the author later sends Higaide's sheet, give him a
-page and link it from all of these.**
+points back at 2231 (Rothari's "He was merely early"). **Higaide's sheet has since arrived and he has a page; all of these
+links now point to it.**
 
 Judgment calls worth knowing: (1) **Who is the main character.** The author calls Higaide the main character; the
 manuscript files him as an uncontrolled variable and builds the case around Ansbert's household. The pages follow
@@ -1548,7 +1589,7 @@ the author where they use a word ("protagonist" in the RELATED_THEMES row and th
 describe what the manuscript shows. (2) **No sheet, so no page, so don't invent one:** Observer 614, the sack
 (Catalyst) and Higaide in the first drop, and with them Hiltrude, Lantfrid, Gundobad Rotger the Guildmaster, Odilo
 the steward, Duke Waldo, Adalgund, Rothari, Hagen Brandt, Theodard, Ragnulf, Berthar and the one-eyed Lombard, all of
-whom have pages now (the 37 + 15 block below). Observer 614, the sack and Higaide still have none. (3) **Brun's age.** The sheet says "about 19 at the opening"; the manuscript has him walking the wheel
+whom have pages now (the 37 + 15 block below). Observer 614 and the sack still have none (Higaide has a page in 2231, linked from here). (3) **Brun's age.** The sheet says "about 19 at the opening"; the manuscript has him walking the wheel
 for about three years, six more after the war, then dying "in his twenty-sixth year", which does not add up. The
 bio reports both. (4) **The copper penny.** Chapter 7 has Higaide give a copper penny to Waldrada's nephew for the
 news of a sermon; chapters 14 and 16 have the same penny in Lantfrid's left sleeve and returned by Hiltrude "as the
@@ -1609,7 +1650,7 @@ Character slugs are one global namespace, so Odilo the steward of Tarnwald is `o
 `thirteen-strokes-at-the-altar-of-oaths` (13), `we-are-nobodys-and-we-are-sitting` (15), `the-nine-arches` (16),
 `the-sable-skin-in-the-hall` (18). Images are `images/scenes/<slug>.jpg` (1000 px long edge) and `-grid.jpg` (450 px).
 The uploads came in no particular order; each was matched to its prompt from a contact sheet before it was filed.
-Where Higaide is in a scene he is linked to `books/2231.html`, because he has no page of his own.
+Where Higaide is in a scene he is linked to `characters/higaide.html` (first written as `books/2231.html`, before his page existed).
 
 *Cross-links.* About 45 edits across the 17 older 4181 bios (Ansbert's "no sheet in this batch" sentence now links
 Hiltrude, Lantfrid and Gundobad; the Duke's Pages gained a Sacristan sentence; Waldrada's Nephew gained "The
@@ -1625,12 +1666,14 @@ bedchamber door; the Landing's Priest's verdict of "forsworn" is the one Rothari
 forge" and the Young Levy Archer's running figure are not asserted to be Lantfrid; the old man in the Boy with the
 Cracked Knife's sheet is presumably Gundobad, but the beard differs; the Sacristan's goose is presumably Prior;
 Berthar's "steward" is presumably Odilo; the Lombard's ox is presumably Brun; Peire is taken to be the boy of 2231
-grown (hedged). **Discrepancies to ask the author about:** the Eschwin Aunt's sheet draws the Countess as a fair young
+grown (hedged; the `peire-2231` page and the 2231 manuscript now agree on the age). **Discrepancies to ask the author about:** the Eschwin Aunt's sheet draws the Countess as a fair young
 woman in blue, against Adalgund's own sheet; Brun's age (already item 3); Rothari's bedding stair (his sheet draws it
 going down, the notes put it up the almonry stair); the carter in the notes may be two carters merged.
 
-*Still no sheet, so no page:* Higaide, Observer 614, the sack, and the Himuro and Vilarnau figures the publication
-notes list (the Boy-Sovereign, the Child of Himuro, the Hired Witness, the Two Ministers, the Miller's Widow).
+*Still no sheet, so no page:* Observer 614 and the sack. The Himuro and Vilarnau figures the publication notes list (the
+Boy-Sovereign, the Child of Himuro, the Hired Witness, the Two Ministers, the Miller's Widow) are pages in Case 2231
+(`boy-sovereign-of-himuro`, `kiyomaro`, `soroku`, `arikuni`, `sukenori`, `ermengarda`), and Higaide has one too
+(`higaide`, 2231).
 
 ### Book: *The Uncounted Variable* (Case 0277)
 
@@ -1862,9 +1905,9 @@ sit at the end of `BOOKS`, in the order the author listed them.
   author-confirmed), its `genre` is still a placeholder, and its Catalyst has no
   sheet (§6).
 - **Case 2231** (*The Stone of the Clean Hand*) is coming-soon with a
-  43-character cast (the Catalyst has its own page, `the-kiyote-pair`), 14 records and both roster
-  records, but no pages, genre or synopsis. Its principals Higaide, Arikuni, Yasutsugu and others
-  still have no sheet (§6).
+  58-character cast (the Catalyst has its own page, `the-kiyote-pair`, and its roster thumbnail is the
+  Pair's own sheet), 14 records and both roster records, but no page count, genre or synopsis. Higaide,
+  Arikuni, Yasutsugu and the rest of the principals have pages (§6).
 - **Case 0247** (*The Tear of the Dragon*) is coming-soon with a 17-character
   cast, 11 records and both roster records but no pages, genre or synopsis (§6). The
   Xuanwu Kai's Son sheet has a garbled second traits block, and the manuscript contradicts itself on
@@ -1884,8 +1927,8 @@ sit at the end of `BOOKS`, in the order the author listed them.
   low-table painting's bandaged forearm and the ford painting's Reinolt differ from the manuscript; all flagged in §6.
 - **Case 4181** (*The Sable Skin*) is coming-soon with a 54-subject cast, 15 records and a gazetteer, but no catalyst
   or envoy record, page count, genre, synopsis or purchase link (§6). Higaide is the protagonist per the
-  author but has no sheet, so no page: he is linked to and from Case 2231 at case level (§6). Observer 614, the
-  sack and most of the named cast have no sheet either. The map's Marnholt differs from the manuscript's, Brun's
+  author; his page is `higaide` in Case 2231, linked from here and back (§6). Observer 614 and the
+  sack have no sheet, so no page. The map's Marnholt differs from the manuscript's, Brun's
   sheet age does not fit the manuscript, and the copper penny is told two ways; all flagged in §6.
 - **Case 3001** (*The Uncounted Dinar*) is coming-soon with a 13-character cast and both roster
   records, but no page count, genre, synopsis, records or purchase link (§6). The cover's tagline
@@ -1965,7 +2008,21 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (Case 0277 added — branch `case-0277`, pull request, 2026-10-21/23).**
+- **Latest update (more subjects for Case 2231 and the Kiyote Pair thumbnail — branch `case-2231-more-subjects`, pull
+  request, 2026-10-22/23).** The author wrote "2231 / add the kiyote pair thumbnail
+  is not right / add these dossier to 2231 please / manuscript added for context", with a screenshot of the Pair's
+  card and 15 character sheets. Done: the Catalyst roster image is now `characters/the-kiyote-pair-thumb.jpg`; 15 new
+  `characters` in the `2231` dict (Higaide first, after the Kiyote Pair), `higaide` added to `PRINCIPALS["2231"]`, new
+  names linked at first mention across the 2231 and 0202 text, Higaide's `books/2231.html` links in the 4181 block repointed to his page,
+  a rewritten 4181 `peire` second paragraph, Lo Rog links in Brun's bio and a record caption, and the wrong "no sheet"
+  sentences in the 4181 block corrected. Images: 30 character files. Recount after merging `main` (which had
+  gained Case 0277) and rebuilding: characters 449 -> 464, records 227 and cases 25 (unchanged), sitemap 717 -> 732; every
+  local link resolves (26,870 checked), no duplicate slugs, key pages opened in Chromium at desktop and phone width.
+  Only files that really changed were committed; the footer-stamp-only pages were left alone. The manuscript and the
+  original images were not committed. **Open questions for the author** are the discrepancies in the 15-subject block in
+  §6: Higaide's departure year, Peire's two sheets, Elis's lineage, the Examiner's report's shelf-time, the two unlabelled
+  men on the Sōroku and Plum Gate sheets, and the Priests' Boys count.
+- **Earlier update (Case 0277 added — branch `case-0277`, pull request, 2026-10-21/23).**
   The author sent the cover, the manuscript (revision 4) and 18 character sheets ("ADD CASE 0277 : THE UNCOUNTED
   VARIABLE"), then 4 more sheets, 12 scene paintings and a character-reference file ("more character dossier for
   0277 and scene / add MD file for context / continue"), then 5 more scene paintings ("second batch of the scene,
@@ -1980,7 +2037,7 @@ sit at the end of `BOOKS`, in the order the author listed them.
   at desktop and phone width. Only files that really changed were committed; the footer-stamp-only pages were left
   alone. The manuscript, the character-reference file and the original images were not committed. **Open questions
   for the author** are the numbered judgment calls in §6, first among them whether the two Varas are one person.
-- **Latest update (more subjects and records for Case 4181 — branch `case-4181-more-subjects`, pull request, 2026-10-21/22).**
+- **Earlier update (more subjects and records for Case 4181 — branch `case-4181-more-subjects`, pull request, 2026-10-21/22).**
   The author sent 20 and then 17 more character sheets for 4181, then 15 scene paintings and the case's
   publication-prep file ("this is the scene for 4181, and publication file for context / continue"). Done: 37 new
   `characters` and 15 `scenes` in the `4181` dict (after `gerold`; `PRINCIPALS`, `RELATED_THEMES`, `pages`, `genre`
