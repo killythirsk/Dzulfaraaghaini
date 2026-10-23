@@ -15,8 +15,8 @@ this one is longer and more exhaustive on purpose.
 
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
-various stages of publication; nine are live on the site so far (Case 1153 went live on Google Books on 2026-10-14), plus
-twelve coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 3001, 4181, 0277) and four
+various stages of publication; ten are live on the site so far (Case 1153 went live on Google Books on 2026-10-14, Case 3001 on 2026-10-23), plus
+eleven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 4181, 0277) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -186,7 +186,7 @@ book's own page rather than as their own top-level sections.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twenty-five entries: nine published, sixteen coming-soon — see §6)
+/books.html             Full book list (currently twenty-five entries: ten published, fifteen coming-soon — see §6)
 /books/0000.html          The Sword of Valeria's full page
 /books/4099.html          The Ledger of a Single Sweetness's full page
 /books/0157.html          The Stolen Prince War's full page
@@ -1462,12 +1462,17 @@ Bernat's wife) was cut back to what the manuscript supports.
 
 ### Book: *The Uncounted Dinar* (Case 3001)
 
-Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-3001`, as a pull request rather
+Status: **Published** since 2026-10-23, when the author reported it live on Google Books (65 pages; `status` is
+`["published", "google-books"]` and `google_books_url` is `https://play.google.com/store/books/details?id=KwobEgAAQBAJ`,
+not opened from the build environment). It was first added coming-soon on branch `case-3001`, as a pull request rather
 than straight into `main`, from: the cover (`images/covers/3001.jpg`, tagline "Rice. Grievance. Ledger.
-Stillness. Vindication.", used verbatim as the `hook`), 13 character sheets and the manuscript
+Stillness. Vindication.", used as the placeholder `hook` until publication, when it was replaced by a one-sentence
+promise in the shape of the other published cases), 13 character sheets and the manuscript
 `Case_3001_The_Uncounted_Dinar_2026-10-14_1712PM_GMT_7.md` (revision 6), which was used for the bios only and is
-**not committed** (the repo is public). **`pages`, `genre` and `synopsis_html` are untouched `EDITOR_*`
-placeholders.** No scene paintings came with it, so `"scenes"` is empty. The cover and the manuscript agree on the
+**not committed** (the repo is public). **On 2026-10-23 `pages`, `google_books_url`, `hook` and `synopsis_html` were
+set (the three-paragraph synopsis is written from manuscript revision 6; the author asked for the synopsis and
+the "Where to begin" line, and the home page's "Where to begin" entry is generated from the `hook`). `genre` is
+still the `EDITOR_GENRE` placeholder: the author has not given one.** No scene paintings came with it, so `"scenes"` is empty. The cover and the manuscript agree on the
 title.
 
 The premise, from the manuscript (not author-confirmed jacket copy): a Cultivator Envoy, **Observer 1140** ("the
@@ -1930,8 +1935,8 @@ sit at the end of `BOOKS`, in the order the author listed them.
   author; his page is `higaide` in Case 2231, linked from here and back (§6). Observer 614 and the
   sack have no sheet, so no page. The map's Marnholt differs from the manuscript's, Brun's
   sheet age does not fit the manuscript, and the copper penny is told two ways; all flagged in §6.
-- **Case 3001** (*The Uncounted Dinar*) is coming-soon with a 13-character cast and both roster
-  records, but no page count, genre, synopsis, records or purchase link (§6). The cover's tagline
+- **Case 3001** (*The Uncounted Dinar*) is published (Google Books, 65 pages; synopsis and hook written
+  2026-10-23) with a 13-character cast and both roster records, but no genre or records (§6). The cover's tagline
   reads "Rice", probably a typo for "Price"; the sheets' owner counts for Nur and Qasim, Sulayman's
   private visit, Qasim's scar and the Akad's filing as a Subject are flagged in §6. Zaid has no
   sheet, so no page; Ibrahim ibn Nasr's page comes from Case 0202, and his age there (38) does not match
