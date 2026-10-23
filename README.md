@@ -24,7 +24,7 @@ scene gallery, and a working "View on Google Books" link, and a confirmed page c
 of Unmediated Grace* (Case 4555), *The Heavenly Thunder-Serpent* (Case
 4438 — real cover, synopsis, a full cast of 19 characters, a 15-image scene
 gallery, a working "View on Google Books" link and a confirmed page count of 82) and *The Decree of Luminescence* (Case 2365 — real cover, a full cast of 24 characters, a 15-image scene gallery, 15 records, a working "View on Google Books" link and a confirmed page count of 88 and a genre of Fiction / Fantasy / Historical) and *The Second Hand* (Case 1153 — real cover, a full cast of 19 subjects, 13 records, a working "Read on Google Books" link, 77 pages, genre Fiction / Fantasy / Epic and a synopsis). Ten further books, 0156 (*The Purging of Charsianon*), 0188, 2140, 3115,
-0000B, 2231 (*The Stone of the Clean Hand*, with 43 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
+0000B, 2231 (*The Stone of the Clean Hand*, with 58 subjects and 14 records), 0247 (*The Tear of the Dragon*, with 17 subjects and 11 records) and 1268
 (*Independent Observation*, with 11 subjects, 15 records and a cover), 0202 (*Fossa*, with 27 subjects and 10 records) and 3001
 (*The Uncounted Dinar*, with 13 subjects and a cover) and 4181 (*The Sable Skin*, with 54 subjects, 15 records, a cover and a gazetteer), are
 marked coming-soon but already carry character rosters, and four
@@ -298,7 +298,7 @@ Added:
 - `books/2231.html` — Case 2231, coming-soon (no purchase link was supplied)
 - `characters/` — 18 pages: observer-618, shizuka, jokei, sadamune, kanemichi, kurige, bureau-officers, bertran, gersenda, bernat, brunissen, villagers-of-vilarnau, masons-of-castelmaur, castelmaur-men-at-arms, folquet, odilo, guilhem, jaume
 - `images/characters/` — 36 files: a sheet and a `-thumb` for each of those 18 slugs
-- `images/covers/2231.jpg` (900x1350) and `images/covers/2231-stone-thumb.jpg` (the Catalyst's roster image, a crop of the cover)
+- `images/covers/2231.jpg` (900x1350) and `images/covers/2231-stone-thumb.jpg` (first the Catalyst's roster image, a crop of the cover; since 2026-10-22 the Catalyst uses the Kiyote Pair's own sheet thumb and this file is unused)
 
 Edited:
 - `tools/build_site.py` — a full `2231` `BOOKS` entry (18 characters, `catalyst` *The Kiyote Pair*, `envoy` Observer 618 "the Dumb Mason"; `pages`, `genre` and `synopsis_html` left as the placeholders; no scenes); `PRINCIPALS` gained `2231`; one `RELATED_THEMES` row linking 2231 to 4099; one sentence each added to the Cultivator and Catalyst lore prose; the Threefold Crown `appears_html` now names the case. Case 2365: `status` set to published + google-books, `pages` "88", `google_books_url` set (its `genre` and `synopsis_html` are still placeholders)
@@ -479,3 +479,20 @@ Edited:
 - every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
 
 Totals (counted after rebuilding): cases 24 (unchanged), characters (subjects) 391 -> 428, records 197 -> 212; pages in sitemap 628 -> 680. Every local link resolves (25,901 checked), and the new and changed pages were opened in Chromium at desktop and phone width. `pages`, `genre` and `synopsis_html` are still placeholders. **Open questions for the author** are in `AI-HANDOFF.md` §6 ("37 + 15" block): the Eschwin Aunt's sheet draws the Countess as a fair young woman in blue, against Adalgund's own sheet; Brun's age; Rothari's bedding stair; and a few identifications the pages still hedge.
+
+### [PENDING] Update — Case 2231 (*The Stone of the Clean Hand*): 15 more subjects and a new Catalyst thumbnail
+
+On branch `case-2231-more-subjects`, as a pull request **stacked on `case-4181-more-subjects`** (so its base is that branch, not `main`; merge the 4181 pull request first, or retarget this one to `main` after it). It is stacked because Higaide's new page is linked from the Case 4181 text. The author said the Kiyote Pair's thumbnail on the Catalyst page "is not right" and sent 15 more character sheets for 2231, with the manuscript (revision 7) for context. The manuscript and the original images are **not committed** (the repo is public).
+
+Added:
+- `characters/` — 15 pages, in roster order: higaide, priests-boys-of-mikusa, arikuni, yasutsugu, tamenaga, the-examiners-report, soroku, plum-gate-patrons, narimune, miller-of-vilarnau, peire-2231, lo-rog, guiraut, adalais, elis (`peire-2231` because `peire` is Case 4181's)
+- `images/characters/` — 30 files (a sheet and a `-thumb` for each new slug)
+
+Edited:
+- `tools/build_site.py` — the 15 characters in the `2231` entry; the Catalyst roster image now `characters/the-kiyote-pair-thumb.jpg`; `higaide` first in `PRINCIPALS["2231"]`; the new names linked at first mention in the 2231 and 0202 text; Higaide's links in the 4181 text repointed from `books/2231.html` to his page; a rewritten 4181 `peire` second paragraph; Lo Rog links in Brun's bio and the bowing record; the Gazetteer's Castelmaur, Vilarnau and Lasserra links
+- `books/2231.html`, `books/0202.html`, `books/4181.html`, `characters.html`, `scenes.html`, `index.html`, `lore/catalyst.html`, `lore/sable-skin.html`, `sitemap.xml`, and the 2231, 0202 and 4181 character and record pages that gained a link or a related subject (112 HTML files in all) — regenerated from the script
+- `AI-HANDOFF.md` — a 15-subject block in §6 (and the wrong "no sheet" sentences in the 4181 block corrected), counts, §7 bullets, §8 entry
+- `README.md` — this entry, the "Where things stand" paragraph and the `2231-stone-thumb.jpg` note
+- every other page — footer "Site last built" stamp and cache-bust query only, deliberately not committed
+
+Totals (counted after rebuilding): cases 24 (unchanged), characters (subjects) 428 -> 443, records 212 (unchanged); pages in sitemap 680 -> 695. Every local link resolves (25,306 checked), and the new and changed pages were opened in Chromium at desktop and phone width. `pages`, `genre` and `synopsis_html` are still placeholders. **Open questions for the author** are in `AI-HANDOFF.md` §6 (the 2231 "15 more Subjects" block): Higaide's departure year (twentieth on his sheet, nineteenth in the manuscript), Peire's two sheets (grey eyes and no scar in 4181, hazel eyes and a scar in 2231), which woman of Ermengarda's line is Elis's great-grandmother, the Examiner's report's shelf-time, the unnamed second man on Sōroku's sheet and fourth man on the Plum Gate sheet, and the Priests' Boys count.
