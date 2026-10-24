@@ -226,7 +226,8 @@
   function run() {
     var s = q.value.trim().toLowerCase(), cnt = 0;
     items.forEach(function (el) {
-      var ok = (!book || el.dataset.book === book) && (!s || el.dataset.text.indexOf(s) > -1);
+      // data-book may list several case slugs (a subject that appears in more than one case): match by token.
+      var ok = (!book || (" " + el.dataset.book + " ").indexOf(" " + book + " ") > -1) && (!s || el.dataset.text.indexOf(s) > -1);
       el.hidden = !ok; if (ok) cnt++;
     });
     root.classList.toggle("is-filtering", !!(book || s));

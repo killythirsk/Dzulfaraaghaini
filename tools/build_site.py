@@ -89,9 +89,9 @@ PRINCIPALS = {
     "0000b": ["the-anchorite", "aveline", "halvard", "vasarion", "aimeric", "ganeth"],
     "1153": ["levan", "bagrat", "vazha", "demna", "observer-419-1153", "the-eleven-fingered-hand"],
     "1268": ["hraban", "anchorite-of-ardwen", "otker", "adaltrude", "ansovald", "sigward"],
-    "0202": ["alazais", "ottavio-brandi", "bertran-0202", "king-ramon-iii", "strain-h-202", "observer-551"],
+    "0202": ["alazais", "ottavio-brandi", "bertran-0202", "king-ramon-iii", "strain-h-202", "observer-551", "higaide"],
     "3001": ["malik-ibn-sabir", "amina-bint-rashid", "sulayman-ibn-ghanim", "nur", "qasim-al-fahmi", "the-dinar"],
-    "4181": ["ansbert", "wolfram", "brun", "wido", "sigebert-marl", "theudebald"],
+    "4181": ["higaide", "ansbert", "wolfram", "brun", "wido", "sigebert-marl", "theudebald"],
     "0277": ["hildegund", "vara-0277", "otwin", "reinolt", "the-hereditary-marker", "the-auditor"],
 }
 
@@ -109,7 +109,32 @@ RELATED_THEMES = [
     ("0202", "2231", "Same village and the same stranger: Vilarnau, the Stone, Tomobe no Higaide, Bertran, Gersenda and others appear in both cases"),
     ("4181", "2231", "Same stranger: Tomobe no Higaide, who came out of the Stone of Case 2231, is carried into Case 4181 as its protagonist"),
     ("0277", "0202", "Same hermit, on inference: the Vara of Case 0277 and the hermit of Val Muta in Case 0202 share a name, a pale unageing look and a taste for river shrimp"),
+    ("0202", "4181", "Same stranger: Tomobe no Higaide, who came out of the Stone of Case 2231, appears in both cases"),
 ]
+
+# Subjects who appear in more than one case. A subject still has ONE page and ONE portrait, filed
+# under the case whose sheet it came from (the entry in that case's "characters" list, and the
+# slug's home in CHAR_INDEX); this table adds the other cases the same subject appears in.
+#   "home_label"  short role line on the subject page's card for the home case
+#   "cases"       (case slug, short role line for the subject page's card, note shown on that
+#                 case's own roster in place of the home case's teaser). Order = order shown.
+# Effects: the subject is listed on those cases' pages (roster_of), the subject page's "Appears In"
+# lists every case, characters.html?case=<slug> finds the subject under each case, and a
+# PRINCIPALS entry for one of those cases may name the subject. Counts are unchanged: a subject is
+# counted once, under its home case. The notes use only what the pages already say.
+ALSO_IN = {
+    "higaide": {
+        "home_label": "Protagonist",
+        "cases": [
+            ("0202", "Carried over from Case 2231",
+             "Come out of the Stone of Case 2231 at Vilarnau, he learns the valley's dialect, holds the Throat "
+             "beside Sir Bertran for a night, and lays out the trench for the famine's dead."),
+            ("4181", "Main character, carried over from Case 2231",
+             "The survivor of Case 2231, nineteen years in this country since the Stone: a tall stranger Ansbert's "
+             "household has taken in off the Hohlweg, called Higa."),
+        ],
+    },
+}
 
 # Cases the author has said are connected. Shown in the "Stands alone" note on a published
 # case page ("It is connected to Case NNNN (Title)"). List it both ways: each case names the other.
@@ -5455,20 +5480,35 @@ def record_actions_html(sc, b, depth):
             % (r, record_path(sc), share_btn(record_path(sc), record_title(sc) + " — " + b["case_tag"], record_title(sc) + ".")))
 
 
-def character_entry_html(c, depth):
+def appearance_note(slug, case_slug):
+    """(role line, roster note) for a subject shown in a case it was not filed under, else None."""
+    for cs, label, note in ALSO_IN.get(slug, {}).get("cases", []):
+        if cs == case_slug:
+            return label, note
+    return None
+
+
+def character_entry_html(c, depth, case=None):
+    """One roster row. `case` is the case whose page the row sits on; when the subject is filed
+    under another case (ALSO_IN), the row carries that case's note and says where the file is."""
     r = rel(depth)
     href = "%scharacters/%s.html" % (r, c["slug"])
     full_src = "%simages/characters/%s.jpg" % (r, c["slug"])
     thumb_src = "%simages/characters/%s-thumb.jpg" % (r, c["slug"])
+    teaser, link = c["teaser"], "Read the full entry"
+    note = appearance_note(c["slug"], case) if case else None
+    if note:
+        teaser = note[1]
+        link = "Read the full entry (filed under %s)" % CHAR_INDEX[c["slug"]][1]["case_tag"]
     return """      <article class="entry">
         <a class="lightbox-link" data-group="characters" href="#" data-full="%s"><img class="entry-portrait" src="%s" alt="Portrait of %s"></a>
         <div class="entry-body">
           <h3 class="entry-title"><a href="%s">%s</a></h3>
           <p class="entry-meta">%s</p>
           <p>%s</p>
-          <p class="entry-links"><a class="entry-link" href="%s">Read the full entry</a></p>
+          <p class="entry-links"><a class="entry-link" href="%s">%s</a></p>
         </div>
-      </article>""" % (full_src, thumb_src, c["name"], href, c["name"], c["epithets"], c["teaser"], href)
+      </article>""" % (full_src, thumb_src, c["name"], href, c["name"], c["epithets"], teaser, href, link)
 
 
 def characters_index_html(book, depth):
@@ -5581,8 +5621,16 @@ def cta_html(b, where):
     return '<div class="cta-row">%s</div>' % "".join(out)
 
 
+def roster_of(b):
+    """A case's own subjects, then subjects filed under another case that also appear in it
+    (ALSO_IN), in table order. Own count stays len(b["characters"]); sitewide counts are unchanged."""
+    extra = [CHAR_INDEX[s][0] for s, spec in ALSO_IN.items()
+             if s in CHAR_INDEX and any(cs == b["slug"] for cs, _l, _n in spec["cases"])]
+    return b["characters"] + extra
+
+
 def principals_of(b):
-    chars = b["characters"]
+    chars = roster_of(b)
     if len(chars) <= SPLIT_MIN:
         return chars, []
     want = PRINCIPALS.get(b["slug"])
@@ -5603,12 +5651,12 @@ def character_rec_html(c, depth):
 
 
 def subjects_section_html(b):
-    chars = b["characters"]
+    chars = roster_of(b)
     if not chars:
         return '<h2>Subjects</h2>\n        <p class="editor-note">Subject roster coming soon.</p>'
     main, extra = principals_of(b)
     out = '<h2>%s</h2>\n        <ul class="catalog-list subjects-list">\n%s\n        </ul>' % (
-        "Principal Subjects" if extra else "Subjects", "\n".join(character_entry_html(c, 1) for c in main))
+        "Principal Subjects" if extra else "Subjects", "\n".join(character_entry_html(c, 1, b["slug"]) for c in main))
     if extra:
         out += """
         <h3 class="sub-head">Additional Case Records</h3>
@@ -5703,9 +5751,16 @@ def lore_cases(l):
 
 def _check_principals():
     for slug, want in PRINCIPALS.items():
-        have = set(c["slug"] for b in BOOKS if b["slug"] == slug for c in b["characters"])
+        have = set(c["slug"] for b in BOOKS if b["slug"] == slug for c in roster_of(b))
         missing = [w for w in want if w not in have]
         assert not missing, "PRINCIPALS[%s] names unknown subjects: %s" % (slug, missing)
+    cases = set(b["slug"] for b in BOOKS)
+    for s, spec in ALSO_IN.items():
+        assert s in CHAR_INDEX, "ALSO_IN names unknown subject: %s" % s
+        home = CHAR_INDEX[s][1]["slug"]
+        seen = [cs for cs, _l, _n in spec["cases"]]
+        assert all(cs in cases and cs != home for cs in seen) and len(set(seen)) == len(seen), \
+            "ALSO_IN[%s] must name distinct, existing cases other than its home case %s: %s" % (s, home, seen)
 
 
 
@@ -6116,7 +6171,17 @@ def character_detail_body(c, book):
     quote_html = "<blockquote>&ldquo;%s&rdquo;</blockquote>" % c["quote"] if c.get("quote") else ""
     subj = related_subjects(c, book)
     recs = related_records(c, book)
-    more = '\n      <section class="subsection related">\n        <h2>Appears In</h2>\n        %s\n      </section>' % case_grid_html([book], 1, "case-grid--one")
+    also = ALSO_IN.get(c["slug"])
+    if also:
+        # Filed under `book`, also appears in the cases named in ALSO_IN: every case gets a card and a role line.
+        by_slug = dict((x["slug"], x) for x in BOOKS)
+        appears = [book] + [by_slug[cs] for cs, _l, _n in also["cases"]]
+        why = {book["slug"]: [also["home_label"]]}
+        why.update((cs, [label]) for cs, label, _n in also["cases"])
+        grid = case_grid_html(appears, 1, "case-grid--related", why_map=why)
+    else:
+        grid = case_grid_html([book], 1, "case-grid--one")
+    more = '\n      <section class="subsection related">\n        <h2>Appears In</h2>\n        %s\n      </section>' % grid
     if subj:
         more += '\n      <section class="subsection related">\n        <h2>Related Subjects</h2>\n        <ul class="recs recs--cast">\n%s\n        </ul>\n      </section>' % "\n".join("          " + character_rec_html(x, 1) for x in subj)
     if recs:
@@ -6262,8 +6327,11 @@ def characters_page_body():
             img = c["slug"] + "-thumb.jpg"
             if not os.path.isfile(os.path.join(OUT, "images", "characters", img)):
                 img = c["slug"] + ".jpg"
-            txt = _search_text(c["name"], c["epithets"], c["teaser"], b["title"])
-            items.append('        <li class="rec" data-book="%s" data-text="%s"><a href="characters/%s.html"><img src="images/characters/%s" alt="" loading="lazy"><span><span class="rec-name">%s</span><span class="rec-meta">%s &middot; %s</span></span></a></li>' % (b["slug"], txt, c["slug"], img, c["name"], c["epithets"], b["case_tag"]))
+            # A subject listed in more than one case (ALSO_IN) keeps one entry here, but carries every
+            # case slug in data-book (space-separated, matched by token in js/site.js) and every case tag.
+            cases = [b] + [x for x in BOOKS if x["slug"] in [cs for cs, _l, _n in ALSO_IN.get(c["slug"], {}).get("cases", [])]]
+            txt = _search_text(c["name"], c["epithets"], c["teaser"], *[x["title"] for x in cases])
+            items.append('        <li class="rec" data-book="%s" data-text="%s"><a href="characters/%s.html"><img src="images/characters/%s" alt="" loading="lazy"><span><span class="rec-name">%s</span><span class="rec-meta">%s &middot; %s</span></span></a></li>' % (" ".join(x["slug"] for x in cases), txt, c["slug"], img, c["name"], c["epithets"], " &middot; ".join(x["case_tag"] for x in cases)))
     return filter_page_body("Subjects", len(items), "subjects", "Search subjects...", books, items, "recs--cast")
 
 
