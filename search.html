@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search — Dzulfaraaghaini</title>
+  <meta name="description" content="Search every case, subject, record and archive entry.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=202610290658">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="site-title" href="index.html"><img class="mark" src="assets/logo-gold-sm.png" alt="" width="85" height="112">Dzulfaraaghaini</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="books.html">Cases</a></li>
+          <li><a href="characters.html">Subjects</a></li>
+          <li><a href="scenes.html">Records</a></li>
+          <li><a href="lore.html">Archive</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="search.html" aria-current="page">Search</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="wrap">
+        <h1>Search the archive</h1>
+        <p class="count">26 cases &middot; 506 subjects &middot; 227 records &middot; 9 archive entries</p>
+      </div>
+    </section>
+
+    <section class="wrap page-content search-page" id="search-app">
+      <form class="search-form" role="search" action="search.html" method="get">
+        <label class="visually-hidden" for="s-q">Search the archive</label>
+        <input class="f-search" id="s-q" name="q" type="search" placeholder="A name, a place, a faith, a case number..." autocomplete="off" spellcheck="false">
+      </form>
+      <div class="chips" role="group" aria-label="Filter by type" hidden><button type="button" class="chip is-on" data-kind="" aria-pressed="true">All</button><button type="button" class="chip" data-kind="c" aria-pressed="false">Cases</button><button type="button" class="chip" data-kind="s" aria-pressed="false">Subjects</button><button type="button" class="chip" data-kind="r" aria-pressed="false">Records</button><button type="button" class="chip" data-kind="a" aria-pressed="false">Archive</button></div>
+      <p class="search-status" role="status" aria-live="polite">Type to search every case, subject, record and archive entry, including what is written inside them.</p>
+      <ol class="search-results"></ol>
+      <button type="button" class="more-btn search-more" hidden>Show more results</button>
+      <noscript><p>Search needs JavaScript. Without it, browse the <a href="characters.html">Subjects</a>, <a href="scenes.html">Records</a> and <a href="lore.html">Archive</a> indexes, each of which has its own filter box.</p></noscript>
+    </section>
+    <script src="js/search-index.js?v=202610290658" defer></script>
+    <script src="js/search.js?v=202610290658" defer></script>
+
+  </main>
+  <footer class="site-footer">
+    <p class="footer-quote">Not all stories are meant to be forgotten. Some are kept, for a reason.</p>
+    <div class="footer-inner wrap">
+      <p>&copy; 2026 Dzulfaraaghaini</p>
+      <ul class="footer-links">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://www.royalroad.com/profile/1068950" target="_blank" rel="noopener">Royal Road</a></li>
+        <li><a href="https://www.instagram.com/killythirsk" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.threads.com/@killythirsk" target="_blank" rel="noopener">Threads</a></li>
+      </ul>
+    </div>
+    <p class="build-info wrap">Site last built 2026-10-29, 06:58AM GMT+7</p>
+  </footer>
+  <script src="js/site.js?v=202610290658" defer></script>
+</body>
+</html>

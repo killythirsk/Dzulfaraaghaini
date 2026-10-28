@@ -1013,3 +1013,29 @@ body.lightbox-open { overflow: hidden; }
 .gz-name { display: block; font-family: var(--font-display); font-size: 1.05rem; }
 .gz-card:hover .gz-name, .gz-card:focus-visible .gz-name { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
 .gz-meta { display: block; margin-top: 0.15rem; font-size: 0.88rem; line-height: 1.4; color: var(--ink-soft); }
+
+/* 16. Site-wide search (search.html) */
+.visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.search-form .f-search { max-width: 40rem; margin-bottom: var(--space-xs); }
+.search-status { margin: 0 0 var(--space-sm); font: 0.75rem var(--font-mono); letter-spacing: 0.08em; color: var(--ink-soft); max-width: 60ch; }
+.chip:disabled { opacity: 0.4; cursor: default; }
+.chip:disabled:hover { background: none; color: var(--ink-soft); border-color: var(--rule); }
+.search-results { list-style: none; margin: 0; padding: 0; max-width: 52rem; }
+.search-hit a { display: flex; gap: 0.9rem; align-items: flex-start; padding: 0.8rem 0; border-bottom: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+.search-hit img { flex: none; width: 3.6rem; height: 3.6rem; object-fit: cover; object-position: top; outline: 1px solid rgba(27,27,27,.4); }
+.hit-body { display: block; min-width: 0; }
+.hit-kind { display: inline-block; margin-right: 0.5rem; font: 0.62rem var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+.hit-title { font-family: var(--font-display); font-size: 1.1rem; overflow-wrap: anywhere; }
+.search-hit a:hover .hit-title, .search-hit a:focus-visible .hit-title { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
+.hit-meta { display: block; margin-top: 0.1rem; font: 0.68rem var(--font-mono); letter-spacing: 0.06em; color: var(--ink-soft); }
+.hit-snippet { display: block; margin-top: 0.3rem; font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft); overflow-wrap: anywhere; }
+.search-page mark { background: rgba(212,177,90,.45); color: inherit; padding: 0 0.1em; }
+.search-more { margin-top: var(--space-sm); }
+@media (max-width: 40rem) { .search-hit img { width: 3rem; height: 3rem; } }
+.hero--compact .count { max-width: none; }
+/* The Search link made the nav one item longer; tighten it a little between the phone menu
+   and wide desktop so the header keeps to one row as far down as it did before. */
+@media (min-width: 48.01rem) and (max-width: 66rem) {
+  .site-nav ul { column-gap: 1.3rem; }
+  .site-nav a { letter-spacing: 0.14em; }
+}
