@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; ten are live on the site so far (Case 1153 went live on Google Books on 2026-10-14, Case 3001 on 2026-10-23), plus
-eleven coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 4181, 0277) and four
+twelve coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 4181, 0277, 0113) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -1776,6 +1776,90 @@ are a first pass; the author may want a different six. (15) While this was being
 4181 subjects merged), so the work was rebased onto it and rebuilt; the only conflict was in the Threefold Crown
 lore sentence, resolved by keeping both.
 
+### Book: *The Dog Is Not in It* (Case 0113)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-0113-the-dog-is-not-in-it`, as a
+pull request rather than straight into `main`, from: the cover (`images/covers/0113.jpg`, tagline "Warmth. Sign. Debt.
+War. Unentered.", used verbatim as the `hook`), 42 character sheets (17, then 20, then 5, in three batches), the
+manuscript `Case_0113_The_War_the_Dog_Never_Fought_2026-10-11_1705PM_GMT_7.md` and the publication-prep file
+`The_War_the_Dog_Never_Fought_publication.MD`, both used for context and **not committed** (the repo is public), nor are
+the original images. The author's briefs were "add case 0113 : The Dog is not in it ... include the description on the
+page too", "batch 2 of the dossier / continue" and "batch 3, becareful of conflict because other ai instance have
+access to the repo too". **`pages` is an untouched `EDITOR_*` placeholder; `genre` and `synopsis_html` are set (see 2 and
+3 below).**
+
+The premise, from the manuscript: Danjeri is a river kingdom (Soninke-coded West Africa) whose kings are made by the
+Weighing, a rite that in four hundred years had never produced an unambiguous sign. The Envoy **Sana** (Observer 640),
+disguised as a healer, requisitions an Immortal Cell (Mythic class, no larger than a date pit) for a dying boy, the
+prince **Damba**, and loses it to his own dog, **Doni**, which then does not age for fifty years. Doni warms cold feet;
+at the Weighing of the two sons it crosses the court and sits on the left foot of the second prince, **Sekou**, and a
+young Recounter, **Mansa**, cries that the long debt is paid. The Chief Recounter **Fode** answers at the Second Asking
+with "The account stands. The dog is not in it.", a spear kills the youngest prince, **Bakary**, and a war of two sons
+follows (two years and five months in the manuscript; the Bantaran riders take the Ghelo salt-pans and the ford of the
+Second Road). Fode pays the poisoner **Sira** four hundred weights to kill the dog on the Uncounted Day, the one day on
+which nothing is entered anywhere; the second Observer, 1,451 (field name Yandé), arrives eleven minutes late.
+Religion: the Kept Account.
+
+The cast: 42 subjects, the six principals first, then roughly story order: `kolo`, `fode`, `doni`, `sana`, `sekou`,
+`alassane`, `founding-ancestor`, `caravan-master`, `soriba`, `damba`, `tiemoko`, `household-recounter`, `balla`,
+`sitting-elders`, `treasury-clerk-first-entry`, `awa`, `binta`, `sata`, `bakary`, `hawa`, `dembele`,
+`bantaran-horse-lords`, `wardens-of-the-road-stations`, `treasury-clerk-household-accounts`, `nyeleni`,
+`bantaran-poet`, `mansa`, `tuma`, `boy-at-the-market-gate`, `kassa`, `kassas-servant`, `mory`, `spear-thrower`,
+`ghelo-pan-workers`, `captains-council`, `awas-riders`, `bocar`, `bocars-daughter`, `hawas-delivery-boy`, `sira`,
+`awas-nephew`, `hawas-granddaughter`. The `PRINCIPALS` entry is the first six, a first pass. The book has a `catalyst`
+record (**The Immortal Cell**, Mythic Class) and an `envoy` record (**Observer 640**, "Sana"); both cards link to a
+character page that exists (the Cell to `characters/doni.html`, because the Cell has no page of its own; the Envoy to
+`characters/sana.html`), so the Cultivator and Catalyst rosters list 0113 and Case 0188 shows a new automatic Related
+Cases card ("Same catalyst class: Mythic"). No `RELATED_THEMES` row, lore sentence or other hand-written cross-link was
+added. **There are no scenes** (`scenes: []`), no map and no gazetteer; none were sent. Images: the cover is 900x1350,
+the square share image is `images/share/cover-0113.jpg`, and the sheets are 980w with a 320w `-thumb` (84 files).
+
+Judgment calls worth knowing: (1) **Two titles.** The manuscript and the publication file are titled "The War the Dog
+Never Fought"; the cover and the author's brief say "The Dog Is Not in It", and the site uses the cover title. The
+manuscript's title does not appear on the page. "The dog is not in it" is Fode's sentence in Chapter Twelve, and his page
+says it is the one the cover title takes. (2) **The description.** The author asked for the description on the page. It
+is `synopsis_html` (four paragraphs, from the publication file), with two edits: its opening title "THE WAR THE DOG NEVER
+FOUGHT" is replaced by the cover title in italics, and its closing line "Case 0113 in the Case Study archive." is
+omitted (no other case carries one, and the case tag says so). Both are easy to reverse. (3) **Genre and pages.**
+`genre` is "Fiction / Fantasy / Historical", the file's first BISAC choice (FIC009030). The file's other two, FIC028000
+Science Fiction / General (matched on a third-party lookup, "confirm in Partner Center") and FIC009000 Fantasy /
+General, were not chosen and nothing is confirmed. `pages` is still the placeholder. (4) **Status** is coming-soon with
+no purchase link: the publication file is prep text, not a release. (5) **Slugs** are all new (character slugs are one
+global namespace; no collisions). The two treasury clerks are `treasury-clerk-first-entry` (sheet age 26) and
+`treasury-clerk-household-accounts` (34); the manuscript does not say whether they are one man, and both pages say so.
+(6) **No sheet, so no page:** Observer 1,451 (Yandé, a major figure in Chapters Eight to Fifteen and the Interludes),
+Queen consort Yarissa, the caravan-master Yero, Captain Wuro, Sory (Sata's brother, hanged), the woman who sells sleep,
+the widow with the sandals and the other unsheeted extras. Where a bio needs them they appear as plain text and the
+bio says they have no page. (7) **Provenance in the bios.** Plot comes only from the manuscript; every detail that only
+the sheet gives (age, build, face, clothing, panel names, scene captions, printed lines) is introduced as "the sheet's"
+and the last paragraph of each bio says which is which. Several sheets carry text that is not in the manuscript and is
+labelled as the sheet's (Soriba's and Balla's pull-quotes, Alassane's "eldest surviving son", the Founding Ancestor's and
+Awa's Nephew's "appearance invented"). (8) **Sheets against the manuscript**, all flagged on the pages: Binta's three
+scenes draw Sekou as a small boy, which fits only the last; the Captains' Council sheet draws a dog beside the table
+though the manuscript does not place it at the vote; Bakary's sheet has him kneeling; Sana's sheet draws a pale golden
+dog where the manuscript says sand-coloured; Hawa's Delivery Boy's sheet scene is the kennel's back door where the
+manuscript's one meeting is the back door of the Weighmaster's Table; Nyeleni has no pronoun in the manuscript, and the
+page follows it though the sheet draws a bearded man. (9) **"Wardens"** is used for two bodies of men (the wardens on
+the kennel wall, and Sekou's thousand called up from the road-stations); the sheet merges them, so there is one page and
+it says the manuscript does not say they are the same men. (10) **Manuscript inconsistencies noticed, not "fixed".**
+Reported on the pages: Sekou "at seven, on a cold night" teaching the dog (Chapter Twelve) against the dog choosing his
+feet by itself (Chapter Six); Alassane's fish remembered after thirty-one years (Chapter Six) and thirty (Chapter Ten).
+Only here: Kolo's age ("eleven or twelve" in Chapter Two, "twelve" in Chapters Eight and Fourteen; he dies at 79, eighteen
+years after the dog, which makes 61 at its death, against twelve plus fifty); Sekou sits "thirty-one months" on the
+stool (Chapter Thirteen) although the war is "two years and five months"; Chapter Fifteen puts Observer 1,451's appointment on "the twenty-sixth of Mavren" while the Uncounted Day
+follows the last night of Mavren, and Sira meets the delivery boy on the twenty-eighth. The author may want to
+reconcile these in the next revision. (11) **Fact-check.** Every quoted or italicised phrase attributed to the manuscript
+was checked against it by script (all found; the phrases the script cannot find are the sheets' own titles, captions and
+lines, which are labelled). All 42 bios were then read against the manuscript in full, by the session that wrote them:
+separate-reader agents were tried several times over two days and each returned nothing, because of a usage limit. That read found 17
+slips and all were fixed (for example a millet price stated backwards, a "first dose" the manuscript does not give, an
+invented "breath he draws before he speaks", "the end of Chapter Fourteen" for its start, a teaser calling a dark ale
+her grandmother's when the bio says the manuscript does not say so). **An independent reader has not checked them** and one would be
+worthwhile. (12) **Length.** Sekou's and Fode's bios are long (about 800 and 730 words) because they carry most of the
+plot; they could be trimmed. (13) **Principals** are a first pass; the author may want a different six. (14) While this
+was built `main` moved three times; the branch had no commits yet, so it was fast-forwarded each time and checked
+again for slug and image collisions (none).
+
 ### Gazetteers (new Archive group, 2365 + 4555 and 4417)
 
 The author sent two map images and asked for them to go "into something else", not into the subjects or
@@ -1943,6 +2027,11 @@ sit at the end of `BOOKS`, in the order the author listed them.
   record (so both lore rosters list it), but no page count, genre, synopsis or purchase link (§6). The Vara of this case
   is linked to the Vara of Case 0202 on inference only; the Hush's "fifth" attempt, Frida's lady's-maid label, the
   low-table painting's bandaged forearm and the ford painting's Reinolt differ from the manuscript; all flagged in §6.
+- **Case 0113** (*The Dog Is Not in It*) is coming-soon with a 42-subject cast, a Catalyst and an Envoy record (so both
+  lore rosters list it), a description and a Fantasy / Historical genre taken from the publication file, but no page
+  count, purchase link, scenes, map or gazetteer (§6). The manuscript is titled *The War the Dog Never Fought*. Observer
+  1,451 (Yandé) and Queen Yarissa have no sheet, so no page; "wardens" names two bodies of men in the manuscript
+  and has one page; several sheets differ from the manuscript and the manuscript has a few date slips; all flagged in §6.
 - **Case 4181** (*The Sable Skin*) is coming-soon with a 54-subject cast, 15 records and a gazetteer, but no catalyst
   or envoy record, page count, genre, synopsis or purchase link (§6). Higaide is the protagonist per the
   author; his page is `higaide` in Case 2231, linked from here and back (§6). Observer 614 and the
@@ -2026,7 +2115,22 @@ sit at the end of `BOOKS`, in the order the author listed them.
   previous master's — only the new pages and the pages the new book
   legitimately touches (`index.html`, `books.html`, the lore pages,
   cross-linked characters) should change.
-- **Latest update (more subjects for Case 2231 and the Kiyote Pair thumbnail — branch `case-2231-more-subjects`, pull
+- **Latest update (Case 0113 added — branch `case-0113-the-dog-is-not-in-it`, pull request, 2026-10-22/28).**
+  The author sent the cover, the manuscript and the publication file "for context", and 17 character sheets ("add
+  case 0113 : The Dog is not in it ... include the description on the page too"), then 20 more ("batch 2 of the dossier
+  / continue") and 5 more ("batch 3, becareful of conflict because other ai instance have access to the repo too").
+  Done: a full `0113` dict (42 `characters`, `catalyst` The Immortal Cell, `envoy` Observer 640, the author's
+  description as `synopsis_html`, genre Fiction / Fantasy / Historical; `pages` left as the `EDITOR_*` placeholder; no
+  scenes), a `PRINCIPALS` entry, and nothing else by hand. Images: 1 cover, 1 share image, 84 character files. Recount
+  after rebuilding: cases 25 -> 26, characters 464 -> 506, records 227 (unchanged), sitemap 732 -> 775, awaiting-release
+  15 -> 16; every local link resolves (28,428 checked), no duplicate character slugs, every quoted phrase checked
+  against the manuscript by script, all 42 bios read against the manuscript (17 slips fixed), and the new and changed
+  pages opened in Chromium at desktop and phone width. Only files that really changed were committed; the footer-stamp-only
+  pages were left alone. The manuscript, the publication file and the original images were not committed. `main` was
+  fetched before the work and before the push; the branch needed no merge. **Open questions for the author** are the
+  numbered judgment calls in §6: the title on the page (cover title, not the manuscript's), the omitted "Case 0113 in the
+  Case Study archive." line, the genre, the page count, and the manuscript's date slips.
+- **Earlier update (more subjects for Case 2231 and the Kiyote Pair thumbnail — branch `case-2231-more-subjects`, pull
   request, 2026-10-22/23).** The author wrote "2231 / add the kiyote pair thumbnail
   is not right / add these dossier to 2231 please / manuscript added for context", with a screenshot of the Pair's
   card and 15 character sheets. Done: the Catalyst roster image is now `characters/the-kiyote-pair-thumb.jpg`; 15 new
