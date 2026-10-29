@@ -4,8 +4,10 @@ Generates the author-site static site (v4 — multi-book).
 Run with `python3 build_site.py` from anywhere; it locates the project
 root relative to this file's own location.
 """
+import json
 import os
 import re
+import unicodedata
 from html import escape as _esc
 from datetime import datetime, timezone, timedelta
 
@@ -36,6 +38,7 @@ NAV = [
     ("lore.html", "Archive"),
     ("about.html", "About"),
     ("contact.html", "Contact"),
+    ("search.html", "Search"),
 ]
 
 TAG_LABELS = {
@@ -5723,7 +5726,17 @@ def share_image(prefix, original):
     return candidate if os.path.isfile(os.path.join(OUT, candidate)) else original
 
 
-def head_html(title, description, depth, path=None, image=None, image_alt=None, og_type="website"):
+def jsonld_script(data):
+    """<script type="application/ld+json"> block for a dict/list, or '' for None. '<' and the two
+    JS line separators are escaped so the data can never close the tag or break the script."""
+    if not data:
+        return ""
+    txt = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    txt = txt.replace("<", "\\u003c").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
+    return '\n  <script type="application/ld+json">%s</script>' % txt
+
+
+def head_html(title, description, depth, path=None, image=None, image_alt=None, og_type="website", robots="noimageindex", jsonld=None):
     r = rel(depth)
     seo = ""
     if path is not None:
@@ -5759,13 +5772,13 @@ def head_html(title, description, depth, path=None, image=None, image_alt=None, 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>%s</title>
   <meta name="description" content="%s">
-  <meta name="robots" content="noimageindex">%s
+  <meta name="robots" content="%s">%s
   <link rel="icon" href="%sassets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="%sassets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Code+Pro:wght@400&display=swap">
-  <link rel="stylesheet" href="%scss/style.css?v=%s">""" % (title, attr(description), seo, r, r, r, ASSET_V)
+  <link rel="stylesheet" href="%scss/style.css?v=%s">%s""" % (title, attr(description), robots, seo, r, r, r, ASSET_V, jsonld_script(jsonld))
 
 
 def header_html(active_file, depth):
@@ -5802,7 +5815,7 @@ def footer_html(depth):
   <script src="%sjs/site.js?v=%s" defer></script>""" % (AUTHOR, contact, BUILD_TIME, r, ASSET_V)).replace("@@SOCIALS@@", socials)
 
 
-def page(title, description, depth, active_file, body, path=None, image=None, image_alt=None, og_type="website"):
+def page(title, description, depth, active_file, body, path=None, image=None, image_alt=None, og_type="website", robots="noimageindex", jsonld=None):
     """`path` is the page's own site-relative file name; passing it turns on the canonical
     link, the Open Graph / Twitter tags and the sitemap entry for the page."""
     if path is not None:
@@ -5820,7 +5833,7 @@ def page(title, description, depth, active_file, body, path=None, image=None, im
 %s
 </body>
 </html>
-""" % (head_html(title, description, depth, path, image, image_alt, og_type), header_html(active_file, depth), body, footer_html(depth))
+""" % (head_html(title, description, depth, path, image, image_alt, og_type, robots, jsonld), header_html(active_file, depth), body, footer_html(depth))
 
 
 def tags_html(book):
@@ -6754,6 +6767,169 @@ def scenes_page_body():
     return filter_page_body("Records", len(items), "records", "Search records...", books, items, "recs--scenes")
 
 
+# ---- structured data (JSON-LD) -----------------------------------------------------
+# Everything here is derived from fields already on the pages; nothing is invented. A
+# value that is not on file (ISBN, publication date) is simply left out.
+PERSON_ID = SITE_URL + "#author"
+WEBSITE_ID = SITE_URL + "#website"
+
+
+def _clean(html_text):
+    """Plain text with the editor placeholders ('add page count', 'Full synopsis coming soon') removed."""
+    return plain(re.sub(r'<(span|p) class="editor-note">.*?</\1>', "", html_text or ""))
+
+
+def person_jsonld():
+    return {"@type": "Person", "@id": PERSON_ID, "name": AUTHOR, "url": SITE_URL,
+            "description": "Pen name of an independent writer of speculative fiction.",
+            "sameAs": [u for _l, _t, u in SOCIALS]}
+
+
+def home_jsonld():
+    return {"@context": "https://schema.org", "@graph": [
+        {"@type": "WebSite", "@id": WEBSITE_ID, "name": AUTHOR, "url": SITE_URL, "inLanguage": "en",
+         "publisher": {"@id": PERSON_ID}},
+        person_jsonld()]}
+
+
+def breadcrumb_jsonld(trail):
+    """trail = [(name, site-relative path), ...] ending at the page itself."""
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": plain(name), "item": abs_url(path)}
+        for i, (name, path) in enumerate(trail)]}
+
+
+def book_jsonld(b):
+    url = abs_url("books/%s.html" % b["slug"])
+    published = is_published(b)
+    d = {"@type": "Book", "@id": url + "#book", "name": plain(b["title"]), "url": url,
+         "image": abs_url("images/covers/%s" % b["cover_file"]),
+         "author": {"@id": PERSON_ID}, "inLanguage": "en",
+         "alternateName": b["case_tag"],
+         "creativeWorkStatus": "Published" if published else "Awaiting release"}
+    synopsis = _clean(b.get("synopsis_html"))
+    d["description"] = synopsis or plain(b["hook"])
+    pages = _clean(b.get("pages")).strip()
+    if pages.isdigit():
+        d["numberOfPages"] = int(pages)
+    genres = [g.strip() for g in re.split(r"\s*(?:\u00b7|/)\s*", _clean(b.get("genre"))) if g.strip()]
+    if genres:
+        d["genre"] = genres
+    links = [url_ for _label, url_ in read_buttons(b) if url_ and url_ != "#"]
+    if links:
+        d["sameAs"] = links
+    # A readable edition: only Google Books and Kindle are e-book editions (Royal Road is a web serial).
+    editions = []
+    for tag, field in (("google-books", "google_books_url"), ("kindle", "kindle_url")):
+        if tag in b["status"] and b.get(field):
+            editions.append({"@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "en",
+                             "potentialAction": {"@type": "ReadAction",
+                                                 "target": {"@type": "EntryPoint", "urlTemplate": b[field]}}})
+    if editions:
+        d["workExample"] = editions
+    return d
+
+
+def case_page_jsonld(b):
+    crumb = breadcrumb_jsonld([("Home", ""), ("Cases", "books.html"), (b["title"], "books/%s.html" % b["slug"])])
+    return {"@context": "https://schema.org", "@graph": [book_jsonld(b), crumb, person_jsonld()]}
+
+
+def subject_page_jsonld(c, b):
+    return {"@context": "https://schema.org", "@graph": [breadcrumb_jsonld([
+        ("Home", ""), ("Cases", "books.html"), (b["title"], "books/%s.html" % b["slug"]),
+        (c["name"], "characters/%s.html" % c["slug"])])]}
+
+
+def record_page_jsonld(sc, b):
+    return {"@context": "https://schema.org", "@graph": [breadcrumb_jsonld([
+        ("Home", ""), ("Cases", "books.html"), (b["title"], "books/%s.html" % b["slug"]),
+        (record_title(sc), record_path(sc))])]}
+
+
+def lore_page_jsonld(l):
+    return {"@context": "https://schema.org", "@graph": [breadcrumb_jsonld([
+        ("Home", ""), ("Archive", "lore.html"), (l["name"], "lore/%s.html" % l["slug"])])]}
+
+
+# ---- site-wide search ----------------------------------------------------------------
+# search.html + js/search.js + js/search-index.js. The index is a plain script that sets
+# window.SEARCH_INDEX (not a .json fetched at run time), so search also works when the site is
+# opened straight from disk, where browsers refuse fetch() on local files. The index is only
+# loaded by search.html. Documents are built from the same data as every other page.
+SEARCH_KINDS = [("c", "Cases"), ("s", "Subjects"), ("r", "Records"), ("a", "Archive")]
+
+
+def _search_doc(kind, title, url, meta, sub, text, img=None):
+    d = {"k": kind, "t": plain(title), "u": url, "m": plain(meta)}
+    if sub:
+        d["d"] = plain(sub)
+    d["x"] = plain(text)
+    if img and os.path.isfile(os.path.join(OUT, img)):
+        d["i"] = img
+    return d
+
+
+def search_index():
+    docs = []
+    for b in BOOKS:
+        live = is_published(b)
+        status = "Published" if live else "Awaiting release"
+        docs.append(_search_doc(
+            "c", b["title"], "books/%s.html" % b["slug"], "%s \u00b7 %s" % (b["case_tag"], status),
+            b["hook"], " ".join([b["case_tag"], _clean(b.get("genre")), _clean(b.get("synopsis_html"))])))
+        for c in b["characters"]:
+            also = [x["case_tag"] for x in BOOKS if x["slug"] in [cs for cs, _l, _n in ALSO_IN.get(c["slug"], {}).get("cases", [])]]
+            meta = "%s \u00b7 %s" % (b["case_tag"], plain(b["title"])) + (" \u00b7 also in " + ", ".join(also) if also else "")
+            docs.append(_search_doc("s", c["name"], "characters/%s.html" % c["slug"], meta, c["epithets"],
+                                    " ".join([c["teaser"], c["bio_html"], c.get("quote") or ""]),
+                                    "images/characters/%s-thumb.jpg" % c["slug"]))
+        for sc in b["scenes"]:
+            names = ", ".join(x["name"] for x in record_subjects(sc))
+            docs.append(_search_doc("r", record_title(sc), record_path(sc), "%s \u00b7 %s" % (b["case_tag"], plain(b["title"])),
+                                    names, " ".join([sc["alt"], sc["caption_html"]]),
+                                    "images/scenes/%s-grid.jpg" % sc["slug"]))
+    for l in LORE:
+        places = " ".join("%s. %s" % (n, note) for n, note in l.get("places", []))
+        docs.append(_search_doc("a", l["name"], "lore/%s.html" % l["slug"],
+                                "Gazetteer" if l.get("map") else "Archive", l["teaser"],
+                                " ".join([l["definition_html"], l.get("appears_html", ""), places])))
+    return docs
+
+
+def search_index_js(docs):
+    txt = json.dumps(docs, ensure_ascii=False, separators=(",", ":"))
+    txt = txt.replace("</", "<\\/").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
+    return "/* Generated by tools/build_site.py: do not edit. */\nwindow.SEARCH_INDEX=%s;\n" % txt
+
+
+def search_body(docs):
+    counts = dict((k, sum(1 for d in docs if d["k"] == k)) for k, _l in SEARCH_KINDS)
+    chips = '<button type="button" class="chip is-on" data-kind="" aria-pressed="true">All</button>' + "".join(
+        '<button type="button" class="chip" data-kind="%s" aria-pressed="false">%s</button>' % (k, label) for k, label in SEARCH_KINDS)
+    return """    <section class="hero hero--compact">
+      <div class="wrap">
+        <h1>Search the archive</h1>
+        <p class="count">%d cases &middot; %d subjects &middot; %d records &middot; %d archive entries</p>
+      </div>
+    </section>
+
+    <section class="wrap page-content search-page" id="search-app">
+      <form class="search-form" role="search" action="search.html" method="get">
+        <label class="visually-hidden" for="s-q">Search the archive</label>
+        <input class="f-search" id="s-q" name="q" type="search" placeholder="A name, a place, a faith, a case number..." autocomplete="off" spellcheck="false">
+      </form>
+      <div class="chips" role="group" aria-label="Filter by type" hidden>%s</div>
+      <p class="search-status" role="status" aria-live="polite">Type to search every case, subject, record and archive entry, including what is written inside them.</p>
+      <ol class="search-results"></ol>
+      <button type="button" class="more-btn search-more" hidden>Show more results</button>
+      <noscript><p>Search needs JavaScript. Without it, browse the <a href="characters.html">Subjects</a>, <a href="scenes.html">Records</a> and <a href="lore.html">Archive</a> indexes, each of which has its own filter box.</p></noscript>
+    </section>
+    <script src="js/search-index.js?v=%s" defer></script>
+    <script src="js/search.js?v=%s" defer></script>
+""" % (counts["c"], counts["s"], counts["r"], counts["a"], chips, ASSET_V, ASSET_V)
+
+
 def write(path, content):
     full = os.path.join(OUT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
@@ -6767,7 +6943,7 @@ _check_principals()
 # ---- top-level pages ---------------------------------------------------------
 write("index.html", page("%s \u2014 Speculative Fiction Author" % AUTHOR,
                           "Standalone speculative-fiction novels about the fragility of kingdoms, faiths and human systems, filed as cases. "
-                          "Start with any book; each one stands alone.", 0, "index.html", index_body(), path="index.html"))
+                          "Start with any book; each one stands alone.", 0, "index.html", index_body(), path="index.html", jsonld=home_jsonld()))
 write("books.html", page("Cases \u2014 %s" % AUTHOR,
                           "Every case in the archive: published novels and cases awaiting release. Each stands alone, so start with any.",
                           0, "books.html", books_body(), path="books.html"))
@@ -6789,21 +6965,24 @@ for book in BOOKS:
           page("%s \u2014 %s" % (book["title"], AUTHOR),
                "%s, %s: %s Case file, principal subjects, records, and where to read it." % (book["title"], book["case_tag"], book["hook"]),
                1, "books.html", book_detail_body(book), path="books/%s.html" % book["slug"],
-               image=share_image("cover", "images/covers/%s" % book["cover_file"]), image_alt="Cover of %s" % plain(book["title"]), og_type="book"))
+               image=share_image("cover", "images/covers/%s" % book["cover_file"]), image_alt="Cover of %s" % plain(book["title"]), og_type="book",
+               jsonld=case_page_jsonld(book)))
 
     for c in book["characters"]:
         write("characters/%s.html" % c["slug"],
               page("%s \u2014 %s" % (c["name"], AUTHOR),
                    "%s Subject file from %s, %s." % (plain(c["teaser"]), book["case_tag"], book["title"]),
                    1, "books.html", character_detail_body(c, book), path="characters/%s.html" % c["slug"],
-                   image="images/characters/%s.jpg" % c["slug"], image_alt="Character reference sheet for %s" % plain(c["name"]), og_type="article"))
+                   image="images/characters/%s.jpg" % c["slug"], image_alt="Character reference sheet for %s" % plain(c["name"]), og_type="article",
+                   jsonld=subject_page_jsonld(c, book)))
 
     for sc in book["scenes"]:
         write(record_path(sc),
               page("%s \u2014 %s" % (record_title(sc), AUTHOR),
                    "%s. Record from %s, %s." % (sc["alt"].rstrip("."), book["case_tag"], book["title"]),
                    1, "scenes.html", record_detail_body(sc, book), path=record_path(sc),
-                   image="images/scenes/%s.jpg" % sc["slug"], image_alt=sc["alt"], og_type="article"))
+                   image="images/scenes/%s.jpg" % sc["slug"], image_alt=sc["alt"], og_type="article",
+                   jsonld=record_page_jsonld(sc, book)))
 
 # ---- lore detail pages ---------------------------------------------------------
 for l in LORE:
@@ -6811,7 +6990,15 @@ for l in LORE:
           page("%s \u2014 %s" % (l["name"], AUTHOR),
                "%s Definition and where it appears." % l["teaser"],
                1, "lore.html", lore_detail_body(l), path="lore/%s.html" % l["slug"],
+               jsonld=lore_page_jsonld(l),
                **({"image": share_image("map", "images/maps/%s.jpg" % l["map"]["file"]), "image_alt": l["map"]["alt"]} if l.get("map") else {})))
+
+# ---- site-wide search ------------------------------------------------------------------
+# Not in the sitemap and noindex (no path=): a search page with no query has nothing to show a crawler.
+_SEARCH_DOCS = search_index()
+write("js/search-index.js", search_index_js(_SEARCH_DOCS))
+write("search.html", page("Search \u2014 %s" % AUTHOR, "Search every case, subject, record and archive entry.",
+                          0, "search.html", search_body(_SEARCH_DOCS), robots="noindex, follow"))
 
 # ---- old URLs that now redirect ---------------------------------------------------
 REDIRECTS = {"lore/catalyst-tier.html": "catalyst.html"}
