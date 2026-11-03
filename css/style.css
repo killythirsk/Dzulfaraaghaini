@@ -1039,3 +1039,17 @@ body.lightbox-open { overflow: hidden; }
   .site-nav ul { column-gap: 1.3rem; }
   .site-nav a { letter-spacing: 0.14em; }
 }
+
+/* 17. Yield Score explainer (lore/cultivator.html, #yield-score). The site had no table styles
+   before this; these are ledger-style rules and apply only to .score-table inside .table-wrap. */
+#yield-score h3 { margin-top: var(--space-md); }
+.score-formula, .score-log { max-width: none; margin: var(--space-xs) 0; padding: 0.7rem 1rem; border-left: 3px solid var(--gold); background: rgba(27,27,27,.05); font: 0.88rem/1.7 var(--font-mono); letter-spacing: 0.02em; overflow-wrap: anywhere; }
+.table-wrap { margin: var(--space-xs) 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.score-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; line-height: 1.45; }
+.score-table th, .score-table td { padding: 0.5rem 1rem 0.5rem 0; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+.score-table thead th { font: 0.64rem var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 1px solid var(--ink-soft); }
+.score-table tbody th { font-weight: 600; }
+.score-table tbody tr:last-child th, .score-table tbody tr:last-child td { border-bottom: none; }
+.score-table .num { font-family: var(--font-mono); font-size: 0.88rem; white-space: nowrap; }
+.score-marks { max-width: 68ch; padding-left: 1.3rem; }
+.score-marks li { margin: 0 0 var(--space-3xs); }
