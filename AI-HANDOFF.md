@@ -55,7 +55,7 @@ else will compute the wrong project root and write files to the wrong
 place — this happened once already during development; see §8.
 
 **Rule: don't hand-edit the generated `.html` files.** Any direct edit to
-`index.html`, `books/0000.html`, `characters/*.html`, etc. will be silently
+`index.html`, `cases/0000.html`, `subjects/*.html`, etc. will be silently
 overwritten the next time someone runs the script. Edit the data or
 template functions inside `build_site.py` instead, then regenerate.
 
@@ -87,12 +87,12 @@ adding a new dict to `BOOKS` with its own `"characters": [...]` and
 `"scenes": [...]`; adding a character or scene to an existing book means
 appending to that book's own nested list. The `write()` loop at the bottom
 of the script iterates over `BOOKS` and, for each one, over its nested
-characters — that's what actually produces every `books/<slug>.html` and
-`characters/<slug>.html` file, so nothing needs to be added to the loop
+characters — that's what actually produces every `cases/<slug>.html` and
+`subjects/<slug>.html` file, so nothing needs to be added to the loop
 itself when the lists grow.
 
 **Character slugs share one namespace across all books.** Each becomes
-`characters/<slug>.html`, and the generator silently overwrites a page if
+`subjects/<slug>.html`, and the generator silently overwrites a page if
 two books use the same slug (there are no duplicates now; §10 has a check).
 Other cases in the author's canon reuse names already taken here — a Lady
 Aurelia in Case 4425 and a King Osric in Case 3887, against this site's
@@ -115,7 +115,7 @@ filename.
 
 **Update (Oct 2026): the site was re-themed to the author's "archive" mockup** (dark ink header/hero/footer, parchment page, gold accent; Playfair Display + Lora + Source Code Pro). The "cool grey, not warm parchment" bullets below describe the *previous* theme and are superseded: current tokens are in `:root` plus the "12. Archive theme" block at the end of `css/style.css`. Covers get a shadow and hairline outline so they still stand off the warmer ground. The hero image `images/backgrounds/hero.jpg` is a crop from the author's mockup (placeholder; swap in a proper image under the same name). Also added from the mockup: top-level `characters.html` and `scenes.html` (search + per-case filter chips, driven by `BOOKS`), a Featured Case block on the home page (Case 4555), and a mobile hamburger menu. Not built: a category-tabbed Lore page, a global cross-site search, a mobile bottom tab bar.
 
-**Update (Oct 2026, case-archive pass).** The site now speaks in archive terms. Nav and headings: Books -> **Cases**, Characters -> **Subjects**, Scenes -> **Records**, Lore -> **Archive**, "Coming Soon" -> **Awaiting Release**. File names and URLs were deliberately NOT changed (`books.html`, `characters.html`, ...), so every shared link still works. What was added, all in `tools/build_site.py` + CSS section 14 + `js/site.js`:
+**Update (Oct 2026, case-archive pass).** The site now speaks in archive terms. Nav and headings: Books -> **Cases**, Characters -> **Subjects**, Scenes -> **Records**, Lore -> **Archive**, "Coming Soon" -> **Awaiting Release**. File names and URLs were deliberately NOT changed at that point (`books.html`, `characters.html`, ...), so every shared link still worked. **Superseded 2026-11-03: the URLs were renamed too, with redirects from the old ones; see that update below.** What was added, all in `tools/build_site.py` + CSS section 14 + `js/site.js`:
 - **Cases page / home:** *Published Cases* (grid, count) and *Cases Awaiting Release* (separate dark band, desaturated covers) via `published_section_html()` / `awaiting_band_html()`. Home shows the published grid plus a link to `books.html#awaiting`.
 - **Case page:** dominant `READ ON GOOGLE BOOKS` button under the title and again after the Records (`cta_html()`; falls back to Kindle / Royal Road if there is no Google Books link; awaiting cases get no READ button). Subjects are split into **Principal Subjects** and a folded `<details>` "N additional subjects documented" (`subjects_section_html()`), with a link to `characters.html?case=<slug>` (the index reads `?case=`). Principals are set per case in the **`PRINCIPALS`** dict at the top of the script (author-confirmed only for 4099; the rest are a first pass, edit freely). Cases with 7 or fewer subjects (`SPLIT_MIN`) show everyone as principal; a case with no `PRINCIPALS` entry falls back to its first six.
 - **Related Cases / Subjects / Records** are generated from existing data, nothing invented: cases relate by *same catalyst class* (each book's `catalyst.meta`) and *shared faith* (the Religion lore pages' `appears_html` links); subjects relate by character cross-links inside bios (both directions), falling back to the case's principals; records are the scenes whose caption links to that subject; lore pages list the cases where the concept appears. Hand-written thematic links go in **`RELATED_THEMES`** as `(case slug, case slug, "reason")`. "Same Observer" is not a generated relation: each case has its own Observer, with **one exception on file, Observer 419**, who is the Envoy of both 2140 and 1153 (Case 1268 has no Envoy posted in person; its `envoy` roster record is the Custodian-Office analyst, §6) (a hand-written `RELATED_THEMES` row links the two; the Cultivator lore says so; see §6).
@@ -164,6 +164,13 @@ filename.
 - **Not built:** per-case scores. When the author has a score of record for a case, add it as an optional field on that book dict and show it on the case page; until then the Cultivator page tells readers that a case without a score has not been scored yet.
 - The page also lists the six catalyst classes with their case-number ranges (they are the W weights), so the §7 note that the tier system is undocumented is updated.
 
+**Update (2026-11-03, URLs renamed to the archive vocabulary).** The author asked for the links to follow the headings: "Books to case, Characters to subjects, Scene to records, Lore to archive". In `tools/build_site.py` (plus one comment in `js/site.js`):
+- **New addresses:** `books.html` -> `cases.html` and `books/<slug>.html` -> `cases/<slug>.html`; `characters.html` -> `subjects.html` and `characters/<slug>.html` -> `subjects/<slug>.html`; `scenes.html` -> `records.html` (record pages were already `records/<slug>.html`, so they did not move); `lore.html` -> `archive.html` and `lore/<slug>.html` -> `archive/<slug>.html`. The nav list at the top of the script, canonical / Open Graph / JSON-LD / share URLs, `sitemap.xml`, the search index and every in-text cross-link all come from those strings, so nothing else needed editing. New code should use the new names.
+- **Old addresses are redirect stubs.** `REDIRECTS` (end of the script, just before the sitemap) writes one for every case, subject and archive page, the four index pages and `lore/catalyst-tier.html`. A stub is `noindex`, has a canonical link to the new address, and sends the browser on with `location.replace(target + location.search + location.hash)`, so `characters.html?case=4099` and `books.html#awaiting` still land on the right filter and section; a `<noscript>` meta refresh covers browsers without JavaScript (query string lost). Stubs are not in `sitemap.xml`. **`books/`, `characters/` and `lore/` hold stubs only: never generate a real page into them.** A new case, subject or archive entry gets its stub on the next build. Check: `grep -L "<title>Moved</title>" books/*.html characters/*.html lore/*.html books.html characters.html scenes.html lore.html` must print nothing.
+- **Deliberately not renamed:** the `"characters"` / `"scenes"` keys inside each `BOOKS` dict, function names, `images/characters/`, `images/scenes/` and the other image folders (an image path is not a page link; the `"img": "characters/...-thumb.jpg"` values are relative to `images/`), and the Google Play links (`.../store/books/details?...`).
+- **Not tested from the build environment:** how a social platform that does not run JavaScript previews an *old* link when it re-fetches it (the stub carries a canonical link but no Open Graph tags); a link shared before this change keeps its cached preview until the platform re-fetches it, as before. After deploying, resubmit `sitemap.xml` in Search Console: every address in it changed.
+- Totals unchanged (26 cases, 506 subjects, 227 records). Checked after the rebuild: all 775 sitemap addresses exist, 31,395 local links resolve, no real page links to an old address, and every file in the old folders is a stub.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -207,25 +214,26 @@ Everything visual is CSS custom properties at the top of `css/style.css`
 
 ## 4. Site map
 
-Nav (same on every page): **Home / Books / Characters / Scenes / Lore / About / Contact.**
-Notably *not* in the nav: Characters, Scenes — both live inside each
-book's own page rather than as their own top-level sections.
+Nav (same on every page): **Home / Cases / Subjects / Records / Archive / About / Contact / Search.**
+Since 2026-11-03 the page addresses match: `cases.html`, `subjects.html`, `records.html`, `archive.html`
+(the old `books.html`, `characters.html`, `scenes.html`, `lore.html` and the `books/`, `characters/`, `lore/`
+folders are redirect stubs; see §3). The site map below was written before the rename and lists the new addresses.
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/books.html             Full book list (currently twenty-five entries: ten published, fifteen coming-soon — see §6)
-/books/0000.html          The Sword of Valeria's full page
-/books/4099.html          The Ledger of a Single Sweetness's full page
-/books/0157.html          The Stolen Prince War's full page
-/books/4417.html          The Iron Stiletto War's full page
-/lore.html               Glossary index (plain list on top, then a "Religion"
+/cases.html             Full book list (currently twenty-five entries: ten published, fifteen coming-soon — see §6)
+/cases/0000.html          The Sword of Valeria's full page
+/cases/4099.html          The Ledger of a Single Sweetness's full page
+/cases/0157.html          The Stolen Prince War's full page
+/cases/4417.html          The Iron Stiletto War's full page
+/archive.html               Glossary index (plain list on top, then a "Religion"
                             heading over the three faiths, then a "Gazetteers" heading over the three map pages — `group` field, §8)
-/lore/<slug>.html          One page per term (cultivator, catalyst, faith-of-ardwen,
+/archive/<slug>.html          One page per term (cultivator, catalyst, faith-of-ardwen,
                             threefold-crown, decree-of-luminescence, and the two
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/characters/<slug>.html    One page per character (464 total — 10 for
+/subjects/<slug>.html    One page per character (464 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -1885,7 +1893,7 @@ gazetteer entry carries two extra fields: **`map`** (`file`, the image slug unde
 `alt`) and **`places`** (a list of `(name, note_html)` pairs). `lore_detail_body` hands any entry with a
 `map` to **`gazetteer_body`**: the map (opens in the lightbox, group `maps`) beside "About the Map",
 "Places" and "Appears In", then the usual "Cases Where This Appears". `lore_cases` still reads the case
-slugs out of `appears_html`, so that paragraph must link `../books/<slug>.html`. A case page whose slug
+slugs out of `appears_html`, so that paragraph must link `../cases/<slug>.html`. A case page whose slug
 appears there gets a **Gazetteer** card (`gazetteer_cards_html`, `#gazetteer`) between Records and the
 purchase panel. CSS is the "Gazetteers" section at the end of `css/style.css`.
 
@@ -2493,7 +2501,8 @@ python3 build_site.py
 ```
 
 Then, from the project root, this catches the most common mistakes
-(broken relative links) before you hand anything back:
+(broken relative links) before you hand anything back (the old `books/`, `characters/` and `lore/`
+folders hold redirect stubs; their links resolve like any other):
 
 ```bash
 python3 - << 'EOF'
