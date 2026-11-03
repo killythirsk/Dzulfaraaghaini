@@ -156,6 +156,14 @@ filename.
 - **Nav fit:** the extra Search link pushed the header onto two rows below about 1000px; a small `column-gap` / letter-spacing rule between 48rem and 66rem in CSS section 16 brings that back to about 900px, as it was.
 - **Every generated page changes in a build**: nav item, JSON-LD and the build stamp. Diffing a build against the previous commit therefore touches about 775 HTML files; that is expected.
 
+**Update (2026-11-03, Yield Score explainer on the Cultivator page).** In `tools/build_site.py` + CSS section 17. The author is adding a scoring system to every case (Master Canon Guide, Section 2.6, 2026-11-02) and asked for readers to be taught it on the lore / Cultivator page:
+- The explanation is an optional **`scoring_html`** key on the Cultivator `LORE` entry. `lore_detail_body()` renders it as `<section id="yield-score">` between the Definition and the Envoy roster; `search_index()` includes it. Any lore entry may carry the key, only Cultivator does. Cultivator's Archive teaser now mentions the score.
+- **Its numbers must match the Master Guide**: weights 0.20 C / 0.25 I / 0.20 D / 0.35 M; C = 100 x log10(Total) / 6; four Irony marks of 0-4; D = 100 x min(1, (S / W) / 3) with W 6 to 1 from Mythic down to Trash and S 1 to 6; mythologization rungs 1-6 worth 5 / 15 / 30 / 45 / 55 / 65, plus persistence and reach (0 / 5 / 10 each); bands 85 / 70 / 50. If the canon changes, change the page and its worked example in the same pass. The example uses **invented figures** (300 direct / 1,000 total, Irony marks 4-3-2-3, S3:W2, rung 4, generations, one realm: Yield 58, Standard) and says so.
+- **Deliberately not on the page** (secret canon, or not a score of record): why the Cultivators keep a score; the top mythologization rung and its Apotheosis clause (the page stops at rung 6, "Founding"); the guide's provisional calibration table; any per-case score or example; names of cases or characters. Do not add them without the author.
+- It is the site's first table markup. Styles are `.table-wrap` / `.score-table` / `.score-formula` / `.score-log` / `.score-marks` in CSS section 17.
+- **Not built:** per-case scores. When the author has a score of record for a case, add it as an optional field on that book dict and show it on the case page; until then the Cultivator page tells readers that a case without a score has not been scored yet.
+- The page also lists the six catalyst classes with their case-number ranges (they are the W weights), so the §7 note that the tier system is undocumented is updated.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -1985,7 +1993,9 @@ sit at the end of `BOOKS`, in the order the author listed them.
 - The chrome heels (Case 4417's Catalyst) have no character page — see §6,
   Book 4, for why and what to do if a proper portrait arrives.
 - The lore entry formerly called Catalyst Tier is now **Catalyst** (see §6, "Lore
-  rosters"). The full tier system is still not documented on the site.
+  rosters"). The six classes and their case-number ranges are now listed on the
+  Cultivator page as the weights of the Yield Score (§3, 2026-11-03); what separates
+  the classes is still not described on the site beyond their names.
 - The Stolen Prince War's manuscript cast is fully illustrated (35
   characters — see §6). If a genuinely new named figure turns up in the
   manuscript later, add them the same way; don't invent one in the

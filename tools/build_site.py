@@ -5503,10 +5503,124 @@ BOOKS = [
 LORE = [
     {
         "slug": "cultivator", "name": "Cultivator", "roster": "envoy",
-        "teaser": "The observers who deliver Catalysts to chosen subjects across worlds.",
+        "teaser": "The observers who deliver Catalysts to chosen subjects across worlds, and the Yield Score they file for every case.",
         "definition_html": """<p>A loose, still-forming collective of offices and field agents &mdash; simply &ldquo;observers&rdquo; in the earliest records &mdash; who select subjects across many worlds and deliver a Catalyst directly into their hands, then spend the rest of that subject's life quietly filing reports on what the world does with it. The name &ldquo;Cultivator&rdquo; wasn't settled on until long after the practice began.</p>
           <p>Their field agents are called Envoys, or Observers. Nearly every case has its own, and &mdash; with a single exception on file, an Envoy posted to two cases in succession &mdash; no two are the same person: each works through a numbered &ldquo;deployment archetype&rdquo; and a disguise suited to the world they enter &mdash; a woman on a hilltop, a traveling confectioner, an ordinary old man at the bottom of a hole, a wandering hermit, an ascetic kneeling at a drainage ditch, a court astronomer-priest who keeps a kingdom's calendar from a tower, a shipwreck survivor who has kept the same flooded ruin for a hundred and forty years. Every Envoy on file is listed below.</p>
           <p>Not every case resolves within a single lifetime: in at least one instance on file, a Catalyst sat untouched in one family's keeping for four centuries before its case ever closed, and the Envoy assigned to it counts eleven centuries of comparable postings behind him. Redundancy is standard practice on others: one Envoy's own field notes cite several thousand comparable seedings, on the reasoning that a single object left in open ground is recovered by its intended finder only slightly more often than it's carried off by a flood, a jackdaw, or a passing child who simply wants it for its color. One Envoy on file sells her entire remaining stock to a single buyer in an ordinary afternoon of trade and is three postings distant before anyone drinks what she sold them. Another looks like a child of twelve, has not aged in four generations, and is forbidden by protocol to do anything about what she logs. A third is recalled from a tower parapet on the one evening he exceeds his instructions, and leaves a lamp burning behind him. Another, a mute stonecutter, dresses both ends of a matched pair of stones, spends thirty-one years as a quarry-hand beside the one that receives, and is asked, in notches drawn in the dust, the one question he may not answer. Another, a rat-catcher with a bait-spoon, breaks open a single clay pot in the broom-scrub of a mountain pass, files three notes, sells nothing, and passes that stonecutter on a quarry road with an exact courtesy. Another, a shrine-keeper whose watch the valley below cannot date, sits beside a spring that copies one man's whole life into the next to drink, and says the same two words to the master who comes to die at it and to the disciple who comes looking for what he left. Another, an Auditor who speaks to no one in the case, watches a marker for more than a decade, keeps finding reasons not to file the one variable that will not fit any category, and closes the terrarium with the variable open. And one, a clockmaker in two successive postings, goes on watching his second subject from a rented room two valleys away for eighteen years after the posting has formally ended. One case has none posted in person at all: a network of probes does the delivering, and an analytical office, not a field agent, files the closing log.</p>""",
+        # Reader-facing explainer for the Yield Score (canon: Master Guide Section 2.6). Rendered between the
+        # Definition and the Envoy roster by lore_detail_body(). Deliberately left out, as secret canon or
+        # not scores of record: why the Cultivators keep the score, the top mythologization rung and its
+        # clause, the guide's provisional calibration table, and any per-case example. The worked example
+        # below uses invented figures and is labelled as such.
+        "scoring_html": """<h2>The Yield Score</h2>
+          <p>Every case the Cultivators close ends in a final log, and every final log carries two figures: a <strong>casualty count</strong> and a <strong>Yield Score</strong>. The score is a single number from 0 to 100, and it is the Cultivators' cost-to-consequence ratio written down: how small the thing they introduced was, and how much followed from it. It is bookkeeping, not commentary. The Analyst desk assigns it, and the log prints it on one line.</p>
+          <p>Scores are being entered case by case as each manuscript is brought up to date, so a case page without one has simply not been scored yet. Nothing on this page scores a real case; the worked example at the end uses invented figures.</p>
+
+          <h3>Casualties</h3>
+          <p>The casualty line counts deaths and nothing else, in two figures. <em>Direct</em> is death by violence, execution, or the immediate physical event. <em>Total</em> adds the indirect dead &mdash; famine, exposure, disease, and the collapse of services &mdash; within the case's own window. Displacement, injury, ruin, and lost herds or stores are described elsewhere in the log and are never counted here. The line is always a real number, never a comparison and never &ldquo;several thousand&rdquo;; where the two figures are equal, both are stated.</p>
+
+          <h3>The Formula</h3>
+          <p>Four layers, each scored from 0 to 100, weighted and added.</p>
+          <p class="score-formula">Yield = 0.20 &times; C + 0.25 &times; I + 0.20 &times; D + 0.35 &times; M</p>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">Layer</th><th scope="col">Weight</th><th scope="col">What it measures</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">C &mdash; Casualties</th><td class="num">20%</td><td>How many died.</td></tr>
+                <tr><th scope="row">I &mdash; Irony</th><td class="num">25%</td><td>How small the trigger was, and how far the record later drifted from it.</td></tr>
+                <tr><th scope="row">D &mdash; Disproportion</th><td class="num">20%</td><td>How large the consequence was against the weight of what was introduced.</td></tr>
+                <tr><th scope="row">M &mdash; Mythologization</th><td class="num">35%</td><td>How far the object, the event, or the Envoy was turned into legend.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>C &mdash; Casualties</h3>
+          <p>C = 100 &times; log<sub>10</sub>(Total) &divide; 6, capped at 100. A Total of 1 or fewer scores 0. The scale is logarithmic so that one very large war cannot swamp the other three layers: 100 dead scores about 33, 1,000 scores 50, 10,000 about 67, and a million scores 100.</p>
+
+          <h3>I &mdash; Irony</h3>
+          <p>Four marks, each from 0 to 4. I = the sum of the marks &divide; 16 &times; 100.</p>
+          <ol class="score-marks">
+            <li><strong>Triviality of trigger</strong> &mdash; 0 for a deliberate act, 4 for an accident on the scale of a kettle.</li>
+            <li><strong>Virtue turned lethal</strong> &mdash; kindness, duty, or faith feeds the collapse.</li>
+            <li><strong>Truth held, disbelieved or silenced</strong> &mdash; someone who was correct is discredited or killed.</li>
+            <li><strong>History's lie</strong> &mdash; never below 1; 4 when the catalyst is erased and the cause reassigned.</li>
+          </ol>
+          <p>Mythologization is not an Irony mark. It has a layer of its own, and is never counted twice.</p>
+
+          <h3>D &mdash; Disproportion</h3>
+          <p>Leverage L = S &divide; W, where W is the weight of what was introduced and S is the size of what followed. D = 100 &times; min(1, L &divide; 3), so an impact rated three times the weight of its cause scores the full 100.</p>
+          <p><strong>W</strong> comes from the class a case is filed under. A class records what the Cultivators believed they were testing, which is not always the catalyst's own material.</p>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">Class</th><th scope="col">Case numbers</th><th scope="col">W</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Mythic</th><td class="num">0000&ndash;0999</td><td class="num">6</td></tr>
+                <tr><th scope="row">Advanced Alien Hardware</th><td class="num">1000&ndash;1999</td><td class="num">5</td></tr>
+                <tr><th scope="row">Mid-Tier Industrial &amp; Anomalous Instruments</th><td class="num">2000&ndash;2999</td><td class="num">4</td></tr>
+                <tr><th scope="row">High-Concept Cultural &amp; Social Catalysts</th><td class="num">3000&ndash;3999</td><td class="num">3</td></tr>
+                <tr><th scope="row">Mundane</th><td class="num">4000&ndash;4999</td><td class="num">2</td></tr>
+                <tr><th scope="row">Trash</th><td class="num">5000&ndash;5999</td><td class="num">1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>S</strong> runs from 1 to 6 and measures how much changed, not how much harm was done, so a constructive outcome counts as much as a destructive one. The founding of a faith is scored under M, not here.</p>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">S</th><th scope="col">Impact</th></tr></thead>
+              <tbody>
+                <tr><td class="num">1</td><td>A household or a town.</td></tr>
+                <tr><td class="num">2</td><td>A province or a court.</td></tr>
+                <tr><td class="num">3</td><td>A realm fails, or a dynasty ends.</td></tr>
+                <tr><td class="num">4</td><td>A war between several powers, or a regional order breaks.</td></tr>
+                <tr><td class="num">5</td><td>An empire or a legal order is replaced.</td></tr>
+                <tr><td class="num">6</td><td>The consequence outlasts the civilization.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A Mythic case cannot score above about 33 on this layer, because its W is already the largest; such a case earns its score from the other three.</p>
+
+          <h3>M &mdash; Mythologization</h3>
+          <p>M is the heaviest layer. Take the highest rung that the catalyst, the event, or the Envoy reached in the world's memory, then add points for how long it lasted and how far it spread.</p>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">Rung</th><th scope="col">What happens</th><th scope="col">Points</th></tr></thead>
+              <tbody>
+                <tr><td class="num">1</td><td><strong>Rumor</strong> &mdash; tavern talk. Every case reaches at least this.</td><td class="num">5</td></tr>
+                <tr><td class="num">2</td><td><strong>Renaming</strong> &mdash; a new name, a new material, a new legend.</td><td class="num">15</td></tr>
+                <tr><td class="num">3</td><td><strong>Folk cult</strong> &mdash; an unaffiliated shrine or taboo.</td><td class="num">30</td></tr>
+                <tr><td class="num">4</td><td><strong>Absorbed</strong> &mdash; a saint, a verified miracle, or a relic inside an existing faith.</td><td class="num">45</td></tr>
+                <tr><td class="num">5</td><td><strong>Load-bearing</strong> &mdash; an existing faith's law, rite, or crown comes to hinge on it.</td><td class="num">55</td></tr>
+                <tr><td class="num">6</td><td><strong>Founding</strong> &mdash; a new religion forms around the catalyst or the event.</td><td class="num">65</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">Added to the rung</th><th scope="col">+0</th><th scope="col">+5</th><th scope="col">+10</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Persistence</th><td>Died with the generation</td><td>Lasted generations</td><td>Lasted centuries</td></tr>
+                <tr><th scope="row">Reach</th><td>A locality</td><td>One realm</td><td>More than one realm</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Bands</h3>
+          <div class="table-wrap">
+            <table class="score-table">
+              <thead><tr><th scope="col">Yield Score</th><th scope="col">Band</th></tr></thead>
+              <tbody>
+                <tr><td class="num">85 and above</td><td>Reference</td></tr>
+                <tr><td class="num">70&ndash;84</td><td>Strong</td></tr>
+                <tr><td class="num">50&ndash;69</td><td>Standard</td></tr>
+                <tr><td class="num">Under 50</td><td>Marginal</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Reading a Score</h3>
+          <p>This is how the two lines close a log. The figures are invented for the example and belong to no case on file.</p>
+          <p class="score-log"><strong>Casualties:</strong> 300 direct / 1,000 total<br><strong>Yield Score:</strong> 58 (Standard) &mdash; C 50 &middot; I 75 &middot; D 50 (S3:W2) &middot; M 55 (Rung 4)</p>
+          <p>A thousand dead gives C = 50. Irony marks of 4, 3, 2 and 3 make 12 of 16, so I = 75. A realm that fails (S = 3) because of a Mundane object (W = 2) gives a leverage of 1.5, so D = 50. A relic absorbed into an existing faith (rung 4, 45 points) that lasted generations (+5) in one realm (+5) gives M = 55. Then 0.20 &times; 50 + 0.25 &times; 75 + 0.20 &times; 50 + 0.35 &times; 55 = 10 + 18.75 + 10 + 19.25 = 58.</p>""",
     },
     {
         "slug": "catalyst", "name": "Catalyst", "roster": "catalyst",
@@ -6399,6 +6513,10 @@ def lore_detail_body(l):
         second = "<h2>%s</h2>\n          <p>%s</p>\n          %s" % (title, note, roster_html(l["roster"], 1))
     else:
         second = "<h2>Appears In</h2>\n          %s" % l["appears_html"]
+    # Optional explainer (today only Cultivator's Yield Score), shown between the Definition and the roster.
+    scoring = ""
+    if l.get("scoring_html"):
+        scoring = '\n        <section class="subsection" id="yield-score">\n          %s\n        </section>\n' % l["scoring_html"]
     return """    <div class="wrap page-content">
       <a class="back-link" href="%s">&larr; Archive</a>
       <h1>%s</h1>
@@ -6408,7 +6526,7 @@ def lore_detail_body(l):
           <h2>Definition</h2>
           %s
         </section>
-
+%s
         <section class="subsection">
           %s
         </section>
@@ -6419,7 +6537,7 @@ def lore_detail_body(l):
         %s
       </section>
     </div>
-""" % (lore_href, l["name"], l["definition_html"], second, case_grid_html(lore_cases(l), 1, "case-grid--related", cap=4))
+""" % (lore_href, l["name"], l["definition_html"], scoring, second, case_grid_html(lore_cases(l), 1, "case-grid--related", cap=4))
 
 
 def books_body():
@@ -6893,7 +7011,7 @@ def search_index():
         places = " ".join("%s. %s" % (n, note) for n, note in l.get("places", []))
         docs.append(_search_doc("a", l["name"], "lore/%s.html" % l["slug"],
                                 "Gazetteer" if l.get("map") else "Archive", l["teaser"],
-                                " ".join([l["definition_html"], l.get("appears_html", ""), places])))
+                                " ".join([l["definition_html"], l.get("scoring_html", ""), l.get("appears_html", ""), places])))
     return docs
 
 
