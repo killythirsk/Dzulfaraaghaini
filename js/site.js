@@ -241,7 +241,7 @@
       run();
     });
   });
-  // Deep link from a case page: characters.html?case=4099 opens with that case's chip on.
+  // Deep link from a case page: subjects.html?case=4099 opens with that case's chip on.
   var m = /[?&]case=([\w]+)/.exec(location.search);
   if (m) chips.forEach(function (c) { if (c.dataset.book === m[1]) c.click(); });
 })();
