@@ -183,10 +183,11 @@ filename.
   | Soren | `soren` | 4420 | none |
   | Aurelia | `aurelia` | 4417 | none |
 
-- **Vara is linked on inference only, and the card says so** (its `note_html`, taken from the `vara` bio paragraph and the 0277/0202 `RELATED_THEMES` row): the two Vara pages share a name, a pale unageing look and a taste for river shrimp, and neither manuscript says they are one person. The pages are **not** merged, no slug changed, and the card links both pages (`subjects/vara.html`, `subjects/vara-0277.html`). `_check_principals()` makes this structural: a figure with more than one slug **must** carry a `note_html`, or the build fails.
+- **Vara is one person, confirmed by the author (2026-11-04), shown as two subject pages** (its `note_html`, the `vara` and `vara-0277` bio paragraphs and the 0277/0202 `RELATED_THEMES` row all say so; they first called the link an inference, which the author has since settled). The pages are **not** merged, no slug changed, and the card links both pages (`subjects/vara.html`, `subjects/vara-0277.html`). `_check_principals()` makes this structural: a figure with more than one slug **must** carry a `note_html`, or the build fails.
 - **Validation:** `_check_principals()` now also fails the build if a `PRINCIPAL_FIGURES` slug is unknown, if any slug is repeated (within a figure or across figures), if a figure has no name or slugs, or if two names repeat.
 - **Counts do not change:** 26 cases, 506 subjects, 227 records. The page adds no subject, record or case; its "5 figures" is its own count.
 - **Egle has no page and no card.** She has no subject page on the site, and none was made; do not add a placeholder. **Soren and Aurelia show only their one on-site case each** (4420 and 4417); do not add others. Case 4425's Lady Aurelia is not on the site, and §2 notes that name may be a different character, so the card does not claim she is the same.
+- **2026-11-04 (later): the author confirmed the two Varas are one person.** Reworded in four places in `tools/build_site.py` (the Principals `note_html`, both Vara bios, the 0277/0202 `RELATED_THEMES` row) and in the notes here and in `README.md`. **Not done, on purpose:** folding `vara-0277` into `vara` the way `higaide` is (one page plus `ALSO_IN`). That would drop the subject total from 506 to 505, retire a URL (it would need a redirect stub), and force a choice between two different sheets and portraits (the 0202 sheet and the re-rendered 0277 sheet, and the hair-colour mismatch in §6). Ask the author before doing it.
 - **Deliberately not written:** any clash, rivalry or plot between these figures. The author says some of them clash, but no page on the site documents one, so the page says only which figures share a case.
 - **Not done:** the page is **not in the site search** (`search.html`). A new kind needs a letter in `SEARCH_KINDS` plus edits to `KIND_NAME`, `KIND_WEIGHT`, the chip counts and the `type=` pattern in `js/search.js`, more than the one branch in `search_index()` it was meant to take; the five figures are already found there as subjects. Not checked: how the layout looks on a real phone or in Safari/Firefox (only headless Chrome was available).
 - **Open questions for the author:** (a) are the two Varas one person (case 0202's hermit of Val Muta and case 0277's hermit); (b) which documented clashes between Vara, Higaide, Hildegund and the others may be written on the page; (c) where Egle appears, and whether she needs a subject page; (d) which other cases Soren and Aurelia appear in, so they can be filed (and `ALSO_IN` rows added).
@@ -1779,16 +1780,16 @@ painting and a 41-53 word `caption_html` that links the subject pages: `the-seco
 `images/scenes/<slug>.jpg` (1000 px long edge) and `-grid.jpg` (450 px); sheets are 980w with a 320w `-thumb`; the
 cover is 900x1350 and the square share image is `images/share/cover-0277.jpg`.
 
-Cross-links: `RELATED_THEMES` row `("0277", "0202", "Same hermit, on inference: ...")`; a reciprocal paragraph on the
+Cross-links: `RELATED_THEMES` row `("0277", "0202", "Same hermit: ...")`; a reciprocal paragraph on the
 0202 `vara` bio (`characters/vara.html`); one sentence each in the `cultivator`, `catalyst`, `faith-of-ardwen` and
 `threefold-crown` lore (Emmerich, the Keeper of Hartenmark's "sign worth remembering", Otwin's "unmarried cousin" of
 a faith); and the automatic Related Cases (same catalyst class or faith) now show 0277 on `books/0000`, `0156`,
 `0157`, `0188`, `0247`, `1153` and `1268`.
 
-Judgment calls worth knowing: (1) **Vara of 0277 and Vara of 0202 are one person only on inference.** Same name, pale
-and thirty-looking, river shrimp, and the sheets match; neither manuscript says so. Both pages say it is an
-inference. If the author says they are or are not the same, edit the 0202 `vara` bio and the `RELATED_THEMES`
-row. (2) **Two Vara sheets.** The first drop's sheet (with a staff) was replaced by the re-rendered sheet from the
+Judgment calls worth knowing: (1) **Vara of 0277 and Vara of 0202 are one person, as the author confirmed on 2026-11-04.** Both
+pages, the Principals card and the `RELATED_THEMES` row now say so; before that they called it an inference from the
+name, the pale thirty-looking man, the river shrimp and the matching sheets. Whether to fold the two pages into one
+(as `higaide` is, via `ALSO_IN`) is still open; see the 2026-11-04 note in §3. (2) **Two Vara sheets.** The first drop's sheet (with a staff) was replaced by the re-rendered sheet from the
 second drop; the first was not kept. (3) **Slug collisions** (character slugs are one global namespace):
 `sigward-0277` (the Triarch Sigward of Case 1268 is `sigward`; the bio says they are different men) and
 `vara-0277` (0202's is `vara`). Hagen is `hagen`, not Hagen Brandt of 4181 (`hagen-brandt`). (4) **Hagen is Sigward's
@@ -2073,7 +2074,7 @@ sit at the end of `BOOKS`, in the order the author listed them.
   raiders do not, and shouldn't be invented one by one.
 - **Case 0277** (*The Uncounted Variable*) is coming-soon with a 21-subject cast, 15 records, a Catalyst and an Envoy
   record (so both lore rosters list it), but no page count, genre, synopsis or purchase link (§6). The Vara of this case
-  is linked to the Vara of Case 0202 on inference only; the Hush's "fifth" attempt, Frida's lady's-maid label, the
+  is the Vara of Case 0202 (author-confirmed 2026-11-04); the Hush's "fifth" attempt, Frida's lady's-maid label, the
   low-table painting's bandaged forearm and the ford painting's Reinolt differ from the manuscript; all flagged in §6.
 - **Case 0113** (*The Dog Is Not in It*) is coming-soon with a 42-subject cast, a Catalyst and an Envoy record (so both
   lore rosters list it), a description and a Fantasy / Historical genre taken from the publication file, but no page
@@ -2198,7 +2199,7 @@ sit at the end of `BOOKS`, in the order the author listed them.
   0277 and scene / add MD file for context / continue"), then 5 more scene paintings ("second batch of the scene,
   continue"). Done: a full `0277` dict (21 `characters`, 15 `scenes`, `catalyst` The Hereditary Marker, `envoy` The
   Auditor; `pages`, `genre` and `synopsis_html` left as the `EDITOR_*` placeholders), a `PRINCIPALS` entry, one
-  `RELATED_THEMES` row (0277 with 0202, same hermit on inference), one sentence each in the Cultivator, Catalyst,
+  `RELATED_THEMES` row (0277 with 0202, same hermit), one sentence each in the Cultivator, Catalyst,
   Faith of Ardwen and Threefold Crown lore, and a reciprocal paragraph on the 0202 `vara` bio. Images: 1 cover, 1
   share image, 42 character files, 30 scene files. Recount after rebasing onto `main` (which had gained the extra
   4181 subjects) and rebuilding: cases 24 -> 25, characters 428 -> 449, records 212 -> 227, sitemap 680 -> 717; every
