@@ -34,6 +34,7 @@ NAV = [
     ("index.html", "Home"),
     ("cases.html", "Cases"),
     ("subjects.html", "Subjects"),
+    ("principals.html", "Principals"),
     ("records.html", "Records"),
     ("archive.html", "Archive"),
     ("about.html", "About"),
@@ -139,6 +140,29 @@ ALSO_IN = {
         ],
     },
 }
+
+# The Principals page (principals.html): the author's recurring main characters, one card per figure,
+# in this display order. A figure is one or more EXISTING subject slugs; the first is the lead (its
+# portrait, epithets and teaser head the card). The figure's cases are never typed here: they are
+# derived in figure_appearances() from each slug's home case (CHAR_INDEX) plus its ALSO_IN cases, so a
+# new ALSO_IN row shows up on the card by itself. "Shares a case with" is computed the same way.
+#   "name"       heading of the card
+#   "slugs"      existing subject slugs that are this figure (_check_principals fails on an unknown
+#                slug, or one used twice anywhere in this list)
+#   "note_html"  optional, one sentence, ONLY from what the site's own pages already say. REQUIRED for
+#                a figure with more than one slug: it must state on what basis the pages are linked.
+# Do not merge subject pages and do not write a clash, rivalry or plot here: the author says some of
+# these figures clash, but no page on the site documents one. Egle has no subject page, so she has no card.
+PRINCIPAL_FIGURES = [
+    {"name": "Vara", "slugs": ["vara", "vara-0277"],
+     "note_html": "Two subject pages, one name, linked on inference only: the Vara of Case 0202 and the Vara of "
+                  "Case 0277 share a name, a pale unageing look and a taste for river shrimp, and neither "
+                  "manuscript says they are one person."},
+    {"name": "Higaide", "slugs": ["higaide"]},
+    {"name": "Hildegund", "slugs": ["hildegund"]},
+    {"name": "Soren", "slugs": ["soren"]},
+    {"name": "Aurelia", "slugs": ["aurelia"]},
+]
 
 # Cases the author has said are connected. Shown in the "Stands alone" note on a published
 # case page ("It is connected to Case NNNN (Title)"). List it both ways: each case names the other.
@@ -6298,6 +6322,117 @@ def _check_principals():
         seen = [cs for cs, _l, _n in spec["cases"]]
         assert all(cs in cases and cs != home for cs in seen) and len(set(seen)) == len(seen), \
             "ALSO_IN[%s] must name distinct, existing cases other than its home case %s: %s" % (s, home, seen)
+    # PRINCIPAL_FIGURES: every slug must be a real subject and used once in the whole list; a figure made of
+    # several pages must say why they are linked (note_html), so a guess is never shown as a fact.
+    used = []
+    for fig in PRINCIPAL_FIGURES:
+        assert fig.get("name") and fig.get("slugs"), "PRINCIPAL_FIGURES entry needs a name and slugs: %r" % (fig,)
+        unknown = [s for s in fig["slugs"] if s not in CHAR_INDEX]
+        assert not unknown, "PRINCIPAL_FIGURES[%s] names unknown subjects: %s" % (fig["name"], unknown)
+        used += fig["slugs"]
+        assert len(fig["slugs"]) == 1 or fig.get("note_html"), \
+            "PRINCIPAL_FIGURES[%s] has several pages, so it needs a note_html saying on what basis they are linked" % fig["name"]
+    dup = sorted(set(s for s in used if used.count(s) > 1))
+    assert not dup, "PRINCIPAL_FIGURES repeats subjects (within a figure or across figures): %s" % dup
+    assert len(set(f["name"] for f in PRINCIPAL_FIGURES)) == len(PRINCIPAL_FIGURES), "PRINCIPAL_FIGURES names must be distinct"
+
+
+# ---- principals page ------------------------------------------------------------------
+def _first_epithet(c):
+    return c["epithets"].split(" &middot; ")[0]
+
+
+def figure_appearances(fig):
+    """[(case, subject, role line)] for one PRINCIPAL_FIGURES entry, one per case, in display order:
+    each slug in turn, its home case first and then its ALSO_IN cases. The role line is the ALSO_IN one
+    where it exists, otherwise the subject's own first epithet. Nothing here is typed per figure."""
+    by_slug = dict((b["slug"], b) for b in BOOKS)
+    rows, seen = [], set()
+    for s in fig["slugs"]:
+        c, home = CHAR_INDEX[s]
+        also = ALSO_IN.get(s)
+        cand = [(home, c, also["home_label"] if also else _first_epithet(c))]
+        if also:
+            cand += [(by_slug[cs], c, label) for cs, label, _note in also["cases"]]
+        for b, subj, role in cand:
+            if b["slug"] not in seen:
+                seen.add(b["slug"])
+                rows.append((b, subj, role))
+    return rows
+
+
+def figure_shares(fig):
+    """[(other figure, [shared cases])] for the other figures in PRINCIPAL_FIGURES that appear in a case
+    this figure appears in. Computed from figure_appearances(); a case, not a plot, is all it says."""
+    mine = dict((b["slug"], b) for b, _c, _r in figure_appearances(fig))
+    out = []
+    for other in PRINCIPAL_FIGURES:
+        if other is fig:
+            continue
+        common = [b for b, _c, _r in figure_appearances(other) if b["slug"] in mine]
+        if common:
+            out.append((other, common))
+    return out
+
+
+def figure_id(fig):
+    return "figure-" + fig["slugs"][0]
+
+
+def figure_card_html(fig, depth=0):
+    r = rel(depth)
+    rows = figure_appearances(fig)
+    lead = CHAR_INDEX[fig["slugs"][0]][0]
+    img = lead["slug"] + "-thumb.jpg"
+    if not os.path.isfile(os.path.join(OUT, "images", "characters", img)):
+        img = lead["slug"] + ".jpg"
+    href = "%ssubjects/%s.html" % (r, lead["slug"])
+    note = '\n          <p class="figure-note">%s</p>' % fig["note_html"] if fig.get("note_html") else ""
+    shares = figure_shares(fig)
+    shares_html = ""
+    if shares:
+        shares_html = '\n          <p class="figure-shares"><span class="rm-label">Shares a case with</span> %s</p>' % "; ".join(
+            '<a href="#%s">%s</a> (%s)' % (figure_id(o), o["name"], ", ".join(b["case_tag"] for b in common)) for o, common in shares)
+    if len(fig["slugs"]) == 1:
+        files = '<a href="%s">Open the subject file for %s &rarr;</a>' % (href, lead["name"])
+    else:
+        files = " &middot; ".join(
+            '<a href="%ssubjects/%s.html">%s, %s &rarr;</a>' % (r, c["slug"], c["name"], CHAR_INDEX[c["slug"]][1]["case_tag"])
+            for c in (CHAR_INDEX[s][0] for s in fig["slugs"]))
+    grid = case_grid_html([b for b, _c, _role in rows], depth, "case-grid--related",
+                          why_map=dict((b["slug"], [role]) for b, _c, role in rows))
+    return """      <article class="figure" id="%s">
+        <a class="figure-portrait" href="%s" aria-hidden="true" tabindex="-1"><img src="%simages/characters/%s" alt="" loading="lazy"></a>
+        <div class="figure-head">
+          <h2 class="figure-name"><a href="%s">%s</a></h2>
+          <p class="figure-epithets">%s</p>
+        </div>
+        <div class="figure-body">
+          <p class="figure-teaser">%s</p>%s%s
+          <p class="figure-files">%s</p>
+        </div>
+        <div class="figure-cases">
+          <h3 class="sub-head">Appears in</h3>
+          %s
+        </div>
+      </article>""" % (figure_id(fig), href, r, img, href, fig["name"], lead["epithets"],
+                       lead["teaser"], note, shares_html, files, grid)
+
+
+def principals_body():
+    cards = "\n".join(figure_card_html(f) for f in PRINCIPAL_FIGURES)
+    return """    <section class="hero hero--compact">
+      <div class="wrap">
+        <h1>Principals</h1>
+        <p class="count">%s</p>
+        <p class="lede">The recurring principal figures of the archive, one card each. A card lists the cases in which the figure appears on this site, and says where two figures appear in the same case. Cases are listed only where the site&rsquo;s own pages document the figure.</p>
+      </div>
+    </section>
+
+    <section class="wrap page-content">
+%s
+    </section>
+""" % (_n(len(PRINCIPAL_FIGURES), "figure", "figures"), cards)
 
 
 
@@ -7077,6 +7212,9 @@ write("contact.html", page("Contact \u2014 %s" % AUTHOR,
 # ---- book detail pages, and each book's characters ----------------------------
 write("subjects.html", page("Subjects \u2014 %s" % AUTHOR, "Every subject documented across the cases.", 0, "subjects.html", characters_page_body(), path="subjects.html"))
 write("records.html", page("Records \u2014 %s" % AUTHOR, "Key records across the cases.", 0, "records.html", scenes_page_body(), path="records.html"))
+write("principals.html", page("Principals \u2014 %s" % AUTHOR,
+                              "The recurring principal figures of the archive: which cases each appears in on this site, and which cases some of them share.",
+                              0, "principals.html", principals_body(), path="principals.html"))
 
 for book in BOOKS:
     write("cases/%s.html" % book["slug"],

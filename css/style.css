@@ -1033,11 +1033,17 @@ body.lightbox-open { overflow: hidden; }
 .search-more { margin-top: var(--space-sm); }
 @media (max-width: 40rem) { .search-hit img { width: 3rem; height: 3rem; } }
 .hero--compact .count { max-width: none; }
-/* The Search link made the nav one item longer; tighten it a little between the phone menu
-   and wide desktop so the header keeps to one row as far down as it did before. */
+/* The Search link made the nav one item longer, and the Principals link (2026-11-04) made it a ninth;
+   tighten the gaps between the phone menu and wide desktop so the header keeps to one row (nav beside
+   the title) as far down as it can. Below that width the nav simply drops to its own row under the title,
+   as it already did below about 900px before Search and Principals. */
+@media (min-width: 48.01rem) {
+  .site-nav ul { column-gap: 1.5rem; }
+}
 @media (min-width: 48.01rem) and (max-width: 66rem) {
-  .site-nav ul { column-gap: 1.3rem; }
-  .site-nav a { letter-spacing: 0.14em; }
+  .header-inner { column-gap: 1.25rem; }
+  .site-nav ul { column-gap: 1.1rem; }
+  .site-nav a { letter-spacing: 0.12em; }
 }
 
 /* 17. Yield Score explainer (lore/cultivator.html, #yield-score). The site had no table styles
@@ -1053,3 +1059,31 @@ body.lightbox-open { overflow: hidden; }
 .score-table .num { font-family: var(--font-mono); font-size: 0.88rem; white-space: nowrap; }
 .score-marks { max-width: 68ch; padding-left: 1.3rem; }
 .score-marks li { margin: 0 0 var(--space-3xs); }
+
+/* 18. Principals (principals.html). One card per recurring figure: portrait, name, epithets and teaser, an
+   "Appears in" row of case cards (the same .case-grid--related / .case-why markup as a subject page), and a
+   computed "Shares a case with" line. Mobile-first (the portrait sits beside the name below 48rem), sharp
+   corners, Archive tokens only. This section adds no transition or animation of its own, so it is already
+   motion-free under prefers-reduced-motion (the global reduce rule in section 10 also covers the hero). */
+.figure { display: grid; grid-template-columns: 5rem minmax(0, 1fr); gap: var(--space-xs) var(--space-sm); padding: var(--space-md) 0; border-top: 1px solid var(--rule); scroll-margin-top: 5rem; }
+.figure:first-child { padding-top: 0; border-top: 0; }
+.figure-portrait { grid-column: 1; grid-row: 1; display: block; }
+.figure-portrait img { display: block; width: 5rem; height: 5rem; object-fit: cover; object-position: top; outline: 1px solid rgba(27,27,27,.5); }
+.figure-head { grid-column: 2; grid-row: 1; min-width: 0; }
+.figure-body, .figure-cases { grid-column: 1 / -1; min-width: 0; }
+.figure-name { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem); line-height: 1.15; }
+.figure-name a { color: var(--ink); text-decoration: none; }
+.figure-name a:hover, .figure-name a:focus-visible { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 0.2em; }
+.figure-epithets { margin: var(--space-3xs) 0 0; font: 0.68rem/1.5 var(--font-mono); letter-spacing: 0.06em; color: var(--ink-soft); overflow-wrap: anywhere; }
+.figure-teaser { margin: 0 0 var(--space-xs); max-width: 40rem; }
+.figure-note { max-width: 40rem; margin: 0 0 var(--space-xs); padding: 0.6rem 0.9rem; border-left: 3px solid var(--gold); background: rgba(27,27,27,.05); font-size: 0.92rem; line-height: 1.5; }
+.figure-shares, .figure-files { max-width: none; margin: 0 0 var(--space-3xs); font: 0.78rem/1.7 var(--font-mono); letter-spacing: 0.04em; }
+.figure-cases .sub-head { margin-top: var(--space-sm); }
+@media (min-width: 48rem) {
+  .figure { grid-template-columns: 9rem minmax(0, 1fr); column-gap: var(--space-md); }
+  .figure-portrait { grid-row: 1 / span 3; }
+  .figure-portrait img { width: 9rem; height: 12rem; }
+  .figure-head, .figure-body, .figure-cases { grid-column: 2; }
+  .figure-body { grid-row: 2; }
+  .figure-cases { grid-row: 3; }
+}

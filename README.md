@@ -77,6 +77,7 @@ author-site/
 ├── index.html          Homepage
 ├── cases.html           All cases (books.html is a redirect stub)
 ├── subjects.html         Every subject (characters.html is a redirect stub)
+├── principals.html       The recurring principal figures, one card each
 ├── records.html          Every record (scenes.html is a redirect stub)
 ├── archive.html          Glossary of setting terms/systems (lore.html is a redirect stub)
 ├── about.html             Biography
@@ -581,3 +582,14 @@ Changed:
 - every page — regenerated (nav links and the footer build stamp).
 
 Totals unchanged: cases 26, subjects 506, records 227; pages in sitemap 775. After the rebuild every local link resolves (31,395 checked), no real page links to an old address, and every file in the old folders is a stub. After it is deployed, resubmit `sitemap.xml` in Search Console: all its addresses changed.
+
+### [PENDING] Update — Principals page (`principals.html`, nav item after Subjects)
+
+On branch `principals-tab`, as a pull request, because the nav item touches every generated page. The author asked for a tab for her recurring main characters, figures who appear in more than one novel and sometimes clash with each other.
+
+Changed:
+- `principals.html` (new): one card per figure, in this order: Vara, Higaide, Hildegund, Soren, Aurelia. A card has the lead subject's portrait, name, epithets and teaser, an **Appears in** row of case cards (the same markup as a subject page, with the `ALSO_IN` role line where there is one), a computed **Shares a case with** line (Vara and Higaide share Case 0202; Vara and Hildegund share Case 0277), and links to the subject page(s). The cases are derived from the subject data, never typed.
+- **Vara is linked on inference only**, and her card says so: the Vara of Case 0202 and the Vara of Case 0277 share a name, a pale unageing look and a taste for river shrimp, and neither manuscript says they are one person. The two pages are not merged and no slug changed.
+- `tools/build_site.py` — `NAV`, the `PRINCIPAL_FIGURES` list (under `ALSO_IN`), the card and page builders, a longer `_check_principals()` (the build fails on an unknown or repeated slug, or on a multi-page figure with no note), and the sitemap entry through `page(path=...)`. `css/style.css` — new section 18, and a small spacing change to the nav in section 16 so nine items still fit one row from about 955px up. `AI-HANDOFF.md` — a §3 update, §4 nav list and site map. Every other page — regenerated (nav item and footer build stamp).
+
+Not done: the page is not in the site search (a new result type needs edits in `js/search.js`); Egle has no subject page, so she has no card; Soren and Aurelia show only their one on-site case each; no clash or rivalry is written anywhere, because no page on the site documents one. Totals unchanged: 26 cases, 506 subjects, 227 records; sitemap 776 addresses. **Open questions for the author:** are the two Varas one person; which documented clashes between Vara, Higaide, Hildegund and the others may be written; where Egle appears and whether she needs a page; which other cases Soren and Aurelia appear in.

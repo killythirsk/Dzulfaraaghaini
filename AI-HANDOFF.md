@@ -171,6 +171,26 @@ filename.
 - **Not tested from the build environment:** how a social platform that does not run JavaScript previews an *old* link when it re-fetches it (the stub carries a canonical link but no Open Graph tags); a link shared before this change keeps its cached preview until the platform re-fetches it, as before. After deploying, resubmit `sitemap.xml` in Search Console: every address in it changed.
 - Totals unchanged (26 cases, 506 subjects, 227 records). Checked after the rebuild: all 775 sitemap addresses exist, 31,395 local links resolve, no real page links to an old address, and every file in the old folders is a stub.
 
+**Update (2026-11-04, Principals page, `principals.html`).** The author asked for a new top-level tab for her recurring main characters, figures who appear in more than one novel and sometimes clash with each other. In `tools/build_site.py` + CSS sections 16 and 18 (branch `principals-tab`):
+- **Nav:** a ninth item, **Principals**, right after Subjects (`NAV`, top of the script). The page is built with `page(..., path="principals.html")`, so it has the canonical link, Open Graph tags and a `sitemap.xml` entry (776 addresses now, was 775). Like Subjects and Records it carries no JSON-LD. The extra item broke the one-row header at every desktop width above about 1050px (the nav dropped to its own row under the title), so CSS section 16 now also sets a `column-gap` of 1.5rem from 48.01rem up, and a tighter gap, letter-spacing and header gap between 48.01rem and 66rem. Measured in headless Chrome (system Lora, not the web font): one row from about 955px up; below that the nav sits on its own row under the title, as it did below about 920px before Search and Principals. The phone hamburger menu lists all nine items.
+- **Data: `PRINCIPAL_FIGURES`** (a list just under `ALSO_IN`). One dict per figure, in display order: `"name"`, `"slugs"` (existing subject slugs; the first is the lead whose portrait, epithets and teaser head the card) and an optional `"note_html"` (one sentence, only from what the site's own pages say). The cases on a card are **derived, never typed**: `figure_appearances()` takes each slug's home case from `CHAR_INDEX`, then its `ALSO_IN` cases, so a new `ALSO_IN` row shows up on the card by itself. The role line under each case card is the `ALSO_IN` line where there is one (Higaide), otherwise the subject's own first epithet. **"Shares a case with"** is computed by `figure_shares()`: the other figures in the list who appear in a case this figure appears in; it says "shares a case" and nothing more, and a figure with none shows no such line.
+
+  | Figure | Slugs | Cases (derived) | Shares a case with |
+  |---|---|---|---|
+  | Vara | `vara`, `vara-0277` | 0202, 0277 | Higaide (0202), Hildegund (0277) |
+  | Higaide | `higaide` | 2231 (home), 0202, 4181 (`ALSO_IN`) | Vara (0202) |
+  | Hildegund | `hildegund` | 0277 | Vara (0277) |
+  | Soren | `soren` | 4420 | none |
+  | Aurelia | `aurelia` | 4417 | none |
+
+- **Vara is linked on inference only, and the card says so** (its `note_html`, taken from the `vara` bio paragraph and the 0277/0202 `RELATED_THEMES` row): the two Vara pages share a name, a pale unageing look and a taste for river shrimp, and neither manuscript says they are one person. The pages are **not** merged, no slug changed, and the card links both pages (`subjects/vara.html`, `subjects/vara-0277.html`). `_check_principals()` makes this structural: a figure with more than one slug **must** carry a `note_html`, or the build fails.
+- **Validation:** `_check_principals()` now also fails the build if a `PRINCIPAL_FIGURES` slug is unknown, if any slug is repeated (within a figure or across figures), if a figure has no name or slugs, or if two names repeat.
+- **Counts do not change:** 26 cases, 506 subjects, 227 records. The page adds no subject, record or case; its "5 figures" is its own count.
+- **Egle has no page and no card.** She has no subject page on the site, and none was made; do not add a placeholder. **Soren and Aurelia show only their one on-site case each** (4420 and 4417); do not add others. Case 4425's Lady Aurelia is not on the site, and §2 notes that name may be a different character, so the card does not claim she is the same.
+- **Deliberately not written:** any clash, rivalry or plot between these figures. The author says some of them clash, but no page on the site documents one, so the page says only which figures share a case.
+- **Not done:** the page is **not in the site search** (`search.html`). A new kind needs a letter in `SEARCH_KINDS` plus edits to `KIND_NAME`, `KIND_WEIGHT`, the chip counts and the `type=` pattern in `js/search.js`, more than the one branch in `search_index()` it was meant to take; the five figures are already found there as subjects. Not checked: how the layout looks on a real phone or in Safari/Firefox (only headless Chrome was available).
+- **Open questions for the author:** (a) are the two Varas one person (case 0202's hermit of Val Muta and case 0277's hermit); (b) which documented clashes between Vara, Higaide, Hildegund and the others may be written on the page; (c) where Egle appears, and whether she needs a subject page; (d) which other cases Soren and Aurelia appear in, so they can be filed (and `ALSO_IN` rows added).
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -214,7 +234,8 @@ Everything visual is CSS custom properties at the top of `css/style.css`
 
 ## 4. Site map
 
-Nav (same on every page): **Home / Cases / Subjects / Records / Archive / About / Contact / Search.**
+Nav (same on every page): **Home / Cases / Subjects / Principals / Records / Archive / About / Contact / Search.**
+(Principals, `principals.html`, was added 2026-11-04; see §3.)
 Since 2026-11-03 the page addresses match: `cases.html`, `subjects.html`, `records.html`, `archive.html`
 (the old `books.html`, `characters.html`, `scenes.html`, `lore.html` and the `books/`, `characters/`, `lore/`
 folders are redirect stubs; see §3). The site map below was written before the rename and lists the new addresses.
@@ -242,6 +263,8 @@ folders are redirect stubs; see §3). The site map below was written before the 
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
                             Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 27 for Fossa, 13 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable; see §6)
+/principals.html          The recurring principal figures (Vara, Higaide, Hildegund, Soren, Aurelia), one card each;
+                            cases derived from CHAR_INDEX + ALSO_IN, "Shares a case with" computed (§3, 2026-11-04)
 /about.html               Biography only
 /contact.html              Royal Road / Instagram / Threads (real; no email, by the author's choice)
 ```
