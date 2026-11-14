@@ -617,3 +617,14 @@ Changed:
 - `tools/build_site.py` — optional `"yield_score"` and `"casualties"` fields on a book dict (only Case 0000 has them), `score_items_html()`, `casualty_counter_html()`, and `_check_scores()`, which fails the build on a mismatched or malformed score and never works one out. `css/style.css` — the counter note and the phone layout. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0000.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. No other case page changed, and the Cultivator page is unchanged. **Open questions for the author:** (a) the counter adds up Total (3,800), not Direct (2,300); (b) the layer line the log prints (C, I, D, M and rung) is not shown, because its M names a rung beyond the table on the Cultivator page, and because with those figures the formula there gives about 70, not 95, so the page and the manuscript disagree until one is reconciled.
+
+### [PENDING] Update — Yield Score and Casualties on Case 0000B, and the home count
+
+On branch `yield-casualties-case-0000b`, as a pull request. The author sent the *Pax Aldrovana* manuscript, revision 2 (`Pax_Aldrovana_2026-11-14_1340PM_GMT_7.md`, not committed; the repo is public), whose header and closing ledger print a Yield Score and a casualty line, and asked for the Yield Score and the Casualties counter to be updated.
+
+Changed:
+- **Case 0000B's page** lists **Yield Score: 61 (Standard)** and **Casualties: 7,500 direct / 14,000 total** in its Case File, copied as printed, each linking to the Yield Score explainer.
+- **The home counter** now reads **17,800 Casualties**, with the note "from 2 cases" (Case 0000's 3,800 plus Case 0000B's 14,000, both Totals).
+- `tools/build_site.py` — two fields on the `0000b` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0000b.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the manuscript's header says "Case 0000" and calls itself a continuation of the Sword of Valeria, while the site files it as Case 0000B; the figures went on 0000B because Case 0000 already has its own from a different manuscript; (b) Case 0000B is still awaiting release but is counted, since the counter counts any scored case.
