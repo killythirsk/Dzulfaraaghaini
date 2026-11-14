@@ -5149,6 +5149,10 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": "Fiction / Fantasy / Historical",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The War the Dog Never Fought, revision 4, 2026-11-07). Never computed here.
+        "yield_score": {"score": 69, "band": "Standard"},
+        "casualties": {"direct": 11900, "total": 45200},
         "synopsis_html": """<p>For four hundred years, the kings of Danjeri have been Weighed onto the throne by a rite built never to give a straight answer: a Recounter recites the candidate&rsquo;s ancestry from memory, the court watches the smoke and the bull, and the ancestors, being dead, decline to commit. It has always been treated as a feature. Nobody has ever needed it to say no.</p>
           <p>Then a wandering healer, who is also a field Observer for an ancient civilization that studies how little it takes to bring a stable culture down, carries something into the palace at Kambaso that he was never authorized to carry. He does it for a dying boy. He loses it to a dog.</p>
           <p>The dog does not die. It does not even grow grey. A kennel hand begins to count its blinks, its breaths, the whorl of fur at its shoulder. A beer-house gives the animal a name, a trader coins a joke, a young Recounter turns the joke into liturgy, and a queen puts a line in the treasury ledger that no clerk will ever dare to stop copying. Meanwhile, down a palace corridor, three wives raise three sons by a ledger nobody writes down, and a second Observer arrives in the salt trade, buys nothing, and begins to do the sums.</p>
