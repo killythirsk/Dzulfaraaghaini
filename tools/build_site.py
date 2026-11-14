@@ -2210,6 +2210,10 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Vault of the Carbon Echo, revision 6, 2026-11-02). Never computed here.
+        "yield_score": {"score": 46, "band": "Marginal"},
+        "casualties": {"direct": 40, "total": 54},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {

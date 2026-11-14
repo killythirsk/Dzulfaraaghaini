@@ -650,3 +650,14 @@ Changed:
 - `tools/build_site.py` — two fields on the `0157` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0157.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. **Open question for the author:** the site still calls this case *The Stolen Prince War*, while the manuscript's own title is now *The Golden Catacomb*; no rename was made, and the site's synopsis and roster were not compared with revision 3.
+
+### [PENDING] Update — Yield Score and Casualties on Case 0156, and the home count
+
+On branch `yield-casualties-case-0156`, as a pull request. The author sent the *The Vault of the Carbon Echo* manuscript, revision 6 (`Case_0156_The_Vault_of_the_Carbon_Echo_2026-11-02_1718PM_GMT_7.md`, not committed; the repo is public), whose header and closing Archival Log print a Yield Score and a casualty line, and asked for the Yield Score and the Casualties counter to be updated.
+
+Changed:
+- **Case 0156's page** lists **Yield Score: 46 (Marginal)** and **Casualties: 40 direct / 54 total** in its Case File, copied as printed, each linking to the Yield Score explainer.
+- **The home counter** now reads **79,598 Casualties**, with the note "from 5 cases" (Case 0000's 3,800, Case 0000B's 14,000, Case 0113's 45,200, Case 0157's 16,544 and Case 0156's 54, all Totals).
+- `tools/build_site.py` — two fields on the `0156` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0156.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the site still calls this case *The Purging of Charsianon*, while the manuscript's own title is now *The Vault of the Carbon Echo*; no rename was made, and the site's roster and records were not compared with revision 6; (b) Case 0156 is still awaiting release but is counted, since the counter counts any scored case.
