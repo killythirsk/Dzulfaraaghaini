@@ -639,3 +639,14 @@ Changed:
 - `tools/build_site.py` — two fields on the `0113` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0113.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. **Open question for the author:** the site still calls this case *The Dog Is Not in It*, while the manuscript's own title is now *The War the Dog Never Fought*; no rename was made.
+
+### [PENDING] Update — Yield Score and Casualties on Case 0157, and the home count
+
+On branch `yield-casualties-case-0157`, as a pull request. The author sent the *The Golden Catacomb* manuscript, revision 3 (`Case_0157_The_Golden_Catacomb_2026-11-14_1940PM_GMT_7.md`, not committed; the repo is public), whose header and closing Archival Log print a Yield Score and a casualty line, and asked for the Yield Score and the Casualties counter to be updated.
+
+Changed:
+- **Case 0157's page** lists **Yield Score: 63 (Standard)** and **Casualties: 11,044 direct / 16,544 total** in its Case File, copied as printed, each linking to the Yield Score explainer.
+- **The home counter** now reads **79,544 Casualties**, with the note "from 4 cases" (Case 0000's 3,800, Case 0000B's 14,000, Case 0113's 45,200 and Case 0157's 16,544, all Totals).
+- `tools/build_site.py` — two fields on the `0157` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0157.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 505 subjects, 227 records. **Open question for the author:** the site still calls this case *The Stolen Prince War*, while the manuscript's own title is now *The Golden Catacomb*; no rename was made, and the site's synopsis and roster were not compared with revision 3.
