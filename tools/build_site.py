@@ -206,6 +206,10 @@ BOOKS = [
         },
         "pages": "102",
         "genre": """Epic Fantasy &middot; War &amp; Military Fiction""",
+        # Scores of record, copied as printed from the manuscript's Archival Log (revision 3, 2026-11-14).
+        # Never computed here. Optional: a case without them shows nothing and is left out of the home counter.
+        "yield_score": {"score": 95, "band": "Reference"},
+        "casualties": {"direct": 2300, "total": 3800},
         "google_books_url": "https://play.google.com/store/books/details?id=UAgKEgAAQBAJ",
         "royal_road_url": "https://www.royalroad.com/fiction/191364/case-0000-the-sword-of-valeria",
         "synopsis_html": """<p>His mother taught him two things: pray properly, and keep the ledger honest. Neither one prepares a thirteen-year-old boy for the morning raiders burn his valley a third time &mdash; and neither one explains why, when he climbs the one hill still standing and asks Heaven for help, Heaven actually answers.</p>
@@ -6538,15 +6542,79 @@ def home_scenes_html():
     return "\n".join(items)
 
 
+# ---- scores of record: Yield Score and Casualties ---------------------------------------
+# A case may carry "yield_score": {"score": int, "band": str} and "casualties": {"direct": int, "total": int},
+# copied as printed from its manuscript's Archival Log. Nothing is computed from the layers: the manuscript is the
+# score of record. They show on the case page, and the casualty totals feed the home counter. A case without them
+# shows nothing and is left out of the counter (the Cultivator page tells readers it has not been scored yet).
+SCORE_BANDS = [(85, "Reference"), (70, "Strong"), (50, "Standard"), (0, "Marginal")]
+YIELD_EXPLAINER = "archive/cultivator.html#yield-score"
+
+
+def fmt_count(n):
+    return "{:,}".format(n)
+
+
+def scored_cases():
+    return [b for b in BOOKS if b.get("casualties")]
+
+
+def casualties_text(b):
+    c = b["casualties"]
+    return "%s direct / %s total" % (fmt_count(c["direct"]), fmt_count(c["total"]))
+
+
+def score_items_html(b, depth):
+    """Case File lines for the scores of record; empty for a case that has none."""
+    out = ""
+    y = b.get("yield_score")
+    if y:
+        out += ('\n            <li><strong><a href="%s%s">Yield Score</a></strong> &mdash; %d (%s)</li>'
+                % (rel(depth), YIELD_EXPLAINER, y["score"], y["band"]))
+    if b.get("casualties"):
+        out += ('\n            <li><strong><a href="%s%s">Casualties</a></strong> &mdash; %s</li>'
+                % (rel(depth), YIELD_EXPLAINER, casualties_text(b)))
+    return out
+
+
+def casualty_counter_html():
+    """The home counter's Casualties item: the sum of every scored case's Total, with a note saying how many cases feed it."""
+    scored = scored_cases()
+    if not scored:
+        return ""
+    n = len(scored)
+    note = "only from 1 case" if n == 1 else "from %d cases" % n
+    return ('<li><a href="%s" title="Total deaths, direct and indirect, in the cases scored so far">'
+            '<b>%s</b><span>Casualties</span><small>%s</small></a></li>'
+            % (YIELD_EXPLAINER, fmt_count(sum(b["casualties"]["total"] for b in scored)), note))
+
+
+def _check_scores():
+    for b in BOOKS:
+        y, c = b.get("yield_score"), b.get("casualties")
+        if not (y or c):
+            continue
+        assert y and c, "Case %s needs both yield_score and casualties, or neither" % b["slug"]
+        assert all(isinstance(c.get(k), int) for k in ("direct", "total")) and 0 <= c["direct"] <= c["total"], \
+            "Case %s: casualties need whole numbers with direct <= total: %r" % (b["slug"], c)
+        assert isinstance(y.get("score"), int) and 0 <= y["score"] <= 100, \
+            "Case %s: Yield Score must be a whole number from 0 to 100: %r" % (b["slug"], y)
+        want = next(name for floor, name in SCORE_BANDS if y["score"] >= floor)
+        assert y.get("band") == want, \
+            "Case %s: a Yield Score of %d is band %s, not %r (bands are on the Cultivator page)" % (b["slug"], y["score"], want, y.get("band"))
+
+
 def index_body():
     n_chars = sum(len(b["characters"]) for b in BOOKS)
     n_scenes = sum(len(b["scenes"]) for b in BOOKS)
-    # Each count links to its own index page (cases.html = Cases, subjects.html = Subjects, records.html = Records).
+    # Each count links to its own index page (cases.html = Cases, subjects.html = Subjects, records.html = Records);
+    # Casualties links to the Yield Score explainer, since that is where the count is defined.
     ledger = ('<ul class="ledger-stats">'
               '<li><a href="cases.html"><b>%d</b><span>Cases</span></a></li>'
               '<li><a href="subjects.html"><b>%d</b><span>Subjects</span></a></li>'
               '<li><a href="records.html"><b>%d</b><span>Records</span></a></li>'
-              '</ul>') % (len(BOOKS), n_chars, n_scenes)
+              '%s'
+              '</ul>') % (len(BOOKS), n_chars, n_scenes, casualty_counter_html())
     sections = """    <section class="section wrap">
       <h2>Subjects</h2>
       <p>A few faces from each case &mdash; every subject has a file of their own.</p>
@@ -6822,7 +6890,7 @@ def book_detail_body(book):
           <h2>Case File</h2>
           %s<ul class="detail-list">
             <li><strong>Pages</strong> &mdash; %s</li>
-            <li><strong>Genre</strong> &mdash; %s</li>
+            <li><strong>Genre</strong> &mdash; %s</li>%s
           </ul>
           <div class="synopsis" data-collapse="15">
           %s
@@ -6849,7 +6917,7 @@ def book_detail_body(book):
       %s
     </div>
 """ % (books_href, cover_src, cover_src, _esc(b["title"]), case_tag_html, b["title"], tags_html(b), top_cta,
-       standalone, b["pages"], b["genre"], b["synopsis_html"], subjects_section_html(b), scenes_section,
+       standalone, b["pages"], b["genre"], score_items_html(b, 1), b["synopsis_html"], subjects_section_html(b), scenes_section,
        gazetteer_cards_html(b, 1), bottom, related_cases_html(b, 1))
 
 
@@ -7205,6 +7273,7 @@ def write(path, content):
 
 
 _check_principals()
+_check_scores()
 
 # ---- top-level pages ---------------------------------------------------------
 write("index.html", page("%s \u2014 Speculative Fiction Author" % AUTHOR,
