@@ -1711,6 +1711,10 @@ BOOKS = [
         "case_tag": "Case 0188",
         "pages": """~40 <span class="editor-note">(estimated from manuscript word count &mdash; confirm or edit)</span>""",
         "genre": """Literary Fiction &middot; Historical Fantasy &middot; War &amp; Military Fiction <span class="editor-note">(suggested &mdash; confirm or edit)</span>""",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Undying Vow, manuscript of 2026-11-06). Never computed here.
+        "yield_score": {"score": 61, "band": "Standard"},
+        "casualties": {"direct": 150000, "total": 380000},
         "synopsis_html": """<p>Empress Chandralekha dies in her twenty-eighth winter, and her husband, Emperor Dharmasena, kneels at her grave for seventeen consecutive nights until something red and green pushes up through the frost. The gardener who finds it calls it a miracle. The Cultivators, who left the bulb there themselves, call it Item 0188, Mythic Class, and wait to see what a grieving empire does with an excuse to believe in undying love.</p>
           <p>What it does is grow an economy. A trader who gives his name as <a href="../subjects/somadatta.html">Somadatta</a> distributes the bulbs from a seed-stall that is really a Cultivator field post, and within a generation the flower once called Chandralekha's Vow &mdash; now <em>Anantavrata</em>, the Endless Vow &mdash; has become a wedding custom no family can afford to skip and no farmer can quite afford to refuse. Barley fields along the Shonavati turn to flowers one holding at a time; a bride gives up the cat that has slept against her ankles since childhood because a vow-flower needs the room a cat's dish would take; a court physician tests the bloom with a frame of temple bees and finds, to his quiet horror, that nothing living will go near it.</p>
           <p>The reckoning arrives as arithmetic, not omen: fewer fields of grain each year, a war fought over granaries already stripped bare, and rats nesting where the barley used to stand. By the time anyone adds up what the undying flower cost the ordinary, mortal people who grew it, the empress it was named for has been dead for decades &mdash; and the debt has already been filed away as a miracle. The songs, as ever, never mention the cats.</p>""",
@@ -3455,6 +3459,10 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Tear of the Dragon, manuscript of 2026-11-07). Never computed here.
+        "yield_score": {"score": 41, "band": "Marginal"},
+        "casualties": {"direct": 65, "total": 65},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
@@ -4007,6 +4015,10 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Sun-Turned Harvest, manuscript of 2026-11-10). Never computed here.
+        "yield_score": {"score": 66, "band": "Standard"},
+        "casualties": {"direct": 6400, "total": 8500},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
@@ -4901,6 +4913,10 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Uncounted Variable, manuscript of 2026-11-08). Never computed here.
+        "yield_score": {"score": 45, "band": "Marginal"},
+        "casualties": {"direct": 27, "total": 27},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
