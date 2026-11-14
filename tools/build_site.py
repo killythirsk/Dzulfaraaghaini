@@ -2501,6 +2501,10 @@ BOOKS = [
         "case_tag": "Case 0000B",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing ledger stub
+        # (Pax Aldrovana, revision 2, 2026-11-14). Never computed here.
+        "yield_score": {"score": 61, "band": "Standard"},
+        "casualties": {"direct": 7500, "total": 14000},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
