@@ -804,6 +804,8 @@ body.lightbox-open { overflow: hidden; }
 .ledger-stats a:hover, .ledger-stats a:focus-visible { border-bottom-color: var(--gold); }
 .ledger-stats a:hover b, .ledger-stats a:focus-visible b { color: var(--gold); }
 .ledger-stats a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+/* The Casualties item carries a one-line note under its label (e.g. "only from 1 case") */
+.ledger-stats small { display: block; margin-top: 0.25rem; font: 0.6rem var(--font-mono); letter-spacing: 0.08em; color: var(--paper); opacity: 0.6; }
 
 .section > h2 { font: 400 0.8rem var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); padding-bottom: var(--space-2xs); border-bottom: 1px solid var(--rule); }
 .entry-fileno, .entry-meta, .tag, .build-info { font-family: var(--font-mono); letter-spacing: 0.06em; }
@@ -816,7 +818,8 @@ body.lightbox-open { overflow: hidden; }
 
 @media (max-width: 40rem) {
   .hero--home { padding-block: var(--space-lg); }
-  .ledger-stats { gap: var(--space-md); }
+  /* Four counts no longer fit on one row at phone widths: two by two instead */
+  .ledger-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-sm) var(--space-md); max-width: 20rem; margin-inline: auto; }
   .site-nav ul { gap: var(--space-2xs) var(--space-sm); }
 }
 
