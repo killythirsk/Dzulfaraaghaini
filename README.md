@@ -628,3 +628,14 @@ Changed:
 - `tools/build_site.py` — two fields on the `0000b` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0000b.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the manuscript's header says "Case 0000" and calls itself a continuation of the Sword of Valeria, while the site files it as Case 0000B; the figures went on 0000B because Case 0000 already has its own from a different manuscript; (b) Case 0000B is still awaiting release but is counted, since the counter counts any scored case.
+
+### [PENDING] Update — Yield Score and Casualties on Case 0113, and the home count
+
+On branch `yield-casualties-case-0113`, as a pull request. The author sent the *The War the Dog Never Fought* manuscript, revision 4 (`Case_0113_The_War_the_Dog_Never_Fought_2026-11-07_1753PM_GMT_7.md`, not committed; the repo is public), whose header and closing Archival Log print a Yield Score and a casualty line, and asked for the Yield Score and the Casualties counter to be updated.
+
+Changed:
+- **Case 0113's page** lists **Yield Score: 69 (Standard)** and **Casualties: 11,900 direct / 45,200 total** in its Case File, copied as printed, each linking to the Yield Score explainer.
+- **The home counter** now reads **63,000 Casualties**, with the note "from 3 cases" (Case 0000's 3,800, Case 0000B's 14,000 and Case 0113's 45,200, all Totals).
+- `tools/build_site.py` — two fields on the `0113` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0113.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 505 subjects, 227 records. **Open question for the author:** the site still calls this case *The Dog Is Not in It*, while the manuscript's own title is now *The War the Dog Never Fought*; no rename was made.
