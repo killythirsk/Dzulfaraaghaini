@@ -672,3 +672,15 @@ Changed:
 - `tools/build_site.py` — two fields on each of the `0188`, `0202`, `0247` and `0277` dicts, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0188.html`, `cases/0202.html`, `cases/0247.html`, `cases/0277.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the site still calls Case 0188 *The Songs Never Mention the Cats* and Case 0202 *Fossa*, while the manuscripts' own titles are now *The Undying Vow* and *The Sun-Turned Harvest*; no rename was made, and the site's rosters and records were not compared with these revisions; (b) all four cases are awaiting release but are counted, since the counter counts any scored case; (c) Case 0188's 380,000 is about four fifths of the counter, so the counter is now mostly one case.
+
+### [PENDING] Update — Case 3001: 18 more subjects, and the home Subjects count
+
+On branch `case-3001-more-subjects`, as a pull request. The author sent the case's publication pack (`The_Uncounted_Dinar_publication.MD`, not committed, the repo is public) with its character list, and 19 character sheets, and asked for the new dossiers to be added and the main counter updated.
+
+Changed:
+- **18 new subjects on Case 3001**: Sabir, Rashid, Ghanim, Amina's Uncles, the Keeper of the Well, the Caravan's Chief Factor, the Market Children, the Trader Who Carried the News, the Rumor-Chain Woman, Cousin and Trader, the Household Whose Grain Burned, the Provincial Governor, the Garrison Captain, the Courier, Malik's Second Wife, Malik's Children and Malik's Grandchildren. Each page says what the manuscript gives, then what the sheet draws, and marks the age and the visual details as the sheet's. Each has a portrait and thumbnail (36 images) and a redirect stub.
+- **The home counter** now reads **523 Subjects** (was 505); the Search and Subjects pages show the same. Case 3001 lists 31 subjects, 25 of them under "additional subjects documented". The Casualties counter is unchanged (468,190, from 9 cases), because the pack has no Yield Score or casualty line for Case 3001.
+- **Links:** thirteen phrases in the existing Case 3001 bios that already named these figures now link to them. No wording changed.
+- `tools/build_site.py` — 18 subject dicts in Case 3001's list, plus the link edits. `AI-HANDOFF.md` — §3 update and §4 counts. Regenerated pages with real changes were committed; footer-stamp-only pages were not.
+
+Totals: 26 cases, 523 subjects, 227 records; sitemap 793 addresses. **Open questions for the author:** (a) the new Malik's Cousin sheet was not used, because the site already has a different sheet for him; say which should stay; (b) the chief factor's sheet says "Ahmad al-Sa'id" but the character list gives no name, so the page keeps the role as its title and flags the name as the sheet's; (c) sixteen characters in the list have no sheet yet, among them Zaid, so the thief is still not on the site; (d) Case 3001's Yield Score and casualty figures, when its manuscript carries them, can be added the way Case 0000's were.
