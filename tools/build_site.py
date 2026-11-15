@@ -1053,6 +1053,10 @@ BOOKS = [
         "pages": "109",
         "genre": """Epic Fantasy &middot; Political Intrigue &middot; War &amp; Military Fiction""",
         "google_books_url": "https://play.google.com/store/books/details?id=wbIBEgAAQBAJ",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Iron Stiletto War, 2026-11-14). Never computed here.
+        "yield_score": {"score": 57, "band": "Standard"},
+        "casualties": {"direct": 4008, "total": 6008},
         "synopsis_html": """<p>Vane the Wanderer arrives at the court of Solis disguised as a penniless hermit and leaves behind a single gift: a pair of chrome stiletto heels that never scuff, never break, and answer to no explanation anyone can find. Queen Aurelia puts them on. Four inches taller and, for the first time in longer than she can say, sure of herself, she wears them into the Great Concord &mdash; and Duchess Beatrice of Ironhold, humiliated in front of both crowns, refuses to let it go.</p>
           <p>What begins as a wounded vanity hardens, within a season, into doctrine: the Order of the Pale Cloth declares the heels heretical, tariffs curdle into border incidents, and both realms call their banners. House Vell commits to Solis in secret, Baron Rathmore backs Ironhold, and Baron Corvin &mdash; ostensibly neutral, actually for sale &mdash; quietly decides which side he can profit from losing. By the time the siege reaches Solis's walls, the war has almost nothing left to do with shoes.</p>
           <p><em>The Iron Stiletto War</em> is told partly through the private letters of a chancellor who outlives everyone he served and ends up ruling both crowns for eleven years afterward &mdash; still turning over, on the last page, whether the heels were ever really about vanity at all, or whether something older and far more patient had simply been watching to see which crown would break first.</p>""",
@@ -1230,6 +1234,10 @@ BOOKS = [
         "pages": "130",
         "genre": "Fiction / Fantasy / Epic",
         "google_books_url": "https://play.google.com/store/books/details?id=CAEDEgAAQBAJ",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Thermal Vessel War, 2026-11-14). Never computed here.
+        "yield_score": {"score": 72, "band": "Strong"},
+        "casualties": {"direct": 5824, "total": 5828},
         "synopsis_html": """<p>House Skarth has kept one steel flask far longer than anyone in it has thought to ask where it came from. It never lets its broth go cold; the family's oldest women say it came down from the sacred peak as a gift from the dragon who keeps court there; and its steward, Giles, has scrubbed it with lye soap every winter for forty years without once asking how it works. When Duke Maros, humiliated at his own table by a rival's gift of a stag's head, drags a royal hunt two hundred miles into the northern tundra to save face, Baron Kaelen of House Skarth accepts the invitation before the messenger has finished reciting it. Guest-right is the whole of his faith: a guest fed at his table is simply fed.</p>
           <p>On the eleventh night, with the King gone silent and breaking frozen venison against a rock, Kaelen finally unscrews the stopper. The broth hits air some hundred and twenty degrees colder than it is and unrolls into a white cloud &mdash; and Sir Corvus of the royal bodyguard, still haunted by a spore-choked cave he survived eleven months earlier, sees only the thing that almost killed him. He kills Kaelen before the cup reaches the King. The Crown's sealed account of the death is true in every clause and never mentions broth; House Skarth reads it as a throne signing its name beneath a murder. Kaelen's twin sister Yvaine cuts her hair, puts on his ancestral mail, climbs the mountain for a blessing she doesn't quite believe in, and leads the northern clans south, with the flask &mdash; cased in silver now, and renamed the Vessel of the Betrayed Host &mdash; carried at the front of their war-bands.</p>
           <p>Duke Vane, who wants the relic less for what it can do than for the Regency it could buy him, sells a beaten Maros his rescue at ruinous terms, hires the thief Soren to lift the vessel from the coalition's war-altar, and discovers too late what he has actually been fighting over. The war that follows is a slaughter no southern chronicle will ever name honestly; the scribes settle on the Great Winter Pestilence. <em>The Vessel of the Betrayed Host</em> closes on a Cultivator's archival log &mdash; Case Study 4,420: one flask, four centuries idle, and the most efficient war its Observer has recorded in eleven centuries.</p>""",
@@ -1856,6 +1864,10 @@ BOOKS = [
         "case_tag": "Case 2140",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Divine Mill, 2026-11-03). Never computed here.
+        "yield_score": {"score": 64, "band": "Standard"},
+        "casualties": {"direct": 5870, "total": 18420},
         "synopsis_html": EDITOR_SYNOPSIS,
         "envoy": {
             "name": "Observer 419", "meta": "Itinerant Clockmaker",
@@ -2479,6 +2491,10 @@ BOOKS = [
         "case_tag": "Case 3312",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Unclouded, 2026-11-04). Never computed here.
+        "yield_score": {"score": 45, "band": "Marginal"},
+        "casualties": {"direct": 10, "total": 193},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [],
         "scenes": [],
@@ -2491,6 +2507,10 @@ BOOKS = [
         "case_tag": "Case 3887",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Star Beneath the Mountain, 2026-11-04). Never computed here.
+        "yield_score": {"score": 72, "band": "Strong"},
+        "casualties": {"direct": 40000, "total": 90000},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [],
         "scenes": [],
@@ -2503,6 +2523,10 @@ BOOKS = [
         "case_tag": "Case 4442",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Ghost-Pick, 2026-11-15). Never computed here.
+        "yield_score": {"score": 52, "band": "Standard"},
+        "casualties": {"direct": 480, "total": 600},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [],
         "scenes": [],
@@ -2668,6 +2692,10 @@ BOOKS = [
         "case_tag": "Case 2114",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Empty Crown, 2026-11-03). Never computed here.
+        "yield_score": {"score": 52, "band": "Standard"},
+        "casualties": {"direct": 338, "total": 353},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [],
         "scenes": [],
@@ -2695,6 +2723,10 @@ BOOKS = [
         "pages": "88",
         "google_books_url": "https://play.google.com/store/books/details?id=spIXEgAAQBAJ",
         "genre": "Fiction / Fantasy / Historical",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Decree of Luminescence, 2026-11-04). Never computed here.
+        "yield_score": {"score": 71, "band": "Strong"},
+        "casualties": {"direct": 2310, "total": 3494},
         "synopsis_html": """<p>Vallombra is a small, terraced kingdom that rules itself by arithmetic. Its faith, the Concord of the Year, asks only that the sky keep its appointments, and for six hundred years it has. Then the Ashduct hills breathe, and the ash does not stop for three winters. The court astronomer-priest <a href="../subjects/severin.html">Severin</a> stretches the year's grace from three days to a season and carries every missed appointment forward like a debt; the beekeeper-king <a href="../subjects/faustin.html">Faustin</a> melts down the kingdom's gold circlet for eleven days of bread. A week before the third spring's First Furrow, Severin posts a line no Reckoner has ever posted, one he cannot derive from his own tables: the sun will stand over the Threshing Round at the sixth hour, and the ash will part for it. It does, along a line so straight that nothing in the sky could have drawn it.</p>
           <p>The Standing Noon feeds a starving valley, and it has an outside. Bread is issued by name, from a single Roll compiled in three nights by the Reckoner's apprentices under <a href="../subjects/piero.html">Piero</a>, a granary clerk's son who wanted nothing more than to count sacks. In the fourth column of the ninth parish book a copyist's lamp gutters, and three hundred and eleven people of the Saltway Quarter &mdash; northern guests and the Vallombran households that feed them &mdash; are never written down. Severin has already vanished from the tower at dusk, and the parish books are sealed under a law that nobody will be the first to call binding. Hungry Verrenhal marches south behind <a href="../subjects/sigrid.html">Sigrid</a>, its Staff-Keeper, who takes one look at the edge of the light and says what no one in Vallombra will hear: nothing in the sky holds a line, so someone is holding this one. A herald's mistranslation of one phrase, the low hour, which means dusk to one nation and noon to the other, sends four thousand uncovered northerners across it in full sun, and for eleven minutes the wardens at the Saltway Gate loose into the glare.</p>
           <p>What follows is an accounting. Faustin ladles soup into the bowls of the men who came against him, and dies of the fever in them. <a href="../subjects/marcello.html">Marcello</a>, the Order's first Examiner, reconciles the Roll and finds the missing column, the purchased names and a drift of unread petitions, and he and Piero promise to correct it in the open on the day the child queen <a href="../subjects/livia.html">Livia</a> turns twenty-one. Meanwhile Piero needs a sentence strong enough to hold a kingdom together, and it hardens into the Decree of Luminescence: Vallombra becomes Illumaria, a windowless basilica of black marble rises over the Round, and the promised day is deferred, for good reasons, again and again. Each evening at the Gold the tower's book is signed with a single word, <em>Nil</em>. <em>The Decree of Luminescence</em> closes on a Cultivator's own archival log &mdash; Case Study 2,365: one dormant unit beneath a threshing-floor, a Custodian recalled the night he used it, and a record that moves the cause of the war from a clerk's lamp to a neighbor's envy.</p>""",
@@ -3651,6 +3683,10 @@ BOOKS = [
         "pages": "77",
         "google_books_url": "https://play.google.com/store/books/details?id=3IYZEgAAQBAJ",
         "genre": "Fiction / Fantasy / Epic",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Eleven-Fingered Mercy, 2026-11-04). Never computed here.
+        "yield_score": {"score": 54, "band": "Standard"},
+        "casualties": {"direct": 1974, "total": 1974},
         "synopsis_html": """<p>Sarkveti is a kingdom of terraces that believes anything worth having must be climbed for, and its temple keeps the rolls on which a prince's name becomes a fact. Before a prince can be entered on them he must survive the Proving: a rite of blunted blades, fought against a prince of his own blood. When <a href="../subjects/levan.html">Levan</a>, the quiet King's son who would rather be in the physicians' wing, raises his guard against his cousin <a href="../subjects/bagrat.html">Bagrat</a>, a badly re-buckled strap gives way and four inches of real steel come down across his left hand. That week a petition goes to the temple for Bagrat's provisional entry on the rolls; none goes for Levan, who is a boy deciding whether to live. Within a fortnight <a href="../subjects/observer-419-1153.html">a clockmaker</a> from the lower market talks his way into the King's presence and, over three nights, fits the prince with <a href="../subjects/the-eleven-fingered-hand.html">a grafted hand</a> of eleven fingers: two thumbs, four fingers in plain sight and five more folded flat behind them.</p>
           <p>Levan spends eighteen years being gentle with it, as a physician, a teacher, and one of the worst lute players in Tavgora. When King <a href="../subjects/guram.html">Guram</a> dies, <a href="../subjects/vazha.html">Vazha</a>, his steward, keeps the dying man's quiet choice of heir to himself, and the temple's rolls hold an entry for Bagrat and none for Levan. The old <a href="../subjects/the-doctrine-of-the-unbroken-hand.html">Doctrine of the Unbroken Hand</a> bars the maimed from the crown and is silent about a man given another hand, and Hierarch <a href="../subjects/demna.html">Demna</a>, whose conviction is sincere and whose purse was filled by Bagrat three weeks earlier, rules that a false wholeness may not hold it. Bagrat is then carried home from a Vashtir campaign with a rotting sword arm, which his cousin saves in six hours of surgery. He offers to put Levan's name on the rolls himself and is told, &ldquo;I want no crown. I only wanted to see you stand.&rdquo; He cannot bear the debt. He challenges Levan to the Answer, fought with real steel, and watches the hand that could have ended him take his sword and let him go unmarked. In the dark afterward he finds in Demna's doctrine a way to want his cousin gone without calling it by its name, and spends the next months asking, in a grieving voice, for a Writ of Examination whose penalty clause he never reads.</p>
           <p>The war takes a winter and part of a spring and a little under two thousand lives. Its first casualty is a wool-seller who never held an opinion about the Doctrine, and its breach is held by two soldiers who were both Levan's patients. When the third offer of surrender asks for the surgeon himself, <a href="../subjects/otar.html">Otar</a> and eleven of his former patients lead him out of the city by a goat track on the night the outer wall falls. He lives thirty-one more years in Otsane as &lsquo;Mikel&rsquo;, a plain glove on his hand, and never goes back. Bagrat rules a further twenty-six, searches six of them, and keeps a carved wooden horse in a drawer. Sarkveti, which now owns a doctrine that can be used, is used by it, reign after reign, until Corvane absorbs what is left. <em>The Second Hand</em> closes on a Cultivator's own archival log &mdash; Case Study 1,153: one graft, one doctrine that survives its test, and an Observer who left a field on his form open thirty-four seconds too long.</p>""",
@@ -4271,6 +4307,10 @@ BOOKS = [
         "pages": "65",
         "google_books_url": "https://play.google.com/store/books/details?id=KwobEgAAQBAJ",
         "genre": "Fiction / Fantasy / Epic",
+        # Scores of record, copied as printed from the manuscript's header and closing Archival Log
+        # (The Uncounted Dinar, 2026-11-04). Never computed here.
+        "yield_score": {"score": 48, "band": "Marginal"},
+        "casualties": {"direct": 313, "total": 354},
         "synopsis_html": """<p><a href="../subjects/malik-ibn-sabir.html">Malik ibn Sabir</a> owns four goats, a threadbare tent his father died in, and nothing else a creditor could claim, and on the night the story opens he splits his last meal with a stranger who asks for nothing. At dawn <a href="../subjects/observer-1140.html">the stranger</a> presses a single gold <a href="../subjects/the-dinar.html">dinar</a> into his palm and tells him he will not be able to keep it or to lose it. Spent, it is back in his hand by morning, notch and all. Given away, before both families and the keeper of the well, as part of the mahr for <a href="../subjects/amina-bint-rashid.html">Amina bint Rashid</a>, it passes to her by a <a href="../subjects/the-witnessed-akad.html">witnessed akad</a> and answers to her alone. For a season they are simply happy. Then Amina finds out what the coin will do for exactly as long as she wants it to, and begins, quietly, to price a way to the sea.</p>
           <p>She is murdered in her tent by a thief named Zaid, a stranger to her, to her clan and to the quarrel about to be built on the assumption that he was not. Her kinsmen decide that the shepherd with the unexplainable fortune must be the killer. <a href="../subjects/sulayman-ibn-ghanim.html">Sulayman ibn Ghanim</a>, her uncle, finds the case thin from the first night and gives the order anyway, because three of his own nephews are already riding. Malik is seized at the edge of the camp and held for two years while the Banu Harith and the Banu Kathir fight a war partly in his name. The war costs some three hundred lives and never once asks him the one question that would have cleared him: where he was the night she died.</p>
           <p>The thief spends the coin on wine and rented rooms until his own excess kills him, and in the river-city wine-house where he dies <a href="../subjects/nur.html">Nur</a>, who has heard his whole confession, takes the coin within the hour. She holds the truth for nearly two years, with no name of her own that anyone would believe, until <a href="../subjects/qasim-al-fahmi.html">Qasim al-Fahmi</a>, a scholar who has spent five years following the coin's history, comes asking. He writes her account down that night, and only afterward decides what to do with the coin. <em>The Uncounted Dinar</em> closes on a Cultivator's own archival log: <a href="../subjects/observer-1140.html">Observer 1140</a>, who is not supposed to have a case he returns to at rest, objects on the record to calling the drop a non-intervention, and <a href="../subjects/the-provincial-archive-clerk.html">a provincial archive clerk</a> files the whole war under the title <em>Grazing Rights Dispute of the Two Confederations</em>.</p>""",
