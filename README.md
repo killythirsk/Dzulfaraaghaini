@@ -661,3 +661,14 @@ Changed:
 - `tools/build_site.py` — two fields on the `0156` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0156.html`, `index.html`); footer-stamp-only pages were not.
 
 Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the site still calls this case *The Purging of Charsianon*, while the manuscript's own title is now *The Vault of the Carbon Echo*; no rename was made, and the site's roster and records were not compared with revision 6; (b) Case 0156 is still awaiting release but is counted, since the counter counts any scored case.
+
+### [PENDING] Update — Yield Score and Casualties on Cases 0188, 0202, 0247 and 0277, and the home count
+
+On branch `yield-casualties-cases-0188-0202-0247-0277`, as a pull request. The author sent four manuscripts (`Case_0188_The_Undying_Vow_2026-11-06_0710AM_GMT_7.md`, revision 7; `Case_0202_The_Sun-Turned_Harvest_2026-11-10_0433AM_GMT_7.md`, revision 7; `Case_0247_The_Tear_of_the_Dragon_2026-11-07_1651PM_GMT_7.md`, revision 5; `Case_0277_The_Uncounted_Variable_2026-11-08_2031PM_GMT_7.md`, revision 5; none committed, the repo is public), whose headers and closing Archival Logs print a Yield Score and a casualty line, and asked for the Yield Score and the Casualties counter to be updated.
+
+Changed:
+- **Case pages** list, in their Case File and copied as printed, each linking to the Yield Score explainer: **0188** Yield Score 61 (Standard), Casualties 150,000 direct / 380,000 total; **0202** 66 (Standard), 6,400 direct / 8,500 total; **0247** 41 (Marginal), 65 direct / 65 total; **0277** 45 (Marginal), 27 direct / 27 total.
+- **The home counter** now reads **468,190 Casualties**, with the note "from 9 cases" (the five cases already scored, 79,598 in all, plus 380,000, 8,500, 65 and 27, all Totals).
+- `tools/build_site.py` — two fields on each of the `0188`, `0202`, `0247` and `0277` dicts, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/0188.html`, `cases/0202.html`, `cases/0247.html`, `cases/0277.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 505 subjects, 227 records. **Open questions for the author:** (a) the site still calls Case 0188 *The Songs Never Mention the Cats* and Case 0202 *Fossa*, while the manuscripts' own titles are now *The Undying Vow* and *The Sun-Turned Harvest*; no rename was made, and the site's rosters and records were not compared with these revisions; (b) all four cases are awaiting release but are counted, since the counter counts any scored case; (c) Case 0188's 380,000 is about four fifths of the counter, so the counter is now mostly one case.
