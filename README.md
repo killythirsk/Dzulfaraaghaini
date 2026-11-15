@@ -684,3 +684,14 @@ Changed:
 - `tools/build_site.py` — 18 subject dicts in Case 3001's list, plus the link edits. `AI-HANDOFF.md` — §3 update and §4 counts. Regenerated pages with real changes were committed; footer-stamp-only pages were not.
 
 Totals: 26 cases, 523 subjects, 227 records; sitemap 793 addresses. **Open questions for the author:** (a) the new Malik's Cousin sheet was not used, because the site already has a different sheet for him; say which should stay; (b) the chief factor's sheet says "Ahmad al-Sa'id" but the character list gives no name, so the page keeps the role as its title and flags the name as the sheet's; (c) sixteen characters in the list have no sheet yet, among them Zaid, so the thief is still not on the site; (d) Case 3001's Yield Score and casualty figures, when its manuscript carries them, can be added the way Case 0000's were.
+
+### [PENDING] Update — Yield Score and Casualties on Case 4099, and the home count
+
+On branch `yield-casualties-case-4099`, as a pull request. The author sent the *The Ledger of a Single Sweetness* manuscript, revision 1 (`Case_4099_The_Ledger_of_a_Single_Sweetness_2026-11-15_1659PM_GMT_7.md`, not committed; the repo is public), whose header and closing Archival Log print a Yield Score and a casualty line, and asked for the Yield Score, the Casualties and the main counter to be updated.
+
+Changed:
+- **Case 4099's page** lists **Yield Score: 53 (Standard)** and **Casualties: 43 direct / 43 total** in its Case File, copied as printed, each linking to the Yield Score explainer.
+- **The home counter** now reads **468,233 Casualties**, with the note "from 10 cases" (the nine cases already scored, 468,190 in all, plus Case 4099's 43, all Totals).
+- `tools/build_site.py` — two fields on the `4099` dict, nothing else. `AI-HANDOFF.md` — §3 update. Regenerated pages with real changes were committed (`cases/4099.html`, `index.html`); footer-stamp-only pages were not.
+
+Totals unchanged: 26 cases, 523 subjects, 227 records. **Open questions for the author:** (a) the manuscript's Revision Log says revision 1 added a Cast List of 26, a Fibonacci clue in the Sukeko entry of *The Names the Ledger Owed* and a tavern-gossip paragraph at the end of Part Three, Chapter Ten; the site's Case 4099 synopsis, roster and records were not compared with it, and only the two score fields were touched; (b) the log's 43 counts the primary subject (42 collateral and 1 primary), while the site's hook for this case speaks of forty-two names; both are as the manuscript has them.
