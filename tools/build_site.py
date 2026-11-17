@@ -2022,6 +2022,8 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        "yield_score": {"score": 54, "band": "Standard"},
+        "casualties": {"direct": 1200, "total": 1200},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
@@ -2991,6 +2993,8 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        "yield_score": {"score": 68, "band": "Standard"},
+        "casualties": {"direct": 4188, "total": 4196},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
@@ -3898,6 +3902,8 @@ BOOKS = [
         },
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        "yield_score": {"score": 57, "band": "Standard"},
+        "casualties": {"direct": 1211, "total": 1511},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
@@ -4578,6 +4584,8 @@ BOOKS = [
         "case_tag": "Case 4181",
         "pages": EDITOR_PAGES,
         "genre": EDITOR_GENRE,
+        "yield_score": {"score": 75, "band": "Strong"},
+        "casualties": {"direct": 1400, "total": 38000},
         "synopsis_html": EDITOR_SYNOPSIS,
         "characters": [
             {
