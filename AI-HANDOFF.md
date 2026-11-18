@@ -16,7 +16,7 @@ this one is longer and more exhaustive on purpose.
 A static personal website for **Dzulfaraaghaini**, a pen name for an indie
 writer of speculative fiction (more than a dozen novels exist across
 various stages of publication; ten are live on the site so far (Case 1153 went live on Google Books on 2026-10-14, Case 3001 on 2026-10-23), plus
-twelve coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 4181, 0277, 0113) and four
+thirteen coming-soon books with a character roster (0156, 0188, 2140, 3115, 0000B, 2231, 0247, 1268, 0202, 4181, 0277, 0113, 0233) and four
 cover-only coming-soon entries (3312, 3887, 4442, 2114) — see
 §7). The site is a portfolio + a lore glossary for the setting(s) the
 books share.
@@ -292,6 +292,11 @@ filename.
 - **Still open for the author.** (1) **The archer**: the manuscript says "the men around him", so he is a man; the sheet's figure may read otherwise, so check it matches the intent. (2) **The pack calls the manuscript's own case "Case 000"** in Part 2 and in its Interlude summary; revision 2 of the manuscript reads Case 0000, as the site does. (3) **Title**: the site files 0000B as *Sword of Valeria: The Empty Hand* (the cover's title) while the manuscript is *Pax Aldrovana*; the pack's top title option is *The Empty Hand*. No rename was made. (4) `pages`, `genre` and `synopsis_html` for 0000B are still placeholders: the pack has a description and three genre codes (Fantasy / Epic, Military, Historical) but no page count, and the author asked only for dossiers.
 - **Still without a sheet** (Part 2 entries not on the site): Yorbulan's Sons, the Girl Not Quite Three and her Mother, the Grieving Mother, the Thief, the Senior Priest (second century), the Knight of the Eastern Gate, the Soldier of the Ninth Siege, the Scholar of the Vigil, the Old Keeper, the keepers (Earliest-Rotation, Newly Assigned, of the Wedding-Loaf, Who Pressed Gently, Who Found Her, the two Senior Keepers, the Three Who Shared Rations), the Founder of the Vigil, the Junior Observer and the Original Filer, plus Part 2's second key element, the Plinth Hall. **Xu Lian** is the manuscript's second protagonist and has a page under Case 1153 (`xu-lian`), which the Anchorite's and the archer's bios link; he is not in the 0000B roster because no 0000B sheet of him has come. Wendric, Maren, Cadmon, the Boy and Valeria already have Case 0000 pages. No placeholder pages were made.
 
+**Update (2026-11-18, Case 0233 added, *Only a Little*: new 17-subject case; home counts 27 cases, 574 subjects, 802,743 Casualties).** The author sent the manuscript (`Case_0233_The_Obliging_Sky_2026-11-08_0659AM_GMT_7.md`, revision 6), the publication-prep file (`The_Obliging_Sky_publication.MD`, "for context"), the cover and 17 character sheets, with "add Case 0233 : Only a Little". Branch `case-0233-only-a-little`, as a pull request. None of the text files or the original images are committed (the repo is public). The full write-up and the judgment calls are in the Book block in §6; this is the short version.
+- **One `0233` `BOOKS` dict** (coming-soon, cover `images/covers/0233.jpg`, `catalyst` The Thirteen-Arrow Bow, `envoy` Observer 506, 17 `characters`, no scenes) and a `PRINCIPALS` row (ketevan, observer-506, mzia, zurab, guaram, lomi). `pages`, `genre` and `synopsis_html` are still `EDITOR_*` placeholders. **Yield Score 73 (Strong)** and **Casualties 7,360 direct / 156,360 total** were copied as printed from the manuscript's header and closing Archival Log, never computed.
+- **Lore prose:** one sentence each added to the Cultivator page (the fletcher), the Catalyst page (the bow) and the Threefold Crown page (Samaghvto, its three temples and the Concordat of the Quiver, with links to Mzia and Ketevan). The Cultivator and Catalyst rosters list 0233 automatically, and its page shows the automatic Related Cases cards (same Mythic catalyst class, shared Threefold Crown).
+- **Counts.** Sitewide **27 cases, 574 subjects (was 557), 227 records**; the **Casualties counter reads 802,743 "from 27 cases"** (646,383 plus 156,360); `sitemap.xml` 845 addresses (was 827); `characters/` has 17 more redirect stubs. Built on top of the Case 0000B update above (PR #36). Footer-stamp-only pages were not committed.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -343,7 +348,7 @@ folders are redirect stubs; see §3). The site map below was written before the 
 
 ```
 /index.html            Homepage — hero (with a counts line), every book, a cast wall, a scene band, a lore teaser
-/cases.html             Full book list (currently twenty-five entries: ten published, fifteen coming-soon — see §6)
+/cases.html             Full book list (currently twenty-seven entries: ten published, seventeen coming-soon — see §6)
 /cases/0000.html          The Sword of Valeria's full page
 /cases/4099.html          The Ledger of a Single Sweetness's full page
 /cases/0157.html          The Stolen Prince War's full page
@@ -355,7 +360,7 @@ folders are redirect stubs; see §3). The site map below was written before the 
                             gazetteers illumaria, iron-stiletto-war and vessel-of-the-betrayed-host;
                             lore/catalyst-tier.html is only a redirect stub to
                             catalyst.html)
-/subjects/<slug>.html    One page per character (557 total — 10 for
+/subjects/<slug>.html    One page per character (574 total — 10 for
                             Valeria, 28 for the Ledger, 35 for the Stolen
                             Prince War, 13 for the Iron Stiletto War, 7 for
                             the Vessel of the Betrayed Host, 12 for the
@@ -363,7 +368,7 @@ folders are redirect stubs; see §3). The site map below was written before the 
                             Never Mention the Cats, 15 for the Third Grain,
                             24 for the Listening Water, 19 for the Heavenly
                             Thunder-Serpent, 26 for the Purging of
-                            Charsianon, 19 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 26 for Fossa (Vara is filed under 0277 and shared into 0202), 47 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable; see §6)
+                            Charsianon, 37 for the Empty Hand, 24 for the Decree of Luminescence, 58 for the Stone of the Clean Hand, 17 for the Tear of the Dragon, 19 for the Second Hand, 11 for Independent Observation, 26 for Fossa (Vara is filed under 0277 and shared into 0202), 47 for the Uncounted Dinar, 54 for the Sable Skin, 21 for the Uncounted Variable, 42 for the Dog Is Not in It, 17 for Only a Little; see §6)
 /principals.html          The recurring principal figures (Vara, Higaide, Hildegund, Soren, Aurelia), one card each;
                             cases derived from CHAR_INDEX + ALSO_IN, "Shares a case with" computed (§3, 2026-11-04)
 /subjects/vara-0277.html  Redirect stub to vara.html (a retired slug; see §3, 2026-11-04)
@@ -2083,6 +2088,70 @@ himself. (3) Verrin's and the Anchorite's sheets say outright that their appeara
 sheets show scenes (e.g. the Vault Guard's &ldquo;Witnessing&rdquo; panel) that the pages describe only by caption;
 the bios deliberately stop where the sheets stop.
 
+### Book: *Only a Little* (Case 0233)
+
+Status: **Coming soon** (awaiting release; no purchase link). Added on branch `case-0233-only-a-little`, as a pull
+request rather than straight into `main`, from: the cover (`images/covers/0233.jpg`, tagline "Asked. Pictured. Obeyed.
+Billed. Unclaimed.", used verbatim as the `hook`), 17 character sheets, the manuscript
+`Case_0233_The_Obliging_Sky_2026-11-08_0659AM_GMT_7.md` (revision 6) and the publication-prep file
+`The_Obliging_Sky_publication.MD`, the last two for context and **not committed** (the repo is public), nor are the
+original images. The author's brief was "add Case 0233 : Only a Little". Main moved (PR #36, Case 0000B) while the work
+was in progress, so the build was redone on the new `main` and the figures below are counted there. **`pages`, `genre`
+and `synopsis_html` are untouched `EDITOR_*` placeholders**: nobody asked for the description on the page, and the
+publication file's genre line (Fiction / Fantasy / Epic, Historical, Dark Fantasy) was not entered.
+
+The premise, from the manuscript: Vashkeni is a mountain country of thirteen valleys, each held by a Warden, whose Threefold
+Crown keeps three temples (Auron, Elara, Solan) and a Triple Synod at Samaghvto, the Place of the Gods. The Envoy, **Observer 506**
+(field name Besarion the Fletcher), a thin, grey-eyed, slightly lame itinerant, asks **Ketevan**, Warden of the poorest
+valley, Ormeli, for bread and leaves the Catalyst with her as a guest's courtesy: a grown, living bow (Mythic class) with
+thirteen single-use arrows, worked by an unseen Receiver in the sky that returns the weather the archer's picture,
+taken literally, requires and settles the difference against the nearest air no live request has claimed. Her
+nine-year-old daughter Nestan takes it down and asks it for a little rain for her dog (the Nakuri pilgrim woman names
+her the Little Asker). The Concordat of the Quiver then shares the twelve living arrows among the three gods, and the
+dead thirteenth goes to Ketevan with the thirteenth seat's casting voice, as a joke. Every later request is larger
+than the first: Zurab of Bakviri pours the Mother's cup out empty and a war follows; Guaram commands the Sword's
+garrison at Samaghvto; the mastiff Lomi sleeps under the throne of a prince, later king, Mirdat; Observer 506 keeps a
+stall of plain ash arrows at the Wine Gate for more than thirty years and, under the Directive, withholds one true
+sentence. "Only a little" is the closing phrase of the rite the college speaks in unison at the moment of release,
+and, in the Epilogue, the phrase said over the Fourth Cup. Religion: the Threefold Crown.
+
+The cast: 17 subjects, the six principals first, then roughly story order: `ketevan`, `observer-506`, `mzia`, `zurab`,
+`guaram`, `lomi`, `orvan`, `tinatin`, `levan-0233`, `rati`, `the-old-bow-tender`, `bakar`, `otia`, `gela`, `ioseb`,
+`nakuri-pilgrim-woman`, `mesvana-mill-shrine-keeper`. The `PRINCIPALS` entry is the first six, a first pass; change it
+if the author wants others. The book has a `catalyst` record (**The Thirteen-Arrow Bow**, Mythic Class) and an `envoy`
+record (**Observer 506**, "Besarion the Fletcher"). The Bow has no page of its own, so its card links to
+`cases/0233.html` and uses a crop of the cover (`images/covers/0233-bow-thumb.jpg`), as 2231 does for its Stone; the
+Envoy's card links to `subjects/observer-506.html`. So the Cultivator and Catalyst rosters list 0233, and the case page
+shows automatic Related Cases cards (same Mythic class, shared Threefold Crown). **Hand-written additions:** one
+sentence each on the Cultivator, Catalyst and Threefold Crown pages (the Crown one links to Mzia and Ketevan). No
+`RELATED_THEMES` row was added (none seemed justified). **There are no scenes**, no map and no gazetteer. Images: the
+cover is 900x1350, the square share image is `images/share/cover-0233.jpg`, and the sheets are 980w with a 320w `-thumb`
+(34 files).
+
+Judgment calls worth knowing: (1) **Two titles.** The manuscript and the publication file are titled *The Obliging Sky*;
+the cover and the author's brief say *Only a Little*, and the site uses the cover title. The manuscript's title does not
+appear on the pages; it is named only in a code comment in `tools/build_site.py`. (2) **Scores of record.** Yield Score
+**73 (Strong)** and Casualties **7,360 direct / 156,360 total** are copied as printed in the manuscript's header and
+closing Archival Log, as the author asked for every case; the home counter picked them up (802,743 from 27 cases).
+(3) **Slugs.** The sheet for Levan of Kharzeni is `levan-0233`, because `levan` is already taken (subject slugs share one
+global namespace); his display name is "Levan of Kharzeni". The other 16 are new. (4) **No sheet, so no page** (16 of the
+manuscript's named cast): Nestan, Tsitela, Vache, Eliso, Gurgen, Otar, Sandro, Medea, Mirdat, Archil, Revaz, Bidzina,
+Shio, Giorgi, Shalva and Tamaz. Where a bio needs one they appear as plain text and the bio says they have no page here.
+(5) **Provenance in the bios.** Plot comes only from the manuscript; every detail that only the sheet gives (age, build,
+face, clothing, panel names, scene captions, printed lines) is introduced as "the sheet's", and each bio's last
+paragraph says which is which. Pull-quotes are verbatim manuscript text, except where a sheet prints a line of its own
+(Orvan, Zurab, Otia, Tinatin, the Mesvana keeper, the Old Bow-Tender), which is labelled as the sheet's. (6) **Sheets that
+differ from the manuscript**, each said on its page: Mzia's age line (*44 at the Concordat; 73 at her last autumn*) folds
+into one autumn what the manuscript spreads over two; Zurab's scene draws a crowned king on a throne where the manuscript
+has an arrow laid on a table in a captured hall; Ioseb's sheet prints a fee schedule of flat prices where the manuscript
+has a fifth plus expenses, and draws him sorting many shafts where the manuscript has him take one arrow; the Nakuri
+woman's sheet puts a small child in her arms on a snowy hillside where the manuscript has the naming in the tower yard in
+the dry summer; Otia's death at his wheel is the sheet's reading of what the manuscript leaves open; Guaram's two scenes
+draw a king handing him a paper where the manuscript has the order in speech before dawn. (7) **A wrinkle in the
+manuscript:** the Envoy's note says the first request is "the only one to have cost nothing", and Interlude III says the
+three arrows burned in a forge are "the only arrows in the study to have cost nothing"; the Closing Note reconciles them
+(the first request and the three burned arrows), and the pages follow the Closing Note.
+
 ### Cover-only entries added with it: Case 0000B and Case 2114
 
 Both are `coming-soon` stubs in the same shape as 3312 / 3887 / 4442: cover,
@@ -2185,6 +2254,10 @@ sit at the end of `BOOKS`, in the order the author listed them.
   count, purchase link, scenes, map or gazetteer (§6). The manuscript is titled *The War the Dog Never Fought*. Observer
   1,451 (Yandé) and Queen Yarissa have no sheet, so no page; "wardens" names two bodies of men in the manuscript
   and has one page; several sheets differ from the manuscript and the manuscript has a few date slips; all flagged in §6.
+- **Case 0233** (*Only a Little*) is coming-soon with a 17-subject cast, a Catalyst and an Envoy record (so both lore
+  rosters list it), but no page count, genre, synopsis, purchase link, scenes, map or gazetteer (§6). The manuscript is
+  titled *The Obliging Sky*. Sixteen named characters (Nestan, Medea, Mirdat and others) have no sheet, so no page; several
+  sheets differ from the manuscript; all flagged in §6.
 - **Case 4181** (*The Sable Skin*) is coming-soon with a 54-subject cast, 15 records and a gazetteer, but no catalyst
   or envoy record, page count, genre, synopsis or purchase link (§6). Higaide is the protagonist per the
   author; his page is `higaide` in Case 2231, linked from here and back (§6). Observer 614 and the
