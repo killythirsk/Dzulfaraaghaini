@@ -2579,28 +2579,28 @@ BOOKS = [
             },
             {
                 "slug": "vasarion", "name": "Vasarion",
-                "epithets": "Emperor of the Corvane Imperium &middot; 46 years old",
+                "epithets": "Emperor of the Corvane Imperium &middot; 58 years old",
                 "teaser": "Issues the final withdrawal from Ardenwake, from an empire that endures through discipline rather than glory.",
-                "bio_html": """<p>Emperor of the Corvane Imperium, forty-six, olive and weathered, with dark brown-black hair greying at the temples and dark brown eyes. He wears muted iron-grey armor with restrained dark-bronze trim over the cuirass and carries a ceremonial imperial sword. The sheet draws him twice, before the withdrawal and after it, at Ardenwake command, issuing the final withdrawal. His chief engineer, <a href="../subjects/berant.html">Berant</a>, writes him the private notes on what conventional siegecraft cannot do to a holy city.</p>""",
+                "bio_html": """<p>Emperor of the Corvane Imperium, fifty-eight, olive and weathered, with dark brown-black hair greying at the temples and dark brown eyes. He wears muted iron-grey armor with restrained dark-bronze trim over the cuirass and carries a ceremonial imperial sword. The sheet draws him twice, before the withdrawal and after it, at Ardenwake command, issuing the final withdrawal. His chief engineer, <a href="../subjects/berant.html">Berant</a>, writes him the private notes on what conventional siegecraft cannot do to a holy city.</p>""",
                 "quote": "The Imperium endures not through glory, but through discipline.",
             },
             {
                 "slug": "aimeric", "name": "Aimeric",
-                "epithets": "Duke of Vosmark &middot; leads the second siege of Ardenwake &middot; 38 years old",
+                "epithets": "Duke of Vosmark &middot; leads the second siege of Ardenwake &middot; 41 years old",
                 "teaser": "The only one of the first five besiegers to breach the cathedral itself &mdash; and he fails there, in public, before his own army.",
-                "bio_html": """<p>Duke of Vosmark, thirty-eight, Frankish in appearance (the sheet says Carolingian): broad-shouldered and heavyset, about 6'0&quot;, ruddy and weathered, with a square jaw, furrowed brow, trimmed full beard, dark blond hair and pale grey eyes. An old sword-scar runs across the back of his right hand, and he wears burnished armor with a ducal-crest signet ring over deep crimson.</p>
+                "bio_html": """<p>Duke of Vosmark, forty-one, Frankish in appearance (the sheet says Carolingian): broad-shouldered and heavyset, about 6'0&quot;, ruddy and weathered, with a square jaw, furrowed brow, trimmed full beard, dark blond hair and pale grey eyes. An old sword-scar runs across the back of his right hand, and he wears burnished armor with a ducal-crest signet ring over deep crimson.</p>
           <p>He leads the second siege of Ardenwake and is the only one of the first five besiegers to breach the cathedral itself; he fails publicly before his own army. The sheet sets two traits against each other: ambition (the throne) and devotion (heaven).</p>""",
             },
             {
                 "slug": "ganeth", "name": "Ganeth",
-                "epithets": "Marshal-Priest of Cassoria &middot; fourth siege of Ardenwake &middot; 49 years old",
+                "epithets": "Marshal-Priest of Cassoria &middot; fourth siege of Ardenwake &middot; 55 years old",
                 "teaser": "Takes the army through the breach and stops in front of the sacred plinth, his certainty visibly failing.",
-                "bio_html": """<p>Marshal-Priest of Cassoria, forty-nine, powerfully built at about 6'1&quot;, with deep-set dark eyes, olive-bronze skin weathered by decades outdoors, and ordination marks scarred into both forearms. He wears bronze scaled armor and a horned priestly headdress over a braided ceremonial beard and long, dark, greying hair.</p>
+                "bio_html": """<p>Marshal-Priest of Cassoria, fifty-five, powerfully built at about 6'1&quot;, with deep-set dark eyes, olive-bronze skin weathered by decades outdoors, and ordination marks scarred into both forearms. He wears bronze scaled armor and a horned priestly headdress over a braided ceremonial beard and long, dark, greying hair.</p>
           <p>He leads the fourth siege of Ardenwake. The sheet's last image has him at the plinth after the breach, his army still intact behind him, confronting the sacred artifact as his theological certainty visibly breaks.</p>""",
             },
             {
                 "slug": "kest", "name": "Kest",
-                "epithets": "Kest the Anointed &middot; leader of the Bright Remnant warband &middot; late 30s",
+                "epithets": "Kest the Anointed &middot; leader of the Bright Remnant warband &middot; 40 years old",
                 "teaser": "A self-declared prophet who ends alone in the cathedral hall, taking his solitude for proof of his holiness.",
                 "bio_html": """<p>A homegrown fringe prophet of Aldrovan stock (Pax Aldrovana) who styles himself &ldquo;Kest the Anointed&rdquo; and leads the Bright Remnant warband. Gaunt and ascetic-thin at about 5'11&quot;, hollow-cheeked and pale, with intense fixed grey-blue eyes, long unkempt prematurely greying hair and beard hung with bone talismans, and self-inflicted ritual scars on both forearms.</p>
           <p>The sheet's final image: after his followers have scattered to loot, Kest stays on alone in the cathedral hall, exhausted and fervent, convinced that his solitude proves his holiness. Its expressions: furious certainty, ascetic resolve, prophetic fervor.</p>""",
@@ -2608,9 +2608,9 @@ BOOKS = [
             },
             {
                 "slug": "massinen", "name": "Massinen",
-                "epithets": "Warlord of the Tazenna Reach &middot; seventh siege of Ardenwake &middot; 67&ndash;70 years old",
+                "epithets": "Warlord of the Tazenna Reach &middot; seventh siege of Ardenwake &middot; 76 years old",
                 "teaser": "Commands the seventh siege from a staff and a table of generals, and never reaches the walls.",
-                "bio_html": """<p>Warlord of the Tazenna Reach, about seventy, around 5'10&quot;, with dark bronze sun-weathered skin, thin close-cropped white hair and a long white beard, sharp dark eyes in a deeply lined face, and old campaign scars across both forearms. He is drawn at the seventh siege of Ardenwake, relying on his staff and his generals, in sand, cream and desert ochre with weathered brown leather.</p>
+                "bio_html": """<p>Warlord of the Tazenna Reach, seventy-six, around 5'10&quot;, with dark bronze sun-weathered skin, thin close-cropped white hair and a long white beard, sharp dark eyes in a deeply lined face, and old campaign scars across both forearms. He is drawn at the seventh siege of Ardenwake, relying on his staff and his generals, in sand, cream and desert ochre with weathered brown leather.</p>
           <p>The sheet's closing image is captioned three months into the siege &mdash; he never reached the walls. Its expressions: command, pride, weariness, final resolve.</p>""",
             },
             {
@@ -2622,9 +2622,9 @@ BOOKS = [
             },
             {
                 "slug": "dorenzo", "name": "Dorenzo",
-                "epithets": "Prince of Solvarre &middot; 32 years old",
+                "epithets": "Prince of Solvarre &middot; 46 years old",
                 "teaser": "Takes the field in ornamental parade armor with Valeria's refusal letter folded inside his breastplate.",
-                "bio_html": """<p>Prince of Solvarre, thirty-two: slim, fashionably dressed even on campaign, fine-featured and handsome with a petulant mouth, dark curled hair, dark brown eyes, a thin fashionable mustache and an ornate signet ring. His armor is ornamental parade steel in silver-grey with rich decorative accents, over luxurious Solvarre court colors.</p>
+                "bio_html": """<p>Prince of Solvarre, forty-six: slim, fashionably dressed even on campaign, fine-featured and handsome with a petulant mouth, dark curled hair, dark brown eyes, a thin fashionable mustache and an ornate signet ring. His armor is ornamental parade steel in silver-grey with rich decorative accents, over luxurious Solvarre court colors.</p>
           <p>He carries <a href="../subjects/valeria.html">Valeria</a>'s refusal letter inside his breastplate. The sheet pairs two traits: courtly pride, and entitlement refused.</p>""",
             },
             {
@@ -2658,23 +2658,23 @@ BOOKS = [
             },
             {
                 "slug": "branimir", "name": "Branimir",
-                "epithets": "Prince of Belnograd &middot; mid-30s",
+                "epithets": "Prince of Belnograd &middot; 53 years old",
                 "teaser": "Dies of river fever outside the walls, knowing he will not live to order the assault &mdash; and the grudge ends with him.",
-                "bio_html": """<p>Prince of Belnograd, thirty-four to thirty-six, Rus/Slavic in appearance: solidly built at about 5'10&quot;, with a broad, heavy-browed face ruddy from cold-weather campaigning, long dark brown hair often braided back, pale blue eyes and a full beard in the fashion of Belnograd's princely line. His face is prematurely lined, which his advisors attribute to eleven years of privately nursing the campaign. He wears layered mail over a fur-lined coat, a fur-trimmed princely cloak and a curved cavalry saber, with a small icon of <a href="../subjects/branimirs-great-grandmother.html">his great-grandmother</a> on a cord beneath his armor.</p>
+                "bio_html": """<p>Prince of Belnograd, fifty-three, Rus/Slavic in appearance: solidly built at about 5'10&quot;, with a broad, heavy-browed face ruddy from cold-weather campaigning, long dark brown hair often braided back, pale blue eyes and a full beard in the fashion of Belnograd's princely line. His face is deeply lined, which his advisors attribute to eleven years of privately nursing the campaign. He wears layered mail over a fur-lined coat, a fur-trimmed princely cloak and a curved cavalry saber, with a small icon of <a href="../subjects/branimirs-great-grandmother.html">his great-grandmother</a> on a cord beneath his armor.</p>
           <p>The sheet shows him pursuing the grudge, then before the final assault, knowing he will not live to order it, then dying of river fever outside the walls; its caption reads that the grudge ends with him, before the siege begins.</p>""",
             },
             {
                 "slug": "coren", "name": "Coren",
-                "epithets": "First Factor of the Merchant-Council of Velmoro &middot; early 50s",
+                "epithets": "First Factor of the Merchant-Council of Velmoro &middot; 49 years old",
                 "teaser": "Orders the Ardenwake blockade withdrawn the moment the numbers turn unprofitable.",
-                "bio_html": """<p>First Factor of the Merchant-Council of Velmoro, in her early fifties: sharp-featured and built for negotiation, with grey-streaked dark hair in a severe knot, dark brown assessing eyes, olive city-pale skin and the ink-stained fingertips of a lifetime of ledgers. She wears deep charcoal and muted burgundy weathered wool and carries a black lacquered ledger-case.</p>
+                "bio_html": """<p>First Factor of the Merchant-Council of Velmoro, forty-nine: sharp-featured and built for negotiation, with grey-streaked dark hair in a severe knot, dark brown assessing eyes, olive city-pale skin and the ink-stained fingertips of a lifetime of ledgers. She wears deep charcoal and muted burgundy weathered wool and carries a black lacquered ledger-case.</p>
           <p>The sheet shows her at the Ardenwake blockade; she orders it withdrawn when the numbers turn unprofitable. Its expressions: measured, assessing, impatient, cold resolve.</p>""",
             },
             {
                 "slug": "verrin", "name": "Verrin",
-                "epithets": "Captain, the Free Company of the Blind Ford &middot; 42 years old",
+                "epithets": "Captain, the Free Company of the Blind Ford &middot; 46 years old",
                 "teaser": "A mercenary captain the source never describes &mdash; drawn as a scarred, guarded professional.",
-                "bio_html": """<p>Captain of the Free Company of the Blind Ford, forty-two: a sturdy, scarred professional soldier at about 5'11&quot;, with a weathered, guarded face of practiced mercenary neutrality, cropped brown hair going grey, brown eyes, short unkempt stubble, and a notched ear from an old campaign injury. His armor is mismatched worn steel, brown leather and dark iron, over faded charcoal.</p>
+                "bio_html": """<p>Captain of the Free Company of the Blind Ford, forty-six: a sturdy, scarred professional soldier at about 5'11&quot;, with a weathered, guarded face of practiced mercenary neutrality, cropped brown hair going grey, brown eyes, short unkempt stubble, and a notched ear from an old campaign injury. His armor is mismatched worn steel, brown leather and dark iron, over faded charcoal.</p>
           <p>The text gives him no physical description; everything above was invented for the sheet.</p>""",
             },
             {
@@ -2726,7 +2726,7 @@ BOOKS = [
                 "epithets": "Sons of Prince Branimir &middot; approx. 20&ndash;32 years old",
                 "teaser": "Free of a grudge none of them ever felt the weight of, they turn the army around within the week and never speak of Belnograd's claim again.",
                 "bio_html": """<p>The sons of Prince <a href="../subjects/branimir.html">Branimir</a> of Belnograd. When their father dies of river fever within sight of Ardenwake, never having ordered the first assault, they are freed of a grudge none of them had personally felt the weight of; they turn the army around within the week and never speak of Belnograd's old claim again. The manuscript gives neither their number nor their names. They are the end of a grudge that began with <a href="../subjects/branimirs-great-grandmother.html">Branimir's great-grandmother</a> and the Vigil's refusal to heal her infant.</p>
-          <p>The sheet gives their ages as approximately 20 to 32 and draws them lean and tall and square-jawed, with fair to light-brown shoulder-length hair, pale blue eyes, short beards and matching silver temple rings inherited from their father, in dark wool coats with fur-trimmed caps and mud-spattered boots, with swords and belt knives; it shows two of them riding together at the head of the column. Its expressions are determined, somber, commanding and exhausted. Their number, ages and looks are the sheet's, and the Branimir page's mid-30s does not fit sons of these ages; the manuscript gives neither. The sheet's culture line reads Croat, South Slavic (Belnograd).</p>""",
+          <p>The sheet gives their ages as approximately 20 to 32 and draws them lean and tall and square-jawed, with fair to light-brown shoulder-length hair, pale blue eyes, short beards and matching silver temple rings inherited from their father, in dark wool coats with fur-trimmed caps and mud-spattered boots, with swords and belt knives; it shows two of them riding together at the head of the column. Its expressions are determined, somber, commanding and exhausted. Their number, ages and looks are the sheet's; the manuscript gives neither. The sheet's culture line reads Croat, South Slavic (Belnograd).</p>""",
             },
             {
                 "slug": "adouma", "name": "Adouma",
@@ -2740,7 +2740,7 @@ BOOKS = [
                 "epithets": "Aldrovan princess &middot; refused Dorenzo's proposal &middot; 32 years old",
                 "teaser": "Declines Dorenzo's proposal by her own choice, and finds a decade on that it has been rewritten as a grievance against her whole country.",
                 "bio_html": """<p>An Aldrovan princess some fifteen years younger than <a href="../subjects/dorenzo.html">Dorenzo</a> of Solvarre, who proposed marriage to her and was declined, gently and by her own choice. The manuscript never names her and gives her no lines; she exists in the siege chronicle only as what the prince made of her refusal. Over a decade of privately rehearsing it, Dorenzo turned a woman's preference into a refusal by Aldrovan's crown, then wrote to the keepers of the sword asking it to judge between him and a country that had, in his words, owed him and never given, twice. The siege that followed lasted three weeks and cost Solvarre a war it could not afford against an ally it had never needed to provoke.</p>
-          <p>The sheet gives her age as 32 and draws her slight and composed, about 5'6&quot;, with long chestnut hair in a single plait under a flowered band, grey-green eyes, fair freckled skin, a small childhood scar on the chin and a dark green wool gown with gold-thread trim. Its expressions are composed, resolute, contemplative and defiant, and its last panel is her refusal to Dorenzo. The sheet's 32 is the same age the Dorenzo page gives him; the manuscript has her some fifteen years his junior.</p>""",
+          <p>The sheet gives her age as 32 and draws her slight and composed, about 5'6&quot;, with long chestnut hair in a single plait under a flowered band, grey-green eyes, fair freckled skin, a small childhood scar on the chin and a dark green wool gown with gold-thread trim. Its expressions are composed, resolute, contemplative and defiant, and its last panel is her refusal to Dorenzo.</p>""",
             },
             {
                 "slug": "the-foreign-ambassador", "name": "The Foreign Ambassador",
