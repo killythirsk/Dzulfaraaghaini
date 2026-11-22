@@ -344,6 +344,14 @@ filename.
 - **Counts.** Sitewide **27 cases, 639 subjects (was 638), 241 records, 20 gazetteers**; `sitemap.xml` 940 addresses (was 924; +15 gazetteers, +1 subject); the home Subjects counter, the search index and the Subjects page changed. Every local link on the site resolves (39,005 checked); the new pages were opened in Chromium at 1280 and 390 px wide with no broken images and no horizontal overflow (the only console errors are external requests blocked by the sandbox's network).
 - **Still open for the author:** (a) the Golden Catacomb entrance position above; (b) the Yan Empire / 0188 echo: intended or coincidence? (c) gazetteers for 2114 and 3887 are place lists until those cases have subjects; (d) 0000B: still no image for the Old Keeper, the Original Filer or Xu Lian, and eight of the nine older sheets (Vasarion, Aimeric, Ganeth, Kest, Massinen, Dorenzo, Branimir, Coren) still print the old ages and looks; (e) the earlier 0000B items (the archer's sex, "Case 000" in the pack, placeholder pages/genre/synopsis) and stale PR #31 still stand.
 
+**Update (2026-11-22, Case 3312: the other 13 characters, the Grey Stone and the Garden; home Subjects count 639 -> 654).** The author sent 15 more sheets with "additional dossier for 3312": the 13 characters still missing, the Grey Stone ("A Catalyst") and the Garden of Kagetani. The package `The_Unclouded_publication.MD` was reused (not committed; the repo is public). Branch `case-3312-dossiers-2`, built on `main` after PR #41.
+- **15 subjects appended** to the 3312 dict's `"characters"`, after `boy-sovereign-of-himuro-3312`: `isamu`, `chiyo-3312`, `kiyo`, `genzo-3312`, `tadaie`, `sachi`, `the-boy-at-the-field-shrine`, `the-sake-house-keeper`, `carter-from-the-far-valley`, `moritanes-grandmother`, `moritanes-father`, `moritanes-nearest-cousin`, `steward-who-closes-the-accounts`, `the-grey-stone`, `the-garden-of-kagetani`. The case now has 34 subjects, all 32 catalogued characters plus the two story elements. `chiyo` is Case 4099's wet-nurse and `genzo` is Case 0202's steward (not 2231's), so the 3312 slugs carry the suffix and each page has a closing note linking the other. Bios follow the same shape as the first 19: the character bible first, then what the sheet draws, with the sheet's own lines, ages and captions labelled as such. Prompt numbers, part titles and quoted phrases were checked against the package.
+- **The Grey Stone is the case's Catalyst.** The 3312 dict has a `"catalyst"` record (`meta`: "High-Concept, Cultural and Social", from the manuscript's closing log). The Lore Catalyst page lists it, and the automatic Related Cases on 3001 and 3115 now point at 3312 ("same catalyst class"). There is **no `envoy` record**: the Observer's sheet gives no terrarium number, and the pack has no class label for the Observer, so none was invented.
+- **`PRINCIPALS["3312"]`** is now `moritane`, `norimasa`, `ennen`, `isamu`, `the-grey-stone`, `observer-3312`. Again my choice, not the author's. The home wall for 3312 follows list order, so it still shows the first six of the original 19.
+- **Existing pages touched.** Plain-text names in the first 19 bios were turned into links (22 edits, each asserted to occur once). `steward-who-announces-the-extension` no longer says the other steward is "a figure not yet drawn". The Gazetteer of the Unclouded (PR #41) said Isamu, Genzo, Chiyo, Kiyo, Sachi and Tadaie had no sheets and named them without links; its intro and the Kagetani, Plum Terrace and Jakuen-ji notes now link them, the stone and the garden.
+- **Counts.** Sitewide **27 cases, 654 subjects (was 639), 241 records, 20 gazetteers**; Case 3312 has 34 own subjects; `sitemap.xml` 955 addresses (was 940); `characters/` has 15 more redirect stubs; the home Subjects counter, the search index and the Subjects page changed. 3312's Yield and Casualties are untouched.
+- **Still open for the author:** (a) the Grey Stone sheet's gift scene and its three small scenes (Moritane's Resolve, Ennen's Decision, Isamu's March) do not match the characters' own sheets, and its page says so; (b) the Garden sheet's subtitle reads "ca. 20th year of Moritane's reign" against the manuscript's twenty-second year, and the page does not reconcile them; (c) Sachi holds a sheet of paper in both cart scenes although the manuscript has her read from memory; (d) which steward the junior brother fetches is still unsettled, and the Steward Who Closes the Accounts "takes Kiyo as well" while Kiyo's entry says she was taken with Chiyo; (e) Moritane's Grandmother is drawn beside the boy where the caption says unsupervised, and Moritane's Father's sheet draws the handover where the manuscript has only his portrait; (f) should the Observer get an envoy record; (g) the earlier open items on 3312 (the Himuro court against 2231's, the site's title and hook, placeholder `pages`/`genre`/`synopsis_html`, the package's Part 7 text) still stand.
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -519,7 +527,7 @@ when it is merged. Listed there: every book whose dict actually carries a
 `catalyst` and/or `envoy` record — the eight published books (4438 and 2365 included), plus 0188 (both
 records), 2140 (envoy only — see §6), 3115 (both records — see §6), 0156 (both records — see §6), 2231 (both records — see §6) and 0247, 1268, 0202 and 3001 (both records each — see §6) now that their rosters have been merged in. Canon-guide cases
 with no book dict on the site at all (4425) or only an empty coming-soon
-stub or a cast with no catalyst/envoy record (3312, 3887, 4442, 0000B, 2114, 4181) are not.
+stub or a cast with no catalyst/envoy record (3887, 4442, 0000B, 2114, 4181) are not. Case 3312 is listed on the Catalyst page only (the Grey Stone); it has no envoy record.
 
 **Important:** the Observer/Envoy in each book is a *different individual*.
 Ardwen (Sword of Valeria), the unnamed Observer (the Ledger), the Observer
@@ -2270,12 +2278,11 @@ sit at the end of `BOOKS`, in the order the author listed them.
   (*The Purging of Charsianon*) is coming-soon with a 26-character cast, 14
   scenes and both roster records but no pages, genre or synopsis (§6).
 - **Case 3312** (*The Unclouded* in the manuscript; *The Debt Is Settled* on the site) is
-  coming-soon with a 19-subject cast (19 of the manuscript's 32 catalogued
-  characters have sheets) but no pages, genre or synopsis, no scenes or records, and no
-  catalyst or envoy record. The Grey Stone has no page. The other 13 characters (Isamu, Chiyo,
-  Kiyo, Tadaie, Genzo, Sachi, the Boy at the field shrine, the Carter, Moritane's Grandmother,
-  Father and Nearest Cousin, the Steward who closes the accounts, the Widowed sake-house keeper)
-  have no sheet yet. Genzo will need a disambiguated slug (`genzo` is another case's person).
+  coming-soon with a 34-subject cast (all 32 of the manuscript's catalogued characters, plus
+  the Grey Stone and the Garden of Kagetani), a catalyst record (the Grey Stone, on the Lore
+  Catalyst page), a gazetteer, and no pages, genre or synopsis, no scenes or records, and no
+  envoy record. Genzo and Chiyo carry `-3312` slugs because `genzo` and `chiyo` are other cases'
+  people.
 - **Case 2365** (*The Decree of Luminescence*) is **published**: a 24-character
   cast, 15 scenes, both roster records, 88 pages and a Google Play Books link
   (not opened by an AI), merged via PR #1 and published on 2026-10-10. Its
