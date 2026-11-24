@@ -33,10 +33,10 @@ Lore glossary has eight entries: Cultivator (listing every Envoy) and
 Catalyst (listing every Catalyst), each built automatically from the
 books' own data, plus three religions — the Faith of Ardwen, the
 Threefold Crown, and the Decree of Luminescence — under their own
-Religion heading, and twenty gazetteers (maps, and one place sheet, with a note on each place) —
+Religion heading, and nineteen gazetteers (maps, each with a note on every place) —
 Illumaria, shared by Cases 2365 and 4555, the Iron Stiletto War
-(Case 4417), the Vessel of the Betrayed Host (Case 4420), the Sable Skin (Case 4181),
-the Plinth Hall of Ardenwake (Case 0000B) and fifteen more added with Case 0000B's last subject — under a Gazetteers heading; a case page links to its map. Every page's footer shows when the site was last built
+(Case 4417), the Vessel of the Betrayed Host (Case 4420), the Sable Skin (Case 4181)
+and fifteen more added with Case 0000B's last subject — which live on their own Gazetteers page (`gazetteers.html`, reached from the Archive and the home page; searchable, filterable by case, 24 shown at a time), so the Archive stays a short glossary however many cases add a map; a case page links to its map. Every page's footer shows when the site was last built
 (GMT+7), stamped automatically each time `tools/build_site.py` runs. Images
 enlarge on click, and you can step between them without closing the view;
 a book's Scenes gallery (when it has one) slides sideways, its Characters
@@ -81,6 +81,7 @@ author-site/
 ├── principals.html       The recurring principal figures, one card each
 ├── records.html          Every record (scenes.html is a redirect stub)
 ├── archive.html          Glossary of setting terms/systems (lore.html is a redirect stub)
+├── gazetteers.html       Every gazetteer (map) as a searchable thumbnail list, filterable by case
 ├── about.html             Biography
 ├── contact.html
 ├── AI-HANDOFF.md          Full context for an AI continuing this project
@@ -779,7 +780,7 @@ On branch `case-0000b-batch-two`, as a pull request, built on `main` after PR #3
 Changed:
 - **18 new subjects on Case 0000B**: Yorbulan's Sons, the Senior Priest (Second Century), the Knight of the Eastern Gate, the Girl Not Quite Three and her Mother, the Thief, the Grieving Mother, the Soldier of the Ninth Siege, the Scholar of the Vigil, the Three Keepers (Who Shared Rations), the Keeper Who Pressed Gently, the Earliest-Rotation Keeper, the Keeper of the Wedding-Loaf, the Newly Assigned Keeper, the Senior Keeper (After the Rout), the Founder of the Vigil, the Keeper Who Found Her and the Junior Observer. What the manuscript gives first, then what the sheet draws. 36 images and 18 redirect stubs.
 - **Verrin** has a redrawn sheet at 46 (the pack's age): new image, and a bio that now tells what the manuscript says about him as well as what the sheet draws.
-- **The Plinth Hall of Ardenwake**, a place sheet, is a new **Gazetteer** in the Archive (not a subject), listed on Case 0000B's page. Twelve places, each drawn from the manuscript. A gazetteer can now label its image a sheet instead of a map.
+- **The Plinth Hall of Ardenwake**, a place sheet, is a new **Gazetteer** in the Archive (not a subject), listed on Case 0000B's page. Twelve places, each drawn from the manuscript. A gazetteer can now label its image a sheet instead of a map. *(Superseded 2026-11-23: the author said it is a subject of Case 0000B, and it is one now; see the last entry in this log.)*
 - **The home counter** now reads **592 Subjects** (was 574). Case 0000B lists 55 subjects. The Casualties counter is untouched.
 - Yorbulan's bio links to his sons. `tools/build_site.py`, `AI-HANDOFF.md` (a §3 update, the Gazetteers note, the §4 count) and this file. Footer-stamp-only pages were not committed.
 
@@ -848,3 +849,15 @@ Changed:
 - **The home counter** now reads **654 Subjects** (was 639). The Casualties counter and 3312's Yield and Casualties are untouched. `tools/build_site.py`, `AI-HANDOFF.md` (a §3 update, the §7 bullet and the Lore rosters note) and this file. Footer-stamp-only pages were not committed.
 
 Totals: 27 cases, 654 subjects, 241 records, 20 gazetteers; sitemap 940 -> 955 addresses. Every local link on the changed pages resolves (3,407 checked), every subject linked from the Gazetteer of the Unclouded belongs to Case 3312, every claim about the story, the prompt numbers and the part titles was checked against the package (slips found and fixed before commit), and the case page, the new pages and the Lore Catalyst page were opened in Chromium at phone and desktop width with no broken images and no horizontal overflow (the home page already scrolls 13px sideways at phone width on `main`, which is not from this change). **Open questions for the author:** (a) the Grey Stone sheet's gift scene and its three small scenes do not match the characters' own sheets: a bare-headed recipient where Tadaie wears a tall black cap, a bearded Ennen with a topknot where his sheet is shaven, a helmeted, weaponed Isamu where his sheet has a hoe, a slim Moritane where his sheet is soft and stout; the Stone's page says so, and should any be redrawn? (b) the Garden sheet's subtitle reads "ca. 20th year of Moritane's reign", while the manuscript has the garden commissioned in his twenty-second year; the page does not reconcile them. (c) Sachi holds a sheet of paper in both cart scenes, although the caption and the manuscript have her reading from memory. (d) Which steward the junior brother fetches is still unsettled, and the manuscript has the Steward Who Closes the Accounts "take Kiyo as well" while Kiyo's entry says she was taken with Chiyo; both pages say what the text says and no more. (e) Moritane's Grandmother is drawn kneeling beside the boy where the caption says unsupervised, and Moritane's Father's sheet draws the handover where the manuscript has only the portrait. (f) Should the Observer get an envoy record? (g) The earlier open items on 3312 still stand: whether the Himuro court is the same as Case 2231's, the site's title and hook against the manuscript's, the placeholder pages, genre and synopsis, and the package's Part 7 text, which was not attached.
+
+### [PENDING] Update — Gazetteers get their own page, and the Plinth Hall becomes a Case 0000B subject
+
+On branch `gazetteers-index-plinth-subject`, as a pull request, built on `main` after PR #42 (Case 3312's dossiers). The author said the gazetteer list was already long and would be too long if every manuscript added its own, and that the Plinth Hall of Ardenwake "is not a gazetteer, it's a subject for 0000B". No new content from the author; everything below is existing content moved.
+
+Changed:
+- **A new Gazetteers page, `gazetteers.html`.** One row per gazetteer: a map thumbnail, the name, its case tag(s) and the teaser. It uses the same search box, case chips, `?case=` deep link and "show more" cap as Subjects and Records (24 shown at a time), so it keeps working at 100 maps. It highlights Archive in the nav. A gazetteer's own page keeps its address (`archive/<slug>.html`) and now backs out to this page ("← Gazetteers") instead of the Archive; its breadcrumb gains a Gazetteers level.
+- **The Archive page and the home page's Archive list no longer name every gazetteer.** The Archive keeps the glossary (Cultivator, Catalyst, the three faiths) and ends with one Gazetteers line linking the new page; the home list shows the same glossary entries plus "Gazetteers (19 maps)". Adding the next gazetteer therefore changes only the new page, its own page, the sitemap and the counts.
+- **The Plinth Hall of Ardenwake is now a Case 0000B subject** (`subjects/plinth-hall-of-ardenwake.html`, last in the case's cast). Its sheet is the portrait (`images/characters/plinth-hall-of-ardenwake.jpg` 980w and `-thumb.jpg` 320w, made from the old map image, which was removed from `images/maps/`), and its twelve place notes are kept on the page unchanged, with the "filed here as a gazetteer" paragraph removed. The old addresses `archive/plinth-hall-of-ardenwake.html` and `lore/plinth-hall-of-ardenwake.html` redirect to it (`RETIRED_ARCHIVE` in the script). Case 0000B no longer shows a Gazetteer card. Eight bios that its notes link to now list it as a Related Subject, each dropping its sixth entry (Aimeric on four, Ganeth on four); that is the site's existing rule for the six-slot list.
+- `tools/build_site.py`, `css/style.css`, `AI-HANDOFF.md` (an update note, the Gazetteers section, the site map) and this file. Footer-stamp-only pages were not committed.
+
+Totals: 27 cases, 655 subjects (was 654), 241 records, **19 gazetteers (was 20)**; sitemap +1 address (`gazetteers.html`; the Plinth Hall moves from `archive/` to `subjects/`). Every local link on the changed pages resolves; the new pages were opened in Chromium at 1280 and 390 px wide with no broken images, no horizontal overflow and no script errors. **Open question for the author:** the Plinth Hall is last in Case 0000B's cast; say if it should sit elsewhere.
