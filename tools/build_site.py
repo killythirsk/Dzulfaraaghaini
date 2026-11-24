@@ -3228,6 +3228,39 @@ BOOKS = [
                 "bio_html": """<p>The unnamed junior Observer of the <a href="../archive/cultivator.html">Cultivators</a>' field office, assigned almost as an afterthought, within a schedule of several dozen more active seedings, to file a routine status report on Case 0000 after it has been closed for the better part of six centuries. The report, the manuscript's Interlude I (<em>Envoy's Note, A Later Hand</em>), finds the political and theological outcome stable across eleven documented attempts at forced acquisition, and notes an unidentified subject with no prior file who has resolved a siege assessed at a total-loss probability above ninety percent, by means the office privately considers considerably harder to file so plainly. It recommends no intervention. Filing that last line, the Observer does not know she is repeating a sentence the office's original filer wrote in almost identical language, six centuries and one reassignment earlier, about <a href="../subjects/the-boy.html">a boy on a hillside</a> neither of them was ever permitted to name. The office keeps no record of whether she found that out. The Observer is never described and never placed in Ardenwake.</p>
           <p>The sheet gives the age as &ldquo;appears about 26&rdquo; and draws a slight figure of about 5'6&quot;, with plainly cut brown hair, grey eyes and a fair complexion, in grey-brown wool with a high collar and a wide belt, holding a sheet of paper. Its expressions are curious, contemplative, attentive and weary, and its panels show the Observer at work and reporting from a balcony above a city of spires. The sheet's figure reads as a young man where the manuscript's Observer is &ldquo;she.&rdquo;</p>""",
             },
+            {
+                "slug": "plinth-hall-of-ardenwake", "name": "The Plinth Hall of Ardenwake",
+                "epithets": "The cathedral hall of Ardenwake &middot; the sheet's &ldquo;Second Most Important Element&rdquo;",
+                "teaser": "The sheet of the cathedral hall where the sword rests: the plinth, the spire, the law over the gate, the stair from the square, and the north face before and after the eleventh siege.",
+                "bio_html": """<p>The hall of Ardenwake's cathedral in which <a href="../subjects/valeria.html">Valeria</a> rests on an open plinth, drawn on a character-style sheet titled <em>Plinth Hall of Ardenwake: The Second Most Important Element</em>. The manuscript of <a href="../cases/0000b.html">Case 0000B</a> gives only a plinth, a hall, a spire, steps, a north face, a southern transept and a law over the outer gate; almost everything else the sheet draws is its own.</p>
+          <p>The sheet gives a long stone nave-hall, a central plinth three feet high and four feet across, a spire of about 180 feet and grey, battle-worn stone, in a palette of grey and pale-gold stone, deep-blue banners, dark-brown wood and slate-grey shadow. Its places follow the sheet's panels, with the one place the manuscript names and the sheet does not draw. Each note is drawn from the manuscript, and where the manuscript says nothing the note says so.</p>
+          <dl class="places">
+            <dt>The Plinth</dt>
+            <dd>The waist-high stone plinth at the centre of the nave, on which <a href="../subjects/valeria.html">Valeria</a> rests open to any hand. The sheet gives it as about 3 ft high and 4 ft across, in plain grey stone with a polished top. The manuscript bears out the plainness: <a href="../subjects/the-thief.html">the Thief</a> runs his fingers along its base in the dark, looking for a hidden catch, lodestone or counterweight, and finds the same stone as the rest of the hall.</dd>
+            <dt>The Nave</dt>
+            <dd>The long stone hall in which every attempt is made, drawn from the pilgrims' end with the plinth under a tall window. The sheet calls it a long stone nave-hall of battle-worn grey stone. It is where <a href="../subjects/the-soldier-of-the-ninth-siege.html">a soldier of the ninth siege</a> walks in from the breach, still bleeding, and where <a href="../subjects/the-grieving-mother.html">a grieving mother</a> weeps for the better part of an hour.</dd>
+            <dt>The Spire</dt>
+            <dd>The sheet gives it as about 180 ft. The manuscript has it visible from every quarter of the city, which is why the Corvane engineers of the eleventh siege train their siege engines first on the spire rather than the outer wall: <a href="../subjects/berant.html">Berant</a> argues that watching your own god's house take damage in plain daylight does more to a garrison's nerve than watching an ordinary gatehouse fall.</dd>
+            <dt>The Gate Inscription</dt>
+            <dd>The law carved above the cathedral's outer gate, drawn on the sheet as lettered stone: any soul may attempt the blade if they arrive on foot, without banner, without escort, without an armed man at their back. The manuscript says the law never mentions Ardwen, faith or humility by name; belief was never required, arrival was. None of the eleven armies ever came that way. See <a href="../archive/faith-of-ardwen.html">the Vigil of Ardwen</a>.</dd>
+            <dt>The Pilgrim Steps</dt>
+            <dd>The worn stone stair up from the square to the hall's doors. The manuscript's children take turns walking the last few steps down with the slack look of a failed Attempter, <a href="../subjects/ardenwake-children.html">the Nothing Face</a>.</dd>
+            <dt>The Pilgrim's Entrance</dt>
+            <dd>The sheet's view down the empty nave from the doors toward the plinth: the way every Attempter comes in, on foot and unarmed. The manuscript describes no entrance beyond the law over the gate.</dd>
+            <dt>The Empty Hand</dt>
+            <dd>The sheet's panel of that name draws a crowd of hooded pilgrims seen from behind, facing the nave. The Empty Hand is Ardenwake's own name for the attempt, win or lose, so often spoken in the streets around the hall that visiting pilgrims mistook it for the sword's second title.</dd>
+            <dt>The Final Appeal</dt>
+            <dd>The sheet's panel of that name draws a hooded figure kneeling at the plinth, hands reaching for the sword. The sheet does not say who it is. The manuscript has many kneelers, among them <a href="../subjects/adouma.html">Adouma</a>, who kneels as his mother taught him to kneel before rain, and <a href="../subjects/the-grieving-mother.html">a grieving mother</a>.</dd>
+            <dt>The Anchorite's Cell</dt>
+            <dd>Drawn on the sheet as a plain stone wall with a narrow slot. In the manuscript the cell is built against the cathedral's north face, sealed past the width of a single door and fed through a slot too narrow to pass anything larger than bread and water; <a href="../subjects/the-anchorite.html">the Anchorite</a> lives in it for eleven years before the siege. The keepers who kneel at it include <a href="../subjects/newly-assigned-keeper.html">a newly assigned keeper</a> and <a href="../subjects/keeper-who-pressed-gently.html">the keeper who pressed gently</a>.</dd>
+            <dt>The North Face</dt>
+            <dd>The sheet draws it twice, after the siege, as a ruin of fallen stone open to the daylight. In the eleventh siege Corvane's sappers bring the whole face down at midday in a single controlled collapse, cell and all, and the breach lets daylight into the hall for the first time in the Anchorite's eleven years of enclosure.</dd>
+            <dt>After the Eleventh Siege</dt>
+            <dd>The sheet's closing panel: the hall with its wall in rubble and daylight pouring through. In the manuscript the Anchorite sets Valeria back across the plinth herself and refuses to be named; her old cell does not survive.</dd>
+            <dt>The Southern Transept</dt>
+            <dd>Not drawn on the sheet. The manuscript names it once: <a href="../subjects/xu-lian.html">Xu Lian</a> is cataloguing grain counts in a side chamber off the southern transept when the shudder of the falling wall reaches him.</dd>
+          </dl>""",
+            },
         ],
         "scenes": [],
     },
@@ -7142,34 +7175,6 @@ LORE = [
         "appears_html": """<p>The country of <a href="../cases/4181.html">The Sable Skin</a> (Case 4181). Its three westernmost places, Castelmaur, Vilarnau and Lasserra, belong to <a href="../cases/2231.html">The Stone of the Clean Hand</a> (Case 2231), whose survivor is the protagonist of this one.</p>""",
     },
     {
-        "slug": "plinth-hall-of-ardenwake", "name": "Gazetteer of the Plinth Hall of Ardenwake", "group": "Gazetteers",
-        "teaser": "The sheet of the cathedral hall where the sword rests: the plinth, the spire, the law over the gate, the stair from the square, and the north face before and after the eleventh siege.",
-        "map": {
-            "file": "plinth-hall-of-ardenwake",
-            "about_heading": "About the Sheet",
-            "caption": "Select the sheet to enlarge it.",
-            "alt": "Character-style sheet titled Plinth Hall of Ardenwake, The Second Most Important Element, on parchment. A tall grey stone cathedral with a single spire and steps up from the square fills the upper left; the nave, with a waist-high plinth under a tall window, fills the upper right, and below it the same hall after the siege with its north wall in rubble. A panel of traits gives a long stone nave-hall, a central plinth three feet high and four feet across, a spire of about 180 feet and grey battle-worn stone. Detail panels show the polished plinth top, a gate inscription, the anchorite's cell with a bread slot and the pilgrim steps. The bottom row shows the pilgrim's entrance, a crowd of hooded pilgrims, a hooded figure kneeling at the plinth with the sword, and the hall after the eleventh siege, with a colour swatch list of grey and pale-gold stone, deep-blue banners, dark-brown wood and slate-grey shadow",
-        },
-        "definition_html": """<p>The hall of Ardenwake's cathedral in which <a href="../subjects/valeria.html">Valeria</a> rests on an open plinth, drawn as a character-style sheet rather than a map and titled <em>Plinth Hall of Ardenwake: The Second Most Important Element</em>. The manuscript of <a href="../cases/0000b.html">Case 0000B</a> gives only a plinth, a hall, a spire, steps, a north face, a southern transept and a law over the outer gate; almost everything else the sheet draws is its own.</p>
-          <p>It is filed here as a gazetteer, not as a subject or a record. The places below are the ones the sheet's panels name; each note is drawn from the manuscript, and where the manuscript says nothing the note says so.</p>""",
-        "places": [
-            ("The Plinth", """The waist-high stone plinth at the centre of the nave, on which <a href="../subjects/valeria.html">Valeria</a> rests open to any hand. The sheet gives it as about 3 ft high and 4 ft across, in plain grey stone with a polished top. The manuscript bears out the plainness: <a href="../subjects/the-thief.html">the Thief</a> runs his fingers along its base in the dark, looking for a hidden catch, lodestone or counterweight, and finds the same stone as the rest of the hall."""),
-            ("The Nave", """The long stone hall in which every attempt is made, drawn from the pilgrims' end with the plinth under a tall window. The sheet calls it a long stone nave-hall of battle-worn grey stone. It is where <a href="../subjects/the-soldier-of-the-ninth-siege.html">a soldier of the ninth siege</a> walks in from the breach, still bleeding, and where <a href="../subjects/the-grieving-mother.html">a grieving mother</a> weeps for the better part of an hour."""),
-            ("The Spire", """The sheet gives it as about 180 ft. The manuscript has it visible from every quarter of the city, which is why the Corvane engineers of the eleventh siege train their siege engines first on the spire rather than the outer wall: <a href="../subjects/berant.html">Berant</a> argues that watching your own god's house take damage in plain daylight does more to a garrison's nerve than watching an ordinary gatehouse fall."""),
-            ("The Gate Inscription", """The law carved above the cathedral's outer gate, drawn on the sheet as lettered stone: any soul may attempt the blade if they arrive on foot, without banner, without escort, without an armed man at their back. The manuscript says the law never mentions Ardwen, faith or humility by name; belief was never required, arrival was. None of the eleven armies ever came that way. See <a href="../archive/faith-of-ardwen.html">the Vigil of Ardwen</a>."""),
-            ("The Pilgrim Steps", """The worn stone stair up from the square to the hall's doors. The manuscript's children take turns walking the last few steps down with the slack look of a failed Attempter, <a href="../subjects/ardenwake-children.html">the Nothing Face</a>."""),
-            ("The Pilgrim's Entrance", """The sheet's view down the empty nave from the doors toward the plinth: the way every Attempter comes in, on foot and unarmed. The manuscript describes no entrance beyond the law over the gate."""),
-            ("The Empty Hand", """The sheet's panel of that name draws a crowd of hooded pilgrims seen from behind, facing the nave. The Empty Hand is Ardenwake's own name for the attempt, win or lose, so often spoken in the streets around the hall that visiting pilgrims mistook it for the sword's second title."""),
-            ("The Final Appeal", """The sheet's panel of that name draws a hooded figure kneeling at the plinth, hands reaching for the sword. The sheet does not say who it is. The manuscript has many kneelers, among them <a href="../subjects/adouma.html">Adouma</a>, who kneels as his mother taught him to kneel before rain, and <a href="../subjects/the-grieving-mother.html">a grieving mother</a>."""),
-            ("The Anchorite's Cell", """Drawn on the sheet as a plain stone wall with a narrow slot. In the manuscript the cell is built against the cathedral's north face, sealed past the width of a single door and fed through a slot too narrow to pass anything larger than bread and water; <a href="../subjects/the-anchorite.html">the Anchorite</a> lives in it for eleven years before the siege. The keepers who kneel at it include <a href="../subjects/newly-assigned-keeper.html">a newly assigned keeper</a> and <a href="../subjects/keeper-who-pressed-gently.html">the keeper who pressed gently</a>."""),
-            ("The North Face", """The sheet draws it twice, after the siege, as a ruin of fallen stone open to the daylight. In the eleventh siege Corvane's sappers bring the whole face down at midday in a single controlled collapse, cell and all, and the breach lets daylight into the hall for the first time in the Anchorite's eleven years of enclosure."""),
-            ("After the Eleventh Siege", """The sheet's closing panel: the hall with its wall in rubble and daylight pouring through. In the manuscript the Anchorite sets Valeria back across the plinth herself and refuses to be named; her old cell does not survive."""),
-            ("The Southern Transept", """Not drawn on the sheet. The manuscript names it once: <a href="../subjects/xu-lian.html">Xu Lian</a> is cataloguing grain counts in a side chamber off the southern transept when the shudder of the falling wall reaches him."""),
-        ],
-        "appears_html": """<p>The hall of <a href="../cases/0000b.html">Case 0000B</a>, the manuscript <em>Pax Aldrovana</em>.</p>""",
-    },
-
-    {
         "slug": "danjeri", "name": "Gazetteer of Danjeri", "group": "Gazetteers",
         "teaser": "The map of Case 0113: Kambaso beside the river, the Ghelo salt-pans on the rim of the white desert, and Bantara beyond them.",
         "map": {
@@ -8208,8 +8213,8 @@ def principals_body():
 def _index_body_base():
     lore_items = "\n".join(
         "          <li><a href=\"archive/%s.html\">%s</a></li>" % (l["slug"], l["name"])
-        for l in LORE
-    )
+        for l in LORE if not l.get("map")
+    ) + "\n          <li><a href=\"gazetteers.html\">Gazetteers (%d maps)</a></li>" % len(gazetteers())
     return """    <section class="hero hero--home">
       <div class="wrap">
         <img class="emblem" src="assets/logo-gold.png" alt="" width="396" height="520">
@@ -8416,7 +8421,7 @@ def gazetteer_body(l):
     full = "%simages/maps/%s.jpg" % (r, m["file"])
     places = "\n".join("            <dt>%s</dt>\n            <dd>%s</dd>" % (n, note) for n, note in l["places"])
     return """    <div class="wrap page-content">
-      <a class="back-link" href="%sarchive.html">&larr; Archive</a>
+      <a class="back-link" href="%sgazetteers.html">&larr; Gazetteers</a>
       <h1>%s</h1>
       <p class="share-row">%s</p>
 
@@ -8545,8 +8550,13 @@ def lore_index_html(depth):
         if g and g not in groups:
             groups.append(g)
     for g in groups:
+        if g == "Gazetteers":
+            continue  # the maps live on their own page, gazetteers.html, so this list stays a short glossary
         members = "".join(li(l) for l in LORE if l.get("group") == g)
         parts.append("<section class=\"subsection\"><h2>%s</h2><ul class=\"detail-list\">%s</ul></section>" % (g, members))
+    if gazetteers():
+        parts.append("<section class=\"subsection\"><h2>Gazetteers</h2><p>%d maps of the setting, one for each case that has one. "
+                     "<a href=\"%sgazetteers.html\">Browse the gazetteers &rarr;</a></p></section>" % (len(gazetteers()), r))
     return "\n      ".join(parts)
 
 
@@ -8808,26 +8818,26 @@ def featured_html():
 """ % (b["slug"], b["cover_file"], _esc(b["title"]), b["case_tag"], b["slug"], b["title"], b["hook"], buttons)
 
 
-def filter_page_body(title, count, noun, ph, books, items, cls):
+def filter_page_body(title, count, noun, ph, books, items, cls, cap=None, empty="No records match.", lede=""):
     chips = '<button type="button" class="chip is-on" data-book="">All</button>' + "".join(
         '<button type="button" class="chip" data-book="%s" title="%s">%s</button>' % (b["slug"], _esc(b["title"]), b["case_tag"].replace("Case ", ""))
         for b in books)
     return """    <section class="hero hero--compact">
       <div class="wrap">
         <h1>%s</h1>
-        <p class="count">%d %s</p>
+        <p class="count">%d %s</p>%s
       </div>
     </section>
 
     <section class="wrap page-content" data-filter>
       <input class="f-search" type="search" placeholder="%s" aria-label="%s">
       <div class="chips" role="group" aria-label="Filter by case">%s</div>
-      <p class="f-empty" hidden>No records match.</p>
+      <p class="f-empty" hidden>%s</p>
       <ul class="recs %s" data-cap="%d">
 %s
       </ul>
     </section>
-""" % (title, count, noun, ph, ph, chips, cls, 24 if cls == "recs--cast" else 8, "\n".join(items))
+""" % (title, count, noun, lede, ph, ph, chips, empty, cls, cap or (24 if cls == "recs--cast" else 8), "\n".join(items))
 
 
 def characters_page_body():
@@ -8852,6 +8862,31 @@ def scenes_page_body():
             txt = _search_text(sc["alt"], sc["caption_html"], b["title"], b["case_tag"], *[c["name"] for c in record_subjects(sc)])
             items.append('        <li class="rec-scene" data-book="%s" data-text="%s"><a class="lightbox-link" data-group="scenes" href="#" data-full="images/scenes/%s.jpg"><img src="images/scenes/%s-grid.jpg" alt="%s" loading="lazy"></a><p class="scene-caption">%s</p>%s%s</li>' % (b["slug"], txt, sc["slug"], sc["slug"], _esc(sc["alt"]), sc["caption_html"].replace('href="../', 'href="'), record_meta_html(sc, b, 0), record_actions_html(sc, b, 0)))
     return filter_page_body("Records", len(items), "records", "Search records...", books, items, "recs--scenes")
+
+
+def gazetteers():
+    """Every LORE entry that is a gazetteer (it carries a map), in LORE order."""
+    return [l for l in LORE if l.get("map")]
+
+
+def gazetteers_page_body():
+    """One searchable, case-filterable page of map thumbnails, so the list can keep growing (one gazetteer a case)
+    without lengthening the Archive. Same filter, chips and 'show more' cap as Subjects and Records."""
+    items, books = [], []
+    for l in gazetteers():
+        cases = lore_cases(l)
+        for b in cases:
+            if b not in books:
+                books.append(b)
+        txt = _search_text(l["name"], l["teaser"], *[x["title"] + " " + x["case_tag"] for x in cases])
+        items.append('        <li class="rec rec-map" data-book="%s" data-text="%s"><a href="archive/%s.html"><img src="images/maps/%s-thumb.jpg" alt="" loading="lazy">'
+                     '<span><span class="rec-name">%s</span><span class="rec-meta">%s</span><span class="rec-note">%s</span></span></a></li>'
+                     % (" ".join(x["slug"] for x in cases), txt, l["slug"], l["map"]["file"], l["name"],
+                        " &middot; ".join(x["case_tag"] for x in cases), l["teaser"]))
+    books.sort(key=lambda b: b["slug"])
+    return filter_page_body("Gazetteers", len(items), "gazetteers", "Search gazetteers...", books, items, "recs--maps",
+                            cap=24, empty="No gazetteers match.",
+                            lede='\n        <p class="lede">The maps of the setting, one for each case that has one. Open a gazetteer for the map and a note on every place on it.</p>')
 
 
 # ---- structured data (JSON-LD) -----------------------------------------------------
@@ -8935,8 +8970,11 @@ def record_page_jsonld(sc, b):
 
 
 def lore_page_jsonld(l):
-    return {"@context": "https://schema.org", "@graph": [breadcrumb_jsonld([
-        ("Home", ""), ("Archive", "archive.html"), (l["name"], "archive/%s.html" % l["slug"])])]}
+    trail = [("Home", ""), ("Archive", "archive.html")]
+    if l.get("map"):
+        trail.append(("Gazetteers", "gazetteers.html"))
+    trail.append((l["name"], "archive/%s.html" % l["slug"]))
+    return {"@context": "https://schema.org", "@graph": [breadcrumb_jsonld(trail)]}
 
 
 # ---- site-wide search ----------------------------------------------------------------
@@ -9047,6 +9085,9 @@ write("contact.html", page("Contact \u2014 %s" % AUTHOR,
 # ---- book detail pages, and each book's characters ----------------------------
 write("subjects.html", page("Subjects \u2014 %s" % AUTHOR, "Every subject documented across the cases.", 0, "subjects.html", characters_page_body(), path="subjects.html"))
 write("records.html", page("Records \u2014 %s" % AUTHOR, "Key records across the cases.", 0, "records.html", scenes_page_body(), path="records.html"))
+write("gazetteers.html", page("Gazetteers \u2014 %s" % AUTHOR,
+                              "The maps and place sheets of the setting, one gazetteer for each case that has one.",
+                              0, "archive.html", gazetteers_page_body(), path="gazetteers.html"))
 write("principals.html", page("Principals \u2014 %s" % AUTHOR,
                               "The recurring principal figures of the archive: which cases each appears in on this site, and which cases some of them share.",
                               0, "principals.html", principals_body(), path="principals.html"))
@@ -9120,6 +9161,14 @@ for _l in LORE:
 RETIRED_SUBJECTS = {
     "vara-0277": "vara",
 }
+# 2026-11-23: the Plinth Hall of Ardenwake was filed as a gazetteer by mistake; it is a subject of Case 0000B.
+# archive/ holds real pages, so the old address is an explicit stub here (a LORE entry would have made it).
+RETIRED_ARCHIVE = {"plinth-hall-of-ardenwake": "plinth-hall-of-ardenwake"}   # old archive/ slug -> surviving subject slug
+for _old, _new in RETIRED_ARCHIVE.items():
+    assert not any(l["slug"] == _old for l in LORE), "retired archive slug %s is in LORE again" % _old
+    assert _new in CHAR_INDEX, "RETIRED_ARCHIVE[%s] points at an unknown subject %s" % (_old, _new)
+    REDIRECTS["archive/%s.html" % _old] = "../subjects/%s.html" % _new
+    REDIRECTS["lore/%s.html" % _old] = "../subjects/%s.html" % _new
 for _old, _new in RETIRED_SUBJECTS.items():
     assert _old not in CHAR_INDEX, "retired subject slug %s is in use again; pick a new slug" % _old
     assert _new in CHAR_INDEX, "RETIRED_SUBJECTS[%s] points at an unknown subject %s" % (_old, _new)
