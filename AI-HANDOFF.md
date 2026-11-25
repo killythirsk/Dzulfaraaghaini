@@ -361,6 +361,15 @@ filename.
 - **Counts.** Sitewide **27 cases, 655 subjects (was 654), 241 records, 19 gazetteers (was 20)**; `sitemap.xml` 956 addresses (was 955: +`gazetteers.html`, +the subject, -the `archive/` page). 38 pages really changed; the other 923 differed only by the footer stamp and cache-busters and were reverted. Every local link on the changed pages resolves (3,019 checked); `gazetteers.html` and the Plinth Hall page were opened in Chromium at 1280 and 390 px wide: no broken images, no horizontal overflow, no script errors; search 'yan' gave 2, chip 2365 gave 1, `?case=4181` gave 1.
 - **Still open for the author:** the Plinth Hall is last in Case 0000B's cast; say if it should sit elsewhere (the case's roster row is untouched).
 
+**Update (2026-11-25, Case 4417: 19 more subjects; home Subjects count 655 -> 674).** The author sent 19 character sheets and the publication package `The_Iron_Stiletto_War_publication.MD` (not committed; the repo is public) with "added dossier for 4417". Branch `case-4417-dossier`, as a pull request, built on `main` after PR #43; `main` had not moved when this was finished. In `tools/build_site.py` + images, data only, no code change:
+- **19 subjects** appended to the 4417 dict's `"characters"` after `aurelia`, in the package's alphabetical order: `aldric`, `the-captain-who-held-the-fire`, `the-clerk`, `corvins-cousin`, `costa`, `the-crowned-cousin`, `the-dismissed-cobbler`, `the-envoy-4417`, `the-gate-guard`, `the-jailer`, `the-junior-cleric`, `the-kitchen-girl`, `the-millers-wife`, `perrin`, `the-plaster-dust-captain`, `the-quarryman`, `the-quartermaster`, `rathmore`, `the-second-scalded-soldier`. 38 images (`images/characters/<slug>.jpg` 980w progressive and `-thumb.jpg` 320w) and 19 redirect stubs in `characters/`. The sheets arrived as unnamed images; each was matched to its character by the name printed on it and the match was checked on a contact sheet. `the-envoy-4417` carries the suffix on purpose: he is a prince's envoy, not a Cultivator Envoy (that is Vane), and his epithets say so.
+- **Bio shape**, as for 3312: the package's role notes and chapter references first, then what the sheet draws. The package's own appearance notes say the source gives no physical description for most of them ("details invented for consistency"; Perrin, the Quarryman and Costa are partly sourced), so ages and looks are labelled as the sheet's. Cross-links between the new pages are only ones the package states (Chapter Ten's doorway, Interlude I, Chapter Four-C, Chapter Five). Only the Captain has a `quote`.
+- **Relinks in existing bios**, each asserted to match exactly once: Corvin (cobbler, clerk, cousin), Vane (miller's wife, quarryman), Ambrose (the burning, the clerk, the junior cleric), Osric (gate guard), Aldous (Rathmore, quartermaster) and Aurelia (a second paragraph: kitchen girl, Aldric, envoy, jailer, crowned cousin). Iset's "a cobbler" is deliberately not linked: the package does not say her network's cobbler is the Dismissed Cobbler. `related_subjects` then re-picked the Related lists on Beatrice, Iset and Wren.
+- **The Gazetteer of the Iron Stiletto War** notes for the Stonewic Hills, Ironhold, Solis and the eastern marches now link the new subjects. The Stonewic note says the case file puts the hills on the same ridge as Ironhold; the map prints them in the south.
+- **`PRINCIPALS["4417"]`** is unchanged, so the case page's top row and the home wall are as before; the 19 are with the other 8 under Additional Case Records (27).
+- **Counts.** Sitewide **27 cases, 674 subjects (was 655), 241 records, 19 gazetteers**; Case 4417 has 32 own subjects; `sitemap.xml` 975 addresses (was 956); the home Subjects counter, the search index, the Subjects page and the search page changed. 4417's Yield and Casualties are untouched.
+- **Still open for the author:** (a) sheet-versus-text mismatches, flagged on the pages: the Envoy's scene draws Aurelia with long white hair (the package: chestnut crown-braid); the Kitchen Girl lifts a chest lid (the text: reported untouched); the Quarryman's listener is short brown-haired (it is Vane); the Clerk's scene draws Ambrose in a mitre and dark vestments (the package: pale-grey cassock); the Captain's sheet has no iron cap and a burning street; Costa's doorway panel draws the soldiers in plate. (b) Stonewic Hills: same ridge as Ironhold per the package's culture map, south per the map. (c) the existing Aldous (56) and Wren ("three monarchs") bios disagree with the package (58; two monarchs and buried one), untouched. (d) Wren's "eleven years" is ambiguous in the package. (e) 12 of the package's characters have no sheet yet (§7). (f) who is the tall robed figure in the Junior Cleric's scene?
+
 Everything visual is CSS custom properties at the top of `css/style.css`
 (`:root { ... }`) — change a value there, it updates everywhere.
 
@@ -833,7 +842,7 @@ on it. Thirteen characters have pages: **Osric** (Ironhold's steward),
 **Wren**, **Ophelia** (Aurelia's messenger), **Iset** (Beatrice's
 spymaster), **Fenric**, **Beatrice**, **Corvin**, **Aldous**, **Vane**,
 **Isolde**, **Ballard** (Solis's army commander), **Ambrose**, and
-**Aurelia**.
+**Aurelia**. Nineteen more were added on 2026-11-25 (32 in all; see the §3 update of that date).
 
 The chrome heels themselves were *not* given their own character page
 (unlike Valeria in Book 1 or The Sweets in Book 2) — the batch didn't
@@ -2105,7 +2114,7 @@ of reports"; that disagreement was there already and has not been resolved.
 
 **Place notes use only what the case files say.** Every note was written from the existing bios and
 captions; a place the files never mention says "Marked on the map; no case file describes it yet" (Tanners'
-Row, Furrow reserve, Round-bed, the Greywater, the Greywater crossing and the Stonewic Hills). Don't fill
+Row, Furrow reserve, Round-bed, the Greywater and the Greywater crossing; the Stonewic Hills had the same line until Rathmore got a page, and its note now draws on him). Don't fill
 those in from imagination; add a sentence when a manuscript names them. "Unknown Lands" is noted as such.
 Two labels on the 4417 map are damaged and were left as printed (the eastern marches carries a doubled
 "the"; the western "Lands" label is cropped by the margin); they are not mentioned on the site.
@@ -2293,6 +2302,11 @@ sit at the end of `BOOKS`, in the order the author listed them.
   Catalyst page), a gazetteer, and no pages, genre or synopsis, no scenes or records, and no
   envoy record. Genzo and Chiyo carry `-3312` slugs because `genzo` and `chiyo` are other cases'
   people.
+- **Case 4417** (*The Iron Stiletto War*) is published with a 32-subject cast. 12 of the package's 44
+  characters still have no sheet and no page: Aldous's Guard, Colm, Corvin's Steward, Halric, the
+  Laundry Spy, Nella, the Priest Who Resigned, Sera, the Third Rider, the Vanguard Captain, Vell and
+  the Wool Merchant. Nella (19, the servant girl with the poker, Chapter Four-B) is not the Kitchen
+  Girl (15, Chapter Three-B).
 - **Case 2365** (*The Decree of Luminescence*) is **published**: a 24-character
   cast, 15 scenes, both roster records, 88 pages and a Google Play Books link
   (not opened by an AI), merged via PR #1 and published on 2026-10-10. Its
