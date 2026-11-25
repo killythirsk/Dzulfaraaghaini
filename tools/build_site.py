@@ -1067,7 +1067,7 @@ BOOKS = [
                 "slug": "osric", "name": "Osric",
                 "epithets": "Steward of House Ironhold &middot; served three generations of dukes",
                 "teaser": "Keeps Ironhold's accounts for three dukes running, and outlasts the one this war is about.",
-                "bio_html": """<p>Steward of House Ironhold, composed and deliberate after decades in service to the family. He manages the duchy's affairs with quiet precision, is the one who carries news of <a href="../subjects/aldous.html">Duke Aldous</a>'s death to <a href="../subjects/beatrice.html">Duchess Beatrice</a>, and corresponds privately with Chancellor <a href="../subjects/wren.html">Wren</a> through the years the two crowns spend under one regency afterward. When Beatrice's grief curdles into self-blame, he's steady enough to push back on it.</p>""",
+                "bio_html": """<p>Steward of House Ironhold, composed and deliberate after decades in service to the family. He manages the duchy's affairs with quiet precision, is the one who carries news of <a href="../subjects/aldous.html">Duke Aldous</a>'s death to <a href="../subjects/beatrice.html">Duchess Beatrice</a>, and corresponds privately with Chancellor <a href="../subjects/wren.html">Wren</a> through the years the two crowns spend under one regency afterward. Earlier, in Chapter Five, the gossip from the High Cleric's sermon reaches him through <a href="../subjects/the-gate-guard.html">a gate guard</a>. When Beatrice's grief curdles into self-blame, he's steady enough to push back on it.</p>""",
                 "quote": "A house is not built on stone, but on accounts kept and promises remembered.",
             },
             {
@@ -1109,21 +1109,21 @@ BOOKS = [
                 "slug": "corvin", "name": "Corvin",
                 "epithets": "Baron of the Eastern Marches",
                 "teaser": "Plays both crowns against each other, and nearly walks away with both of them.",
-                "bio_html": """<p>Baron of the Eastern Marches, patient and outwardly neutral while working every side of the war he helps prolong. He bribes a cobbler, orchestrates the Church's heresy decree against the heels, and leans on <a href="../subjects/isolde.html">Isolde</a> and Ser Halric for intelligence and delay in equal measure \u2014 stalling the relief force that might have ended the siege early. By the time Chancellor <a href="../subjects/wren.html">Wren</a> quietly proves what he's been doing, Corvin is within reach of both crowns at once. He doesn't survive Wren noticing.</p>""",
+                "bio_html": """<p>Baron of the Eastern Marches, patient and outwardly neutral while working every side of the war he helps prolong. He bribes <a href="../subjects/the-dismissed-cobbler.html">a cobbler</a> and <a href="../subjects/the-clerk.html">a clerk in Ambrose's household</a>, orchestrates the Church's heresy decree against the heels, and leans on <a href="../subjects/isolde.html">Isolde</a> and Ser Halric for intelligence and delay in equal measure \u2014 stalling the relief force that might have ended the siege early. By the time Chancellor <a href="../subjects/wren.html">Wren</a> quietly proves what he's been doing, Corvin is within reach of both crowns at once. He doesn't survive Wren noticing. His lands pass to <a href="../subjects/corvins-cousin.html">a cousin twice removed</a>, who spent the war among the family's orchards.</p>""",
                 "quote": "Loyalty is a currency, and I have no need to spend what I can so easily counterfeit.",
             },
             {
                 "slug": "aldous", "name": "Aldous",
                 "epithets": "Duke of Ironhold &middot; 56 years old &middot; husband to Beatrice",
                 "teaser": "Walks into the Great Hall unarmed, offering peace, and doesn't walk out.",
-                "bio_html": """<p>Duke of Ironhold, slowed by gout and by a war he's counseled against from the start. Pressed toward escalation by his wife <a href="../subjects/beatrice.html">Beatrice</a> and his own council, he goes into the war's final confrontation in the Great Hall unarmed and offering terms \u2014 and is killed there, struck down by the same heels that started the whole conflict.</p>""",
+                "bio_html": """<p>Duke of Ironhold, slowed by gout and by a war he's counseled against from the start. Pressed toward escalation by his wife <a href="../subjects/beatrice.html">Beatrice</a> and his own council, he goes into the war's final confrontation in the Great Hall unarmed and offering terms \u2014 and is killed there, struck down by the same heels that started the whole conflict. Earlier in the war, <a href="../subjects/rathmore.html">Baron Rathmore</a> pledges his levies to his banner unprompted, and Ironhold's <a href="../subjects/the-quartermaster.html">quartermaster</a> gives him each day's casualty numbers as precisely as he asks for them.</p>""",
                 "quote": "Peace... It seems I was always just a slower man in a faster world.",
             },
             {
                 "slug": "vane", "name": "Vane",
                 "epithets": "Envoy/Observer, Case 4,417 &middot; &ldquo;the Wanderer&rdquo; &middot; deployed disguised as a hermit",
                 "teaser": "Delivers an indestructible pair of chrome heels to a queen, then stays to watch what it costs her.",
-                "bio_html": """<p>A field agent for the <a href="../archive/cultivator.html">Cultivators</a>, deployed to Solis disguised as a wandering hermit. He delivers the chrome stiletto heels at the center of the whole case as a single, unexplained gift, then lingers at the edges of both courts \u2014 gathering data on both sides of the war he sets in motion, and logging all of it, without candlelight, in Case Study 4,417. Offered at least one real chance to intervene before the worst of it, he declines to take it. When the study closes, the heels vanish with him, on schedule, and he simply moves on.</p>""",
+                "bio_html": """<p>A field agent for the <a href="../archive/cultivator.html">Cultivators</a>, deployed to Solis disguised as a wandering hermit. He delivers the chrome stiletto heels at the center of the whole case as a single, unexplained gift, then lingers at the edges of both courts \u2014 gathering data on both sides of the war he sets in motion, and logging all of it, without candlelight, in Case Study 4,417. On the road <a href="../subjects/the-millers-wife.html">a miller's wife</a> feeds him a stew and asks whether the queen has grown four inches overnight, and an older <a href="../subjects/the-quarryman.html">quarryman</a> at a camp's cook-fire asks him whether the Duke will really go to war over a pair of shoes. Offered at least one real chance to intervene before the worst of it, he declines to take it. When the study closes, the heels vanish with him, on schedule, and he simply moves on.</p>""",
                 "quote": "I wander. I witness. I record. I depart. Such is the burden of knowing.",
             },
             {
@@ -1144,15 +1144,168 @@ BOOKS = [
                 "slug": "ambrose", "name": "Ambrose",
                 "epithets": "High Cleric of the Order of the Pale Cloth",
                 "teaser": "Declares the chrome heels a blasphemy, and turns a scandal into a holy war.",
-                "bio_html": """<p>High Cleric of the Order of the Pale Cloth, austere and utterly convinced of his own conviction. He declares Queen <a href="../subjects/aurelia.html">Aurelia</a>'s chrome heels heretical \u2014 chrome, in his own words, &ldquo;seduces the flesh&rdquo; \u2014 and prepares his congregation for what he calls a war of purification, giving the conflict a righteousness it otherwise wouldn't have had at home.</p>""",
+                "bio_html": """<p>High Cleric of the Order of the Pale Cloth, austere and utterly convinced of his own conviction. He declares Queen <a href="../subjects/aurelia.html">Aurelia</a>'s chrome heels heretical \u2014 chrome, in his own words, &ldquo;seduces the flesh&rdquo; \u2014 and prepares his congregation for what he calls a war of purification, giving the conflict a righteousness it otherwise wouldn't have had at home. He presides over the burning of <a href="../subjects/the-dismissed-cobbler.html">the cobbler</a>, whose testimony reached his desk by way of <a href="../subjects/the-clerk.html">a clerk</a> Corvin had paid, and keeps preaching that the Order's faith had held. The Order's fourth informal inquiry about a consort is carried by <a href="../subjects/the-junior-cleric.html">a newly ordained junior cleric</a>.</p>""",
                 "quote": "Chrome seduces the flesh with false promise. We shall burn the blasphemy and return to the Light.",
             },
             {
                 "slug": "aurelia", "name": "Aurelia",
                 "epithets": "Queen of Solis &middot; reigning eleven years",
                 "teaser": "Four borrowed inches of height end a duke's life and her own reign in the same afternoon.",
-                "bio_html": """<p>Queen of Solis, and the first person the chrome heels are ever placed on. They add four unmistakable inches, catch and distort every reflection near them, and hide a needle-sharp spike beneath each sole \u2014 and over the following months they turn, for her, from a private vanity into something closer to a need. She wears them into the Great Concord and refuses <a href="../subjects/beatrice.html">Beatrice</a>'s later ultimatum outright; by the time she kills <a href="../subjects/aldous.html">Duke Aldous</a> with one of them in the Great Hall, the war they started has already outgrown her ability to end it. She's deposed shortly after, and lives out what's left of her reign &ldquo;retired&rdquo; under guard.</p>""",
+                "bio_html": """<p>Queen of Solis, and the first person the chrome heels are ever placed on. They add four unmistakable inches, catch and distort every reflection near them, and hide a needle-sharp spike beneath each sole \u2014 and over the following months they turn, for her, from a private vanity into something closer to a need. She wears them into the Great Concord and refuses <a href="../subjects/beatrice.html">Beatrice</a>'s later ultimatum outright; by the time she kills <a href="../subjects/aldous.html">Duke Aldous</a> with one of them in the Great Hall, the war they started has already outgrown her ability to end it. She's deposed shortly after, and lives out what's left of her reign &ldquo;retired&rdquo; under guard.</p>
+          <p>Others touch the story of the heels at its edges. Three mornings before the Concord <a href="../subjects/the-kitchen-girl.html">a kitchen girl</a> finds a box at the base of the eastern gate and reports it untouched; <a href="../subjects/aldric.html">Aldric</a>, her physician, suggests a plainer boot for the tower stairs and is told to keep to what he has been asked; <a href="../subjects/the-envoy-4417.html">an envoy</a> from a distant prince proposes a marriage and watches her face for hope; and after her fall <a href="../subjects/the-jailer.html">her jailer</a> leaves the heels on her because he does not know what else to do with them. In time the crown goes to <a href="../subjects/the-crowned-cousin.html">a distant cousin of her own line</a>.</p>""",
                 "quote": "Height is earned. Power is worn.",
+            },
+            {
+                "slug": "aldric", "name": "Aldric",
+                "epithets": "Palace Physician of Solis &middot; 52 by his sheet",
+                "teaser": "Suggests a plainer boot for the tower stairs, and is told in a suddenly quiet voice to keep to what he has been asked.",
+                "bio_html": """<p>The palace physician of Solis. Early in the siege he suggests to Queen <a href="../subjects/aurelia.html">Aurelia</a> that standing for hours at a stone window in unyielding chrome cannot be good for her arches, and proposes a plainer boot for the tower stairs (Chapter Nine). He is told, in a suddenly quiet voice, to confine his medical opinions to matters he has been asked about, and he never raises the subject again. The source also jokes that he apologizes for sharing no relation to the Duke: his name is close to <a href="../subjects/aldous.html">Aldous</a>&rsquo;s.</p>
+          <p>The bible&rsquo;s own appearance notes say the source gives no physical description and that the details were invented for consistency, so his age and look are the pack&rsquo;s. The sheet makes him fifty-two, slight and slightly stooped at about 5'8&quot;, with a long, mild face, a high forehead, a long thin nose and permanently apologetic brows; thinning grey-brown hair, tired hazel eyes quick to look away, and ink and herb stains on the first two fingers of the right hand. He wears an ankle-length blue-grey wool physician&rsquo;s tunic with a leather belt, a short plain mantle and a bronze brooch, and carries a satchel of lancets, linen rolls, a vinegar flask and dried herbs. The panels show him pressing two fingers to a wrist as he talks, and offering his advice about the boot to the Queen.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-captain-who-held-the-fire", "name": "The Captain Who Held the Fire",
+                "epithets": "Captain in Ironhold&rsquo;s army &middot; 38 by his sheet",
+                "teaser": "Orders his company to hold rather than set alight a row of houses backing onto the grain markets.",
+                "bio_html": """<p>A captain in Ironhold&rsquo;s army. In Chapter Ten he orders his company to hold rather than fire a row of houses backing onto the grain markets, saying &ldquo;That house had children.&rdquo; The character notes add that he keeps his orders short. The same chapter holds <a href="../subjects/the-plaster-dust-captain.html">the Plaster-Dust Captain</a>, <a href="../subjects/the-quartermaster.html">the Quartermaster</a> and <a href="../subjects/costa.html">Costa</a>&rsquo;s doorway.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him thirty-eight, medium build at about 5'9&quot;, with a square, sober face, short brown hair, grey-brown eyes, weathered skin, short stubble and a fresh bandage across the left hand. He wears a mail shirt and a plain wool cloak and carries a sword and a round shield. The scene panel shows him from behind, facing a street on fire. Two flags: the bible lists an iron cap for him, which the sheet does not draw, and it records only that the row of houses was not fired, so the burning street behind him is the sheet&rsquo;s own addition.</p>""",
+                "quote": "That house had children.",
+            },
+            {
+                "slug": "the-clerk", "name": "The Clerk",
+                "epithets": "Clerk in High Cleric Ambrose&rsquo;s household &middot; 38 by his sheet",
+                "teaser": "Is paid so a cobbler&rsquo;s testimony reaches the High Cleric&rsquo;s desk first, and is better dressed for it.",
+                "bio_html": """<p>A clerk in the household of High Cleric <a href="../subjects/ambrose.html">Ambrose</a>. In Chapter Five <a href="../subjects/corvin.html">Corvin</a> pays him to make sure <a href="../subjects/the-dismissed-cobbler.html">the Dismissed Cobbler</a>&rsquo;s testimony reaches Ambrose&rsquo;s desk first, and he becomes newly, nervously better dressed afterward. When the papers surface in Chapter Thirteen he flees the capital and is never formally charged.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him thirty-eight, small and slightly paunchy at about 5'5&quot;, with a soft, damp face and small close-set eyes, thinning black hair slicked flat, nervous brown eyes, sallow skin, ink stains on the right hand, and a tendency to sweat. He wears an ink-spotted grey wool tunic and short grey mantle and carries a pen case and a leather satchel; a second figure shows the better-dressed version after the payment. The scene panel puts him at Ambrose&rsquo;s desk, and there is a flag: the sheet draws Ambrose in a mitre and dark embroidered vestments, while the bible dresses him in a pale-grey undyed cassock and mantle.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "corvins-cousin", "name": "Corvin's Cousin",
+                "epithets": "Cousin twice removed of Corvin &middot; inheritor of his lands &middot; 40 by his sheet",
+                "teaser": "Spends the war among his family&rsquo;s orchards, knows nothing of grain contracts, and inherits the barony.",
+                "bio_html": """<p>A cousin twice removed of <a href="../subjects/corvin.html">Baron Corvin</a>, and the inheritor of his lands. He spends the war managing his family&rsquo;s orchards and knows nothing of grain contracts (Epilogue iii); once the barony of the Eastern Marches comes to him he governs it forgettably.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him forty, soft and round at about 5'8&quot;, with a mild, orchard-weathered face, thinning brown hair, brown eyes, ruddy skin and a short brown beard. He has an orchard-ladder callus, smells of apples, and wears a brown wool tunic and a straw hat with a pruning knife at his belt.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "costa", "name": "Costa",
+                "epithets": "Baker of Solis &middot; 45 by his sheet",
+                "teaser": "Holds his kitchen doorway with a cauldron of boiling water, and tells it as though the water had simply happened to be hot.",
+                "bio_html": """<p>A baker in the besieged city. On the fifth day of the siege two Ironhold soldiers press at his kitchen doorway and he holds it with a cauldron of boiling water (Chapter Ten). The two are <a href="../subjects/perrin.html">Perrin</a> and <a href="../subjects/the-second-scalded-soldier.html">the Second Scalded Soldier</a>; Perrin dies of the scalding three weeks later. Costa tells the story afterward as though the water had simply happened to be hot. The bible gives him his trade, a proofing blade and the cauldron; the rest of his look is invented.</p>
+          <p>The sheet makes him forty-five, stocky and thick-armed at about 5'6&quot;, with a round, flushed face, a heavy brow and soft jowls, receding black curls and a heavy black moustache dusted with flour, honest brown eyes and olive skin. Old burn scars mark both forearms and flour whitens the creases of his hands. He wears a flour-whitened undyed linen tunic with rolled sleeves, a leather apron and a felt cap, and the ovens his father built, and his father&rsquo;s father paid for, stand behind him. The panels show him in the doorway with the cauldron, telling the story afterward, and at his ovens. One small flag: the doorway panel draws the two soldiers in dark plate gauntlets and closed helms, where their own sheets dress them in quilted levy jerkins and iron caps.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-crowned-cousin", "name": "The Crowned Cousin",
+                "epithets": "Distant cousin of Aurelia&rsquo;s own line &middot; 22 at coronation",
+                "teaser": "Judged old enough and safe enough to be crowned in truth once the regency is over.",
+                "bio_html": """<p>A distant cousin of Queen <a href="../subjects/aurelia.html">Aurelia</a>&rsquo;s own line. After the regency Chancellor <a href="../subjects/wren.html">Wren</a> heads, he is judged old enough and safe enough to be crowned in truth (Epilogue i). The character notes add that the coronation came only after most of the realm had stopped thinking of the interregnum as temporary.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him twenty-two at the coronation, slender at about 5'9&quot;, with a smooth, careful face, chestnut hair, grey eyes, fair skin and a clean-shaven jaw. His hands are nervous. He wears a royal blue mantle with a gold clasp, and the panels follow him through the crowning itself, with a cleric in pale vestments setting the crown on his bowed head.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-dismissed-cobbler", "name": "The Dismissed Cobbler",
+                "epithets": "Cobbler, formerly of the crown&rsquo;s household &middot; 54 by his sheet",
+                "teaser": "Is dismissed for suggesting the metal might be foreign witchcraft, then swears that no honest forge made the heels.",
+                "bio_html": """<p>A cobbler formerly of the crown&rsquo;s household, dismissed for suggesting that the metal of the heels might be foreign witchcraft. <a href="../subjects/corvin.html">Corvin</a> bribes him (Chapter Five), and he gives sworn testimony before the Order that no honest forge could have made them; <a href="../subjects/the-clerk.html">the Clerk</a> makes sure it reaches <a href="../subjects/ambrose.html">Ambrose</a>&rsquo;s desk first. Afterward he spends gold loudly, and the notes say he cannot hold money without announcing it. His unexplained coin is what <a href="../subjects/iset.html">Iset</a> brings to <a href="../subjects/beatrice.html">Beatrice</a> (Chapters Six and Twelve). In Chapter Thirteen he is arrested for perjury and burned by the Order, with Ambrose presiding.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him fifty-four, short and broad at about 5'4&quot;, with a broad, creased face, a thick nose, a stubborn mouth, grey hair thinning on top and worn long at the sides, defensive brown eyes, ruddy skin and grey stubble. His thumb is stained by dye and blackened by an awl. He wears a leather-scarred apron over a plain tunic and carries an awl and a shoemaker&rsquo;s last; a second figure shows him later in a better-cut dark tunic with a silver-dyed collar, counting gold at a table. The panels also show him giving his testimony before the Order and standing bound at the pyre.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-envoy-4417", "name": "The Envoy",
+                "epithets": "Envoy for a distant prince &middot; not a Cultivator Envoy &middot; 44 by his sheet",
+                "teaser": "Proposes a marriage for a prince from a kingdom Aurelia could not have found without her maps, and watches her face for hope.",
+                "bio_html": """<p>An envoy for a prince from a kingdom Queen <a href="../subjects/aurelia.html">Aurelia</a> could not have located without her maps. In Chapter Four-C he proposes a marriage on the prince&rsquo;s behalf and watches her face for hope. The notes say he reads the face of every person he addresses. He is a prince&rsquo;s envoy, not an envoy of the <a href="../archive/cultivator.html">Cultivators</a> like <a href="../subjects/vane.html">Vane</a>. The same chapter holds <a href="../subjects/the-junior-cleric.html">the Junior Cleric</a>&rsquo;s inquiry.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him forty-four, medium height at about 5'8&quot;, with a formal bearing, a heavy-lidded face with a long nose, black hair oiled flat and curled at the nape, dark brown eyes and a neat black beard cut to a point. A gold ring hangs in his left ear. He wears a silk-lined long coat with a stitched border and an embroidered cap, and carries a sealed scroll case. One flag: the scene panel draws Aurelia with long white hair, where the bible gives her a chestnut crown-braid.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-gate-guard", "name": "The Gate Guard",
+                "epithets": "Ironhold gate guard &middot; 33 by his sheet",
+                "teaser": "Hears the sermon&rsquo;s gossip at the gate and carries it to Osric.",
+                "bio_html": """<p>A guard on Ironhold&rsquo;s gate, bored and curious by the character notes. In Chapter Five he carries the sermon&rsquo;s gossip to <a href="../subjects/osric.html">Osric</a>; the sermon is <a href="../subjects/ambrose.html">Ambrose</a>&rsquo;s, declaring the heels&rsquo; metal an alchemical corruption.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him thirty-three, medium build at about 5'9&quot;, with a plain, weathered face, short brown hair, brown eyes and a clean-shaven jaw. He wears a mail coat and an iron cap and keeps a short spear at hand. The panels show him bored, curious, suspicious and alert, and standing at the gate while the rumour spreads.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-jailer", "name": "The Jailer",
+                "epithets": "Jailer of Aurelia&rsquo;s cell &middot; 50 by his sheet",
+                "teaser": "Leaves the heels on Aurelia because he does not know what else to do with them.",
+                "bio_html": """<p>The jailer of Queen <a href="../subjects/aurelia.html">Aurelia</a>&rsquo;s cell after she is deposed. In Chapter Thirteen-B he leaves the heels on her because he does not know what else to do with them. The notes say he makes his rounds and does not ask.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him fifty, heavy at about 5'9&quot;, with a thick-featured, uninterested face, grey hair under a cap, brown eyes, ruddy skin and grey stubble. A heavy ring of keys hangs at his belt. He wears a dun leather jerkin and carries a short club. The panels show him on duty with the club on his shoulder, and leaving the cell with Aurelia behind the bars.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-junior-cleric", "name": "The Junior Cleric",
+                "epithets": "Junior cleric of the Order &middot; newly ordained &middot; 24 by his sheet",
+                "teaser": "Delivers the Order&rsquo;s fourth informal inquiry about a consort, and is asked after his mother by name.",
+                "bio_html": """<p>A newly ordained junior cleric of the Order of the Pale Cloth, which <a href="../subjects/ambrose.html">Ambrose</a> leads. In Chapter Four-C he delivers the Order&rsquo;s fourth informal inquiry about a consort and is asked after his mother by name. The notes call him too new to know he is being used as a blade with an apologetic hilt. The same chapter holds <a href="../subjects/the-envoy-4417.html">the Envoy</a>&rsquo;s proposal.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him twenty-four, slim at about 5'9&quot;, with a smooth, earnest face, close-cropped brown hair, brown eyes, pale unlined skin and a clean-shaven jaw. His ears colour when he is embarrassed. He wears a pale undyed cassock with a short pale mantle. The scene panel shows him kneeling before a tall figure in dark embroidered robes whom the bible does not identify.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-kitchen-girl", "name": "The Kitchen Girl",
+                "epithets": "Kitchen girl who found the box &middot; 15 by her sheet",
+                "teaser": "Finds the box at the base of the eastern gate three mornings before the Concord, and reports it untouched.",
+                "bio_html": """<p>A kitchen girl in Solis who carries the water before dawn. Three mornings before the Great Concord she finds a box at the base of the eastern gate and reports it untouched (Chapter Three-B). It is the same chapter in which Queen <a href="../subjects/aurelia.html">Aurelia</a> receives the heels.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes her fifteen, small and thin at about 5'0&quot;, with a round freckled face, dark brown hair under a kerchief, brown eyes and olive-tan skin. Her hands carry water-yoke calluses. She wears a patched undyed linen dress and wooden clogs and carries two buckets on a yoke. One flag: the scene panel draws her kneeling at a dark wooden chest and lifting its lid, where the text has her report the box untouched.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-millers-wife", "name": "The Miller's Wife",
+                "epithets": "Miller&rsquo;s wife in a mill town three days from the capital &middot; 41 by her sheet",
+                "teaser": "Feeds Vane a stew, asks whether the queen has grown four inches overnight, and tells her children a growing version.",
+                "bio_html": """<p>A miller&rsquo;s wife in a mill town three days from the capital. In Interlude I she feeds <a href="../subjects/vane.html">Vane</a> a stew and asks whether the queen has grown four inches overnight. She tells her children a growing version of the story. The same interlude holds <a href="../subjects/the-quarryman.html">the Quarryman</a>.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes her forty-one, round and sturdy at about 5'4&quot;, with a round, warm face and deep dimples, brown hair under a white cap, blue eyes, fair floury skin and a gap-toothed smile. She wears a floury apron over a dun wool dress and carries a wooden ladle. The panels show her at the stew-pot, at the mill, and telling the story to her children.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "perrin", "name": "Perrin",
+                "epithets": "Ironhold soldier &middot; 19 by his sheet",
+                "teaser": "A boy not yet twenty who delivered his family&rsquo;s bread before the levies took him, and was scalded at Costa&rsquo;s doorway.",
+                "bio_html": """<p>An Ironhold levy soldier, &ldquo;a boy not yet twenty.&rdquo; Before the levies took him he delivered bread for his family&rsquo;s ovens in Ironhold&rsquo;s capital. In Chapter Ten he is one of two soldiers scalded at <a href="../subjects/costa.html">Costa</a>&rsquo;s doorway, the other being <a href="../subjects/the-second-scalded-soldier.html">the Second Scalded Soldier</a>, and he dies of the scalding three weeks later. The notes say he carries the smell of baking in his clothes from home.</p>
+          <p>The bible gives only his age, as &ldquo;a boy not yet twenty&rdquo;; the rest of his look is invented. The sheet makes him nineteen, lanky and underfed at about 5'10&quot;, with a boyish face, a long nose, a patchy jaw and thin pale down on the upper lip, straw-coloured hair cropped short, pale blue eyes that are scared and proud, and fair skin freckled across the nose. He wears a quilted levy jerkin over a wool tunic, a plain iron cap and leather boots, and carries a short spear and a dagger. A close-up shows the scald blisters on his skin, and the panels show him after the scalding with his head in his hands and, three weeks on, lying in a sickbed.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-plaster-dust-captain", "name": "The Plaster-Dust Captain",
+                "epithets": "Ironhold captain &middot; 41 by his sheet",
+                "teaser": "Notices fresh plaster dust from a wall and begins advancing in linked pairs.",
+                "bio_html": """<p>An Ironhold captain. In Chapter Ten he notices fresh plaster dust from a wall and begins advancing his men in linked pairs. The notes say he walks with his head tilted to look at walls. The pack&rsquo;s rooftop scene draws the pairs crossing from roof to roof, one man watching ahead and the other the wall. The same chapter holds <a href="../subjects/the-captain-who-held-the-fire.html">the Captain Who Held the Fire</a>.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him forty-one, lean at about 5'10&quot;, with a narrow face and a sharp, observant gaze, black hair cropped close, dark brown eyes, olive-fair skin and a clean-shaven jaw. He wears a mail shirt and a brown cloak powdered with plaster dust and carries a sword and a hand axe.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-quarryman", "name": "The Quarryman",
+                "epithets": "Older quarryman at an Ironhold camp&rsquo;s cook-fire &middot; 58 by his sheet",
+                "teaser": "Asks Vane whether the Duke will really go to war over a pair of shoes.",
+                "bio_html": """<p>An older quarryman at a camp&rsquo;s cook-fire in Ironhold. In Interlude I he asks <a href="../subjects/vane.html">Vane</a> whether the Duke will actually go to war over a pair of shoes. He lost two fingers to a rockfall and speaks of it with flat pride.</p>
+          <p>The bible gives only that he is older than the rest and missing two fingers; his age and the rest of his look are the pack&rsquo;s. The sheet makes him fifty-eight, wiry and compact at about 5'7&quot;, with a creased, flat-nosed face and a blunt jaw, short grey hair, pale blue eyes, weathered dust-grey skin and grey stubble. Two fingers are missing on the left hand. He wears a leather quarry apron over a wool tunic, cross-gartered legs and hobnailed boots, and carries a stone hammer. One flag: the scene panel draws his listener with short brown hair, where his listener in the text is Vane, who is long grey-white-haired.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-quartermaster", "name": "The Quartermaster",
+                "epithets": "Quartermaster keeping Ironhold&rsquo;s ledger &middot; 55 by his sheet",
+                "teaser": "Gives Aldous the day&rsquo;s casualty numbers precisely, because Aldous asked precisely.",
+                "bio_html": """<p>The quartermaster keeping Ironhold&rsquo;s grim ledger. In Chapter Ten he tells <a href="../subjects/aldous.html">Aldous</a> the day&rsquo;s casualty numbers precisely when Aldous asks for them precisely. The notes say he has learned not to soften a figure.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him fifty-five, heavyset at about 5'8&quot;, with a round, tired face, thin grey hair, grey eyes, pale pouchy skin and grey side-whiskers. His thumb is blackened with ink. He wears a plain brown wool tunic with a tally strap across the chest and carries a ledger and counting rods.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "rathmore", "name": "Rathmore",
+                "epithets": "Baron of the Stonewic Hills &middot; 52 by his sheet",
+                "teaser": "Pledges his levies to Aldous&rsquo;s banner unprompted, at the cost of nearly a third of his fighting men.",
+                "bio_html": """<p>Baron of the Stonewic Hills, a quarry barony bound to Ironhold by four generations of shared quarrying. In Chapter Eight he pledges his levies to <a href="../subjects/aldous.html">Aldous</a>&rsquo;s banner unprompted, at the cost of nearly a third of his fighting men, and in Chapter Eleven they are sworn for the campaign&rsquo;s duration to Aldous&rsquo;s word alone. The notes say he speaks little and acts on reflex.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him fifty-two, stocky and quarry-built at about 5'9&quot;, with a broad, flat face and a thick neck, sandy-grey hair cropped short, direct grey eyes, weathered skin with stone dust in the lines and a cropped sandy beard. His knuckles are broken on both hands. He wears a stone-grey wool cloak over a mail shirt with an iron disc brooch and carries a heavy war pick and a short sword. The panels show him in quiet contemplation on the pick, and kneeling on a spoil heap before his levies under a banner.</p>""",
+                "quote": None,
+            },
+            {
+                "slug": "the-second-scalded-soldier", "name": "The Second Scalded Soldier",
+                "epithets": "Ironhold soldier &middot; 24 by his sheet",
+                "teaser": "Scalded at Costa&rsquo;s doorway beside Perrin, and does not talk about the doorway.",
+                "bio_html": """<p>An Ironhold soldier scalded alongside <a href="../subjects/perrin.html">Perrin</a> at <a href="../subjects/costa.html">Costa</a>&rsquo;s doorway in Chapter Ten. Neither tried that doorway again that day. The bible gives him no name, and the notes say he does not talk about the doorway.</p>
+          <p>The bible says the source gives no physical description and the details were invented for consistency. The sheet makes him twenty-four, stocky at about 5'8&quot;, with a broad face, brown hair, brown eyes, ruddy skin and brown stubble. Scald blisters mark his forearms. He wears a quilted levy jerkin and an iron cap and carries a short spear. The panels show him seated with his head in his hand, and standing before the doorway.</p>""",
+                "quote": None,
             },
         ],
         "scenes": [
@@ -7113,13 +7266,13 @@ LORE = [
         "places": [
             ("Unknown Lands", """Printed along the map's northern and southern margins. No case file describes them."""),
             ("House Vell", """Shown as a keep north of Solis. House Vell commits to Solis in secret, and its Lord is the brother of <a href="../subjects/isolde.html">Isolde</a> of Ironhold, a connection that matters more to the war than she first realizes."""),
-            ("Ironhold", """The mountain country of Duke <a href="../subjects/aldous.html">Aldous</a> and Duchess <a href="../subjects/beatrice.html">Beatrice</a>, whose steward <a href="../subjects/osric.html">Osric</a> has kept its accounts for three dukes and whose Lord of the Western Passes is <a href="../subjects/fenric.html">Fenric</a>. Beatrice's humiliation at the Great Concord is the war's original grievance."""),
-            ("Solis", """The coastal kingdom of Queen <a href="../subjects/aurelia.html">Aurelia</a>, where <a href="../subjects/vane.html">Vane</a> arrives disguised as a wandering hermit and leaves a pair of chrome heels, and where Chancellor <a href="../subjects/wren.html">Wren</a> has served three monarchs. The siege reaches its walls at the war's end."""),
+            ("Ironhold", """The mountain country of Duke <a href="../subjects/aldous.html">Aldous</a> and Duchess <a href="../subjects/beatrice.html">Beatrice</a>, whose steward <a href="../subjects/osric.html">Osric</a> has kept its accounts for three dukes and whose Lord of the Western Passes is <a href="../subjects/fenric.html">Fenric</a>. Beatrice's humiliation at the Great Concord is the war's original grievance. In the siege its army fields <a href="../subjects/the-captain-who-held-the-fire.html">the Captain Who Held the Fire</a>, <a href="../subjects/the-plaster-dust-captain.html">the Plaster-Dust Captain</a>, <a href="../subjects/the-quartermaster.html">the Quartermaster</a> and the soldiers <a href="../subjects/perrin.html">Perrin</a> and <a href="../subjects/the-second-scalded-soldier.html">the Second Scalded Soldier</a>; <a href="../subjects/the-gate-guard.html">a gate guard</a> carries the sermon's gossip to Osric."""),
+            ("Solis", """The coastal kingdom of Queen <a href="../subjects/aurelia.html">Aurelia</a>, where <a href="../subjects/vane.html">Vane</a> arrives disguised as a wandering hermit and leaves a pair of chrome heels, and where Chancellor <a href="../subjects/wren.html">Wren</a> has served three monarchs. The siege reaches its walls at the war's end. Its people in the case include the physician <a href="../subjects/aldric.html">Aldric</a>, the baker <a href="../subjects/costa.html">Costa</a>, <a href="../subjects/the-kitchen-girl.html">a kitchen girl</a>, <a href="../subjects/the-jailer.html">a jailer</a> and, after the regency, <a href="../subjects/the-crowned-cousin.html">the Crowned Cousin</a>."""),
             ("Great Hall", """Shown beneath Solis's castle. Duke <a href="../subjects/aldous.html">Aldous</a> goes into the war's final confrontation here unarmed and offering terms, and is killed in it."""),
             ("Greywater", """The river that runs west to the sea below Solis's castle. No case file names it."""),
             ("The Greywater crossing", """Marked with a cross on the river's course. No case file describes it."""),
-            ("Stonewic Hills", """The hills in the south. No case file describes them."""),
-            ("The eastern marches", """The country of <a href="../subjects/corvin.html">Baron Corvin</a>, Baron of the Eastern Marches, patient and outwardly neutral while he works every side of the war he helps prolong."""),
+            ("Stonewic Hills", """The hills in the south, the quarry barony of <a href="../subjects/rathmore.html">Baron Rathmore</a>, bound to Ironhold by four generations of shared quarrying. He pledges his levies to <a href="../subjects/aldous.html">Aldous</a>&rsquo;s banner in Chapter Eight. The case file places the hills on the same ridge as Ironhold."""),
+            ("The eastern marches", """The country of <a href="../subjects/corvin.html">Baron Corvin</a>, Baron of the Eastern Marches, patient and outwardly neutral while he works every side of the war he helps prolong. His lands pass to <a href="../subjects/corvins-cousin.html">a cousin twice removed</a>."""),
         ],
         "appears_html": """<p>The country of <a href="../cases/4417.html">The Iron Stiletto War</a> (Case 4417).</p>""",
     },
